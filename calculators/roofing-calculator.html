@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roofing Calculator - CalcBundle</title>
+<meta name="description" content="Estimate roof area from a house's footprint and roof pitch, plus roof squares needed and an optional cost estimate.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Roofing Calculator</span>
+    </div>
+    <h1>Roofing Calculator</h1>
+    <p>Estimate roof area from a house's footprint and roof pitch, plus roof squares needed and an optional cost estimate.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="roofing-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="roofing-area">House Base Area</label>
+              <input type="number" id="roofing-area" value="2000" min="0" step="any">
+            </div>
+            <select id="roofing-area-unit" class="unit-select">
+              <option value="foot" selected>sq feet</option>
+              <option value="meter">sq meters</option>
+              <option value="yard">sq yards</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="roofing-pitch">Roof Pitch</label>
+            <select id="roofing-pitch" class="unit-select">
+              <option value="1">1/12</option>
+              <option value="2">2/12</option>
+              <option value="3">3/12</option>
+              <option value="4">4/12</option>
+              <option value="5">5/12</option>
+              <option value="6" selected>6/12</option>
+              <option value="7">7/12</option>
+              <option value="8">8/12</option>
+              <option value="9">9/12</option>
+              <option value="10">10/12</option>
+              <option value="11">11/12</option>
+              <option value="12">12/12</option>
+              <option value="14">14/12</option>
+              <option value="16">16/12</option>
+              <option value="18">18/12</option>
+              <option value="20">20/12</option>
+              <option value="24">24/12</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="roofing-price">Price per Square Foot (optional)</label>
+            <input type="number" id="roofing-price" placeholder="e.g. 3" min="0" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="roofing-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What roof pitch does to the area</h2>
+      <p>Roof pitch is the rise over a 12-inch run &mdash; a 6/12 pitch rises 6 inches for every 12 inches horizontally. Because a pitched roof's actual surface is longer than its flat footprint, the base area is multiplied by a slope factor: &radic;((rise/12)&sup2; + 1). A steeper pitch means more roofing material for the same footprint.</p>
+
+      <h2>What's not included</h2>
+      <p>This estimate uses the house's footprint area and pitch only &mdash; it doesn't account for eave overhang or the exact number of material bundles/rolls, both of which depend on the roof's specific shape and layout. For a more precise material list, measure each roof section individually (our <a href="../calculators/area-calculator.html">Area Calculator</a> can help) and consult your roofing supplier.</p>
+      <div class="callout">"Roof squares" is a roofing-trade unit equal to 100 square feet. The 10% buffer accounts for waste from cuts, overlaps, and complex roof shapes.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What if I only know the roof angle in degrees, not the pitch?</h3>
+        <p>Convert with rise = 12 &times; tan(angle). For example, a 25&deg; angle is roughly a 5.6/12 pitch.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this exact enough to order materials?</h3>
+        <p>Treat it as a planning estimate. Always confirm quantities with an on-site measurement or a roofing contractor before ordering.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="concrete-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Concrete Calculator</h3>
+        <p>Estimate the volume, weight, and bags of concrete needed.</p>
+      </a>
+
+      <a class="calc-list-card" href="square-footage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Square Footage Calculator</h3>
+        <p>Calculate the square footage of a room or space.</p>
+      </a>
+
+      <a class="calc-list-card" href="mulch-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mulch Calculator</h3>
+        <p>Estimate how much mulch you need for a garden bed.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/roofing-calculator.js"></script>
+</body>
+</html>

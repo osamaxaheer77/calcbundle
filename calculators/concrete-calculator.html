@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concrete Calculator - CalcBundle</title>
+<meta name="description" content="Estimate the volume, weight, and number of bags of concrete needed for a slab, footing, wall, or hole.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Concrete Calculator</span>
+    </div>
+    <h1>Concrete Calculator</h1>
+    <p>Estimate the volume, weight, and number of bags of concrete needed for a slab, footing, wall, or hole.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <h2 style="margin-top:0;">Slabs, Square Footings, or Walls</h2>
+    <form id="concrete-slab-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="concrete-slab-length">Length</label>
+              <input type="number" id="concrete-slab-length" value="5" min="0" step="any">
+            </div>
+            <select id="concrete-slab-length-unit" class="unit-select">
+              <option value="foot" selected>feet</option>
+              <option value="inch">inches</option>
+              <option value="yard">yards</option>
+              <option value="meter">meters</option>
+              <option value="centimeter">centimeters</option>
+            </select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="concrete-slab-width">Width</label>
+              <input type="number" id="concrete-slab-width" value="2.5" min="0" step="any">
+            </div>
+            <select id="concrete-slab-width-unit" class="unit-select">
+              <option value="foot" selected>feet</option>
+              <option value="inch">inches</option>
+              <option value="yard">yards</option>
+              <option value="meter">meters</option>
+              <option value="centimeter">centimeters</option>
+            </select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="concrete-slab-thick">Thickness</label>
+              <input type="number" id="concrete-slab-thick" value="5" min="0" step="any">
+            </div>
+            <select id="concrete-slab-thick-unit" class="unit-select">
+              <option value="foot">feet</option>
+              <option value="inch" selected>inches</option>
+              <option value="yard">yards</option>
+              <option value="meter">meters</option>
+              <option value="centimeter">centimeters</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="concrete-slab-qty">Quantity</label>
+            <input type="number" id="concrete-slab-qty" value="1" min="0" step="1">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="concrete-slab-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin-top:40px;">Hole, Column, or Round Footings</h2>
+    <form id="concrete-hole-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="concrete-hole-diameter">Diameter</label>
+              <input type="number" id="concrete-hole-diameter" value="2.5" min="0" step="any">
+            </div>
+            <select id="concrete-hole-diameter-unit" class="unit-select">
+              <option value="foot" selected>feet</option>
+              <option value="inch">inches</option>
+              <option value="yard">yards</option>
+              <option value="meter">meters</option>
+              <option value="centimeter">centimeters</option>
+            </select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="concrete-hole-depth">Depth</label>
+              <input type="number" id="concrete-hole-depth" value="6" min="0" step="any">
+            </div>
+            <select id="concrete-hole-depth-unit" class="unit-select">
+              <option value="foot" selected>feet</option>
+              <option value="inch">inches</option>
+              <option value="yard">yards</option>
+              <option value="meter">meters</option>
+              <option value="centimeter">centimeters</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="concrete-hole-qty">Quantity</label>
+            <input type="number" id="concrete-hole-qty" value="1" min="0" step="1">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="concrete-hole-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How much concrete you'll actually need</h2>
+      <p>Volume is simply length &times; width &times; thickness for slabs, or &pi;r&sup2; &times; depth for a round hole or column. This calculator assumes a standard pre-mixed concrete density of 133 lbs per cubic foot (2,130 kg/m&sup3;) to convert that volume into a weight, and then into bag counts.</p>
+
+      <h2>Buy a little extra</h2>
+      <p>Real-world pours rarely come out to an exact volume &mdash; uneven ground, formwork gaps, and spillage all eat into your supply. Contractors commonly buy 5&ndash;10% more concrete than the calculated volume to avoid running short mid-pour.</p>
+      <div class="callout">Bag counts are based on standard 60-lb and 80-lb pre-mixed bags. Ready-mix delivered by truck is priced and measured by the cubic yard instead.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why 133 lbs per cubic foot?</h3>
+        <p>That's a typical density for standard pre-mixed concrete, but it varies by product &mdash; check your bag's label for an exact figure if precision matters.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I mix units, like feet for length and inches for thickness?</h3>
+        <p>Yes &mdash; each dimension has its own unit selector, so you can enter thickness in inches while length and width stay in feet, matching how these projects are usually measured.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="square-footage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Square Footage Calculator</h3>
+        <p>Calculate the square footage of a room or space.</p>
+      </a>
+
+      <a class="calc-list-card" href="roofing-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Roofing Calculator</h3>
+        <p>Estimate roofing material needed for a project.</p>
+      </a>
+
+      <a class="calc-list-card" href="mulch-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mulch Calculator</h3>
+        <p>Estimate how much mulch you need for a garden bed.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/concrete-calculator.js"></script>
+</body>
+</html>

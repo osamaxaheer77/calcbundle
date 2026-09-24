@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Square Footage Calculator - CalcBundle</title>
+<meta name="description" content="Calculate the square footage of a room, lot, or rectangular space, with an optional price-per-square-foot cost estimate.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Square Footage Calculator</span>
+    </div>
+    <h1>Square Footage Calculator</h1>
+    <p>Calculate the square footage of a room, lot, or rectangular space &mdash; with an optional cost estimate.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="sqft-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="sqft-length">Length</label>
+              <input type="number" id="sqft-length" value="30" min="0" step="any">
+            </div>
+            <select id="sqft-length-unit" class="unit-select">
+              <option value="foot" selected>feet</option>
+              <option value="inch">inches</option>
+              <option value="yard">yards</option>
+              <option value="meter">meters</option>
+              <option value="centimeter">centimeters</option>
+            </select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="sqft-width">Width</label>
+              <input type="number" id="sqft-width" value="20" min="0" step="any">
+            </div>
+            <select id="sqft-width-unit" class="unit-select">
+              <option value="foot" selected>feet</option>
+              <option value="inch">inches</option>
+              <option value="yard">yards</option>
+              <option value="meter">meters</option>
+              <option value="centimeter">centimeters</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="sqft-qty">Quantity (number of rooms/areas)</label>
+            <input type="number" id="sqft-qty" value="1" min="0" step="1">
+          </div>
+          <div class="field-group">
+            <label for="sqft-price">Price per Square Foot (optional)</label>
+            <input type="number" id="sqft-price" placeholder="e.g. 5" min="0" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="sqft-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">A simple length &times; width calculation</h2>
+      <p>For a rectangular space, square footage is just length &times; width. The quantity field lets you total up several identical rooms or sections at once &mdash; useful for flooring, tiling, or paint jobs that span more than one room.</p>
+
+      <h2>Estimating project cost</h2>
+      <p>Enter a price per square foot &mdash; for materials like flooring, turf, or paint coverage &mdash; and the calculator multiplies it by the total area to give a rough project cost. This is an estimate only; always check actual material coverage rates and add a margin for waste and cuts.</p>
+      <div class="callout">For triangular, circular, or other non-rectangular spaces, use our <a href="area-calculator.html">Area Calculator</a>, which supports more shapes.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Can I mix units for length and width?</h3>
+        <p>Yes &mdash; each dimension converts independently before the area is calculated, so entering length in feet and width in meters works correctly.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I calculate an irregular room?</h3>
+        <p>Split it into rectangles (or other simple shapes), calculate each separately, and add the results together.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="concrete-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Concrete Calculator</h3>
+        <p>Estimate the volume, weight, and bags of concrete needed.</p>
+      </a>
+
+      <a class="calc-list-card" href="roofing-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Roofing Calculator</h3>
+        <p>Estimate roofing material needed for a project.</p>
+      </a>
+
+      <a class="calc-list-card" href="mulch-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mulch Calculator</h3>
+        <p>Estimate how much mulch you need for a garden bed.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/square-footage-calculator.js"></script>
+</body>
+</html>

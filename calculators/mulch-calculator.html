@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mulch Calculator - CalcBundle</title>
+<meta name="description" content="Estimate how much mulch you need to cover a garden bed or landscaped area, plus an optional cost estimate.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Mulch Calculator</span>
+    </div>
+    <h1>Mulch Calculator</h1>
+    <p>Estimate how much mulch you need to cover a garden bed or landscaped area, plus an optional cost estimate.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="mulch-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="mulch-area">Total Area</label>
+              <input type="number" id="mulch-area" value="200" min="0" step="any">
+            </div>
+            <select id="mulch-area-unit" class="unit-select">
+              <option value="foot" selected>sq feet</option>
+              <option value="meter">sq meters</option>
+              <option value="yard">sq yards</option>
+              <option value="acre">acres</option>
+            </select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="mulch-depth">Mulch Layer Depth</label>
+              <input type="number" id="mulch-depth" value="2" min="0" step="any">
+            </div>
+            <select id="mulch-depth-unit" class="unit-select">
+              <option value="inch" selected>inches</option>
+              <option value="cm">cm</option>
+              <option value="foot">feet</option>
+              <option value="meter">meters</option>
+              <option value="yard">yards</option>
+            </select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="mulch-price">Price (optional)</label>
+              <input type="number" id="mulch-price" placeholder="e.g. 40" min="0" step="any">
+            </div>
+            <select id="mulch-price-unit" class="unit-select">
+              <option value="foot">per cubic foot</option>
+              <option value="yard" selected>per cubic yard</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="mulch-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How much mulch to use</h2>
+      <p>Volume needed is simply area &times; depth. A 2 to 4 inch (5 to 10 cm) layer is the common recommendation &mdash; thick enough to suppress weeds and retain moisture, but not so thick that water and air can't reach the soil.</p>
+
+      <h2>Buying mulch</h2>
+      <p>Mulch is commonly sold in bulk by the cubic yard, or in bags measured in cubic feet or liters. Compare the total cubic yardage from this calculator against your supplier's bag size or bulk delivery minimum to figure out how many bags (or how many truckloads) to order.</p>
+      <div class="callout">For irregular garden beds, use our <a href="area-calculator.html">Area Calculator</a> to find the total square footage first, then enter that area here.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Does mulch type change how much I need?</h3>
+        <p>The volume calculation is the same regardless of mulch type, but denser materials (like rubber mulch) may settle less over time than lighter organic mulches, which can affect how often you need to top it up.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I remove old mulch before adding new?</h3>
+        <p>Not necessarily &mdash; a thin existing layer can often be topped up rather than replaced, as long as the combined depth doesn't get excessive.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="concrete-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Concrete Calculator</h3>
+        <p>Estimate the volume, weight, and bags of concrete needed.</p>
+      </a>
+
+      <a class="calc-list-card" href="square-footage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Square Footage Calculator</h3>
+        <p>Calculate the square footage of a room or space.</p>
+      </a>
+
+      <a class="calc-list-card" href="roofing-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Roofing Calculator</h3>
+        <p>Estimate roofing material needed for a project.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/mulch-calculator.js"></script>
+</body>
+</html>
