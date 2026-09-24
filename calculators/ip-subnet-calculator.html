@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IP Subnet Calculator - CalcBundle</title>
+<meta name="description" content="Calculate network address, broadcast address, usable host range, and subnet mask from an IPv4 address and CIDR prefix.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">IP Subnet Calculator</span>
+    </div>
+    <h1>IP Subnet Calculator</h1>
+    <p>Calculate network address, broadcast address, usable host range, and subnet mask from an IPv4 address and CIDR prefix.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="subnet-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="subnet-ip">IP Address</label>
+            <input type="text" id="subnet-ip" value="154.57.196.39" placeholder="e.g. 192.168.1.10">
+          </div>
+          <div class="field-group">
+            <label for="subnet-prefix">CIDR Prefix Length</label>
+            <select id="subnet-prefix" class="unit-select">
+              <option value="8">/8 &mdash; 255.0.0.0</option>
+              <option value="16">/16 &mdash; 255.255.0.0</option>
+              <option value="24">/24 &mdash; 255.255.255.0</option>
+              <option value="25">/25 &mdash; 255.255.255.128</option>
+              <option value="26">/26 &mdash; 255.255.255.192</option>
+              <option value="27">/27 &mdash; 255.255.255.224</option>
+              <option value="28">/28 &mdash; 255.255.255.240</option>
+              <option value="29">/29 &mdash; 255.255.255.248</option>
+              <option value="30" selected>/30 &mdash; 255.255.255.252</option>
+              <option value="31">/31 &mdash; 255.255.255.254</option>
+              <option value="32">/32 &mdash; 255.255.255.255</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="subnet-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What the CIDR prefix does</h2>
+      <p>A /30 prefix means the first 30 bits of the 32-bit IPv4 address identify the network, leaving 2 bits (4 addresses) for hosts. The subnet mask marks those network bits as 1s. Applying the mask to your IP address with a bitwise AND gives the network address; flipping the mask and ORing it in gives the broadcast address.</p>
+
+      <h2>Why usable hosts is 2 less than total</h2>
+      <p>The first address in a subnet is reserved as the network address and the last is reserved as the broadcast address, so neither can be assigned to a device. /31 and /32 are special cases used for point-to-point links and single-host routes, where this reservation doesn't apply the same way.</p>
+      <div class="callout">"Private" IP ranges (like 192.168.x.x, 10.x.x.x, and 172.16&ndash;31.x.x) are reserved for use within local networks and aren't routable on the public internet.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What's the difference between a subnet mask and CIDR notation?</h3>
+        <p>They're two ways of expressing the same thing &mdash; 255.255.255.0 and /24 both mean the first 24 bits are the network portion. CIDR notation is just more compact.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this support IPv6?</h3>
+        <p>Not currently &mdash; this calculator covers IPv4 addressing and subnetting only.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="password-generator.html">
+        <span class="tag live">Live</span>
+        <h3>Password Generator</h3>
+        <p>Generate strong random passwords.</p>
+      </a>
+
+      <a class="calc-list-card" href="base64-encoder.html">
+        <span class="tag live">Live</span>
+        <h3>Base64 Encode / Decode</h3>
+        <p>Encode or decode Base64 text.</p>
+      </a>
+
+      <a class="calc-list-card" href="url-encoder.html">
+        <span class="tag live">Live</span>
+        <h3>URL Encode / Decode</h3>
+        <p>Encode or decode URL-safe text.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/ip-subnet-calculator.js"></script>
+</body>
+</html>

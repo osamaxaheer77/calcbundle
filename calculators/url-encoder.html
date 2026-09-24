@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URL Encode / Decode - CalcBundle</title>
+<meta name="description" content="Percent-encode text for safe use in a URL, or decode percent-encoded text back to plain text.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">URL Encode / Decode</span>
+    </div>
+    <h1>URL Encode / Decode</h1>
+    <p>Percent-encode text for safe use in a URL, or decode percent-encoded text back to plain text.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <h2 style="margin-top:0;">Encode Text for a URL</h2>
+    <form id="urlenc-encode-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="urlenc-encode-input">Text</label>
+            <textarea id="urlenc-encode-input" class="unit-select" style="width:100%; min-height:80px; font-family:monospace;"></textarea>
+          </div>
+        </div>
+
+        <div class="mortgage-results-card" id="urlenc-encode-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin-top:40px;">Decode a URL-Encoded String</h2>
+    <form id="urlenc-decode-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="urlenc-decode-input">URL-Encoded Text</label>
+            <textarea id="urlenc-decode-input" class="unit-select" style="width:100%; min-height:80px; font-family:monospace;"></textarea>
+          </div>
+        </div>
+
+        <div class="mortgage-results-card" id="urlenc-decode-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why URLs need encoding</h2>
+      <p>URLs can only safely contain a limited set of characters. Spaces, ampersands, question marks, and other reserved or non-ASCII characters have to be replaced with a percent sign followed by their hex byte value (like %20 for a space) so they don't get misread as part of the URL's structure.</p>
+
+      <h2>Component vs. full URL encoding</h2>
+      <p>This tool encodes a single value (like a query parameter) the way <code>encodeURIComponent</code> does &mdash; it escapes characters such as &amp;, ?, and / that have special meaning in a URL. Encoding an entire URL at once uses a slightly different rule set that leaves those structural characters alone.</p>
+      <div class="callout">Both conversions happen locally in your browser &mdash; nothing you type here is sent anywhere.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>When would I need this?</h3>
+        <p>Building query strings by hand, debugging a URL that looks garbled, or passing text with spaces or special characters (like search terms) as part of a link.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does a "+" sometimes mean a space?</h3>
+        <p>In query strings (the part after "?"), a "+" traditionally represents a space, a convention from HTML form submission. This decoder treats a literal "+" the same way; use %20 if you specifically mean a plus sign.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="ip-subnet-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>IP Subnet Calculator</h3>
+        <p>Calculate network, broadcast, and usable host range.</p>
+      </a>
+
+      <a class="calc-list-card" href="password-generator.html">
+        <span class="tag live">Live</span>
+        <h3>Password Generator</h3>
+        <p>Generate strong random passwords.</p>
+      </a>
+
+      <a class="calc-list-card" href="base64-encoder.html">
+        <span class="tag live">Live</span>
+        <h3>Base64 Encode / Decode</h3>
+        <p>Encode or decode Base64 text.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/url-encoder.js"></script>
+</body>
+</html>
