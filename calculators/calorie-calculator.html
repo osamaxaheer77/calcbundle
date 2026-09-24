@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calorie Calculator - CalcBundle</title>
+<meta name="description" content="Estimate your daily calorie needs to maintain, lose, or gain weight, using the Mifflin-St Jeor, Harris-Benedict, or Katch-McArdle formulas.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Calorie Calculator</span>
+    </div>
+    <h1>Calorie Calculator</h1>
+    <p>Estimate how many calories you need each day to maintain, lose, or gain weight at a chosen rate.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="calorie-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Units</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="calorie-unit" value="us" checked>US Units</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="calorie-unit" value="metric">Metric Units</label>
+          </div>
+
+          <div class="field-group">
+            <label for="calorie-age">Age</label>
+            <input type="number" id="calorie-age" value="25" min="15" max="80" step="1">
+          </div>
+
+          <div class="field-group">
+            <label>Gender</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="calorie-gender" value="m" checked>Male</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="calorie-gender" value="f">Female</label>
+          </div>
+
+          <div id="calorie-us-fields">
+            <div class="field-group">
+              <label>Height</label>
+              <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;">
+                  <div class="field-with-toggle"><input type="number" id="calorie-ft" value="5" min="0" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">ft</span></div>
+                </div>
+                <div class="field-group" style="margin-bottom:0;">
+                  <div class="field-with-toggle"><input type="number" id="calorie-in" value="10" min="0" max="11" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">in</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="calorie-lbs">Weight (pounds)</label>
+              <input type="number" id="calorie-lbs" value="165" min="0" step="1">
+            </div>
+          </div>
+
+          <div id="calorie-metric-fields" hidden>
+            <div class="field-group">
+              <label for="calorie-cm">Height (cm)</label>
+              <input type="number" id="calorie-cm" value="178" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="calorie-kg">Weight (kg)</label>
+              <input type="number" id="calorie-kg" value="75" min="0" step="0.1">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="calorie-activity">Activity</label>
+            <select id="calorie-activity">
+              <option value="1.2">Sedentary: little or no exercise</option>
+              <option value="1.375">Light: exercise 1-3 times/week</option>
+              <option value="1.465" selected>Moderate: exercise 4-5 times/week</option>
+              <option value="1.55">Active: daily exercise or intense exercise 3-4 times/week</option>
+              <option value="1.725">Very Active: intense exercise 6-7 times/week</option>
+              <option value="1.9">Extra Active: very intense exercise daily, or physical job</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label>Formula</label>
+            <label class="radio-option" style="display:flex;margin-bottom:4px;"><input type="radio" name="calorie-formula" value="m" checked>Mifflin-St Jeor</label>
+            <label class="radio-option" style="display:flex;margin-bottom:4px;"><input type="radio" name="calorie-formula" value="h">Revised Harris-Benedict</label>
+            <label class="radio-option" style="display:flex;"><input type="radio" name="calorie-formula" value="k">Katch-McArdle</label>
+          </div>
+
+          <div class="field-group" id="calorie-bodyfat-field" hidden>
+            <label for="calorie-bodyfat">Body Fat (%)</label>
+            <input type="number" id="calorie-bodyfat" value="20" min="0" max="70" step="0.1">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="calorie-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How this estimate is built</h2>
+      <p>The calculator first estimates your Basal Metabolic Rate (BMR) — the calories your body burns at rest — using one of three formulas, then multiplies it by an activity factor to estimate your total daily maintenance calories. From there, adding or subtracting roughly 500 calories a day corresponds to about 1 pound of weight change per week, since a pound of body weight is roughly 3,500 calories.</p>
+
+      <h2>Which formula should I use?</h2>
+      <p>Mifflin-St Jeor is generally considered the most accurate for most people and is used by default. The Revised Harris-Benedict equation is an older alternative. Katch-McArdle instead uses your body fat percentage directly, which can be more accurate if you know it — particularly for leaner individuals, since it accounts for lean body mass rather than total weight.</p>
+      <div class="callout">It's not advisable to cut more than about 1,000 calories a day below maintenance — losing more than 2 lb a week risks muscle loss and a slower metabolism. Consult a doctor or dietitian before pursuing aggressive weight loss.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why do the numbers change so much with activity level?</h3>
+        <p>Activity multipliers range from 1.2 (sedentary) to 1.9 (extremely active) — nearly a 60% swing — because exercise is often the single biggest variable in daily energy expenditure, far more than small differences in BMR.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this exact?</h3>
+        <p>No — every formula here is a population-level estimate. Individual metabolism varies, so treat the result as a starting point and adjust based on your actual weight trend over a few weeks.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="bmi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMI Calculator</h3>
+        <p>Check your body mass index against standard weight ranges.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Body Fat Calculator</h3>
+        <p>Estimate body fat percentage from a few simple measurements.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>BMR Calculator</h3>
+        <p>Find your basal metabolic rate — the energy your body burns at rest.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/calorie-calculator.js"></script>
+</body>
+</html>

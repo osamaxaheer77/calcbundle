@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI Calculator - CalcBundle</title>
+<meta name="description" content="Calculate your Body Mass Index (BMI), healthy weight range, BMI Prime, and Ponderal Index from your height and weight.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">BMI Calculator</span>
+    </div>
+    <h1>BMI Calculator</h1>
+    <p>Calculate your Body Mass Index, see where it falls on the standard weight-status scale, and find the healthy weight range for your height.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="bmi-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Units</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="bmi-unit" value="us" checked>US Units</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="bmi-unit" value="metric">Metric Units</label>
+          </div>
+
+          <div class="field-group">
+            <label for="bmi-age">Age</label>
+            <input type="number" id="bmi-age" value="25" min="2" max="120" step="1">
+          </div>
+
+          <div class="field-group">
+            <label>Gender</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="bmi-gender" value="m" checked>Male</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="bmi-gender" value="f">Female</label>
+          </div>
+
+          <div id="bmi-us-fields">
+            <div class="field-group">
+              <label>Height</label>
+              <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;">
+                  <div class="field-with-toggle"><input type="number" id="bmi-ft" value="5" min="0" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">ft</span></div>
+                </div>
+                <div class="field-group" style="margin-bottom:0;">
+                  <div class="field-with-toggle"><input type="number" id="bmi-in" value="10" min="0" max="11" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">in</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="bmi-lbs">Weight (pounds)</label>
+              <input type="number" id="bmi-lbs" value="160" min="0" step="1">
+            </div>
+          </div>
+
+          <div id="bmi-metric-fields" hidden>
+            <div class="field-group">
+              <label for="bmi-cm">Height (cm)</label>
+              <input type="number" id="bmi-cm" value="178" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="bmi-kg">Weight (kg)</label>
+              <input type="number" id="bmi-kg" value="72.5" min="0" step="0.1">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="bmi-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What BMI actually measures</h2>
+      <p>Body Mass Index estimates body leanness or corpulence from just height and weight, and is widely used as a quick, general indicator of whether someone is underweight, normal weight, overweight, or obese. It's an imperfect measure — it can't distinguish muscle from fat — but it's a useful first signal for whether further testing might be worth it.</p>
+
+      <h2>BMI Prime and Ponderal Index</h2>
+      <p>BMI Prime is simply your BMI divided by 25 (the upper edge of the "normal" range), giving a dimensionless ratio that makes it easy to see how far above or below that threshold someone falls. The Ponderal Index is a similar leanness measure, but it cubes height instead of squaring it, which makes it more reliable than BMI for people at the very tall or very short ends of the height range.</p>
+      <div class="callout">BMI doesn't account for muscle mass, bone density, or body composition. A muscular athlete can show a high BMI while carrying very little body fat — BMI is best used as a starting point, not a diagnosis.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Does this calculator account for children and teens?</h3>
+        <p>You can enter any age, but the weight-status classification shown uses the standard adult (WHO) BMI ranges. Children and teens are typically assessed against age- and sex-specific percentile growth charts instead, which this calculator doesn't model.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the healthy weight range change with height?</h3>
+        <p>Because BMI itself is weight divided by height squared — for any given BMI target, taller people can weigh more and shorter people need to weigh less to land in the same range.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="calorie-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Calorie Calculator</h3>
+        <p>Estimate your daily calorie needs based on activity level and goals.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Body Fat Calculator</h3>
+        <p>Estimate body fat percentage from a few simple measurements.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>BMR Calculator</h3>
+        <p>Find your basal metabolic rate — the energy your body burns at rest.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/bmi-calculator.js"></script>
+</body>
+</html>
