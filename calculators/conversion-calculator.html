@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversion Calculator - CalcBundle</title>
+<meta name="description" content="Convert between common units of length, area, volume, weight, and temperature.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Conversion Calculator</span>
+    </div>
+    <h1>Conversion Calculator</h1>
+    <p>Convert between common units of length, area, volume, weight, and temperature.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="conv-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="conv-category">Category</label>
+            <select id="conv-category" class="unit-select">
+              <option value="length" selected>Length</option>
+              <option value="area">Area</option>
+              <option value="volume">Volume</option>
+              <option value="weight">Weight</option>
+              <option value="temperature">Temperature</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="conv-value">Value</label>
+            <input type="number" id="conv-value" value="5" step="any">
+          </div>
+          <div class="field-group">
+            <label for="conv-from">From</label>
+            <select id="conv-from" class="unit-select"></select>
+          </div>
+          <div class="field-group">
+            <label for="conv-to">To</label>
+            <select id="conv-to" class="unit-select"></select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Convert</button>
+        </div>
+
+        <div class="mortgage-results-card" id="conv-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How conversions work</h2>
+      <p>Every unit within a category is defined relative to a common base unit (meters for length, liters for volume, kilograms for weight, and so on). Converting from one unit to another is a two-step process: convert the input into the base unit, then convert the base unit into the target unit. Temperature is the exception, since Celsius, Fahrenheit, and Kelvin scales don't share a zero point.</p>
+
+      <h2>Precision</h2>
+      <p>Conversion factors used here (like 1 mile = 1,609.344 meters, or 1 pound = 0.45359237 kilograms) are the internationally defined exact values, not rounded approximations.</p>
+      <div class="callout">US volume units (gallon, quart, pint, cup, fluid ounce) use the US customary definitions, which differ slightly from the UK imperial system.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why does switching categories reset the units?</h3>
+        <p>Each category has its own set of compatible units &mdash; length and weight, for example, can't be converted into each other, so the "From" and "To" lists update to match the category you pick.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I convert between metric and imperial units?</h3>
+        <p>Yes &mdash; that's one of the most common uses of this calculator. Pick any "From" unit and any "To" unit within the same category, metric or imperial.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="height-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Height Calculator</h3>
+        <p>Convert height between feet/inches and centimeters.</p>
+      </a>
+
+      <a class="calc-list-card" href="density-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Density Calculator</h3>
+        <p>Calculate density, mass, or volume.</p>
+      </a>
+
+      <a class="calc-list-card" href="roman-numeral-converter.html">
+        <span class="tag live">Live</span>
+        <h3>Roman Numeral Converter</h3>
+        <p>Convert between Roman numerals and numbers.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/conversion-calculator.js"></script>
+</body>
+</html>

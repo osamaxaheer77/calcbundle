@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roman Numeral Converter - CalcBundle</title>
+<meta name="description" content="Convert numbers to Roman numerals and Roman numerals back to numbers.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Roman Numeral Converter</span>
+    </div>
+    <h1>Roman Numeral Converter</h1>
+    <p>Convert numbers to Roman numerals and Roman numerals back to numbers.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <h2 style="margin-top:0;">Number to Roman Numeral</h2>
+    <form id="roman-to-roman-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="roman-number-input">Number (1&ndash;3,999)</label>
+            <input type="number" id="roman-number-input" value="2026" min="1" max="3999" step="1">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Convert</button>
+        </div>
+
+        <div class="mortgage-results-card" id="roman-to-roman-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin-top:40px;">Roman Numeral to Number</h2>
+    <form id="roman-to-number-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="roman-text-input">Roman Numeral</label>
+            <input type="text" id="roman-text-input" value="MMXXVI" style="text-transform:uppercase;">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Convert</button>
+        </div>
+
+        <div class="mortgage-results-card" id="roman-to-number-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How Roman numerals work</h2>
+      <p>Seven letters represent fixed values: I=1, V=5, X=10, L=50, C=100, D=500, M=1000. Numerals are normally written largest to smallest, added together (VI = 5+1 = 6). When a smaller value appears immediately before a larger one, it's subtracted instead (IV = 5&minus;1 = 4), which keeps no symbol repeated more than three times in a row.</p>
+
+      <h2>Why the 3,999 limit</h2>
+      <p>Standard Roman numerals repeat symbols to build up values, and M (1,000) is the largest single letter &mdash; so 3,999 (MMMCMXCIX) is the largest number expressible without inventing extra notation. Numbers above that historically used a bar (vinculum) over a numeral to multiply it by 1,000, which isn't supported here.</p>
+      <div class="callout">Only one valid Roman numeral spelling exists for each number in the standard system &mdash; this converter checks that a numeral round-trips correctly before accepting it, catching invalid forms like "IIII" or "VX".</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Is "IIII" ever correct for 4?</h3>
+        <p>Not in the standard system used here (which uses "IV") &mdash; though "IIII" does appear traditionally on some clock faces for visual symmetry.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can Roman numerals represent zero or negative numbers?</h3>
+        <p>No &mdash; the classical system has no symbol for zero and no notation for negative values.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="conversion-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Conversion Calculator</h3>
+        <p>Convert between units of length, area, volume, weight, and more.</p>
+      </a>
+
+      <a class="calc-list-card" href="height-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Height Calculator</h3>
+        <p>Predict a child's height, or convert feet/inches to cm.</p>
+      </a>
+
+      <a class="calc-list-card" href="density-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Density Calculator</h3>
+        <p>Calculate density, mass, or volume.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/roman-numeral-converter.js"></script>
+</body>
+</html>
