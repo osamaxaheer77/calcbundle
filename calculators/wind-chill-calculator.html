@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wind Chill Calculator - CalcBundle</title>
+<meta name="description" content="Calculate the wind chill temperature — how cold it actually feels — from wind speed and air temperature.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Wind Chill Calculator</span>
+    </div>
+    <h1>Wind Chill Calculator</h1>
+    <p>Calculate the wind chill temperature &mdash; how cold it actually feels &mdash; from wind speed and air temperature.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="windchill-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="windchill-speed">Wind Speed</label>
+              <input type="number" id="windchill-speed" value="15" min="0" step="any">
+            </div>
+            <select id="windchill-speed-unit" class="unit-select">
+              <option value="mph" selected>mph</option>
+              <option value="kmh">km/h</option>
+              <option value="ms">m/s</option>
+              <option value="knot">knots</option>
+            </select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="windchill-temp">Air Temperature</label>
+              <input type="number" id="windchill-temp" value="10" step="any">
+            </div>
+            <select id="windchill-temp-unit" class="unit-select">
+              <option value="fahrenheit" selected>&deg;F</option>
+              <option value="celsius">&deg;C</option>
+              <option value="kelvin">K</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="windchill-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">The National Weather Service formula</h2>
+      <p>This calculator uses the North American wind chill formula adopted by the US National Weather Service and Environment Canada: WC = 35.74 + 0.6215T &minus; 35.75V<sup>0.16</sup> + 0.4275TV<sup>0.16</sup>, where T is air temperature in &deg;F and V is wind speed in mph. It's valid for temperatures at or below 50&deg;F and wind speeds of at least 3 mph.</p>
+
+      <h2>Why wind makes it feel colder</h2>
+      <p>Moving air strips away the thin layer of warmed air your body maintains near your skin, speeding up heat loss through convection. Faster wind means faster heat loss, which your body perceives as a lower temperature even though the air itself hasn't actually changed.</p>
+      <div class="callout">Wind chill is an estimate, not an exact science &mdash; different countries use slightly different formulas, so figures can vary a bit between weather services.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why doesn't this work above 50&deg;F?</h3>
+        <p>The formula was derived from cold-weather skin heat-loss models and isn't valid or meaningful at warmer temperatures &mdash; for hot, humid weather, see our <a href="heat-index-calculator.html">Heat Index Calculator</a> instead.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does humidity affect wind chill?</h3>
+        <p>No &mdash; wind chill depends only on temperature and wind speed. Humidity's effect on perceived temperature is captured separately by the heat index, used for warm weather instead.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="heat-index-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Heat Index Calculator</h3>
+        <p>Find how hot it feels with humidity factored in.</p>
+      </a>
+
+      <a class="calc-list-card" href="dew-point-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Dew Point Calculator</h3>
+        <p>Calculate dew point from temperature and humidity.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/wind-chill-calculator.js"></script>
+</body>
+</html>
