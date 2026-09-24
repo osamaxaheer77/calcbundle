@@ -216,7 +216,10 @@ const CALCULATORS_INDEX = [
     const qLower = query.toLowerCase().trim();
     const nameLower = name.toLowerCase();
     if (!qLower) return 0;
-    if (nameLower.includes(qLower)) {
+    // Substring match is only a strong signal once the query is long enough that
+    // matching "somewhere in the name" is meaningful (a 1-2 letter query would
+    // otherwise match almost every name and drown out the word-prefix results below).
+    if (qLower.length >= 3 && nameLower.includes(qLower)) {
       return 0.9 + 0.1 * (qLower.length / nameLower.length);
     }
     const qTokens = tokenize(query);
@@ -240,7 +243,7 @@ const CALCULATORS_INDEX = [
 
   function searchCalculators(query, limit) {
     const q = query.trim();
-    if (q.length < 2) return [];
+    if (q.length < 1) return [];
     const scored = CALCULATORS_INDEX.map((c) => ({ calc: c, score: scoreMatch(q, c.name) + (c.live ? 0.03 : 0) }))
       .filter((r) => r.score >= 0.5)
       .sort((a, b) => b.score - a.score);
@@ -280,17 +283,17 @@ const CALCULATORS_INDEX = [
     }
 
     function update() {
-      const results = searchCalculators(input.value, 8);
-      if (input.value.trim().length < 2) {
+      if (input.value.trim().length < 1) {
         dropdown.hidden = true;
         return;
       }
+      const results = searchCalculators(input.value, 8);
       render(results);
       dropdown.hidden = false;
     }
 
     input.addEventListener('input', update);
-    input.addEventListener('focus', () => { if (input.value.trim().length >= 2) update(); });
+    input.addEventListener('focus', () => { if (input.value.trim().length >= 1) update(); });
 
     input.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
