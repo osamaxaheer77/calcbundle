@@ -524,6 +524,7 @@ a.calc-simple-item:hover .calc-simple-dot {
 
 .cat-fitness { color: var(--cat-fit); }
 .cat-fitness .category-illustration { background: var(--cat-fit-tint); }
+.cat-fitness .category-badge { background: var(--cat-fit); }
 .cat-fitness .explore-btn::before { background: var(--cat-fit); }
 
 .cat-math { color: var(--cat-math); }
