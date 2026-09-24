@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horsepower Calculator - CalcBundle</title>
+<meta name="description" content="Calculate horsepower from force, distance, and time, or convert between watts, kilowatts, horsepower types, and BTU/h.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Horsepower Calculator</span>
+    </div>
+    <h1>Horsepower Calculator</h1>
+    <p>Calculate horsepower from force, distance, and time, or convert between watts, kilowatts, horsepower types, and BTU/h.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <h2 style="margin-top:0;">Power from Force, Distance &amp; Time</h2>
+    <form id="hp-definition-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="hp-force">Force</label>
+              <input type="number" id="hp-force" value="10" step="any">
+            </div>
+            <select id="hp-force-unit" class="unit-select">
+              <option value="newton" selected>newton</option>
+              <option value="kilonewton">kilonewton</option>
+              <option value="poundforce">pound-force</option>
+              <option value="kilogramforce">kilogram-force</option>
+            </select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="hp-distance">Distance</label>
+              <input type="number" id="hp-distance" value="3" step="any">
+            </div>
+            <select id="hp-distance-unit" class="unit-select">
+              <option value="meter" selected>meter</option>
+              <option value="kilometer">kilometer</option>
+              <option value="mile">mile</option>
+              <option value="yard">yard</option>
+            </select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="hp-time">Time</label>
+              <input type="number" id="hp-time" value="2" min="0" step="any">
+            </div>
+            <select id="hp-time-unit" class="unit-select">
+              <option value="second" selected>second</option>
+              <option value="minute">minute</option>
+              <option value="hour">hour</option>
+              <option value="day">day</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="hp-definition-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin-top:40px;">Horsepower Converter</h2>
+    <form id="hp-convert-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="hp-convert-amount">Amount</label>
+            <input type="number" id="hp-convert-amount" value="1" step="any">
+          </div>
+          <div class="field-group">
+            <label for="hp-convert-from">Convert From</label>
+            <select id="hp-convert-from" class="unit-select">
+              <option value="watt">Watt</option>
+              <option value="kilowatt">Kilowatt</option>
+              <option value="mechanical" selected>Mechanical Horsepower</option>
+              <option value="metric">Metric Horsepower</option>
+              <option value="electrical">Electrical Horsepower</option>
+              <option value="boiler">Boiler Horsepower</option>
+              <option value="btuh">BTU/h</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="hp-convert-to">Convert To</label>
+            <select id="hp-convert-to" class="unit-select">
+              <option value="watt" selected>Watt</option>
+              <option value="kilowatt">Kilowatt</option>
+              <option value="mechanical">Mechanical Horsepower</option>
+              <option value="metric">Metric Horsepower</option>
+              <option value="electrical">Electrical Horsepower</option>
+              <option value="boiler">Boiler Horsepower</option>
+              <option value="btuh">BTU/h</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Convert</button>
+        </div>
+
+        <div class="mortgage-results-card" id="hp-convert-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">The definition of power</h2>
+      <p>Power = Force &times; Distance / Time &mdash; how much work is done per unit of time. This calculator converts the result into watts first, then into common horsepower and kilowatt equivalents.</p>
+
+      <h2>Why there are several kinds of "horsepower"</h2>
+      <p>Mechanical (imperial) horsepower, metric horsepower (PS/CV), electrical horsepower, and boiler horsepower are all slightly different historical definitions &mdash; they're close but not identical (745.7 W vs. 735.5 W vs. 746 W respectively), which matters when comparing engine ratings across regions or industries.</p>
+      <div class="callout">For a vehicle engine's horsepower from RPM and torque, or from a quarter-mile trap speed, see calculator.net's Engine Horsepower Calculator &mdash; this tool covers the general physics definition and unit conversion only.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Which horsepower type do car manufacturers use?</h3>
+        <p>It varies by region &mdash; US manufacturers typically use mechanical horsepower, while many European manufacturers rate engines in metric horsepower (PS).</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's BTU/h used for?</h3>
+        <p>BTU per hour is common for rating heating and cooling equipment (like air conditioners and furnaces) rather than mechanical engines.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="gas-mileage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Gas Mileage Calculator</h3>
+        <p>Calculate MPG from odometer readings and gas added.</p>
+      </a>
+
+      <a class="calc-list-card" href="fuel-cost-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Fuel Cost Calculator</h3>
+        <p>Estimate the fuel cost for a trip.</p>
+      </a>
+
+      <a class="calc-list-card" href="tire-size-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Tire Size Calculator</h3>
+        <p>Compare tire sizes and speedometer difference.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/horsepower-calculator.js"></script>
+</body>
+</html>

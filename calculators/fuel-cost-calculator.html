@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuel Cost Calculator - CalcBundle</title>
+<meta name="description" content="Estimate the fuel cost of a trip from distance, fuel efficiency, and gas price.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Fuel Cost Calculator</span>
+    </div>
+    <h1>Fuel Cost Calculator</h1>
+    <p>Estimate the fuel cost of a trip from distance, fuel efficiency, and gas price.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="fuelcost-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="fuelcost-distance">Trip Distance</label>
+              <input type="number" id="fuelcost-distance" value="500" min="0" step="any">
+            </div>
+            <select id="fuelcost-distance-unit" class="unit-select">
+              <option value="miles" selected>miles</option>
+              <option value="km">km</option>
+            </select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="fuelcost-efficiency">Fuel Efficiency</label>
+              <input type="number" id="fuelcost-efficiency" value="25" min="0" step="any">
+            </div>
+            <select id="fuelcost-efficiency-unit" class="unit-select">
+              <option value="mpg" selected>mpg</option>
+              <option value="l100km">L/100km</option>
+            </select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="fuelcost-price">Gas Price</label>
+              <input type="number" id="fuelcost-price" value="3" min="0" step="any">
+            </div>
+            <select id="fuelcost-price-unit" class="unit-select">
+              <option value="gallon" selected>per gallon</option>
+              <option value="liter">per liter</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="fuelcost-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">The math behind the estimate</h2>
+      <p>For mpg, gallons needed = trip distance (miles) &divide; mpg. For L/100km, liters needed = (trip distance in km &divide; 100) &times; the L/100km rating. Either way, multiplying the fuel needed by the price per unit gives the total cost.</p>
+
+      <h2>Why real trips often cost more</h2>
+      <p>Highway driving is usually more efficient than city driving, and factors like AC use, cargo weight, and terrain all affect real-world fuel consumption compared to a vehicle's rated efficiency. Treat this as a planning estimate rather than an exact figure.</p>
+      <div class="callout">Don't know your vehicle's fuel efficiency? Use our <a href="gas-mileage-calculator.html">Gas Mileage Calculator</a> to measure it from your own fill-ups.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Can I mix units, like distance in km with mpg?</h3>
+        <p>Yes &mdash; distance, efficiency, and price units are each converted independently, so any combination works.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this account for round trips?</h3>
+        <p>No &mdash; enter the one-way distance, or double it yourself if you want a round-trip estimate.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="gas-mileage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Gas Mileage Calculator</h3>
+        <p>Calculate MPG from odometer readings and gas added.</p>
+      </a>
+
+      <a class="calc-list-card" href="horsepower-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Horsepower Calculator</h3>
+        <p>Calculate horsepower from force, distance, and time.</p>
+      </a>
+
+      <a class="calc-list-card" href="tire-size-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Tire Size Calculator</h3>
+        <p>Compare tire sizes and speedometer difference.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/fuel-cost-calculator.js"></script>
+</body>
+</html>
