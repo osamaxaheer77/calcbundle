@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Other Calculators - CalcBundle</title>
+<meta name="description" content="Every everyday calculator CalcBundle is building — date &amp; time, housing, unit conversions, electronics, internet tools, and more.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html#categories" style="color:inherit;text-decoration:none;">Categories</a>
+      <span>/</span>
+      <span class="current">Other</span>
+    </div>
+    <h1>Other Calculators</h1>
+    <p>Date &amp; time, housing, unit conversions, electronics, and everyday tools — all the calculators in this category.</p>
+  </div>
+</section>
+
+<section class="category-browse" style="background:var(--bg);">
+  <div class="container">
+
+    <div class="calc-groups-grid">
+
+      <button type="button" class="calc-group-card" id="group-trigger-datetime" aria-expanded="false" aria-controls="group-panel-wrap-datetime">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 14"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Date and Time</h3>
+          <p>Ages, durations, time zones, and day counting.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-housing" aria-expanded="false" aria-controls="group-panel-wrap-housing">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1V10"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Housing / Building</h3>
+          <p>Concrete, roofing, tile, mulch, and building materials.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-measurements" aria-expanded="false" aria-controls="group-panel-wrap-measurements">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="8" rx="1"/><path d="M7 8v3"/><path d="M11 8v3"/><path d="M15 8v3"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Various Measurements / Units</h3>
+          <p>Unit conversions, density, mass, weight, and speed.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-electronics" aria-expanded="false" aria-controls="group-panel-wrap-electronics">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Electronics / Circuits</h3>
+          <p>Voltage drop, resistors, and Ohm's law calculations.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-internet" aria-expanded="false" aria-controls="group-panel-wrap-internet">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="3" y1="12" x2="21" y2="12"/><path d="M12 3a15 15 0 0 1 0 18"/><path d="M12 3a15 15 0 0 0 0 18"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Internet</h3>
+          <p>IP subnets, password generation, and encoding tools.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-utility" aria-expanded="false" aria-controls="group-panel-wrap-utility">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M9 3v2h6V3"/><path d="M9 11h6"/><path d="M9 15h4"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Everyday Utility</h3>
+          <p>GPA, grades, tips, sleep, and other daily tools.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-weather" aria-expanded="false" aria-controls="group-panel-wrap-weather">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19a4.5 4.5 0 0 0 0-9 6 6 0 0 0-11.4 1.5A4 4 0 0 0 6.5 19h11z"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Weather</h3>
+          <p>Wind chill, heat index, and dew point.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-transportation" aria-expanded="false" aria-controls="group-panel-wrap-transportation">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Transportation</h3>
+          <p>Fuel cost, gas mileage, horsepower, and tire size.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-entertainment" aria-expanded="false" aria-controls="group-panel-wrap-entertainment">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1" fill="currentColor"/><circle cx="16" cy="8" r="1" fill="currentColor"/><circle cx="8" cy="16" r="1" fill="currentColor"/><circle cx="16" cy="16" r="1" fill="currentColor"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Entertainment / Anecdotes</h3>
+          <p>Dice rolling and just-for-fun calculators.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-datetime">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Date and Time calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Age Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Date Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Time Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Hours Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Time Card Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Time Zone Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Time Duration Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Day Counter</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Day of the Week Calculator</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-housing">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Housing / Building calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Concrete Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>BTU Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Square Footage Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Stair Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Roofing Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Tile Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Mulch Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Gravel Calculator</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-measurements">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Various Measurements / Units calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Height Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Conversion Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>GDP Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Density Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Mass Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Weight Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Speed Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Molarity Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Molecular Weight Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Roman Numeral Converter</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-electronics">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Electronics / Circuits calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Voltage Drop Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Resistor Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Ohms Law Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Electricity Calculator</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-internet">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Internet calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>IP Subnet Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Password Generator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Bandwidth Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Base64 Encode / Decode</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>URL Encode / Decode</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-utility">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Everyday Utility calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>GPA Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Grade Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Bra Size Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Shoe Size Conversion</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Tip Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Golf Handicap Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Sleep Calculator</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-weather">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Weather calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Wind Chill Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Heat Index Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Dew Point Calculator</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-transportation">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Transportation calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Fuel Cost Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Gas Mileage Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Horsepower Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Engine Horsepower Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Mileage Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Tire Size Calculator</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-entertainment">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Entertainment / Anecdotes calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Dice Roller</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Love Calculator</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/category-groups.js"></script>
+</body>
+</html>
