@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pregnancy Weight Gain Calculator - CalcBundle</title>
+<meta name="description" content="See a recommended pregnancy weight gain range based on Institute of Medicine guidelines, for your pre-pregnancy BMI and current week.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Pregnancy Weight Gain Calculator</span>
+    </div>
+    <h1>Pregnancy Weight Gain Calculator</h1>
+    <p>See a recommended weight gain range for your stage of pregnancy, based on Institute of Medicine guidelines for your pre-pregnancy BMI.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:760px;">
+
+    <form id="pwg-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Units</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="pwg-unit" value="us" checked>US Units</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="pwg-unit" value="metric">Metric Units</label>
+          </div>
+
+          <div class="field-group">
+            <label for="pwg-week">Your Current Pregnancy Stage</label>
+            <select id="pwg-week">
+              <option value="1">Week 1</option><option value="2">Week 2</option><option value="3">Week 3</option><option value="4">Week 4</option>
+              <option value="5">Week 5</option><option value="6">Week 6</option><option value="7">Week 7</option><option value="8">Week 8</option>
+              <option value="9">Week 9</option><option value="10">Week 10</option><option value="11">Week 11</option><option value="12">Week 12</option>
+              <option value="13">Week 13</option><option value="14">Week 14</option><option value="15">Week 15</option><option value="16">Week 16</option>
+              <option value="17">Week 17</option><option value="18">Week 18</option><option value="19">Week 19</option><option value="20" selected>Week 20</option>
+              <option value="21">Week 21</option><option value="22">Week 22</option><option value="23">Week 23</option><option value="24">Week 24</option>
+              <option value="25">Week 25</option><option value="26">Week 26</option><option value="27">Week 27</option><option value="28">Week 28</option>
+              <option value="29">Week 29</option><option value="30">Week 30</option><option value="31">Week 31</option><option value="32">Week 32</option>
+              <option value="33">Week 33</option><option value="34">Week 34</option><option value="35">Week 35</option><option value="36">Week 36</option>
+              <option value="37">Week 37</option><option value="38">Week 38</option><option value="39">Week 39</option><option value="40">Week 40</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label>Pregnant with Twins</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="pwg-twins" value="0" checked>No</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="pwg-twins" value="1">Yes</label>
+          </div>
+
+          <div id="pwg-us-fields">
+            <div class="field-group">
+              <label>Your Height</label>
+              <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="pwg-ft" value="5" min="0" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">ft</span></div></div>
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="pwg-in" value="6" min="0" max="11" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">in</span></div></div>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="pwg-before-lbs">Your Weight Before Pregnancy (lbs)</label>
+              <input type="number" id="pwg-before-lbs" value="120" min="0" step="0.5">
+            </div>
+            <div class="field-group">
+              <label for="pwg-now-lbs">Your Weight Now (lbs)</label>
+              <input type="number" id="pwg-now-lbs" value="130" min="0" step="0.5">
+            </div>
+          </div>
+
+          <div id="pwg-metric-fields" hidden>
+            <div class="field-group">
+              <label for="pwg-cm">Your Height (cm)</label>
+              <input type="number" id="pwg-cm" value="165" min="0" step="0.5">
+            </div>
+            <div class="field-group">
+              <label for="pwg-before-kg">Your Weight Before Pregnancy (kg)</label>
+              <input type="number" id="pwg-before-kg" value="54" min="0" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="pwg-now-kg">Your Weight Now (kg)</label>
+              <input type="number" id="pwg-now-kg" value="59" min="0" step="0.1">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="pwg-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="pwg-results-section" hidden>
+      <div class="schedule-header"><h3 class="schedule-header" style="border:0;padding:0;">Full Pregnancy Weight Gain Schedule</h3></div>
+      <div class="schedule-table-wrap" id="pwg-table-wrap"></div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the recommended range is set</h2>
+      <p>The Institute of Medicine's guidelines set a total recommended weight gain range based on your pre-pregnancy BMI: roughly 28-40 lbs if underweight, 25-35 lbs at a normal weight, 15-25 lbs if overweight, and 11-20 lbs if obese (higher for twin pregnancies). Within that total, standard guidance calls for a modest 1-4 lb gain during the first trimester, followed by a fairly steady weekly rate through the rest of pregnancy.</p>
+
+      <h2>About the week-by-week schedule</h2>
+      <p>The table spreads the total recommended range across all 40 weeks using that same two-phase pattern — a light first-trimester ramp, then a steady rate to delivery. It's a smoothed approximation of the published guidance meant to show the overall shape of a healthy trajectory, not a clinically exact weekly target — actual recommended pacing can vary somewhat by source and by individual.</p>
+      <div class="callout">These are population-level guidelines, not a strict target. Actual healthy weight gain varies by individual — always follow your own care provider's guidance over any calculator.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What if my current weight is outside the recommended range?</h3>
+        <p>It's common, and not automatically a cause for concern — many factors affect weight gain during pregnancy. Bring it up with your care provider, who can assess your specific situation.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is the twin-pregnancy range higher?</h3>
+        <p>Carrying twins means more total fetal weight, more placental tissue, and more amniotic fluid, so the Institute of Medicine's recommended ranges for twin pregnancies run notably higher than for a single baby.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="bmi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMI Calculator</h3>
+        <p>Check your body mass index against standard weight ranges.</p>
+      </a>
+
+      <a class="calc-list-card" href="calorie-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Calorie Calculator</h3>
+        <p>Estimate your daily calorie needs based on activity level and goals.</p>
+      </a>
+
+      <a class="calc-list-card" href="pregnancy-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pregnancy Calculator</h3>
+        <p>Track your pregnancy week-by-week from your due date or last period.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/pregnancy-weight-gain-calculator.js"></script>
+</body>
+</html>

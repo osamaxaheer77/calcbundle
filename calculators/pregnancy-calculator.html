@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pregnancy Calculator - CalcBundle</title>
+<meta name="description" content="Track your pregnancy week-by-week from your due date, last period, or conception date, with trimester, due date, and a full 42-week schedule.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Pregnancy Calculator</span>
+    </div>
+    <h1>Pregnancy Calculator</h1>
+    <p>Estimate your due date and full pregnancy schedule from your due date, last period, or conception date.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1000px;">
+
+    <form id="preg-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Calculate Based On</label>
+            <label class="radio-option" style="display:flex;margin-bottom:4px;"><input type="radio" name="preg-mode" value="lastperiod" checked>Last Period</label>
+            <label class="radio-option" style="display:flex;margin-bottom:4px;"><input type="radio" name="preg-mode" value="duedate">Due Date</label>
+            <label class="radio-option" style="display:flex;"><input type="radio" name="preg-mode" value="conception">Conception Date</label>
+          </div>
+
+          <div class="field-group" id="preg-lastperiod-field">
+            <label for="preg-lastperiod">First Day of Your Last Period</label>
+            <input type="date" id="preg-lastperiod" value="2026-04-17">
+          </div>
+
+          <div class="field-group" id="preg-duedate-field" hidden>
+            <label for="preg-duedate">Your Due Date</label>
+            <input type="date" id="preg-duedate" value="2027-01-22">
+          </div>
+
+          <div class="field-group" id="preg-conception-field" hidden>
+            <label for="preg-conception">Conception Date</label>
+            <input type="date" id="preg-conception" value="2026-05-01">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="preg-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="preg-results-section" hidden>
+      <div class="schedule-header"><h3 class="schedule-header" style="border:0;padding:0;">Week-by-Week Pregnancy Schedule</h3></div>
+      <div class="schedule-table-wrap" id="preg-table-wrap"></div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why pregnancy is measured from the last period, not conception</h2>
+      <p>Confusingly, "week 1" of pregnancy starts on the first day of your last menstrual period — about two weeks before conception actually happens. This is called gestational age, and it's the standard doctors use because the exact date of conception usually isn't known precisely, while the start of the last period usually is.</p>
+
+      <h2>How reliable is the due date?</h2>
+      <p>Not very, in terms of the exact day — fewer than 4% of babies are born exactly on their due date. About 60% arrive within a week of it, and nearly 90% within two weeks. Treat the due date as the center of a several-week window, not a precise prediction.</p>
+      <div class="callout">Results here are estimates for a single pregnancy based on averages. Twin or multiple pregnancies typically follow a different timeline — consult your doctor for guidance specific to your pregnancy.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Which input method should I use?</h3>
+        <p>Last period is the standard default and works well for regular cycles. If you know your conception date precisely (for example from fertility tracking), or already have a due date from your doctor, either of those will give an equally valid schedule.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What determines the trimester boundaries?</h3>
+        <p>This calculator uses the common convention of weeks 1-12 for the first trimester, 13-27 for the second, and 28-40+ for the third — though exact boundaries are sometimes defined slightly differently between sources.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="pregnancy-weight-gain-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pregnancy Weight Gain Calculator</h3>
+        <p>See a recommended weight gain range for your stage of pregnancy.</p>
+      </a>
+
+      <a class="calc-list-card" href="ovulation-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Ovulation Calculator</h3>
+        <p>Estimate your most fertile days from your last period.</p>
+      </a>
+
+      <a class="calc-list-card" href="bmi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMI Calculator</h3>
+        <p>Check your body mass index against standard weight ranges.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/pregnancy-calculator.js"></script>
+</body>
+</html>

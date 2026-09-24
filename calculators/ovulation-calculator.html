@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ovulation Calculator - CalcBundle</title>
+<meta name="description" content="Estimate your most probable ovulation date, fertile window, and next period, based on your last period date and cycle length.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Ovulation Calculator</span>
+    </div>
+    <h1>Ovulation Calculator</h1>
+    <p>Estimate your most probable ovulation date and fertile window from your last period date. Not intended as a form of birth control.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="ov-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="ov-lastperiod">First Day of Your Last Period</label>
+            <input type="date" id="ov-lastperiod" value="2026-09-24">
+          </div>
+          <div class="field-group">
+            <label for="ov-cycle">Average Length of Cycles</label>
+            <select id="ov-cycle">
+              <option value="22">22 days</option><option value="23">23 days</option><option value="24">24 days</option>
+              <option value="25">25 days</option><option value="26">26 days</option><option value="27">27 days</option>
+              <option value="28" selected>28 days</option><option value="29">29 days</option><option value="30">30 days</option>
+              <option value="31">31 days</option><option value="32">32 days</option><option value="33">33 days</option>
+              <option value="34">34 days</option><option value="35">35 days</option><option value="36">36 days</option>
+              <option value="37">37 days</option><option value="38">38 days</option><option value="39">39 days</option>
+              <option value="40">40 days</option><option value="41">41 days</option><option value="42">42 days</option>
+              <option value="43">43 days</option><option value="44">44 days</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="ov-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="ov-results-section" hidden>
+      <div class="schedule-header"><h3 class="schedule-header" style="border:0;padding:0;">Next 6 Cycles</h3></div>
+      <div class="schedule-table-wrap" id="ov-table-wrap"></div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How ovulation is estimated</h2>
+      <p>Ovulation typically happens about 14 days before your next period starts, regardless of how long your overall cycle is — it's the follicular phase (before ovulation) that varies in length, not the luteal phase (after ovulation) that follows it. This calculator estimates your next period from your cycle length, then counts back 14 days to estimate ovulation.</p>
+
+      <h2>Why the fertile window is wider than one day</h2>
+      <p>An egg only survives 12-24 hours after release, but sperm can survive in the body for up to five days. That's why the "intercourse window for pregnancy" starts several days before the estimated ovulation date rather than on it — timing intercourse across that window, not just on the predicted day, meaningfully improves the odds of conception.</p>
+      <div class="callout">This calculator estimates typical timing from cycle tracking alone. For more precision, consider combining it with basal body temperature tracking or an ovulation predictor kit — and don't rely on it as a form of birth control, since actual ovulation timing varies.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What if my cycles are irregular?</h3>
+        <p>This calculator assumes a consistent cycle length, so irregular cycles will make its estimates less reliable. Tracking your actual cycle over a few months, or using basal body temperature or an ovulation kit, can help refine your personal pattern.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does the "Pregnancy Test" date mean?</h3>
+        <p>It's an estimate of when a home pregnancy test might reliably detect a pregnancy if this cycle resulted in conception — a few days before your next expected period, once hCG levels have had time to build up.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="pregnancy-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pregnancy Calculator</h3>
+        <p>Track your pregnancy week-by-week from your due date or last period.</p>
+      </a>
+
+      <a class="calc-list-card" href="pregnancy-weight-gain-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pregnancy Weight Gain Calculator</h3>
+        <p>See a recommended weight gain range for your stage of pregnancy.</p>
+      </a>
+
+      <a class="calc-list-card" href="bmi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMI Calculator</h3>
+        <p>Check your body mass index against standard weight ranges.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/ovulation-calculator.js"></script>
+</body>
+</html>

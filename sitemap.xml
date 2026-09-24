@@ -149,7 +149,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/ovulation-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/payback-period-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/pregnancy-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/pregnancy-weight-gain-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
