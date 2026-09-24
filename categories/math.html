@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Math Calculators - CalcBundle</title>
-<meta name="description" content="All of CalcBundle's math calculators in one place — scientific calculator, fraction calculator, and more on the way.">
+<meta name="description" content="All of CalcBundle's math calculators in one place — scientific, statistics, geometry, and more.">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -35,51 +35,273 @@
       <span class="current">Math</span>
     </div>
     <h1>Math Calculators</h1>
-    <p>Percentages, algebra, geometry, and general math tools — all the calculators in this category.</p>
+    <p>Percentages, algebra, statistics, and geometry — all the tools we're building for this category.</p>
   </div>
 </section>
 
 <section class="category-browse" style="background:var(--bg);">
   <div class="container">
-    <div class="calc-list-grid">
 
-      <a class="calc-list-card" href="../calculators/scientific-calculator.html">
-        <span class="tag live">Live</span>
-        <h3>Scientific Calculator</h3>
-        <p>Trigonometry, logarithms, exponents, roots, and full calculation history.</p>
-      </a>
+    <div class="calc-groups-grid">
 
-      <a class="calc-list-card" href="../calculators/fraction-calculator.html">
-        <span class="tag live">Live</span>
-        <h3>Fraction Calculator</h3>
-        <p>Add, subtract, multiply, and divide fractions with step-by-step working.</p>
-      </a>
+      <button type="button" class="calc-group-card" id="group-trigger-math" aria-expanded="false" aria-controls="group-panel-wrap-math">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7" cy="7" r="3"/><circle cx="17" cy="17" r="3"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Math</h3>
+          <p>Percentages, exponents, logs, number bases, and everyday math.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
 
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>Percentage Calculator</h3>
-        <p>Work out percentages, percentage change, and percentage differences.</p>
-      </div>
+      <button type="button" class="calc-group-card" id="group-trigger-statistics" aria-expanded="false" aria-controls="group-panel-wrap-statistics">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V12"/><path d="M10 20V4"/><path d="M16 20V14"/><path d="M4 20h12"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Statistics</h3>
+          <p>Standard deviation, probability, sampling, and data analysis.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
 
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>Random Number Generator</h3>
-        <p>Generate random numbers within a range, with or without repeats.</p>
-      </div>
-
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>Triangle Calculator</h3>
-        <p>Solve for a triangle's sides, angles, or area from partial measurements.</p>
-      </div>
-
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>Standard Deviation Calculator</h3>
-        <p>Measure how spread out a set of numbers is from its average.</p>
-      </div>
+      <button type="button" class="calc-group-card" id="group-trigger-geometry" aria-expanded="false" aria-controls="group-panel-wrap-geometry">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 3 21 20 3 20"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Geometry</h3>
+          <p>Area, volume, distance, angles, and shape calculations.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
 
     </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-math">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Math calculators</h4>
+          <div class="calc-simple-list">
+
+            <a class="calc-simple-item is-live" href="../calculators/scientific-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Scientific Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/fraction-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Fraction Calculator</span>
+            </a>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Percentage Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Random Number Generator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Percent Error Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Exponent Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Binary Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Hex Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Half-Life Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Quadratic Formula Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Log Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Ratio Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Root Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Least Common Multiple Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Greatest Common Factor Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Factor Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Rounding Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Matrix Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Scientific Notation Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Big Number Calculator</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-statistics">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Statistics calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Standard Deviation Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Number Sequence Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Sample Size Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Probability Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Statistics Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Mean, Median, Mode, Range Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Permutation and Combination Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Z-score Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Confidence Interval Calculator</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-geometry">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Geometry calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Triangle Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Volume Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Slope Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Area Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Distance Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Circle Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Surface Area Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Pythagorean Theorem Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Right Triangle Calculator</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -94,5 +316,6 @@
   </div>
 </footer>
 
+<script src="../js/category-groups.js"></script>
 </body>
 </html>
