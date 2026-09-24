@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standard Deviation Calculator - CalcBundle</title>
+<meta name="description" content="Calculate standard deviation, variance, mean, sum, and margin of error for a population or sample data set.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Standard Deviation Calculator</span>
+    </div>
+    <h1>Standard Deviation Calculator</h1>
+    <p>Calculate standard deviation, variance, mean, sum, and margin of error for a set of numbers.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="sd-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="sd-numbers">Numbers (comma or space separated)</label>
+            <textarea id="sd-numbers" rows="3" style="width:100%;padding:10px 12px;border-radius:8px;border:1px solid var(--border);font-size:14px;font-family:inherit;">10, 12, 23, 23, 16, 23, 21, 16</textarea>
+          </div>
+          <div class="field-group">
+            <label>It is a</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="sd-type" value="p" checked>Population</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="sd-type" value="s">Sample</label>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="sd-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="sd-results-section" hidden>
+      <div class="schedule-header"><h3 class="schedule-header" style="border:0;padding:0;">Margin of Error by Confidence Level</h3></div>
+      <div id="sd-margin-wrap" style="padding:20px;"></div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Population vs. sample</h2>
+      <p>Use "Population" when your data represents every member of the group you care about. Use "Sample" when your data is a subset drawn from a larger population you're trying to estimate &mdash; the sample formula divides by N-1 instead of N, which corrects for the fact that a sample tends to slightly underestimate the true population variance.</p>
+
+      <h2>What the margin of error table shows</h2>
+      <p>The standard error of the mean (SEM) describes how much the sample mean would likely vary if you repeated the sampling process. Multiplying SEM by a z-score gives a margin of error at a chosen confidence level &mdash; for example, "95% confidence" means that if you repeated this sampling many times, about 95% of the resulting intervals would contain the true population mean.</p>
+      <div class="callout">A low standard deviation means data points cluster tightly around the mean; a high one means they're spread out widely. Two data sets can have the identical mean and look completely different once you account for their spread.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why does sample standard deviation divide by N-1 instead of N?</h3>
+        <p>This is Bessel's correction. Using a sample's own mean to compute variance slightly underestimates the true population variance, since the sample mean is, by construction, the value that minimizes the sum of squared deviations for that exact sample. Dividing by N-1 instead of N corrects for that bias.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I only have one data point?</h3>
+        <p>Sample standard deviation is undefined for a single value, since there's no way to divide by N-1=0. Population standard deviation of a single value is always 0, since that one value is exactly equal to the mean.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="probability-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Probability Calculator</h3>
+        <p>Calculate the probability of single and multiple events.</p>
+      </a>
+
+      <a class="calc-list-card" href="sample-size-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Sample Size Calculator</h3>
+        <p>Find the sample size needed for a survey or experiment.</p>
+      </a>
+
+      <a class="calc-list-card" href="mean-median-mode-range-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mean, Median, Mode, Range Calculator</h3>
+        <p>Find the mean, median, mode, and range of a data set.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/standard-deviation-calculator.js"></script>
+</body>
+</html>

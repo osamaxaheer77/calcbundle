@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mean, Median, Mode, Range Calculator - CalcBundle</title>
+<meta name="description" content="Calculate the mean, median, mode, and range of a data set from a comma-separated list of numbers.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Mean, Median, Mode, Range Calculator</span>
+    </div>
+    <h1>Mean, Median, Mode, Range Calculator</h1>
+    <p>Calculate the mean, median, mode, and range of a data set &mdash; four different ways of summarizing the same numbers.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="mmmr-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="mmmr-numbers">Numbers (comma or space separated)</label>
+            <textarea id="mmmr-numbers" rows="3" style="width:100%;padding:10px 12px;border-radius:8px;border:1px solid var(--border);font-size:14px;font-family:inherit;">10, 2, 38, 23, 38, 23, 21</textarea>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="mmmr-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Four different ways to summarize data</h2>
+      <p>Mean is the arithmetic average &mdash; sum divided by count. Median is the middle value once the data is sorted (or the average of the two middle values, for an even count). Mode is whichever value appears most often &mdash; a data set can have no mode, one mode, or several (multimodal) if there's a tie. Range is simply the largest value minus the smallest.</p>
+
+      <h2>Why the median resists outliers</h2>
+      <p>Mean and range are both easily distorted by a single extreme value, since they depend on the actual magnitude of every number. Median doesn't &mdash; it only cares about position in the sorted order, so an outlier just becomes the new highest (or lowest) value without shifting the middle. That's why median is often a better "typical value" for skewed data, like income or home prices.</p>
+      <div class="callout">Always look at more than one of these together. A data set can have the same mean as another and still look completely different in spread and shape &mdash; mean, median, mode, and range each reveal something the others miss.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What if every value appears exactly once?</h3>
+        <p>Then there's no mode &mdash; nothing repeats, so nothing qualifies as "most frequent."</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can there be more than one mode?</h3>
+        <p>Yes &mdash; if two or more values tie for the highest frequency, the data set is multimodal and all of them are reported as modes.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="standard-deviation-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Standard Deviation Calculator</h3>
+        <p>Calculate standard deviation, variance, mean, and margin of error.</p>
+      </a>
+
+      <a class="calc-list-card" href="probability-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Probability Calculator</h3>
+        <p>Calculate the probability of single and multiple events.</p>
+      </a>
+
+      <a class="calc-list-card" href="sample-size-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Sample Size Calculator</h3>
+        <p>Find the sample size needed for a survey or experiment.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/mean-median-mode-range-calculator.js"></script>
+</body>
+</html>

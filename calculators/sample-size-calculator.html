@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample Size Calculator - CalcBundle</title>
+<meta name="description" content="Find the minimum sample size needed for a survey, or the margin of error for a given sample size, confidence level, and population.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Sample Size Calculator</span>
+    </div>
+    <h1>Sample Size Calculator</h1>
+    <p>Find the minimum sample size needed for a survey, or work out the margin of error for a sample you already have.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1000px;">
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Find the Sample Size</h2>
+      <p class="payoff-panel-sub">Computes the minimum number of samples needed to meet your desired confidence level and margin of error.</p>
+
+      <form id="ss1-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="ss1-cl">Confidence Level</label>
+              <select id="ss1-cl">
+                <option value="70">70%</option><option value="75">75%</option><option value="80">80%</option>
+                <option value="85">85%</option><option value="90">90%</option><option value="95" selected>95%</option>
+                <option value="98">98%</option><option value="99">99%</option><option value="99.9">99.9%</option>
+                <option value="99.99">99.99%</option><option value="99.999">99.999%</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="ss1-margin">Margin of Error (%)</label>
+              <input type="number" id="ss1-margin" value="5" min="0.01" max="99" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="ss1-prop">Population Proportion (%)</label>
+              <input type="number" id="ss1-prop" value="50" min="0.01" max="99.99" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="ss1-pop">Population Size</label>
+              <input type="number" id="ss1-pop" placeholder="Leave blank if unlimited" min="1" step="1">
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="ss1-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Find the Margin of Error</h2>
+      <p class="payoff-panel-sub">Computes the margin of error (confidence interval) for a survey or observation you've already run.</p>
+
+      <form id="ss2-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="ss2-cl">Confidence Level</label>
+              <select id="ss2-cl">
+                <option value="70">70%</option><option value="75">75%</option><option value="80">80%</option>
+                <option value="85">85%</option><option value="90">90%</option><option value="95" selected>95%</option>
+                <option value="98">98%</option><option value="99">99%</option><option value="99.9">99.9%</option>
+                <option value="99.99">99.99%</option><option value="99.999">99.999%</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="ss2-size">Sample Size</label>
+              <input type="number" id="ss2-size" value="100" min="1" step="1">
+            </div>
+            <div class="field-group">
+              <label for="ss2-prop">Population Proportion (%)</label>
+              <input type="number" id="ss2-prop" value="60" min="0.01" max="99.99" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="ss2-pop">Population Size</label>
+              <input type="number" id="ss2-pop" placeholder="Leave blank if unlimited" min="1" step="1">
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="ss2-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why sample size and margin of error trade off</h2>
+      <p>A larger sample gets you closer to the true population value, shrinking your margin of error &mdash; but with rapidly diminishing returns. Cutting the margin of error in half requires roughly quadrupling the sample size, since the relationship follows an inverse-square pattern.</p>
+
+      <h2>Why "population proportion" matters</h2>
+      <p>If you don't know the true proportion you're estimating, use 50% &mdash; it's the most conservative assumption, since it maximizes the required sample size (p(1-p) is largest when p=0.5). If you have a rough estimate already (from prior research or a pilot study), using it gives a more efficient, smaller required sample.</p>
+      <div class="callout">The "population size" field only matters for finite, boundable populations (like employees at a specific company). For anything effectively unlimited &mdash; general public opinion, for example &mdash; leave it blank.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why does population size stop mattering above a certain point?</h3>
+        <p>The finite population correction factor shrinks toward 1 as the population grows large relative to the sample &mdash; once your population is, say, 20&times; your sample size or more, the correction becomes negligible, which is why very large or "unlimited" populations give essentially the same answer.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What confidence level should I use?</h3>
+        <p>95% is the most common default across research and polling. Higher confidence levels (99%+) require larger samples for the same margin of error, since you're demanding more certainty.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="standard-deviation-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Standard Deviation Calculator</h3>
+        <p>Calculate standard deviation, variance, mean, and margin of error.</p>
+      </a>
+
+      <a class="calc-list-card" href="probability-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Probability Calculator</h3>
+        <p>Calculate the probability of single and multiple events.</p>
+      </a>
+
+      <a class="calc-list-card" href="mean-median-mode-range-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mean, Median, Mode, Range Calculator</h3>
+        <p>Find the mean, median, mode, and range of a data set.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/sample-size-calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Probability Calculator - CalcBundle</title>
+<meta name="description" content="Calculate the probability of two independent events (union, intersection, complement) and the area under a normal distribution curve.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Probability Calculator</span>
+    </div>
+    <h1>Probability Calculator</h1>
+    <p>Calculate the union, intersection, and complement of two independent events, or the probability of a range under a normal distribution.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1000px;">
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Probability of Two Independent Events</h2>
+      <p class="payoff-panel-sub">Enter P(A) and P(B) as values between 0 and 1.</p>
+
+      <form id="prob1-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="prob1-a">Probability of A: P(A)</label>
+              <input type="number" id="prob1-a" value="0.65" min="0" max="1" step="0.001">
+            </div>
+            <div class="field-group">
+              <label for="prob1-b">Probability of B: P(B)</label>
+              <input type="number" id="prob1-b" value="0.349" min="0" max="1" step="0.001">
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="prob1-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Probability of a Normal Distribution</h2>
+      <p class="payoff-panel-sub">Find the area (probability) between two bounds on a normal distribution curve.</p>
+
+      <form id="prob2-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="prob2-mean">Mean (&mu;)</label>
+                <input type="number" id="prob2-mean" value="68" step="any">
+              </div>
+              <div class="field-group">
+                <label for="prob2-sd">Standard Deviation (&sigma;)</label>
+                <input type="number" id="prob2-sd" value="4" min="0" step="any">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="prob2-left">Left Bound</label>
+                <input type="text" id="prob2-left" value="60">
+              </div>
+              <div class="field-group">
+                <label for="prob2-right">Right Bound</label>
+                <input type="text" id="prob2-right" value="72">
+              </div>
+            </div>
+            <p style="font-size:12px;color:var(--text-muted);margin-top:-8px;">Use "-inf" or "inf" for an unbounded side.</p>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="prob2-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Independent events, explained</h2>
+      <p>Two events are independent if one occurring doesn't change the probability of the other. For independent events, the probability of both happening is just P(A) &times; P(B) &mdash; that's the intersection. The union (A or B or both) is P(A) + P(B) minus the intersection, since otherwise the overlap would be counted twice.</p>
+
+      <h2>Why the normal distribution matters</h2>
+      <p>Many real-world measurements &mdash; heights, test scores, measurement errors &mdash; cluster around an average in a predictable bell-curve pattern. The normal distribution calculator converts your bounds into z-scores (how many standard deviations from the mean) and finds the area under the curve between them, which corresponds to the probability of a value falling in that range.</p>
+      <div class="callout">P(A &Delta; B), the "exclusive or," means A or B happens but not both simultaneously &mdash; it's the union minus twice the intersection, removing the overlap entirely rather than counting it once.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What if my events aren't independent?</h3>
+        <p>Then you need conditional probability &mdash; P(A and B) = P(A) &times; P(B|A), where P(B|A) is the probability of B given that A already happened. This calculator's "two independent events" tool assumes no such dependency.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why use z-scores for the normal distribution?</h3>
+        <p>Every normal distribution has a different mean and spread, but converting to z-scores (standard deviations from the mean) maps any of them onto the same standard normal curve, so one set of probability tables (or one formula) works for all of them.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="standard-deviation-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Standard Deviation Calculator</h3>
+        <p>Calculate standard deviation, variance, mean, and margin of error.</p>
+      </a>
+
+      <a class="calc-list-card" href="sample-size-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Sample Size Calculator</h3>
+        <p>Find the sample size needed for a survey or experiment.</p>
+      </a>
+
+      <a class="calc-list-card" href="mean-median-mode-range-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mean, Median, Mode, Range Calculator</h3>
+        <p>Find the mean, median, mode, and range of a data set.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/probability-calculator.js"></script>
+</body>
+</html>
