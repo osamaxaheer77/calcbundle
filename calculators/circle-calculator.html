@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Circle Calculator - CalcBundle</title>
+<meta name="description" content="Enter any one of radius, diameter, circumference, or area to calculate the rest.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Circle Calculator</span>
+    </div>
+    <h1>Circle Calculator</h1>
+    <p>Enter any one value &mdash; radius, diameter, circumference, or area &mdash; to calculate the rest.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="circ-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="circ-r">Radius (R)</label>
+            <input type="number" id="circ-r" value="5" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="circ-d">Diameter (D)</label>
+            <input type="number" id="circ-d" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="circ-c">Circumference (C)</label>
+            <input type="number" id="circ-c" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="circ-a">Area (A)</label>
+            <input type="number" id="circ-a" min="0" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="circ-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">The formulas behind a circle</h2>
+      <p>Every measurement of a circle traces back to its radius through &pi;: diameter is twice the radius (D=2R), circumference is 2&pi;R, and area is &pi;R&sup2;. Enter any single one of the four values above, and the other three follow automatically.</p>
+
+      <h2>Why &pi; shows up everywhere</h2>
+      <p>&pi; is defined as the ratio of a circle's circumference to its diameter &mdash; a constant that holds true for every circle, regardless of size. It's an irrational number (its decimal digits never terminate or repeat), which is why it's always approximated (as 3.14159&hellip; or 22/7) rather than written exactly.</p>
+      <div class="callout">Circumference measures the distance <em>around</em> a circle; area measures the space <em>inside</em> it. They scale differently with radius &mdash; circumference grows linearly with R, while area grows with R&sup2;, so doubling the radius quadruples the area but only doubles the circumference.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What if I only know the area?</h3>
+        <p>Solve for radius first: R = &radic;(A/&pi;), then use that radius to find the diameter and circumference &mdash; exactly what this calculator does automatically.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why can I only enter one value?</h3>
+        <p>Because all four measurements are mathematically linked through the radius &mdash; entering more than one risks contradictory inputs (a radius and area that don't actually match the same circle).</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="triangle-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Triangle Calculator</h3>
+        <p>Solve a triangle's sides, angles, area, and more.</p>
+      </a>
+
+      <a class="calc-list-card" href="area-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Area Calculator</h3>
+        <p>Calculate the area of common 2D shapes.</p>
+      </a>
+
+      <a class="calc-list-card" href="pythagorean-theorem-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pythagorean Theorem Calculator</h3>
+        <p>Find a missing side of a right triangle.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/circle-calculator.js"></script>
+</body>
+</html>

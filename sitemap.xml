@@ -37,6 +37,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/area-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/auto-lease-calculator.html</loc>
     <priority>0.7</priority>
   </url>
@@ -77,6 +81,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/circle-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/compound-interest-calculator.html</loc>
     <priority>0.7</priority>
   </url>
@@ -86,6 +94,10 @@
   </url>
   <url>
     <loc>https://calcbundle.net/calculators/down-payment-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/exponent-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -137,6 +149,14 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/log-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/mean-median-mode-range-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/mortgage-calculator.html</loc>
     <priority>0.7</priority>
   </url>
@@ -157,6 +177,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/percentage-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/pregnancy-calculator.html</loc>
     <priority>0.7</priority>
   </url>
@@ -166,6 +190,18 @@
   </url>
   <url>
     <loc>https://calcbundle.net/calculators/present-value-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/probability-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/pythagorean-theorem-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/random-number-generator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -193,6 +229,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/sample-size-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/savings-calculator.html</loc>
     <priority>0.7</priority>
   </url>
@@ -202,6 +242,14 @@
   </url>
   <url>
     <loc>https://calcbundle.net/calculators/simple-interest-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/standard-deviation-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/triangle-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
