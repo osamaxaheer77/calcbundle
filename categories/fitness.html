@@ -41,63 +41,217 @@
 
 <section class="category-browse" style="background:var(--bg);">
   <div class="container">
-    <div class="calc-list-grid">
 
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>BMI Calculator</h3>
-        <p>Check your body mass index against standard weight ranges.</p>
-      </div>
+    <div class="calc-groups-grid">
 
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>Calorie Calculator</h3>
-        <p>Estimate your daily calorie needs based on activity level and goals.</p>
-      </div>
+      <button type="button" class="calc-group-card" id="group-trigger-fitness" aria-expanded="false" aria-controls="group-panel-wrap-fitness">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 6.5v11"/><path d="M17.5 6.5v11"/><path d="M2 9.5v5"/><path d="M22 9.5v5"/><path d="M6.5 12h11"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Fitness</h3>
+          <p>BMI, calories, body fat, and everyday training metrics.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
 
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>Body Fat Calculator</h3>
-        <p>Estimate body fat percentage from a few simple measurements.</p>
-      </div>
+      <button type="button" class="calc-group-card" id="group-trigger-pregnancy" aria-expanded="false" aria-controls="group-panel-wrap-pregnancy">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 6.5-8 11-8 11z"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Pregnancy</h3>
+          <p>Due dates, ovulation, conception, and week-by-week tracking.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
 
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>BMR Calculator</h3>
-        <p>Find your basal metabolic rate — the energy your body burns at rest.</p>
-      </div>
-
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>Ideal Weight Calculator</h3>
-        <p>See a healthy weight range based on height, age, and frame.</p>
-      </div>
-
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>Pace Calculator</h3>
-        <p>Work out running pace, split times, or finish time for a distance.</p>
-      </div>
-
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>Pregnancy Calculator</h3>
-        <p>Track pregnancy week-by-week from conception or last period.</p>
-      </div>
-
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>Pregnancy Conception Calculator</h3>
-        <p>Estimate the likely conception date from a due date or last period.</p>
-      </div>
-
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
-        <h3>Due Date Calculator</h3>
-        <p>Estimate a baby's due date from the last period or conception date.</p>
-      </div>
+      <button type="button" class="calc-group-card" id="group-trigger-other" aria-expanded="false" aria-controls="group-panel-wrap-other">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Other</h3>
+          <p>Macros, nutrition, kidney function, and everyday health math.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
 
     </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-fitness">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Fitness calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>BMI Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Calorie Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Body Fat Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>BMR Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Ideal Weight Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Pace Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Army Body Fat Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Lean Body Mass Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Healthy Weight Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Calories Burned Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>One Rep Max Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Target Heart Rate Calculator</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-pregnancy">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Pregnancy calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Pregnancy Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Pregnancy Weight Gain Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Pregnancy Conception Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Due Date Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Ovulation Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Conception Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Period Calculator</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-other">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Other calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Macro Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Carbohydrate Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Protein Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Fat Intake Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>TDEE Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>GFR Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Body Type Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Body Surface Area Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>BAC Calculator</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -112,5 +266,6 @@
   </div>
 </footer>
 
+<script src="../js/category-groups.js"></script>
 </body>
 </html>
