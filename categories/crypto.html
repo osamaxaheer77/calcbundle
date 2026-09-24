@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Calculators - CalcBundle</title>
+<meta name="description" content="Every crypto calculator CalcBundle is building — profit &amp; trading, investment &amp; portfolio, and mining &amp; fees tools.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html#categories" style="color:inherit;text-decoration:none;">Categories</a>
+      <span>/</span>
+      <span class="current">Crypto</span>
+    </div>
+    <h1>Crypto Calculators</h1>
+    <p>Profit and loss, portfolio growth, and mining costs — all the tools we're building for this category.</p>
+  </div>
+</section>
+
+<section class="category-browse" style="background:var(--bg);">
+  <div class="container">
+
+    <div class="calc-groups-grid">
+
+      <button type="button" class="calc-group-card" id="group-trigger-profit" aria-expanded="false" aria-controls="group-panel-wrap-profit">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Profit &amp; Trading</h3>
+          <p>Profit/loss, break-even price, position sizing, and liquidation risk.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-investment" aria-expanded="false" aria-controls="group-panel-wrap-investment">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="12" rx="2"/><path d="M2 10h20"/><circle cx="17" cy="14.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Investment &amp; Portfolio</h3>
+          <p>DCA, staking growth, and portfolio allocation.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-mining" aria-expanded="false" aria-controls="group-panel-wrap-mining">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Mining &amp; Fees</h3>
+          <p>Mining profitability, gas fees, and unit conversion.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-profit">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Profit &amp; Trading calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Crypto Profit Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Break-Even Price Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Position Size Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Liquidation Price Calculator</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-investment">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Investment &amp; Portfolio calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>DCA (Dollar-Cost Averaging) Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Crypto Staking Growth Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Portfolio Allocation Calculator</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-mining">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Mining &amp; Fees calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Mining Profitability Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Gas Fee Calculator</span></div>
+            <div class="calc-simple-item is-soon"><span class="calc-simple-dot"></span><span>Satoshi &harr; BTC Converter</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/category-groups.js"></script>
+</body>
+</html>
