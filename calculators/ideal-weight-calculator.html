@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideal Weight Calculator - CalcBundle</title>
+<meta name="description" content="See your ideal body weight from four popular formulas (Robinson, Miller, Devine, Hamwi) plus the healthy BMI weight range for your height.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Ideal Weight Calculator</span>
+    </div>
+    <h1>Ideal Weight Calculator</h1>
+    <p>See your ideal body weight from four popular reference formulas, side by side, plus the healthy weight range implied by BMI.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="iw-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Units</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="iw-unit" value="us" checked>US Units</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="iw-unit" value="metric">Metric Units</label>
+          </div>
+
+          <div class="field-group">
+            <label>Gender</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="iw-gender" value="m" checked>Male</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="iw-gender" value="f">Female</label>
+          </div>
+
+          <div id="iw-us-fields">
+            <div class="field-group">
+              <label>Height</label>
+              <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="iw-ft" value="5" min="0" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">ft</span></div></div>
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="iw-in" value="10" min="0" max="11" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">in</span></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="iw-metric-fields" hidden>
+            <div class="field-group">
+              <label for="iw-cm">Height (cm)</label>
+              <input type="number" id="iw-cm" value="178" min="0" step="1">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="iw-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why four different formulas?</h2>
+      <p>"Ideal body weight" formulas were originally developed to help estimate medication dosages, not to define a cosmetic target. Different researchers derived slightly different coefficients from their own study populations, which is why Robinson, Miller, Devine, and Hamwi don't quite agree — they're independent estimates of the same underlying idea, not four measurements of one true number.</p>
+
+      <h2>What these formulas don't account for</h2>
+      <p>Every formula here uses only height and gender. None of them factor in muscle mass, body frame size, or body composition — so a muscular, athletic person can easily fall "above" their formula weight while being perfectly healthy. Treat these as reference points, not targets to chase.</p>
+      <div class="callout">The Devine formula is the most widely used of the four in clinical settings today, largely because of its long history in dosage calculations — but no single formula is considered definitively "correct."</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why doesn't age change the result?</h3>
+        <p>These particular formulas were derived for adults and depend only on height and gender — age matters more for children and teens, whose healthy weight is usually assessed against CDC growth percentile charts instead.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which number should I actually use?</h3>
+        <p>None of them alone — use the spread across all four (and the healthy BMI range) as a rough band, not a single precise target. Body frame size, muscle mass, and overall health matter more than hitting an exact number.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="bmi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMI Calculator</h3>
+        <p>Check your body mass index against standard weight ranges.</p>
+      </a>
+
+      <a class="calc-list-card" href="body-fat-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Body Fat Calculator</h3>
+        <p>Estimate body fat percentage from a few simple measurements.</p>
+      </a>
+
+      <a class="calc-list-card" href="calorie-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Calorie Calculator</h3>
+        <p>Estimate your daily calorie needs based on activity level and goals.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/ideal-weight-calculator.js"></script>
+</body>
+</html>

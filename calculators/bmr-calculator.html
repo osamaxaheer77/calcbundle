@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMR Calculator - CalcBundle</title>
+<meta name="description" content="Estimate your Basal Metabolic Rate (BMR) — the calories your body burns at rest — and see daily calorie needs across activity levels.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">BMR Calculator</span>
+    </div>
+    <h1>BMR Calculator</h1>
+    <p>Estimate your Basal Metabolic Rate — the energy your body burns at rest — and see how that scales across activity levels.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="bmr-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Units</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="bmr-unit" value="us" checked>US Units</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="bmr-unit" value="metric">Metric Units</label>
+          </div>
+
+          <div class="field-group">
+            <label for="bmr-age">Age</label>
+            <input type="number" id="bmr-age" value="25" min="15" max="80" step="1">
+          </div>
+
+          <div class="field-group">
+            <label>Gender</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="bmr-gender" value="m" checked>Male</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="bmr-gender" value="f">Female</label>
+          </div>
+
+          <div id="bmr-us-fields">
+            <div class="field-group">
+              <label>Height</label>
+              <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="bmr-ft" value="5" min="0" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">ft</span></div></div>
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="bmr-in" value="10" min="0" max="11" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">in</span></div></div>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="bmr-lbs">Weight (pounds)</label>
+              <input type="number" id="bmr-lbs" value="160" min="0" step="1">
+            </div>
+          </div>
+
+          <div id="bmr-metric-fields" hidden>
+            <div class="field-group">
+              <label for="bmr-cm">Height (cm)</label>
+              <input type="number" id="bmr-cm" value="180" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="bmr-kg">Weight (kg)</label>
+              <input type="number" id="bmr-kg" value="60" min="0" step="0.1">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Formula</label>
+            <label class="radio-option" style="display:flex;margin-bottom:4px;"><input type="radio" name="bmr-formula" value="m" checked>Mifflin-St Jeor</label>
+            <label class="radio-option" style="display:flex;margin-bottom:4px;"><input type="radio" name="bmr-formula" value="h">Revised Harris-Benedict</label>
+            <label class="radio-option" style="display:flex;"><input type="radio" name="bmr-formula" value="k">Katch-McArdle</label>
+          </div>
+
+          <div class="field-group" id="bmr-bodyfat-field" hidden>
+            <label for="bmr-bodyfat">Body Fat (%)</label>
+            <input type="number" id="bmr-bodyfat" value="20" min="0" max="70" step="0.1">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="bmr-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What BMR actually measures</h2>
+      <p>Basal Metabolic Rate is the energy your body needs just to keep vital organs running — heart, brain, lungs, and the rest — while completely at rest and not digesting food. For most people it accounts for roughly 70% of total daily energy expenditure, with physical activity and digestion making up the rest.</p>
+
+      <h2>BMR vs. daily calorie needs</h2>
+      <p>BMR alone isn't how many calories you should eat — it's the baseline your body burns doing nothing. Multiplying it by an activity factor (from 1.2 for sedentary up to 1.9 for extremely active) estimates total daily calories burned, which is what the activity-level table above shows.</p>
+      <div class="callout">BMR varies with muscle mass, age, genetics, and even ambient temperature — no formula captures all of it. Treat this as a starting estimate, not a precise measurement; a calorimetry device is the only way to measure BMR directly.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How is this different from the Calorie Calculator?</h3>
+        <p>They share the same underlying formulas. This page focuses on BMR itself and shows the full range of activity-level outcomes; the Calorie Calculator frames the same numbers around weight maintenance, loss, and gain targets.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which formula should I choose?</h3>
+        <p>Mifflin-St Jeor is the most broadly accurate and is used by default. Katch-McArdle can be more accurate if you know your body fat percentage, since it accounts for lean body mass directly rather than total weight.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="calorie-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Calorie Calculator</h3>
+        <p>Estimate your daily calorie needs based on activity level and goals.</p>
+      </a>
+
+      <a class="calc-list-card" href="body-fat-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Body Fat Calculator</h3>
+        <p>Estimate body fat percentage from a few simple measurements.</p>
+      </a>
+
+      <a class="calc-list-card" href="ideal-weight-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Ideal Weight Calculator</h3>
+        <p>See a healthy weight range based on height, age, and frame.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/bmr-calculator.js"></script>
+</body>
+</html>

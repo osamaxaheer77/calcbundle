@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body Fat Calculator - CalcBundle</title>
+<meta name="description" content="Estimate body fat percentage using the U.S. Navy circumference method, plus body fat mass, lean body mass, and ideal body fat for your age.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Body Fat Calculator</span>
+    </div>
+    <h1>Body Fat Calculator</h1>
+    <p>Estimate your body fat percentage from a few circumference measurements, using the U.S. Navy method.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="bf-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Units</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="bf-unit" value="us" checked>US Units</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="bf-unit" value="metric">Metric Units</label>
+          </div>
+
+          <div class="field-group">
+            <label>Gender</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="bf-gender" value="m" checked>Male</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="bf-gender" value="f">Female</label>
+          </div>
+
+          <div class="field-group">
+            <label for="bf-age">Age</label>
+            <input type="number" id="bf-age" value="25" min="18" max="80" step="1">
+          </div>
+
+          <div id="bf-us-fields">
+            <div class="field-group">
+              <label for="bf-weight">Weight (pounds)</label>
+              <input type="number" id="bf-weight" value="152" min="0" step="0.5">
+            </div>
+            <div class="field-group">
+              <label>Height</label>
+              <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="bf-ft" value="5" min="0" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">ft</span></div></div>
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="bf-in" value="10.5" min="0" max="11.9" step="0.1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">in</span></div></div>
+              </div>
+            </div>
+            <div class="field-group">
+              <label>Neck</label>
+              <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="bf-neckft" value="1" min="0" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">ft</span></div></div>
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="bf-neckin" value="7.5" min="0" max="11.9" step="0.1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">in</span></div></div>
+              </div>
+            </div>
+            <div class="field-group">
+              <label>Waist</label>
+              <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="bf-waistft" value="3" min="0" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">ft</span></div></div>
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="bf-waistin" value="1.5" min="0" max="11.9" step="0.1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">in</span></div></div>
+              </div>
+            </div>
+            <div class="field-group" id="bf-hip-us">
+              <label>Hip</label>
+              <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="bf-hipft" value="2" min="0" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">ft</span></div></div>
+                <div class="field-group" style="margin-bottom:0;"><div class="field-with-toggle"><input type="number" id="bf-hipin" value="10.5" min="0" max="11.9" step="0.1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">in</span></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="bf-metric-fields" hidden>
+            <div class="field-group">
+              <label for="bf-kg">Weight (kg)</label>
+              <input type="number" id="bf-kg" value="70" min="0" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="bf-cm">Height (cm)</label>
+              <input type="number" id="bf-cm" value="178" min="0" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="bf-neckcm">Neck (cm)</label>
+              <input type="number" id="bf-neckcm" value="50" min="0" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="bf-waistcm">Waist (cm)</label>
+              <input type="number" id="bf-waistcm" value="96" min="0" step="0.1">
+            </div>
+            <div class="field-group" id="bf-hip-metric">
+              <label for="bf-hipcm">Hip (cm)</label>
+              <input type="number" id="bf-hipcm" value="92" min="0" step="0.1">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="bf-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the U.S. Navy method works</h2>
+      <p>This method estimates body fat from just a few circumference measurements — neck, waist, and (for women) hip — rather than requiring specialized equipment. It was developed at the Naval Health Research Center and remains a common estimation method precisely because it only needs a tape measure. It's an estimate, not a precise measurement — tools like bioelectrical impedance or hydrostatic testing are more accurate but far less accessible.</p>
+
+      <h2>Why measurement technique matters</h2>
+      <p>Small measuring errors get amplified by the formula's math, so consistency matters: measure to the nearest 1/4 inch (0.5 cm), keep the tape snug but not compressing the skin, and don't pull your stomach in when measuring your waist.</p>
+      <div class="callout">The "Ideal Body Fat for Age" figure comes from Jackson &amp; Pollock reference tables — a population average, not a personal target. Athletic goals vary widely by sport and individual.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why does the calculator show two different body fat percentages?</h3>
+        <p>The U.S. Navy (circumference) method and the BMI-based method are two independent estimation approaches. They usually land close together, but BMI doesn't distinguish fat from muscle, so the two can diverge more for very muscular or very lean people.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What counts as a healthy body fat range?</h3>
+        <p>Essential fat is roughly 2-5% for men and 10-13% for women — the minimum needed for basic health. Healthy ranges above that vary by age, activity level, and goals; see the reference table for the American Council on Exercise's categories.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="bmi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMI Calculator</h3>
+        <p>Check your body mass index against standard weight ranges.</p>
+      </a>
+
+      <a class="calc-list-card" href="calorie-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Calorie Calculator</h3>
+        <p>Estimate your daily calorie needs based on activity level and goals.</p>
+      </a>
+
+      <a class="calc-list-card" href="bmr-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMR Calculator</h3>
+        <p>Find your basal metabolic rate — the energy your body burns at rest.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/body-fat-calculator.js"></script>
+</body>
+</html>
