@@ -471,6 +471,40 @@ a.calc-simple-item:hover .calc-simple-dot {
   color: var(--text-muted);
 }
 
+/* ===== All Calculators (flat directory) page ===== */
+.all-calc-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+.all-calc-jump a {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.all-calc-jump a:hover { color: var(--accent); border-color: var(--accent); }
+.all-calc-category {
+  font-size: 24px;
+  margin: 48px 0 4px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 90px;
+}
+.all-calc-category:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+.all-calc-group {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-secondary);
+  margin: 24px 0 12px;
+}
+
 /* ===== Category browse ===== */
 .category-browse {
   background: #f9fafc;
