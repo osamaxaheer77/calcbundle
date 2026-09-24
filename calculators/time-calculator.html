@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Calculator - CalcBundle</title>
+<meta name="description" content="Add or subtract two time durations, or add/subtract hours, minutes, and seconds from a starting date and time.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Time Calculator</span>
+    </div>
+    <h1>Time Calculator</h1>
+    <p>Add or subtract two time durations, or add/subtract time from a starting date and time.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <h2 style="margin-top:0;">Add or Subtract Two Time Values</h2>
+    <form id="time-sum-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-row">
+            <div class="field-group">
+              <label for="time-sum-day1">Days</label>
+              <input type="number" id="time-sum-day1" value="2" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="time-sum-hour1">Hours</label>
+              <input type="number" id="time-sum-hour1" value="5" min="0" step="1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="time-sum-min1">Minutes</label>
+              <input type="number" id="time-sum-min1" value="30" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="time-sum-sec1">Seconds</label>
+              <input type="number" id="time-sum-sec1" value="0" min="0" step="1">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="time-sum-op">Operation</label>
+            <select id="time-sum-op" class="unit-select">
+              <option value="+" selected>Add (+)</option>
+              <option value="-">Subtract (&minus;)</option>
+            </select>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="time-sum-day2">Days</label>
+              <input type="number" id="time-sum-day2" value="1" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="time-sum-hour2">Hours</label>
+              <input type="number" id="time-sum-hour2" value="20" min="0" step="1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="time-sum-min2">Minutes</label>
+              <input type="number" id="time-sum-min2" value="45" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="time-sum-sec2">Seconds</label>
+              <input type="number" id="time-sum-sec2" value="20" min="0" step="1">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="time-sum-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin-top:40px;">Add or Subtract Time from a Date</h2>
+    <form id="time-add-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-row">
+            <div class="field-group">
+              <label for="time-add-date">Start Date</label>
+              <input type="date" id="time-add-date" value="2026-01-15">
+            </div>
+            <div class="field-group">
+              <label for="time-add-time">Start Time</label>
+              <input type="time" id="time-add-time" value="09:30">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="time-add-op">Operation</label>
+            <select id="time-add-op" class="unit-select">
+              <option value="+" selected>Add (+)</option>
+              <option value="-">Subtract (&minus;)</option>
+            </select>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="time-add-day">Days</label>
+              <input type="number" id="time-add-day" value="3" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="time-add-hour">Hours</label>
+              <input type="number" id="time-add-hour" value="18" min="0" step="1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="time-add-min">Minutes</label>
+              <input type="number" id="time-add-min" value="45" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="time-add-sec">Seconds</label>
+              <input type="number" id="time-add-sec" value="0" min="0" step="1">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="time-add-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the totals are figured</h2>
+      <p>Every value is first converted to seconds, added or subtracted, then converted back into a whole day/hour/minute/second breakdown &mdash; the same way you'd carry over units by hand (60 seconds roll into a minute, 24 hours roll into a day).</p>
+
+      <h2>A note on negative results</h2>
+      <p>Subtracting a larger duration from a smaller one produces a negative total, shown with a minus sign in front of the day/hour/minute/second breakdown.</p>
+      <div class="callout">The "add/subtract from a date" tool uses your browser's local time zone for both the starting time and the result &mdash; it doesn't convert between time zones. For that, use the Time Zone Calculator.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Can I leave a field blank?</h3>
+        <p>Yes &mdash; any blank field is treated as zero.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this account for daylight saving time changes?</h3>
+        <p>Yes &mdash; because the "add/subtract from a date" tool works in your browser's local time zone, results correctly skip or repeat an hour across a daylight saving transition, just as a clock on the wall would.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="age-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Age Calculator</h3>
+        <p>Calculate age, or the interval between two dates, in years, months, weeks, days, and more.</p>
+      </a>
+
+      <a class="calc-list-card" href="date-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Date Calculator</h3>
+        <p>Add or subtract days from a date, or find the days between two dates.</p>
+      </a>
+
+      <a class="calc-list-card" href="time-zone-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Time Zone Calculator</h3>
+        <p>Convert a time between time zones.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/time-calculator.js"></script>
+</body>
+</html>

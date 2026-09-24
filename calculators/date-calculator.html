@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Date Calculator - CalcBundle</title>
+<meta name="description" content="Find the number of days, weeks, months, and years between two dates, or add/subtract time from a date.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Date Calculator</span>
+    </div>
+    <h1>Date Calculator</h1>
+    <p>Find the days, weeks, months, and years between two dates, or add/subtract time from a date.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <h2 style="margin-top:0;">Days Between Two Dates</h2>
+    <form id="date-diff-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="date-diff-start">Start Date</label>
+            <input type="date" id="date-diff-start" value="2026-01-01">
+          </div>
+          <div class="field-group">
+            <label for="date-diff-end">End Date</label>
+            <input type="date" id="date-diff-end" value="2026-12-25">
+          </div>
+          <div class="radio-option">
+            <input type="checkbox" id="date-diff-include">
+            <label for="date-diff-include">Include end day (add 1 day)</label>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="date-diff-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin-top:40px;">Add to or Subtract from a Date</h2>
+    <form id="date-add-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="date-add-start">Start Date</label>
+            <input type="date" id="date-add-start" value="2026-01-15">
+          </div>
+          <div class="field-group">
+            <label for="date-add-op">Operation</label>
+            <select id="date-add-op" class="unit-select">
+              <option value="+" selected>Add (+)</option>
+              <option value="-">Subtract (&minus;)</option>
+            </select>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="date-add-years">Years</label>
+              <input type="number" id="date-add-years" value="1" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="date-add-months">Months</label>
+              <input type="number" id="date-add-months" value="2" min="0" step="1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="date-add-weeks">Weeks</label>
+              <input type="number" id="date-add-weeks" value="0" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="date-add-days">Days</label>
+              <input type="number" id="date-add-days" value="10" min="0" step="1">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="date-add-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the difference is counted</h2>
+      <p>The "Days Between Two Dates" tool breaks the gap into whole years, months, and days the same way our <a href="age-calculator.html">Age Calculator</a> does &mdash; anchored to the day-of-month of the start date, so a month is only "complete" once that anchor day is reached again. The calendar-day total is a straight count of days between the two dates, unaffected by that breakdown.</p>
+
+      <h2>Why "include end day" matters</h2>
+      <p>By default, the gap between Jan 1 and Jan 2 is counted as 1 day &mdash; the number of nights, essentially. Checking "include end day" instead counts both endpoints, which is useful for things like "how many days does this rental cover" where both the check-in and check-out day count.</p>
+      <div class="callout">This calculator doesn't factor in holidays or business days &mdash; it always returns the plain calendar-day difference.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Does the "add/subtract" tool handle month-end overflow correctly?</h3>
+        <p>Yes &mdash; adding, say, 1 month to Jan 31 lands on the correct date even when the target month is shorter, following standard calendar rollover rules.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I subtract time instead of adding it?</h3>
+        <p>Yes &mdash; switch the operation to "Subtract" in the second tool to count backward from the start date.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="age-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Age Calculator</h3>
+        <p>Calculate age, or the interval between two dates, in years, months, weeks, days, and more.</p>
+      </a>
+
+      <a class="calc-list-card" href="time-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Time Calculator</h3>
+        <p>Add or subtract hours, minutes, and seconds.</p>
+      </a>
+
+      <a class="calc-list-card" href="time-zone-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Time Zone Calculator</h3>
+        <p>Convert a time between time zones.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/date-calculator.js"></script>
+</body>
+</html>
