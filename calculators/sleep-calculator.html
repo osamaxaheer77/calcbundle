@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sleep Calculator - CalcBundle</title>
+<meta name="description" content="Find the best bedtime or wake-up time based on 90-minute sleep cycles, or calculate a wake/bed time from a target sleep duration.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Sleep Calculator</span>
+    </div>
+    <h1>Sleep Calculator</h1>
+    <p>Find the best bedtime or wake-up time based on 90-minute sleep cycles, or calculate from a target sleep duration.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <h2 style="margin-top:0;">Sleep Cycle Calculator</h2>
+    <form id="sleep-cycle-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="sleep-cycle-mode">I want to</label>
+            <select id="sleep-cycle-mode" class="unit-select">
+              <option value="wake" selected>Wake up at&hellip;</option>
+              <option value="bed">Go to bed at&hellip;</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="sleep-cycle-time">Time</label>
+            <input type="time" id="sleep-cycle-time" value="06:00">
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="sleep-cycle-length">Sleep Cycle Length (min)</label>
+              <input type="number" id="sleep-cycle-length" value="90" min="1" step="any">
+            </div>
+            <div class="field-group">
+              <label for="sleep-cycle-fallasleep">Time to Fall Asleep (min)</label>
+              <input type="number" id="sleep-cycle-fallasleep" value="15" min="0" step="any">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="sleep-cycle-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin-top:40px;">Sleep Length Calculator</h2>
+    <form id="sleep-length-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="sleep-length-mode">I want to</label>
+            <select id="sleep-length-mode" class="unit-select">
+              <option value="wake" selected>Wake up at&hellip;</option>
+              <option value="bed">Go to bed at&hellip;</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="sleep-length-time">Time</label>
+            <input type="time" id="sleep-length-time" value="06:00">
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="sleep-length-hours">Sleep Hours</label>
+              <input type="number" id="sleep-length-hours" value="8" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="sleep-length-minutes">Minutes</label>
+              <input type="number" id="sleep-length-minutes" value="0" min="0" max="59" step="1">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="sleep-length-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why 90-minute cycles</h2>
+      <p>Sleep moves through repeating cycles of roughly 90 minutes, alternating between non-REM and REM sleep. Waking up in the middle of a cycle (during deep sleep) tends to feel groggier than waking up between cycles, so timing bedtime or wake-up around whole cycles &mdash; plus a buffer for the time it takes to actually fall asleep &mdash; can help you wake up feeling more rested.</p>
+
+      <h2>Why 5&ndash;6 cycles are recommended</h2>
+      <p>5 to 6 complete 90-minute cycles works out to roughly 7.5&ndash;9 hours, in line with typical adult sleep recommendations. Individual needs vary, and actual cycle length isn't perfectly fixed at 90 minutes for everyone.</p>
+      <div class="callout">This is a planning estimate, not a precise biological measurement &mdash; actual cycle timing varies by person and by night.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What's the difference between the two calculators?</h3>
+        <p>The Sleep Cycle Calculator gives several options timed to whole 90-minute cycles. The Sleep Length Calculator is simpler &mdash; it just adds or subtracts a specific duration you choose, without cycle alignment.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why change "Time to Fall Asleep"?</h3>
+        <p>If you know it typically takes you longer (or shorter) than 15 minutes to fall asleep, adjusting this gives a more accurate bedtime recommendation.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="gpa-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>GPA Calculator</h3>
+        <p>Calculate GPA from course credits and grades.</p>
+      </a>
+
+      <a class="calc-list-card" href="grade-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Grade Calculator</h3>
+        <p>Find the grade needed on remaining assignments.</p>
+      </a>
+
+      <a class="calc-list-card" href="tip-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Tip Calculator</h3>
+        <p>Calculate a tip and split the bill.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/sleep-calculator.js"></script>
+</body>
+</html>

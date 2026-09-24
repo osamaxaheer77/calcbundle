@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tip Calculator - CalcBundle</title>
+<meta name="description" content="Calculate a tip and split the bill between any number of people.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Tip Calculator</span>
+    </div>
+    <h1>Tip Calculator</h1>
+    <p>Calculate a tip and split the bill between any number of people.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="tip-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="tip-bill">Bill Amount</label>
+            <input type="number" id="tip-bill" value="55" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="tip-percent">Tip Percentage (%)</label>
+            <input type="number" id="tip-percent" value="15" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="tip-people">Split Between (people)</label>
+            <input type="number" id="tip-people" value="1" min="1" step="1">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="tip-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">A quick note on tipping norms</h2>
+      <p>Tipping customs vary widely by country and by service type. In the US, 15&ndash;20% is typical for sit-down restaurant service; other services (delivery, salons, bars) often follow different conventions. Check local norms if you're somewhere unfamiliar.</p>
+
+      <h2>Tipping on the pre-tax or post-tax total?</h2>
+      <p>There's no universal rule &mdash; some people tip on the subtotal before tax, others on the total after tax. Either way, enter whichever bill amount you're basing the percentage on.</p>
+      <div class="callout">When splitting a bill unevenly (like one person ordering more), it's often fairer to split by item cost rather than dividing the total equally &mdash; this calculator assumes an equal split.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Should everyone get an equal tip if orders differ a lot?</h3>
+        <p>That's a personal/group decision &mdash; equal splitting is simplest, but some groups prefer splitting proportionally to what each person ordered.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is there a standard tip percentage?</h3>
+        <p>No fixed standard exists, but 15&ndash;20% is common in the US for good restaurant service, with 20%+ for exceptional service.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="gpa-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>GPA Calculator</h3>
+        <p>Calculate GPA from course credits and grades.</p>
+      </a>
+
+      <a class="calc-list-card" href="grade-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Grade Calculator</h3>
+        <p>Find the grade needed on remaining assignments.</p>
+      </a>
+
+      <a class="calc-list-card" href="sleep-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Sleep Calculator</h3>
+        <p>Find the best time to go to bed or wake up.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/tip-calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPA Calculator - CalcBundle</title>
+<meta name="description" content="Calculate your grade point average from course credits and letter grades, or find the GPA you need in future courses to hit a target.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">GPA Calculator</span>
+    </div>
+    <h1>GPA Calculator</h1>
+    <p>Calculate your grade point average from course credits and letter grades, or find the GPA you need in future courses to hit a target.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <h2 style="margin-top:0;">Calculate GPA</h2>
+    <form id="gpa-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div id="gpa-rows"></div>
+          <button type="button" class="calc-submit-btn" id="gpa-add-row" style="background:var(--bg-alt, #eee); color:inherit; margin-bottom:10px;">+ Add Course</button>
+          <button type="submit" class="calc-submit-btn">Calculate GPA</button>
+        </div>
+
+        <div class="mortgage-results-card" id="gpa-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin-top:40px;">GPA Planning</h2>
+    <form id="gpa-plan-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="gpa-plan-current">Current GPA</label>
+            <input type="number" id="gpa-plan-current" value="2.8" min="0" max="4.3" step="any">
+          </div>
+          <div class="field-group">
+            <label for="gpa-plan-target">Target GPA</label>
+            <input type="number" id="gpa-plan-target" value="3" min="0" max="4.3" step="any">
+          </div>
+          <div class="field-group">
+            <label for="gpa-plan-current-credits">Current Credits</label>
+            <input type="number" id="gpa-plan-current-credits" value="25" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="gpa-plan-additional-credits">Additional Credits</label>
+            <input type="number" id="gpa-plan-additional-credits" value="15" min="0" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="gpa-plan-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">The 4.3 grade scale used here</h2>
+      <p>A+ = 4.3, A = 4, A- = 3.7, B+ = 3.3, B = 3, B- = 2.7, C+ = 2.3, C = 2, C- = 1.7, D+ = 1.3, D = 1, D- = 0.7, F = 0. Each course's grade points (grade value &times; credits) are summed and divided by total credits to get GPA &mdash; so a 4-credit course affects your GPA twice as much as a 2-credit one.</p>
+
+      <h2>How the planning tool works</h2>
+      <p>It solves for the GPA you'd need across your remaining credits so that, combined with your current GPA and credits, the overall average reaches your target. If the required GPA comes out above 4.3, the target isn't reachable with a standard scale in the credits you have left.</p>
+      <div class="callout">Grading scales vary by school &mdash; some don't use +/- grades, and some weight AP/IB/honors courses differently. This calculator uses the standard unweighted 4.3 scale.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What about P (Pass) or NP (Not Pass) grades?</h3>
+        <p>Leave those courses out of the GPA calculation &mdash; pass/fail grades typically don't count toward GPA at most schools.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I calculate GPA for just one semester?</h3>
+        <p>Yes &mdash; only enter the courses from that semester. To track a cumulative GPA across semesters, include every course you've taken.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="grade-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Grade Calculator</h3>
+        <p>Find the grade needed on remaining assignments.</p>
+      </a>
+
+      <a class="calc-list-card" href="tip-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Tip Calculator</h3>
+        <p>Calculate a tip and split the bill.</p>
+      </a>
+
+      <a class="calc-list-card" href="sleep-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Sleep Calculator</h3>
+        <p>Find the best time to go to bed or wake up.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/gpa-calculator.js"></script>
+</body>
+</html>
