@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electricity Calculator - CalcBundle</title>
+<meta name="description" content="Estimate an appliance's electricity usage and cost per day, week, month, and year.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Electricity Calculator</span>
+    </div>
+    <h1>Electricity Calculator</h1>
+    <p>Estimate an appliance's electricity usage and cost per day, week, month, and year.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="elec-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="elec-power">Appliance Power</label>
+              <input type="number" id="elec-power" value="1000" min="0" step="any">
+            </div>
+            <select id="elec-power-unit" class="unit-select">
+              <option value="watt" selected>W</option>
+              <option value="kilowatt">kW</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="elec-capacity">Use/Run at Capacity (%)</label>
+            <input type="number" id="elec-capacity" value="100" min="0" max="100" step="any">
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="elec-usage">Usage</label>
+              <input type="number" id="elec-usage" value="24" min="0" step="any">
+            </div>
+            <select id="elec-usage-unit" class="unit-select">
+              <option value="minperday">minutes per day</option>
+              <option value="hrperday" selected>hours per day</option>
+              <option value="hrperweek">hours per week</option>
+              <option value="hrpermonth">hours per month</option>
+              <option value="dayperweek">days per week</option>
+              <option value="daypermonth">days per month</option>
+              <option value="dayperyear">days per year</option>
+              <option value="monthperyear">months per year</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="elec-price">Electricity Price (per kWh)</label>
+            <input type="number" id="elec-price" value="0.15" min="0" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="elec-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How usage becomes a cost</h2>
+      <p>Power (in watts or kilowatts) tells you the rate of energy use; multiplying by how many hours the appliance actually runs gives energy in kilowatt-hours (kWh) &mdash; the unit your electricity bill is priced in. The "capacity" field scales this down for appliances that don't run at full power the whole time, like a dimmed light or a partial-load motor.</p>
+
+      <h2>Why monthly and yearly figures use 365.25 days</h2>
+      <p>Using an average year length (accounting for leap years) keeps the monthly and yearly figures consistent with each other, rather than the monthly total drifting depending on which specific month you'd pick.</p>
+      <div class="callout">Your appliance's real usage varies day to day &mdash; treat this as a planning estimate, and adjust the usage field to match your actual habits for a more accurate figure.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Where do I find my appliance's power rating?</h3>
+        <p>Check the nameplate or spec sheet, usually printed as watts (W) or amps &times; volts. If it's rated in amps, multiply by your outlet's voltage (typically 120V in the US) to get watts.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Where do I find my electricity price per kWh?</h3>
+        <p>It's on your utility bill, usually listed as a rate per kWh. National averages are a rough substitute if you don't have a bill handy.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="resistor-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Resistor Calculator</h3>
+        <p>Decode resistor color bands to find resistance.</p>
+      </a>
+
+      <a class="calc-list-card" href="ohms-law-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Ohm's Law Calculator</h3>
+        <p>Solve for voltage, current, resistance, or power.</p>
+      </a>
+
+      <a class="calc-list-card" href="voltage-drop-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Voltage Drop Calculator</h3>
+        <p>Estimate voltage drop across a wire run.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/electricity-calculator.js"></script>
+</body>
+</html>

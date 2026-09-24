@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltage Drop Calculator - CalcBundle</title>
+<meta name="description" content="Estimate the voltage drop across a wire run from its resistance, length, load current, and phase.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Voltage Drop Calculator</span>
+    </div>
+    <h1>Voltage Drop Calculator</h1>
+    <p>Estimate the voltage drop across a wire run from its resistance, length, load current, and phase.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="vd-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="vd-resistance">Wire Resistance</label>
+              <input type="number" id="vd-resistance" value="1.2" min="0" step="any">
+            </div>
+            <select id="vd-resistance-unit" class="unit-select">
+              <option value="okm" selected>&Omega;/km</option>
+              <option value="om">&Omega;/m</option>
+              <option value="mohm_m">m&Omega;/m</option>
+              <option value="o1000ft">&Omega;/1000ft</option>
+              <option value="oft">&Omega;/ft</option>
+              <option value="mohm_ft">m&Omega;/ft</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="vd-voltage">Source Voltage (V)</label>
+            <input type="number" id="vd-voltage" value="120" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="vd-phase">Phase</label>
+            <select id="vd-phase" class="unit-select">
+              <option value="dc">DC</option>
+              <option value="acsingle" selected>AC single phase</option>
+              <option value="ac3">AC 3-phase</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="vd-conductors">Parallel Conductor Sets per Phase</label>
+            <input type="number" id="vd-conductors" value="1" min="1" step="1">
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="vd-distance">Distance (one-way)</label>
+              <input type="number" id="vd-distance" value="500" min="0" step="any">
+            </div>
+            <select id="vd-distance-unit" class="unit-select">
+              <option value="feet" selected>feet</option>
+              <option value="meter">meters</option>
+              <option value="mile">miles</option>
+              <option value="kilometer">kilometers</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="vd-current">Load Current (A)</label>
+            <input type="number" id="vd-current" value="1" min="0" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="vd-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Where the formula comes from</h2>
+      <p>Current has to travel down the wire and back, so the effective resistance is doubled for DC and single-phase AC circuits: Voltage Drop = 2 &times; I &times; R &times; D. Three-phase circuits use &radic;3 instead of 2, since the phases share the return path differently. R is the wire's resistance per unit length, and D is the one-way run distance.</p>
+
+      <h2>Keeping drop under control</h2>
+      <p>A voltage drop under 5% of the source voltage is the generally recommended limit &mdash; above that, lights can flicker or dim, heaters underperform, and motors run hotter and wear out faster. Running thicker wire (lower resistance) or shortening the run both reduce drop; adding parallel conductor sets per phase splits the current and reduces the effective resistance the same way.</p>
+      <div class="callout">This calculator uses a resistance value you provide directly. Wire resistance depends on material, gauge, and temperature &mdash; check your wire's datasheet or the NEC ampacity tables for an accurate figure.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Where do I find my wire's resistance value?</h3>
+        <p>Manufacturer datasheets list it, often in ohms per 1,000 feet or ohms per kilometer. NEC Chapter 9, Table 8 also publishes standard DC resistance values for common copper and aluminum wire gauges.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this account for AC reactance, not just resistance?</h3>
+        <p>No &mdash; this uses resistance only, which is accurate for DC and a reasonable approximation for AC at typical power-line frequencies over shorter runs. For precise AC work with reactance, use impedance data from your wire's specification.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="resistor-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Resistor Calculator</h3>
+        <p>Decode resistor color bands to find resistance.</p>
+      </a>
+
+      <a class="calc-list-card" href="ohms-law-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Ohm's Law Calculator</h3>
+        <p>Solve for voltage, current, resistance, or power.</p>
+      </a>
+
+      <a class="calc-list-card" href="electricity-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Electricity Calculator</h3>
+        <p>Estimate electricity usage and cost.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/voltage-drop-calculator.js"></script>
+</body>
+</html>
