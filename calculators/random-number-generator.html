@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Number Generator - CalcBundle</title>
+<meta name="description" content="Generate random integers or decimals within a range, one at a time or many at once, with or without repeats.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Random Number Generator</span>
+    </div>
+    <h1>Random Number Generator</h1>
+    <p>Generate one or many random integers or decimals within a range, with or without repeats.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="rng-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rng-lower">Lower Limit</label>
+              <input type="number" id="rng-lower" value="1" step="any">
+            </div>
+            <div class="field-group">
+              <label for="rng-upper">Upper Limit</label>
+              <input type="number" id="rng-upper" value="100" step="any">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="rng-count">How Many Numbers</label>
+            <input type="number" id="rng-count" value="1" min="1" max="10000" step="1">
+          </div>
+
+          <div class="field-group">
+            <label>Type</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="rng-type" value="i" checked>Integer</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="rng-type" value="d">Decimal</label>
+          </div>
+
+          <div class="field-group" id="rng-precision-field" hidden>
+            <label for="rng-precision">Decimal Precision (digits)</label>
+            <input type="number" id="rng-precision" value="2" min="0" max="20" step="1">
+          </div>
+
+          <div class="field-group">
+            <label>Allow Duplicates</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="rng-dup" value="y" checked>Yes</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="rng-dup" value="n">No</label>
+          </div>
+
+          <div class="field-group">
+            <label>Sort Result</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="rng-sort" value="n" checked>None</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="rng-sort" value="a">Ascending</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="rng-sort" value="d">Descending</label>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Generate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="rng-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How random is this?</h2>
+      <p>This generator uses your browser's built-in pseudo-random number generator, which produces numbers that are statistically indistinguishable from true randomness for everyday purposes &mdash; picking a raffle winner, rolling for a game, shuffling a list. It's not suitable for cryptography or security-sensitive uses, which require specialized random sources.</p>
+
+      <h2>Integers vs. decimals</h2>
+      <p>Integer mode returns whole numbers only, evenly spread across your range. Decimal mode returns numbers with a fractional part, rounded to however many digits of precision you choose &mdash; useful for things like simulating measurements or generating test data.</p>
+      <div class="callout">With duplicates disallowed, the number of unique integers you can request is capped by the size of your range &mdash; you can't generate 50 unique numbers from a range of only 20 possible values.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why would I disallow duplicates?</h3>
+        <p>Useful whenever each result needs to be unique &mdash; assigning raffle numbers, shuffling a deck, or picking several different winners from a pool without repeats.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does refreshing give a different result?</h3>
+        <p>Yes &mdash; every time you click Generate, a fresh set of random numbers is produced. Nothing is cached or remembered between runs.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="percentage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Percentage Calculator</h3>
+        <p>Solve percentage problems, difference, and increase or decrease.</p>
+      </a>
+
+      <a class="calc-list-card" href="scientific-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Scientific Calculator</h3>
+        <p>Trigonometry, logarithms, exponents, roots, and full calculation history.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Exponent Calculator</h3>
+        <p>Calculate a base raised to a power, including fractional exponents.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/random-number-generator.js"></script>
+</body>
+</html>

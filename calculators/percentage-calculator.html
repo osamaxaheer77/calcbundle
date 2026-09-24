@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Percentage Calculator - CalcBundle</title>
+<meta name="description" content="Solve percentage problems, percentage difference, and percentage increase or decrease.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Percentage Calculator</span>
+    </div>
+    <h1>Percentage Calculator</h1>
+    <p>Solve for any part of a percentage problem, compare two values, or find a percentage increase or decrease.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1000px;">
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">What is P% of V?</h2>
+      <p class="payoff-panel-sub">Enter any two of the three values &mdash; leave the one you want solved blank.</p>
+
+      <form id="pct1-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="pct1-p">Percentage (%)</label>
+              <input type="number" id="pct1-p" value="5" step="any">
+            </div>
+            <div class="field-group">
+              <label for="pct1-v1">Of Value</label>
+              <input type="number" id="pct1-v1" value="30" step="any">
+            </div>
+            <div class="field-group">
+              <label for="pct1-v2">Is Value</label>
+              <input type="number" id="pct1-v2" placeholder="Leave blank to solve for this" step="any">
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="pct1-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Percentage Difference</h2>
+      <p class="payoff-panel-sub">Find the percentage difference between two values.</p>
+
+      <form id="pct2-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="pct2-v1">Value 1</label>
+              <input type="number" id="pct2-v1" value="10" step="any">
+            </div>
+            <div class="field-group">
+              <label for="pct2-v2">Value 2</label>
+              <input type="number" id="pct2-v2" value="6" step="any">
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="pct2-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Percentage Increase / Decrease</h2>
+      <p class="payoff-panel-sub">Find the result of increasing or decreasing a value by a percentage.</p>
+
+      <form id="pct3-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="pct3-base">Starting Value</label>
+              <input type="number" id="pct3-base" value="500" step="any">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pct3-type">Change</label>
+                <select id="pct3-type">
+                  <option value="increase" selected>Increase by</option>
+                  <option value="decrease">Decrease by</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="pct3-pct">Percentage (%)</label>
+                <input type="number" id="pct3-pct" value="10" step="any">
+              </div>
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="pct3-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">The one formula behind all of this</h2>
+      <p>Every percentage problem boils down to the same equation: P &times; V1 = V2, where P is the percentage (as a decimal), V1 is the value being modified, and V2 is the result. Which of the three you're solving for just depends on which two you already know &mdash; that's what the first calculator above does automatically.</p>
+
+      <h2>Difference vs. change</h2>
+      <p>"Percentage difference" and "percentage change" sound similar but answer different questions. Percentage difference treats two values symmetrically &mdash; there's no "before" or "after," just a comparison. Percentage change (increase/decrease) is directional: it measures how much a specific starting value grew or shrank.</p>
+      <div class="callout">A common mistake: a 50% increase followed by a 50% decrease doesn't return you to the original value. $100 up 50% is $150; $150 down 50% is $75 &mdash; not $100. Percentage changes don't cancel out symmetrically.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why is percentage difference always positive?</h3>
+        <p>It uses the absolute value of the difference between the two numbers, so it doesn't matter which value is "first" &mdash; the result reflects how far apart they are, not which one is bigger.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I convert a percentage to a decimal?</h3>
+        <p>Divide by 100 &mdash; 35% becomes 0.35. This is what the calculators above do internally before running the underlying math.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="scientific-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Scientific Calculator</h3>
+        <p>Trigonometry, logarithms, exponents, roots, and full calculation history.</p>
+      </a>
+
+      <a class="calc-list-card" href="fraction-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Fraction Calculator</h3>
+        <p>Add, subtract, multiply, and divide fractions with step-by-step working.</p>
+      </a>
+
+      <a class="calc-list-card" href="random-number-generator.html">
+        <span class="tag live">Live</span>
+        <h3>Random Number Generator</h3>
+        <p>Generate random numbers within a range, with or without repeats.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/percentage-calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exponent Calculator - CalcBundle</title>
+<meta name="description" content="Solve for the base, exponent, or result of an exponentiation, given any two of the three values.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Exponent Calculator</span>
+    </div>
+    <h1>Exponent Calculator</h1>
+    <p>Enter any two of base, exponent, and result to solve for the third &mdash; including fractional exponents.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="exp-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="exp-base">Base</label>
+            <input type="number" id="exp-base" value="2" step="any">
+          </div>
+          <div class="field-group">
+            <label class="radio-option" style="display:inline-flex;"><input type="checkbox" id="exp-use-e"> Use e (~2.71828) as base</label>
+          </div>
+          <div class="field-group">
+            <label for="exp-exponent">Exponent</label>
+            <input type="number" id="exp-exponent" value="5" step="any">
+          </div>
+          <div class="field-group">
+            <label for="exp-result">Result</label>
+            <input type="number" id="exp-result" placeholder="Leave blank to solve for this" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="exp-result-box"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What exponentiation means</h2>
+      <p>a<sup>n</sup> means multiplying the base a by itself n times. This calculator generalizes that to solve for whichever of the three values &mdash; base, exponent, or result &mdash; you don't already know, using logarithms and roots as needed.</p>
+
+      <h2>Key exponent rules</h2>
+      <p>Same-base multiplication adds exponents (a<sup>n</sup>&times;a<sup>m</sup>=a<sup>n+m</sup>), same-base division subtracts them, and raising a power to another power multiplies them ((a<sup>m</sup>)<sup>n</sup>=a<sup>mn</sup>). A negative exponent means "take the reciprocal": a<sup>-n</sup> = 1/a<sup>n</sup>. Any nonzero base raised to the power 0 equals 1.</p>
+      <div class="callout">This calculator works with real numbers only. Taking an even root of a negative number (like solving x&sup2;=-4 for x) requires an imaginary number, which isn't supported &mdash; you'll see "NAN" in that case.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Can I enter a fractional exponent?</h3>
+        <p>Yes &mdash; enter it in decimal form (0.5 instead of 1/2). A fractional exponent with numerator 1 is equivalent to taking a root: raising to the power 0.5 is the same as a square root.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why can't I solve for the exponent with a negative base?</h3>
+        <p>Logarithms are only defined for positive bases, so solving base<sup>x</sup>=result for x requires a positive base (and a positive result) &mdash; if you know the exponent and result already, solving for the base handles negative and fractional cases more flexibly instead.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="scientific-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Scientific Calculator</h3>
+        <p>Trigonometry, logarithms, exponents, roots, and full calculation history.</p>
+      </a>
+
+      <a class="calc-list-card" href="log-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Log Calculator</h3>
+        <p>Calculate the logarithm of a number in any base.</p>
+      </a>
+
+      <a class="calc-list-card" href="percentage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Percentage Calculator</h3>
+        <p>Solve percentage problems, difference, and increase or decrease.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/exponent-calculator.js"></script>
+</body>
+</html>

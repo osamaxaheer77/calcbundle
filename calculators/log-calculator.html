@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log Calculator - CalcBundle</title>
+<meta name="description" content="Solve for the base, argument, or result of a logarithm, given any two of the three values.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Log Calculator</span>
+    </div>
+    <h1>Log Calculator</h1>
+    <p>Solve log<sub>b</sub>(x) = y for whichever of base, argument, or result you don't already know.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="log-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="log-base">Base (number, or "e")</label>
+            <input type="text" id="log-base" value="e">
+          </div>
+          <div class="field-group">
+            <label for="log-x">Argument (x)</label>
+            <input type="number" id="log-x" value="100" step="any">
+          </div>
+          <div class="field-group">
+            <label for="log-y">Result (y)</label>
+            <input type="number" id="log-y" placeholder="Leave blank to solve for this" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="log-result-box"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What a logarithm answers</h2>
+      <p>log<sub>b</sub>(x) = y asks: "what power do I need to raise b to, to get x?" It's the inverse of exponentiation &mdash; where an exponent tells you what a repeated multiplication produces, a logarithm tells you how many multiplications it took to get there.</p>
+
+      <h2>The three common bases</h2>
+      <p>Base 10 (written just "log") is common in science and engineering. Base e (written "ln", the natural logarithm) shows up throughout calculus and physics. Base 2 (the binary logarithm) is standard in computer science. This calculator accepts any positive base, including "e" typed directly.</p>
+      <div class="callout">Logarithms are only defined for positive arguments, and the base must be positive and not equal to 1 &mdash; log<sub>b</sub>(0) is undefined, and the log of a negative number requires complex numbers.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why is log<sub>b</sub>(b) always 1?</h3>
+        <p>Because raising b to the power 1 gives you b back &mdash; by definition, that's exactly what the logarithm is asking.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I convert between log bases?</h3>
+        <p>Use the change-of-base rule: log<sub>b</sub>(x) = log<sub>k</sub>(x) / log<sub>k</sub>(b) for any base k. This is exactly how this calculator computes logs in any base internally, using natural log (ln) as the common base k.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="exponent-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Exponent Calculator</h3>
+        <p>Calculate a base raised to a power, including fractional exponents.</p>
+      </a>
+
+      <a class="calc-list-card" href="scientific-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Scientific Calculator</h3>
+        <p>Trigonometry, logarithms, exponents, roots, and full calculation history.</p>
+      </a>
+
+      <a class="calc-list-card" href="random-number-generator.html">
+        <span class="tag live">Live</span>
+        <h3>Random Number Generator</h3>
+        <p>Generate random numbers within a range, with or without repeats.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/log-calculator.js"></script>
+</body>
+</html>
