@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CD Calculator - CalcBundle</title>
+<meta name="description" content="Estimate the accumulated interest and end balance on a certificate of deposit, accounting for compounding frequency and tax.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">CD Calculator</span>
+    </div>
+    <h1>CD Calculator</h1>
+    <p>Estimate the accumulated interest and end balance on a certificate of deposit, accounting for compounding frequency and tax.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="cd-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="cd-initial">Initial Deposit</label>
+            <input type="number" id="cd-initial" value="10000" min="0" step="100">
+          </div>
+          <div class="field-group">
+            <label for="cd-rate">Interest Rate (%)</label>
+            <input type="number" id="cd-rate" value="5" min="0" step="0.01">
+          </div>
+          <div class="field-group">
+            <label for="cd-compound">Compound</label>
+            <select id="cd-compound">
+              <option value="annually" selected>Annually (APY)</option>
+              <option value="semiannually">Semiannually</option>
+              <option value="quarterly">Quarterly</option>
+              <option value="monthly">Monthly (APR)</option>
+              <option value="continuously">Continuously</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label>Deposit Length</label>
+            <div class="date-row">
+              <input type="number" id="cd-years" value="3" min="0" step="1" style="flex:1;">
+              <span class="from-label" style="align-self:center;">years</span>
+              <input type="number" id="cd-months" value="0" min="0" max="11" step="1" style="flex:1;">
+              <span class="from-label" style="align-self:center;">months</span>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="cd-tax">Marginal Tax Rate (%)</label>
+            <input type="number" id="cd-tax" value="0" min="0" step="0.5">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="cd-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="cd-results-section" hidden>
+      <h2 style="margin:0 0 16px;font-size:18px;">Accumulation Schedule</h2>
+      <div class="schedule-table-wrap">
+        <div id="cd-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What makes a CD different from a savings account</h2>
+      <p>A certificate of deposit trades flexibility for a (usually) better rate. Once you lock in a CD, your money is committed for the full term — withdraw early and you'll typically owe a penalty, often several months' worth of interest. In exchange, banks generally offer higher rates on CDs than on ordinary savings accounts, since they know exactly how long they get to keep the deposit.</p>
+
+      <h2>Why the rate alone doesn't tell the whole story</h2>
+      <p>Two CDs advertising the same rate can pay out differently based on how often that rate compounds — a 5% CD compounding monthly earns slightly more than one compounding annually. And since CD interest is generally taxed as ordinary income the year it's earned (unless held in a tax-advantaged account), your marginal tax rate quietly reduces the return you actually keep.</p>
+      <div class="callout">CDs sit on the low-risk end of the investment spectrum — FDIC insurance (up to $250,000 per depositor, per bank) protects the principal, but that safety is also why CD rates typically trail long-run stock market returns.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What happens if I withdraw from a CD early?</h3>
+        <p>Most banks charge an early withdrawal penalty, commonly a forfeiture of a few months of interest — the exact terms vary by bank and CD length, so it's worth checking before committing funds you might need access to.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I ladder CDs instead of buying one large one?</h3>
+        <p>CD laddering — splitting money across CDs with staggered maturity dates — is a common strategy to balance the higher rates of longer terms against the flexibility of having some funds become available sooner.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is CD interest taxed differently from savings account interest?</h3>
+        <p>No — both are typically taxed as ordinary income in the year the interest is earned or credited, whichever applies, unless the CD is held inside a tax-advantaged account like an IRA.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="savings-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Savings Calculator</h3>
+        <p>Project how a savings balance grows with regular deposits.</p>
+      </a>
+
+      <a class="calc-list-card" href="investment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </a>
+
+      <a class="calc-list-card" href="compound-interest-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Compound Interest Calculator</h3>
+        <p>Calculate how savings grow when interest compounds over time.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/cd-calculator.js"></script>
+</body>
+</html>

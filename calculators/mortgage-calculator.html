@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mortgage Calculator - CalcBundle</title>
+<meta name="description" content="Estimate your monthly mortgage payment, taxes, insurance, and full amortization schedule — with support for extra payments and biweekly payoff.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Mortgage Calculator</span>
+    </div>
+    <h1>Mortgage Calculator</h1>
+    <p>Estimate your monthly payment, see the full cost breakdown, and explore the year-by-year payoff schedule — including extra payments and biweekly payoff.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="mortgage-form">
+      <div class="mortgage-layout">
+
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="m-home-price">Home Price</label>
+            <input type="number" id="m-home-price" value="400000" min="0" step="1000">
+          </div>
+
+          <div class="field-group">
+            <label for="m-down-payment">Down Payment</label>
+            <div class="field-with-toggle">
+              <input type="number" id="m-down-payment" value="20" min="0" step="0.5">
+              <select id="m-down-mode" class="unit-select">
+                <option value="pct" selected>%</option>
+                <option value="amt">$</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="m-loan-term">Loan Term (years)</label>
+              <input type="number" id="m-loan-term" value="30" min="1" step="1">
+            </div>
+            <div class="field-group">
+              <label for="m-interest-rate">Interest Rate (%)</label>
+              <input type="number" id="m-interest-rate" value="6.5" min="0" step="0.01">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Start Date</label>
+            <div class="date-row">
+              <select id="m-start-month">
+                <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+              </select>
+              <select id="m-start-year"></select>
+            </div>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="m-include-taxes" checked>
+            <label for="m-include-taxes" style="margin:0;">Include Taxes &amp; Costs</label>
+          </div>
+
+          <div id="m-taxes-fields">
+            <div class="field-group">
+              <label for="m-property-tax">Property Taxes (annual)</label>
+              <div class="field-with-toggle">
+                <input type="number" id="m-property-tax" value="1.2" min="0" step="0.1">
+                <select id="m-tax-mode" class="unit-select">
+                  <option value="pct" selected>%</option>
+                  <option value="amt">$</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="m-home-insurance">Home Insurance ($/yr)</label>
+                <input type="number" id="m-home-insurance" value="1500" min="0" step="50">
+              </div>
+              <div class="field-group">
+                <label for="m-pmi">PMI Insurance ($/yr)</label>
+                <input type="number" id="m-pmi" value="0" min="0" step="50">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="m-hoa">HOA Fee ($/yr)</label>
+                <input type="number" id="m-hoa" value="0" min="0" step="50">
+              </div>
+              <div class="field-group">
+                <label for="m-other-costs">Other Costs ($/yr)</label>
+                <input type="number" id="m-other-costs" value="0" min="0" step="50">
+              </div>
+            </div>
+          </div>
+
+          <button type="button" id="m-more-options-toggle" class="more-options-toggle">+ More Options</button>
+
+          <div id="m-more-options" hidden>
+            <div class="subsection-title">Annual Tax &amp; Cost Increase</div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="m-tax-increase">Property Tax Increase (%/yr)</label>
+                <input type="number" id="m-tax-increase" value="0" step="0.1">
+              </div>
+              <div class="field-group">
+                <label for="m-insurance-increase">Home Insurance Increase (%/yr)</label>
+                <input type="number" id="m-insurance-increase" value="0" step="0.1">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="m-hoa-increase">HOA Fee Increase (%/yr)</label>
+                <input type="number" id="m-hoa-increase" value="0" step="0.1">
+              </div>
+              <div class="field-group">
+                <label for="m-other-increase">Other Costs Increase (%/yr)</label>
+                <input type="number" id="m-other-increase" value="0" step="0.1">
+              </div>
+            </div>
+
+            <div class="subsection-title">Extra Payments</div>
+            <div class="extra-payment-row">
+              <div class="field-group">
+                <label for="m-extra-monthly">Extra Monthly Pay ($)</label>
+                <input type="number" id="m-extra-monthly" value="0" min="0" step="10">
+              </div>
+              <span class="from-label">from</span>
+              <select id="m-extra-monthly-month">
+                <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+              </select>
+              <select id="m-extra-monthly-year"></select>
+            </div>
+            <div class="extra-payment-row">
+              <div class="field-group">
+                <label for="m-extra-yearly">Extra Yearly Pay ($)</label>
+                <input type="number" id="m-extra-yearly" value="0" min="0" step="10">
+              </div>
+              <span class="from-label">from</span>
+              <select id="m-extra-yearly-month">
+                <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+              </select>
+              <select id="m-extra-yearly-year"></select>
+            </div>
+            <div class="extra-payment-row">
+              <div class="field-group">
+                <label for="m-extra-onetime">Extra One-time Pay ($)</label>
+                <input type="number" id="m-extra-onetime" value="0" min="0" step="10">
+              </div>
+              <span class="from-label">in</span>
+              <select id="m-extra-onetime-month">
+                <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+              </select>
+              <select id="m-extra-onetime-year"></select>
+            </div>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="m-show-biweekly">
+            <label for="m-show-biweekly" style="margin:0;">Show Biweekly Payback Estimate</label>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="m-result">
+          <div id="m-results" hidden>
+            <div class="summary-payment-box">
+              <div class="label">Monthly Payment (Principal &amp; Interest)</div>
+              <div class="value" id="m-summary-payment">$0</div>
+            </div>
+
+            <div id="m-breakdown"></div>
+            <div id="m-donut-wrap" class="donut-wrap"></div>
+            <div id="m-summary-stats"></div>
+            <div id="m-biweekly" class="biweekly-box" hidden></div>
+          </div>
+        </div>
+
+      </div>
+    </form>
+
+    <div class="schedule-card" id="m-schedule-section" hidden>
+      <div class="schedule-header">
+        <h2 style="margin:0;font-size:18px;">Amortization Schedule</h2>
+        <div class="schedule-toggle-group">
+          <button type="button" id="m-schedule-annual" class="active">Annual</button>
+          <button type="button" id="m-schedule-monthly">Monthly</button>
+        </div>
+      </div>
+      <div class="line-chart-wrap">
+        <div id="m-chart-wrap"></div>
+        <div class="chart-legend">
+          <span><span class="legend-dot" style="background:var(--accent)"></span> Balance</span>
+          <span><span class="legend-dot" style="background:#10b981"></span> Cumulative Interest</span>
+          <span><span class="legend-dot" style="background:#dc2626"></span> Cumulative Payment</span>
+        </div>
+      </div>
+      <div class="schedule-table-wrap">
+        <div id="m-schedule-body"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How a mortgage payment is actually built</h2>
+      <p>A mortgage payment usually bundles four separate obligations into one monthly charge. The bank calls it PITI: <strong>P</strong>rincipal (paying down what you borrowed), <strong>I</strong>nterest (the cost of borrowing it), <strong>T</strong>axes (your share of local property tax, collected monthly and paid on your behalf), and <strong>I</strong>nsurance (homeowner's insurance, and sometimes PMI). Only the first two — principal and interest — are determined by the loan itself; the rest are pass-through costs the lender often collects into an escrow account so you're not hit with one huge tax bill once a year.</p>
+
+      <h2>Why the early payments are mostly interest</h2>
+      <p>Interest is charged on whatever balance is still outstanding, so early in the loan — when you owe the most — the interest portion of each payment is largest and the principal portion is smallest. As the balance shrinks, that ratio flips: more of each identical payment goes toward principal, less toward interest. This is why the amortization schedule above shows principal accelerating and interest fading over the life of the loan, even though the total payment itself stays flat.</p>
+      <div class="callout">Because of this curve, paying even a small amount extra early in the loan saves far more interest than the same extra amount paid in year 25 — the extra dollars skip years of compounding on a large balance.</div>
+
+      <h2>What PMI is, and when it goes away</h2>
+      <p>Private Mortgage Insurance protects the <em>lender</em>, not you, and typically applies when your down payment is under 20% of the home's value. It's usually removable once your loan balance drops to 80% of the original home price — our calculator estimates that crossover point automatically as the schedule pays down.</p>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Does a bigger down payment always lower the monthly payment?</h3>
+        <p>Yes — a larger down payment shrinks the loan amount that interest gets charged on, and it can also remove the need for PMI once you clear the 20% threshold, compounding the savings.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does "Total Interest" look so much bigger than the loan itself?</h3>
+        <p>Over a 30-year term at a normal rate, it's common to pay nearly as much in interest as the loan amount, sometimes more. That's simply the cost of borrowing over that long a stretch — shortening the term or making extra payments both cut it substantially.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does "extra payment" actually change?</h3>
+        <p>Extra payments go straight to principal, not interest. They don't lower your required monthly payment — they shrink the balance faster, which shortens the loan and reduces the total interest paid over its life.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the biweekly estimate exact?</h3>
+        <p>It's a close approximation. True biweekly billing accrues interest slightly differently than monthly billing; we model the main effect — 26 half-payments a year works out to 13 full monthly payments instead of 12 — which is what drives almost all of the real-world savings.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Loan Calculator</h3>
+        <p>Work out payments and total interest for any fixed-term loan.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Estimate car payments including taxes, fees, and trade-in value.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Interest Calculator</h3>
+        <p>See how simple interest builds up on a balance over time.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Payment Calculator</h3>
+        <p>Find the required payment amount for a loan, given its rate and term.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </div>
+
+      <a class="calc-list-card" href="amortization-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Amortization Calculator</h3>
+        <p>Break a loan down into its full principal-and-interest payment schedule.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Inflation Calculator</h3>
+        <p>See how inflation reshapes the purchasing power of money over time.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Finance Calculator</h3>
+        <p>Solve for present value, future value, rate, or payment in a financial formula.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Income Tax Calculator</h3>
+        <p>Estimate income tax owed based on earnings and filing status.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Compound Interest Calculator</h3>
+        <p>Calculate how savings grow when interest compounds over time.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Salary Calculator</h3>
+        <p>Convert pay between hourly, monthly, and annual figures.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Interest Rate Calculator</h3>
+        <p>Work out the interest rate implied by a loan or investment.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Sales Tax Calculator</h3>
+        <p>Add or remove sales tax from a purchase price.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/mortgage-calculator.js"></script>
+</body>
+</html>

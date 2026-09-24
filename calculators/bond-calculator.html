@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bond Calculator - CalcBundle</title>
+<meta name="description" content="Solve for a bond's price, face value, yield, time to maturity, or coupon rate — for fixed-rate coupon bonds valued on a coupon date.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Bond Calculator</span>
+    </div>
+    <h1>Bond Calculator</h1>
+    <p>Solve for a fixed-rate coupon bond's price, face value, yield, time to maturity, or coupon — given the other four, valued on a coupon date.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="bond-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Solve For</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:14px;"><input type="radio" name="bond-tab" value="price" checked>Price</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:14px;"><input type="radio" name="bond-tab" value="face">Face Value</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:14px;"><input type="radio" name="bond-tab" value="yield">Yield</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:14px;"><input type="radio" name="bond-tab" value="years">Time to Maturity</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="bond-tab" value="coupon">Coupon</label>
+          </div>
+
+          <div class="field-group" id="bond-price-field" hidden>
+            <label for="bond-price">Price</label>
+            <input type="number" id="bond-price" value="97.327" step="0.01">
+          </div>
+          <div class="field-group" id="bond-face-field">
+            <label for="bond-face">Face Value</label>
+            <input type="number" id="bond-face" value="100" step="1">
+          </div>
+          <div class="field-group" id="bond-yield-field">
+            <label for="bond-yield">Yield (%)</label>
+            <input type="number" id="bond-yield" value="6" step="0.01">
+          </div>
+          <div class="field-group" id="bond-years-field">
+            <label for="bond-years">Time to Maturity (years)</label>
+            <input type="number" id="bond-years" value="3" min="0" step="0.5">
+          </div>
+          <div class="field-group" id="bond-coupon-field">
+            <label for="bond-coupon">Annual Coupon</label>
+            <div class="field-with-toggle">
+              <input type="number" id="bond-coupon" value="5" step="0.01">
+              <select id="bond-coupon-unit" class="unit-select">
+                <option value="pct" selected>%</option>
+                <option value="amt">$</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="bond-frequency">Coupon Frequency</label>
+            <select id="bond-frequency">
+              <option value="a" selected>Annually</option>
+              <option value="s">Semiannually</option>
+              <option value="q">Quarterly</option>
+              <option value="m">Monthly</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="bond-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why a bond's price moves opposite to yield</h2>
+      <p>A bond's coupon payments are fixed the moment it's issued — they never change. When market yields rise above the bond's coupon rate, investors won't pay full face value for a stream of below-market payments, so the price has to drop until the bond's effective return matches the market. When yields fall below the coupon rate, the opposite happens: the bond's fixed payments look attractive, and investors bid the price up above face value. This inverse relationship is one of the most fundamental facts in fixed-income investing.</p>
+
+      <h2>Par, premium, and discount</h2>
+      <p>A bond priced exactly at its face value is trading "at par" — this happens precisely when the yield equals the coupon rate. Trade above face value and it's at a "premium" (yield below coupon); trade below and it's at a "discount" (yield above coupon). All three are just different snapshots of the same price-yield relationship.</p>
+      <div class="callout">This calculator prices a bond as of a coupon payment date. Bonds bought or sold between coupon dates also carry "accrued interest" — the buyer compensates the seller for the coupon time already elapsed — which is a separate, more specialized calculation this tool doesn't cover.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why does coupon frequency matter?</h3>
+        <p>More frequent coupon payments mean your money gets reinvested (compounds) more often, which slightly changes both the bond's fair price and its effective yield compared to the same nominal rate paid less frequently.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does "yield" mean here specifically?</h3>
+        <p>This is the bond's yield to maturity (YTM) — the total return you'd earn if you bought the bond today and held it until it matures, accounting for both coupon payments and any difference between the purchase price and face value.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is a higher coupon rate always better for an investor?</h3>
+        <p>Not by itself — what matters is the yield relative to the price paid, not the coupon rate in isolation. A high-coupon bond bought at a steep premium can yield less than a low-coupon bond bought at a discount.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="finance-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Finance Calculator</h3>
+        <p>Solve for present value, future value, rate, or payment in a financial formula.</p>
+      </a>
+
+      <a class="calc-list-card" href="cd-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>CD Calculator</h3>
+        <p>Estimate the accumulated interest earnings on a certificate of deposit.</p>
+      </a>
+
+      <a class="calc-list-card" href="investment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/bond-calculator.js"></script>
+</body>
+</html>

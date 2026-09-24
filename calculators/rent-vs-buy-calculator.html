@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rent vs. Buy Calculator - CalcBundle</title>
+<meta name="description" content="Compare the long-term cost of renting against buying a home, accounting for appreciation, selling costs, and the opportunity cost of your down payment.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Rent vs. Buy Calculator</span>
+    </div>
+    <h1>Rent vs. Buy Calculator</h1>
+    <p>Compare the long-term cost of renting against buying — including home appreciation, selling costs, and what your down payment could have earned if invested instead.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="rvb-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="subsection-title" style="margin-top:0;">Home Purchase</div>
+          <div class="field-group">
+            <label for="rvb-price">Home Price</label>
+            <input type="number" id="rvb-price" value="500000" min="0" step="1000">
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rvb-down">Down Payment (%)</label>
+              <input type="number" id="rvb-down" value="20" min="0" step="0.5">
+            </div>
+            <div class="field-group">
+              <label for="rvb-rate">Interest Rate (%)</label>
+              <input type="number" id="rvb-rate" value="6.5" min="0" step="0.01">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rvb-term">Loan Term (years)</label>
+              <input type="number" id="rvb-term" value="30" min="1" step="1">
+            </div>
+            <div class="field-group">
+              <label for="rvb-buy-closing">Buying Closing Costs (%)</label>
+              <input type="number" id="rvb-buy-closing" value="2" min="0" step="0.1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rvb-tax">Property Tax (%/yr)</label>
+              <input type="number" id="rvb-tax" value="1.5" min="0" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="rvb-tax-increase">Property Tax Increase (%/yr)</label>
+              <input type="number" id="rvb-tax-increase" value="3" min="0" step="0.1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rvb-insurance">Home Insurance ($/yr)</label>
+              <input type="number" id="rvb-insurance" value="2500" min="0" step="50">
+            </div>
+            <div class="field-group">
+              <label for="rvb-hoa">HOA Fee ($/yr)</label>
+              <input type="number" id="rvb-hoa" value="0" min="0" step="50">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rvb-maintenance">Maintenance Cost (%/yr)</label>
+              <input type="number" id="rvb-maintenance" value="1.5" min="0" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="rvb-value-increase">Home Value Appreciation (%/yr)</label>
+              <input type="number" id="rvb-value-increase" value="3" min="0" step="0.1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rvb-cost-increase">Cost/Insurance Increase (%/yr)</label>
+              <input type="number" id="rvb-cost-increase" value="3" min="0" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="rvb-sell-closing">Selling Closing Costs (%)</label>
+              <input type="number" id="rvb-sell-closing" value="7" min="0" step="0.1">
+            </div>
+          </div>
+
+          <div class="subsection-title">Home Rent</div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rvb-rent">Monthly Rental Fee</label>
+              <input type="number" id="rvb-rent" value="3000" min="0" step="50">
+            </div>
+            <div class="field-group">
+              <label for="rvb-rent-increase">Rental Fee Increase (%/yr)</label>
+              <input type="number" id="rvb-rent-increase" value="3" min="0" step="0.1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rvb-renter-insurance">Renter's Insurance ($/mo)</label>
+              <input type="number" id="rvb-renter-insurance" value="15" min="0" step="5">
+            </div>
+            <div class="field-group">
+              <label for="rvb-upfront">Upfront Cost ($)</label>
+              <input type="number" id="rvb-upfront" value="100" min="0" step="10">
+            </div>
+          </div>
+
+          <div class="subsection-title">Your Information</div>
+          <div class="field-group">
+            <label for="rvb-invest-return">Average Investment Return (%/yr)</label>
+            <input type="number" id="rvb-invest-return" value="5" min="0" step="0.1">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="rvb-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="rvb-results" hidden>
+      <h2 style="margin:0 0 16px;font-size:18px;">Average Cost by Length of Stay</h2>
+      <div class="line-chart-wrap">
+        <div id="rvb-chart-wrap"></div>
+        <div class="chart-legend">
+          <span><span class="legend-dot" style="background:var(--accent)"></span> Buy (avg. monthly cost)</span>
+          <span><span class="legend-dot" style="background:#dc2626"></span> Rent (avg. monthly cost)</span>
+        </div>
+      </div>
+      <div class="schedule-table-wrap">
+        <div id="rvb-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why this isn't just "rent vs. mortgage payment"</h2>
+      <p>Comparing a mortgage payment to a rent check misses most of what actually determines which is cheaper. Buying ties up a large down payment and closing costs that a renter keeps free to invest elsewhere; buying also builds equity that comes back (mostly) when the home is eventually sold, while every rent payment is gone for good. This calculator nets all of that together — what you'd actually spend and actually get back under each path — into a single "average monthly cost" for any given length of stay.</p>
+
+      <h2>Why the answer changes with how long you stay</h2>
+      <p>Buying involves large one-time costs — the down payment, closing costs, and eventually selling costs — that get spread thinner the longer you stay in the home. Rent has no such upfront drag, but it also never builds equity and never gets cheaper relative to itself over time the way a fixed mortgage payment effectively does as inflation erodes its real cost. The result is usually a crossover point: renting cheaper for a short stay, buying cheaper for a long one.</p>
+      <div class="callout">This calculator models the core cash-flow and opportunity-cost math — the down payment's foregone investment growth, home appreciation, and selling costs — but does not model mortgage-interest or property-tax tax deductions, which depend on your specific tax situation and whether you itemize. Factoring those in would shift the crossover point somewhat, usually in favor of buying for borrowers who itemize in a high tax bracket.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why does a higher investment return favor renting?</h3>
+        <p>Because the money you'd otherwise sink into a down payment could instead be invested and grow — the better that money performs elsewhere, the more it costs you in opportunity terms to have it tied up in home equity instead.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this account for the value of owning a home beyond money?</h3>
+        <p>No — this is a purely financial comparison. Stability, the freedom to renovate, not dealing with a landlord, or the flexibility of renting are real considerations this calculator can't weigh for you.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do selling costs matter so much for short stays?</h3>
+        <p>Because they're a large one-time hit — typically 6-8% of the sale price — that has almost no time to be offset by home appreciation or years of avoided rent if you sell soon after buying. That's the single biggest reason buying tends to lose to renting over short holding periods.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="rent-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Rent Calculator</h3>
+        <p>Work out what rent fits comfortably within your monthly budget.</p>
+      </a>
+
+      <a class="calc-list-card" href="house-affordability-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>House Affordability Calculator</h3>
+        <p>Estimate how much home you can reasonably afford based on income and debts.</p>
+      </a>
+
+      <a class="calc-list-card" href="down-payment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Down Payment Calculator</h3>
+        <p>Work out how much to save for a target down payment percentage.</p>
+      </a>
+
+      <a class="calc-list-card" href="rental-property-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Rental Property Calculator</h3>
+        <p>Estimate cash flow and return on investment for a rental property.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/rent-vs-buy-calculator.js"></script>
+</body>
+</html>

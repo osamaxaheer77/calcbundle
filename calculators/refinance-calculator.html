@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refinance Calculator - CalcBundle</title>
+<meta name="description" content="Compare your current mortgage against a refinanced one — new payment, true APR including points and fees, lifetime savings, and the break-even point.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Refinance Calculator</span>
+    </div>
+    <h1>Refinance Calculator</h1>
+    <p>Compare your current mortgage against a refinanced one — new payment, true APR including points and fees, lifetime savings, and how long it takes to break even.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ref-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="subsection-title" style="margin-top:0;">Current Loan</div>
+          <div class="field-group">
+            <label for="ref-cur-mode">What do you know about it?</label>
+            <select id="ref-cur-mode">
+              <option value="balance" selected>I know my remaining balance</option>
+              <option value="original">I know the original loan amount</option>
+            </select>
+          </div>
+
+          <div id="ref-balance-fields">
+            <div class="field-group">
+              <label for="ref-cur-balance">Remaining Balance</label>
+              <input type="number" id="ref-cur-balance" value="250000" min="0" step="1000">
+            </div>
+            <div class="field-group">
+              <label for="ref-cur-payment">Monthly Payment</label>
+              <input type="number" id="ref-cur-payment" value="1800" min="0" step="10">
+            </div>
+          </div>
+
+          <div id="ref-original-fields" hidden>
+            <div class="field-group">
+              <label for="ref-cur-orig-amount">Original Loan Amount</label>
+              <input type="number" id="ref-cur-orig-amount" value="300000" min="0" step="1000">
+            </div>
+            <div class="field-group">
+              <label for="ref-cur-orig-term">Loan Term (years)</label>
+              <input type="number" id="ref-cur-orig-term" value="30" min="1" step="1">
+            </div>
+            <div class="field-group">
+              <label>Time Remaining</label>
+              <div class="date-row">
+                <input type="number" id="ref-cur-rem-years" value="20" min="0" step="1" style="flex:1;">
+                <span class="from-label" style="align-self:center;">years</span>
+                <input type="number" id="ref-cur-rem-months" value="0" min="0" max="11" step="1" style="flex:1;">
+                <span class="from-label" style="align-self:center;">months</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="ref-cur-rate">Interest Rate (%)</label>
+            <input type="number" id="ref-cur-rate" value="7" min="0" step="0.01">
+          </div>
+
+          <div class="subsection-title">New Loan</div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="ref-new-term">New Loan Term (years)</label>
+              <input type="number" id="ref-new-term" value="20" min="1" step="1">
+            </div>
+            <div class="field-group">
+              <label for="ref-new-rate">Interest Rate (%)</label>
+              <input type="number" id="ref-new-rate" value="6" min="0" step="0.01">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="ref-new-points">Points</label>
+              <input type="number" id="ref-new-points" value="2" min="0" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="ref-new-costs">Costs and Fees ($)</label>
+              <input type="number" id="ref-new-costs" value="1500" min="0" step="50">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="ref-new-cashout">Cash Out Amount ($)</label>
+            <input type="number" id="ref-new-cashout" value="0" min="0" step="1000">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="ref-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why the APR is never quite the note rate</h2>
+      <p>A refinance almost always comes with upfront costs — points paid to buy down the rate, lender fees, closing costs. The advertised "note rate" ignores all of that; the APR doesn't. It answers a more honest question: given what you're actually walking away with after fees, what rate would you need to have borrowed at, with no fees at all, to end up paying the same? That's always a little higher than the note rate whenever there are upfront costs, which is why comparing APRs — not note rates — is the fairer way to shop refinance offers.</p>
+
+      <h2>What "break-even" really measures</h2>
+      <p>Refinancing isn't free the moment it closes — you're paying real money upfront to lower your rate. The break-even point is when the interest you've saved by having a cheaper loan finally catches up to and exceeds what you paid to get it. Refinance and move within a couple of years, and you may never reach that point; stay in the loan for a decade, and the savings can be substantial. The math only pays off if you outlast the break-even point.</p>
+      <div class="callout">Break-even is calculated from accumulated interest savings, not from the raw difference in monthly payment — a shorter new loan term can shift the crossover earlier or later than a simple "upfront cost ÷ monthly savings" estimate would suggest.</div>
+
+      <h2>Why cash-out refinancing costs more than it looks</h2>
+      <p>Pulling equity out as cash increases the new loan's balance, which increases both the monthly payment and the total interest charged over the loan's life — on top of whatever rate change you're also making. It can still be the cheapest way to access a large sum of money compared to other borrowing, but it's rarely "free" money in the way it can feel.</p>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What's a "point," exactly?</h3>
+        <p>One point equals 1% of the loan amount, paid upfront in exchange for a lower interest rate. Whether points are worth paying depends heavily on how long you plan to keep the loan — the longer you stay, the more likely the lower rate earns back its upfront cost.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does refinancing reset my loan's clock?</h3>
+        <p>Only if you let it. Choosing a new 30-year term when you'd already paid down several years of a previous 30-year loan does restart the countdown — picking a shorter new term (or one that matches your remaining time) avoids stretching the payoff back out.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is a lower monthly payment always a good sign?</h3>
+        <p>Not by itself. A lower payment achieved by extending the term can mean paying more in total interest even at a lower rate — that's exactly why this calculator compares lifetime cost, not just the monthly number.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="mortgage-payoff-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Payoff Calculator</h3>
+        <p>See how extra, biweekly, or lump-sum payments could shorten your mortgage.</p>
+      </a>
+
+      <a class="calc-list-card" href="house-affordability-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>House Affordability Calculator</h3>
+        <p>Estimate how much home you can reasonably afford based on income and debts.</p>
+      </a>
+
+      <a class="calc-list-card" href="amortization-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Amortization Calculator</h3>
+        <p>Break a loan down into its full principal-and-interest payment schedule.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>APR Calculator</h3>
+        <p>Convert a loan's rate and fees into one comparable annual percentage rate.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>FHA Loan Calculator</h3>
+        <p>Estimate payments on a government-backed FHA loan, including mortgage insurance.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>VA Mortgage Calculator</h3>
+        <p>Estimate payments on a VA loan for eligible veterans and service members.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Home Equity Loan Calculator</h3>
+        <p>See how much you could borrow against the equity in your home.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>HELOC Calculator</h3>
+        <p>Estimate payments on a home equity line of credit.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Down Payment Calculator</h3>
+        <p>Work out how much to save for a target down payment percentage.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/refinance-calculator.js"></script>
+</body>
+</html>

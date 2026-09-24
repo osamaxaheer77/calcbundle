@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Loan Calculator - CalcBundle</title>
+<meta name="description" content="Estimate car payments including sales tax, fees, incentives, and trade-in value — or work backward from a target monthly payment to a vehicle price.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Auto Loan Calculator</span>
+    </div>
+    <h1>Auto Loan Calculator</h1>
+    <p>Estimate car payments including sales tax, fees, incentives, and trade-in value — or work backward from a target monthly payment to a vehicle price.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="auto-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Solve For</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:20px;"><input type="radio" name="auto-mode" value="price" checked>Monthly Payment</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="auto-mode" value="monthly">Vehicle Price</label>
+          </div>
+
+          <div id="auto-price-field">
+            <div class="field-group">
+              <label for="auto-price">Auto Price</label>
+              <input type="number" id="auto-price" value="50000" min="0" step="500">
+            </div>
+          </div>
+          <div id="auto-monthly-field" hidden>
+            <div class="field-group">
+              <label for="auto-monthly-pay">Desired Monthly Payment</label>
+              <input type="number" id="auto-monthly-pay" value="750" min="0" step="10">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="auto-term">Loan Term (months)</label>
+              <input type="number" id="auto-term" value="60" min="1" step="1">
+            </div>
+            <div class="field-group">
+              <label for="auto-rate">Interest Rate (%)</label>
+              <input type="number" id="auto-rate" value="5" min="0" step="0.01">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="auto-incentive">Cash Incentives ($)</label>
+              <input type="number" id="auto-incentive" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="auto-down">Down Payment ($)</label>
+              <input type="number" id="auto-down" value="10000" min="0" step="500">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="auto-tradein-value">Trade-in Value ($)</label>
+              <input type="number" id="auto-tradein-value" value="0" min="0" step="500">
+            </div>
+            <div class="field-group">
+              <label for="auto-tradein-owed">Amount Owed on Trade-in ($)</label>
+              <input type="number" id="auto-tradein-owed" value="0" min="0" step="500">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="auto-tax">Sales Tax (%)</label>
+              <input type="number" id="auto-tax" value="7" min="0" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="auto-fees">Title, Registration &amp; Other Fees ($)</label>
+              <input type="number" id="auto-fees" value="2000" min="0" step="100">
+            </div>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="auto-include-loan">
+            <label for="auto-include-loan" style="margin:0;">Include Taxes and Fees in Loan</label>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="auto-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="auto-schedule-section" hidden>
+      <div class="schedule-header">
+        <h2 style="margin:0;font-size:18px;">Amortization Schedule</h2>
+        <div class="schedule-toggle-group">
+          <button type="button" id="auto-schedule-annual" class="active">Annual</button>
+          <button type="button" id="auto-schedule-monthly">Monthly</button>
+        </div>
+      </div>
+      <div class="line-chart-wrap">
+        <div id="auto-chart-wrap"></div>
+        <div class="chart-legend">
+          <span><span class="legend-dot" style="background:var(--accent)"></span> Balance</span>
+          <span><span class="legend-dot" style="background:#10b981"></span> Cumulative Interest</span>
+          <span><span class="legend-dot" style="background:#dc2626"></span> Cumulative Payment</span>
+        </div>
+      </div>
+      <div class="schedule-table-wrap">
+        <div id="auto-schedule-body"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What actually goes into an auto loan</h2>
+      <p>The sticker price is just the starting point. Cash incentives and trade-in equity reduce what you need to borrow; sales tax and title/registration fees add to the total cost, whether or not you roll them into the loan itself. Financing those taxes and fees keeps more cash in your pocket at signing, but you'll pay interest on them for the life of the loan — the same trade-off as financing any other upfront cost.</p>
+
+      <h2>Why trade-in equity (or debt) matters</h2>
+      <p>A trade-in is really two numbers netted against each other: what the dealer credits you for the car, minus whatever you still owe on it. If you owe more than the trade-in is worth — being "underwater" — that shortfall gets added to what you need to finance on the new car instead of reducing it, which is worth knowing before assuming a trade-in automatically shrinks your loan.</p>
+      <div class="callout">Auto loans depreciate against an asset that's losing value the entire time you're paying it off. Being "upside down" — owing more than the car is worth — is common in the first couple of years of a long loan term, which is worth considering before choosing a 72- or 84-month term to shrink the monthly payment.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Should I finance taxes and fees or pay them upfront?</h3>
+        <p>If cash is tight, financing keeps the amount due at signing lower. If you can afford it, paying upfront avoids paying interest on taxes and fees that don't have anything to do with the car's value.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does a longer loan term always mean a worse deal?</h3>
+        <p>Not automatically, but it usually means more total interest paid and a longer stretch of being underwater on the loan, even though the monthly payment is lower. It's worth comparing total cost, not just the monthly number, across different terms.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the "Vehicle Price" mode for?</h3>
+        <p>It works backward from a monthly payment you know you can afford to the vehicle price that would produce it — useful for budgeting before you've picked a specific car.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="amortization-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Amortization Calculator</h3>
+        <p>Break a loan down into its full principal-and-interest payment schedule.</p>
+      </a>
+
+      <a class="calc-list-card" href="cash-back-or-low-interest-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Cash Back or Low Interest Calculator</h3>
+        <p>Compare a cash rebate against a below-market interest rate offer.</p>
+      </a>
+
+      <a class="calc-list-card" href="auto-lease-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Auto Lease Calculator</h3>
+        <p>Estimate monthly lease payments and compare leasing against buying.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/auto-loan-calculator.js"></script>
+</body>
+</html>

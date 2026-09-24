@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Present Value Calculator - CalcBundle</title>
+<meta name="description" content="Calculate the present value of a future lump sum, or of a series of periodical deposits, at a given interest rate.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Present Value Calculator</span>
+    </div>
+    <h1>Present Value Calculator</h1>
+    <p>Calculate the present value of a future lump sum, or of a series of periodical deposits, at a given interest rate.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Present Value of Future Money</h2>
+      <p class="payoff-panel-sub">Find what a single future lump sum is worth today.</p>
+
+      <form id="pv1-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="pv1-fv">Future Value (FV)</label>
+              <input type="number" id="pv1-fv" value="1000" min="0" step="100">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pv1-years">Number of Periods (N)</label>
+                <input type="number" id="pv1-years" value="10" min="0" step="1">
+              </div>
+              <div class="field-group">
+                <label for="pv1-rate">Interest Rate (I/Y, %)</label>
+                <input type="number" id="pv1-rate" value="6" step="0.1">
+              </div>
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="pv1-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Present Value of Periodical Deposits</h2>
+      <p class="payoff-panel-sub">Find what a recurring series of deposits is worth today.</p>
+
+      <form id="pv2-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pv2-years">Number of Periods (N)</label>
+                <input type="number" id="pv2-years" value="10" min="0" step="1">
+              </div>
+              <div class="field-group">
+                <label for="pv2-rate">Interest Rate (I/Y, %)</label>
+                <input type="number" id="pv2-rate" value="6" step="0.1">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="pv2-pmt">Periodic Deposit (PMT)</label>
+              <input type="number" id="pv2-pmt" value="100" min="0" step="10">
+            </div>
+            <div class="field-group">
+              <label for="pv2-timing">PMT made at the</label>
+              <select id="pv2-timing">
+                <option value="begin">Beginning of each period</option>
+                <option value="end" selected>End of each period</option>
+              </select>
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="pv2-result"></div>
+        </div>
+      </form>
+
+      <div class="schedule-card" id="pv2-results-section" hidden>
+        <div class="schedule-header"><h3 class="schedule-header" style="border:0;padding:0;">Schedule</h3></div>
+        <div class="schedule-table-wrap" id="pv2-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why a dollar today isn't a dollar tomorrow</h2>
+      <p>Present value is the flip side of compound interest: instead of asking what money grows into, it asks what a future amount is worth right now, given that money in hand could otherwise be earning interest. The higher the interest rate or the further out the future payment, the less that future money is worth today.</p>
+
+      <h2>Lump sum vs. a stream of deposits</h2>
+      <p>The first calculator above discounts a single future amount back to today. The second discounts an entire series of equal, recurring deposits — useful for valuing things like an annuity, a pension stream, or a planned savings habit in today's dollars.</p>
+      <div class="callout">Present value and future value are two views of the same relationship. If you already know the deposit amount and want to know what it grows into instead, use the <a href="future-value-calculator.html">Future Value Calculator</a>.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What interest rate should I use?</h3>
+        <p>Use whatever rate reflects the return you could reasonably earn elsewhere on your money — often called the discount rate. A higher assumed rate always produces a lower present value.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does timing (beginning vs. end of period) really matter?</h3>
+        <p>Yes — deposits made at the beginning of each period earn one extra period of interest compared to deposits made at the end, so present value (and future value) will be slightly higher under the "beginning" option.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="finance-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Finance Calculator</h3>
+        <p>Solve for any one time-value-of-money variable given the others.</p>
+      </a>
+
+      <a class="calc-list-card" href="investment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Investment Calculator</h3>
+        <p>Project how an investment grows, or solve for the rate, time, or contribution needed.</p>
+      </a>
+
+      <a class="calc-list-card" href="future-value-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Future Value Calculator</h3>
+        <p>Find the future value of a lump sum or a series of deposits.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/present-value-calculator.js"></script>
+</body>
+</html>

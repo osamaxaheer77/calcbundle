@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cash Back or Low Interest Calculator - CalcBundle</title>
+<meta name="description" content="Compare a cash rebate against a below-market interest rate offer on a car purchase to see which actually saves you more.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Cash Back or Low Interest Calculator</span>
+    </div>
+    <h1>Cash Back or Low Interest Calculator</h1>
+    <p>Auto manufacturers often offer either a cash rebate or a below-market interest rate — rarely both. Compare the two to see which one actually saves you more.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="cbli-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="subsection-title" style="margin-top:0;">Cash Back Offer</div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="cbli-cashback">Cash Back Amount ($)</label>
+              <input type="number" id="cbli-cashback" value="1000" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="cbli-rate-high">Interest Rate, High (%)</label>
+              <input type="number" id="cbli-rate-high" value="5" min="0" step="0.01">
+            </div>
+          </div>
+
+          <div class="subsection-title">Low Interest Rate Offer</div>
+          <div class="field-group">
+            <label for="cbli-rate-low">Interest Rate, Low (%)</label>
+            <input type="number" id="cbli-rate-low" value="2" min="0" step="0.01">
+          </div>
+
+          <div class="subsection-title">Other Information</div>
+          <div class="field-group">
+            <label for="cbli-price">Auto Price ($)</label>
+            <input type="number" id="cbli-price" value="50000" min="0" step="500">
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="cbli-term">Loan Term (months)</label>
+              <input type="number" id="cbli-term" value="60" min="1" step="1">
+            </div>
+            <div class="field-group">
+              <label for="cbli-down">Down Payment ($)</label>
+              <input type="number" id="cbli-down" value="10000" min="0" step="500">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="cbli-tradein">Trade-in Value ($)</label>
+              <input type="number" id="cbli-tradein" value="0" min="0" step="500">
+            </div>
+            <div class="field-group">
+              <label for="cbli-tax">Sales Tax (%)</label>
+              <input type="number" id="cbli-tax" value="7" min="0" step="0.1">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="cbli-fees">Title, Registration &amp; Other Fees ($)</label>
+            <input type="number" id="cbli-fees" value="2000" min="0" step="100">
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="cbli-include-loan">
+            <label for="cbli-include-loan" style="margin:0;">Include All Fees in Loan</label>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="cbli-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why these two offers are almost never equal</h2>
+      <p>A cash rebate is a fixed, one-time discount — its value doesn't depend on how long you finance the car. A low interest rate's value compounds with the size of the loan and the length of the term: the more you borrow and the longer you take to pay it off, the more a lower rate is worth in saved interest. That's why the "better" offer flips depending on your specific loan amount and term, not just the headline numbers on the two offers.</p>
+
+      <h2>When cash back tends to win</h2>
+      <p>Cash back has the edge on shorter loans, smaller loan amounts, or when the rate gap between the two offers is narrow — there simply isn't enough time or principal for the lower rate to accumulate meaningful interest savings before the loan is paid off.</p>
+      <div class="callout">Paying cash outright, or making a larger down payment, shrinks the loan amount the low-rate offer has to work with — which can tip a comparison that favored the low rate back toward cash back.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Can I negotiate the price and still get one of these offers?</h3>
+        <p>Often yes, but dealers sometimes treat manufacturer incentives as tied to the sticker price — it's worth asking explicitly whether negotiating the price affects your eligibility for either offer.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does a longer loan term always favor the low interest rate?</h3>
+        <p>Generally yes — interest accrues over the life of the loan, so a longer term gives a lower rate more time to out-save a fixed cash rebate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I always take whichever offer this calculator says is better?</h3>
+        <p>It's a strong financial signal, but also consider your cash flow needs — cash back reduces what you need to finance today, while a low rate reduces cost spread out over the loan. Depending on your situation, one may fit your budget better even if the other saves marginally more.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="auto-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Estimate car payments including taxes, fees, and trade-in value.</p>
+      </a>
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Auto Lease Calculator</h3>
+        <p>Estimate monthly lease payments and compare leasing against buying.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/cash-back-or-low-interest-calculator.js"></script>
+</body>
+</html>

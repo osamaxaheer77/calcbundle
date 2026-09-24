@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Interest Calculator - CalcBundle</title>
+<meta name="description" content="Calculate simple interest and end balance, or solve for the principal, term, or rate — using the plain Interest = Principal x Rate x Time formula.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Simple Interest Calculator</span>
+    </div>
+    <h1>Simple Interest Calculator</h1>
+    <p>Calculate simple interest and end balance, or solve for the principal, term, or rate — using the plain Interest = Principal &times; Rate &times; Time formula.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="si-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Solve For</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="si-tab" value="balance" checked>Balance</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="si-tab" value="principal">Principal</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="si-tab" value="term">Term</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="si-tab" value="rate">Rate</label>
+          </div>
+
+          <div class="field-group" id="si-principal-field">
+            <label for="si-principal">Principal</label>
+            <input type="number" id="si-principal" value="20000" step="100">
+          </div>
+          <div class="field-group" id="si-balance-field" hidden>
+            <label for="si-balance">End Balance</label>
+            <input type="number" id="si-balance" value="26000" step="100">
+          </div>
+
+          <div class="field-group" id="si-rate-field">
+            <label for="si-rate">Interest Rate (%)</label>
+            <input type="number" id="si-rate" value="3" step="0.01">
+            <div style="margin-top:6px;">
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="si-rate-mode" value="year" checked>Per Year</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="si-rate-mode" value="month">Per Month</label>
+            </div>
+          </div>
+
+          <div class="field-group" id="si-term-field">
+            <label for="si-term">Term</label>
+            <input type="number" id="si-term" value="10" step="1">
+            <div style="margin-top:6px;">
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="si-term-mode" value="years" checked>Years</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="si-term-mode" value="months">Months</label>
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="si-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why simple interest stays simple</h2>
+      <p>Simple interest only ever looks at the original principal — never at interest that's already accrued. Whether it's calculated once a year or once a decade, the interest for any stretch of time is always the same fraction of that original amount. That's what makes it "simple": no snowball effect, no interest earning its own interest, just a flat, predictable rate applied to a fixed base.</p>
+
+      <h2>Where simple interest still shows up</h2>
+      <p>Most everyday savings and loans use compound interest, but simple interest survives in specific corners of finance — some short-term loans, certain bonds, add-on interest auto loans, and many statutory or legal interest calculations (like interest owed on a late payment) use it because it's transparent and easy to verify by hand.</p>
+      <div class="callout">Simple interest and compound interest agree exactly at the very first period, then diverge — compound interest always produces a larger balance from that point forward, since it earns interest on interest that simple interest ignores entirely.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Is simple interest ever better for a borrower?</h3>
+        <p>Yes — since interest doesn't compound, a borrower under a simple-interest loan generally pays less total interest than an equivalent compound-interest loan at the same stated rate and term.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I calculate compound interest instead?</h3>
+        <p>Use the Investment Calculator or Interest Calculator, which model interest earning interest over time rather than a flat rate applied only to the original principal.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="investment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </a>
+
+      <a class="calc-list-card" href="compound-interest-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Compound Interest Calculator</h3>
+        <p>Calculate how savings grow when interest compounds over time.</p>
+      </a>
+
+      <a class="calc-list-card" href="savings-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Savings Calculator</h3>
+        <p>Project how a savings balance grows with regular deposits.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/simple-interest-calculator.js"></script>
+</body>
+</html>

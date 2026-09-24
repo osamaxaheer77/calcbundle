@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interest Calculator - CalcBundle</title>
+<meta name="description" content="Calculate compound interest accumulation on an initial investment plus annual and monthly contributions, accounting for tax and inflation.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Interest Calculator</span>
+    </div>
+    <h1>Interest Calculator</h1>
+    <p>Calculate compound interest accumulation on an initial investment plus annual and monthly contributions, accounting for tax on interest income and inflation.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="int-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="int-initial">Initial Investment</label>
+            <input type="number" id="int-initial" value="20000" min="0" step="500">
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="int-annual">Annual Contribution</label>
+              <input type="number" id="int-annual" value="5000" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="int-monthly">Monthly Contribution</label>
+              <input type="number" id="int-monthly" value="0" min="0" step="10">
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Contribute at the</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="int-timing" value="beginning" checked>Beginning</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="int-timing" value="end">End</label>
+            <span class="from-label"> of each compounding period</span>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="int-rate">Interest Rate (%)</label>
+              <input type="number" id="int-rate" value="5" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="int-compound">Compound</label>
+              <select id="int-compound">
+                <option value="annually" selected>Annually</option>
+                <option value="semiannually">Semiannually</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="monthly">Monthly</option>
+                <option value="semimonthly">Semimonthly</option>
+                <option value="biweekly">Biweekly</option>
+                <option value="weekly">Weekly</option>
+                <option value="daily">Daily</option>
+                <option value="continuously">Continuously</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Investment Length</label>
+            <div class="date-row">
+              <input type="number" id="int-years" value="5" min="0" step="1" style="flex:1;">
+              <span class="from-label" style="align-self:center;">years</span>
+              <input type="number" id="int-months" value="0" min="0" max="11" step="1" style="flex:1;">
+              <span class="from-label" style="align-self:center;">months</span>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="int-tax">Tax Rate (%)</label>
+              <input type="number" id="int-tax" value="0" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="int-inflation">Inflation Rate (%)</label>
+              <input type="number" id="int-inflation" value="3" step="0.1">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="int-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="int-results-section" hidden>
+      <div class="schedule-header">
+        <h2 style="margin:0;font-size:18px;">Accumulation Schedule</h2>
+        <div class="schedule-toggle-group">
+          <button type="button" id="int-schedule-annual" class="active">Annual</button>
+          <button type="button" id="int-schedule-monthly">Monthly</button>
+        </div>
+      </div>
+      <div class="schedule-table-wrap" id="int-table-wrap"></div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Simple vs. compound interest</h2>
+      <p>Simple interest is charged only on the original principal, every period, in equal amounts. Compound interest is charged on the principal plus any interest already accumulated — meaning interest itself starts earning interest. Almost everything in the real world, from savings accounts to investment portfolios, uses compound interest.</p>
+
+      <h2>Why compounding frequency matters</h2>
+      <p>The more often interest compounds within a year — monthly instead of annually, say — the faster a balance grows, because each compounding period's interest starts earning its own interest sooner. The difference is small in year one but widens the longer the money stays invested.</p>
+      <div class="callout">Contributions made at the beginning of each period earn one extra period of interest compared to contributions made at the end — over many years, that difference compounds into a meaningfully larger ending balance.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why does the calculator ask for a tax rate?</h3>
+        <p>Interest income from things like savings accounts, CDs, and taxable bonds is often taxed as ordinary income. Applying a tax rate here shows the real, after-tax growth of the balance rather than the gross figure.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does the inflation-adjusted "buying power" figure mean?</h3>
+        <p>It discounts the ending balance by the assumed inflation rate, showing what that future balance would actually be worth in today's purchasing power — leave inflation at 0% to see the raw, unadjusted ending balance instead.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="investment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Investment Calculator</h3>
+        <p>Project how an investment grows, or solve for the rate, time, or contribution needed.</p>
+      </a>
+
+      <a class="calc-list-card" href="compound-interest-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Compound Interest Calculator</h3>
+        <p>Convert an interest rate between different compounding frequencies.</p>
+      </a>
+
+      <a class="calc-list-card" href="savings-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Savings Calculator</h3>
+        <p>Project savings growth with regular deposits and compound interest.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/interest-calculator.js"></script>
+</body>
+</html>

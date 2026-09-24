@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APR Calculator - CalcBundle</title>
+<meta name="description" content="Convert a loan's rate, points, and fees into one true annual percentage rate — for any loan, or specifically for a mortgage.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">APR Calculator</span>
+    </div>
+    <h1>APR Calculator</h1>
+    <p>Convert a loan's rate, points, and fees into one true annual percentage rate — for any loan, or specifically for a mortgage.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">General APR Calculator</h2>
+      <p class="payoff-panel-sub">Works for any fixed-rate loan, with control over how interest compounds and how often you pay.</p>
+
+      <form id="apr-gen-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="apr-gen-amount">Loan Amount</label>
+              <input type="number" id="apr-gen-amount" value="100000" min="0" step="1000">
+            </div>
+            <div class="field-group">
+              <label>Loan Term</label>
+              <div class="date-row">
+                <input type="number" id="apr-gen-term-years" value="10" min="0" step="1" style="flex:1;">
+                <span class="from-label" style="align-self:center;">years</span>
+                <input type="number" id="apr-gen-term-months" value="0" min="0" max="11" step="1" style="flex:1;">
+                <span class="from-label" style="align-self:center;">months</span>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="apr-gen-rate">Interest Rate (%)</label>
+              <input type="number" id="apr-gen-rate" value="6" min="0" step="0.01">
+            </div>
+            <div class="field-group">
+              <label for="apr-gen-compound">Compound</label>
+              <select id="apr-gen-compound">
+                <option value="annually">Annually</option>
+                <option value="semiannually">Semi-annually</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="monthly" selected>Monthly</option>
+                <option value="semimonthly">Semi-monthly</option>
+                <option value="biweekly">Biweekly</option>
+                <option value="weekly">Weekly</option>
+                <option value="daily">Daily</option>
+                <option value="continuously">Continuously</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="apr-gen-payback">Pay Back</label>
+              <select id="apr-gen-payback">
+                <option value="day">Every Day</option>
+                <option value="week">Every Week</option>
+                <option value="twoweeks">Every 2 Weeks</option>
+                <option value="halfmonth">Every Half Month</option>
+                <option value="month" selected>Every Month</option>
+                <option value="quarter">Every Quarter</option>
+                <option value="sixmonths">Every 6 Months</option>
+                <option value="year">Every Year</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="apr-gen-loaned-fees">Loaned Fees ($)</label>
+              <input type="number" id="apr-gen-loaned-fees" value="0" min="0" step="50">
+            </div>
+            <div class="field-group">
+              <label for="apr-gen-upfront-fees">Upfront Fees ($)</label>
+              <input type="number" id="apr-gen-upfront-fees" value="2500" min="0" step="50">
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="apr-gen-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Mortgage APR Calculator</h2>
+      <p class="payoff-panel-sub">Purpose-built for U.S. home loans, including points and PMI.</p>
+
+      <form id="apr-mort-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="apr-mort-house">House Value</label>
+              <input type="number" id="apr-mort-house" value="350000" min="0" step="1000">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="apr-mort-down">Down Payment (%)</label>
+                <input type="number" id="apr-mort-down" value="20" min="0" step="0.5">
+              </div>
+              <div class="field-group">
+                <label for="apr-mort-term">Loan Term (years)</label>
+                <input type="number" id="apr-mort-term" value="30" min="1" step="1">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="apr-mort-rate">Interest Rate (%)</label>
+              <input type="number" id="apr-mort-rate" value="6.2" min="0" step="0.01">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="apr-mort-fees">Loan Fees ($)</label>
+                <input type="number" id="apr-mort-fees" value="3500" min="0" step="50">
+              </div>
+              <div class="field-group">
+                <label for="apr-mort-points">Points (%)</label>
+                <input type="number" id="apr-mort-points" value="0.5" min="0" step="0.1">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="apr-mort-pmi">PMI Insurance ($/year)</label>
+              <input type="number" id="apr-mort-pmi" value="0" min="0" step="50">
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="apr-mort-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why APR is always slightly higher than the note rate</h2>
+      <p>A lender's advertised interest rate only prices the cost of borrowing the money itself. It says nothing about the origination fees, points, or other upfront charges bundled into getting the loan in the first place. APR folds those costs in, answering a more useful question: given everything you're actually paying to get this loan, what single rate would produce the same total cost with zero fees? Because fees only ever add cost, APR is always at or above the note rate — never below it.</p>
+
+      <h2>Why compounding and payment frequency can differ</h2>
+      <p>Interest can accrue on a different schedule than you pay it — a loan might compound daily internally while only billing you monthly. When that happens, the nominal rate has to be converted to an equivalent rate at your actual payment frequency before a payment amount can be calculated, which is exactly what the "Compound" and "Pay Back" settings do here. Most everyday loans compound and pay on the same schedule, in which case the distinction disappears entirely.</p>
+      <div class="callout">PMI only applies to the mortgage calculator here while your equity stays below 20% of the home's value — once your loan balance amortizes down past that threshold, PMI drops out of both the payment and the APR calculation, the same way it would with a real lender.</div>
+
+      <h2>Why points don't show up in "All Payments and Fees"</h2>
+      <p>Points and other upfront charges affect the APR because they change how much you're truly borrowing relative to what you pay back — but points specifically are treated here as a cost of acquiring the rate itself, not an ongoing cash outlay tracked alongside your payment total. They still pull the APR above the note rate; they just aren't double-counted in the running total of payments and fees.</p>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Should I compare loans by interest rate or APR?</h3>
+        <p>APR, whenever fees are involved. Two loans with identical interest rates can have very different true costs if one carries higher upfront fees — APR is built specifically to make that comparison fair.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does financing fees into the loan change the payment, but paying them upfront doesn't?</h3>
+        <p>Loaned (financed) fees increase the balance you're actually borrowing, so they raise your payment along with it. Upfront fees are paid separately in cash — they don't touch the loan balance or payment, but they still reduce what you effectively "got" for your money, which is why they still push the APR up.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is a lower APR always the better deal?</h3>
+        <p>Usually, but not always — a loan with a higher APR and lower upfront cost can still be cheaper overall if you plan to pay it off quickly, since you'd never stick around long enough for the fee difference to matter. APR assumes you hold the loan for its full term.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="refinance-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Refinance Calculator</h3>
+        <p>Compare your current mortgage against a refinanced one to see if it's worth switching.</p>
+      </a>
+
+      <a class="calc-list-card" href="amortization-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Amortization Calculator</h3>
+        <p>Break a loan down into its full principal-and-interest payment schedule.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>FHA Loan Calculator</h3>
+        <p>Estimate payments on a government-backed FHA loan, including mortgage insurance.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>VA Mortgage Calculator</h3>
+        <p>Estimate payments on a VA loan for eligible veterans and service members.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Home Equity Loan Calculator</h3>
+        <p>See how much you could borrow against the equity in your home.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>HELOC Calculator</h3>
+        <p>Estimate payments on a home equity line of credit.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Down Payment Calculator</h3>
+        <p>Work out how much to save for a target down payment percentage.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/apr-calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROI Calculator - CalcBundle</title>
+<meta name="description" content="Calculate the return on investment (ROI) and annualized ROI for a purchase or project, from the amount invested, amount returned, and investment period.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">ROI Calculator</span>
+    </div>
+    <h1>ROI Calculator</h1>
+    <p>Calculate the return on investment (ROI) and annualized ROI for a purchase or project, from the amount invested, amount returned, and investment period.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="roi-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="roi-invested">Amount Invested</label>
+            <input type="number" id="roi-invested" value="1000" min="0" step="100">
+          </div>
+          <div class="field-group">
+            <label for="roi-returned">Amount Returned</label>
+            <input type="number" id="roi-returned" value="2000" min="0" step="100">
+          </div>
+
+          <div class="field-group">
+            <label>Investment Time</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="roi-time-mode" value="date" checked>Use Dates</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="roi-time-mode" value="length">Use Length</label>
+          </div>
+
+          <div id="roi-date-fields">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="roi-from">From</label>
+                <input type="date" id="roi-from" value="2022-01-01">
+              </div>
+              <div class="field-group">
+                <label for="roi-to">To</label>
+                <input type="date" id="roi-to" value="2026-04-01">
+              </div>
+            </div>
+          </div>
+          <div id="roi-length-field" hidden>
+            <div class="field-group">
+              <label for="roi-length">Length (years)</label>
+              <input type="number" id="roi-length" value="2.5" min="0" step="0.1">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="roi-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why ROI is popular despite being simple</h2>
+      <p>ROI strips an investment down to one question: for every dollar in, how many dollars came out? That simplicity is exactly why it's so widely used — it works for a stock portfolio, a rental property, a marketing campaign, or a sheep farm, without needing any special financial modeling. The tradeoff is that plain ROI says nothing about how long the money was tied up, which is where annualized ROI comes in.</p>
+
+      <h2>Why annualized ROI tells a different story</h2>
+      <p>A 100% ROI sounds identical whether it took six months or twenty years — but those are wildly different outcomes. Annualized ROI converts the total return into an equivalent constant yearly rate, the same way IRR does, making it possible to fairly compare investments held for different lengths of time.</p>
+      <div class="callout">Plain ROI ignores the time value of money entirely — it's a useful first-pass filter, but for investments with cash flows spread across multiple points in time (not just a single start and end), IRR is the more accurate tool.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Can ROI be negative?</h3>
+        <p>Yes — if the amount returned is less than what was invested, both ROI and annualized ROI will be negative, reflecting a net loss.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does ROI account for fees or taxes?</h3>
+        <p>Not unless you build them into the "amount invested" or "amount returned" figures yourself — this calculator works purely from whatever two numbers you give it.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="irr-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>IRR Calculator</h3>
+        <p>Solve for the internal rate of return on a series of cash flows.</p>
+      </a>
+
+      <a class="calc-list-card" href="average-return-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Average Return Calculator</h3>
+        <p>Work out the average annual return across a series of investment gains and losses.</p>
+      </a>
+
+      <a class="calc-list-card" href="payback-period-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Payback Period Calculator</h3>
+        <p>Find out how long it takes for an investment to pay for itself.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/roi-calculator.js"></script>
+</body>
+</html>

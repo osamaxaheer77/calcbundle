@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debt-to-Income (DTI) Ratio Calculator - CalcBundle</title>
+<meta name="description" content="Check how your monthly debt payments compare to your income, broken into front-end (housing) and back-end (total) debt-to-income ratios.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<style>
+  .dti-row { display: flex; align-items: flex-end; gap: 8px; margin-bottom: 12px; }
+  .dti-row .field-group { flex: 1; margin-bottom: 0; }
+  .dti-select { width: 90px; flex: 0 0 90px; height: 42px; border-radius: 8px; border: 1px solid var(--border); font-size: 14px; font-family: inherit; color: var(--text-primary); background: #fff; }
+  .dti-group-title { font-size: 13px; font-weight: 700; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.03em; margin: 22px 0 10px; padding-top: 14px; border-top: 1px solid var(--border); }
+  .dti-group-title:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+  .dti-tier-good { color: #10b981; font-weight: 600; }
+  .dti-tier-mid { color: #d97706; font-weight: 600; }
+  .dti-tier-high { color: #dc2626; font-weight: 600; }
+  .dti-bar-track { display: flex; height: 12px; border-radius: 6px; overflow: hidden; margin: 4px 0 10px; background: #e5e7eb; }
+  .dti-bar-seg { height: 100%; }
+  .dti-seg-house { background: var(--accent); }
+  .dti-seg-other { background: #f59e0b; }
+  .dti-seg-remain { background: #e5e7eb; }
+  .dti-bar-legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--text-secondary); margin-bottom: 16px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Debt-to-Income Ratio Calculator</span>
+    </div>
+    <h1>Debt-to-Income (DTI) Ratio Calculator</h1>
+    <p>Check how your monthly debt payments compare to your income — broken into front-end (housing) and back-end (total) ratios, the same figures lenders use.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="dti-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="dti-group-title">Incomes (Before Tax)</div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="salary-amt">Salary &amp; Earned Income</label>
+              <input type="number" id="salary-amt" value="60000" min="0" step="500">
+            </div>
+            <select id="salary-mode" class="dti-select"><option value="month">/ Month</option><option value="year" selected>/ Year</option></select>
+          </div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="pension-amt">Pension &amp; Social Security</label>
+              <input type="number" id="pension-amt" value="0" min="0" step="100">
+            </div>
+            <select id="pension-mode" class="dti-select"><option value="month">/ Month</option><option value="year" selected>/ Year</option></select>
+          </div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="investment-amt">Investment &amp; Savings</label>
+              <input type="number" id="investment-amt" value="0" min="0" step="100">
+            </div>
+            <select id="investment-mode" class="dti-select"><option value="month">/ Month</option><option value="year" selected>/ Year</option></select>
+          </div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="otherincome-amt">Other Income</label>
+              <input type="number" id="otherincome-amt" value="0" min="0" step="100">
+            </div>
+            <select id="otherincome-mode" class="dti-select"><option value="month">/ Month</option><option value="year" selected>/ Year</option></select>
+          </div>
+
+          <div class="dti-group-title">House Debts / Expenses</div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="rental-amt">Rental Cost</label>
+              <input type="number" id="rental-amt" value="1200" min="0" step="50">
+            </div>
+            <select id="rental-mode" class="dti-select"><option value="month" selected>/ Month</option><option value="year">/ Year</option></select>
+          </div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="mortgage-amt">Mortgage</label>
+              <input type="number" id="mortgage-amt" value="0" min="0" step="50">
+            </div>
+            <select id="mortgage-mode" class="dti-select"><option value="month" selected>/ Month</option><option value="year">/ Year</option></select>
+          </div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="propertytax-amt">Property Tax</label>
+              <input type="number" id="propertytax-amt" value="0" min="0" step="50">
+            </div>
+            <select id="propertytax-mode" class="dti-select"><option value="month">/ Month</option><option value="year" selected>/ Year</option></select>
+          </div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="hoa-amt">HOA Fees</label>
+              <input type="number" id="hoa-amt" value="0" min="0" step="10">
+            </div>
+            <select id="hoa-mode" class="dti-select"><option value="month" selected>/ Month</option><option value="year">/ Year</option></select>
+          </div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="insurance-amt">Homeowner Insurance</label>
+              <input type="number" id="insurance-amt" value="0" min="0" step="50">
+            </div>
+            <select id="insurance-mode" class="dti-select"><option value="month">/ Month</option><option value="year" selected>/ Year</option></select>
+          </div>
+
+          <div class="dti-group-title">Other Debts / Expenses</div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="creditcards-amt">Credit Cards</label>
+              <input type="number" id="creditcards-amt" value="200" min="0" step="10">
+            </div>
+            <select id="creditcards-mode" class="dti-select"><option value="month" selected>/ Month</option><option value="year">/ Year</option></select>
+          </div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="studentloan-amt">Student Loan</label>
+              <input type="number" id="studentloan-amt" value="0" min="0" step="10">
+            </div>
+            <select id="studentloan-mode" class="dti-select"><option value="month" selected>/ Month</option><option value="year">/ Year</option></select>
+          </div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="autoloan-amt">Auto Loan</label>
+              <input type="number" id="autoloan-amt" value="250" min="0" step="10">
+            </div>
+            <select id="autoloan-mode" class="dti-select"><option value="month" selected>/ Month</option><option value="year">/ Year</option></select>
+          </div>
+          <div class="dti-row">
+            <div class="field-group">
+              <label for="otherloan-amt">Other Loans &amp; Liabilities</label>
+              <input type="number" id="otherloan-amt" value="0" min="0" step="10">
+            </div>
+            <select id="otherloan-mode" class="dti-select"><option value="month" selected>/ Month</option><option value="year">/ Year</option></select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="dti-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Front-end vs. back-end: two different questions</h2>
+      <p>The front-end ratio asks a narrow question — can you afford the roof over your head? It only counts housing: rent or mortgage, property tax, HOA fees, and homeowner's insurance, divided by gross income. The back-end ratio asks the bigger question a lender actually cares about: once every recurring obligation is added in — credit cards, student loans, car payments — how much of your income is already spoken for? A healthy front-end ratio with a bloated back-end ratio usually means non-housing debt, not the house itself, is the real constraint.</p>
+
+      <h2>Why "before tax" matters</h2>
+      <p>DTI is always measured against gross income, not what actually lands in your bank account after taxes and withholdings. That can feel misleading — your real spending power is lower than the number lenders use — but it's the standard every lender applies consistently, so it's the number worth tracking even if it overstates how much room your budget truly has.</p>
+      <div class="callout">A "good" DTI isn't a hard rule — it's a risk signal. Two people with identical ratios can have very different financial stability depending on income size, job security, and savings, which is why lenders weigh DTI alongside credit score and cash reserves rather than in isolation.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What's a good DTI ratio to aim for?</h3>
+        <p>Generally, under 36% back-end is considered healthy by conventional lending standards. Between 36% and 50% is workable but leaves less room to qualify for the best rates; above 50% starts to meaningfully limit borrowing options.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does DTI affect my credit score?</h3>
+        <p>Not directly — DTI isn't a factor in credit scoring models. It's a separate metric lenders calculate themselves when deciding whether to approve a loan and on what terms.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is this different from credit utilization?</h3>
+        <p>Credit utilization compares your credit card balances to your credit limits and does affect your credit score. DTI compares your actual monthly debt payments to your income and doesn't — they're related but separate measures of financial health.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the fastest way to lower my DTI?</h3>
+        <p>Either increase income or pay down/eliminate recurring debt payments — paying off a car loan or a credit card balance removes that monthly obligation entirely rather than just reducing it.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="house-affordability-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>House Affordability Calculator</h3>
+        <p>Estimate how much home you can reasonably afford based on income and debts.</p>
+      </a>
+
+      <a class="calc-list-card" href="rent-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Rent Calculator</h3>
+        <p>Work out what rent fits comfortably within your monthly budget.</p>
+      </a>
+
+      <a class="calc-list-card" href="mortgage-payoff-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Payoff Calculator</h3>
+        <p>See how extra, biweekly, or lump-sum payments could shorten your mortgage.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Budget Calculator</h3>
+        <p>Plan monthly spending across categories against your income.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Income Tax Calculator</h3>
+        <p>Estimate income tax owed based on earnings and filing status.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Credit Card Calculator</h3>
+        <p>See how long it'll take to pay off a credit card balance.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Debt Consolidation Calculator</h3>
+        <p>Compare combining multiple debts into a single monthly payment.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Student Loan Calculator</h3>
+        <p>Estimate monthly payments and total cost of a student loan.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Estimate car payments including taxes, fees, and trade-in value.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/debt-ratio-calculator.js"></script>
+</body>
+</html>

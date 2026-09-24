@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HELOC Calculator - CalcBundle</title>
+<meta name="description" content="Estimate draw-period and repayment-period payments on a home equity line of credit (HELOC), or how much you could qualify to borrow.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">HELOC Calculator</span>
+    </div>
+    <h1>HELOC Calculator</h1>
+    <p>Estimate the draw-period and repayment-period payments on a home equity line of credit — or how much you could qualify to borrow.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">HELOC Payment Calculator</h2>
+      <p class="payoff-panel-sub">A HELOC has two phases: interest-only payments during the draw period, then full principal-and-interest payments during repayment.</p>
+
+      <form id="heloc-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="heloc-amount">Loan Amount</label>
+              <input type="number" id="heloc-amount" value="50000" min="0" step="1000">
+            </div>
+            <div class="field-group">
+              <label for="heloc-rate">Interest Rate (%)</label>
+              <input type="number" id="heloc-rate" value="8" min="0" step="0.01">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="heloc-draw">Draw Period (years)</label>
+                <input type="number" id="heloc-draw" value="5" min="0" step="1">
+              </div>
+              <div class="field-group">
+                <label for="heloc-repay">Repayment Period (years)</label>
+                <input type="number" id="heloc-repay" value="15" min="1" step="1">
+              </div>
+            </div>
+
+            <div class="checkbox-row">
+              <input type="checkbox" id="heloc-include-costs">
+              <label for="heloc-include-costs" style="margin:0;">Include Closing Costs and Fees</label>
+            </div>
+
+            <div id="heloc-cost-fields" hidden>
+              <div class="field-group">
+                <label for="heloc-cost">Closing Costs</label>
+                <div class="field-with-toggle">
+                  <input type="number" id="heloc-cost" value="2000" min="0" step="100">
+                  <select id="heloc-cost-mode" class="unit-select">
+                    <option value="amt" selected>$</option>
+                    <option value="pct">%</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field-group">
+                <label>Closing Costs to Be</label>
+                <label class="radio-option" style="display:flex;"><input type="radio" name="heloc-cost-paid" value="upfront" checked>Paid Upfront</label>
+                <label class="radio-option" style="display:flex;"><input type="radio" name="heloc-cost-paid" value="deduct">Deducted From Loan</label>
+              </div>
+              <div class="field-group">
+                <label for="heloc-annual-fee">Annual Fee ($/yr)</label>
+                <input type="number" id="heloc-annual-fee" value="50" min="0" step="10">
+              </div>
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="heloc-result"></div>
+        </div>
+      </form>
+
+      <div class="schedule-card" id="heloc-schedule-section" hidden>
+        <div class="schedule-header">
+          <h2 style="margin:0;font-size:18px;">Amortization Schedule</h2>
+          <div class="schedule-toggle-group">
+            <button type="button" id="heloc-schedule-annual" class="active">Annual</button>
+            <button type="button" id="heloc-schedule-monthly">Monthly</button>
+          </div>
+        </div>
+        <div class="line-chart-wrap">
+          <div id="heloc-chart-wrap"></div>
+          <div class="chart-legend">
+            <span><span class="legend-dot" style="background:var(--accent)"></span> Balance</span>
+            <span><span class="legend-dot" style="background:#10b981"></span> Cumulative Interest</span>
+            <span><span class="legend-dot" style="background:#dc2626"></span> Cumulative Payment</span>
+          </div>
+        </div>
+        <div class="schedule-table-wrap">
+          <div id="heloc-schedule-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">How Much Can You Borrow?</h2>
+      <p class="payoff-panel-sub">Estimate your maximum HELOC line from your home's value, your remaining mortgage, and a lender's loan-to-value limit.</p>
+
+      <form id="heloc2-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="heloc2-house-value">Current Value of Your House</label>
+              <input type="number" id="heloc2-house-value" value="600000" min="0" step="1000">
+            </div>
+            <div class="field-group">
+              <label for="heloc2-balance">Outstanding Balance of Your Mortgage</label>
+              <input type="number" id="heloc2-balance" value="250000" min="0" step="1000">
+            </div>
+            <div class="field-group">
+              <label for="heloc2-ltv">LTV Ratio Acceptable by the Lender</label>
+              <select id="heloc2-ltv">
+                <option value="90">90%</option>
+                <option value="85">85%</option>
+                <option value="80" selected>80%</option>
+                <option value="75">75%</option>
+                <option value="70">70%</option>
+                <option value="60">60%</option>
+              </select>
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="heloc2-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why the payment jumps at the end of the draw period</h2>
+      <p>During the draw period, a HELOC usually only requires interest — the balance doesn't move, so the payment stays small and flat as long as you don't draw more. Once the repayment period starts, that same balance suddenly has to be paid off in full within a much shorter window than a typical mortgage, which is why the payment jumps noticeably the moment the draw period ends. Borrowers who only ever make the minimum interest-only payment can be caught off guard by how much larger the repayment-period payment turns out to be.</p>
+
+      <h2>A credit line, not a lump sum</h2>
+      <p>Unlike a home equity loan, a HELOC doesn't hand you the full amount at closing — it opens a credit line you draw against as needed, up to the approved limit, similar to a credit card secured by your home. This calculator assumes the full line is drawn immediately and held flat through the draw period, which is the worst-case (maximum interest) scenario — drawing less, or paying down principal early, would reduce the real interest cost below what's shown here.</p>
+      <div class="callout">HELOC rates are usually variable, tied to a benchmark that can move over the life of the loan. This calculator assumes a fixed rate for simplicity — a real HELOC's payments can rise or fall as the underlying rate changes.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Can I pay down principal during the draw period?</h3>
+        <p>Yes, and it's usually a good idea if you can — any principal paid down during the draw period reduces both the ongoing interest charge and the balance you'll need to repay once the repayment period begins.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens if I don't draw the full amount?</h3>
+        <p>You only owe interest on what you've actually drawn, not the full credit limit — this calculator models drawing the entire line immediately, which represents the maximum possible cost.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the annual fee charged during the repayment period too?</h3>
+        <p>Typically no — annual or maintenance fees usually apply only while the credit line is active during the draw period, which is how this calculator treats it.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="home-equity-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Home Equity Loan Calculator</h3>
+        <p>Calculate the monthly payment, interest, and APR for home equity loans.</p>
+      </a>
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="refinance-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Refinance Calculator</h3>
+        <p>Compare your current mortgage against a refinanced one to see if it's worth switching.</p>
+      </a>
+
+      <a class="calc-list-card" href="apr-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>APR Calculator</h3>
+        <p>Convert a loan's rate and fees into one comparable annual percentage rate.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Down Payment Calculator</h3>
+        <p>Work out how much to save for a target down payment percentage.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/heloc-calculator.js"></script>
+</body>
+</html>

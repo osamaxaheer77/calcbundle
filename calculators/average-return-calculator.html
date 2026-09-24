@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Average Return Calculator - CalcBundle</title>
+<meta name="description" content="Work out the average annual return of an account from its deposits, withdrawals, and dates — or the average and cumulative return across a series of investment returns.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Average Return Calculator</span>
+    </div>
+    <h1>Average Return Calculator</h1>
+    <p>Work out the average annual return of an account from its deposits, withdrawals, and dates — or the average and cumulative return across a series of investment returns.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Average Return Based on Cash Flow</h2>
+      <p class="payoff-panel-sub">Estimates the average annual return of an entire account from its starting and ending balances plus any deposits or withdrawals in between.</p>
+
+      <form id="ar1-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-row" style="align-items:flex-end;">
+              <div class="field-group">
+                <label for="ar1-start-balance">Starting Balance</label>
+                <input type="number" id="ar1-start-balance" value="5600" min="0" step="100">
+              </div>
+              <div class="field-group">
+                <label for="ar1-start-date">Start Date</label>
+                <input type="date" id="ar1-start-date" value="2023-01-01">
+              </div>
+            </div>
+            <div class="field-row" style="align-items:flex-end;">
+              <div class="field-group">
+                <label for="ar1-end-balance">Ending Balance</label>
+                <input type="number" id="ar1-end-balance" value="18000" min="0" step="100">
+              </div>
+              <div class="field-group">
+                <label for="ar1-end-date">End Date</label>
+                <input type="date" id="ar1-end-date" value="2026-09-23">
+              </div>
+            </div>
+
+            <div class="subsection-title">Deposits and Withdrawals</div>
+            <div id="ar1-rows"></div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="ar1-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Average and Cumulative Return</h2>
+      <p class="payoff-panel-sub">Estimates the average annual return and cumulative return across a series of individual returns, each held for its own length of time.</p>
+
+      <form id="ar2-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div id="ar2-rows"></div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="ar2-result"></div>
+        </div>
+      </form>
+
+      <div class="schedule-card" id="ar2-results-section" hidden>
+        <h2 style="margin:0 0 16px;font-size:18px;">Schedule If Beginning With $100</h2>
+        <div class="schedule-table-wrap">
+          <div id="ar2-table-wrap"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why deposits and withdrawals distort a simple average</h2>
+      <p>Comparing a starting balance to an ending balance tells you almost nothing about performance if money moved in or out along the way — a big deposit right before a rally can make mediocre performance look great, and a withdrawal at the wrong time can make good performance look bad. Accounting for the exact size and timing of each cash flow (the same principle behind XIRR) isolates the account's actual rate of return from the effect of when you happened to add or remove money.</p>
+
+      <h2>Why the second calculator compounds instead of averaging</h2>
+      <p>A simple average of several yearly returns overstates real performance, because it ignores compounding and the fact that a loss needs a proportionally larger gain to recover from. A -50% year followed by a +50% year isn't break-even — it's a 25% loss overall. This calculator's "average return" is the single constant annual rate that, compounded over the same total holding period, would produce the identical cumulative result — the only mathematically honest way to average returns over time.</p>
+      <div class="callout">Cumulative return tells you the total percentage gain or loss over the whole period; average return re-expresses that same result as a clean, comparable annual rate — useful for comparing investments held over different lengths of time.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What's the difference between these two calculators?</h3>
+        <p>The first works from real account activity — actual dollar amounts and dates. The second works from a series of already-known period returns (like "up 10% this year, down 2% the next") and their individual holding lengths, without needing dollar amounts at all.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does a deposit shortly before the end date matter less than one early on?</h3>
+        <p>Because it has less time to be affected by the account's growth or decline — the calculator weighs each cash flow by how long it was actually invested, not just how large it was.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="investment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </a>
+
+      <a class="calc-list-card" href="mutual-fund-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mutual Fund Calculator</h3>
+        <p>Estimate return and fees for a mutual fund investment.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>IRR Calculator</h3>
+        <p>Solve for the internal rate of return on a series of cash flows.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/average-return-calculator.js"></script>
+</body>
+</html>

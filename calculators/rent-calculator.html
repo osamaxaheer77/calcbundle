@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rent Calculator - CalcBundle</title>
+<meta name="description" content="Work out what rent fits comfortably within your monthly budget, based on your income and existing debt.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<style>
+  .rent-bar-track { height: 10px; border-radius: 6px; background: var(--border); overflow: hidden; margin: 16px 0 6px; }
+  .rent-bar-fill { height: 100%; background: var(--accent); border-radius: 6px; }
+  .rent-bar-labels { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-secondary); margin-bottom: 20px; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Rent Calculator</span>
+    </div>
+    <h1>Rent Calculator</h1>
+    <p>Work out what rent fits comfortably within your monthly budget, based on your income and existing debt.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:920px;">
+
+    <form id="r-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="r-income">Your Pre-tax Income</label>
+            <div class="field-with-toggle">
+              <input type="number" id="r-income" value="80000" min="0" step="1000">
+              <select id="r-income-mode" class="unit-select" style="width:110px;flex:0 0 110px;">
+                <option value="year" selected>per year</option>
+                <option value="month">per month</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="r-debt">Your Monthly Debt Payback ($)</label>
+            <input type="number" id="r-debt" value="0" min="0" step="10">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="r-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Where the 28% and 36% figures come from</h2>
+      <p>Landlords and lenders both lean on the same rule of thumb: no more than 28% of gross income spent on housing alone, and no more than 36% once every other recurring debt is added in. It's the same 28/36 guideline banks use to size a mortgage, borrowed here for rent — the logic is identical whether the monthly housing payment goes to a landlord or a lender. Staying near the lower end leaves more breathing room for savings, emergencies, and the debts that inevitably show up over a lease term.</p>
+
+      <h2>Why debt shrinks your rent budget dollar-for-dollar</h2>
+      <p>Both figures this calculator shows are really one number — a cap on total monthly obligations — with your existing debt subtracted out first. A $500 car payment doesn't just cost you $500; it costs you $500 of rent-affordability too, since lenders and landlords are ultimately judging your <em>total</em> monthly commitments against your income, not rent in isolation.</p>
+      <div class="callout">The one-third rule some landlords apply is stricter than the 36% ceiling — it's worth checking a specific listing's income requirement before assuming the higher number applies.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Is the "affordable" figure a guarantee I'll be approved?</h3>
+        <p>No — it's a guideline based on common income-to-rent ratios. Individual landlords set their own requirements, which can be stricter (or occasionally looser) than the numbers shown here.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I use my gross or net income?</h3>
+        <p>Gross (pre-tax) income — that's what both landlords and the 28/36 rule are measured against, even though it's not the amount that actually lands in your bank account.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is the recommended number lower than the max?</h3>
+        <p>The maximum reflects the outer limit landlords and lenders typically tolerate; the recommended figure leaves more of your income free for savings, irregular expenses, and future debt without stretching your budget to its ceiling.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="amortization-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Amortization Calculator</h3>
+        <p>Break a loan down into its full principal-and-interest payment schedule.</p>
+      </a>
+
+      <a class="calc-list-card" href="mortgage-payoff-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Payoff Calculator</h3>
+        <p>See how extra, biweekly, or lump-sum payments could shorten your mortgage.</p>
+      </a>
+
+      <a class="calc-list-card" href="house-affordability-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>House Affordability Calculator</h3>
+        <p>Estimate how much home you can reasonably afford based on income and debts.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Loan Calculator</h3>
+        <p>Work out payments and total interest for any fixed-term loan.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Estimate car payments including taxes, fees, and trade-in value.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Income Tax Calculator</h3>
+        <p>Estimate income tax owed based on earnings and filing status.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Debt-to-Income Ratio Calculator</h3>
+        <p>Check how your monthly debt payments compare to your income.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Rent vs. Buy Calculator</h3>
+        <p>Compare the long-term cost of renting against buying a home.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Rental Property Calculator</h3>
+        <p>Estimate cash flow and return on investment for a rental property.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Budget Calculator</h3>
+        <p>Plan monthly spending across categories against your income.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/rent-calculator.js"></script>
+</body>
+</html>

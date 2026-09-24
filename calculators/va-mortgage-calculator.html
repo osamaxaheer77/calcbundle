@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VA Mortgage Calculator - CalcBundle</title>
+<meta name="description" content="Estimate payments on a VA loan for eligible veterans and service members, including the VA funding fee.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">VA Mortgage Calculator</span>
+    </div>
+    <h1>VA Mortgage Calculator</h1>
+    <p>Estimate payments on a VA loan for eligible veterans and service members — including the one-time VA funding fee.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="va-form">
+      <div class="mortgage-layout">
+
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="va-price">Home Price</label>
+            <input type="number" id="va-price" value="500000" min="0" step="1000">
+          </div>
+
+          <div class="field-group">
+            <label for="va-down">Down Payment</label>
+            <div class="field-with-toggle">
+              <input type="number" id="va-down" value="0" min="0" step="0.5">
+              <select id="va-down-mode" class="unit-select">
+                <option value="pct" selected>%</option>
+                <option value="amt">$</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="va-term">Loan Term (years)</label>
+              <input type="number" id="va-term" value="30" min="1" step="1">
+            </div>
+            <div class="field-group">
+              <label for="va-rate">Interest Rate (%)</label>
+              <input type="number" id="va-rate" value="6.5" min="0" step="0.01">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>VA Eligibility</label>
+            <label class="radio-option" style="display:flex;"><input type="radio" name="va-eligibility" value="veteran" checked>Active / Veteran</label>
+            <label class="radio-option" style="display:flex;"><input type="radio" name="va-eligibility" value="reservist">Reservist / National Guard</label>
+            <label class="radio-option" style="display:flex;"><input type="radio" name="va-eligibility" value="spouse">Surviving Spouse</label>
+          </div>
+
+          <div class="field-group">
+            <label>Used a VA Loan Before?</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:20px;"><input type="radio" name="va-used-before" value="yes">Yes</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="va-used-before" value="no" checked>No</label>
+          </div>
+
+          <div class="field-group">
+            <label>Service-Related Disability (10+%)?</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:20px;"><input type="radio" name="va-disability" value="yes">Yes</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="va-disability" value="no" checked>No</label>
+          </div>
+
+          <div class="field-group">
+            <label>VA Funding Fee</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:20px;"><input type="radio" name="va-fee-option" value="financed" checked>Financed Into Loan</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="va-fee-option" value="upfront">Paid Upfront</label>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="va-include-costs">
+            <label for="va-include-costs" style="margin:0;">Include Taxes &amp; Costs</label>
+          </div>
+
+          <div id="va-costs-fields" hidden>
+            <div class="field-group">
+              <label for="va-tax">Property Taxes (annual)</label>
+              <div class="field-with-toggle">
+                <input type="number" id="va-tax" value="1.2" min="0" step="0.1">
+                <select id="va-tax-mode" class="unit-select">
+                  <option value="pct" selected>%</option>
+                  <option value="amt">$</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="va-insurance">Home Insurance ($/yr)</label>
+                <input type="number" id="va-insurance" value="1500" min="0" step="50">
+              </div>
+              <div class="field-group">
+                <label for="va-hoa">HOA Fee ($/yr)</label>
+                <input type="number" id="va-hoa" value="0" min="0" step="50">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="va-other">Other Costs ($/yr)</label>
+              <input type="number" id="va-other" value="0" min="0" step="50">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Start Date</label>
+            <div class="date-row">
+              <select id="va-start-month">
+                <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+              </select>
+              <select id="va-start-year"></select>
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="va-result">
+          <div id="va-results" hidden>
+            <div class="summary-payment-box">
+              <div class="label">Monthly Payment (Principal &amp; Interest)</div>
+              <div class="value" id="va-summary-payment">$0</div>
+            </div>
+            <div id="va-breakdown"></div>
+            <div id="va-donut-wrap" class="donut-wrap"></div>
+            <div id="va-summary-stats"></div>
+          </div>
+        </div>
+
+      </div>
+    </form>
+
+    <div class="schedule-card" id="va-schedule-section" hidden>
+      <div class="schedule-header">
+        <h2 style="margin:0;font-size:18px;">Amortization Schedule</h2>
+        <div class="schedule-toggle-group">
+          <button type="button" id="va-schedule-annual" class="active">Annual</button>
+          <button type="button" id="va-schedule-monthly">Monthly</button>
+        </div>
+      </div>
+      <div class="line-chart-wrap">
+        <div id="va-chart-wrap"></div>
+        <div class="chart-legend">
+          <span><span class="legend-dot" style="background:var(--accent)"></span> Balance</span>
+          <span><span class="legend-dot" style="background:#10b981"></span> Cumulative Interest</span>
+          <span><span class="legend-dot" style="background:#dc2626"></span> Cumulative Payment</span>
+        </div>
+      </div>
+      <div class="schedule-table-wrap">
+        <div id="va-schedule-body"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What the VA funding fee pays for</h2>
+      <p>Unlike an FHA loan, a VA loan carries no ongoing mortgage insurance at all — no monthly premium, ever. In its place is a single one-time charge, the VA funding fee, which keeps the loan guarantee program self-sustaining without taxpayer subsidy. It scales with your down payment: put down less than 5% and the fee runs highest; clear 10% and it drops to its lowest tier, the same reward structure a lender's own risk pricing would use.</p>
+
+      <h2>Why first use and later use are priced differently</h2>
+      <p>A first-time VA borrower with a small down payment pays a lower fee than someone using their VA loan benefit again with the same down payment — the fee schedule treats a repeat use of the benefit as slightly higher risk, unless a larger down payment offsets it, in which case both first-time and repeat borrowers land on identical, lower tiers.</p>
+      <div class="callout">The funding fee is fully waived for veterans with a service-related disability rating of 10% or higher, and for most surviving spouses using the benefit — reflecting the same exemptions written into VA policy itself.</div>
+
+      <h2>Financed vs. paid upfront</h2>
+      <p>Most VA borrowers roll the funding fee into the loan balance rather than paying it in cash at closing, which keeps upfront costs low but means paying interest on the fee itself over the life of the loan. Paying it upfront costs more immediately but results in a smaller loan balance and slightly lower monthly payment from day one.</p>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Is a VA loan always cheaper than a conventional or FHA loan?</h3>
+        <p>Often, especially for borrowers with little or no down payment, since VA loans skip monthly mortgage insurance entirely. But the funding fee is a real cost, and a borrower with a large down payment and strong credit might still find a conventional loan competitive.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do all veterans pay the same funding fee?</h3>
+        <p>No — it depends on your down payment, whether this is your first time using the benefit, and whether you have a qualifying service-related disability. Two veterans buying identical homes can owe very different funding fees.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I put 0% down on a VA loan?</h3>
+        <p>Yes — VA loans are one of the few loan types that allow qualified borrowers to finance 100% of the purchase price with no down payment at all, which is one of their signature benefits.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="fha-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>FHA Loan Calculator</h3>
+        <p>Estimate payments on a government-backed FHA loan, including mortgage insurance.</p>
+      </a>
+
+      <a class="calc-list-card" href="house-affordability-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>House Affordability Calculator</h3>
+        <p>Estimate how much home you can reasonably afford based on income and debts.</p>
+      </a>
+
+      <a class="calc-list-card" href="apr-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>APR Calculator</h3>
+        <p>Convert a loan's rate and fees into one comparable annual percentage rate.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Down Payment Calculator</h3>
+        <p>Work out how much to save for a target down payment percentage.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Home Equity Loan Calculator</h3>
+        <p>See how much you could borrow against the equity in your home.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/va-mortgage-calculator.js"></script>
+</body>
+</html>

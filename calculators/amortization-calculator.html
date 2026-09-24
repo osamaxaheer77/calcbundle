@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amortization Calculator - CalcBundle</title>
+<meta name="description" content="Break any fixed-rate loan down into its full principal-and-interest payment schedule, with support for extra monthly, yearly, and one-time payments.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Amortization Calculator</span>
+    </div>
+    <h1>Amortization Calculator</h1>
+    <p>Break any fixed-rate loan down into its full principal-and-interest payment schedule — with support for extra monthly, yearly, and one-time payments.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="amort-form">
+      <div class="mortgage-layout">
+
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="a-loan-amount">Loan Amount</label>
+            <input type="number" id="a-loan-amount" value="200000" min="0" step="1000">
+          </div>
+
+          <div class="field-group">
+            <label>Loan Term</label>
+            <div class="date-row">
+              <input type="number" id="a-term-years" value="15" min="0" step="1" style="flex:1;">
+              <span class="from-label" style="align-self:center;">years</span>
+              <input type="number" id="a-term-months" value="0" min="0" max="11" step="1" style="flex:1;">
+              <span class="from-label" style="align-self:center;">months</span>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="a-interest-rate">Interest Rate (%)</label>
+            <input type="number" id="a-interest-rate" value="6" min="0" step="0.01">
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="a-extra-toggle">
+            <label for="a-extra-toggle" style="margin:0;">Optional: make extra payments</label>
+          </div>
+
+          <div id="a-extra-fields" hidden>
+            <div class="field-group">
+              <label>Loan Start Date</label>
+              <div class="date-row">
+                <select id="a-start-month">
+                  <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                  <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                  <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                  <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                </select>
+                <select id="a-start-year"></select>
+              </div>
+            </div>
+
+            <div class="extra-payment-row">
+              <div class="field-group">
+                <label for="a-extra-monthly">Extra Monthly Pay ($)</label>
+                <input type="number" id="a-extra-monthly" value="0" min="0" step="10">
+              </div>
+              <span class="from-label">from</span>
+              <select id="a-extra-monthly-month">
+                <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+              </select>
+              <select id="a-extra-monthly-year"></select>
+            </div>
+
+            <div class="extra-payment-row">
+              <div class="field-group">
+                <label for="a-extra-yearly">Extra Yearly Pay ($)</label>
+                <input type="number" id="a-extra-yearly" value="0" min="0" step="10">
+              </div>
+              <span class="from-label">from</span>
+              <select id="a-extra-yearly-month">
+                <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+              </select>
+              <select id="a-extra-yearly-year"></select>
+            </div>
+
+            <div class="extra-payment-row">
+              <div class="field-group">
+                <label for="a-onetime-amt-1">Extra One-time Pay ($)</label>
+                <input type="number" id="a-onetime-amt-1" value="0" min="0" step="10">
+              </div>
+              <span class="from-label">in</span>
+              <select id="a-onetime-month-1">
+                <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+              </select>
+              <select id="a-onetime-year-1"></select>
+            </div>
+
+            <button type="button" id="a-more-onetime-toggle" class="more-options-toggle">+ More one-time payments</button>
+
+            <div id="a-more-onetime" hidden>
+              <div class="extra-payment-row">
+                <div class="field-group">
+                  <input type="number" id="a-onetime-amt-2" value="0" min="0" step="10" aria-label="Extra one-time payment amount 2">
+                </div>
+                <span class="from-label">in</span>
+                <select id="a-onetime-month-2" aria-label="Extra one-time payment month 2">
+                  <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                  <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                  <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                  <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                </select>
+                <select id="a-onetime-year-2" aria-label="Extra one-time payment year 2"></select>
+              </div>
+              <div class="extra-payment-row">
+                <div class="field-group">
+                  <input type="number" id="a-onetime-amt-3" value="0" min="0" step="10" aria-label="Extra one-time payment amount 3">
+                </div>
+                <span class="from-label">in</span>
+                <select id="a-onetime-month-3" aria-label="Extra one-time payment month 3">
+                  <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                  <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                  <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                  <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                </select>
+                <select id="a-onetime-year-3" aria-label="Extra one-time payment year 3"></select>
+              </div>
+              <div class="extra-payment-row">
+                <div class="field-group">
+                  <input type="number" id="a-onetime-amt-4" value="0" min="0" step="10" aria-label="Extra one-time payment amount 4">
+                </div>
+                <span class="from-label">in</span>
+                <select id="a-onetime-month-4" aria-label="Extra one-time payment month 4">
+                  <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                  <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                  <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                  <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                </select>
+                <select id="a-onetime-year-4" aria-label="Extra one-time payment year 4"></select>
+              </div>
+              <div class="extra-payment-row">
+                <div class="field-group">
+                  <input type="number" id="a-onetime-amt-5" value="0" min="0" step="10" aria-label="Extra one-time payment amount 5">
+                </div>
+                <span class="from-label">in</span>
+                <select id="a-onetime-month-5" aria-label="Extra one-time payment month 5">
+                  <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                  <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                  <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                  <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                </select>
+                <select id="a-onetime-year-5" aria-label="Extra one-time payment year 5"></select>
+              </div>
+              <div class="extra-payment-row">
+                <div class="field-group">
+                  <input type="number" id="a-onetime-amt-6" value="0" min="0" step="10" aria-label="Extra one-time payment amount 6">
+                </div>
+                <span class="from-label">in</span>
+                <select id="a-onetime-month-6" aria-label="Extra one-time payment month 6">
+                  <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                  <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                  <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                  <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                </select>
+                <select id="a-onetime-year-6" aria-label="Extra one-time payment year 6"></select>
+              </div>
+              <div class="extra-payment-row">
+                <div class="field-group">
+                  <input type="number" id="a-onetime-amt-7" value="0" min="0" step="10" aria-label="Extra one-time payment amount 7">
+                </div>
+                <span class="from-label">in</span>
+                <select id="a-onetime-month-7" aria-label="Extra one-time payment month 7">
+                  <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                  <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                  <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                  <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                </select>
+                <select id="a-onetime-year-7" aria-label="Extra one-time payment year 7"></select>
+              </div>
+              <div class="extra-payment-row">
+                <div class="field-group">
+                  <input type="number" id="a-onetime-amt-8" value="0" min="0" step="10" aria-label="Extra one-time payment amount 8">
+                </div>
+                <span class="from-label">in</span>
+                <select id="a-onetime-month-8" aria-label="Extra one-time payment month 8">
+                  <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                  <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                  <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                  <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                </select>
+                <select id="a-onetime-year-8" aria-label="Extra one-time payment year 8"></select>
+              </div>
+              <div class="extra-payment-row">
+                <div class="field-group">
+                  <input type="number" id="a-onetime-amt-9" value="0" min="0" step="10" aria-label="Extra one-time payment amount 9">
+                </div>
+                <span class="from-label">in</span>
+                <select id="a-onetime-month-9" aria-label="Extra one-time payment month 9">
+                  <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                  <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                  <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                  <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                </select>
+                <select id="a-onetime-year-9" aria-label="Extra one-time payment year 9"></select>
+              </div>
+              <div class="extra-payment-row">
+                <div class="field-group">
+                  <input type="number" id="a-onetime-amt-10" value="0" min="0" step="10" aria-label="Extra one-time payment amount 10">
+                </div>
+                <span class="from-label">in</span>
+                <select id="a-onetime-month-10" aria-label="Extra one-time payment month 10">
+                  <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option>
+                  <option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option>
+                  <option value="7">Jul</option><option value="8">Aug</option><option value="9" selected>Sep</option>
+                  <option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>
+                </select>
+                <select id="a-onetime-year-10" aria-label="Extra one-time payment year 10"></select>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="a-result">
+          <div id="a-results" hidden>
+            <div class="summary-payment-box">
+              <div class="label">Monthly Pay</div>
+              <div class="value" id="a-summary-payment">$0</div>
+            </div>
+
+            <div id="a-donut-wrap" class="donut-wrap"></div>
+            <div id="a-summary-stats"></div>
+          </div>
+        </div>
+
+      </div>
+    </form>
+
+    <div class="schedule-card" id="a-schedule-section" hidden>
+      <div class="schedule-header">
+        <h2 style="margin:0;font-size:18px;">Amortization Schedule</h2>
+        <div class="schedule-toggle-group">
+          <button type="button" id="a-schedule-annual" class="active">Annual</button>
+          <button type="button" id="a-schedule-monthly">Monthly</button>
+        </div>
+      </div>
+      <div class="line-chart-wrap">
+        <div id="a-chart-wrap"></div>
+        <div class="chart-legend">
+          <span><span class="legend-dot" style="background:var(--accent)"></span> Balance</span>
+          <span><span class="legend-dot" style="background:#10b981"></span> Cumulative Interest</span>
+          <span><span class="legend-dot" style="background:#dc2626"></span> Cumulative Payment</span>
+        </div>
+      </div>
+      <div class="schedule-table-wrap">
+        <div id="a-schedule-body"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What amortization actually means</h2>
+      <p>Amortization is just the plan for erasing a debt through a series of equal, scheduled payments. Every payment is the same size, but the mix inside it isn't: part covers the interest the lender is owed for that period, and the rest chips away at the amount you originally borrowed. Because the amount you still owe keeps shrinking, the interest portion keeps shrinking with it — which means, even though the payment itself never changes, more of each check goes toward the balance as the loan matures.</p>
+
+      <h2>Why the split shifts over time</h2>
+      <p>Interest is charged only on the balance still outstanding, so it's largest in the loan's first year and smallest in its last. Picture two loans side by side, both $200,000 at 6% — one just starting, one with $20,000 left. The first accrues roughly $1,000 in interest that month; the second, only about $100. Same rate, wildly different interest bill, purely because of how much principal remains. That's the entire mechanism behind the curve you see in the schedule above: interest fading, principal rising, payment flat.</p>
+      <div class="callout">This is also why extra payments made early save so much more than the same extra payment made late — a dollar paid off in year one skips decades of interest that would otherwise accrue on it; a dollar paid off in year fourteen only skips one year's worth.</div>
+
+      <h2>What extra payments actually do</h2>
+      <p>An extra payment goes straight to the principal — it never touches interest. That means your required monthly payment doesn't drop; instead, the balance the next month's interest is calculated on is smaller, which snowballs into a shorter loan and a smaller total interest bill. A one-time payment nudges the balance down once; a recurring extra payment compounds that effect every single month it's active.</p>
+
+      <h2>What kinds of loans this schedule applies to</h2>
+      <p>This calculator fits any fixed-rate, fixed-term loan that's paid down with level payments — mortgages, auto loans, student loans, personal loans. It doesn't fit revolving debt like credit cards, where the balance and minimum payment move independently, or interest-only and balloon loans, which don't spread principal evenly across the term in the first place.</p>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Does making an extra payment lower my required monthly payment?</h3>
+        <p>No — your scheduled payment stays exactly the same. What changes is how much of the loan is left, so it gets paid off sooner and costs less in total interest.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is almost my entire early payment interest?</h3>
+        <p>Because interest is calculated on the full remaining balance, and early on that balance is close to the full loan amount. As the balance falls, so does the interest charged against it, and the principal share grows to fill the gap.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the difference between the annual and monthly schedule?</h3>
+        <p>They show the same underlying numbers at different resolutions — the annual view totals each year's interest and principal into one row, while the monthly view breaks every single payment out individually so you can see exactly how the balance moves month to month.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I schedule more than one lump-sum payment?</h3>
+        <p>Yes — this calculator supports up to ten separate one-time extra payments, each on its own date, on top of an optional recurring monthly or yearly extra payment.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Loan Calculator</h3>
+        <p>Work out payments and total interest for any fixed-term loan.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Estimate car payments including taxes, fees, and trade-in value.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Interest Calculator</h3>
+        <p>See how simple interest builds up on a balance over time.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Payment Calculator</h3>
+        <p>Find the required payment amount for a loan, given its rate and term.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Inflation Calculator</h3>
+        <p>See how inflation reshapes the purchasing power of money over time.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Finance Calculator</h3>
+        <p>Solve for present value, future value, rate, or payment in a financial formula.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Income Tax Calculator</h3>
+        <p>Estimate income tax owed based on earnings and filing status.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Compound Interest Calculator</h3>
+        <p>Calculate how savings grow when interest compounds over time.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Salary Calculator</h3>
+        <p>Convert pay between hourly, monthly, and annual figures.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Interest Rate Calculator</h3>
+        <p>Work out the interest rate implied by a loan or investment.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Sales Tax Calculator</h3>
+        <p>Add or remove sales tax from a purchase price.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/amortization-calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fraction Calculator - CalcBundle</title>
+<meta name="description" content="Add, subtract, multiply, or divide fractions and mixed numbers with full step-by-step working, plus tools to simplify fractions and convert between fractions and decimals.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Fraction Calculator</span>
+    </div>
+    <h1>Fraction Calculator</h1>
+    <p>Add, subtract, multiply, or divide fractions and mixed numbers, with the working shown one step at a time — plus quick tools to simplify a fraction or convert to and from decimals.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:920px;">
+
+    <div class="fraction-card">
+      <h2>Add, subtract, multiply or divide</h2>
+      <p class="card-sub">Leave the whole-number box empty unless you're entering a mixed number.</p>
+
+      <form id="fraction-main">
+        <div class="fraction-row">
+          <div class="fraction-group">
+            <input type="number" class="fraction-whole" id="main-a-whole" placeholder="Whole">
+            <div class="fraction-stack">
+              <input type="number" id="main-a-num" placeholder="2" required>
+              <div class="fraction-divider"></div>
+              <input type="number" id="main-a-den" placeholder="7" required>
+            </div>
+          </div>
+
+          <select class="fraction-op" id="main-op">
+            <option value="+">+</option>
+            <option value="-">&minus;</option>
+            <option value="*">&times;</option>
+            <option value="/">&divide;</option>
+          </select>
+
+          <div class="fraction-group">
+            <input type="number" class="fraction-whole" id="main-b-whole" placeholder="Whole">
+            <div class="fraction-stack">
+              <input type="number" id="main-b-num" placeholder="3" required>
+              <div class="fraction-divider"></div>
+              <input type="number" id="main-b-den" placeholder="8" required>
+            </div>
+          </div>
+
+          <button type="submit" class="fraction-equals">= Calculate</button>
+        </div>
+      </form>
+
+      <div class="fraction-result" id="fraction-main-result"></div>
+      <div class="fraction-steps" id="fraction-main-steps" hidden></div>
+    </div>
+
+    <div class="secondary-tools">
+      <div class="tool-card">
+        <h3>Simplify a fraction</h3>
+        <p class="card-sub">Reduce any fraction to its lowest terms.</p>
+        <form class="tool-form" id="fraction-simplify">
+          <input type="text" id="simplify-num" placeholder="Numerator" required>
+          <span>/</span>
+          <input type="text" id="simplify-den" placeholder="Denominator" required>
+          <button type="submit">Simplify</button>
+        </form>
+        <div class="tool-result" id="simplify-result"></div>
+      </div>
+
+      <div class="tool-card">
+        <h3>Decimal &harr; Fraction</h3>
+        <p class="card-sub">Convert either direction.</p>
+        <div class="mode-toggle" id="convert-mode-toggle">
+          <span class="mode-toggle-thumb"></span>
+          <button type="button" id="convert-mode-decimal" class="active">Decimal&rarr;Fraction</button>
+          <button type="button" id="convert-mode-fraction">Fraction&rarr;Decimal</button>
+        </div>
+        <form class="tool-form" id="fraction-convert">
+          <input type="text" id="convert-input" placeholder="e.g. 1.375" required>
+          <button type="submit">Convert</button>
+        </form>
+        <div class="tool-result" id="convert-result"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide">
+      <h2>What a fraction is actually measuring</h2>
+      <p>Picture a chocolate bar scored into 8 equal squares. If you break off 3 of those squares, you've taken <strong>3/8</strong> of the bar — the bottom number (the denominator) records how many equal pieces the whole bar was cut into, and the top number (the numerator) records how many of those pieces you're talking about. Nothing about a fraction is about "3" or "8" on their own; it's the relationship between them that means something.</p>
+      <div class="callout">A fraction never changes value if you scale the numerator and denominator by the same amount — 3/8 and 6/16 are the same size piece of chocolate, just cut into finer crumbs.</div>
+
+      <h2>Whole numbers, mixed numbers, and improper fractions</h2>
+      <p>A mixed number like 2&nbsp;3/4 means "two whole bars, plus three quarters of another." An improper fraction says the same thing differently: 11/4, where the numerator is allowed to be bigger than the denominator. Both describe the identical amount — our calculator above lets you type the whole-number part directly instead of forcing you to convert it yourself first, or use a separate tool just for mixed numbers.</p>
+
+      <h2>Adding and subtracting: why the denominators have to match first</h2>
+      <p>Think of denominators as different currencies. You can't add 3 euros and 2 dollars and get a meaningful total until you convert one into the other. Fractions work the same way: 1/3 and 1/4 are sliced differently, so before you can combine them you rescale both to a shared "currency" — the smallest denominator they both divide into evenly. Only once the pieces are the same size can the numerators simply be added or subtracted.</p>
+
+      <h2>Multiplying and dividing: no matching required</h2>
+      <p>Multiplication skips that step entirely — multiply the numerators, multiply the denominators, done. Division is really multiplication in disguise: dividing by 1/2 asks "how many halves fit into this?", and it turns out that's the same question as multiplying by the flipped fraction, 2/1. That's the entire reason the "flip and multiply" rule works — it isn't an arbitrary trick.</p>
+
+      <h2>Why we simplify the answer</h2>
+      <p>10/20 and 1/2 point to the exact same quantity, but 1/2 is the version everyone recognizes at a glance. Reducing a fraction means dividing the numerator and denominator by the largest number that divides evenly into both, until nothing but 1 divides them both. It doesn't change the value — it just states it in the plainest possible terms.</p>
+    </div>
+
+    <div class="fraction-guide">
+      <h2 style="margin-top:0;">Common questions</h2>
+      <div class="faq-item">
+        <h3>Can a denominator be zero?</h3>
+        <p>No. A denominator of zero would mean splitting something into zero pieces, which is undefined — there's no such quantity. Our calculator will flag this rather than guess at an answer.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do negative fractions work?</h3>
+        <p>Exactly like positive ones, except one part of the fraction carries a minus sign. You can put the sign on the whole number, the numerator, or think of it as applying to the fraction as a whole — the calculator normalizes it either way and always returns the denominator as positive.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the decimal version always exact?</h3>
+        <p>Only when the denominator's prime factors are limited to 2s and 5s (like 4, 8, 20, 25). Otherwise the decimal repeats forever — 1/3 becomes 0.333..., which we round to a fixed number of places for display rather than showing an infinite string of digits.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does simplifying ever change what a fraction means?</h3>
+        <p>Never. Simplifying only rewrites the fraction in smaller numbers — the amount it represents is identical before and after, the same way "one dozen" and "twelve" refer to the same quantity.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="teaser">
+  <div class="container">
+    <h2>Most popular calculators</h2>
+    <p class="section-sub">Popular tools we're adding to CalcBundle next.</p>
+    <div class="teaser-carousel">
+      <button type="button" class="carousel-arrow prev" aria-label="Scroll left">&#8592;</button>
+      <div class="cards-row">
+        <div class="mini-card"><span class="tag">Coming soon</span><h3>BMI Calculator</h3><p>Health</p></div>
+        <div class="mini-card"><span class="tag">Coming soon</span><h3>Mortgage Calculator</h3><p>Finance</p></div>
+        <div class="mini-card"><span class="tag">Coming soon</span><h3>Percentage Calculator</h3><p>Math</p></div>
+        <div class="mini-card"><span class="tag">Coming soon</span><h3>Age Calculator</h3><p>Everyday</p></div>
+        <div class="mini-card"><span class="tag">Coming soon</span><h3>GPA Calculator</h3><p>Education</p></div>
+        <div class="mini-card"><span class="tag">Coming soon</span><h3>Tip Calculator</h3><p>Everyday</p></div>
+        <div class="mini-card"><span class="tag">Coming soon</span><h3>Crypto Profit Calculator</h3><p>Crypto</p></div>
+      </div>
+      <button type="button" class="carousel-arrow next" aria-label="Scroll right">&#8594;</button>
+    </div>
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another math tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="scientific-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Scientific Calculator</h3>
+        <p>Trigonometry, logarithms, exponents, roots, and full calculation history.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Percentage Calculator</h3>
+        <p>Work out percentages, percentage change, and percentage differences.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Random Number Generator</h3>
+        <p>Generate random numbers within a range, with or without repeats.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Triangle Calculator</h3>
+        <p>Solve for a triangle's sides, angles, or area from partial measurements.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Standard Deviation Calculator</h3>
+        <p>Measure how spread out a set of numbers is from its average.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/carousel.js"></script>
+<script src="../js/fraction-calculator.js"></script>
+</body>
+</html>

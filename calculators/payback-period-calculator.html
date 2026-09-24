@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payback Period Calculator - CalcBundle</title>
+<meta name="description" content="Find out how long it takes for an investment to pay for itself, with both a simple payback period and a discount-rate-adjusted discounted payback period.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Payback Period Calculator</span>
+    </div>
+    <h1>Payback Period Calculator</h1>
+    <p>Find out how long it takes for an investment to pay for itself, both in simple terms and after discounting future cash flows back to today's dollars.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Payback Period for Fixed Cash Flow</h2>
+      <p class="payoff-panel-sub">Computes the payback period for an investment with a recurring cash flow that may grow or shrink by a fixed rate each year.</p>
+
+      <form id="pp1-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="pp1-initial">Initial Investment</label>
+              <input type="number" id="pp1-initial" value="100000" min="0" step="1000">
+            </div>
+            <div class="field-group">
+              <label for="pp1-cashflow">Cash Flow (Year 1)</label>
+              <input type="number" id="pp1-cashflow" value="30000" min="0" step="500">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pp1-change-dir">Cash Flow Change</label>
+                <select id="pp1-change-dir">
+                  <option value="increase" selected>Increase by</option>
+                  <option value="decrease">Decrease by</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="pp1-change-rate">Rate (%/year)</label>
+                <input type="number" id="pp1-change-rate" value="5" step="0.1">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pp1-years">Number of Years</label>
+                <input type="number" id="pp1-years" value="5" min="1" step="1">
+              </div>
+              <div class="field-group">
+                <label for="pp1-discount">Discount Rate (%)</label>
+                <input type="number" id="pp1-discount" value="10" step="0.1">
+              </div>
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="pp1-result"></div>
+        </div>
+      </form>
+
+      <div class="schedule-card" id="pp1-results-section" hidden>
+        <div class="schedule-header"><h3 class="schedule-header" style="border:0;padding:0;">Year-by-Year Cash Flow</h3></div>
+        <div class="schedule-table-wrap" id="pp1-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Payback Period for Irregular Cash Flow</h2>
+      <p class="payoff-panel-sub">Computes the payback period from an initial investment and a series of different annual cash flows.</p>
+
+      <form id="pp2-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="pp2-initial">Initial Investment</label>
+              <input type="number" id="pp2-initial" value="100000" min="0" step="1000">
+            </div>
+            <div class="field-group">
+              <label for="pp2-discount">Discount Rate (%)</label>
+              <input type="number" id="pp2-discount" value="10" step="0.1">
+            </div>
+            <div class="subsection-title" style="margin-top:0;">Cash Flow</div>
+            <div id="pp2-rows"></div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="pp2-result"></div>
+        </div>
+      </form>
+
+      <div class="schedule-card" id="pp2-results-section" hidden>
+        <div class="schedule-header"><h3 class="schedule-header" style="border:0;padding:0;">Year-by-Year Cash Flow</h3></div>
+        <div class="schedule-table-wrap" id="pp2-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What payback period tells you (and what it doesn't)</h2>
+      <p>Payback period answers a simple, practical question: how long until an investment returns the money that was put into it? It's a liquidity and risk measure more than a profitability measure — a shorter payback period means capital is tied up for less time and exposed to fewer things that could go wrong along the way.</p>
+
+      <h2>Why the discounted version matters</h2>
+      <p>The plain payback period treats a dollar received in year 5 the same as a dollar received today, which overstates how quickly an investment really pays off. Discounted payback period fixes this by shrinking each future cash flow back to its present value before adding it up — so it always takes at least as long (usually longer) than the simple payback period.</p>
+      <div class="callout">Payback period says nothing about what happens after the money is recovered. A project that pays back in 2 years and then stops generating cash can be worse than one that pays back in 4 years and keeps paying for a decade — pair payback period with IRR or NPV for the fuller picture.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What does "Cash Flow Return Rate" mean here?</h3>
+        <p>It's the internal rate of return (IRR) of the initial investment against the full series of cash flows entered — a measure of the annualized return the investment actually earns, independent of the payback period figures.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if the investment never pays back?</h3>
+        <p>If cumulative cash flow never turns positive within the years provided, the calculator reports "Never" for that payback figure instead of a misleading number.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="irr-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>IRR Calculator</h3>
+        <p>Solve for the internal rate of return on a series of cash flows.</p>
+      </a>
+
+      <a class="calc-list-card" href="roi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>ROI Calculator</h3>
+        <p>Calculate the simple return on investment for a purchase or project.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Present Value Calculator</h3>
+        <p>Find the present value of a future sum or cash flow stream.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/payback-period-calculator.js"></script>
+</body>
+</html>

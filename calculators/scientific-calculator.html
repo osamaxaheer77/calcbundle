@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientific Calculator - CalcBundle</title>
+<meta name="description" content="A free online scientific calculator for trigonometry, logarithms, exponents, and more — with full calculation history.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <span>Math</span>
+      <span>/</span>
+      <span class="current">Scientific Calculator</span>
+    </div>
+    <h1>Scientific Calculator</h1>
+    <p>A free online scientific calculator for trigonometry, logarithms, exponents, and more — with full calculation history.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container calculator-layout">
+
+    <div class="calculator-card">
+      <div class="display">
+        <div class="display-expr" id="display-expr">&nbsp;</div>
+        <div class="display-result" id="display-result">0</div>
+      </div>
+
+      <div class="button-grid">
+        <div class="grid-block">
+          <div class="grid-row">
+            <button class="calc-btn" data-insert="sin(">sin</button>
+            <button class="calc-btn" data-insert="cos(">cos</button>
+            <button class="calc-btn" data-insert="tan(">tan</button>
+            <div class="deg-rad-toggle" id="deg-rad-toggle">
+              <span class="toggle-thumb"></span>
+              <button type="button" id="mode-deg" class="active">Deg</button>
+              <button type="button" id="mode-rad">Rad</button>
+            </div>
+          </div>
+          <div class="grid-row">
+            <button class="calc-btn" data-insert="sin&#8315;&#185;(">sin&#8315;&#185;</button>
+            <button class="calc-btn" data-insert="cos&#8315;&#185;(">cos&#8315;&#185;</button>
+            <button class="calc-btn" data-insert="tan&#8315;&#185;(">tan&#8315;&#185;</button>
+            <button class="calc-btn" data-insert="&#960;">&#960;</button>
+            <button class="calc-btn" data-insert="e">e</button>
+          </div>
+          <div class="grid-row">
+            <button class="calc-btn" data-insert="^">x&#8288;<sup>y</sup></button>
+            <button class="calc-btn" data-insert="&#179;">x&#179;</button>
+            <button class="calc-btn" data-insert="&#178;">x&#178;</button>
+            <button class="calc-btn" data-insert="e^">e&#8288;<sup>x</sup></button>
+            <button class="calc-btn" data-insert="10^">10&#8288;<sup>x</sup></button>
+          </div>
+          <div class="grid-row">
+            <button class="calc-btn" data-insert=" rt ">&#8288;<sup>y</sup>&#8730;x</button>
+            <button class="calc-btn" data-insert="&#8731;(">&#8288;<sup>3</sup>&#8730;x</button>
+            <button class="calc-btn" data-insert="&#8730;(">&#8730;x</button>
+            <button class="calc-btn" data-insert="ln(">ln</button>
+            <button class="calc-btn" data-insert="log(">log</button>
+          </div>
+          <div class="grid-row">
+            <button class="calc-btn" data-insert="(">(</button>
+            <button class="calc-btn" data-insert=")">)</button>
+            <button class="calc-btn" data-insert="&#8315;&#185;">1/x</button>
+            <button class="calc-btn" data-insert="%">%</button>
+            <button class="calc-btn" data-insert="!">n!</button>
+          </div>
+        </div>
+
+        <div class="grid-block">
+          <div class="grid-row">
+            <button class="calc-btn num" data-insert="7">7</button>
+            <button class="calc-btn num" data-insert="8">8</button>
+            <button class="calc-btn num" data-insert="9">9</button>
+            <button class="calc-btn op" data-insert="+">+</button>
+            <button class="calc-btn" data-action="backspace">Back</button>
+          </div>
+          <div class="grid-row">
+            <button class="calc-btn num" data-insert="4">4</button>
+            <button class="calc-btn num" data-insert="5">5</button>
+            <button class="calc-btn num" data-insert="6">6</button>
+            <button class="calc-btn op" data-insert="&#8722;">&#8722;</button>
+            <button class="calc-btn" data-action="ans">Ans</button>
+          </div>
+          <div class="grid-row">
+            <button class="calc-btn num" data-insert="1">1</button>
+            <button class="calc-btn num" data-insert="2">2</button>
+            <button class="calc-btn num" data-insert="3">3</button>
+            <button class="calc-btn op" data-insert="&#215;">&#215;</button>
+            <button class="calc-btn" data-action="memoryAdd">M+</button>
+          </div>
+          <div class="grid-row">
+            <button class="calc-btn num" data-insert="0">0</button>
+            <button class="calc-btn num" data-insert=".">.</button>
+            <button class="calc-btn" data-insert="E">EXP</button>
+            <button class="calc-btn op" data-insert="&#247;">&#247;</button>
+            <button class="calc-btn" data-action="memorySub">M-</button>
+          </div>
+          <div class="grid-row">
+            <button class="calc-btn" data-action="sign">&#177;</button>
+            <button class="calc-btn" data-action="round">RND</button>
+            <button class="calc-btn ac" data-action="clear">AC</button>
+            <button class="calc-btn eq" data-action="evaluate">=</button>
+            <button class="calc-btn" data-action="memoryRecall">MR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="history-panel">
+      <div class="history-header">
+        <h2>History</h2>
+        <button type="button" id="clear-history">Clear</button>
+      </div>
+      <div class="history-list" id="history-list">
+        <div class="history-empty">No calculations yet</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another math tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="fraction-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Fraction Calculator</h3>
+        <p>Add, subtract, multiply, and divide fractions with step-by-step working.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Percentage Calculator</h3>
+        <p>Work out percentages, percentage change, and percentage differences.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Random Number Generator</h3>
+        <p>Generate random numbers within a range, with or without repeats.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Triangle Calculator</h3>
+        <p>Solve for a triangle's sides, angles, or area from partial measurements.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Standard Deviation Calculator</h3>
+        <p>Measure how spread out a set of numbers is from its average.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/calculator.js"></script>
+</body>
+</html>

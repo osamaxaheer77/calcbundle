@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>House Affordability Calculator - CalcBundle</title>
+<meta name="description" content="Estimate how much house you can afford based on your income and debts, or on a fixed monthly budget.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">House Affordability Calculator</span>
+    </div>
+    <h1>House Affordability Calculator</h1>
+    <p>Estimate how much home you can reasonably afford — based on your income and debts, or on a fixed monthly budget.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Based on Income &amp; Debt</h2>
+      <p class="payoff-panel-sub">Lenders size a mortgage against your income and existing debts using a debt-to-income (DTI) ratio — pick the rule that fits your loan type.</p>
+
+      <form id="d-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="d-income">Annual Household Income</label>
+              <input type="number" id="d-income" value="120000" min="0" step="1000">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="d-term">Mortgage Loan Term (years)</label>
+                <input type="number" id="d-term" value="30" min="1" step="1">
+              </div>
+              <div class="field-group">
+                <label for="d-rate">Interest Rate (%)</label>
+                <input type="number" id="d-rate" value="6.5" min="0" step="0.01">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="d-debt">Monthly Debt Payback ($)</label>
+              <input type="number" id="d-debt" value="0" min="0" step="10">
+            </div>
+            <div class="field-group">
+              <label for="d-down">Down Payment</label>
+              <div class="field-with-toggle">
+                <input type="number" id="d-down" value="20" min="0" step="0.5">
+                <select id="d-down-mode" class="unit-select">
+                  <option value="pct" selected>%</option>
+                  <option value="amt">$</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="d-tax">Property Tax (per year)</label>
+              <div class="field-with-toggle">
+                <input type="number" id="d-tax" value="1.5" min="0" step="0.1">
+                <select id="d-tax-mode" class="unit-select">
+                  <option value="pct" selected>%</option>
+                  <option value="amt">$</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="d-hoa">HOA or Co-op Fee (per year)</label>
+              <div class="field-with-toggle">
+                <input type="number" id="d-hoa" value="0" min="0" step="0.1">
+                <select id="d-hoa-mode" class="unit-select">
+                  <option value="pct" selected>%</option>
+                  <option value="amt">$</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="d-ins">Insurance (per year)</label>
+              <div class="field-with-toggle">
+                <input type="number" id="d-ins" value="0.5" min="0" step="0.1">
+                <select id="d-ins-mode" class="unit-select">
+                  <option value="pct" selected>%</option>
+                  <option value="amt">$</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="d-dti">Debt-to-Income (DTI) Ratio</label>
+              <select id="d-dti">
+                <option value="cv" selected>Conventional loan (28/36 rule)</option>
+                <option value="fha">FHA loan (31% front-end, 43% back-end)</option>
+                <option value="va">VA loan (41%)</option>
+                <option value="10">10%</option>
+                <option value="15">15%</option>
+                <option value="20">20%</option>
+                <option value="25">25%</option>
+                <option value="30">30%</option>
+                <option value="35">35%</option>
+                <option value="40">40%</option>
+                <option value="45">45%</option>
+                <option value="50">50%</option>
+              </select>
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="d-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">Based on a Fixed Monthly Budget</h2>
+      <p class="payoff-panel-sub">If you already know what you want to spend on housing each month, work backward from that budget instead.</p>
+
+      <form id="b-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="b-budget">Budget for House (per month)</label>
+              <input type="number" id="b-budget" value="3500" min="0" step="50">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="b-term">Mortgage Loan Term (years)</label>
+                <input type="number" id="b-term" value="30" min="1" step="1">
+              </div>
+              <div class="field-group">
+                <label for="b-rate">Interest Rate (%)</label>
+                <input type="number" id="b-rate" value="6.5" min="0" step="0.01">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="b-down">Down Payment</label>
+              <div class="field-with-toggle">
+                <input type="number" id="b-down" value="20" min="0" step="0.5">
+                <select id="b-down-mode" class="unit-select">
+                  <option value="pct" selected>%</option>
+                  <option value="amt">$</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="checkbox-row">
+              <input type="checkbox" id="b-include-fees" checked>
+              <label for="b-include-fees" style="margin:0;">Include the tax and fees below in the budget</label>
+            </div>
+
+            <div class="field-group">
+              <label for="b-tax">Property Tax (per year)</label>
+              <div class="field-with-toggle">
+                <input type="number" id="b-tax" value="1.5" min="0" step="0.1">
+                <select id="b-tax-mode" class="unit-select">
+                  <option value="pct" selected>%</option>
+                  <option value="amt">$</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="b-hoa">HOA or Co-op Fee (per year)</label>
+              <div class="field-with-toggle">
+                <input type="number" id="b-hoa" value="0" min="0" step="0.1">
+                <select id="b-hoa-mode" class="unit-select">
+                  <option value="pct" selected>%</option>
+                  <option value="amt">$</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="b-ins">Insurance (per year)</label>
+              <div class="field-with-toggle">
+                <input type="number" id="b-ins" value="0.5" min="0" step="0.1">
+                <select id="b-ins-mode" class="unit-select">
+                  <option value="pct" selected>%</option>
+                  <option value="amt">$</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="b-maint">Maintenance Cost (per year)</label>
+              <div class="field-with-toggle">
+                <input type="number" id="b-maint" value="1.5" min="0" step="0.1">
+                <select id="b-maint-mode" class="unit-select">
+                  <option value="pct" selected>%</option>
+                  <option value="amt">$</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="b-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How lenders decide what you can borrow</h2>
+      <p>Affordability isn't really about the size of the house — it's about the size of the monthly payment relative to your income. Lenders formalize this with a debt-to-income (DTI) ratio: the share of your gross monthly income that goes toward debt. A <strong>front-end ratio</strong> covers housing costs alone (loan payment, property tax, HOA, insurance); a <strong>back-end ratio</strong> adds in every other recurring debt — car loans, student loans, credit cards. Most conventional lenders cap these at 28% and 36% respectively, the so-called 28/36 rule.</p>
+
+      <h2>Why the loan type changes the math</h2>
+      <p>FHA loans, insured by the federal government, tolerate more debt relative to income — up to 31% front-end and 43% back-end — because the insurance protects the lender if a riskier borrower defaults. VA loans, available to eligible veterans and service members, use a single combined ratio around 41% instead of splitting front-end and back-end. Whichever rule applies, the same principle holds: a lower DTI usually means an easier approval and better loan terms.</p>
+      <div class="callout">This calculator solves the math in reverse: instead of starting from a house price and checking whether it fits your budget, it starts from your maximum allowed monthly payment and works out the largest house price that still respects it.</div>
+
+      <h2>Why two different starting points</h2>
+      <p>Not everyone thinks in DTI ratios. Some people simply know what they're comfortable spending each month and want to see what that translates to in house price — which is exactly what the fixed-budget version of this calculator does, skipping the income and debt inputs entirely.</p>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why is the "estimated maintenance" cost included if it doesn't count toward my loan approval?</h3>
+        <p>Lenders don't factor ongoing maintenance into their DTI math, but it's still a real cost of owning a home — repairs, upkeep, appliance replacement. We include a rough 1.5%-of-price estimate so the "total monthly cost" figure reflects what you'd actually pay, not just what a lender would approve.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does a bigger down payment let me afford a more expensive house?</h3>
+        <p>Yes, in two ways: it directly reduces the loan amount (and therefore the monthly payment) for any given price, and it can also help you qualify for a lower interest rate — both of which stretch your DTI-limited budget further.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does raising my monthly debt lower my affordable house price?</h3>
+        <p>Because the back-end ratio caps housing cost <em>plus</em> other debt together. Every dollar already committed to a car payment or student loan is a dollar lenders won't let you put toward housing under that ratio.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the VA loan estimate exact?</h3>
+        <p>It applies the 41% DTI ratio VA lenders commonly use, but it doesn't model the VA funding fee, which varies by down payment size and prior VA loan use. Treat it as a starting estimate and confirm exact numbers with a VA-approved lender.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="amortization-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Amortization Calculator</h3>
+        <p>Break a loan down into its full principal-and-interest payment schedule.</p>
+      </a>
+
+      <a class="calc-list-card" href="mortgage-payoff-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Payoff Calculator</h3>
+        <p>See how extra, biweekly, or lump-sum payments could shorten your mortgage.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Loan Calculator</h3>
+        <p>Work out payments and total interest for any fixed-term loan.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Estimate car payments including taxes, fees, and trade-in value.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Interest Calculator</h3>
+        <p>See how simple interest builds up on a balance over time.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Income Tax Calculator</h3>
+        <p>Estimate income tax owed based on earnings and filing status.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Salary Calculator</h3>
+        <p>Convert pay between hourly, monthly, and annual figures.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Debt-to-Income Ratio Calculator</h3>
+        <p>Check how your monthly debt payments compare to your income.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Rent vs. Buy Calculator</h3>
+        <p>Compare the long-term cost of renting against buying a home.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/house-affordability-calculator.js"></script>
+</body>
+</html>

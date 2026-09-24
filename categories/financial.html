@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Calculators - CalcBundle</title>
+<meta name="description" content="Every financial calculator CalcBundle is building — mortgages, loans, retirement, taxes, investing, and more.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../index.html#categories" style="color:inherit;text-decoration:none;">Categories</a>
+      <span>/</span>
+      <span class="current">Financial</span>
+    </div>
+    <h1>Financial Calculators</h1>
+    <p>Loans, mortgages, taxes, investing, and everyday money math — all the tools we're building for this category.</p>
+  </div>
+</section>
+
+<section class="category-browse" style="background:var(--bg);">
+  <div class="container">
+
+    <div class="calc-groups-grid">
+
+      <button type="button" class="calc-group-card" id="group-trigger-mortgage" aria-expanded="false" aria-controls="group-panel-wrap-mortgage">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l9-9 9 9"/><path d="M5 10v10a1 1 0 0 0 1 1h3v-6h6v6h3a1 1 0 0 0 1-1V10"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Mortgage &amp; Real Estate</h3>
+          <p>Home loans, refinancing, affordability, and everything property-related.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-retirement" aria-expanded="false" aria-controls="group-panel-wrap-retirement">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-4h-2c0-1-.5-1.5-1-2Z"/><path d="M2 9v1c0 1.1.9 2 2 2h1"/><path d="M16 11h0"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Retirement</h3>
+          <p>Plan savings, income, and withdrawals for life after work.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-tax" aria-expanded="false" aria-controls="group-panel-wrap-tax">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Tax &amp; Salary</h3>
+          <p>Income tax, payroll, and take-home pay calculations.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-auto" aria-expanded="false" aria-controls="group-panel-wrap-auto">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Auto</h3>
+          <p>Car loans, leases, and financing comparisons.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-investment" aria-expanded="false" aria-controls="group-panel-wrap-investment">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Investment</h3>
+          <p>Grow, compare, and project your investments and returns.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+      <button type="button" class="calc-group-card" id="group-trigger-other" aria-expanded="false" aria-controls="group-panel-wrap-other">
+        <span class="calc-group-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </span>
+        <span class="calc-group-text">
+          <h3>Other</h3>
+          <p>Loans, budgeting, currency, and everyday financial math.</p>
+        </span>
+        <svg class="calc-group-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-mortgage">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Mortgage &amp; Real Estate calculators</h4>
+          <div class="calc-simple-list">
+
+            <a class="calc-simple-item is-live" href="../calculators/mortgage-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Mortgage Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/amortization-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Amortization Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/mortgage-payoff-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Mortgage Payoff Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/house-affordability-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>House Affordability Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/rent-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Rent Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/debt-ratio-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Debt-to-Income Ratio Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/real-estate-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Real Estate Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/refinance-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Refinance Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/rental-property-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Rental Property Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/apr-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>APR Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/fha-loan-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>FHA Loan Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/va-mortgage-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>VA Mortgage Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/home-equity-loan-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Home Equity Loan Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/heloc-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>HELOC Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/down-payment-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Down Payment Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/rent-vs-buy-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Rent vs. Buy Calculator</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-retirement">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Retirement calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Retirement Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>401K Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Pension Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Social Security Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Annuity Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Annuity Payout Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Roth IRA Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>IRA Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>RMD Calculator</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-tax">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Tax &amp; Salary calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Income Tax Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Salary Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Marriage Tax Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Estate Tax Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Take-Home-Paycheck Calculator</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-auto">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Auto calculators</h4>
+          <div class="calc-simple-list">
+
+            <a class="calc-simple-item is-live" href="../calculators/auto-loan-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Auto Loan Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/cash-back-or-low-interest-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Cash Back or Low Interest Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/auto-lease-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Auto Lease Calculator</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-investment">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Investment calculators</h4>
+          <div class="calc-simple-list">
+
+            <a class="calc-simple-item is-live" href="../calculators/interest-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Interest Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/investment-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Investment Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/finance-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Finance Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/compound-interest-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Compound Interest Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/interest-rate-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Interest Rate Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/savings-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Savings Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/simple-interest-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Simple Interest Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/cd-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>CD Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/bond-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Bond Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/mutual-fund-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Mutual Fund Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/average-return-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Average Return Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/irr-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>IRR Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/roi-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>ROI Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/payback-period-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Payback Period Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/present-value-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Present Value Calculator</span>
+            </a>
+
+            <a class="calc-simple-item is-live" href="../calculators/future-value-calculator.html">
+              <span class="calc-simple-dot"></span>
+              <span>Future Value Calculator</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-group-panel-wrap" id="group-panel-wrap-other">
+      <div class="calc-group-panel-inner">
+        <div class="calc-group-panel">
+          <h4>Other calculators</h4>
+          <div class="calc-simple-list">
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Loan Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Payment Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Currency Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Inflation Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Sales Tax Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Credit Card Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Credit Cards Payoff Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Debt Payoff Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Debt Consolidation Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Repayment Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Student Loan Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>College Cost Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>VAT Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Depreciation Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Margin Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Discount Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Business Loan Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Personal Loan Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Boat Loan Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Lease Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Budget Calculator</span>
+            </div>
+
+            <div class="calc-simple-item is-soon">
+              <span class="calc-simple-dot"></span>
+              <span>Commission Calculator</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/category-groups.js"></script>
+</body>
+</html>

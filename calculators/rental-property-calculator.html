@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rental Property Calculator - CalcBundle</title>
+<meta name="description" content="Estimate cash flow, cap rate, cash-on-cash return, and IRR for a rental property investment over your full holding period.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Rental Property Calculator</span>
+    </div>
+    <h1>Rental Property Calculator</h1>
+    <p>Estimate cash flow, cap rate, cash-on-cash return, and IRR for a rental property — year by year, over your full holding period.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="rp-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="subsection-title" style="margin-top:0;">Purchase</div>
+          <div class="field-group">
+            <label for="rp-price">Purchase Price</label>
+            <input type="number" id="rp-price" value="200000" min="0" step="1000">
+          </div>
+          <div class="field-group">
+            <label>Use Loan?</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:20px;"><input type="radio" name="rp-use-loan" value="yes" checked>Yes</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="rp-use-loan" value="no">No</label>
+          </div>
+          <div id="rp-loan-fields">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="rp-down">Down Payment (%)</label>
+                <input type="number" id="rp-down" value="20" min="0" step="0.5">
+              </div>
+              <div class="field-group">
+                <label for="rp-rate">Interest Rate (%)</label>
+                <input type="number" id="rp-rate" value="6" min="0" step="0.01">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="rp-loan-term">Loan Term (years)</label>
+              <input type="number" id="rp-loan-term" value="30" min="1" step="1">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="rp-closing">Closing Cost ($)</label>
+            <input type="number" id="rp-closing" value="6000" min="0" step="100">
+          </div>
+          <div class="field-group">
+            <label>Need Repairs?</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:20px;"><input type="radio" name="rp-need-repairs" value="yes">Yes</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="rp-need-repairs" value="no" checked>No</label>
+          </div>
+          <div id="rp-repair-fields" hidden>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="rp-repair-cost">Repair Cost ($)</label>
+                <input type="number" id="rp-repair-cost" value="20000" min="0" step="500">
+              </div>
+              <div class="field-group">
+                <label for="rp-arv">After-repair Value ($)</label>
+                <input type="number" id="rp-arv" value="260000" min="0" step="1000">
+              </div>
+            </div>
+          </div>
+
+          <div class="subsection-title">Recurring Operating Expenses</div>
+          <div class="field-row">
+            <div class="field-group"><label for="rp-tax">Property Tax ($/yr)</label><input type="number" id="rp-tax" value="3000" min="0" step="50"></div>
+            <div class="field-group"><label for="rp-tax-inc">Annual Increase (%)</label><input type="number" id="rp-tax-inc" value="3" min="0" step="0.1"></div>
+          </div>
+          <div class="field-row">
+            <div class="field-group"><label for="rp-ins">Total Insurance ($/yr)</label><input type="number" id="rp-ins" value="1200" min="0" step="50"></div>
+            <div class="field-group"><label for="rp-ins-inc">Annual Increase (%)</label><input type="number" id="rp-ins-inc" value="3" min="0" step="0.1"></div>
+          </div>
+          <div class="field-row">
+            <div class="field-group"><label for="rp-hoa">HOA Fee ($/yr)</label><input type="number" id="rp-hoa" value="0" min="0" step="50"></div>
+            <div class="field-group"><label for="rp-hoa-inc">Annual Increase (%)</label><input type="number" id="rp-hoa-inc" value="3" min="0" step="0.1"></div>
+          </div>
+          <div class="field-row">
+            <div class="field-group"><label for="rp-maint">Maintenance ($/yr)</label><input type="number" id="rp-maint" value="2000" min="0" step="50"></div>
+            <div class="field-group"><label for="rp-maint-inc">Annual Increase (%)</label><input type="number" id="rp-maint-inc" value="3" min="0" step="0.1"></div>
+          </div>
+          <div class="field-row">
+            <div class="field-group"><label for="rp-other">Other Costs ($/yr)</label><input type="number" id="rp-other" value="500" min="0" step="50"></div>
+            <div class="field-group"><label for="rp-other-inc">Annual Increase (%)</label><input type="number" id="rp-other-inc" value="3" min="0" step="0.1"></div>
+          </div>
+
+          <div class="subsection-title">Income</div>
+          <div class="field-row">
+            <div class="field-group"><label for="rp-rent">Monthly Rent ($)</label><input type="number" id="rp-rent" value="2000" min="0" step="50"></div>
+            <div class="field-group"><label for="rp-rent-inc">Annual Increase (%)</label><input type="number" id="rp-rent-inc" value="3" min="0" step="0.1"></div>
+          </div>
+          <div class="field-row">
+            <div class="field-group"><label for="rp-other-income">Other Monthly Income ($)</label><input type="number" id="rp-other-income" value="0" min="0" step="50"></div>
+            <div class="field-group"><label for="rp-other-income-inc">Annual Increase (%)</label><input type="number" id="rp-other-income-inc" value="3" min="0" step="0.1"></div>
+          </div>
+          <div class="field-row">
+            <div class="field-group"><label for="rp-vacancy">Vacancy Rate (%)</label><input type="number" id="rp-vacancy" value="5" min="0" step="0.5"></div>
+            <div class="field-group"><label for="rp-management">Management Fee (%)</label><input type="number" id="rp-management" value="0" min="0" step="0.5"></div>
+          </div>
+
+          <div class="subsection-title">Sell</div>
+          <div class="field-group">
+            <label>Do You Know the Sell Price?</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:20px;"><input type="radio" name="rp-know-sell" value="yes">Yes</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="rp-know-sell" value="no" checked>No</label>
+          </div>
+          <div id="rp-sell-price-field" hidden>
+            <div class="field-group">
+              <label for="rp-sell-price">Sell Price ($)</label>
+              <input type="number" id="rp-sell-price" value="400000" min="0" step="1000">
+            </div>
+          </div>
+          <div id="rp-appreciation-field">
+            <div class="field-group">
+              <label for="rp-appreciation">Value Appreciation (%/yr)</label>
+              <input type="number" id="rp-appreciation" value="3" min="0" step="0.1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rp-holding">Holding Length (years)</label>
+              <input type="number" id="rp-holding" value="20" min="1" step="1">
+            </div>
+            <div class="field-group">
+              <label for="rp-sell-cost">Cost to Sell (%)</label>
+              <input type="number" id="rp-sell-cost" value="8" min="0" step="0.5">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="rp-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">The three numbers that actually matter</h2>
+      <p>A rental property's performance boils down to three related but distinct measures. <strong>Cap rate</strong> asks how the property performs on its own, ignoring financing entirely — net operating income divided by purchase price. <strong>Cash-on-cash return</strong> asks how your actual cash is performing, dividing the cash that lands in your pocket by the cash you put in. <strong>IRR</strong> ties it all together — the annualized return across the entire holding period, including the lump sum you'd receive from eventually selling.</p>
+
+      <h2>Why NOI excludes the mortgage</h2>
+      <p>Net operating income deliberately leaves financing out of the picture. Two investors could buy the identical property — one with cash, one with a large loan — and NOI would be the same for both, because NOI measures how the property itself performs, not how any particular buyer chose to pay for it. That's what makes it useful for comparing different properties on equal footing, regardless of financing.</p>
+      <div class="callout">Cash flow, on the other hand, is what's left after the mortgage payment — which is why a property with a great cap rate can still have thin or negative cash flow if it's financed aggressively.</div>
+
+      <h2>Why the early years often show a negative or low return</h2>
+      <p>Selling a property costs money — typically several percent of the sale price in agent commissions and closing costs — and a mortgage balance shrinks slowly in its early years. Sell too soon after buying, and those selling costs plus the still-large loan balance can outweigh both the equity built and the cash collected so far, producing a negative early return that gradually improves the longer the property is held.</p>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What's a "good" cap rate?</h3>
+        <p>It varies heavily by market and property type — a stable, low-risk market often has lower cap rates, while a higher-risk or less liquid market demands a higher one to compensate. There's no universal target; what matters is comparing it against similar properties in the same area.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does cash-on-cash return look so much higher than the cap rate?</h3>
+        <p>Leverage. Financing most of the purchase with a loan means your cash investment is only a fraction of the property's price, so the same dollar of cash flow represents a much larger percentage return on that smaller amount of cash.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the management fee apply even if I self-manage?</h3>
+        <p>Only if you choose to model one — leaving it at 0% assumes you're handling tenant management, maintenance coordination, and administration yourself rather than paying a property manager.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens if I hold longer than the mortgage term?</h3>
+        <p>Once the loan is paid off, the mortgage payment drops out of the cash flow calculation entirely — cash flow jumps because you're only covering operating expenses on a property you now own outright.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="house-affordability-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>House Affordability Calculator</h3>
+        <p>Estimate how much home you can reasonably afford based on income and debts.</p>
+      </a>
+
+      <a class="calc-list-card" href="rent-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Rent Calculator</h3>
+        <p>Work out what rent fits comfortably within your monthly budget.</p>
+      </a>
+
+      <a class="calc-list-card" href="refinance-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Refinance Calculator</h3>
+        <p>Compare your current mortgage against a refinanced one to see if it's worth switching.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Average Return Calculator</h3>
+        <p>Work out the average annual return across a series of investment gains and losses.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>IRR Calculator</h3>
+        <p>Solve for the internal rate of return on a series of cash flows.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Rent vs. Buy Calculator</h3>
+        <p>Compare the long-term cost of renting against buying a home.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/rental-property-calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interest Rate Calculator - CalcBundle</title>
+<meta name="description" content="Work out the real interest rate on a fixed-term loan when you only know the loan amount, term, and monthly payment.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Interest Rate Calculator</span>
+    </div>
+    <h1>Interest Rate Calculator</h1>
+    <p>Work out the real interest rate on a fixed-term loan when a dealer or lender only gives you the monthly payment and total price — not the rate itself.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="ir-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="ir-amount">Loan Amount</label>
+            <input type="number" id="ir-amount" value="32000" min="0" step="500">
+          </div>
+          <div class="field-group">
+            <label>Loan Term</label>
+            <div class="date-row">
+              <input type="number" id="ir-term-years" value="3" min="0" step="1" style="flex:1;">
+              <span class="from-label" style="align-self:center;">years</span>
+              <input type="number" id="ir-term-months" value="0" min="0" max="11" step="1" style="flex:1;">
+              <span class="from-label" style="align-self:center;">months</span>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="ir-payment">Monthly Payment</label>
+            <input type="number" id="ir-payment" value="960" min="0" step="10">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="ir-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why the rate isn't always disclosed upfront</h2>
+      <p>Some lenders and dealers structure an offer entirely around the monthly payment and total price, without stating the interest rate directly — sometimes just for simplicity, sometimes because a payment-focused pitch is easier to sell than a rate-focused one. Either way, the rate is fully determined by the loan amount, term, and payment; it's just a matter of solving for it instead of being told it outright.</p>
+
+      <h2>Why this matters for comparing offers</h2>
+      <p>A monthly payment alone can't tell you whether a deal is good — a lower payment stretched over a longer term can hide a worse rate. Working out the actual rate lets you compare two offers on equal footing, the same way APR lets you compare loans with different fee structures.</p>
+      <div class="callout">This calculator assumes a standard, fully-amortizing loan with equal monthly payments and no fees. If the loan includes points, origination fees, or other upfront costs, the APR Calculator is the more accurate tool for finding the true cost.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What if my monthly payment doesn't fully pay off the loan?</h3>
+        <p>Then there's no finite positive interest rate that fits — the payment has to be large enough to eventually retire the full loan amount within the given term for a rate to exist.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this work for any type of loan?</h3>
+        <p>Yes, as long as it's a standard fixed-rate, fixed-term loan with equal monthly payments — auto loans, personal loans, and most installment loans all fit this pattern.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="apr-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>APR Calculator</h3>
+        <p>Convert a loan's rate and fees into one comparable annual percentage rate.</p>
+      </a>
+
+      <a class="calc-list-card" href="auto-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Estimate car payments including taxes, fees, and trade-in value.</p>
+      </a>
+
+      <a class="calc-list-card" href="compound-interest-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Compound Interest Calculator</h3>
+        <p>Calculate how savings grow when interest compounds over time.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/interest-rate-calculator.js"></script>
+</body>
+</html>

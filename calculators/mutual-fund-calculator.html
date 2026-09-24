@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mutual Fund Calculator - CalcBundle</title>
+<meta name="description" content="Estimate the ending value and net return of a mutual fund investment after sales charges and operating expenses, including the net IRR after fees.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Mutual Fund Calculator</span>
+    </div>
+    <h1>Mutual Fund Calculator</h1>
+    <p>Estimate the ending value and net return of a mutual fund investment after sales charges and operating expenses — including the net IRR after fees.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="mf-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="mf-initial">Initial Investment</label>
+            <input type="number" id="mf-initial" value="20000" min="0" step="500">
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mf-annual">Annual Contribution</label>
+              <input type="number" id="mf-annual" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="mf-monthly">Monthly Contribution</label>
+              <input type="number" id="mf-monthly" value="1000" min="0" step="50">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="mf-return">Rate of Return (%/yr)</label>
+            <input type="number" id="mf-return" value="5" step="0.01">
+          </div>
+          <div class="field-group">
+            <label>Holding Length</label>
+            <div class="date-row">
+              <input type="number" id="mf-years" value="5" min="0" step="1" style="flex:1;">
+              <span class="from-label" style="align-self:center;">years</span>
+              <input type="number" id="mf-months" value="0" min="0" max="11" step="1" style="flex:1;">
+              <span class="from-label" style="align-self:center;">months</span>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mf-sales-charge">Sales Charge (%)</label>
+              <input type="number" id="mf-sales-charge" value="2" min="0" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="mf-defer-charge">Deferred Sales Charge (%)</label>
+              <input type="number" id="mf-defer-charge" value="0" min="0" step="0.1">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="mf-operating">Operating Expenses (%/yr)</label>
+            <input type="number" id="mf-operating" value="0.5" min="0" step="0.05">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="mf-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Two very different kinds of fees</h2>
+      <p>A sales charge (or "load") is a one-time toll on your way in — a percentage skimmed off every dollar you contribute before it's ever invested. Operating expenses are the opposite: a small, continuous drag on the fund's return, charged as a percentage of assets every year for as long as you hold the fund. A small operating expense ratio compounds into real money over a long holding period, the same way a small extra payment compounds savings — just working against you instead of for you.</p>
+
+      <h2>Why "Net IRR" matters more than the stated return</h2>
+      <p>The rate of return you enter is the fund's gross performance — what it earned before any fees came out. Net IRR answers the question that actually matters to you: given what you actually put in (after sales charges) and what you actually got back, what annualized return did you really earn? It's often meaningfully lower than the headline return rate, especially over shorter holding periods where the upfront sales charge hasn't had time to be diluted by growth.</p>
+      <div class="callout">Front-load sales charges hurt more the shorter you hold a fund, since there's less time for growth to outweigh that one-time hit. Funds you plan to hold for decades are far more sensitive to the ongoing operating expense ratio than to the upfront load.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What's a deferred sales charge?</h3>
+        <p>Also called a back-end load, it's a fee charged when you sell or withdraw rather than when you invest — often designed to decline the longer you hold the fund, to discourage early redemption.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are no-load funds always better?</h3>
+        <p>They avoid the upfront sales charge, but it's worth checking the operating expense ratio too — a no-load fund with high ongoing expenses can still cost more over a long holding period than a load fund with a rock-bottom expense ratio.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the operating expense dollar figure grow faster than a flat percentage suggests?</h3>
+        <p>Because it's charged against the fund's balance every year, and that balance is growing — the same compounding that helps your returns also compounds the dollar cost of a fixed percentage fee.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="investment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </a>
+
+      <a class="calc-list-card" href="bond-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Bond Calculator</h3>
+        <p>Solve for a bond's price, yield, face value, coupon, or maturity.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>IRR Calculator</h3>
+        <p>Solve for the internal rate of return on a series of cash flows.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/mutual-fund-calculator.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+.payoff-panel-title {
+  font-size: 20px;
+  margin: 0 0 4px;
+}
+.payoff-panel-sub {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0 0 20px;
+}
+.payoff-panel + .payoff-panel {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 2px solid var(--border);
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.radio-option input { width: 16px; height: 16px; flex-shrink: 0; }
+
+.extra-fields-indent {
+  margin: 4px 0 14px 24px;
+  padding-left: 16px;
+  border-left: 2px solid var(--border);
+}
+
+.headline-sub {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 8px 0 20px;
+  line-height: 1.5;
+}
+
+.savings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.savings-item {
+  background: var(--accent-tint);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  text-align: center;
+}
+.savings-item .savings-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+.savings-item .savings-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .savings-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance Calculator - CalcBundle</title>
+<meta name="description" content="Solve for present value, future value, interest rate, number of periods, or payment in the standard 5-key time-value-of-money equation.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Finance Calculator</span>
+    </div>
+    <h1>Finance Calculator</h1>
+    <p>Solve for present value, future value, rate, term, or payment — the same five-key time-value-of-money tool used by financial calculators like the BA II Plus or HP 12C.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="fin-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Solve For</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="fin-tab" value="FV" checked>FV</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="fin-tab" value="PMT">PMT</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="fin-tab" value="IY">I/Y</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="fin-tab" value="N">N</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="fin-tab" value="PV">PV</label>
+          </div>
+
+          <div class="field-group" id="fin-n-field">
+            <label for="fin-n">N (# of Periods)</label>
+            <input type="number" id="fin-n" value="10" step="1">
+          </div>
+          <div class="field-group" id="fin-iy-field">
+            <label for="fin-iy">I/Y (Interest per Year, %)</label>
+            <input type="number" id="fin-iy" value="6" step="0.01">
+          </div>
+          <div class="field-group" id="fin-pv-field">
+            <label for="fin-pv">PV (Present Value)</label>
+            <input type="number" id="fin-pv" value="20000" step="100">
+          </div>
+          <div class="field-group" id="fin-pmt-field">
+            <label for="fin-pmt">PMT (Periodic Payment)</label>
+            <input type="number" id="fin-pmt" value="-2000" step="100">
+          </div>
+          <div class="field-group" id="fin-fv-field" hidden>
+            <label for="fin-fv">FV (Future Value)</label>
+            <input type="number" id="fin-fv" value="0" step="100">
+          </div>
+
+          <div class="subsection-title">Settings</div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="fin-py">P/Y (Periods per Year)</label>
+              <input type="number" id="fin-py" value="1" min="1" step="1">
+            </div>
+            <div class="field-group">
+              <label for="fin-cy">C/Y (Compounds per Year)</label>
+              <input type="number" id="fin-cy" value="1" min="1" step="1">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="fin-due">PMT Made at the</label>
+            <select id="fin-due">
+              <option value="end" selected>End of Each Period</option>
+              <option value="begin">Beginning of Each Period</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="fin-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="fin-results-section" hidden>
+      <h2 style="margin:0 0 16px;font-size:18px;">Value Changes Over Time</h2>
+      <div class="line-chart-wrap">
+        <div id="fin-chart-wrap"></div>
+        <div class="chart-legend">
+          <span><span class="legend-dot" style="background:var(--accent)"></span> PV</span>
+          <span><span class="legend-dot" style="background:#dc2626"></span> FV</span>
+          <span><span class="legend-dot" style="background:#f59e0b"></span> Sum of PMT</span>
+          <span><span class="legend-dot" style="background:#10b981"></span> Accumulated Interest</span>
+        </div>
+      </div>
+      <div class="schedule-table-wrap">
+        <div id="fin-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Five numbers, one equation</h2>
+      <p>Every compound-interest situation — a loan, a savings account, a bond, a retirement account — is really the same equation wearing a different outfit. It relates five quantities: how much you start with (PV), what you add or withdraw each period (PMT), how many periods pass (N), the interest rate (I/Y), and what you end up with (FV). Know any four, and the fifth is fully determined — that's the whole idea behind this calculator's five tabs.</p>
+
+      <h2>Why the sign convention matters</h2>
+      <p>Cash flowing toward you is positive; cash flowing away from you is negative. A savings deposit is a positive PV (money you have) with negative PMTs (money you keep adding) building toward a positive FV (money you'll have later). A loan flips this: positive PV (money the bank gives you) with positive PMTs you pay back, heading toward zero. Getting the signs right is the difference between a sensible answer and a confusing one.</p>
+      <div class="callout">P/Y and C/Y only need to differ when a rate compounds on a different schedule than payments are made — for example, a rate that compounds daily but is paid off monthly. When both happen on the same schedule (the overwhelming majority of real cases), leave both at the same value.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why is my answer negative?</h3>
+        <p>That's the sign convention at work, not an error — a negative result usually just means that value flows in the opposite direction from the ones you entered as positive.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What's the difference between "beginning" and "end" of period payments?</h3>
+        <p>It changes how many periods each payment has to earn interest. A payment made at the start of a period earns interest for that whole period; one made at the end doesn't start earning until the next period begins — which is why annuities-due (beginning-of-period) always produce a slightly larger future value than ordinary annuities (end-of-period), all else equal.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why would I ever need to solve for N or I/Y?</h3>
+        <p>Solving for N answers "how long until I reach my goal?" Solving for I/Y answers "what rate of return am I actually getting?" — both common questions once you already know your starting amount, contributions, and target.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="amortization-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Amortization Calculator</h3>
+        <p>Break a loan down into its full principal-and-interest payment schedule.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Interest Calculator</h3>
+        <p>See how simple interest builds up on a balance over time.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/finance-calculator.js"></script>
+</body>
+</html>

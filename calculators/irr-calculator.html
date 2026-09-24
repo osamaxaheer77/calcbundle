@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRR Calculator - CalcBundle</title>
+<meta name="description" content="Solve for the internal rate of return on a fixed recurring cash flow, or on a series of irregular annual cash flows.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">IRR Calculator</span>
+    </div>
+    <h1>IRR Calculator</h1>
+    <p>Solve for the internal rate of return — the discount rate at which an investment's cash flows net to zero — on a fixed recurring cash flow, or a series of irregular annual cash flows.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">IRR Based on Fixed Cash Flow</h2>
+      <p class="payoff-panel-sub">Computes the IRR for an investment with a fixed recurring deposit or withdrawal (or none at all).</p>
+
+      <form id="irr1-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="irr1-initial">Initial Investment</label>
+              <input type="number" id="irr1-initial" value="10000" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label>Holding</label>
+              <div class="date-row">
+                <input type="number" id="irr1-years" value="2" min="0" step="1" style="flex:1;">
+                <span class="from-label" style="align-self:center;">years</span>
+                <input type="number" id="irr1-months" value="6" min="0" max="11" step="1" style="flex:1;">
+                <span class="from-label" style="align-self:center;">months</span>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="irr1-ending">Ending Balance</label>
+              <input type="number" id="irr1-ending" value="15000" min="0" step="100">
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="irr1-amount">Recurring Amount</label>
+                <input type="number" id="irr1-amount" value="100" min="0" step="10">
+              </div>
+              <div class="field-group">
+                <label for="irr1-activity">Activity</label>
+                <select id="irr1-activity">
+                  <option value="withdraw" selected>Withdraw</option>
+                  <option value="deposit">Deposit</option>
+                </select>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="irr1-frequency">Frequency</label>
+                <select id="irr1-frequency">
+                  <option value="a">Annually</option>
+                  <option value="s">Semiannually</option>
+                  <option value="q">Quarterly</option>
+                  <option value="m" selected>Monthly</option>
+                  <option value="sm">Semimonthly</option>
+                  <option value="bw">Biweekly</option>
+                  <option value="w">Weekly</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="irr1-timing">Timing</label>
+                <select id="irr1-timing">
+                  <option value="begin">Beginning of Period</option>
+                  <option value="end" selected>End of Period</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="irr1-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">IRR Based on Irregular Cash Flow</h2>
+      <p class="payoff-panel-sub">Computes the IRR from an initial investment and a series of different annual cash flows.</p>
+
+      <form id="irr2-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="irr2-initial">Initial Investment</label>
+              <input type="number" id="irr2-initial" value="50000" min="0" step="500">
+            </div>
+            <div class="subsection-title" style="margin-top:0;">Cash Flow</div>
+            <div id="irr2-rows"></div>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="irr2-result"></div>
+        </div>
+      </form>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What IRR is actually answering</h2>
+      <p>IRR is the single, constant discount rate that makes an investment's entire stream of cash flows — money going out, money coming back — net to exactly zero in present-value terms. It's the same conceptual question every investment ultimately asks: what rate of return am I actually earning, given what I put in and what I got back, and when each of those happened?</p>
+
+      <h2>Why negative cash flows can appear mid-investment</h2>
+      <p>Real investments don't always follow a simple "money in once, money out once" pattern. A rental property might need a mid-life capital repair; a business might require a follow-on investment round. Each of these later outflows counts against the investment just like the initial one — IRR treats every dollar the same regardless of when it left your pocket.</p>
+      <div class="callout">IRR and "gross return" (total profit divided by total invested) answer different questions. Gross return ignores timing entirely — a 20% gain over 1 year and a 20% gain over 10 years look identical. IRR annualizes the result, so the same 20% gain earned faster always shows a higher IRR.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Which calculator should I use?</h3>
+        <p>Use the first if your cash flows are a regular deposit or withdrawal at a fixed frequency (like a monthly distribution). Use the second if your cash flows vary year to year, as with a lumpy annual payout or an uneven series of returns.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can IRR be negative?</h3>
+        <p>Yes — a negative IRR simply means the investment returned less than what was put in, once time value of money is accounted for.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is a higher IRR always a better investment?</h3>
+        <p>Generally, but IRR alone doesn't capture risk, scale (a huge IRR on a tiny investment may be less valuable in absolute dollars than a modest IRR on a large one), or how realistic the assumed cash flows actually are.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="average-return-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Average Return Calculator</h3>
+        <p>Work out the average annual return across a series of investment gains and losses.</p>
+      </a>
+
+      <a class="calc-list-card" href="rental-property-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Rental Property Calculator</h3>
+        <p>Estimate cash flow and return on investment for a rental property.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>ROI Calculator</h3>
+        <p>Calculate the simple return on investment for a purchase or project.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/irr-calculator.js"></script>
+</body>
+</html>

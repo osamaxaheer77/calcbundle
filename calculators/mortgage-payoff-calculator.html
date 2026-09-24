@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mortgage Payoff Calculator - CalcBundle</title>
+<meta name="description" content="See how much you'd save by paying off your mortgage early — with a lump sum, extra payments, or biweekly billing — whether or not you know your remaining loan term.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Mortgage Payoff Calculator</span>
+    </div>
+    <h1>Mortgage Payoff Calculator</h1>
+    <p>See how much time and interest you could save by paying off your mortgage early — with a lump sum, extra payments, or biweekly billing.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">If You Know the Remaining Loan Term</h2>
+      <p class="payoff-panel-sub">Use this if you have the original loan details — good for a loan that's never had extra payments applied.</p>
+
+      <form id="p1-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="p1-loan-amount">Original Loan Amount</label>
+              <input type="number" id="p1-loan-amount" value="400000" min="0" step="1000">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="p1-loan-term">Original Loan Term (years)</label>
+                <input type="number" id="p1-loan-term" value="30" min="1" step="1">
+              </div>
+              <div class="field-group">
+                <label for="p1-interest-rate">Interest Rate (%)</label>
+                <input type="number" id="p1-interest-rate" value="6" min="0" step="0.01">
+              </div>
+            </div>
+            <div class="field-group">
+              <label>Remaining Term</label>
+              <div class="date-row">
+                <input type="number" id="p1-remaining-years" value="25" min="0" step="1" style="flex:1;">
+                <span class="from-label" style="align-self:center;">years</span>
+                <input type="number" id="p1-remaining-months" value="0" min="0" max="11" step="1" style="flex:1;">
+                <span class="from-label" style="align-self:center;">months</span>
+              </div>
+            </div>
+
+            <div class="subsection-title" style="margin-top:20px;">Repayment Options</div>
+            <label class="radio-option"><input type="radio" name="p1-mode" id="p1-mode-altogether" value="altogether">Payback altogether</label>
+            <label class="radio-option"><input type="radio" name="p1-mode" id="p1-mode-extra" value="extra" checked>Repayment with extra payments</label>
+            <div id="p1-extra-fields" class="extra-fields-indent">
+              <div class="field-group">
+                <label for="p1-extra-monthly">Extra Monthly Pay ($)</label>
+                <input type="number" id="p1-extra-monthly" value="500" min="0" step="10">
+              </div>
+              <div class="field-group">
+                <label for="p1-extra-yearly">Extra Yearly Pay ($)</label>
+                <input type="number" id="p1-extra-yearly" value="0" min="0" step="10">
+              </div>
+              <div class="field-group">
+                <label for="p1-extra-onetime">Extra One-time Pay ($)</label>
+                <input type="number" id="p1-extra-onetime" value="0" min="0" step="10">
+              </div>
+            </div>
+            <label class="radio-option"><input type="radio" name="p1-mode" id="p1-mode-biweekly" value="biweekly">Biweekly repayment</label>
+            <label class="radio-option"><input type="radio" name="p1-mode" id="p1-mode-normal" value="normal">Normal repayment</label>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="p1-result">
+            <div class="tool-result-slot"></div>
+            <div id="p1-results" hidden>
+              <div class="summary-payment-box">
+                <div class="label" id="p1-headline-label">Payoff In</div>
+                <div class="value" id="p1-headline-value">$0</div>
+              </div>
+              <p class="headline-sub" id="p1-headline-sub"></p>
+              <div class="savings-grid" id="p1-savings-box" hidden>
+                <div class="savings-item">
+                  <div class="savings-label">Interest Savings</div>
+                  <div class="savings-value" id="p1-savings-interest">$0</div>
+                </div>
+                <div class="savings-item">
+                  <div class="savings-label">Time Savings</div>
+                  <div class="savings-value" id="p1-savings-time">0</div>
+                </div>
+              </div>
+              <div id="p1-compare-table"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="schedule-card" id="p1-schedule-section" hidden>
+        <div class="schedule-header">
+          <h2 style="margin:0;font-size:18px;">Amortization Schedule (With Payoff Plan)</h2>
+          <div class="schedule-toggle-group">
+            <button type="button" id="p1-schedule-annual" class="active">Annual</button>
+            <button type="button" id="p1-schedule-monthly">Monthly</button>
+          </div>
+        </div>
+        <div class="line-chart-wrap">
+          <div id="p1-chart-wrap"></div>
+          <div class="chart-legend">
+            <span><span class="legend-dot" style="background:var(--accent)"></span> New Balance</span>
+            <span><span class="legend-dot" style="background:#10b981"></span> New Cumulative Interest</span>
+            <span><span class="legend-dot" style="background:#94a3b8"></span> Original Balance</span>
+            <span><span class="legend-dot" style="background:#dc2626"></span> Original Cumulative Interest</span>
+          </div>
+        </div>
+        <div class="schedule-table-wrap">
+          <div id="p1-schedule-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="payoff-panel">
+      <h2 class="payoff-panel-title">If You Don't Know the Remaining Loan Term</h2>
+      <p class="payoff-panel-sub">Use this if you only know what's on your current statement — the unpaid balance, monthly payment, and rate.</p>
+
+      <form id="p2-form">
+        <div class="mortgage-layout">
+          <div class="mortgage-form-card">
+            <div class="field-group">
+              <label for="p2-balance">Unpaid Principal Balance</label>
+              <input type="number" id="p2-balance" value="230000" min="0" step="1000">
+            </div>
+            <div class="field-group">
+              <label for="p2-payment">Monthly Payment</label>
+              <input type="number" id="p2-payment" value="1500" min="0" step="10">
+            </div>
+            <div class="field-group">
+              <label for="p2-interest-rate">Interest Rate (%)</label>
+              <input type="number" id="p2-interest-rate" value="6" min="0" step="0.01">
+            </div>
+
+            <div class="subsection-title" style="margin-top:20px;">Repayment Options</div>
+            <label class="radio-option"><input type="radio" name="p2-mode" id="p2-mode-altogether" value="altogether">Payback altogether</label>
+            <label class="radio-option"><input type="radio" name="p2-mode" id="p2-mode-extra" value="extra" checked>Repayment with extra payments</label>
+            <div id="p2-extra-fields" class="extra-fields-indent">
+              <div class="field-group">
+                <label for="p2-extra-monthly">Extra Monthly Pay ($)</label>
+                <input type="number" id="p2-extra-monthly" value="500" min="0" step="10">
+              </div>
+              <div class="field-group">
+                <label for="p2-extra-yearly">Extra Yearly Pay ($)</label>
+                <input type="number" id="p2-extra-yearly" value="0" min="0" step="10">
+              </div>
+              <div class="field-group">
+                <label for="p2-extra-onetime">Extra One-time Pay ($)</label>
+                <input type="number" id="p2-extra-onetime" value="0" min="0" step="10">
+              </div>
+            </div>
+            <label class="radio-option"><input type="radio" name="p2-mode" id="p2-mode-biweekly" value="biweekly">Biweekly repayment</label>
+            <label class="radio-option"><input type="radio" name="p2-mode" id="p2-mode-normal" value="normal">Normal repayment</label>
+
+            <button type="submit" class="calc-submit-btn">Calculate</button>
+          </div>
+
+          <div class="mortgage-results-card" id="p2-result">
+            <div class="tool-result-slot"></div>
+            <div id="p2-results" hidden>
+              <div class="summary-payment-box">
+                <div class="label" id="p2-headline-label">Payoff In</div>
+                <div class="value" id="p2-headline-value">$0</div>
+              </div>
+              <p class="headline-sub" id="p2-headline-sub"></p>
+              <div class="savings-grid" id="p2-savings-box" hidden>
+                <div class="savings-item">
+                  <div class="savings-label">Interest Savings</div>
+                  <div class="savings-value" id="p2-savings-interest">$0</div>
+                </div>
+                <div class="savings-item">
+                  <div class="savings-label">Time Savings</div>
+                  <div class="savings-value" id="p2-savings-time">0</div>
+                </div>
+              </div>
+              <div id="p2-compare-table"></div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="schedule-card" id="p2-schedule-section" hidden>
+        <div class="schedule-header">
+          <h2 style="margin:0;font-size:18px;">Amortization Schedule (With Payoff Plan)</h2>
+          <div class="schedule-toggle-group">
+            <button type="button" id="p2-schedule-annual" class="active">Annual</button>
+            <button type="button" id="p2-schedule-monthly">Monthly</button>
+          </div>
+        </div>
+        <div class="line-chart-wrap">
+          <div id="p2-chart-wrap"></div>
+          <div class="chart-legend">
+            <span><span class="legend-dot" style="background:var(--accent)"></span> New Balance</span>
+            <span><span class="legend-dot" style="background:#10b981"></span> New Cumulative Interest</span>
+            <span><span class="legend-dot" style="background:#94a3b8"></span> Original Balance</span>
+            <span><span class="legend-dot" style="background:#dc2626"></span> Original Cumulative Interest</span>
+          </div>
+        </div>
+        <div class="schedule-table-wrap">
+          <div id="p2-schedule-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why paying off a mortgage early actually saves money</h2>
+      <p>Every extra dollar you send toward a mortgage goes straight to principal, skipping the interest that would otherwise accrue on it for every remaining month of the loan. Pay down $10,000 early in a 25-year loan, and you're not just erasing $10,000 of debt — you're erasing every interest charge that $10,000 would have generated over the next 25 years. That's why a relatively small, sustained extra payment can shave years off a mortgage and tens of thousands off the total interest bill.</p>
+
+      <h2>Lump sum, recurring extra, or biweekly — which actually helps more?</h2>
+      <p>A one-time lump sum reduces the balance once, on the date you pay it — useful after a bonus or inheritance. A recurring extra payment compounds that effect every single month it's active, which is why a modest $100–$500/month addition often outperforms a single larger lump sum paid years into the loan. Biweekly billing is really a recurring extra payment in disguise: paying half your monthly payment every two weeks works out to 26 half-payments a year, which is 13 full monthly payments instead of 12 — one extra payment snuck in annually without feeling like a separate expense.</p>
+      <div class="callout">Paying off a loan altogether today avoids every future interest charge for the remaining term — but it also uses cash that could otherwise be invested. Whether that trade is worth it depends on what your money could otherwise earn versus the loan's interest rate.</div>
+
+      <h2>Why we ask for the remaining term two different ways</h2>
+      <p>Some borrowers have their original loan paperwork handy and know exactly how many years are left. Others only have a recent statement, which lists the unpaid balance and payment but not a clean "years remaining" figure. Both are the same math underneath — a fixed balance being paid down at a fixed rate — so this calculator supports either starting point without forcing you to dig up documents you don't have.</p>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Does paying extra lower my required monthly payment?</h3>
+        <p>No. Your scheduled payment stays the same; what changes is how quickly the balance disappears, which shortens the loan and cuts the total interest.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is it ever better not to pay off a mortgage early?</h3>
+        <p>Sometimes — if the loan's interest rate is lower than what you could reasonably earn investing that money elsewhere, or if you'd rather keep the cash as a safety net, paying the minimum and investing the difference can come out ahead financially, even though the mortgage costs more interest in isolation.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I check for a prepayment penalty first?</h3>
+        <p>Yes — some loans charge a fee for paying off early or making large extra payments. It's worth confirming with your lender before committing to an aggressive payoff plan, since a penalty can offset some of the interest savings.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the "payback altogether" option show less total interest than the original schedule?</h3>
+        <p>Because it stops interest from accruing the moment you pay off the balance — every month of interest the original schedule would have charged from today forward simply never happens.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the biweekly estimate exact?</h3>
+        <p>It's a close approximation. True biweekly billing accrues interest every two weeks instead of monthly, which shifts the numbers slightly. We model the main effect — 26 half-payments a year works out to 13 full monthly payments instead of 12 — which is what drives nearly all of the real-world savings.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="amortization-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Amortization Calculator</h3>
+        <p>Break a loan down into its full principal-and-interest payment schedule.</p>
+      </a>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Loan Calculator</h3>
+        <p>Work out payments and total interest for any fixed-term loan.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Estimate car payments including taxes, fees, and trade-in value.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Interest Calculator</h3>
+        <p>See how simple interest builds up on a balance over time.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Payment Calculator</h3>
+        <p>Find the required payment amount for a loan, given its rate and term.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Inflation Calculator</h3>
+        <p>See how inflation reshapes the purchasing power of money over time.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Finance Calculator</h3>
+        <p>Solve for present value, future value, rate, or payment in a financial formula.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Income Tax Calculator</h3>
+        <p>Estimate income tax owed based on earnings and filing status.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Compound Interest Calculator</h3>
+        <p>Calculate how savings grow when interest compounds over time.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Salary Calculator</h3>
+        <p>Convert pay between hourly, monthly, and annual figures.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Interest Rate Calculator</h3>
+        <p>Work out the interest rate implied by a loan or investment.</p>
+      </div>
+
+      <div class="calc-list-card">
+        <span class="tag">Coming soon</span>
+        <h3>Sales Tax Calculator</h3>
+        <p>Add or remove sales tax from a purchase price.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/mortgage-payoff-calculator.js"></script>
+</body>
+</html>

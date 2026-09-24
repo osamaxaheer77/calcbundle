@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Lease Calculator - CalcBundle</title>
+<meta name="description" content="Estimate a monthly car lease payment from the vehicle price, money factor, and residual value — and compare it against buying the same car.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../index.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Auto Lease Calculator</span>
+    </div>
+    <h1>Auto Lease Calculator</h1>
+    <p>Estimate a monthly car lease payment from the vehicle price, money factor, and residual value — and see how it compares to buying the same car.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="lease-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="lease-price">Auto Price</label>
+            <input type="number" id="lease-price" value="50000" min="0" step="500">
+          </div>
+          <div class="field-group">
+            <label for="lease-term">Lease Term (months)</label>
+            <input type="number" id="lease-term" value="36" min="1" step="1">
+          </div>
+
+          <div class="field-group">
+            <label for="lease-rate-mode">Rate Given As</label>
+            <select id="lease-rate-mode">
+              <option value="apr">Interest Rate (%)</option>
+              <option value="mf" selected>Money Factor</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="lease-rate" id="lease-rate-label">Money Factor</label>
+            <input type="number" id="lease-rate" value="0.00208" min="0" step="0.00001">
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="lease-down">Down Payment ($)</label>
+              <input type="number" id="lease-down" value="10000" min="0" step="500">
+            </div>
+            <div class="field-group">
+              <label for="lease-tradein">Trade-in Value ($)</label>
+              <input type="number" id="lease-tradein" value="0" min="0" step="500">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="lease-tax">Sales Tax (%)</label>
+              <input type="number" id="lease-tax" value="7" min="0" step="0.1">
+            </div>
+            <div class="field-group">
+              <label for="lease-residual">Residual Value ($)</label>
+              <input type="number" id="lease-residual" value="24000" min="0" step="500">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="lease-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">A lease payment is really two payments in one</h2>
+      <p>Every lease payment bundles two separate charges. The <strong>depreciation</strong> portion covers the value the car is expected to lose over the lease — the gap between its price today and its residual value when you hand it back. The <strong>interest</strong> portion (called "rent charge" in leasing terms) is the lessor's fee for letting you use their asset, calculated using the money factor instead of a normal interest rate.</p>
+
+      <h2>What a money factor actually is</h2>
+      <p>A money factor is just an interest rate wearing a different costume — multiply it by 2,400 and you get the roughly equivalent APR. Dealers sometimes quote money factors specifically because a number like 0.00208 sounds smaller and less alarming than "4.99% APR," even though they represent the same cost.</p>
+      <div class="callout">Residual value has an outsized effect on a lease payment: a higher residual means less depreciation to pay for during the lease, which is why cars that hold their value well (and get assigned high residuals) tend to lease more cheaply relative to their price than cars that depreciate fast.</div>
+
+      <h2>Why the "same conditions" comparison isn't the whole story</h2>
+      <p>This calculator's purchase comparison assumes identical price, rate, term, and tax treatment for both paths — useful for isolating the leasing-vs-financing math itself. In the real world, leases often carry extra fees (acquisition, disposition, mileage penalties) that purchases don't, and the comparison also ignores that buying leaves you owning an asset outright at the end, while leasing leaves you with nothing unless you exercise a purchase option.</p>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why do leases charge tax differently than purchases?</h3>
+        <p>Many states tax each lease payment as it's made (including the down payment, treated as an upfront payment) rather than taxing the full vehicle price upfront the way a purchase is taxed — this calculator models both mechanisms separately.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is a lower money factor always a better deal?</h3>
+        <p>All else equal, yes — but the residual value and the negotiated price matter just as much. A great money factor on an inflated price, or a low residual that overstates depreciation, can still add up to an expensive lease.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens if I want to keep the car after the lease?</h3>
+        <p>Most leases include a purchase option letting you buy the car for its residual value (plus tax) at lease-end — which is exactly the assumption behind this calculator's "Total Cost to Own After Lease Ends" figure.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="auto-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Estimate car payments including taxes, fees, and trade-in value.</p>
+      </a>
+
+      <a class="calc-list-card" href="cash-back-or-low-interest-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Cash Back or Low Interest Calculator</h3>
+        <p>Compare a cash rebate against a below-market interest rate offer.</p>
+      </a>
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate monthly payments, interest, and payoff timelines for a home loan.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/auto-lease-calculator.js"></script>
+</body>
+</html>
