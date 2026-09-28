@@ -72,6 +72,9 @@ img { display: block; max-width: 100%; }
   align-items: center;
   gap: 32px;
 }
+.nav-links {
+  display: contents;
+}
 .nav a.nav-link {
   position: relative;
   font-size: 14px;
@@ -698,14 +701,15 @@ a.calc-simple-item:hover .calc-simple-dot {
 @media (max-width: 860px) {
   .container { padding: 0 20px; }
   .site-header .container { flex-wrap: wrap; justify-content: flex-start; height: auto; padding-top: 14px; padding-bottom: 14px; gap: 10px 16px; }
-  /* Flatten .nav so its children (links + search box) lay out directly against
-     the logo in the outer flex row. This lets the links sit inline with the
-     logo whenever there's room, wrapping below only when they don't fit —
-     if .nav kept its own box, the search box's width:100% would inflate
-     .nav's own preferred width to always equal the full row, forcing an
-     unnecessary wrap even when the links alone would've fit fine. */
+  /* Flatten .nav so .nav-links and .nav-search lay out directly against the
+     logo in the outer flex row, each sized by its own content — otherwise
+     the search box's width:100% would inflate .nav's own preferred width to
+     always equal the full row, forcing an unnecessary wrap even when the
+     links alone would've fit fine beside the logo. .nav-links stays a real
+     box (not flattened) so the three links wrap to a new row as one group
+     instead of splitting mid-row when they no longer fit beside the logo. */
   .nav { display: contents; }
-  .nav > a:first-child { margin-left: auto; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 10px 16px; justify-content: flex-end; margin-left: auto; }
   .nav-search { width: 100%; }
   .nav-search input { width: auto; flex: 1; }
   .hero h1 { font-size: 26px; }
