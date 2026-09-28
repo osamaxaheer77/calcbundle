@@ -698,8 +698,9 @@ a.calc-simple-item:hover .calc-simple-dot {
 @media (max-width: 860px) {
   .container { padding: 0 20px; }
   .site-header .container { flex-wrap: wrap; height: auto; padding-top: 14px; padding-bottom: 14px; gap: 10px; }
-  .nav { gap: 16px; flex-wrap: wrap; justify-content: flex-end; margin-left: auto; }
-  .nav-search { display: none; }
+  .nav { gap: 10px 16px; flex-wrap: wrap; justify-content: flex-end; width: 100%; }
+  .nav-search { width: 100%; }
+  .nav-search input { width: auto; flex: 1; }
   .hero h1 { font-size: 26px; }
   .page-hero h1 { font-size: 28px; }
   .category-cards { grid-template-columns: 1fr; }
