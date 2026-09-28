@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Macro Calculator - CalcBundle</title>
+<meta name="description" content="Find a daily protein, carb, and fat gram target based on your calorie needs and a diet style.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Macro Calculator</span>
+    </div>
+    <h1>Macro Calculator</h1>
+    <p>Find a daily protein, carb, and fat gram target based on your calorie needs and a diet style.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="macro-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Units</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="macro-unit" value="us" checked>US Units</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="macro-unit" value="metric">Metric Units</label>
+          </div>
+
+          <div class="field-group">
+            <label for="macro-age">Age</label>
+            <input type="number" id="macro-age" value="25" min="15" max="80" step="1">
+          </div>
+
+          <div class="field-group">
+            <label>Gender</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="macro-gender" value="m" checked>Male</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="macro-gender" value="f">Female</label>
+          </div>
+
+          <div id="macro-us-fields">
+            <div class="field-group">
+              <label>Height</label>
+              <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;">
+                  <div class="field-with-toggle"><input type="number" id="macro-ft" value="5" min="0" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">ft</span></div>
+                </div>
+                <div class="field-group" style="margin-bottom:0;">
+                  <div class="field-with-toggle"><input type="number" id="macro-in" value="10" min="0" max="11" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">in</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="macro-lbs">Weight (pounds)</label>
+              <input type="number" id="macro-lbs" value="165" min="0" step="1">
+            </div>
+          </div>
+
+          <div id="macro-metric-fields" hidden>
+            <div class="field-group">
+              <label for="macro-cm">Height (cm)</label>
+              <input type="number" id="macro-cm" value="178" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="macro-kg">Weight (kg)</label>
+              <input type="number" id="macro-kg" value="75" min="0" step="0.1">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="macro-activity">Activity</label>
+            <select id="macro-activity">
+              <option value="1.2">Sedentary: little or no exercise</option>
+              <option value="1.375">Light: exercise 1-3 times/week</option>
+              <option value="1.465" selected>Moderate: exercise 4-5 times/week</option>
+              <option value="1.55">Active: daily exercise or intense exercise 3-4 times/week</option>
+              <option value="1.725">Very Active: intense exercise 6-7 times/week</option>
+              <option value="1.9">Extra Active: very intense exercise daily, or physical job</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="macro-goal">Goal</label>
+            <select id="macro-goal">
+              <option value="1000">Extreme weight gain (2 lb/week)</option>
+              <option value="500">Weight gain (1 lb/week)</option>
+              <option value="250">Mild weight gain (0.5 lb/week)</option>
+              <option value="0" selected>Maintain weight</option>
+              <option value="-250">Mild weight loss (0.5 lb/week)</option>
+              <option value="-500">Weight loss (1 lb/week)</option>
+              <option value="-1000">Extreme weight loss (2 lb/week)</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="macro-diet">Diet Style</label>
+            <select id="macro-diet">
+              <option value="balanced" selected>Balanced (30% / 40% / 30%)</option>
+              <option value="lowfat">Low Fat (30% / 55% / 15%)</option>
+              <option value="lowcarb">Low Carb (40% / 20% / 40%)</option>
+              <option value="highprotein">High Protein (40% / 30% / 30%)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="macro-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the split is calculated</h2>
+      <p>This starts with the same TDEE calculation as our <a href="tdee-calculator.html">TDEE Calculator</a> (BMR &times; activity level), adjusts it for your goal, then splits that calorie target by percentage across protein, carbs, and fat. Protein and carbs provide about 4 calories per gram; fat provides about 9 &mdash; so the same percentage of calories translates to very different gram amounts between fat and the other two.</p>
+
+      <h2>Choosing a diet style</h2>
+      <p>These are common, simple percentage splits, not personalized prescriptions. "Balanced" suits most general goals; "High Protein" supports muscle retention during a calorie deficit or muscle building during a surplus; "Low Carb" and "Low Fat" shift the remaining calories toward one macronutrient over another based on personal preference or specific dietary approaches.</p>
+      <div class="callout">These are general guidelines, not medical advice. Athletes, people managing a medical condition, and anyone on a specialized diet should get individualized guidance from a doctor or registered dietitian.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Which diet style is "best"?</h3>
+        <p>There's no universally best split &mdash; adherence matters more than the exact ratio for most people. Pick a style you can sustain, and adjust based on how your body responds over a few weeks.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why don't the gram amounts add up to exactly the calorie target?</h3>
+        <p>Each gram figure is rounded independently, so the total can be off by a calorie or two from rounding &mdash; not a calculation error.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="tdee-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>TDEE Calculator</h3>
+        <p>Estimate your total daily energy expenditure.</p>
+      </a>
+
+      <a class="calc-list-card" href="calorie-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Calorie Calculator</h3>
+        <p>Estimate daily calorie needs to maintain, lose, or gain weight.</p>
+      </a>
+
+      <a class="calc-list-card" href="body-surface-area-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Body Surface Area Calculator</h3>
+        <p>Calculate body surface area for medical dosing reference.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/macro-calculator.js"></script>
+</body>
+</html>

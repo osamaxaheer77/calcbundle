@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Period Calculator - CalcBundle</title>
+<meta name="description" content="Estimate your next several period dates and most probable ovulation windows from your last period and cycle length.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Period Calculator</span>
+    </div>
+    <h1>Period Calculator</h1>
+    <p>Estimate your next several period dates and most probable ovulation windows from your last period and cycle length.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="period-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="period-lastperiod">First Day of Your Last Period</label>
+            <input type="date" id="period-lastperiod" value="2026-09-24">
+          </div>
+          <div class="field-group">
+            <label for="period-length">How Long Did It Last?</label>
+            <select id="period-length">
+              <option value="1">1 day</option><option value="2">2 days</option><option value="3">3 days</option>
+              <option value="4">4 days</option><option value="5" selected>5 days</option><option value="6">6 days</option>
+              <option value="7">7 days</option><option value="8">8 days</option><option value="9">9 days</option>
+              <option value="10">10 days</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="period-cycle">Average Length of Cycles</label>
+            <select id="period-cycle">
+              <option value="22">22 days</option><option value="23">23 days</option><option value="24">24 days</option>
+              <option value="25">25 days</option><option value="26">26 days</option><option value="27">27 days</option>
+              <option value="28" selected>28 days</option><option value="29">29 days</option><option value="30">30 days</option>
+              <option value="31">31 days</option><option value="32">32 days</option><option value="33">33 days</option>
+              <option value="34">34 days</option><option value="35">35 days</option><option value="36">36 days</option>
+              <option value="37">37 days</option><option value="38">38 days</option><option value="39">39 days</option>
+              <option value="40">40 days</option><option value="41">41 days</option><option value="42">42 days</option>
+              <option value="43">43 days</option><option value="44">44 days</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="period-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="period-results-section" hidden>
+      <div class="schedule-header"><h3 class="schedule-header" style="border:0;padding:0;">Next 6 Cycles</h3></div>
+      <div class="schedule-table-wrap" id="period-table-wrap"></div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How future periods are estimated</h2>
+      <p>Each future period is projected by repeatedly adding your average cycle length to the start date of your last period. Ovulation for each cycle is estimated the same way as our <a href="ovulation-calculator.html">Ovulation Calculator</a>: about 14 days before that cycle's next period starts.</p>
+
+      <h2>Why these are estimates, not certainties</h2>
+      <p>Cycle length naturally varies from month to month for most people &mdash; stress, illness, travel, and many other factors can shift timing. The further out a projected cycle is, the more that natural variation can accumulate, so treat later cycles in the table as rougher estimates than the very next one.</p>
+      <div class="callout">This calculator is for general tracking and planning, not medical or contraceptive use. If your cycles are irregular or you have concerns about your cycle, consult a healthcare provider.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What if my cycle length varies a lot month to month?</h3>
+        <p>Use your typical or average cycle length for the best estimate, and treat the projections as a general guide rather than an exact schedule &mdash; irregular cycles make advance predictions less reliable.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is this different from the Ovulation Calculator?</h3>
+        <p>This tool also projects your period date ranges across 6 cycles, while our <a href="ovulation-calculator.html">Ovulation Calculator</a> adds extra fertility details like the intercourse window and an estimated due date if that cycle resulted in pregnancy.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="pregnancy-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pregnancy Calculator</h3>
+        <p>Track your pregnancy week-by-week from your due date or last period.</p>
+      </a>
+
+      <a class="calc-list-card" href="pregnancy-weight-gain-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pregnancy Weight Gain Calculator</h3>
+        <p>See a recommended weight gain range for your stage of pregnancy.</p>
+      </a>
+
+      <a class="calc-list-card" href="ovulation-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Ovulation Calculator</h3>
+        <p>Estimate your most probable ovulation date and fertile window.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/period-calculator.js"></script>
+</body>
+</html>

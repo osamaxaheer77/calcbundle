@@ -57,6 +57,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/bac-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/base64-encoder.html</loc>
     <priority>0.7</priority>
   </url>
@@ -70,6 +74,10 @@
   </url>
   <url>
     <loc>https://calcbundle.net/calculators/body-fat-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/body-surface-area-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -225,6 +233,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/macro-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/mean-median-mode-range-calculator.html</loc>
     <priority>0.7</priority>
   </url>
@@ -262,6 +274,10 @@
   </url>
   <url>
     <loc>https://calcbundle.net/calculators/percentage-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/period-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -350,6 +366,10 @@
   </url>
   <url>
     <loc>https://calcbundle.net/calculators/standard-deviation-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/tdee-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>

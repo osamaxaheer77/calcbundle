@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TDEE Calculator - CalcBundle</title>
+<meta name="description" content="Estimate your Total Daily Energy Expenditure (TDEE) from your BMR and activity level, plus a weight gain/loss calorie breakdown.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">TDEE Calculator</span>
+    </div>
+    <h1>TDEE Calculator</h1>
+    <p>Estimate your Total Daily Energy Expenditure (TDEE) from your BMR and activity level, plus a weight gain/loss calorie breakdown.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="tdee-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Units</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="tdee-unit" value="us" checked>US Units</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="tdee-unit" value="metric">Metric Units</label>
+          </div>
+
+          <div class="field-group">
+            <label for="tdee-age">Age</label>
+            <input type="number" id="tdee-age" value="25" min="15" max="80" step="1">
+          </div>
+
+          <div class="field-group">
+            <label>Gender</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="tdee-gender" value="m" checked>Male</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="tdee-gender" value="f">Female</label>
+          </div>
+
+          <div id="tdee-us-fields">
+            <div class="field-group">
+              <label>Height</label>
+              <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;">
+                  <div class="field-with-toggle"><input type="number" id="tdee-ft" value="5" min="0" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">ft</span></div>
+                </div>
+                <div class="field-group" style="margin-bottom:0;">
+                  <div class="field-with-toggle"><input type="number" id="tdee-in" value="10" min="0" max="11" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">in</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="tdee-lbs">Weight (pounds)</label>
+              <input type="number" id="tdee-lbs" value="165" min="0" step="1">
+            </div>
+          </div>
+
+          <div id="tdee-metric-fields" hidden>
+            <div class="field-group">
+              <label for="tdee-cm">Height (cm)</label>
+              <input type="number" id="tdee-cm" value="178" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="tdee-kg">Weight (kg)</label>
+              <input type="number" id="tdee-kg" value="75" min="0" step="0.1">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="tdee-activity">Activity</label>
+            <select id="tdee-activity">
+              <option value="1.2">Sedentary: little or no exercise</option>
+              <option value="1.375">Light: exercise 1-3 times/week</option>
+              <option value="1.465" selected>Moderate: exercise 4-5 times/week</option>
+              <option value="1.55">Active: daily exercise or intense exercise 3-4 times/week</option>
+              <option value="1.725">Very Active: intense exercise 6-7 times/week</option>
+              <option value="1.9">Extra Active: very intense exercise daily, or physical job</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="tdee-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What TDEE means</h2>
+      <p>Total Daily Energy Expenditure is everything your body burns in a day: your basal metabolic rate (energy used at rest), plus digestion, plus all activity &mdash; exercise and everyday movement alike. This calculator estimates BMR with the Mifflin-St Jeor equation, then multiplies it by an activity factor to reach TDEE, which also represents your calorie maintenance level.</p>
+
+      <h2>Using TDEE for a goal</h2>
+      <p>Eating at your TDEE maintains your current weight. A calorie deficit below it leads to weight loss; a surplus above it leads to weight gain &mdash; roughly 3,500 calories corresponds to about 1 pound of body weight, which is where the weekly rate estimates below come from.</p>
+      <div class="callout">Cutting more than about 1,000 calories a day below TDEE is generally not recommended &mdash; it risks muscle loss and a slower metabolism. Consult a doctor or dietitian before pursuing aggressive changes.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How is TDEE different from BMR?</h3>
+        <p>BMR is just the energy your body needs at complete rest. TDEE adds everything else &mdash; activity, exercise, and digestion &mdash; on top of BMR, so it's always a higher number.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is this different from the Calorie Calculator?</h3>
+        <p>They compute the same underlying number, but our <a href="calorie-calculator.html">Calorie Calculator</a> also lets you pick between three different BMR formulas (including one based on body fat percentage) if you want more control over the estimate.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="calorie-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Calorie Calculator</h3>
+        <p>Estimate daily calorie needs to maintain, lose, or gain weight.</p>
+      </a>
+
+      <a class="calc-list-card" href="bmi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMI Calculator</h3>
+        <p>Check your body mass index against standard weight ranges.</p>
+      </a>
+
+      <a class="calc-list-card" href="macro-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Macro Calculator</h3>
+        <p>Find a daily protein, carb, and fat split.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/tdee-calculator.js"></script>
+</body>
+</html>

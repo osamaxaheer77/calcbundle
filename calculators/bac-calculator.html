@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAC Calculator - CalcBundle</title>
+<meta name="description" content="Estimate blood alcohol concentration (BAC) from drinks consumed, body weight, and time elapsed. Educational estimate only — never a substitute for judgment about driving.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">BAC Calculator</span>
+    </div>
+    <h1>BAC Calculator</h1>
+    <p>Estimate blood alcohol concentration from drinks consumed, body weight, and time elapsed. Educational estimate only.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <div class="callout" style="margin-bottom:20px;">
+      This calculator gives a rough, educational estimate only. Actual BAC depends on many factors this tool can't measure (metabolism, food intake, medications, drink strength, and more). Never use it to decide whether it's safe to drive &mdash; the only safe BAC for driving is 0.00%. If you've been drinking, don't drive; use a taxi, rideshare, or a sober friend.
+    </div>
+
+    <form id="bac-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Gender</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="bac-gender" value="m" checked>Male</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="bac-gender" value="f">Female</label>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="bac-weight">Body Weight</label>
+              <input type="number" id="bac-weight" value="155" min="0" step="any">
+            </div>
+            <select id="bac-weight-unit" class="unit-select">
+              <option value="pound" selected>pounds</option>
+              <option value="kilogram">kilograms</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="bac-drinks">Standard Drinks Consumed</label>
+            <input type="number" id="bac-drinks" value="2" min="0" step="0.5">
+          </div>
+          <div class="field-group">
+            <label for="bac-hours">Hours Since First Drink</label>
+            <input type="number" id="bac-hours" value="2" min="0" step="0.25">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="bac-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What counts as a "standard drink"</h2>
+      <p>In the US, a standard drink contains about 14 grams of pure alcohol &mdash; roughly a 12 oz beer at 5% ABV, a 5 oz glass of wine at 12% ABV, or a 1.5 oz shot of 40%-ABV liquor. Stronger or larger pours count as more than one standard drink.</p>
+
+      <h2>The Widmark formula</h2>
+      <p>This uses the classic Widmark equation: BAC = (alcohol grams &divide; (body weight in grams &times; distribution ratio)) &times; 100, then subtracts an elimination rate of about 0.015% per hour to account for metabolism since your first drink. The distribution ratio (about 0.68 for men, 0.55 for women) reflects average differences in body water content, which affects how diluted the alcohol becomes.</p>
+      <div class="callout">Individual results vary widely based on metabolism, food intake, medications, and other factors the formula can't account for. Treat this as a rough estimate, never as a basis for deciding to drive.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What's the legal driving limit?</h3>
+        <p>In the US, 0.08% is the standard legal limit for drivers 21+, with stricter limits for commercial drivers and those under 21. Limits vary by country and jurisdiction &mdash; and impairment can begin well below any legal limit.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does food or time slow down BAC increase?</h3>
+        <p>Yes &mdash; food slows alcohol absorption, and BAC only decreases once your liver has had time to metabolize the alcohol, at a fairly constant rate over time. Neither coffee nor a cold shower speeds this up.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="body-surface-area-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Body Surface Area Calculator</h3>
+        <p>Calculate body surface area using clinical formulas.</p>
+      </a>
+
+      <a class="calc-list-card" href="tdee-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>TDEE Calculator</h3>
+        <p>Estimate your total daily energy expenditure.</p>
+      </a>
+
+      <a class="calc-list-card" href="macro-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Macro Calculator</h3>
+        <p>Find a daily protein, carb, and fat split.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/bac-calculator.js"></script>
+</body>
+</html>

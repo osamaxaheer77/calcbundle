@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body Surface Area Calculator - CalcBundle</title>
+<meta name="description" content="Calculate body surface area (BSA) using five widely used clinical formulas, from height and weight.">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <span class="logo-dot"></span>
+      CalcBundle
+    </a>
+    <nav class="nav">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Body Surface Area Calculator</span>
+    </div>
+    <h1>Body Surface Area Calculator</h1>
+    <p>Calculate body surface area (BSA) using five widely used clinical formulas, from height and weight.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:700px;">
+
+    <form id="bsa-form">
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Height Unit</label>
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="bsa-heightunit" value="ftin" checked>ft/in</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="bsa-heightunit" value="cm">cm</label>
+          </div>
+
+          <div id="bsa-ftin-fields">
+            <div class="field-group">
+              <label>Height</label>
+              <div class="field-row">
+                <div class="field-group" style="margin-bottom:0;">
+                  <div class="field-with-toggle"><input type="number" id="bsa-ft" value="5" min="0" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">ft</span></div>
+                </div>
+                <div class="field-group" style="margin-bottom:0;">
+                  <div class="field-with-toggle"><input type="number" id="bsa-in" value="9" min="0" max="11" step="1"><span class="unit-select" style="display:flex;align-items:center;justify-content:center;">in</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-group" id="bsa-cm-field" hidden>
+            <label for="bsa-cm">Height (cm)</label>
+            <input type="number" id="bsa-cm" value="175" min="0" step="0.1">
+          </div>
+
+          <div class="field-with-toggle">
+            <div class="field-group">
+              <label for="bsa-weight">Body Weight</label>
+              <input type="number" id="bsa-weight" value="155" min="0" step="any">
+            </div>
+            <select id="bsa-weight-unit" class="unit-select">
+              <option value="pound" selected>pounds</option>
+              <option value="kilogram">kilograms</option>
+              <option value="gram">grams</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="bsa-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why body surface area matters clinically</h2>
+      <p>BSA correlates more closely with metabolic mass than body weight alone, since it accounts for both height and weight together. It's used to determine drug dosages (especially chemotherapy), calculate cardiac index, and reference burn treatment extent, among other clinical applications.</p>
+
+      <h2>Why five different formulas</h2>
+      <p>Direct BSA measurement is impractical, so researchers have published several regression formulas derived from different study populations over the decades. Mosteller's formula is simplest and widely used for its ease of calculation; Du Bois is one of the oldest and most historically referenced; the others were developed to improve accuracy for specific populations (like children, for Haycock). They typically agree within a few percent of each other.</p>
+      <div class="callout">This tool is for reference and educational purposes. Actual clinical dosing decisions should always be made by a qualified healthcare provider using validated clinical protocols.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Which formula should I use?</h3>
+        <p>Mosteller is the most commonly cited in modern clinical practice for its simplicity, though DuBois remains widely referenced historically. For any medical decision, follow your healthcare provider's preferred formula.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do the results differ slightly between formulas?</h3>
+        <p>Each formula was derived from a different set of measured subjects using different regression techniques, so small systematic differences between them are expected and normal.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="bmi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMI Calculator</h3>
+        <p>Check your body mass index against standard weight ranges.</p>
+      </a>
+
+      <a class="calc-list-card" href="tdee-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>TDEE Calculator</h3>
+        <p>Estimate your total daily energy expenditure.</p>
+      </a>
+
+      <a class="calc-list-card" href="bac-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BAC Calculator</h3>
+        <p>Estimate blood alcohol concentration.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/search.js"></script>
+<script src="../js/body-surface-area-calculator.js"></script>
+</body>
+</html>
