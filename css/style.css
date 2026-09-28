@@ -214,11 +214,13 @@ a.search-result-item:hover, a.search-result-item:focus { background: var(--accen
 }
 .teaser-carousel {
   position: relative;
+  margin-top: -20px;
 }
 .cards-row {
   display: flex;
   gap: 14px;
   overflow-x: auto;
+  padding-top: 20px;
   padding-bottom: 4px;
   scrollbar-width: none;
   -ms-overflow-style: none;
