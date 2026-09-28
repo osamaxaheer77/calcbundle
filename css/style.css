@@ -168,6 +168,51 @@ a.search-result-item:hover, a.search-result-item:focus { background: var(--accen
   text-align: center;
 }
 
+/* ===== Categories nav dropdown ===== */
+.nav-categories {
+  position: relative;
+}
+.nav-categories > .nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+.nav-categories-chevron {
+  transition: transform 0.2s ease;
+}
+.nav-categories.is-open .nav-categories-chevron {
+  transform: rotate(180deg);
+}
+.nav-categories-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  min-width: 220px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  z-index: 50;
+  padding: 6px;
+}
+.nav-categories-dropdown a {
+  display: block;
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.nav-categories-dropdown a:hover,
+.nav-categories-dropdown a:focus {
+  background: var(--accent-tint);
+  color: var(--accent);
+}
+
 /* ===== Hero / breadcrumb ===== */
 .hero {
   padding: 32px 0 24px;

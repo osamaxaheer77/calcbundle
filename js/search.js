@@ -335,4 +335,62 @@ const CALCULATORS_INDEX = [
   }
 
   document.querySelectorAll('.nav-search').forEach(init);
+
+  const CATEGORIES = [
+    { name: 'Financial', url: 'categories/financial.html' },
+    { name: 'Fitness & Health', url: 'categories/fitness.html' },
+    { name: 'Math', url: 'categories/math.html' },
+    { name: 'Crypto', url: 'categories/crypto.html' },
+    { name: 'Other', url: 'categories/other.html' },
+  ];
+
+  function initCategoriesDropdown(link) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'nav-categories';
+    link.parentNode.insertBefore(wrapper, link);
+    wrapper.appendChild(link);
+
+    const chevron = document.createElement('span');
+    chevron.className = 'nav-categories-chevron';
+    chevron.innerHTML = '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+    link.appendChild(chevron);
+
+    const dropdown = document.createElement('div');
+    dropdown.className = 'nav-categories-dropdown';
+    dropdown.hidden = true;
+    CATEGORIES.forEach((cat) => {
+      const a = document.createElement('a');
+      a.href = urlPrefix() + cat.url;
+      a.textContent = cat.name;
+      dropdown.appendChild(a);
+    });
+    wrapper.appendChild(dropdown);
+
+    function close() {
+      dropdown.hidden = true;
+      wrapper.classList.remove('is-open');
+    }
+    function open() {
+      dropdown.hidden = false;
+      wrapper.classList.add('is-open');
+    }
+
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (dropdown.hidden) open(); else close();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!wrapper.contains(e.target)) close();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !dropdown.hidden) {
+        close();
+        link.focus();
+      }
+    });
+  }
+
+  document.querySelectorAll('a.nav-link[href$="#categories"]').forEach(initCategoriesDropdown);
 })();
