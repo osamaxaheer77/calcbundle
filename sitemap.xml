@@ -29,6 +29,10 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/age-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/amortization-calculator.html</loc>
     <priority>0.7</priority>
   </url>
@@ -50,6 +54,10 @@
   </url>
   <url>
     <loc>https://calcbundle.net/calculators/average-return-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/base64-encoder.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -89,11 +97,39 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/concrete-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/conversion-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/date-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/debt-ratio-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/density-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/dew-point-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/dice-roller.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/down-payment-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/electricity-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -113,7 +149,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/fuel-cost-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/future-value-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/gas-mileage-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/gpa-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/grade-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/heat-index-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/height-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -122,6 +182,10 @@
   </url>
   <url>
     <loc>https://calcbundle.net/calculators/home-equity-loan-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/horsepower-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -145,11 +209,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/ip-subnet-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/irr-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://calcbundle.net/calculators/log-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/love-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -165,11 +237,23 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/mulch-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/mutual-fund-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/ohms-law-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/ovulation-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/password-generator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -225,7 +309,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/resistor-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/roi-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/roman-numeral-converter.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/roofing-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -245,7 +341,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/sleep-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/square-footage-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/standard-deviation-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/time-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/time-zone-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/tip-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/tire-size-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -253,7 +373,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/url-encoder.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/va-mortgage-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/voltage-drop-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/wind-chill-calculator.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
