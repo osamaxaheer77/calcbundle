@@ -698,6 +698,7 @@ a.calc-simple-item:hover .calc-simple-dot {
 @media (max-width: 860px) {
   .container { padding: 0 20px; }
   .site-header .container { flex-wrap: wrap; height: auto; padding-top: 14px; padding-bottom: 14px; gap: 10px; }
+  .logo { width: 100%; justify-content: center; }
   .nav { gap: 16px; flex-wrap: wrap; }
   .nav-search { display: none; }
   .hero h1 { font-size: 26px; }
