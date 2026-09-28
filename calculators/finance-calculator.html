@@ -5,11 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Finance Calculator - CalcBundle</title>
 <meta name="description" content="Solve for present value, future value, interest rate, number of periods, or payment in the standard 5-key time-value-of-money equation.">
+<link rel="canonical" href="https://calcbundle.net/calculators/finance-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Finance Calculator - CalcBundle">
+<meta property="og:description" content="Solve for present value, future value, interest rate, number of periods, or payment in the standard 5-key time-value-of-money equation.">
+<meta property="og:url" content="https://calcbundle.net/calculators/finance-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Finance Calculator - CalcBundle">
+<meta name="twitter:description" content="Solve for present value, future value, interest rate, number of periods, or payment in the standard 5-key time-value-of-money equation.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
 <link rel="stylesheet" href="../css/mortgage-calculator.css">
 <link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is my answer negative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That's the sign convention at work, not an error — a negative result usually just means that value flows in the opposite direction from the ones you entered as positive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between \"beginning\" and \"end\" of period payments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It changes how many periods each payment has to earn interest. A payment made at the start of a period earns interest for that whole period; one made at the end doesn't start earning until the next period begins — which is why annuities-due (beginning-of-period) always produce a slightly larger future value than ordinary annuities (end-of-period), all else equal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why would I ever need to solve for N or I/Y?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solving for N answers \"how long until I reach my goal?\" Solving for I/Y answers \"what rate of return am I actually getting?\" — both common questions once you already know your starting amount, contributions, and target."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

@@ -5,10 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>URL Encode / Decode - CalcBundle</title>
 <meta name="description" content="Percent-encode text for safe use in a URL, or decode percent-encoded text back to plain text.">
+<link rel="canonical" href="https://calcbundle.net/calculators/url-encoder.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="URL Encode / Decode - CalcBundle">
+<meta property="og:description" content="Percent-encode text for safe use in a URL, or decode percent-encoded text back to plain text.">
+<meta property="og:url" content="https://calcbundle.net/calculators/url-encoder.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="URL Encode / Decode - CalcBundle">
+<meta name="twitter:description" content="Percent-encode text for safe use in a URL, or decode percent-encoded text back to plain text.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
 <link rel="stylesheet" href="../css/mortgage-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When would I need this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Building query strings by hand, debugging a URL that looks garbled, or passing text with spaces or special characters (like search terms) as part of a link."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a \"+\" sometimes mean a space?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In query strings (the part after \"?\"), a \"+\" traditionally represents a space, a convention from HTML form submission. This decoder treats a literal \"+\" the same way; use %20 if you specifically mean a plus sign."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

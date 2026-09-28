@@ -5,10 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mortgage Calculator - CalcBundle</title>
 <meta name="description" content="Estimate your monthly mortgage payment, taxes, insurance, and full amortization schedule — with support for extra payments and biweekly payoff.">
+<link rel="canonical" href="https://calcbundle.net/calculators/mortgage-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Mortgage Calculator - CalcBundle">
+<meta property="og:description" content="Estimate your monthly mortgage payment, taxes, insurance, and full amortization schedule — with support for extra payments and biweekly payoff.">
+<meta property="og:url" content="https://calcbundle.net/calculators/mortgage-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mortgage Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate your monthly mortgage payment, taxes, insurance, and full amortization schedule — with support for extra payments and biweekly payoff.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
 <link rel="stylesheet" href="../css/mortgage-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does a bigger down payment always lower the monthly payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — a larger down payment shrinks the loan amount that interest gets charged on, and it can also remove the need for PMI once you clear the 20% threshold, compounding the savings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does \"Total Interest\" look so much bigger than the loan itself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Over a 30-year term at a normal rate, it's common to pay nearly as much in interest as the loan amount, sometimes more. That's simply the cost of borrowing over that long a stretch — shortening the term or making extra payments both cut it substantially."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does \"extra payment\" actually change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Extra payments go straight to principal, not interest. They don't lower your required monthly payment — they shrink the balance faster, which shortens the loan and reduces the total interest paid over its life."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the biweekly estimate exact?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's a close approximation. True biweekly billing accrues interest slightly differently than monthly billing; we model the main effect — 26 half-payments a year works out to 13 full monthly payments instead of 12 — which is what drives almost all of the real-world savings."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

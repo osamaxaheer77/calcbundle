@@ -5,10 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Base64 Encode / Decode - CalcBundle</title>
 <meta name="description" content="Encode text to Base64 or decode Base64 back to text, entirely in your browser.">
+<link rel="canonical" href="https://calcbundle.net/calculators/base64-encoder.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Base64 Encode / Decode - CalcBundle">
+<meta property="og:description" content="Encode text to Base64 or decode Base64 back to text, entirely in your browser.">
+<meta property="og:url" content="https://calcbundle.net/calculators/base64-encoder.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Base64 Encode / Decode - CalcBundle">
+<meta name="twitter:description" content="Encode text to Base64 or decode Base64 back to text, entirely in your browser.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
 <link rel="stylesheet" href="../css/mortgage-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does encoded text look longer than the original?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Base64 represents every 3 bytes of input as 4 output characters, so encoded text is roughly 33% longer than the original."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this to encode special characters and emoji?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — text is converted to UTF-8 bytes before encoding, so non-English text and emoji round-trip correctly."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

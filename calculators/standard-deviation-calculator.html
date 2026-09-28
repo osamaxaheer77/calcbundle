@@ -5,10 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Standard Deviation Calculator - CalcBundle</title>
 <meta name="description" content="Calculate standard deviation, variance, mean, sum, and margin of error for a population or sample data set.">
+<link rel="canonical" href="https://calcbundle.net/calculators/standard-deviation-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Standard Deviation Calculator - CalcBundle">
+<meta property="og:description" content="Calculate standard deviation, variance, mean, sum, and margin of error for a population or sample data set.">
+<meta property="og:url" content="https://calcbundle.net/calculators/standard-deviation-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Standard Deviation Calculator - CalcBundle">
+<meta name="twitter:description" content="Calculate standard deviation, variance, mean, sum, and margin of error for a population or sample data set.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
 <link rel="stylesheet" href="../css/mortgage-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does sample standard deviation divide by N-1 instead of N?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is Bessel's correction. Using a sample's own mean to compute variance slightly underestimates the true population variance, since the sample mean is, by construction, the value that minimizes the sum of squared deviations for that exact sample. Dividing by N-1 instead of N corrects for that bias."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I only have one data point?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sample standard deviation is undefined for a single value, since there's no way to divide by N-1=0. Population standard deviation of a single value is always 0, since that one value is exactly equal to the mean."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

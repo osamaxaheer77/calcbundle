@@ -5,10 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Voltage Drop Calculator - CalcBundle</title>
 <meta name="description" content="Estimate the voltage drop across a wire run from its resistance, length, load current, and phase.">
+<link rel="canonical" href="https://calcbundle.net/calculators/voltage-drop-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Voltage Drop Calculator - CalcBundle">
+<meta property="og:description" content="Estimate the voltage drop across a wire run from its resistance, length, load current, and phase.">
+<meta property="og:url" content="https://calcbundle.net/calculators/voltage-drop-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Voltage Drop Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate the voltage drop across a wire run from its resistance, length, load current, and phase.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
 <link rel="stylesheet" href="../css/mortgage-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where do I find my wire's resistance value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Manufacturer datasheets list it, often in ohms per 1,000 feet or ohms per kilometer. NEC Chapter 9, Table 8 also publishes standard DC resistance values for common copper and aluminum wire gauges."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this account for AC reactance, not just resistance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — this uses resistance only, which is accurate for DC and a reasonable approximation for AC at typical power-line frequencies over shorter runs. For precise AC work with reactance, use impedance data from your wire's specification."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

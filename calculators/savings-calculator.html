@@ -5,11 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Savings Calculator - CalcBundle</title>
 <meta name="description" content="Project how a savings balance grows with an initial deposit plus regular monthly and annual contributions, accounting for interest, growth in contributions, and tax.">
+<link rel="canonical" href="https://calcbundle.net/calculators/savings-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Savings Calculator - CalcBundle">
+<meta property="og:description" content="Project how a savings balance grows with an initial deposit plus regular monthly and annual contributions, accounting for interest, growth in contributions, and tax.">
+<meta property="og:url" content="https://calcbundle.net/calculators/savings-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Savings Calculator - CalcBundle">
+<meta name="twitter:description" content="Project how a savings balance grows with an initial deposit plus regular monthly and annual contributions, accounting for interest, growth in contributions, and tax.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
 <link rel="stylesheet" href="../css/mortgage-calculator.css">
 <link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does compounding frequency matter here if I'm also contributing monthly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They're independent settings — compounding frequency controls how often interest is calculated and added, while your contribution schedule controls when new money goes in. This calculator handles both correctly even when they don't match, the same way a real bank account would."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I want to model a shrinking contribution instead of a growing one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter a negative increase percentage — the contribution amount will decline by that percentage each year instead of growing."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 

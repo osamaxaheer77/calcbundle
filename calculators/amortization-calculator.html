@@ -5,10 +5,61 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amortization Calculator - CalcBundle</title>
 <meta name="description" content="Break any fixed-rate loan down into its full principal-and-interest payment schedule, with support for extra monthly, yearly, and one-time payments.">
+<link rel="canonical" href="https://calcbundle.net/calculators/amortization-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Amortization Calculator - CalcBundle">
+<meta property="og:description" content="Break any fixed-rate loan down into its full principal-and-interest payment schedule, with support for extra monthly, yearly, and one-time payments.">
+<meta property="og:url" content="https://calcbundle.net/calculators/amortization-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Amortization Calculator - CalcBundle">
+<meta name="twitter:description" content="Break any fixed-rate loan down into its full principal-and-interest payment schedule, with support for extra monthly, yearly, and one-time payments.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
 <link rel="stylesheet" href="../css/mortgage-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does making an extra payment lower my required monthly payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — your scheduled payment stays exactly the same. What changes is how much of the loan is left, so it gets paid off sooner and costs less in total interest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is almost my entire early payment interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because interest is calculated on the full remaining balance, and early on that balance is close to the full loan amount. As the balance falls, so does the interest charged against it, and the principal share grows to fill the gap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between the annual and monthly schedule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They show the same underlying numbers at different resolutions — the annual view totals each year's interest and principal into one row, while the monthly view breaks every single payment out individually so you can see exactly how the balance moves month to month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I schedule more than one lump-sum payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — this calculator supports up to ten separate one-time extra payments, each on its own date, on top of an optional recurring monthly or yearly extra payment."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
