@@ -62,11 +62,10 @@ img { display: block; max-width: 100%; }
   font-weight: 700;
   font-size: 20px;
 }
-.logo-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
+.logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
 }
 .nav {
   display: flex;
