@@ -21,7 +21,7 @@ const CALCULATORS_INDEX = [
   {name:'Retirement Calculator',url:'calculators/retirement-calculator.html',category:'Financial',live:true},
   {name:'401K Calculator',url:'categories/financial.html',category:'Financial',live:false},
   {name:'Pension Calculator',url:'categories/financial.html',category:'Financial',live:false},
-  {name:'Social Security Calculator',url:'categories/financial.html',category:'Financial',live:false},
+  {name:'Social Security Calculator',url:'calculators/social-security-calculator.html',category:'Financial',live:true},
   {name:'Annuity Calculator',url:'categories/financial.html',category:'Financial',live:false},
   {name:'Annuity Payout Calculator',url:'categories/financial.html',category:'Financial',live:false},
   {name:'Roth IRA Calculator',url:'categories/financial.html',category:'Financial',live:false},

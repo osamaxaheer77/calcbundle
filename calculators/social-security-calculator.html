@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Security Calculator - CalcBundle</title>
+<meta name="description" content="Find the best age to claim Social Security retirement benefits, or compare two claiming ages to see the break-even point, using your life expectancy, investment return and cost-of-living adjustment.">
+<link rel="canonical" href="https://calcbundle.net/calculators/social-security-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Social Security Calculator - CalcBundle">
+<meta property="og:description" content="Find the best age to claim Social Security retirement benefits, or compare two claiming ages to see the break-even point, using your life expectancy, investment return and cost-of-living adjustment.">
+<meta property="og:url" content="https://calcbundle.net/calculators/social-security-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Social Security Calculator - CalcBundle">
+<meta name="twitter:description" content="Find the best age to claim Social Security retirement benefits, or compare two claiming ages to see the break-even point, using your life expectancy, investment return and cost-of-living adjustment.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does relative value mean in the results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For each claiming age, the calculator adds up the benefits you would collect through your life expectancy, adjusting for the yearly cost-of-living increase and discounting future payments at your investment return. It then scales the best age to 100%, so every other age shows how close it comes to the best choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the best claiming age change with life expectancy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Waiting trades smaller checks now for larger checks later. If you expect a shorter life, the larger checks have less time to pay off, so claiming early wins. If you expect a long life, the higher monthly amount eventually more than makes up for the years you waited."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the break-even age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the life expectancy at which claiming later has collected the same total value as claiming earlier. If you expect to live past that age, the later claim comes out ahead. If not, the earlier claim does."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this show my actual Social Security benefit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It compares claiming ages as a share of the benefit you would get at your full retirement age. You can enter that monthly amount to see dollar figures, and your personal estimate is on your statement from the Social Security Administration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator include spouse or survivor benefits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It looks only at your own retirement benefit and ignores spousal and survivor benefits, taxes on benefits, and the earnings limit that applies if you claim early while still working. Those can change the best choice, especially for married couples."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Social Security Calculator</span>
+    </div>
+    <h1>Social Security Calculator</h1>
+    <p>Find the age at which claiming U.S. Social Security retirement benefits is worth the most, or compare two claiming ages to see where waiting starts to pay off.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ss-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="ss-mode">What do you want to find out?</label>
+            <select id="ss-mode" class="unit-select">
+              <option value="1" selected>What is the best age to claim?</option>
+              <option value="2">Compare two claiming ages</option>
+            </select>
+          </div>
+
+          <div data-modes="1">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="ss-birth">Your Birth Year</label>
+                <input type="number" id="ss-birth" value="1970" min="1900" step="1">
+              </div>
+              <div class="field-group">
+                <label for="ss-life">Life Expectancy</label>
+                <input type="number" id="ss-life" value="83" min="1" max="120" step="1">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="ss-pia">Monthly Benefit at Full Retirement Age ($, optional)</label>
+              <input type="number" id="ss-pia" value="" min="0" step="50" placeholder="e.g. 2000">
+            </div>
+          </div>
+
+          <div data-modes="2">
+            <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:0 0 8px;">Option 1</p>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="ss-age1">Claiming Age</label>
+                <input type="number" id="ss-age1" value="62" min="62" max="70" step="any">
+              </div>
+              <div class="field-group">
+                <label for="ss-pay1">Monthly Payment ($)</label>
+                <input type="number" id="ss-pay1" value="1600" min="0" step="50">
+              </div>
+            </div>
+            <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:4px 0 8px;">Option 2 (wait longer)</p>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="ss-age2">Claiming Age</label>
+                <input type="number" id="ss-age2" value="70" min="62" max="70" step="any">
+              </div>
+              <div class="field-group">
+                <label for="ss-pay2">Monthly Payment ($)</label>
+                <input type="number" id="ss-pay2" value="2810" min="0" step="50">
+              </div>
+            </div>
+          </div>
+
+          <div data-modes="1 2">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="ss-return">Investment Return (%/yr)</label>
+                <input type="number" id="ss-return" value="5" step="0.1">
+              </div>
+              <div class="field-group">
+                <label for="ss-cola">Cost-of-Living Adj. (%/yr)</label>
+                <input type="number" id="ss-cola" value="3" min="0" step="0.1">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="ss-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="ss-results-section" hidden>
+      <h2 id="ss-card-title" style="margin:0 0 16px;font-size:18px;">Value Comparison of Claiming Ages</h2>
+      <div id="ss-chart" style="margin-bottom:20px;"></div>
+      <div class="schedule-table-wrap">
+        <div id="ss-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How claiming age changes your benefit</h2>
+      <p>Your full retirement age depends on the year you were born: 66 for 1943 to 1954, rising by two months a year to 66 and 10 months for 1959, and 67 for anyone born in 1960 or later. You can start collecting as early as 62, but the check is permanently smaller. Claiming before full retirement age cuts it by 5/9 of 1% for each of the first 36 months early and 5/12 of 1% for every month after that, which is a 30% cut at 62 when full retirement age is 67.</p>
+
+      <h2>What waiting adds</h2>
+      <p>Each month you delay past full retirement age earns delayed retirement credits of 2/3 of 1%, or 8% a year, up to age 70. Waiting from 67 to 70 therefore raises the monthly check by 24%. There is no extra credit for waiting beyond 70, so there is no reason to delay past that point.</p>
+
+      <h2>How this calculator picks the best age</h2>
+      <p>For each age from 62 to 70, it adds up the benefits you would collect through your life expectancy. Each yearly payment grows with the cost-of-living adjustment, then is discounted back to age 62 at your investment return, so a dollar received later counts for less. The age with the highest total scores 100%, and the others show how close they come. A higher investment return favors claiming sooner, while a longer life expectancy or higher cost-of-living adjustment favors waiting.</p>
+      <div class="callout">This is an estimate for planning, not financial advice. It looks only at your own retirement benefit. Your health, other income, a spouse's benefits and your need for cash now can all change the right answer.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What does relative value mean in the results?</h3>
+        <p>For each claiming age, the calculator adds up the benefits you would collect through your life expectancy, adjusting for the yearly cost-of-living increase and discounting future payments at your investment return. It then scales the best age to 100%, so every other age shows how close it comes to the best choice.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the best claiming age change with life expectancy?</h3>
+        <p>Waiting trades smaller checks now for larger checks later. If you expect a shorter life, the larger checks have less time to pay off, so claiming early wins. If you expect a long life, the higher monthly amount eventually more than makes up for the years you waited.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the break-even age?</h3>
+        <p>It is the life expectancy at which claiming later has collected the same total value as claiming earlier. If you expect to live past that age, the later claim comes out ahead. If not, the earlier claim does.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this show my actual Social Security benefit?</h3>
+        <p>No. It compares claiming ages as a share of the benefit you would get at your full retirement age. You can enter that monthly amount to see dollar figures, and your personal estimate is on your statement from the Social Security Administration.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the calculator include spouse or survivor benefits?</h3>
+        <p>No. It looks only at your own retirement benefit and ignores spousal and survivor benefits, taxes on benefits, and the earnings limit that applies if you claim early while still working. Those can change the best choice, especially for married couples.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="retirement-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </a>
+
+      <a class="calc-list-card" href="savings-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Savings Calculator</h3>
+        <p>Project how a savings balance grows with regular contributions.</p>
+      </a>
+
+      <a class="calc-list-card" href="investment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/social-security-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
