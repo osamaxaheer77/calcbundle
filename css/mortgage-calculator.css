@@ -13,11 +13,11 @@
 }
 .mortgage-form-card {
   flex: 1 1 380px;
-  min-width: 320px;
+  min-width: min(320px, 100%);
 }
 .mortgage-results-card {
   flex: 1 1 380px;
-  min-width: 320px;
+  min-width: min(320px, 100%);
 }
 
 .field-group {
@@ -41,6 +41,11 @@
 .field-with-toggle select.unit-select {
   width: 68px;
   flex: 0 0 68px;
+}
+/* Label sits above the input inside the field-group, so line the dropdown up with the input, not the label. */
+.field-with-toggle > .field-group + select.unit-select {
+  align-self: flex-end;
+  margin-bottom: 16px;
 }
 .mortgage-form-card input[type="number"],
 .mortgage-form-card input[type="text"],

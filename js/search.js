@@ -18,7 +18,7 @@ const CALCULATORS_INDEX = [
   {name:'HELOC Calculator',url:'calculators/heloc-calculator.html',category:'Financial',live:true},
   {name:'Down Payment Calculator',url:'calculators/down-payment-calculator.html',category:'Financial',live:true},
   {name:'Rent vs. Buy Calculator',url:'calculators/rent-vs-buy-calculator.html',category:'Financial',live:true},
-  {name:'Retirement Calculator',url:'categories/financial.html',category:'Financial',live:false},
+  {name:'Retirement Calculator',url:'calculators/retirement-calculator.html',category:'Financial',live:true},
   {name:'401K Calculator',url:'categories/financial.html',category:'Financial',live:false},
   {name:'Pension Calculator',url:'categories/financial.html',category:'Financial',live:false},
   {name:'Social Security Calculator',url:'categories/financial.html',category:'Financial',live:false},

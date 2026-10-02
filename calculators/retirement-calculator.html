@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retirement Calculator - CalcBundle</title>
+<meta name="description" content="Estimate how much you need to retire, how much to save each month, how much you can withdraw, and how long your savings will last, with a year-by-year projection.">
+<link rel="canonical" href="https://calcbundle.net/calculators/retirement-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Retirement Calculator - CalcBundle">
+<meta property="og:description" content="Estimate how much you need to retire, how much to save each month, how much you can withdraw, and how long your savings will last, with a year-by-year projection.">
+<meta property="og:url" content="https://calcbundle.net/calculators/retirement-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Retirement Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate how much you need to retire, how much to save each month, how much you can withdraw, and how long your savings will last, with a year-by-year projection.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are the results in today's dollars or future dollars?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main figures are in future dollars, meaning what the money will actually be worth in the year you retire. Where it matters, the calculator also shows today's-dollar equivalents so you can compare them with what things cost now."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from the 4% rule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 4% rule is a quick shortcut that assumes a fixed withdrawal rate over roughly 30 years. This calculator instead projects your withdrawals month by month, raising them with inflation each year while the remaining balance keeps earning returns, so the answer adapts to your own retirement length and return assumptions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are withdrawals timed in retirement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spending that rises with inflation is modeled as monthly withdrawals taken at the start of each month, with the monthly amount stepping up once a year. A fixed withdrawal that never increases is modeled at the end of each month. Real-world timing varies a little, so treat the results as estimates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator include taxes or Social Security?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Taxes are not modeled, so results are before tax. Use the other income field for Social Security, a pension, or any other monthly income you expect after retiring, entered in today's dollars. It is adjusted for inflation and reduces how much you need to draw from savings."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="#" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Retirement Calculator</span>
+    </div>
+    <h1>Retirement Calculator</h1>
+    <p>Work out how much you need to retire, how much to save to get there, how much you can spend once you stop working, and how long your savings will last.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ret-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="ret-mode">What do you want to find out?</label>
+            <select id="ret-mode" class="unit-select">
+              <option value="1" selected>How much do I need to retire?</option>
+              <option value="2">How much should I save?</option>
+              <option value="3">How much can I withdraw?</option>
+              <option value="4">How long will my money last?</option>
+            </select>
+          </div>
+
+          <div data-modes="1 2 3">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="ret-age">Current Age</label>
+                <input type="number" id="ret-age" value="35" min="0" max="110" step="1">
+              </div>
+              <div class="field-group">
+                <label for="ret-retage">Retirement Age</label>
+                <input type="number" id="ret-retage" value="67" min="1" max="120" step="1">
+              </div>
+            </div>
+          </div>
+
+          <div data-modes="1 3">
+            <div class="field-group">
+              <label for="ret-life">Life Expectancy</label>
+              <input type="number" id="ret-life" value="85" min="1" max="130" step="1">
+            </div>
+          </div>
+
+          <div data-modes="1">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="ret-income">Current Pre-Tax Income ($/yr)</label>
+                <input type="number" id="ret-income" value="70000" min="0" step="1000">
+              </div>
+              <div class="field-group">
+                <label for="ret-income-growth">Income Increase (%/yr)</label>
+                <input type="number" id="ret-income-growth" value="3" step="0.1">
+              </div>
+            </div>
+            <div class="field-with-toggle">
+              <div class="field-group">
+                <label for="ret-need">Income Needed After Retirement</label>
+                <input type="number" id="ret-need" value="75" min="0" step="any">
+              </div>
+              <select id="ret-need-type" class="unit-select">
+                <option value="pct" selected>%</option>
+                <option value="dollar">$/yr</option>
+              </select>
+            </div>
+            <p style="font-size:12px;color:var(--text-secondary);margin:-8px 0 16px;">% is of your income in your final working year. $/yr is in today's dollars.</p>
+            <div class="field-group">
+              <label for="ret-other">Other Income After Retirement ($/mo, today's dollars)</label>
+              <input type="number" id="ret-other" value="0" min="0" step="50">
+            </div>
+            <div class="field-with-toggle">
+              <div class="field-group">
+                <label for="ret-save">Future Retirement Savings</label>
+                <input type="number" id="ret-save" value="10" min="0" step="any">
+              </div>
+              <select id="ret-save-type" class="unit-select">
+                <option value="pct" selected>%</option>
+                <option value="dollar">$/yr</option>
+              </select>
+            </div>
+            <p style="font-size:12px;color:var(--text-secondary);margin:-8px 0 16px;">% is of your income each year. $/yr is a fixed amount saved each year.</p>
+            <div class="field-group">
+              <label for="ret-save-inc">Yearly Increase in $ Savings (%, only used with $/yr)</label>
+              <input type="number" id="ret-save-inc" value="0" step="0.1">
+            </div>
+          </div>
+
+          <div data-modes="2">
+            <div class="field-group">
+              <label for="ret-target">Amount Needed at Retirement ($)</label>
+              <input type="number" id="ret-target" value="600000" min="0" step="10000">
+            </div>
+          </div>
+
+          <div data-modes="1 2 3">
+            <div class="field-group">
+              <label for="ret-savings">Current Retirement Savings ($)</label>
+              <input type="number" id="ret-savings" value="30000" min="0" step="1000">
+            </div>
+          </div>
+
+          <div data-modes="3">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="ret-annual">Annual Contribution ($)</label>
+                <input type="number" id="ret-annual" value="0" min="0" step="100">
+              </div>
+              <div class="field-group">
+                <label for="ret-monthly">Monthly Contribution ($)</label>
+                <input type="number" id="ret-monthly" value="500" min="0" step="50">
+              </div>
+            </div>
+          </div>
+
+          <div data-modes="4">
+            <div class="field-group">
+              <label for="ret-amount">Amount You Have ($)</label>
+              <input type="number" id="ret-amount" value="600000" min="0" step="10000">
+            </div>
+            <div class="field-group">
+              <label for="ret-withdraw">Planned Withdrawal ($/mo)</label>
+              <input type="number" id="ret-withdraw" value="5000" min="0" step="100">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="ret-return">Average Investment Return (%/yr)</label>
+            <input type="number" id="ret-return" value="6" step="0.1">
+          </div>
+
+          <div data-modes="1 3">
+            <div class="field-group">
+              <label for="ret-inflation">Inflation Rate (%/yr)</label>
+              <input type="number" id="ret-inflation" value="3" step="0.1">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="ret-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="ret-results-section" hidden>
+      <h2 style="margin:0 0 16px;font-size:18px;">Projected Balance by Age</h2>
+      <div id="ret-chart" style="margin-bottom:20px;"></div>
+      <div class="schedule-table-wrap">
+        <div id="ret-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the estimate works</h2>
+      <p>The calculator works in two stages. While you are working, your balance grows each year with investment returns plus whatever you add. Once you retire, it pays for your spending: each month a withdrawal comes out, with the monthly amount rising with inflation once a year, and what is left keeps earning returns. The amount you need at retirement is the lump sum that would fund those inflation-adjusted withdrawals until your life expectancy, with the balance running down to about zero at the end.</p>
+
+      <h2>What you should plan to spend</h2>
+      <p>A common rule of thumb is that retirees need roughly 70% to 80% of their pre-retirement income to keep the same standard of living, since work costs and saving for retirement drop away. That is only a starting point. If you expect to travel a lot, carry a mortgage into retirement, or face high healthcare costs, you may want a higher figure, and you can enter an exact yearly dollar amount instead.</p>
+
+      <h2>Choosing a return and inflation rate</h2>
+      <p>Small changes in these two assumptions move the result a lot over decades. Returns on a diversified portfolio are never guaranteed, and a more cautious return is a reasonable choice as you near retirement. Inflation has historically run at around two to three percent a year in many economies, but it varies, so it is worth testing a higher rate to see how sensitive your plan is.</p>
+      <div class="callout">This calculator gives an estimate for planning and learning, not financial advice. It does not model taxes, changing markets, or one-off expenses, so consider speaking with a qualified adviser before making decisions.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Are the results in today's dollars or future dollars?</h3>
+        <p>The main figures are in future dollars, meaning what the money will actually be worth in the year you retire. Where it matters, the calculator also shows today's-dollar equivalents so you can compare them with what things cost now.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is this different from the 4% rule?</h3>
+        <p>The 4% rule is a quick shortcut that assumes a fixed withdrawal rate over roughly 30 years. This calculator instead projects your withdrawals month by month, raising them with inflation each year while the remaining balance keeps earning returns, so the answer adapts to your own retirement length and return assumptions.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How are withdrawals timed in retirement?</h3>
+        <p>Spending that rises with inflation is modeled as monthly withdrawals taken at the start of each month, with the monthly amount stepping up once a year. A fixed withdrawal that never increases is modeled at the end of each month. Real-world timing varies a little, so treat the results as estimates.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the calculator include taxes or Social Security?</h3>
+        <p>Taxes are not modeled, so results are before tax. Use the other income field for Social Security, a pension, or any other monthly income you expect after retiring, entered in today's dollars. It is adjusted for inflation and reduces how much you need to draw from savings.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="savings-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Savings Calculator</h3>
+        <p>Project how a savings balance grows with regular contributions.</p>
+      </a>
+
+      <a class="calc-list-card" href="investment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Investment Calculator</h3>
+        <p>Estimate the future value of an investment with regular contributions.</p>
+      </a>
+
+      <a class="calc-list-card" href="compound-interest-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Compound Interest Calculator</h3>
+        <p>Calculate how savings grow when interest compounds over time.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/retirement-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
