@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gravel Calculator - CalcBundle</title>
+<meta name="description" content="Find how much gravel you need in cubic yards, cubic meters, tons and bags, for a rectangular or circular area at the depth you choose.">
+<link rel="canonical" href="https://calcbundle.net/calculators/gravel-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Gravel Calculator - CalcBundle">
+<meta property="og:description" content="Find how much gravel you need in cubic yards, cubic meters, tons and bags, for a rectangular or circular area at the depth you choose.">
+<meta property="og:url" content="https://calcbundle.net/calculators/gravel-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gravel Calculator - CalcBundle">
+<meta name="twitter:description" content="Find how much gravel you need in cubic yards, cubic meters, tons and bags, for a rectangular or circular area at the depth you choose.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate cubic yards of gravel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply length by width by depth, all in feet, and divide by 27. For 20 by 10 feet at a depth of 0.25 foot, that is 50 divided by 27, or about 1.85 cubic yards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a cubic yard of gravel weigh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 1.4 to 1.5 short tons, or around 2,800 to 3,000 pounds, depending on the stone and how wet it is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How deep should gravel be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A driveway usually needs 4 to 6 inches, a path 2 to 3 inches, and a drainage bed anywhere from 6 inches to a foot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I order extra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Add 5 to 10 percent because gravel compacts after it is spread."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the area of a circle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pick the circle shape and enter the diameter. The area is pi times the radius squared."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Gravel Calculator</span>
+    </div>
+    <h1>Gravel Calculator</h1>
+    <p>Enter the size of the area and the depth of gravel to find the volume, the weight and the cost.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Gravel Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Works for driveways, paths, drainage beds and more.</p>
+    <form id="gr-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group"><label for="gr-mode">Area Shape</label><select id="gr-mode" class="unit-select"><option value="rect" selected>Rectangle</option><option value="circ">Circle</option><option value="area">Known area</option></select></div>
+          <div id="gr-rect-box">
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="gr-l">Length</label><input type="number" id="gr-l" value="20" min="0" step="any"></div>
+            <select id="gr-l-unit" class="unit-select" aria-label="Length unit"><option value="inch">in</option><option value="foot" selected>ft</option><option value="centimeter">cm</option><option value="mm">mm</option><option value="meter">m</option><option value="yard">yd</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="gr-w">Width</label><input type="number" id="gr-w" value="10" min="0" step="any"></div>
+            <select id="gr-w-unit" class="unit-select" aria-label="Width unit"><option value="inch">in</option><option value="foot" selected>ft</option><option value="centimeter">cm</option><option value="mm">mm</option><option value="meter">m</option><option value="yard">yd</option></select>
+          </div>
+          </div>
+          <div class="field-with-toggle" id="gr-circ-box">
+            <div class="field-group"><label for="gr-d">Diameter</label><input type="number" id="gr-d" value="10" min="0" step="any"></div>
+            <select id="gr-d-unit" class="unit-select" aria-label="Diameter unit"><option value="inch">in</option><option value="foot" selected>ft</option><option value="centimeter">cm</option><option value="mm">mm</option><option value="meter">m</option><option value="yard">yd</option></select>
+          </div>
+          <div class="field-with-toggle" id="gr-area-box">
+            <div class="field-group"><label for="gr-area">Area</label><input type="number" id="gr-area" value="200" min="0" step="any"></div>
+            <select id="gr-area-unit" class="unit-select" aria-label="Area unit"><option value="foot" selected>ft²</option><option value="meter">m²</option><option value="yard">yd²</option><option value="inch">in²</option><option value="centimeter">cm²</option><option value="acre">acre</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="gr-depth">Depth of Gravel</label><input type="number" id="gr-depth" value="3" min="0" step="any"></div>
+            <select id="gr-depth-unit" class="unit-select" aria-label="Depth of Gravel unit"><option value="inch" selected>in</option><option value="foot">ft</option><option value="centimeter">cm</option><option value="mm">mm</option><option value="meter">m</option><option value="yard">yd</option></select>
+          </div>
+          <div class="field-group"><label for="gr-type">Material</label><select id="gr-type" class="unit-select"><option value="gravel" selected>Gravel, stones 0.2 to 2 inches (1,680 kg/m³)</option><option value="gravelsand">Gravel with sand (1,920 kg/m³)</option><option value="drysand">Dry sand (1,500 kg/m³)</option><option value="wetsand">Wet sand (1,900 kg/m³)</option><option value="own">Enter my own density</option></select></div>
+          <div class="field-with-toggle" id="gr-own-box">
+            <div class="field-group"><label for="gr-density">Density</label><input type="number" id="gr-density" value="1680" min="0" step="any"></div>
+            <select id="gr-density-unit" class="unit-select" aria-label="Density unit"><option value="kgm" selected>kg/m³</option><option value="gcm">g/cm³</option><option value="lbf">lb/ft³</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="gr-price">Price (optional)</label><input type="number" id="gr-price" value="" min="0" step="any" placeholder="Optional"></div>
+            <select id="gr-price-unit" class="unit-select" aria-label="Price per"><option value="f">/ ft³</option><option value="y" selected>/ yd³</option><option value="m">/ m³</option><option value="l">/ liter</option><option value="p">/ lb</option><option value="st">/ short ton</option><option value="k">/ kg</option><option value="t">/ metric ton</option><option value="b">/ bag</option></select>
+          </div>
+          <div class="field-with-toggle" id="gr-bag-box">
+            <div class="field-group"><label for="gr-bag">Size of a Bag</label><input type="number" id="gr-bag" value="0.5" min="0" step="any"></div>
+            <select id="gr-bag-unit" class="unit-select" aria-label="Bag size unit"><option value="f" selected>ft³</option><option value="l">liters</option><option value="b">lb</option><option value="k">kg</option></select>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="gr-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How much gravel is needed</h2>
+      <p>The volume is the area multiplied by the depth. A 20 by 10 foot area covered 3 inches deep is 200 square feet times 0.25 foot, which is 50 cubic feet, or about 1.85 cubic yards. The calculator shows the volume in cubic yards, cubic meters, cubic feet and liters.</p>
+
+      <h2>Weight</h2>
+      <p>Gravel is sold by weight as well as by volume. The weight is the volume times the density of the material. Loose gravel weighs about 1,680 kilograms per cubic meter, which is about 105 pounds per cubic foot. Sand, wet material, and gravel mixed with sand are heavier or lighter, so pick the closest material or enter your own density.</p>
+
+      <h2>Getting the amount right</h2>
+      <p>Gravel settles and packs down after it is spread, so order a little extra, often 5 to 10 percent. Delivery yards usually sell by the cubic yard or by the ton. If you buy by the bag, enter the bag size to see how many to buy.</p>
+      <div class="callout">This is only an estimate. The weight depends on the type of stone, how tightly it is packed and how wet it is.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate cubic yards of gravel?</h3>
+        <p>Multiply length by width by depth, all in feet, and divide by 27. For 20 by 10 feet at a depth of 0.25 foot, that is 50 divided by 27, or about 1.85 cubic yards.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much does a cubic yard of gravel weigh?</h3>
+        <p>About 1.4 to 1.5 short tons, or around 2,800 to 3,000 pounds, depending on the stone and how wet it is.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How deep should gravel be?</h3>
+        <p>A driveway usually needs 4 to 6 inches, a path 2 to 3 inches, and a drainage bed anywhere from 6 inches to a foot.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I order extra?</h3>
+        <p>Yes. Add 5 to 10 percent because gravel compacts after it is spread.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I find the area of a circle?</h3>
+        <p>Pick the circle shape and enter the diameter. The area is pi times the radius squared.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="concrete-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Concrete Calculator</h3>
+        <p>How much concrete a slab needs.</p>
+      </a>
+
+      <a class="calc-list-card" href="mulch-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mulch Calculator</h3>
+        <p>How much mulch to cover a bed.</p>
+      </a>
+
+      <a class="calc-list-card" href="square-footage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Square Footage Calculator</h3>
+        <p>Find the area of a room or shape.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/building-common.js"></script>
+<script src="../js/gravel-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

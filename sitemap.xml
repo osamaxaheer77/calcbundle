@@ -780,4 +780,20 @@
     <loc>https://calcbundle.net/calculators/day-of-the-week-calculator.html</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/btu-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/stair-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/tile-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/gravel-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>

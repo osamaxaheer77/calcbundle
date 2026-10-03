@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stair Calculator - CalcBundle</title>
+<meta name="description" content="Work out the rise, run, number of steps, stringer length and angle of a staircase, with optional tread thickness, headroom check and flush mount.">
+<link rel="canonical" href="https://calcbundle.net/calculators/stair-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Stair Calculator - CalcBundle">
+<meta property="og:description" content="Work out the rise, run, number of steps, stringer length and angle of a staircase, with optional tread thickness, headroom check and flush mount.">
+<meta property="og:url" content="https://calcbundle.net/calculators/stair-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Stair Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out the rise, run, number of steps, stringer length and angle of a staircase, with optional tread thickness, headroom check and flush mount.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate the rise of a stair?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the total rise, the height between floors, by the number of risers. For 105 inches and 15 risers, each rise is 7 inches."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many steps does a staircase have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is one more riser than there are runs. A staircase with 15 risers has 14 treads on the stringer, because the upper floor works as the last tread."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the stringer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The stringer is the sloping board, usually cut from lumber, that supports the treads and risers. Most stairs use two or three."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good angle for stairs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most home stairs are between about 30 and 37 degrees. Stairs steeper than about 42 degrees are hard to climb safely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does flush mount mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means the stringer is fastened flush with the top of the upper floor, so the number of runs equals the number of risers and the stringer height equals the total rise."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Stair Calculator</span>
+    </div>
+    <h1>Stair Calculator</h1>
+    <p>Enter the height and run of your stairs to find the rise of each step, the stringer length, the angle, and more.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Stair Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Everything is calculated live as you type. Answers are shown in feet and inches, and in centimeters.</p>
+    <form id="st-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group"><label for="st-rtype">Run</label><select id="st-rtype" class="unit-select"><option value="one" selected>Use one run (depth of a step)</option><option value="total">Use the total run</option></select></div>
+          <div class="field-with-toggle" id="st-run-box">
+            <div class="field-group"><label for="st-run">Run</label><input type="number" id="st-run" value="10" min="0" step="any"></div>
+            <select id="st-run-unit" class="unit-select" aria-label="Run unit"><option value="foot">ft</option><option value="inch" selected>in</option><option value="meter">m</option><option value="centimeter">cm</option></select>
+          </div>
+          <div class="field-with-toggle" id="st-trun-box">
+            <div class="field-group"><label for="st-trun">Total Run</label><input type="number" id="st-trun" value="140" min="0" step="any"></div>
+            <select id="st-trun-unit" class="unit-select" aria-label="Total Run unit"><option value="foot">ft</option><option value="inch" selected>in</option><option value="meter">m</option><option value="centimeter">cm</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="st-h">Total Rise</label><input type="number" id="st-h" value="105" min="0" step="any"></div>
+            <select id="st-h-unit" class="unit-select" aria-label="Total Rise unit"><option value="foot">ft</option><option value="inch" selected>in</option><option value="meter">m</option><option value="centimeter">cm</option></select>
+          </div>
+          <div class="field-group"><label for="st-rmode">Steps</label><select id="st-rmode" class="unit-select"><option value="rise" selected>Fixed rise (step height)</option><option value="steps">Fixed number of steps</option></select></div>
+          <div class="field-with-toggle" id="st-rise-box">
+            <div class="field-group"><label for="st-rise">Rise (Step Height)</label><input type="number" id="st-rise" value="7" min="0" step="any"></div>
+            <select id="st-rise-unit" class="unit-select" aria-label="Rise (Step Height) unit"><option value="foot">ft</option><option value="inch" selected>in</option><option value="meter">m</option><option value="centimeter">cm</option></select>
+          </div>
+          <div class="field-group" id="st-steps-box"><label for="st-steps">Number of Steps</label><input type="number" id="st-steps" value="14" min="0" step="any" step="any"></div>
+          <div class="field-group"><label for="st-tread">Tread</label><select id="st-tread" class="unit-select"><option value="no" selected>No tread</option><option value="yes">Has tread</option></select></div>
+          <div class="field-with-toggle" id="st-tread-box">
+            <div class="field-group"><label for="st-tt">Tread Thickness</label><input type="number" id="st-tt" value="1" min="0" step="any"></div>
+            <select id="st-tt-unit" class="unit-select" aria-label="Tread Thickness unit"><option value="foot">ft</option><option value="inch" selected>in</option><option value="meter">m</option><option value="centimeter">cm</option></select>
+          </div>
+          <div class="field-group"><label for="st-head">Headroom</label><select id="st-head" class="unit-select"><option value="no" selected>No headroom restriction</option><option value="yes">Has headroom restriction</option></select></div>
+          <div id="st-head-box">
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="st-fo">Floor Opening Length</label><input type="number" id="st-fo" value="7" min="0" step="any"></div>
+            <select id="st-fo-unit" class="unit-select" aria-label="Floor Opening Length unit"><option value="foot" selected>ft</option><option value="inch">in</option><option value="meter">m</option><option value="centimeter">cm</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="st-ft">Floor Thickness</label><input type="number" id="st-ft" value="8" min="0" step="any"></div>
+            <select id="st-ft-unit" class="unit-select" aria-label="Floor Thickness unit"><option value="foot">ft</option><option value="inch" selected>in</option><option value="meter">m</option><option value="centimeter">cm</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="st-hr">Headroom Needed</label><input type="number" id="st-hr" value="80" min="0" step="any"></div>
+            <select id="st-hr-unit" class="unit-select" aria-label="Headroom Needed unit"><option value="foot">ft</option><option value="inch" selected>in</option><option value="meter">m</option><option value="centimeter">cm</option></select>
+          </div>
+          </div>
+          <div class="field-group"><label for="st-mount">Mount</label><select id="st-mount" class="unit-select"><option value="s" selected>Standard stringer mount</option><option value="f">Flush stringer mount</option></select></div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="st-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Basic Version</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">List the choices that keep each step between 5 and 10 inches high, for a given total rise and run.</p>
+    <form id="sb-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group"><label for="sb-rtype">Run</label><select id="sb-rtype" class="unit-select"><option value="one" selected>Use one run (depth of a step)</option><option value="total">Use the total run</option></select></div>
+          <div class="field-with-toggle" id="sb-run-box">
+            <div class="field-group"><label for="sb-run">Run</label><input type="number" id="sb-run" value="10" min="0" step="any"></div>
+            <select id="sb-run-unit" class="unit-select" aria-label="Run unit"><option value="foot">ft</option><option value="inch" selected>in</option><option value="meter">m</option><option value="centimeter">cm</option></select>
+          </div>
+          <div class="field-with-toggle" id="sb-trun-box">
+            <div class="field-group"><label for="sb-trun">Total Run</label><input type="number" id="sb-trun" value="140" min="0" step="any"></div>
+            <select id="sb-trun-unit" class="unit-select" aria-label="Total Run unit"><option value="foot">ft</option><option value="inch" selected>in</option><option value="meter">m</option><option value="centimeter">cm</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="sb-h">Total Rise</label><input type="number" id="sb-h" value="105" min="0" step="any"></div>
+            <select id="sb-h-unit" class="unit-select" aria-label="Total Rise unit"><option value="foot">ft</option><option value="inch" selected>in</option><option value="meter">m</option><option value="centimeter">cm</option></select>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="sb-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">The parts of a stair</h2>
+      <p>The total rise is the height from the lower floor to the upper floor. The rise of a step is the height of one step, and the run is its depth. The stringer is the sloping board that holds the treads and risers. A staircase with N steps has one more riser than it has runs, because the top step is the upper floor itself.</p>
+
+      <h2>How the calculator works</h2>
+      <p>With a fixed rise, it divides the total rise by the rise you want and rounds up to a whole number of risers. The first step may be shorter than the rest, and the result shows its height. With a fixed number of steps, every rise is the same. The stringer height is the total rise less one rise, and the stringer length follows from the Pythagorean theorem using that height and the total run. The angle is the arctangent of rise over run.</p>
+
+      <h2>Treads, headroom and mounting</h2>
+      <p>If the treads have thickness, the first step is shorter by that thickness, and the stringer is cut lower by the same amount. The headroom check finds the height of the stairs under the start of the floor opening and measures what is left below the underside of the upper floor. If the headroom is too small, the result says how long the opening has to be. A flush mount puts the stringer against the upper floor with a run for every riser, so the stringer height equals the full rise.</p>
+
+      <h2>Common rules</h2>
+      <p>Many building codes limit the rise to about 7 3/4 inches and ask for a run of at least 10 inches, with a headroom of 6 feet 8 inches. The basic version lists the choices with a rise between 5 and 10 inches. Check the codes where you live, since they differ, and have a qualified builder check your plan.</p>
+      <div class="callout">These results are a guide. Local building codes set the maximum rise, minimum run and headroom for stairs.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate the rise of a stair?</h3>
+        <p>Divide the total rise, the height between floors, by the number of risers. For 105 inches and 15 risers, each rise is 7 inches.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many steps does a staircase have?</h3>
+        <p>There is one more riser than there are runs. A staircase with 15 risers has 14 treads on the stringer, because the upper floor works as the last tread.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the stringer?</h3>
+        <p>The stringer is the sloping board, usually cut from lumber, that supports the treads and risers. Most stairs use two or three.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a good angle for stairs?</h3>
+        <p>Most home stairs are between about 30 and 37 degrees. Stairs steeper than about 42 degrees are hard to climb safely.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does flush mount mean?</h3>
+        <p>It means the stringer is fastened flush with the top of the upper floor, so the number of runs equals the number of risers and the stringer height equals the total rise.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="concrete-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Concrete Calculator</h3>
+        <p>How much concrete a slab needs.</p>
+      </a>
+
+      <a class="calc-list-card" href="square-footage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Square Footage Calculator</h3>
+        <p>Find the area of a room or shape.</p>
+      </a>
+
+      <a class="calc-list-card" href="roofing-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Roofing Calculator</h3>
+        <p>Estimate roof area and materials.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/building-common.js"></script>
+<script src="../js/stair-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

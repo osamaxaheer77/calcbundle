@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BTU Calculator - CalcBundle</title>
+<meta name="description" content="Estimate the BTU per hour of cooling or heating a room or a whole house needs, from its size, ceiling height, insulation, sun and climate.">
+<link rel="canonical" href="https://calcbundle.net/calculators/btu-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="BTU Calculator - CalcBundle">
+<meta property="og:description" content="Estimate the BTU per hour of cooling or heating a room or a whole house needs, from its size, ceiling height, insulation, sun and climate.">
+<meta property="og:url" content="https://calcbundle.net/calculators/btu-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="BTU Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate the BTU per hour of cooling or heating a room or a whole house needs, from its size, ceiling height, insulation, sun and climate.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many BTU do I need per square foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A common rule of thumb is about 20 BTU per hour for each square foot of floor space, and this calculator adds a base amount and adjustments for the ceiling, insulation, sun, climate, people and room type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many BTU is a 1-ton air conditioner?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One ton of cooling is 12,000 BTU per hour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I round up or down?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Round up to the next common size. Slightly oversizing is fine, but a unit that is much too large will cycle on and off and handle humidity poorly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert BTU per hour to watts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply by 0.293. A 10,000 BTU per hour unit is about 2,930 watts of heat moved."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work for heating too?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The whole house method works for heating or cooling, since it is based on the temperature difference. The room method is aimed at cooling but is also a reasonable guide for heating."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">BTU Calculator</span>
+    </div>
+    <h1>BTU Calculator</h1>
+    <p>Find roughly how many BTU per hour an air conditioner or heater needs to keep a room, or a whole house, comfortable.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">BTU for a Room</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Describe the room to estimate the cooling or heating capacity it needs.</p>
+    <form id="ac-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="ac-size">Room Size</label><input type="number" id="ac-size" value="200" min="0" step="any"></div>
+            <select id="ac-size-unit" class="unit-select" aria-label="Room Size unit"><option value="feet" selected>ft²</option><option value="meters">m²</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="ac-h">Ceiling Height</label><input type="number" id="ac-h" value="8" min="0" step="any"></div>
+            <select id="ac-h-unit" class="unit-select" aria-label="Ceiling Height unit"><option value="feet" selected>ft</option><option value="meters">m</option></select>
+          </div>
+          <div class="field-group"><label for="ac-people">People Usually in the Room</label><input type="number" id="ac-people" value="2" min="0" step="any" step="1"></div>
+          <div class="field-group"><label for="ac-type">Type</label><select id="ac-type" class="unit-select"><option value="bedroom" selected>Bedroom</option><option value="living">Living room</option><option value="kitchen">Kitchen</option><option value="house">Entire house</option><option value="first">Entire first floor</option><option value="second">Entire second floor or above</option></select></div>
+          <div class="field-group"><label for="ac-ins">Insulation</label><select id="ac-ins" class="unit-select"><option value="good">Good, few leaks or windows</option><option value="normal" selected>Average</option><option value="poor">Poor, many leaks or windows</option></select></div>
+          <div class="field-group"><label for="ac-sun">Sun Exposure</label><select id="ac-sun" class="unit-select"><option value="shaded">Heavily shaded</option><option value="normal" selected>Average</option><option value="sunny">Very sunny</option></select></div>
+          <div class="field-group"><label for="ac-climate">Climate</label><select id="ac-climate" class="unit-select"><option value="cold">Cold, like Boston</option><option value="normal" selected>Average</option><option value="hot">Hot, like Houston</option></select></div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="ac-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">BTU for a Whole House</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Heat loss or gain through the walls and ceiling for a given temperature difference between inside and outside.</p>
+    <form id="hc-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="hc-w">House Width</label><input type="number" id="hc-w" value="20" min="0" step="any"></div>
+            <select id="hc-w-unit" class="unit-select" aria-label="House Width unit"><option value="feet" selected>ft</option><option value="meters">m</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="hc-l">House Length</label><input type="number" id="hc-l" value="15" min="0" step="any"></div>
+            <select id="hc-l-unit" class="unit-select" aria-label="House Length unit"><option value="feet" selected>ft</option><option value="meters">m</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="hc-h">Ceiling Height</label><input type="number" id="hc-h" value="8" min="0" step="any"></div>
+            <select id="hc-h-unit" class="unit-select" aria-label="Ceiling Height unit"><option value="feet" selected>ft</option><option value="meters">m</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="hc-t">Temperature Difference</label><input type="number" id="hc-t" value="45" min="0" step="any"></div>
+            <select id="hc-t-unit" class="unit-select" aria-label="Temperature Difference unit"><option value="f" selected>°F</option><option value="c">°C</option></select>
+          </div>
+          <div class="field-group"><label for="hc-ins">Insulation</label><select id="hc-ins" class="unit-select"><option value="good">Good</option><option value="normal" selected>Average</option><option value="poor">Poor</option></select></div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="hc-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What a BTU is</h2>
+      <p>A BTU, or British thermal unit, is a measure of heat. One BTU is about the heat needed to warm one pound of water by one degree Fahrenheit. Air conditioners and heaters are rated in BTU per hour, which tells you how much heat they can move in an hour. One BTU per hour is about 0.293 watt, and 12,000 BTU per hour is called one ton of cooling.</p>
+
+      <h2>How the room estimate works</h2>
+      <p>The calculator starts with a base of 20 BTU per hour for every square foot, plus 2,500 BTU per hour. Ceilings taller than 8 feet add more, and larger rooms add more still. The result is then multiplied for poor or good insulation, for a very sunny or shaded room and for a hot or cold climate. Each person beyond the first two adds 600 BTU per hour, a kitchen adds 4,000, a living room adds 1,000, and a second floor adds 10 percent because heat rises.</p>
+
+      <h2>How the house estimate works</h2>
+      <p>This method adds up the surface area of the walls and the ceiling, which is the floor area plus the area of the four walls. It multiplies by the temperature difference you want to hold and by a number for how well the house keeps heat in: 0.24 for good insulation, 0.40 for average and 0.84 for poor. Use the difference between the hottest or coldest day and the temperature you want inside.</p>
+
+      <h2>Picking a unit</h2>
+      <p>A unit that is too small will run all day and never catch up. A unit that is too large will switch on and off too often, which wastes power and does a poor job of removing moisture. Round up to the nearest size sold, and have a professional check the load for a whole house, since windows, doors, and air leaks matter a great deal.</p>
+      <div class="callout">These are rough estimates for planning. For a whole house, ask an installer for a full load calculation.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How many BTU do I need per square foot?</h3>
+        <p>A common rule of thumb is about 20 BTU per hour for each square foot of floor space, and this calculator adds a base amount and adjustments for the ceiling, insulation, sun, climate, people and room type.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many BTU is a 1-ton air conditioner?</h3>
+        <p>One ton of cooling is 12,000 BTU per hour.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I round up or down?</h3>
+        <p>Round up to the next common size. Slightly oversizing is fine, but a unit that is much too large will cycle on and off and handle humidity poorly.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I convert BTU per hour to watts?</h3>
+        <p>Multiply by 0.293. A 10,000 BTU per hour unit is about 2,930 watts of heat moved.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it work for heating too?</h3>
+        <p>The whole house method works for heating or cooling, since it is based on the temperature difference. The room method is aimed at cooling but is also a reasonable guide for heating.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="square-footage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Square Footage Calculator</h3>
+        <p>Find the area of a room or shape.</p>
+      </a>
+
+      <a class="calc-list-card" href="roofing-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Roofing Calculator</h3>
+        <p>Estimate roof area and materials.</p>
+      </a>
+
+      <a class="calc-list-card" href="area-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Area Calculator</h3>
+        <p>Area of common shapes.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/building-common.js"></script>
+<script src="../js/btu-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

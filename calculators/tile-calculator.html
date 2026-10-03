@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tile Calculator - CalcBundle</title>
+<meta name="description" content="Find how many tiles and boxes you need to cover an area, with the gap between tiles, extra for waste and the total cost.">
+<link rel="canonical" href="https://calcbundle.net/calculators/tile-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Tile Calculator - CalcBundle">
+<meta property="og:description" content="Find how many tiles and boxes you need to cover an area, with the gap between tiles, extra for waste and the total cost.">
+<meta property="og:url" content="https://calcbundle.net/calculators/tile-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tile Calculator - CalcBundle">
+<meta name="twitter:description" content="Find how many tiles and boxes you need to cover an area, with the gap between tiles, extra for waste and the total cost.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many tiles do I need for a floor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the area of the floor by the area of one tile, including its gap, and round up. Then add 5 to 10 percent for cuts and breakage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much extra tile should I buy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plan on 5 to 10 percent extra. Use more, around 15 percent, for diagonal patterns or rooms with many corners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I include the grout gap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The gap adds to the size each tile takes up. It makes a small difference for large tiles and a bigger one for small tiles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the area of a room?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the length by the width. For a room of 20 by 15 feet, the area is 300 square feet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find tiles per box?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is printed on the box, along with the area the box covers. Enter the tiles per box here to see how many boxes to buy."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Tile Calculator</span>
+    </div>
+    <h1>Tile Calculator</h1>
+    <p>Enter the area and the size of your tiles to find how many tiles, and how many boxes, you need to buy.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Tile Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Count the tiles for a floor, a wall or any other area.</p>
+    <form id="tl-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group"><label for="tl-mode">Area Given As</label><select id="tl-mode" class="unit-select"><option value="area" selected>Area</option><option value="dims">Length and width</option></select></div>
+          <div class="field-with-toggle" id="tl-area-box">
+            <div class="field-group"><label for="tl-area">Area to Cover</label><input type="number" id="tl-area" value="300" min="0" step="any"></div>
+            <select id="tl-area-unit" class="unit-select" aria-label="Area to Cover unit"><option value="foot" selected>ft²</option><option value="meter">m²</option><option value="yard">yd²</option><option value="inch">in²</option><option value="centimeter">cm²</option></select>
+          </div>
+          <div id="tl-dim-box">
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="tl-al">Area Length</label><input type="number" id="tl-al" value="20" min="0" step="any"></div>
+            <select id="tl-al-unit" class="unit-select" aria-label="Area Length unit"><option value="inch">in</option><option value="foot" selected>ft</option><option value="centimeter">cm</option><option value="mm">mm</option><option value="meter">m</option><option value="yard">yd</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="tl-aw">Area Width</label><input type="number" id="tl-aw" value="15" min="0" step="any"></div>
+            <select id="tl-aw-unit" class="unit-select" aria-label="Area Width unit"><option value="inch">in</option><option value="foot" selected>ft</option><option value="centimeter">cm</option><option value="mm">mm</option><option value="meter">m</option><option value="yard">yd</option></select>
+          </div>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="tl-tl">Tile Length</label><input type="number" id="tl-tl" value="12" min="0" step="any"></div>
+            <select id="tl-tl-unit" class="unit-select" aria-label="Tile Length unit"><option value="inch" selected>in</option><option value="foot">ft</option><option value="centimeter">cm</option><option value="mm">mm</option><option value="meter">m</option><option value="yard">yd</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="tl-tw">Tile Width</label><input type="number" id="tl-tw" value="12" min="0" step="any"></div>
+            <select id="tl-tw-unit" class="unit-select" aria-label="Tile Width unit"><option value="inch" selected>in</option><option value="foot">ft</option><option value="centimeter">cm</option><option value="mm">mm</option><option value="meter">m</option><option value="yard">yd</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="tl-gap">Gap Between Tiles (negative for overlap)</label><input type="number" id="tl-gap" value="0.25" step="any"></div>
+            <select id="tl-gap-unit" class="unit-select" aria-label="Gap Between Tiles (negative for overlap) unit"><option value="inch" selected>in</option><option value="foot">ft</option><option value="centimeter">cm</option><option value="mm">mm</option><option value="meter">m</option><option value="yard">yd</option></select>
+          </div>
+          <div class="field-group"><label for="tl-box">Tiles per Box (optional)</label><input type="number" id="tl-box" value="" min="0" step="any" placeholder="Optional"></div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="tl-price">Price (optional)</label><input type="number" id="tl-price" value="" min="0" step="any" placeholder="Optional"></div>
+            <select id="tl-price-unit" class="unit-select" aria-label="Price per"><option value="tile" selected>/ tile</option><option value="box">/ box</option><option value="foot">/ ft²</option><option value="inch">/ in²</option><option value="yard">/ yd²</option><option value="meter">/ m²</option><option value="cm">/ cm²</option></select>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="tl-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the tiles are counted</h2>
+      <p>Each tile takes up its own size plus the gap, which is the grout line, so a 12 inch tile with a 0.25 inch gap covers a 12.25 inch square. The calculator divides the area by the area of one tile with its gap and rounds up to a whole tile. If you also give the number of tiles in a box, it rounds up to a whole number of boxes.</p>
+
+      <h2>Allow for waste</h2>
+      <p>Tiles get cut around edges and corners, and some break or have flaws. Most installers buy 5 to 10 percent more than the count. The result shows that range in tiles and boxes, and in cost if you enter a price. Buy extra tiles from the same batch, since the shade can change a little from one batch to the next.</p>
+
+      <h2>Pricing</h2>
+      <p>You can price tiles by the tile, by the box, or by area in square feet, inches, yards, meters or centimeters. Pricing by the box uses the number of boxes rounded up, and pricing by the tile uses the rounded up number of tiles. Pricing by area uses the exact area to cover, with no waste.</p>
+      <div class="callout">Layout patterns such as diagonal or herringbone use more tile. Add more for waste in those cases.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How many tiles do I need for a floor?</h3>
+        <p>Divide the area of the floor by the area of one tile, including its gap, and round up. Then add 5 to 10 percent for cuts and breakage.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much extra tile should I buy?</h3>
+        <p>Plan on 5 to 10 percent extra. Use more, around 15 percent, for diagonal patterns or rooms with many corners.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I include the grout gap?</h3>
+        <p>Yes. The gap adds to the size each tile takes up. It makes a small difference for large tiles and a bigger one for small tiles.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I find the area of a room?</h3>
+        <p>Multiply the length by the width. For a room of 20 by 15 feet, the area is 300 square feet.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I find tiles per box?</h3>
+        <p>It is printed on the box, along with the area the box covers. Enter the tiles per box here to see how many boxes to buy.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="square-footage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Square Footage Calculator</h3>
+        <p>Find the area of a room or shape.</p>
+      </a>
+
+      <a class="calc-list-card" href="area-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Area Calculator</h3>
+        <p>Area of common shapes.</p>
+      </a>
+
+      <a class="calc-list-card" href="concrete-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Concrete Calculator</h3>
+        <p>How much concrete a slab needs.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/building-common.js"></script>
+<script src="../js/tile-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
