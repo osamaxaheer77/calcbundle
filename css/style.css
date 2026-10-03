@@ -17,8 +17,11 @@
   --cat-math-tint: #e9eafe;
   --cat-other: #63707d;
   --cat-other-tint: #eceef1;
-  --cat-crypto: #d97706;
-  --cat-crypto-tint: #fef3c7;
+  --cat-crypto: #0e7490;
+  --cat-crypto-tint: #cffafe;
+  --cat-crypto-gold: #f59e0b;
+  --cat-crypto-gold-tint: #fef3c7;
+  --cat-crypto-blue: #0891b2;
 
   --radius-lg: 20px;
   --radius-md: 14px;
@@ -662,8 +665,8 @@ a.calc-simple-item:hover .calc-simple-dot {
 .cat-other .explore-btn::before { background: var(--cat-other); }
 
 .cat-crypto { color: var(--cat-crypto); }
-.cat-crypto .category-illustration { background: var(--cat-crypto-tint); }
-.cat-crypto .category-badge { background: var(--cat-crypto); }
+.cat-crypto .category-illustration { background: linear-gradient(135deg, var(--cat-crypto-gold-tint) 0%, var(--cat-crypto-tint) 100%); }
+.cat-crypto .category-badge { background: #fbbf24; color: #1f2937; }
 .cat-crypto .explore-btn::before { background: var(--cat-crypto); }
 
 /* ===== Footer ===== */
