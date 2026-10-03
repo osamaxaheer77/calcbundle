@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day Counter - CalcBundle</title>
+<meta name="description" content="Count the days between two dates, including weekends, holidays and business days, or find the date a number of days or business days before or after a date.">
+<link rel="canonical" href="https://calcbundle.net/calculators/day-counter.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Day Counter - CalcBundle">
+<meta property="og:description" content="Count the days between two dates, including weekends, holidays and business days, or find the date a number of days or business days before or after a date.">
+<meta property="og:url" content="https://calcbundle.net/calculators/day-counter.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Day Counter - CalcBundle">
+<meta name="twitter:description" content="Count the days between two dates, including weekends, holidays and business days, or find the date a number of days or business days before or after a date.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I count the days between two dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subtract the earlier date from the later one. This calculator does it for you and can add 1 to include the end day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are business days counted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are the weekdays, Monday to Friday, in the period, minus any holidays that fall on those weekdays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which holidays are included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The common U.S. federal holidays are on by default, and you can switch each one off or add Black Friday, Christmas Eve and New Year’s Eve. You can also enter six holidays of your own."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does “5 business days after” mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means moving forward five weekdays that are not holidays, not counting the start day. Five business days after a Monday is the next Monday."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the count not include the end day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Counting from one date up to another gives the number of days passed. Tick the include box if you want both the first and last day counted, as for a hotel stay or a project length."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Day Counter</span>
+    </div>
+    <h1>Day Counter</h1>
+    <p>Count the days between two dates with weekends, holidays and business days, or find a date a set number of days away.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Days Between Two Dates</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Find the number of days, weekend days, holidays and business days between two dates.</p>
+    <form id="dc-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group"><label for="dc-start">Start Date</label><input type="date" id="dc-start"></div>
+          <div class="field-group"><label for="dc-end">End Date</label><input type="date" id="dc-end"></div>
+          <div class="field-group"><label class="radio-option" style="display:inline-flex;"><input type="checkbox" id="dc-inc"> Include the end day (add 1 day)</label></div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="dc-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Count Days From a Date</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Find the date that is a number of days, or business days, before or after a date.</p>
+    <form id="do-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group"><label for="do-date">Start Date</label><input type="date" id="do-date"></div>
+          <div class="field-row">
+            <div class="field-group"><label for="do-op">Direction</label><select id="do-op" class="unit-select"><option value="+">After (+)</option><option value="-">Before (−)</option></select></div>
+            <div class="field-group"><label for="do-n">Number of Days</label><input type="number" id="do-n" value="15" min="1" max="100000" step="1"></div>
+          </div>
+          <div class="field-group"><label class="radio-option" style="display:inline-flex;"><input type="checkbox" id="do-bus"> Count business days only</label></div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="do-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Holiday Settings</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Choose which holidays to leave out of the business day count. Both calculators above use these settings. Custom holidays repeat on the same date every year.</p>
+    <div class="mortgage-layout">
+      <div class="mortgage-form-card" id="dc-settings">
+        <div class="field-group"><label class="radio-option" style="display:inline-flex;"><input type="checkbox" id="dc-hol" checked> Use holidays</label></div>
+        <div id="dc-hol-box">
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-ny" checked> New Year’s Day</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-ml" checked> Martin Luther King Jr. Day</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-pd" checked> Presidents’ Day</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-md" checked> Memorial Day</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-jd" checked> Juneteenth</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-id" checked> Independence Day</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-ld" checked> Labor Day</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-cd" checked> Columbus Day</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-vd" checked> Veterans Day</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-tx" checked> Thanksgiving</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-bf"> Black Friday</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-xe"> Christmas Eve</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-xm" checked> Christmas Day</label>
+            <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="checkbox" id="dc-h-ne"> New Year’s Eve</label>
+          <div style="margin-top:12px;">
+            <div class="field-row" style="align-items:end;">
+              <div class="field-group"><label for="dc-cn1">Custom holiday 1</label><input type="text" id="dc-cn1" maxlength="30" placeholder="Name" autocomplete="off"></div>
+              <div class="field-group"><label for="dc-cm1">Month</label><select id="dc-cm1" class="unit-select"><option value="">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select></div>
+              <div class="field-group"><label for="dc-cd1">Day</label><input type="number" id="dc-cd1" min="1" max="31" step="1"></div>
+            </div>
+            <div class="field-row" style="align-items:end;">
+              <div class="field-group"><label for="dc-cn2">Custom holiday 2</label><input type="text" id="dc-cn2" maxlength="30" placeholder="Name" autocomplete="off"></div>
+              <div class="field-group"><label for="dc-cm2">Month</label><select id="dc-cm2" class="unit-select"><option value="">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select></div>
+              <div class="field-group"><label for="dc-cd2">Day</label><input type="number" id="dc-cd2" min="1" max="31" step="1"></div>
+            </div>
+            <div class="field-row" style="align-items:end;">
+              <div class="field-group"><label for="dc-cn3">Custom holiday 3</label><input type="text" id="dc-cn3" maxlength="30" placeholder="Name" autocomplete="off"></div>
+              <div class="field-group"><label for="dc-cm3">Month</label><select id="dc-cm3" class="unit-select"><option value="">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select></div>
+              <div class="field-group"><label for="dc-cd3">Day</label><input type="number" id="dc-cd3" min="1" max="31" step="1"></div>
+            </div>
+            <div class="field-row" style="align-items:end;">
+              <div class="field-group"><label for="dc-cn4">Custom holiday 4</label><input type="text" id="dc-cn4" maxlength="30" placeholder="Name" autocomplete="off"></div>
+              <div class="field-group"><label for="dc-cm4">Month</label><select id="dc-cm4" class="unit-select"><option value="">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select></div>
+              <div class="field-group"><label for="dc-cd4">Day</label><input type="number" id="dc-cd4" min="1" max="31" step="1"></div>
+            </div>
+            <div class="field-row" style="align-items:end;">
+              <div class="field-group"><label for="dc-cn5">Custom holiday 5</label><input type="text" id="dc-cn5" maxlength="30" placeholder="Name" autocomplete="off"></div>
+              <div class="field-group"><label for="dc-cm5">Month</label><select id="dc-cm5" class="unit-select"><option value="">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select></div>
+              <div class="field-group"><label for="dc-cd5">Day</label><input type="number" id="dc-cd5" min="1" max="31" step="1"></div>
+            </div>
+            <div class="field-row" style="align-items:end;">
+              <div class="field-group"><label for="dc-cn6">Custom holiday 6</label><input type="text" id="dc-cn6" maxlength="30" placeholder="Name" autocomplete="off"></div>
+              <div class="field-group"><label for="dc-cm6">Month</label><select id="dc-cm6" class="unit-select"><option value="">Month</option><option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option></select></div>
+              <div class="field-group"><label for="dc-cd6">Day</label><input type="number" id="dc-cd6" min="1" max="31" step="1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the days are counted</h2>
+      <p>The calculator counts the whole days from the start date up to, but not including, the end date, so from Monday to the next Monday is 7 days. Tick the box to include the end day, which adds 1. If the start is after the end, the two dates are swapped. Along with the total it counts how many of those days fall on a Saturday or Sunday, how many are holidays, and how many are business days.</p>
+
+      <h2>Business days and holidays</h2>
+      <p>A business day is a weekday, Monday to Friday, that is not a holiday. You can choose which holidays to leave out. The list starts with the common United States federal holidays and also has options for Black Friday, Christmas Eve and New Year’s Eve. You can add up to six holidays of your own. A holiday that falls on a weekend is shown in the list but does not reduce the business days, since the weekend is already off.</p>
+
+      <h2>Finding a date</h2>
+      <p>The second calculator takes a date and moves it forward or back by a number of days. With the business days box ticked, it skips weekends and the holidays you chose, so 5 business days after a Monday is the next Monday. The start day is not counted. This works the way a spreadsheet does with its working-day functions. Check the result against your own contract if a deadline depends on it, as some agreements count days differently.</p>
+      <div class="callout">The calculator treats Saturday and Sunday as the weekend and uses the holiday dates for the year they fall in. Many holidays shift to a nearby weekday when they land on a weekend, which this tool does not do, so add your own dates if you need an observed day.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I count the days between two dates?</h3>
+        <p>Subtract the earlier date from the later one. This calculator does it for you and can add 1 to include the end day.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How are business days counted?</h3>
+        <p>They are the weekdays, Monday to Friday, in the period, minus any holidays that fall on those weekdays.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which holidays are included?</h3>
+        <p>The common U.S. federal holidays are on by default, and you can switch each one off or add Black Friday, Christmas Eve and New Year’s Eve. You can also enter six holidays of your own.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does “5 business days after” mean?</h3>
+        <p>It means moving forward five weekdays that are not holidays, not counting the start day. Five business days after a Monday is the next Monday.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the count not include the end day?</h3>
+        <p>Counting from one date up to another gives the number of days passed. Tick the include box if you want both the first and last day counted, as for a hotel stay or a project length.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="date-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Date Calculator</h3>
+        <p>Add or subtract days from a date.</p>
+      </a>
+
+      <a class="calc-list-card" href="day-of-the-week-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Day of the Week Calculator</h3>
+        <p>Find the weekday of any date.</p>
+      </a>
+
+      <a class="calc-list-card" href="age-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Age Calculator</h3>
+        <p>Work out an exact age.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/date-utils.js"></script>
+<script src="../js/day-counter.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

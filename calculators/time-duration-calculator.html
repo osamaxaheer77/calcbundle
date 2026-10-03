@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Duration Calculator - CalcBundle</title>
+<meta name="description" content="Find the hours, minutes and seconds between two times, or the days, hours, minutes and seconds between two dates with times.">
+<link rel="canonical" href="https://calcbundle.net/calculators/time-duration-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Time Duration Calculator - CalcBundle">
+<meta property="og:description" content="Find the hours, minutes and seconds between two times, or the days, hours, minutes and seconds between two dates with times.">
+<meta property="og:url" content="https://calcbundle.net/calculators/time-duration-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Time Duration Calculator - CalcBundle">
+<meta name="twitter:description" content="Find the hours, minutes and seconds between two times, or the days, hours, minutes and seconds between two dates with times.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I find the time between two times?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subtract the start time from the end time, borrowing 60 seconds from the minutes, and 60 minutes from the hours, as needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many seconds are in an hour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There are 3,600 seconds in an hour and 86,400 seconds in a day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the end time is earlier than the start time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the first calculator, the start is assumed to be on the previous day. In the second, both dates are used, so enter the start before the end."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it include daylight saving time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. If the dates cross a clock change, the real elapsed time is an hour more or less than the clock times suggest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I add time instead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Time Calculator, which adds and subtracts hours, minutes and seconds."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Time Duration Calculator</span>
+    </div>
+    <h1>Time Duration Calculator</h1>
+    <p>Enter a start time and an end time, with seconds if you like, to see the exact time between them.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Time Between Two Times</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">If the end is earlier than the start, the start is assumed to be on the previous day.</p>
+    <form id="d1-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group"><label>Start Time</label>
+            <div style="display:flex;align-items:center;gap:6px;"><input type="number" id="d1-sh" value="8" min="0" max="23" step="1" aria-label="Start hour" style="flex:1;min-width:0;"><input type="number" id="d1-sm" value="30" min="0" max="59" step="1" aria-label="Start minute" style="flex:1;min-width:0;"><input type="number" id="d1-ss" value="0" min="0" max="59" step="1" aria-label="Start second" style="flex:1;min-width:0;"><select id="d1-su" class="unit-select" aria-label="AM or PM" style="width:auto;"><option value="a" selected>AM</option><option value="p">PM</option></select><button type="button" class="calc-submit-btn" data-now="d1-s" style="width:auto;padding:6px 14px;margin:0 0 0 8px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Now</button></div></div>
+          <div class="field-group"><label>End Time</label>
+            <div style="display:flex;align-items:center;gap:6px;"><input type="number" id="d1-eh" value="5" min="0" max="23" step="1" aria-label="End hour" style="flex:1;min-width:0;"><input type="number" id="d1-em" value="30" min="0" max="59" step="1" aria-label="End minute" style="flex:1;min-width:0;"><input type="number" id="d1-es" value="0" min="0" max="59" step="1" aria-label="End second" style="flex:1;min-width:0;"><select id="d1-eu" class="unit-select" aria-label="AM or PM" style="width:auto;"><option value="a">AM</option><option value="p" selected>PM</option></select><button type="button" class="calc-submit-btn" data-now="d1-e" style="width:auto;padding:6px 14px;margin:0 0 0 8px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Now</button></div></div>
+          <p style="font-size:12px;color:var(--text-secondary);margin:0 0 12px;">The three boxes are hour, minute and second.</p>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="d1-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Time Between Two Dates</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Find the days, hours, minutes and seconds between a time on one date and a time on a later date.</p>
+    <form id="d2-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group"><label for="d2-sd">Start Date</label><input type="date" id="d2-sd"></div>
+          <div class="field-group"><label>Start Time</label>
+            <div style="display:flex;align-items:center;gap:6px;"><input type="number" id="d2-sh" value="8" min="0" max="23" step="1" aria-label="Start hour" style="flex:1;min-width:0;"><input type="number" id="d2-sm" value="30" min="0" max="59" step="1" aria-label="Start minute" style="flex:1;min-width:0;"><input type="number" id="d2-ss" value="0" min="0" max="59" step="1" aria-label="Start second" style="flex:1;min-width:0;"><select id="d2-su" class="unit-select" aria-label="AM or PM" style="width:auto;"><option value="a" selected>AM</option><option value="p">PM</option></select><button type="button" class="calc-submit-btn" data-now="d2-s" style="width:auto;padding:6px 14px;margin:0 0 0 8px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Now</button></div></div>
+          <div class="field-group"><label for="d2-ed">End Date</label><input type="date" id="d2-ed"></div>
+          <div class="field-group"><label>End Time</label>
+            <div style="display:flex;align-items:center;gap:6px;"><input type="number" id="d2-eh" value="5" min="0" max="23" step="1" aria-label="End hour" style="flex:1;min-width:0;"><input type="number" id="d2-em" value="30" min="0" max="59" step="1" aria-label="End minute" style="flex:1;min-width:0;"><input type="number" id="d2-es" value="0" min="0" max="59" step="1" aria-label="End second" style="flex:1;min-width:0;"><select id="d2-eu" class="unit-select" aria-label="AM or PM" style="width:auto;"><option value="a">AM</option><option value="p" selected>PM</option></select><button type="button" class="calc-submit-btn" data-now="d2-e" style="width:auto;padding:6px 14px;margin:0 0 0 8px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Now</button></div></div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="d2-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What the calculator does</h2>
+      <p>It finds the exact length of time between two clock times, down to the second. From 8:30:15 AM to 5:45:50 PM is 9 hours, 15 minutes and 35 seconds. The result is also given as a decimal number of hours, a total number of minutes and a total number of seconds, so you can use whichever fits your task, from payroll to timing a process.</p>
+
+      <h2>Across midnight and across dates</h2>
+      <p>In the first calculator, an end time that is earlier than the start time is taken to be on the next day, so 5:30 PM to 8:30 AM is 15 hours. The second calculator adds a date to each time, so you can measure spans of many days. It reports the whole days first, then the remaining hours, minutes and seconds, and also the total as hours, minutes and seconds.</p>
+
+      <h2>Entering times</h2>
+      <p>Type the hour, minute and second in the three boxes and choose AM or PM. An hour above 12 is read as 24-hour time. Use the Now button to fill in the current time from your device. The calculation uses clock times only, so it does not allow for daylight saving time changes between the two dates.</p>
+      <div class="callout">This calculator works from clock times and dates only. It does not know about time zones or daylight saving time changes.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I find the time between two times?</h3>
+        <p>Subtract the start time from the end time, borrowing 60 seconds from the minutes, and 60 minutes from the hours, as needed.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many seconds are in an hour?</h3>
+        <p>There are 3,600 seconds in an hour and 86,400 seconds in a day.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if the end time is earlier than the start time?</h3>
+        <p>In the first calculator, the start is assumed to be on the previous day. In the second, both dates are used, so enter the start before the end.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it include daylight saving time?</h3>
+        <p>No. If the dates cross a clock change, the real elapsed time is an hour more or less than the clock times suggest.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I add time instead?</h3>
+        <p>Use the Time Calculator, which adds and subtracts hours, minutes and seconds.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="hours-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Hours Calculator</h3>
+        <p>Find the hours and minutes between two times.</p>
+      </a>
+
+      <a class="calc-list-card" href="time-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Time Calculator</h3>
+        <p>Add and subtract hours, minutes and seconds.</p>
+      </a>
+
+      <a class="calc-list-card" href="date-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Date Calculator</h3>
+        <p>Add or subtract days from a date.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/date-utils.js"></script>
+<script src="../js/time-duration-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

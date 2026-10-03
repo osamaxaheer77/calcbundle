@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Card Calculator - CalcBundle</title>
+<meta name="description" content="Create a weekly time card from your start and end times and breaks, with total hours, rounding, pay, and overtime by day or by week.">
+<link rel="canonical" href="https://calcbundle.net/calculators/time-card-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Time Card Calculator - CalcBundle">
+<meta property="og:description" content="Create a weekly time card from your start and end times and breaks, with total hours, rounding, pay, and overtime by day or by week.">
+<meta property="og:url" content="https://calcbundle.net/calculators/time-card-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Time Card Calculator - CalcBundle">
+<meta name="twitter:description" content="Create a weekly time card from your start and end times and breaks, with total hours, rounding, pay, and overtime by day or by week.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate hours worked from a time card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subtract the start time from the end time for each day, take off your unpaid breaks, and add up the days. This calculator does it for the whole week."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is overtime calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hours above the limit you set, per day or per week, are paid at the overtime rate, which is the base rate times a multiplier such as 1.5. Hours up to the limit are paid at the base rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I enter an overnight shift?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Just enter the start and end times, for example 10:00PM and 6:00AM. When the end time is earlier than the start, the shift is treated as running past midnight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I enter a 30 minute break?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Type 0:30 or 30. A number on its own is read as minutes, and a time with a colon is read as hours and minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my times saved anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if you tick the save box, and then only in your own browser. Nothing is sent to a server."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Time Card Calculator</span>
+    </div>
+    <h1>Time Card Calculator</h1>
+    <p>Enter your hours for the week to get a printable time report with total hours, pay and overtime.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="tc-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="schedule-table-wrap" style="max-height:none;overflow-x:auto;">
+          <table class="schedule-table" style="min-width:340px;">
+            <thead><tr><th>Date</th><th>From</th><th>To</th><th>Break</th></tr></thead>
+            <tbody>
+            <tr>
+              <td><input type="text" id="tc-l1" value="Monday" aria-label="Day 1 label" style="width:100%;min-width:70px;"></td>
+              <td><input type="text" id="tc-f1" value="8:30AM" aria-label="Monday from" placeholder="8:30AM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-t1" value="5:00PM" aria-label="Monday to" placeholder="5:00PM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-b1" value="0:30" aria-label="Monday break" placeholder="0:30" style="width:100%;min-width:70px;" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td><input type="text" id="tc-l2" value="Tuesday" aria-label="Day 2 label" style="width:100%;min-width:70px;"></td>
+              <td><input type="text" id="tc-f2" value="" aria-label="Tuesday from" placeholder="8:30AM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-t2" value="" aria-label="Tuesday to" placeholder="5:00PM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-b2" value="" aria-label="Tuesday break" placeholder="0:30" style="width:100%;min-width:70px;" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td><input type="text" id="tc-l3" value="Wednesday" aria-label="Day 3 label" style="width:100%;min-width:70px;"></td>
+              <td><input type="text" id="tc-f3" value="" aria-label="Wednesday from" placeholder="8:30AM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-t3" value="" aria-label="Wednesday to" placeholder="5:00PM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-b3" value="" aria-label="Wednesday break" placeholder="0:30" style="width:100%;min-width:70px;" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td><input type="text" id="tc-l4" value="Thursday" aria-label="Day 4 label" style="width:100%;min-width:70px;"></td>
+              <td><input type="text" id="tc-f4" value="" aria-label="Thursday from" placeholder="8:30AM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-t4" value="" aria-label="Thursday to" placeholder="5:00PM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-b4" value="" aria-label="Thursday break" placeholder="0:30" style="width:100%;min-width:70px;" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td><input type="text" id="tc-l5" value="Friday" aria-label="Day 5 label" style="width:100%;min-width:70px;"></td>
+              <td><input type="text" id="tc-f5" value="" aria-label="Friday from" placeholder="8:30AM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-t5" value="" aria-label="Friday to" placeholder="5:00PM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-b5" value="" aria-label="Friday break" placeholder="0:30" style="width:100%;min-width:70px;" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td><input type="text" id="tc-l6" value="Saturday" aria-label="Day 6 label" style="width:100%;min-width:70px;"></td>
+              <td><input type="text" id="tc-f6" value="" aria-label="Saturday from" placeholder="8:30AM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-t6" value="" aria-label="Saturday to" placeholder="5:00PM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-b6" value="" aria-label="Saturday break" placeholder="0:30" style="width:100%;min-width:70px;" autocomplete="off"></td>
+            </tr>
+            <tr>
+              <td><input type="text" id="tc-l7" value="Sunday" aria-label="Day 7 label" style="width:100%;min-width:70px;"></td>
+              <td><input type="text" id="tc-f7" value="" aria-label="Sunday from" placeholder="8:30AM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-t7" value="" aria-label="Sunday to" placeholder="5:00PM" style="width:100%;min-width:70px;" autocomplete="off"></td>
+              <td><input type="text" id="tc-b7" value="" aria-label="Sunday break" placeholder="0:30" style="width:100%;min-width:70px;" autocomplete="off"></td>
+            </tr>
+            </tbody>
+          </table>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px;">
+            <button type="button" id="tc-copy" class="calc-submit-btn" style="width:auto;padding:6px 14px;margin:0;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Copy first row down</button>
+            <button type="button" id="tc-clear" class="calc-submit-btn" style="width:auto;padding:6px 14px;margin:0;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Clear all</button>
+          </div>
+          <p style="font-size:12px;color:var(--text-secondary);margin:0 0 12px;">Times can be typed as 8:00AM, 8.30, 8:30 or 15:30. A break can be 0:30 or 30, meaning 30 minutes. Without AM or PM, 24-hour time is used. A shift that ends before it starts is counted as an overnight shift.</p>
+          <div class="field-group">
+            <label for="tc-round">Round Time</label>
+            <select id="tc-round" class="unit-select"><option value="0">No rounding</option><option value="5">Round to the nearest 5 minutes</option><option value="10">Round to the nearest 10 minutes</option><option value="15">Round to the nearest 15 minutes</option><option value="30">Round to the nearest 30 minutes</option><option value="60">Round to the nearest hour</option></select>
+          </div>
+          <div class="field-group"><label for="tc-header">Report Header (optional)</label><input type="text" id="tc-header" maxlength="80" autocomplete="off"></div>
+          <div class="field-group"><label for="tc-note">Report Notes (optional)</label><input type="text" id="tc-note" maxlength="200" autocomplete="off"></div>
+          <div class="field-group"><label class="radio-option" style="display:inline-flex;"><input type="checkbox" id="tc-pay" checked> Include payment information</label></div>
+          <div id="tc-pay-box">
+            <div class="field-group"><label for="tc-rate">Base Pay Rate (per hour)</label><input type="number" id="tc-rate" value="35" min="0" step="any"></div>
+            <div class="field-group">
+              <label for="tc-ot">Overtime Pay</label>
+              <select id="tc-ot" class="unit-select">
+                <option value="n">No overtime rate, pay base rate for all hours</option>
+                <option value="nd">No overtime pay, pay max hours per day</option>
+                <option value="nw">No overtime pay, pay max hours per week</option>
+                <option value="d">Overtime pay after a set number of hours per day</option>
+                <option value="w" selected>Overtime pay after a set number of hours per week</option>
+              </select>
+            </div>
+            <div class="field-group" id="tc-d-box"><label for="tc-d">Hours per Day</label><input type="number" id="tc-d" value="8" min="0" step="any"></div>
+            <div class="field-group" id="tc-w-box"><label for="tc-w">Hours per Week</label><input type="number" id="tc-w" value="40" min="0" step="any"></div>
+            <div class="field-group" id="tc-mult-box"><label for="tc-mult">Overtime Rate (times the base rate)</label><input type="number" id="tc-mult" value="1.5" min="0" step="any"></div>
+          </div>
+          <div class="field-group"><label class="radio-option" style="display:inline-flex;"><input type="checkbox" id="tc-blank" checked> Show blank days in the report</label></div>
+          <div class="field-group"><label class="radio-option" style="display:inline-flex;"><input type="checkbox" id="tc-save"> Save these values in this browser</label></div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+          <button type="button" id="tc-print" class="calc-submit-btn" style="margin-top:10px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Print report</button>
+        </div>
+        <div class="mortgage-results-card" id="tc-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the hours are worked out</h2>
+      <p>For each day the calculator takes the time you finished and subtracts the time you started. A shift that ends earlier on the clock than it starts, such as 10:00 PM to 6:00 AM, counts as an overnight shift of eight hours. Your unpaid break is then taken off. The days are added up for the week. If a break is longer than the shift, the day counts as 0 hours.</p>
+
+      <h2>Rounding and overtime</h2>
+      <p>Some employers round the time. With rounding on, the calculator rounds to the nearest 5, 10, 15 or 30 minutes, or the nearest hour. For pay you can choose how overtime works: no overtime rate, overtime after a number of hours in a day, or after a number of hours in a week, or a cap on paid hours with no overtime. The overtime rate is a multiple of the base rate, commonly 1.5 times. Daily rules round each day, and weekly rules round the weekly total.</p>
+
+      <h2>Printing and saving</h2>
+      <p>Add a header and notes if you want them on the report, then use the print button to print it or save it as a PDF. If you tick the box to save your values, they are stored in this browser only, on your own device, so they are there the next time you come back. Nothing is sent anywhere. Overtime law differs by country and state, and by type of job, so check your own rules.</p>
+      <div class="callout">This calculator does simple arithmetic on the times you enter. Overtime and rounding rules vary by employer, state and country, so check your contract and local law for what applies to you.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate hours worked from a time card?</h3>
+        <p>Subtract the start time from the end time for each day, take off your unpaid breaks, and add up the days. This calculator does it for the whole week.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is overtime calculated?</h3>
+        <p>Hours above the limit you set, per day or per week, are paid at the overtime rate, which is the base rate times a multiplier such as 1.5. Hours up to the limit are paid at the base rate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I enter an overnight shift?</h3>
+        <p>Just enter the start and end times, for example 10:00PM and 6:00AM. When the end time is earlier than the start, the shift is treated as running past midnight.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I enter a 30 minute break?</h3>
+        <p>Type 0:30 or 30. A number on its own is read as minutes, and a time with a colon is read as hours and minutes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are my times saved anywhere?</h3>
+        <p>Only if you tick the save box, and then only in your own browser. Nothing is sent to a server.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="hours-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Hours Calculator</h3>
+        <p>Find the hours and minutes between two times.</p>
+      </a>
+
+      <a class="calc-list-card" href="time-duration-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Time Duration Calculator</h3>
+        <p>The time between two times, with seconds.</p>
+      </a>
+
+      <a class="calc-list-card" href="time-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Time Calculator</h3>
+        <p>Add and subtract hours, minutes and seconds.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/date-utils.js"></script>
+<script src="../js/time-card-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
