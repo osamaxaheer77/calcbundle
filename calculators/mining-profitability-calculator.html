@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mining Profitability Calculator - CalcBundle</title>
+<meta name="description" content="Estimate the daily, monthly and yearly profit from mining Bitcoin from your hash rate, power use, electricity cost, network difficulty and coin price.">
+<link rel="canonical" href="https://calcbundle.net/calculators/mining-profitability-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Mining Profitability Calculator - CalcBundle">
+<meta property="og:description" content="Estimate the daily, monthly and yearly profit from mining Bitcoin from your hash rate, power use, electricity cost, network difficulty and coin price.">
+<meta property="og:url" content="https://calcbundle.net/calculators/mining-profitability-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mining Profitability Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate the daily, monthly and yearly profit from mining Bitcoin from your hash rate, power use, electricity cost, network difficulty and coin price.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate Bitcoin mining profit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Work out the coins you expect each day from your hash rate and the network difficulty, convert them to dollars, and subtract the daily cost of electricity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is network difficulty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a number that sets how hard it is to find a block. It adjusts about every two weeks to keep blocks coming roughly every ten minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good electricity price for mining?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The lower the better. Many miners need under about 0.07 dollars per kWh to profit, though it depends on the hardware and the coin price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this work for other coins?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It uses the Bitcoin proof-of-work formula, so it fits Bitcoin and coins that use the same hashing scheme with a comparable difficulty scale. It is not meant for other mining methods."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the pool fee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mining pools combine many miners and take a small percentage of the rewards, often between 0% and 3%."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/crypto.html" style="color:inherit;text-decoration:none;">Crypto &amp; Forex</a>
+      <span>/</span>
+      <span class="current">Mining Profitability Calculator</span>
+    </div>
+    <h1>Mining Profitability Calculator</h1>
+    <p>Enter your miner’s hash rate and power use, your electricity price and the network figures to estimate your mining profit.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="mn-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="mn-hash">Hash Rate (TH/s)</label>
+            <input type="number" id="mn-hash" value="200" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mn-watt">Power Use (watts)</label>
+            <input type="number" id="mn-watt" value="3500" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mn-kwh">Electricity Cost (USD per kWh)</label>
+            <input type="number" id="mn-kwh" value="0.07" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mn-pool">Pool Fee (%)</label>
+            <input type="number" id="mn-pool" value="1" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mn-diff">Network Difficulty (trillions)</label>
+            <input type="number" id="mn-diff" value="100" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mn-reward">Block Reward (BTC)</label>
+            <input type="number" id="mn-reward" value="3.125" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mn-price">Coin Price (USD)</label>
+            <input type="number" id="mn-price" value="60000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mn-hw">Hardware Cost (USD, optional)</label>
+            <input type="number" id="mn-hw" value="4000" min="0" step="any">
+          </div>
+          <p style="font-size:12px;color:var(--text-secondary);margin:0 0 12px;">Network difficulty, the block reward and the coin price change over time. The values here are examples, so enter the current ones.</p>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="mn-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How mining income is worked out</h2>
+      <p>Bitcoin miners compete to find blocks, and each block pays a reward. Your share of the network is your hash rate divided by the total hash rate, which is set by the difficulty. The calculator uses the standard formula: the coins you expect per day equal your hashes per second, times the seconds in a day, times the block reward, divided by the difficulty times 2 to the power 32. A pool takes a fee from that income.</p>
+
+      <h2>Costs and profit</h2>
+      <p>The main running cost is electricity. The power your miner draws, in kilowatts, multiplied by 24 hours and your price per kilowatt-hour, gives the daily cost. Profit is the income, converted to dollars at the coin price you enter, minus the electricity cost. The calculator also shows the payback time on the hardware, if the profit is positive.</p>
+
+      <h2>Why the result changes</h2>
+      <p>Mining profit is not steady. The difficulty usually rises as more miners join, which lowers your coins per day. The block reward halves about every four years. The coin price can double or halve in months. A miner that is profitable today can lose money next month, so treat the result as a snapshot, and check the current difficulty and price from a block explorer or a mining stats site before you decide to buy.</p>
+      <div class="callout">Crypto prices are very volatile and you can lose money. This calculator does simple arithmetic and is not financial advice. Heat, noise, downtime, taxes and hardware failure are not included.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate Bitcoin mining profit?</h3>
+        <p>Work out the coins you expect each day from your hash rate and the network difficulty, convert them to dollars, and subtract the daily cost of electricity.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is network difficulty?</h3>
+        <p>It is a number that sets how hard it is to find a block. It adjusts about every two weeks to keep blocks coming roughly every ten minutes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a good electricity price for mining?</h3>
+        <p>The lower the better. Many miners need under about 0.07 dollars per kWh to profit, though it depends on the hardware and the coin price.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this work for other coins?</h3>
+        <p>It uses the Bitcoin proof-of-work formula, so it fits Bitcoin and coins that use the same hashing scheme with a comparable difficulty scale. It is not meant for other mining methods.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the pool fee?</h3>
+        <p>Mining pools combine many miners and take a small percentage of the rewards, often between 0% and 3%.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Crypto &amp; Forex Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="satoshi-btc-converter.html">
+        <span class="tag live">Live</span>
+        <h3>Satoshi to BTC Converter</h3>
+        <p>Convert between BTC, mBTC, bits and satoshis.</p>
+      </a>
+
+      <a class="calc-list-card" href="crypto-profit-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Crypto Profit Calculator</h3>
+        <p>Profit and return on a crypto trade after fees.</p>
+      </a>
+
+      <a class="calc-list-card" href="break-even-price-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Break-Even Price Calculator</h3>
+        <p>The sell price that covers your fees.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/trading-common.js"></script>
+<script src="../js/mining-profitability-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

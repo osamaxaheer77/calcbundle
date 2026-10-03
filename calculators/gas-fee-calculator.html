@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gas Fee Calculator - CalcBundle</title>
+<meta name="description" content="Work out the cost of an Ethereum transaction in ETH, gwei and dollars, from the gas used, the gas price and the ETH price.">
+<link rel="canonical" href="https://calcbundle.net/calculators/gas-fee-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Gas Fee Calculator - CalcBundle">
+<meta property="og:description" content="Work out the cost of an Ethereum transaction in ETH, gwei and dollars, from the gas used, the gas price and the ETH price.">
+<meta property="og:url" content="https://calcbundle.net/calculators/gas-fee-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gas Fee Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out the cost of an Ethereum transaction in ETH, gwei and dollars, from the gas used, the gas price and the ETH price.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is the gas fee calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gas fee = gas used × gas price. The gas price is the base fee plus the priority fee, in gwei, and one gwei is 0.000000001 ETH."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much gas does an ETH transfer use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A simple ETH transfer uses exactly 21,000 gas. Contract calls use more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a gwei?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A gwei is one billionth of an ETH. Gas prices are quoted in gwei to avoid long decimals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do fees change so much?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The base fee rises when the network is busy and falls when it is quiet, so the same transaction can cost many times more at a busy time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I lower the fee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can wait for a quieter time, lower the priority fee if you are not in a hurry, or use a layer 2 network where fees are much lower."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/crypto.html" style="color:inherit;text-decoration:none;">Crypto &amp; Forex</a>
+      <span>/</span>
+      <span class="current">Gas Fee Calculator</span>
+    </div>
+    <h1>Gas Fee Calculator</h1>
+    <p>Pick a transaction type or enter the gas used, and the gas price, to see what the transaction costs.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="gf-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="gf-type">Transaction Type</label>
+            <select id="gf-type" class="unit-select"><option value="21000" selected>ETH transfer (21,000 gas)</option><option value="65000">Token transfer (about 65,000 gas)</option><option value="150000">Token swap (about 150,000 gas)</option><option value="100000">NFT mint (about 100,000 gas)</option><option value="custom">Custom gas amount</option></select>
+          </div>
+          <div id="gf-custom-box">          <div class="field-group">
+            <label for="gf-gas">Gas Used (units)</label>
+            <input type="number" id="gf-gas" value="21000" min="0" step="any">
+          </div></div>
+          <div class="field-group">
+            <label for="gf-base">Base Fee (gwei)</label>
+            <input type="number" id="gf-base" value="20" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="gf-tip">Priority Fee / Tip (gwei)</label>
+            <input type="number" id="gf-tip" value="1.5" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="gf-eth">ETH Price (USD)</label>
+            <input type="number" id="gf-eth" value="3000" min="0" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="gf-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What gas is</h2>
+      <p>Gas measures the computing work a transaction needs on Ethereum. A plain ETH transfer uses 21,000 units of gas. Sending a token or swapping one token for another takes more, because a smart contract must run. The fee you pay is the gas used multiplied by the price you pay for each unit of gas, which is quoted in gwei, where one gwei is a billionth of an ETH.</p>
+
+      <h2>Base fee and priority fee</h2>
+      <p>Since a 2021 upgrade, the gas price has two parts. The base fee is set by the network and changes with demand, and it is burned. The priority fee, or tip, goes to the validator and helps your transaction get included faster. Your cost per gas is the base fee plus the tip. Enter both, and the calculator shows the total in ETH and in dollars.</p>
+
+      <h2>Estimating a fee</h2>
+      <p>The gas used by a transaction depends on what it does, so the types in the list are typical values and not exact. Your wallet shows the real estimate before you confirm. The table shows what your transaction would cost at several gas prices, which is helpful for deciding whether to wait for a quieter time. Other networks, such as layer 2 networks, charge far less, and use different rules.</p>
+      <div class="callout">Crypto prices are very volatile and you can lose money. This calculator does simple arithmetic and is not financial advice. Real gas use varies by contract and network.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How is the gas fee calculated?</h3>
+        <p>Gas fee = gas used × gas price. The gas price is the base fee plus the priority fee, in gwei, and one gwei is 0.000000001 ETH.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much gas does an ETH transfer use?</h3>
+        <p>A simple ETH transfer uses exactly 21,000 gas. Contract calls use more.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a gwei?</h3>
+        <p>A gwei is one billionth of an ETH. Gas prices are quoted in gwei to avoid long decimals.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do fees change so much?</h3>
+        <p>The base fee rises when the network is busy and falls when it is quiet, so the same transaction can cost many times more at a busy time.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I lower the fee?</h3>
+        <p>You can wait for a quieter time, lower the priority fee if you are not in a hurry, or use a layer 2 network where fees are much lower.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Crypto &amp; Forex Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="satoshi-btc-converter.html">
+        <span class="tag live">Live</span>
+        <h3>Satoshi to BTC Converter</h3>
+        <p>Convert between BTC, mBTC, bits and satoshis.</p>
+      </a>
+
+      <a class="calc-list-card" href="mining-profitability-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mining Profitability Calculator</h3>
+        <p>Daily and monthly mining profit.</p>
+      </a>
+
+      <a class="calc-list-card" href="crypto-profit-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Crypto Profit Calculator</h3>
+        <p>Profit and return on a crypto trade after fees.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/trading-common.js"></script>
+<script src="../js/gas-fee-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

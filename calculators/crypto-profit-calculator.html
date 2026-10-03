@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Profit Calculator - CalcBundle</title>
+<meta name="description" content="Work out the profit or loss on a crypto trade from the buy price, sell price and amount invested, after trading fees, with the break-even price.">
+<link rel="canonical" href="https://calcbundle.net/calculators/crypto-profit-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Crypto Profit Calculator - CalcBundle">
+<meta property="og:description" content="Work out the profit or loss on a crypto trade from the buy price, sell price and amount invested, after trading fees, with the break-even price.">
+<meta property="og:url" content="https://calcbundle.net/calculators/crypto-profit-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Crypto Profit Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out the profit or loss on a crypto trade from the buy price, sell price and amount invested, after trading fees, with the break-even price.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate profit on a crypto trade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide your investment by the buy price to find the coins, multiply the coins by the sell price, and subtract the amount you invested. Then subtract the fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the fees taken from the investment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In this calculator the buy fee comes off the money you spend, so slightly fewer coins are bought, and the sell fee comes off the money you receive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the break-even price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the sell price at which your profit after both fees is zero. It is above the buy price by about the total of the two fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does ROI mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ROI is return on investment, your profit divided by the amount you invested, as a percentage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this include taxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Many countries tax crypto gains, so check the rules where you live."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/crypto.html" style="color:inherit;text-decoration:none;">Crypto &amp; Forex</a>
+      <span>/</span>
+      <span class="current">Crypto Profit Calculator</span>
+    </div>
+    <h1>Crypto Profit Calculator</h1>
+    <p>Enter what you invested, and your buy and sell prices, to see your profit or loss after fees.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="cp-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="cp-inv">Amount Invested (USD)</label>
+            <input type="number" id="cp-inv" value="1000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="cp-buy">Buy Price</label>
+            <input type="number" id="cp-buy" value="60000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="cp-sell">Sell Price</label>
+            <input type="number" id="cp-sell" value="75000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="cp-fb">Buy Fee (%)</label>
+            <input type="number" id="cp-fb" value="0.1" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="cp-fs">Sell Fee (%)</label>
+            <input type="number" id="cp-fs" value="0.1" min="0" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="cp-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How crypto profit is worked out</h2>
+      <p>You invest an amount of money, the exchange takes a fee, and the rest buys coins at the buy price. When you sell, the coins are worth the sell price each, and the exchange takes a second fee. Your profit is what you receive from the sale minus what you put in. The return is that profit as a percentage of your investment.</p>
+
+      <h2>Fees matter</h2>
+      <p>Exchange fees of 0.1% on each side may look small, but they are taken on both the purchase and the sale, and they come off before any gain. On a trade that moves only 1% in your favor, fees of 0.1% each way eat about a fifth of the gain. The calculator applies the buy fee to the money you spend and the sell fee to the money you receive. Enter 0 for either fee to see the result without it.</p>
+
+      <h2>Break-even price</h2>
+      <p>The break-even price is the sell price at which you get back exactly what you invested, after both fees. It is always a little above your buy price. The calculator shows it, and how far the price must rise to reach it. It does not include network or withdrawal fees, taxes, or the spread between buy and sell prices on the exchange, which also reduce the real result.</p>
+      <div class="callout">Crypto prices are very volatile and you can lose money. This calculator does simple arithmetic and is not financial advice. Tax on gains depends on where you live and is not included.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate profit on a crypto trade?</h3>
+        <p>Divide your investment by the buy price to find the coins, multiply the coins by the sell price, and subtract the amount you invested. Then subtract the fees.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are the fees taken from the investment?</h3>
+        <p>In this calculator the buy fee comes off the money you spend, so slightly fewer coins are bought, and the sell fee comes off the money you receive.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the break-even price?</h3>
+        <p>It is the sell price at which your profit after both fees is zero. It is above the buy price by about the total of the two fees.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does ROI mean?</h3>
+        <p>ROI is return on investment, your profit divided by the amount you invested, as a percentage.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this include taxes?</h3>
+        <p>No. Many countries tax crypto gains, so check the rules where you live.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Crypto &amp; Forex Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="break-even-price-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Break-Even Price Calculator</h3>
+        <p>The sell price that covers your fees.</p>
+      </a>
+
+      <a class="calc-list-card" href="dca-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>DCA Calculator</h3>
+        <p>Average cost from regular buys.</p>
+      </a>
+
+      <a class="calc-list-card" href="average-entry-price-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Average Entry Price Calculator</h3>
+        <p>Your average price after several buys.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/trading-common.js"></script>
+<script src="../js/crypto-profit-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

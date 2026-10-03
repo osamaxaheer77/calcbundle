@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCA (Dollar-Cost Averaging) Calculator - CalcBundle</title>
+<meta name="description" content="Work out your average cost, total coins and profit from regular crypto buys at different prices, or compare dollar-cost averaging with one lump-sum purchase.">
+<link rel="canonical" href="https://calcbundle.net/calculators/dca-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="DCA (Dollar-Cost Averaging) Calculator - CalcBundle">
+<meta property="og:description" content="Work out your average cost, total coins and profit from regular crypto buys at different prices, or compare dollar-cost averaging with one lump-sum purchase.">
+<meta property="og:url" content="https://calcbundle.net/calculators/dca-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DCA (Dollar-Cost Averaging) Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out your average cost, total coins and profit from regular crypto buys at different prices, or compare dollar-cost averaging with one lump-sum purchase.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is dollar-cost averaging?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is investing a fixed amount at regular intervals, for example 100 dollars every month, whatever the price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate my average cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the total money you spent by the total coins you bought. Do not average the prices directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is DCA better than a lump sum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on how the price moves. A lump sum usually does better in a steadily rising market, and DCA often does better when prices fall or swing up and down. DCA also lowers the risk of a badly timed single purchase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use unequal amounts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. In the first calculator you can enter a different amount for every purchase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many purchases can I enter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can enter up to 24 purchases."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/crypto.html" style="color:inherit;text-decoration:none;">Crypto &amp; Forex</a>
+      <span>/</span>
+      <span class="current">DCA (Dollar-Cost Averaging) Calculator</span>
+    </div>
+    <h1>DCA (Dollar-Cost Averaging) Calculator</h1>
+    <p>Enter the amount you spent and the price for each buy to see your average cost, or plan a regular investment and compare it with a lump sum.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Your Purchases</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Enter the amount you spent and the price paid on each buy.</p>
+    <form id="dc-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div id="dc-rows"></div>
+          <button type="button" id="dc-add" class="calc-submit-btn" style="margin:6px 0 12px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">+ Add purchase</button>
+          <div class="field-group">
+            <label for="dc-cur">Current Price (optional)</label>
+            <input type="number" id="dc-cur" value="" min="0" step="any" placeholder="To see profit or loss">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="dc-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Plan a Regular Investment</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Assume the price moves in a straight line from a start price to an end price, and compare buying a fixed amount each period with investing it all at the start.</p>
+    <form id="dp-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="dp-amt">Amount per Purchase (USD)</label>
+            <input type="number" id="dp-amt" value="100" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="dp-n">Number of Purchases</label>
+            <input type="number" id="dp-n" value="12" min="1" step="any">
+          </div>
+          <div class="field-group">
+            <label for="dp-p0">Price at First Purchase</label>
+            <input type="number" id="dp-p0" value="60000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="dp-p1">Price at Last Purchase</label>
+            <input type="number" id="dp-p1" value="90000" min="0" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="dp-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What dollar-cost averaging is</h2>
+      <p>Dollar-cost averaging, or DCA, means investing the same amount of money at regular intervals, whatever the price. When the price is low, your money buys more coins, and when it is high, it buys fewer. Over time your average cost per coin lands between the highest and lowest prices you paid. It removes the need to pick the best moment to buy.</p>
+
+      <h2>How the average cost is worked out</h2>
+      <p>Your average cost is the total amount you spent divided by the total number of coins you bought. Because each purchase buys a different number of coins, this is a harmonic average of the prices, not a simple one. If you spend 100 at a price of 50 and 100 at a price of 100, you buy 2 and 1 coins, so the average cost is 200 ÷ 3, which is 66.67, and not 75.</p>
+
+      <h2>DCA compared with a lump sum</h2>
+      <p>The second calculator assumes a steady price change, and compares your regular buys with putting the same total in on day one. In a rising market a lump sum usually wins, since it is invested for longer. In a falling or choppy market DCA tends to do better. DCA also spreads out the risk of buying right before a drop, which is why many people prefer it. The straight-line price is only an assumption, so treat the comparison as an illustration.</p>
+      <div class="callout">Crypto prices are very volatile and you can lose money. This calculator does simple arithmetic and is not financial advice. Past results do not predict the future.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is dollar-cost averaging?</h3>
+        <p>It is investing a fixed amount at regular intervals, for example 100 dollars every month, whatever the price.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I calculate my average cost?</h3>
+        <p>Divide the total money you spent by the total coins you bought. Do not average the prices directly.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is DCA better than a lump sum?</h3>
+        <p>It depends on how the price moves. A lump sum usually does better in a steadily rising market, and DCA often does better when prices fall or swing up and down. DCA also lowers the risk of a badly timed single purchase.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use unequal amounts?</h3>
+        <p>Yes. In the first calculator you can enter a different amount for every purchase.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many purchases can I enter?</h3>
+        <p>You can enter up to 24 purchases.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Crypto &amp; Forex Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="average-entry-price-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Average Entry Price Calculator</h3>
+        <p>Your average price after several buys.</p>
+      </a>
+
+      <a class="calc-list-card" href="crypto-profit-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Crypto Profit Calculator</h3>
+        <p>Profit and return on a crypto trade after fees.</p>
+      </a>
+
+      <a class="calc-list-card" href="crypto-staking-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Crypto Staking Growth Calculator</h3>
+        <p>Staking rewards compounded over time.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/trading-common.js"></script>
+<script src="../js/dca-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

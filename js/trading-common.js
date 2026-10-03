@@ -11,10 +11,12 @@ window.TradeCommon = (function () {
     const raw = node.value.trim().replace(/,/g, '');
     if (raw === '') return null;
     const v = Number(raw);
-    return Number.isFinite(v) ? v : NaN;
+    // Numbers beyond ten billion are not realistic here and would overflow the results.
+    return Number.isFinite(v) && Math.abs(v) <= 1e10 ? v : NaN;
   }
   const group = (s) => s.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   function fixed(v, d) {
+    if (!Number.isFinite(v) || Math.abs(v) >= 1e21) return 'too large';
     const s = Math.abs(v).toFixed(d);
     const [i, f] = s.split('.');
     return (v < 0 && Number(s) !== 0 ? '-' : '') + group(i) + (f ? '.' + f : '');

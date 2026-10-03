@@ -728,4 +728,36 @@
     <loc>https://calcbundle.net/calculators/pivot-point-calculator.html</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/crypto-profit-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/break-even-price-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/dca-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/crypto-staking-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/portfolio-allocation-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/mining-profitability-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/gas-fee-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/satoshi-btc-converter.html</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>
