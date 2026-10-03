@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margin Calculator - CalcBundle</title>
+<meta name="description" content="Work out profit margin and markup from cost and revenue, the margin needed to buy stock, and the margin needed for a currency trade.">
+<link rel="canonical" href="https://calcbundle.net/calculators/margin-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Margin Calculator - CalcBundle">
+<meta property="og:description" content="Work out profit margin and markup from cost and revenue, the margin needed to buy stock, and the margin needed for a currency trade.">
+<meta property="og:url" content="https://calcbundle.net/calculators/margin-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Margin Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out profit margin and markup from cost and revenue, the margin needed to buy stock, and the margin needed for a currency trade.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between margin and markup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Margin is profit divided by revenue, while markup is profit divided by cost. For the same sale, the markup is always bigger than the margin. A 25% margin is the same as a 33.3% markup."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I price an item for a target margin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide your cost by one minus the margin as a decimal. To reach a 25% margin on a cost of 120, divide 120 by 0.75 to get a price of 160. Enter the cost and the margin to do this."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can margin not be 100% or more?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Margin is the share of revenue that is profit. If the margin were 100%, the cost would be zero, and a margin above 100% is impossible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the stock margin amount worked out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the share price by the number of shares to get the position value, then multiply by the margin requirement as a percentage. The result is the cash you must hold, and the rest is borrowed from the broker."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a margin ratio like 20:1 mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means you can hold a currency position worth 20 times the money you put up. The required margin is the position value divided by 20. Higher ratios give more exposure and more risk."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Margin Calculator</span>
+    </div>
+    <h1>Margin Calculator</h1>
+    <p>Find your profit margin and markup, the cash needed to buy stock on margin, or the margin needed to trade currency.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Profit Margin Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Give any two of the four values and the calculator finds the rest.</p>
+    <form id="mg1-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="mg1-cost">Cost ($)</label>
+            <input type="number" id="mg1-cost" value="120" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mg1-sale">Revenue ($)</label>
+            <input type="number" id="mg1-sale" value="160" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mg1-margin">Margin (%)</label>
+            <input type="number" id="mg1-margin" value="" step="any" placeholder="Leave empty to calculate">
+          </div>
+          <div class="field-group">
+            <label for="mg1-profit">Profit ($)</label>
+            <input type="number" id="mg1-profit" value="" step="any" placeholder="Leave empty to calculate">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+          <button type="button" id="mg1-clear" class="calc-submit-btn" style="margin-top:10px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Clear</button>
+        </div>
+        <div class="mortgage-results-card" id="mg1-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Stock Trading Margin Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">The cash you must hold to buy shares on margin.</p>
+    <form id="mg2-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="mg2-price">Stock Price ($)</label>
+            <input type="number" id="mg2-price" value="18.3" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mg2-shares">Number of Shares</label>
+            <input type="number" id="mg2-shares" value="100" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mg2-ratio">Margin Requirement (%)</label>
+            <input type="number" id="mg2-ratio" value="30" min="0" max="100" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="mg2-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Currency Exchange Margin Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">The minimum balance to keep in a margin account to trade currency.</p>
+    <form id="mg3-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="mg3-rate">Exchange Rate</label>
+            <input type="number" id="mg3-rate" value="1.3" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mg3-ratio">Margin Ratio</label>
+            <select id="mg3-ratio" class="unit-select">
+              <option value="1">1:1</option>
+              <option value="5">5:1</option>
+              <option value="10">10:1</option>
+              <option value="20" selected>20:1</option>
+              <option value="25">25:1</option>
+              <option value="30">30:1</option>
+              <option value="40">40:1</option>
+              <option value="50">50:1</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="mg3-units">Units</label>
+            <input type="number" id="mg3-units" value="100" min="0" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="mg3-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Margin and markup</h2>
+      <p>Margin and markup both describe profit, but they measure it against different things. Margin is profit as a share of revenue, the price you sell for. Markup is profit as a share of cost, what the item cost you. If something costs 120 and sells for 160, the profit is 40, the margin is 25% and the markup is 33.3%. Markup is always larger than margin for the same sale, and the two are easy to confuse when you set prices.</p>
+
+      <h2>Using the profit margin calculator</h2>
+      <p>Enter any two of cost, revenue, margin and profit. The calculator finds the other two, along with the markup. To find the price that gives you a target margin, enter your cost and the margin you want. To find your margin on a sale, enter the cost and the revenue. Margin must stay below 100%, because profit can never be the whole of the revenue.</p>
+
+      <h2>Margin in trading</h2>
+      <p>In investing, margin means borrowing from a broker to buy more than your cash allows. The stock calculator shows the cash you must hold when you buy shares on margin, which is the value of the shares times the margin requirement. The currency calculator does the same for currency trading, where the margin ratio, such as 20:1, shows how much you can control for each unit of your own money. Trading on margin magnifies both gains and losses, and you can lose more than you put in.</p>
+      <div class="callout">These calculators do simple arithmetic and are not investment advice. Brokers set their own margin rules, which can change, and trading on margin carries a high risk of loss.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the difference between margin and markup?</h3>
+        <p>Margin is profit divided by revenue, while markup is profit divided by cost. For the same sale, the markup is always bigger than the margin. A 25% margin is the same as a 33.3% markup.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I price an item for a target margin?</h3>
+        <p>Divide your cost by one minus the margin as a decimal. To reach a 25% margin on a cost of 120, divide 120 by 0.75 to get a price of 160. Enter the cost and the margin to do this.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why can margin not be 100% or more?</h3>
+        <p>Margin is the share of revenue that is profit. If the margin were 100%, the cost would be zero, and a margin above 100% is impossible.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is the stock margin amount worked out?</h3>
+        <p>Multiply the share price by the number of shares to get the position value, then multiply by the margin requirement as a percentage. The result is the cash you must hold, and the rest is borrowed from the broker.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does a margin ratio like 20:1 mean?</h3>
+        <p>It means you can hold a currency position worth 20 times the money you put up. The required margin is the position value divided by 20. Higher ratios give more exposure and more risk.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="discount-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Discount Calculator</h3>
+        <p>Find a sale price, a discount or the amount you save.</p>
+      </a>
+
+      <a class="calc-list-card" href="vat-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>VAT Calculator</h3>
+        <p>Add or remove VAT from a price.</p>
+      </a>
+
+      <a class="calc-list-card" href="roi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>ROI Calculator</h3>
+        <p>Work out the return on an investment.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/margin-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

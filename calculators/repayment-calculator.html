@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Repayment Calculator - CalcBundle</title>
+<meta name="description" content="Find the repayment amount for a debt you want to clear in a set time, or how long it takes to pay off a debt with a fixed installment.">
+<link rel="canonical" href="https://calcbundle.net/calculators/repayment-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Repayment Calculator - CalcBundle">
+<meta property="og:description" content="Find the repayment amount for a debt you want to clear in a set time, or how long it takes to pay off a debt with a fixed installment.">
+<meta property="og:url" content="https://calcbundle.net/calculators/repayment-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Repayment Calculator - CalcBundle">
+<meta name="twitter:description" content="Find the repayment amount for a debt you want to clear in a set time, or how long it takes to pay off a debt with a fixed installment.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a fixed time and a fixed installment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With a fixed time you choose when the debt should be paid off and the calculator finds the payment each period. With a fixed installment you choose the payment and the calculator finds how long it takes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the last payment smaller?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When you pay a fixed installment the debt rarely ends exactly on a payment date. The final payment is just what remains plus its interest, so it is smaller than the rest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does it say my installment is too low?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the installment is no more than the interest that builds up in one period, none of it reduces the balance and the debt can never be cleared. Raise the installment above the interest shown in the message."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can compounding and payments be on different schedules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The calculator converts the rate to the matching rate for each payment period, so you can compound monthly and still pay weekly, biweekly or on any of the other schedules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I pay a debt off faster?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pay more each period, pay more often, or both. Try a higher installment to see how many months you save and how much interest you avoid."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Repayment Calculator</span>
+    </div>
+    <h1>Repayment Calculator</h1>
+    <p>Work out what to pay each period to clear a debt in a set time, or how long a fixed installment takes to pay it off. Works for credit cards, car loans, personal loans and more.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="rp-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="rp-amount">Loan Balance ($)</label>
+            <input type="number" id="rp-amount" value="10000" min="0" step="any">
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rp-rate">Interest Rate (%)</label>
+              <input type="number" id="rp-rate" value="10" min="0" max="100" step="any">
+            </div>
+            <div class="field-group">
+              <label for="rp-compound">Compound</label>
+              <select id="rp-compound" class="unit-select">
+                <option value="annually">Annually (APY)</option>
+                <option value="semiannually">Semi-annually</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="monthly" selected>Monthly (APR)</option>
+                <option value="semimonthly">Semi-monthly</option>
+                <option value="biweekly">Biweekly</option>
+                <option value="weekly">Weekly</option>
+                <option value="daily">Daily</option>
+                <option value="continuously">Continuously</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="rp-payback">Pay Back</label>
+            <select id="rp-payback" class="unit-select">
+              <option value="daily">Every Day</option>
+              <option value="weekly">Every Week</option>
+              <option value="biweekly">Every 2 Weeks</option>
+              <option value="halfmonth">Every Half Month</option>
+              <option value="month" selected>Every Month</option>
+              <option value="quarter">Every Quarter</option>
+              <option value="halfyear">Every 6 Months</option>
+              <option value="year">Every Year</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label>How do you want to repay?</label>
+            <div>
+              <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="radio" name="rp-way" value="t" checked>Repay within a fixed time</label>
+              <label class="radio-option" style="display:flex;"><input type="radio" name="rp-way" value="a">Repay with a fixed installment</label>
+            </div>
+          </div>
+
+          <div data-modes="t"><div class="field-row">
+            <div class="field-group">
+              <label for="rp-years">Years</label>
+              <input type="number" id="rp-years" value="5" min="0" max="100" step="any">
+            </div>
+            <div class="field-group">
+              <label for="rp-months">Months</label>
+              <input type="number" id="rp-months" value="0" min="0" step="any">
+            </div>
+          </div></div>
+          <div class="field-group" data-modes="a">
+            <label for="rp-installment">Installment Each Period ($)</label>
+            <input type="number" id="rp-installment" value="200" min="0" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="rp-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="rp-results-section" hidden>
+      <div class="schedule-header">
+        <h2 style="margin:0;font-size:18px;">Repayment Schedule</h2>
+        <div class="schedule-toggle-group">
+          <button type="button" id="rp-toggle-year" class="active">By year</button>
+          <button type="button" id="rp-toggle-each" >Each payment</button>
+        </div>
+      </div>
+      <div class="schedule-table-wrap" style="margin-top:16px;">
+        <div id="rp-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Two ways to plan a repayment</h2>
+      <p>Most people approach a debt from one of two directions. Either they want it gone by a certain date, and need to know how much to pay each period. Or they know how much they can afford to pay each period, and want to know how long it will take. This calculator handles both. Choose a fixed time to find the repayment amount, or a fixed installment to find the payoff time.</p>
+
+      <h2>How the numbers work</h2>
+      <p>Interest builds up on the balance and is added at the compounding frequency you choose. The calculator converts the rate to the matching rate for your payment period, so you can compound monthly and pay weekly, for example. Each payment first covers the interest that has built up and the rest reduces the balance. When you pick a fixed installment, the final payment is usually smaller, because the debt rarely ends on an exact payment. If your installment is no larger than the interest, the balance never falls and the calculator tells you so.</p>
+
+      <h2>Credit cards, car loans and other debts</h2>
+      <p>Use it for any debt with a steady rate, such as a personal loan, car loan or student loan. For a credit card, enter your balance and the card rate and try different installments to see how much sooner extra payments clear it. Real card rates and minimum payments change over time, so treat the result as an estimate.</p>
+      <div class="callout">This calculator gives estimates and assumes the rate stays the same. Fees, rate changes and missed payments are not included.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the difference between a fixed time and a fixed installment?</h3>
+        <p>With a fixed time you choose when the debt should be paid off and the calculator finds the payment each period. With a fixed installment you choose the payment and the calculator finds how long it takes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is the last payment smaller?</h3>
+        <p>When you pay a fixed installment the debt rarely ends exactly on a payment date. The final payment is just what remains plus its interest, so it is smaller than the rest.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does it say my installment is too low?</h3>
+        <p>If the installment is no more than the interest that builds up in one period, none of it reduces the balance and the debt can never be cleared. Raise the installment above the interest shown in the message.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can compounding and payments be on different schedules?</h3>
+        <p>Yes. The calculator converts the rate to the matching rate for each payment period, so you can compound monthly and still pay weekly, biweekly or on any of the other schedules.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I pay a debt off faster?</h3>
+        <p>Pay more each period, pay more often, or both. Try a higher installment to see how many months you save and how much interest you avoid.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="payment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Payment Calculator</h3>
+        <p>Find a monthly payment or how long a loan takes to pay off.</p>
+      </a>
+
+      <a class="calc-list-card" href="loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Loan Calculator</h3>
+        <p>Payments on amortized, deferred and bond-style loans.</p>
+      </a>
+
+      <a class="calc-list-card" href="personal-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Personal Loan Calculator</h3>
+        <p>Payment, fees and APR on a personal loan.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/repayment-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

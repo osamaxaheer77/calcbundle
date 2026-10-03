@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget Calculator - CalcBundle</title>
+<meta name="description" content="Plan a monthly and yearly budget: enter income and expenses, and see your net income, expense breakdown, and debt-to-income ratio.">
+<link rel="canonical" href="https://calcbundle.net/calculators/budget-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Budget Calculator - CalcBundle">
+<meta property="og:description" content="Plan a monthly and yearly budget: enter income and expenses, and see your net income, expense breakdown, and debt-to-income ratio.">
+<meta property="og:url" content="https://calcbundle.net/calculators/budget-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Budget Calculator - CalcBundle">
+<meta name="twitter:description" content="Plan a monthly and yearly budget: enter income and expenses, and see your net income, expense breakdown, and debt-to-income ratio.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is my after-tax income calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator adds up all your income for the year, then removes the income tax rate you enter. Everything is treated as taxable at that one flat rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are my 401(k) and IRA amounts smaller in the breakdown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "These contributions are made before tax, so they cost you less than their face value. The calculator multiplies them by one minus your tax rate to show what they cost you after tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good debt-to-income ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Below 35% is generally seen as good. From 35% to 49% there is room for improvement, and 50% or higher is very high and may put you at financial risk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts toward the debt-to-income ratio here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mortgage, rent, property tax, home insurance, HOA fees, and auto, credit card, student and other loan payments. Utilities, home maintenance and living costs are not included."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the front-end DTI ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is your yearly housing costs divided by your gross yearly income. Lenders use it alongside the full DTI ratio."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Budget Calculator</span>
+    </div>
+    <h1>Budget Calculator</h1>
+    <p>Enter your income and expenses to see what is left each month, where your money goes, and your debt-to-income ratio.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <style>
+      .bd-h{margin:18px 0 6px;font-size:15px;}
+      .bd-h:first-child{margin-top:0;}
+      .bd-row{display:grid;grid-template-columns:minmax(0,1fr) 110px 110px;gap:8px;align-items:center;margin-bottom:8px;}
+      .bd-row label{font-size:14px;}
+      .bd-row input,.bd-row select{width:100%;min-width:0;}
+      @media(max-width:520px){.bd-row{grid-template-columns:1fr 1fr;}.bd-row label{grid-column:1 / -1;}}
+      .bd-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px;}
+      .bd-table th,.bd-table td{padding:6px 4px;text-align:right;border-bottom:1px solid var(--border);}
+      .bd-table th:first-child,.bd-table td:first-child{text-align:left;}
+    </style>
+    <form id="bd-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <h3 class="bd-h">Income (before tax)</h3>
+            <div class="bd-row">
+              <label for="bd-salary">Salary & earned income</label>
+              <input type="number" id="bd-salary" value="80000" min="0" step="any">
+              <select id="bd-p-salary" class="unit-select" aria-label="Salary & earned income period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-pension">Pension & Social Security</label>
+              <input type="number" id="bd-pension" value="0" min="0" step="any">
+              <select id="bd-p-pension" class="unit-select" aria-label="Pension & Social Security period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-investment">Investments & savings income</label>
+              <input type="number" id="bd-investment" value="1000" min="0" step="any">
+              <select id="bd-p-investment" class="unit-select" aria-label="Investments & savings income period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-otherincome">Other income</label>
+              <input type="number" id="bd-otherincome" value="2000" min="0" step="any">
+              <select id="bd-p-otherincome" class="unit-select" aria-label="Other income period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-taxrate">Income tax rate (%)</label>
+              <input type="number" id="bd-taxrate" value="28" min="0" max="100" step="any">
+              <span></span>
+            </div>
+          <h3 class="bd-h">Housing & utilities</h3>
+            <div class="bd-row">
+              <label for="bd-mortgage">Mortgage payment</label>
+              <input type="number" id="bd-mortgage" value="0" min="0" step="any">
+              <select id="bd-p-mortgage" class="unit-select" aria-label="Mortgage payment period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-propertytax">Property tax</label>
+              <input type="number" id="bd-propertytax" value="0" min="0" step="any">
+              <select id="bd-p-propertytax" class="unit-select" aria-label="Property tax period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-rental">Rent</label>
+              <input type="number" id="bd-rental" value="1400" min="0" step="any">
+              <select id="bd-p-rental" class="unit-select" aria-label="Rent period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-houseinsurance">Home or renter’s insurance</label>
+              <input type="number" id="bd-houseinsurance" value="200" min="0" step="any">
+              <select id="bd-p-houseinsurance" class="unit-select" aria-label="Home or renter’s insurance period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-hoafee">HOA fee</label>
+              <input type="number" id="bd-hoafee" value="0" min="0" step="any">
+              <select id="bd-p-hoafee" class="unit-select" aria-label="HOA fee period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-homemaintenance">Home maintenance</label>
+              <input type="number" id="bd-homemaintenance" value="0" min="0" step="any">
+              <select id="bd-p-homemaintenance" class="unit-select" aria-label="Home maintenance period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-utilities">Utilities</label>
+              <input type="number" id="bd-utilities" value="250" min="0" step="any">
+              <select id="bd-p-utilities" class="unit-select" aria-label="Utilities period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+          <h3 class="bd-h">Transportation</h3>
+            <div class="bd-row">
+              <label for="bd-autoloan">Auto loan payment</label>
+              <input type="number" id="bd-autoloan" value="250" min="0" step="any">
+              <select id="bd-p-autoloan" class="unit-select" aria-label="Auto loan payment period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-autoinsurance">Auto insurance</label>
+              <input type="number" id="bd-autoinsurance" value="700" min="0" step="any">
+              <select id="bd-p-autoinsurance" class="unit-select" aria-label="Auto insurance period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-gasoline">Gasoline</label>
+              <input type="number" id="bd-gasoline" value="100" min="0" step="any">
+              <select id="bd-p-gasoline" class="unit-select" aria-label="Gasoline period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-automaintenance">Auto maintenance</label>
+              <input type="number" id="bd-automaintenance" value="600" min="0" step="any">
+              <select id="bd-p-automaintenance" class="unit-select" aria-label="Auto maintenance period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-parkingtoll">Parking & tolls</label>
+              <input type="number" id="bd-parkingtoll" value="20" min="0" step="any">
+              <select id="bd-p-parkingtoll" class="unit-select" aria-label="Parking & tolls period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-othertransportation">Other transportation</label>
+              <input type="number" id="bd-othertransportation" value="0" min="0" step="any">
+              <select id="bd-p-othertransportation" class="unit-select" aria-label="Other transportation period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+          <h3 class="bd-h">Other debt & loan payments</h3>
+            <div class="bd-row">
+              <label for="bd-creditcard">Credit card payments</label>
+              <input type="number" id="bd-creditcard" value="0" min="0" step="any">
+              <select id="bd-p-creditcard" class="unit-select" aria-label="Credit card payments period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-studentloan">Student loan payments</label>
+              <input type="number" id="bd-studentloan" value="250" min="0" step="any">
+              <select id="bd-p-studentloan" class="unit-select" aria-label="Student loan payments period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-otherloan">Other loan payments</label>
+              <input type="number" id="bd-otherloan" value="0" min="0" step="any">
+              <select id="bd-p-otherloan" class="unit-select" aria-label="Other loan payments period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+          <h3 class="bd-h">Living expenses</h3>
+            <div class="bd-row">
+              <label for="bd-food">Food</label>
+              <input type="number" id="bd-food" value="400" min="0" step="any">
+              <select id="bd-p-food" class="unit-select" aria-label="Food period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-clothing">Clothing</label>
+              <input type="number" id="bd-clothing" value="100" min="0" step="any">
+              <select id="bd-p-clothing" class="unit-select" aria-label="Clothing period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-grocery">Household supplies</label>
+              <input type="number" id="bd-grocery" value="100" min="0" step="any">
+              <select id="bd-p-grocery" class="unit-select" aria-label="Household supplies period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-mealout">Meals out</label>
+              <input type="number" id="bd-mealout" value="200" min="0" step="any">
+              <select id="bd-p-mealout" class="unit-select" aria-label="Meals out period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-otherliving">Other living expenses</label>
+              <input type="number" id="bd-otherliving" value="200" min="0" step="any">
+              <select id="bd-p-otherliving" class="unit-select" aria-label="Other living expenses period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+          <h3 class="bd-h">Healthcare</h3>
+            <div class="bd-row">
+              <label for="bd-medicalinsurance">Medical insurance</label>
+              <input type="number" id="bd-medicalinsurance" value="0" min="0" step="any">
+              <select id="bd-p-medicalinsurance" class="unit-select" aria-label="Medical insurance period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-medicalspending">Medical spending</label>
+              <input type="number" id="bd-medicalspending" value="200" min="0" step="any">
+              <select id="bd-p-medicalspending" class="unit-select" aria-label="Medical spending period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+          <h3 class="bd-h">Children & education</h3>
+            <div class="bd-row">
+              <label for="bd-childcare">Child care</label>
+              <input type="number" id="bd-childcare" value="0" min="0" step="any">
+              <select id="bd-p-childcare" class="unit-select" aria-label="Child care period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-tuition">Tuition</label>
+              <input type="number" id="bd-tuition" value="0" min="0" step="any">
+              <select id="bd-p-tuition" class="unit-select" aria-label="Tuition period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-childsupport">Child support</label>
+              <input type="number" id="bd-childsupport" value="0" min="0" step="any">
+              <select id="bd-p-childsupport" class="unit-select" aria-label="Child support period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-othereducation">Other education & children</label>
+              <input type="number" id="bd-othereducation" value="100" min="0" step="any">
+              <select id="bd-p-othereducation" class="unit-select" aria-label="Other education & children period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+          <h3 class="bd-h">Savings & investments</h3>
+            <div class="bd-row">
+              <label for="bd-ira401k">401(k) / IRA (before tax)</label>
+              <input type="number" id="bd-ira401k" value="10000" min="0" step="any">
+              <select id="bd-p-ira401k" class="unit-select" aria-label="401(k) / IRA (before tax) period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-collegesaving">College savings (before tax)</label>
+              <input type="number" id="bd-collegesaving" value="0" min="0" step="any">
+              <select id="bd-p-collegesaving" class="unit-select" aria-label="College savings (before tax) period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-stockbond">Stocks & bonds</label>
+              <input type="number" id="bd-stockbond" value="0" min="0" step="any">
+              <select id="bd-p-stockbond" class="unit-select" aria-label="Stocks & bonds period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-othersavings">Other savings</label>
+              <input type="number" id="bd-othersavings" value="0" min="0" step="any">
+              <select id="bd-p-othersavings" class="unit-select" aria-label="Other savings period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+          <h3 class="bd-h">Miscellaneous</h3>
+            <div class="bd-row">
+              <label for="bd-pet">Pets</label>
+              <input type="number" id="bd-pet" value="200" min="0" step="any">
+              <select id="bd-p-pet" class="unit-select" aria-label="Pets period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-giftdonation">Gifts & donations</label>
+              <input type="number" id="bd-giftdonation" value="300" min="0" step="any">
+              <select id="bd-p-giftdonation" class="unit-select" aria-label="Gifts & donations period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-hobbiesport">Hobbies & sports</label>
+              <input type="number" id="bd-hobbiesport" value="100" min="0" step="any">
+              <select id="bd-p-hobbiesport" class="unit-select" aria-label="Hobbies & sports period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-entertainment">Entertainment</label>
+              <input type="number" id="bd-entertainment" value="100" min="0" step="any">
+              <select id="bd-p-entertainment" class="unit-select" aria-label="Entertainment period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-vacation">Vacation</label>
+              <input type="number" id="bd-vacation" value="2000" min="0" step="any">
+              <select id="bd-p-vacation" class="unit-select" aria-label="Vacation period"><option value="m">per month</option><option value="y" selected>per year</option></select>
+            </div>
+            <div class="bd-row">
+              <label for="bd-allother">All other</label>
+              <input type="number" id="bd-allother" value="100" min="0" step="any">
+              <select id="bd-p-allother" class="unit-select" aria-label="All other period"><option value="m" selected>per month</option><option value="y">per year</option></select>
+            </div>
+          <button type="submit" class="calc-submit-btn" style="margin-top:14px;">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="bd-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the budget is worked out</h2>
+      <p>Enter each income and expense either per month or per year, and the calculator converts everything to a yearly and monthly figure. Your income tax is taken from your total income to find your after-tax income. Your expenses are then subtracted from that to show what is left over, or the shortfall if you spend more than you earn.</p>
+
+      <h2>Before-tax savings</h2>
+      <p>Contributions to a 401(k), an IRA or a college savings plan usually come out of your pay before tax. Because that money is not taxed, the calculator reduces these contributions by your tax rate, so they are compared with your after-tax income on the same basis as everything else. Stocks, bonds and other savings are counted at their full amount. Financial planners often suggest putting aside at least 15% of your income into savings and investments.</p>
+
+      <h2>Debt-to-income ratio</h2>
+      <p>The debt-to-income ratio, or DTI, is the share of your gross income that goes to housing and debt payments each year. Housing is mortgage or rent, property tax, insurance and HOA fees; debts are auto, credit card, student and other loan payments. A ratio under 35% is generally considered good, 35% to 49% leaves room for improvement, and 50% or more is very high. The front-end ratio looks at housing costs alone.</p>
+      <div class="callout">This calculator gives a rough plan from the numbers you enter. It uses one flat tax rate and does not know about your actual tax situation, so use it for planning, not for tax or lending decisions.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How is my after-tax income calculated?</h3>
+        <p>The calculator adds up all your income for the year, then removes the income tax rate you enter. Everything is treated as taxable at that one flat rate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why are my 401(k) and IRA amounts smaller in the breakdown?</h3>
+        <p>These contributions are made before tax, so they cost you less than their face value. The calculator multiplies them by one minus your tax rate to show what they cost you after tax.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a good debt-to-income ratio?</h3>
+        <p>Below 35% is generally seen as good. From 35% to 49% there is room for improvement, and 50% or higher is very high and may put you at financial risk.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What counts toward the debt-to-income ratio here?</h3>
+        <p>Mortgage, rent, property tax, home insurance, HOA fees, and auto, credit card, student and other loan payments. Utilities, home maintenance and living costs are not included.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the front-end DTI ratio?</h3>
+        <p>It is your yearly housing costs divided by your gross yearly income. Lenders use it alongside the full DTI ratio.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="salary-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Salary Calculator</h3>
+        <p>Convert a salary between hourly, weekly, monthly and yearly pay.</p>
+      </a>
+
+      <a class="calc-list-card" href="debt-payoff-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Debt Payoff Calculator</h3>
+        <p>See how long it takes to pay off several debts.</p>
+      </a>
+
+      <a class="calc-list-card" href="income-tax-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Income Tax Calculator</h3>
+        <p>Estimate federal income tax and take-home pay.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/budget-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

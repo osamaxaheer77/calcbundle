@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inflation Calculator - CalcBundle</title>
+<meta name="description" content="See what a dollar amount from any month since 1913 is worth today using U.S. Consumer Price Index data, or project inflation forward and backward at a fixed rate.">
+<link rel="canonical" href="https://calcbundle.net/calculators/inflation-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Inflation Calculator - CalcBundle">
+<meta property="og:description" content="See what a dollar amount from any month since 1913 is worth today using U.S. Consumer Price Index data, or project inflation forward and backward at a fixed rate.">
+<meta property="og:url" content="https://calcbundle.net/calculators/inflation-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Inflation Calculator - CalcBundle">
+<meta name="twitter:description" content="See what a dollar amount from any month since 1913 is worth today using U.S. Consumer Price Index data, or project inflation forward and backward at a fixed rate.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Consumer Price Index?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Consumer Price Index, or CPI, tracks the average price of a basket of goods and services that urban consumers buy, such as food, housing, transport and medical care. The U.S. Bureau of Labor Statistics publishes it every month, and the change in the index over time is the inflation rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the value of money over time worked out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the amount by the price index of the later date and divide by the price index of the earlier date. If the index rose by 26%, then $100 in the earlier month needs $126 in the later month to buy the same things."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the average option do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choosing Average uses the average price index for the whole year instead of one month. It is useful when you only know the year, such as a salary or price from 1995. The calculator treats a yearly average as the middle of the year when it works out the average rate per year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does October 2025 use an estimated value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No official price index was published for October 2025. The calculator fills that month with the midpoint of September and November, so a calculation that uses October 2025 is an estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use the flat rate calculators?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use them for planning, when you want to assume a steady inflation rate. The forward calculator shows what something costing a given amount today could cost in the future, and the backward calculator shows what a current amount was worth in the past at an assumed rate. Historical U.S. inflation has often been near 3% a year."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Inflation Calculator</span>
+    </div>
+    <h1>Inflation Calculator</h1>
+    <p>Find what an amount of U.S. dollars from any month since 1913 is worth in another month, or see the effect of a steady inflation rate over a number of years.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="if-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="if-mode">Which calculation?</label>
+            <select id="if-mode" class="unit-select">
+              <option value="1" selected>U.S. prices, any two dates since 1913</option>
+              <option value="2">Forward: what it costs in the future</option>
+              <option value="3">Backward: what it was worth in the past</option>
+            </select>
+          </div>
+
+          <div data-modes="1">
+            <div class="field-group">
+              <label for="if-amount">Amount ($)</label>
+              <input type="number" id="if-amount" value="100" min="0" step="any">
+            </div>
+            <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:4px 0 8px;">In</p>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="if-in-month">Month</label>
+                <select id="if-in-month" class="unit-select"></select>
+              </div>
+              <div class="field-group">
+                <label for="if-in-year">Year</label>
+                <select id="if-in-year" class="unit-select"></select>
+              </div>
+            </div>
+            <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:4px 0 8px;">Is equal to how much in</p>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="if-out-month">Month</label>
+                <select id="if-out-month" class="unit-select"></select>
+              </div>
+              <div class="field-group">
+                <label for="if-out-year">Year</label>
+                <select id="if-out-year" class="unit-select"></select>
+              </div>
+            </div>
+          </div>
+
+          <div data-modes="2 3">
+            <div class="field-group">
+              <label for="if-f-amount">Amount ($)</label>
+              <input type="number" id="if-f-amount" value="100" min="0" step="any">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="if-f-rate">Inflation Rate (%/yr)</label>
+                <input type="number" id="if-f-rate" value="3" min="-20" max="500" step="any">
+              </div>
+              <div class="field-group">
+                <label for="if-f-years">Years</label>
+                <input type="number" id="if-f-years" value="10" min="0" max="200" step="any">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="if-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="if-results-section" hidden>
+      <h2 id="if-chart-title" style="margin:0 0 16px;font-size:18px;">Value over time</h2>
+      <div id="if-chart"></div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How inflation changes what money buys</h2>
+      <p>Inflation is the general rise in prices over time. When prices rise, each dollar buys less, so the same amount of money has different buying power in different years. To compare amounts across time you adjust them with a price index. This calculator uses the U.S. Consumer Price Index for All Urban Consumers (CPI-U), published monthly by the Bureau of Labor Statistics. It covers every month from January 1913 to the latest release.</p>
+
+      <h2>Comparing two dates</h2>
+      <p>Pick an amount, the month and year it belongs to, and the month and year you want to compare with. The calculator multiplies the amount by the price index of the second date and divides by the index of the first. If prices rose 26% between the two dates, then $100 in the earlier month matches $126 in the later one. For gaps of more than a year it also shows the average yearly rate, which is the steady rate that would give the same total change. Choose Average instead of a month to use the average index for a whole year, which is handy when you only know the year.</p>
+
+      <h2>Flat rate projections</h2>
+      <p>The forward and backward modes use one steady inflation rate instead of real data. The forward mode shows what a price today could become after a number of years. The backward mode shows what today's amount was worth in the past at that rate. Inflation in developed countries has often been close to 3% a year, which is a reasonable starting point for planning, but you can use any rate.</p>
+      <div class="callout">Price indexes measure the average basket of a typical urban household. Your own costs may have risen faster or slower, for example if you spend more on housing or healthcare. Use the results as a guide to general buying power, not as an exact measure of your own cost of living.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the Consumer Price Index?</h3>
+        <p>The Consumer Price Index, or CPI, tracks the average price of a basket of goods and services that urban consumers buy, such as food, housing, transport and medical care. The U.S. Bureau of Labor Statistics publishes it every month, and the change in the index over time is the inflation rate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is the value of money over time worked out?</h3>
+        <p>Multiply the amount by the price index of the later date and divide by the price index of the earlier date. If the index rose by 26%, then $100 in the earlier month needs $126 in the later month to buy the same things.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does the average option do?</h3>
+        <p>Choosing Average uses the average price index for the whole year instead of one month. It is useful when you only know the year, such as a salary or price from 1995. The calculator treats a yearly average as the middle of the year when it works out the average rate per year.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does October 2025 use an estimated value?</h3>
+        <p>No official price index was published for October 2025. The calculator fills that month with the midpoint of September and November, so a calculation that uses October 2025 is an estimate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When should I use the flat rate calculators?</h3>
+        <p>Use them for planning, when you want to assume a steady inflation rate. The forward calculator shows what something costing a given amount today could cost in the future, and the backward calculator shows what a current amount was worth in the past at an assumed rate. Historical U.S. inflation has often been near 3% a year.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="compound-interest-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Compound Interest Calculator</h3>
+        <p>Calculate how savings grow when interest compounds over time.</p>
+      </a>
+
+      <a class="calc-list-card" href="retirement-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </a>
+
+      <a class="calc-list-card" href="salary-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Salary Calculator</h3>
+        <p>Convert a salary between hourly, weekly, monthly and yearly pay.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/cpi-data.js"></script>
+<script src="../js/inflation-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

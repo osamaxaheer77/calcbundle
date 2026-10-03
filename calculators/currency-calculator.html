@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currency Calculator - CalcBundle</title>
+<meta name="description" content="Convert money between more than 150 world currencies using live exchange rates, with a rate table for the major currencies and a custom exchange rate tool.">
+<link rel="canonical" href="https://calcbundle.net/calculators/currency-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Currency Calculator - CalcBundle">
+<meta property="og:description" content="Convert money between more than 150 world currencies using live exchange rates, with a rate table for the major currencies and a custom exchange rate tool.">
+<meta property="og:url" content="https://calcbundle.net/calculators/currency-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Currency Calculator - CalcBundle">
+<meta name="twitter:description" content="Convert money between more than 150 world currencies using live exchange rates, with a rate table for the major currencies and a custom exchange rate tool.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where do the exchange rates come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator loads current rates when you open the page, from a public exchange-rate service. The date and time of the rates is shown with every result. These are mid-market rates, not the rates a bank or exchange counter will offer you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my bank's rate different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Banks, card networks and exchange counters add a margin to the mid-market rate and often charge a fee as well. Use the result here as a benchmark and compare it with the rate you are quoted to see the real cost of the exchange."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are two currencies converted when neither is the dollar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every rate is held against the U.S. dollar. To go from one currency to another, the calculator divides the rate of the target currency by the rate of the starting currency. This gives the same answer as converting to dollars first and then to the second currency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the custom exchange rate tool for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use it when you already have a rate, for example one quoted by your bank or a money transfer service. Enter the number of units of currency B you get for one unit of currency A, and the amount you want to exchange, and it shows the result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the page need an internet connection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Exchange rates change every day, so the calculator fetches the latest ones when the page loads. The amount you type is never sent anywhere. If the rate service cannot be reached, the page falls back to the last rates saved in your browser, if there are any."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Currency Calculator</span>
+    </div>
+    <h1>Currency Calculator</h1>
+    <p>Convert an amount between world currencies at today's exchange rate, and look up rates for the major currencies.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="cu-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="cu-amount">Amount</label>
+            <input type="number" id="cu-amount" value="100" min="0" step="any">
+          </div>
+
+          <div class="field-group">
+            <label for="cu-from">From</label>
+            <select id="cu-from" class="unit-select"><option value="USD">USD: US Dollar</option></select>
+          </div>
+
+          <div style="margin:-4px 0 12px;">
+            <button type="button" id="cu-swap" style="background:none;border:1px solid var(--border);border-radius:8px;padding:6px 14px;cursor:pointer;color:var(--accent);font:inherit;">&#8645; Swap currencies</button>
+          </div>
+
+          <div class="field-group">
+            <label for="cu-to">To</label>
+            <select id="cu-to" class="unit-select"><option value="PKR">PKR: Pakistani Rupee</option></select>
+          </div>
+
+          <div class="field-group">
+            <label class="radio-option" style="display:flex;align-items:center;gap:8px;font-weight:500;"><input type="checkbox" id="cu-popular" checked style="width:auto;height:auto;">Show most popular currencies only</label>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Convert</button>
+          <p style="font-size:12px;color:var(--text-secondary);margin:12px 0 0;">Exchange rates by <a href="https://www.exchangerate-api.com" rel="noopener" target="_blank">ExchangeRate-API</a>.</p>
+        </div>
+
+        <div class="mortgage-results-card" id="cu-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:36px 0 12px;font-size:20px;">Customized Currency Exchange Rate</h2>
+    <form id="cu-form2" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="cu-rate">Exchange Rate for Currency A/B</label>
+            <input type="number" id="cu-rate" value="4" min="0" step="any">
+            <p style="font-size:12px;color:var(--text-secondary);margin:6px 0 0;">Units of B you get for 1 unit of A.</p>
+          </div>
+          <div class="field-group">
+            <label for="cu-amount2">Amount to Exchange</label>
+            <input type="number" id="cu-amount2" value="100" min="0" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="cu-result2"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" style="margin-top:36px;">
+      <h2 style="margin:0 0 6px;font-size:18px;">Market Exchange Rates</h2>
+      <p id="cu-stamp" style="font-size:13px;color:var(--text-secondary);margin:0 0 16px;">Loading rates…</p>
+      <div class="schedule-table-wrap" style="max-height:none;">
+        <div id="cu-major"></div>
+      </div>
+      <h3 style="margin:24px 0 8px;font-size:16px;">All currencies against the US dollar</h3>
+      <div class="schedule-table-wrap">
+        <div id="cu-all"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How currency conversion works</h2>
+      <p>An exchange rate says how many units of one currency you get for one unit of another. To convert an amount, multiply it by the rate. Rates change all day as banks and traders buy and sell currencies, so any rate is a snapshot. This calculator fetches the latest rates when the page loads and shows when they were published. The rates are mid-market rates, the midpoint between what traders will buy and sell for, and they are the fairest benchmark for comparing offers.</p>
+
+      <h2>Why you rarely get the mid-market rate</h2>
+      <p>Banks, card networks, airport counters and money transfer services usually give you a worse rate than the mid-market one, and some add a fixed fee on top. The gap between the rate you are offered and the mid-market rate is part of what the exchange costs you. Before you convert a large amount, run it through the calculator, then compare it with the amount you are actually quoted. The difference is the real cost.</p>
+
+      <h2>The customized exchange rate tool</h2>
+      <p>If you already know a rate, such as one from a remittance service or your bank, the customized tool converts an amount at that exact rate. Enter how many units of currency B one unit of currency A buys, and the amount you want to exchange. It also shows the reverse rate, which helps you compare a quote written the other way round.</p>
+      <div class="callout">Rates are for information only. They are not a quote or an offer to trade, and the rate you actually get may differ. Check with your bank or provider before you send or convert money.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Where do the exchange rates come from?</h3>
+        <p>The calculator loads current rates when you open the page, from a public exchange-rate service. The date and time of the rates is shown with every result. These are mid-market rates, not the rates a bank or exchange counter will offer you.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is my bank's rate different?</h3>
+        <p>Banks, card networks and exchange counters add a margin to the mid-market rate and often charge a fee as well. Use the result here as a benchmark and compare it with the rate you are quoted to see the real cost of the exchange.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How are two currencies converted when neither is the dollar?</h3>
+        <p>Every rate is held against the U.S. dollar. To go from one currency to another, the calculator divides the rate of the target currency by the rate of the starting currency. This gives the same answer as converting to dollars first and then to the second currency.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the custom exchange rate tool for?</h3>
+        <p>Use it when you already have a rate, for example one quoted by your bank or a money transfer service. Enter the number of units of currency B you get for one unit of currency A, and the amount you want to exchange, and it shows the result.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the page need an internet connection?</h3>
+        <p>Exchange rates change every day, so the calculator fetches the latest ones when the page loads. The amount you type is never sent anywhere. If the rate service cannot be reached, the page falls back to the last rates saved in your browser, if there are any.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="inflation-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Inflation Calculator</h3>
+        <p>See what money from any month since 1913 is worth today.</p>
+      </a>
+
+      <a class="calc-list-card" href="sales-tax-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Sales Tax Calculator</h3>
+        <p>Find the after-tax price, the rate or the before-tax price.</p>
+      </a>
+
+      <a class="calc-list-card" href="loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Loan Calculator</h3>
+        <p>Payments on amortized, deferred and bond-style loans.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/currency-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

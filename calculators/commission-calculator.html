@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commission Calculator - CalcBundle</title>
+<meta name="description" content="Work out a sales commission from the sales price and rate, or build a tiered commission with a base amount and different rates for different sales levels.">
+<link rel="canonical" href="https://calcbundle.net/calculators/commission-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Commission Calculator - CalcBundle">
+<meta property="og:description" content="Work out a sales commission from the sales price and rate, or build a tiered commission with a base amount and different rates for different sales levels.">
+<meta property="og:url" content="https://calcbundle.net/calculators/commission-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Commission Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out a sales commission from the sales price and rate, or build a tiered commission with a base amount and different rates for different sales levels.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate a commission?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the sales price by the commission rate as a decimal. A 3% commission on a 200,000 sale is 200,000 times 0.03, which is 6,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a tiered commission work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The sales are split into ranges, and each range has its own rate. The commission is the sum of what each range earns. Only the part of the sale inside a range is paid at that range rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a base commission?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A base commission is an amount paid on top of any other commission, either a fixed dollar amount or a percentage of the sale price. It is added to the tiered or fixed commission."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a dollar amount tier mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A tier set in dollars pays that flat amount once the sale reaches into the tier. It does not grow with the part of the sale inside the tier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find a commission rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the commission by the sales price and multiply by 100. Enter the sales price and the commission and leave the rate empty."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Commission Calculator</span>
+    </div>
+    <h1>Commission Calculator</h1>
+    <p>Find a commission, a commission rate or a sales price, or work out a tiered commission with a base amount and rates that change with sales.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Commission Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Give any two values and the calculator finds the third, and shows the steps.</p>
+    <form id="cm1-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="cm1-price">Sales Price ($)</label>
+            <input type="number" id="cm1-price" value="200000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="cm1-rate">Commission Rate (%)</label>
+            <input type="number" id="cm1-rate" value="3" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="cm1-comm">Commission ($)</label>
+            <input type="number" id="cm1-comm" value="" min="0" step="any" placeholder="Leave empty to calculate">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+          <button type="button" id="cm1-clear" class="calc-submit-btn" style="margin-top:10px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Clear</button>
+        </div>
+        <div class="mortgage-results-card" id="cm1-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Tiered Commission Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">For commissions that include a base amount, or that pay different rates at different sales levels. Leave the last "To" box empty if there is no upper limit.</p>
+    <form id="cm2-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="cm2-price">Sales Price ($)</label>
+            <input type="number" id="cm2-price" value="200000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label>Has a base commission?</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="cm2-base" value="y">Yes</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="cm2-base" value="n" checked>No</label>
+            </div>
+          </div>
+          <div id="cm2-base-box" class="field-row">
+            <div class="field-group">
+              <label for="cm2-base">Base Commission</label>
+              <input type="number" id="cm2-base" value="1000" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="cm2-base-unit">Type</label>
+              <select id="cm2-base-unit" class="unit-select"><option value="p">%</option><option value="d" selected>$</option></select>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Commission varies with price?</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="cm2-vary" value="y" checked>Yes</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="cm2-vary" value="n">No</label>
+            </div>
+          </div>
+          <div id="cm2-fixed-box" class="field-row">
+            <div class="field-group">
+              <label for="cm2-fixed">Commission</label>
+              <input type="number" id="cm2-fixed" value="3" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="cm2-fixed-unit">Type</label>
+              <select id="cm2-fixed-unit" class="unit-select"><option value="p" selected>%</option><option value="d">$</option></select>
+            </div>
+          </div>
+          <div id="cm2-tier-box">
+            <p style="font-size:13px;color:var(--text-secondary);margin:0 0 8px;">Define the tiered commission structure below.</p>
+            <div id="cm2-tiers"></div>
+          </div>
+          <button type="submit" class="calc-submit-btn" style="margin-top:14px;">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="cm2-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Simple commission</h2>
+      <p>A basic sales commission is a percentage of the sale. Multiply the sales price by the commission rate to get the commission. If you know the commission and the rate, divide the commission by the rate to find the sales price. If you know the commission and the sales price, divide the commission by the sales price to find the rate. Fill in any two values in the first calculator and it shows the answer with the working.</p>
+
+      <h2>Tiered commission</h2>
+      <p>Many pay plans use tiers, so the rate changes as sales grow. In a tiered plan each rate applies only to the part of the sales inside its range. With 3% on the first 20,000 and 5% above that, a 200,000 sale earns 3% of 20,000 plus 5% of the remaining 180,000. A tier can also be a flat dollar amount, which is paid once when sales reach that tier. Enter the upper limit of each tier and its commission, and leave the last upper limit empty for no cap.</p>
+
+      <h2>Base commission</h2>
+      <p>Some plans add a base commission on top, either a fixed amount or a percentage of the whole sale. Turn on the base commission option and enter the amount. It is added to whatever the tiers earn. If the commission does not change with the sale price, choose No for the varying option and enter a single rate or amount. The result lists each part of the commission and the total.</p>
+      <div class="callout">This calculator shows simple commission arithmetic. Real pay plans may have caps, clawbacks, splits or other rules, so check your own plan for exact terms.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate a commission?</h3>
+        <p>Multiply the sales price by the commission rate as a decimal. A 3% commission on a 200,000 sale is 200,000 times 0.03, which is 6,000.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does a tiered commission work?</h3>
+        <p>The sales are split into ranges, and each range has its own rate. The commission is the sum of what each range earns. Only the part of the sale inside a range is paid at that range rate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a base commission?</h3>
+        <p>A base commission is an amount paid on top of any other commission, either a fixed dollar amount or a percentage of the sale price. It is added to the tiered or fixed commission.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does a dollar amount tier mean?</h3>
+        <p>A tier set in dollars pays that flat amount once the sale reaches into the tier. It does not grow with the part of the sale inside the tier.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I find a commission rate?</h3>
+        <p>Divide the commission by the sales price and multiply by 100. Enter the sales price and the commission and leave the rate empty.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="margin-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Margin Calculator</h3>
+        <p>Work out profit margin and markup from cost and revenue.</p>
+      </a>
+
+      <a class="calc-list-card" href="discount-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Discount Calculator</h3>
+        <p>Find a sale price, a discount or the amount you save.</p>
+      </a>
+
+      <a class="calc-list-card" href="salary-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Salary Calculator</h3>
+        <p>Convert a salary between hourly, weekly, monthly and yearly pay.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/commission-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

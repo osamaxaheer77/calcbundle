@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Loan Calculator - CalcBundle</title>
+<meta name="description" content="Find a student loan payment, term, rate or balance, see how extra payments cut the payoff time, and project the balance you will owe after graduation.">
+<link rel="canonical" href="https://calcbundle.net/calculators/student-loan-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Student Loan Calculator - CalcBundle">
+<meta property="og:description" content="Find a student loan payment, term, rate or balance, see how extra payments cut the payoff time, and project the balance you will owe after graduation.">
+<meta property="og:url" content="https://calcbundle.net/calculators/student-loan-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Student Loan Calculator - CalcBundle">
+<meta name="twitter:description" content="Find a student loan payment, term, rate or balance, see how extra payments cut the payoff time, and project the balance you will owe after graduation.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a grace period?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A grace period is a set time after you leave school before repayment begins, often six months on federal loans. Interest may still build up during that time, which raises your balance, so the calculator adds it before working out the payment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I pay the interest while I am in school?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paying the interest while you study stops it being added to the balance, so you start repayment owing only what you borrowed and pay less in total. If you cannot afford it, the interest is added to the loan instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do extra payments save interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Interest is charged on the balance still owed. An extra payment lowers the balance right away, so less interest is charged every month after that. The calculator shows the interest saved against the normal schedule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my payment is too low?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your payment is no larger than the interest that builds up each month, the balance never falls and the loan cannot be paid off. Raise the payment above the monthly interest to get a payoff time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this work for federal and private loans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It uses a fixed interest rate and equal payments, so it fits most federal and private student loans on standard repayment. It does not model income-driven plans, deferment or forgiveness."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Student Loan Calculator</span>
+    </div>
+    <h1>Student Loan Calculator</h1>
+    <p>Work out your student loan payment, see how much extra payments save, and estimate what you will owe when you graduate.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Simple Student Loan Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Give any three values and leave the fourth empty to find it.</p>
+    <form id="sl1-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="sl1-balance">Loan Balance ($)</label>
+            <input type="number" id="sl1-balance" value="30000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="sl1-term">Remaining Term (years)</label>
+            <input type="number" id="sl1-term" value="10" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="sl1-rate">Interest Rate (%)</label>
+            <input type="number" id="sl1-rate" value="6.8" min="0" max="100" step="any">
+          </div>
+          <div class="field-group">
+            <label for="sl1-pay">Monthly Payment ($)</label>
+            <input type="number" id="sl1-pay" value="" min="0" step="any" placeholder="Leave empty to calculate">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="sl1-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Student Loan Repayment Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Compare paying it off normally, with extra payments, or all at once. The balance, payment and rate are on your monthly bill.</p>
+    <form id="sl2-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="sl2-balance">Loan Balance ($)</label>
+            <input type="number" id="sl2-balance" value="30000" min="0" step="any">
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="sl2-pay">Monthly Payment ($)</label>
+              <input type="number" id="sl2-pay" value="350" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="sl2-rate">Interest Rate (%)</label>
+              <input type="number" id="sl2-rate" value="6.8" min="0" max="100" step="any">
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Repayment Options</label>
+            <div>
+              <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="radio" name="sl2-option" value="together">Pay off altogether</label>
+              <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="radio" name="sl2-option" value="extra" checked>Repay with extra payments</label>
+              <label class="radio-option" style="display:flex;"><input type="radio" name="sl2-option" value="original">Normal repayment</label>
+            </div>
+          </div>
+          <div id="sl2-extras">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="sl2-month">Extra per Month ($)</label>
+                <input type="number" id="sl2-month" value="150" min="0" step="any">
+              </div>
+              <div class="field-group">
+                <label for="sl2-year">Extra per Year ($)</label>
+                <input type="number" id="sl2-year" value="0" min="0" step="any">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="sl2-once">One-Time Extra ($)</label>
+              <input type="number" id="sl2-once" value="0" min="0" step="any">
+            </div>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="sl2-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Student Loan Projection Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Estimate the balance and repayment after graduation. Meant for people still in school or about to start.</p>
+    <form id="sl3-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-row">
+            <div class="field-group">
+              <label for="sl3-grad">To Graduate In (years)</label>
+              <input type="number" id="sl3-grad" value="2" min="0" max="12" step="any">
+            </div>
+            <div class="field-group">
+              <label for="sl3-annual">Loan Amount per Year ($)</label>
+              <input type="number" id="sl3-annual" value="10000" min="0" step="any">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="sl3-current">Current Balance ($)</label>
+            <input type="number" id="sl3-current" value="20000" min="0" step="any">
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="sl3-term">Repayment Term (years)</label>
+              <input type="number" id="sl3-term" value="10" min="0" max="40" step="any">
+            </div>
+            <div class="field-group">
+              <label for="sl3-grace">Grace Period (months)</label>
+              <input type="number" id="sl3-grace" value="6" min="0" max="36" step="any">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="sl3-rate">Interest Rate (%)</label>
+            <input type="number" id="sl3-rate" value="6.8" min="0" max="100" step="any">
+          </div>
+          <div class="field-group">
+            <label>Do you pay the interest while in school?</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="sl3-pay" value="yes">Yes</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="sl3-pay" value="no" checked>No</label>
+            </div>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="sl3-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How student loans work</h2>
+      <p>A student loan is repaid in monthly payments, much like any other loan. Interest builds up each month on the remaining balance, and each payment covers that interest first and then reduces the principal. Early in the loan most of each payment is interest, and the share going to principal grows over time. The simple calculator works out any one of the balance, term, rate or payment from the other three.</p>
+
+      <h2>Paying a student loan off faster</h2>
+      <p>Extra payments go straight to the principal, so they cut the interest charged in every later month. The repayment calculator shows what a regular extra amount each month, a larger sum each year or a single lump sum would do. It reports the new payoff date, the time saved and the interest saved. Even a modest amount, paid steadily, can take years off a long loan. Check with your loan servicer that extra payments are applied to the principal.</p>
+
+      <h2>What you will owe after graduation</h2>
+      <p>While you are in school, an unsubsidized or private loan can add interest to the balance. If you do not pay that interest, it builds up and is added to the balance, and the same happens during any grace period after you leave school. This is why the amount you owe at the start of repayment can be much more than the amount you borrowed. The projection calculator estimates that balance, the monthly payment that follows and the total interest. Choose to pay the interest during school and the balance stays at what you borrowed.</p>
+      <div class="callout">These figures are estimates based on a fixed rate and equal monthly payments. Federal loans may offer income-driven plans, deferment, subsidized interest and forgiveness that this calculator does not include.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is a grace period?</h3>
+        <p>A grace period is a set time after you leave school before repayment begins, often six months on federal loans. Interest may still build up during that time, which raises your balance, so the calculator adds it before working out the payment.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I pay the interest while I am in school?</h3>
+        <p>Paying the interest while you study stops it being added to the balance, so you start repayment owing only what you borrowed and pay less in total. If you cannot afford it, the interest is added to the loan instead.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do extra payments save interest?</h3>
+        <p>Interest is charged on the balance still owed. An extra payment lowers the balance right away, so less interest is charged every month after that. The calculator shows the interest saved against the normal schedule.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if my payment is too low?</h3>
+        <p>If your payment is no larger than the interest that builds up each month, the balance never falls and the loan cannot be paid off. Raise the payment above the monthly interest to get a payoff time.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this work for federal and private loans?</h3>
+        <p>It uses a fixed interest rate and equal payments, so it fits most federal and private student loans on standard repayment. It does not model income-driven plans, deferment or forgiveness.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Loan Calculator</h3>
+        <p>Payments on amortized, deferred and bond-style loans.</p>
+      </a>
+
+      <a class="calc-list-card" href="repayment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Repayment Calculator</h3>
+        <p>How long a debt takes to clear, or what to pay each period.</p>
+      </a>
+
+      <a class="calc-list-card" href="personal-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Personal Loan Calculator</h3>
+        <p>Payment, fees and APR on a personal loan.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/student-loan-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Calculator - CalcBundle</title>
+<meta name="description" content="Work out the payment on an amortized loan, the amount due on a deferred payment loan, or the starting value of a bond, with a full payment schedule.">
+<link rel="canonical" href="https://calcbundle.net/calculators/loan-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Loan Calculator - CalcBundle">
+<meta property="og:description" content="Work out the payment on an amortized loan, the amount due on a deferred payment loan, or the starting value of a bond, with a full payment schedule.">
+<meta property="og:url" content="https://calcbundle.net/calculators/loan-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Loan Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out the payment on an amortized loan, the amount due on a deferred payment loan, or the starting value of a bond, with a full payment schedule.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an amortized loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An amortized loan is repaid with equal payments at regular intervals until the balance reaches zero. Each payment covers the interest that has built up since the last one, and the rest reduces the principal. Mortgages, car loans, student loans and most personal loans work this way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a deferred payment loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A deferred payment loan has no payments during its life. Interest builds up on the balance, and everything, the principal plus all the interest, is due in one lump sum at the end. Some short-term commercial loans work this way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the bond calculation tell me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A bond pays a fixed amount, its face value, at maturity. Given that amount, the term and the interest rate, the calculator finds how much the lender hands over at the start, which is the face value discounted back at the rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do compounding and payment frequency work together?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The compounding setting says how often interest is added to the balance, and the pay back setting says how often you make a payment. The calculator converts the rate to the equivalent rate for each payment period, so the two can differ. Choosing monthly for both gives the familiar APR-based payment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a lower payment cost more in total?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stretching the same loan over a longer term lowers each payment but keeps the balance outstanding for longer, so more interest builds up. Try a shorter term, or a more frequent payment, to see the total interest fall."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Loan Calculator</span>
+    </div>
+    <h1>Loan Calculator</h1>
+    <p>Find the payment on a regular loan, the lump sum due on a loan with no payments until the end, or the starting value of a bond, with a full schedule.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ln-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="ln-mode">What kind of loan?</label>
+            <select id="ln-mode" class="unit-select">
+              <option value="1" selected>Amortized loan: fixed payments</option>
+              <option value="2">Deferred payment loan: one lump sum due</option>
+              <option value="3">Bond: fixed amount due at maturity</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="ln-amount" id="ln-amount-label">Loan Amount ($)</label>
+            <input type="number" id="ln-amount" value="100000" min="0" step="any">
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="ln-years">Loan Term (years)</label>
+              <input type="number" id="ln-years" value="10" min="0" max="100" step="any">
+            </div>
+            <div class="field-group">
+              <label for="ln-months">Plus (months)</label>
+              <input type="number" id="ln-months" value="0" min="0" step="any">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="ln-rate">Interest Rate (%)</label>
+            <input type="number" id="ln-rate" value="6" min="0" max="100" step="any">
+          </div>
+
+          <div class="field-group">
+            <label for="ln-compound">Compound</label>
+            <select id="ln-compound" class="unit-select">
+              <option value="annually">Annually (APY)</option>
+              <option value="semiannually">Semi-annually</option>
+              <option value="quarterly">Quarterly</option>
+              <option value="monthly" selected>Monthly (APR)</option>
+              <option value="semimonthly">Semi-monthly</option>
+              <option value="biweekly">Biweekly</option>
+              <option value="weekly">Weekly</option>
+              <option value="daily">Daily</option>
+              <option value="continuously">Continuously</option>
+            </select>
+          </div>
+
+          <div class="field-group" data-modes="1">
+            <label for="ln-payback">Pay Back</label>
+            <select id="ln-payback" class="unit-select">
+              <option value="daily">Every Day</option>
+              <option value="weekly">Every Week</option>
+              <option value="biweekly">Every 2 Weeks</option>
+              <option value="halfmonth">Every Half Month</option>
+              <option value="month" selected>Every Month</option>
+              <option value="quarter">Every Quarter</option>
+              <option value="halfyear">Every 6 Months</option>
+              <option value="year">Every Year</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="ln-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="ln-results-section" hidden>
+      <div class="schedule-header">
+        <h2 id="ln-schedule-title" style="margin:0;font-size:18px;">Amortization Schedule</h2>
+        <div class="schedule-toggle-group" id="ln-toggle">
+          <button type="button" id="ln-toggle-year" class="active">By year</button>
+          <button type="button" id="ln-toggle-each">Each payment</button>
+        </div>
+      </div>
+      <div class="schedule-table-wrap" style="margin-top:16px;">
+        <div id="ln-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Three kinds of loan</h2>
+      <p>Most borrowing falls into one of three shapes. An <strong>amortized loan</strong> is repaid in equal installments until nothing is owed. That is what people usually mean by a loan: a mortgage, a car loan, a student loan or a personal loan. A <strong>deferred payment loan</strong> has no installments, so the interest builds up and the whole amount is due at the end. A <strong>bond</strong> is the reverse view: the borrower promises to pay a fixed amount at maturity, and the calculator works out how much the lender hands over at the start.</p>
+
+      <h2>How the payment is calculated</h2>
+      <p>For an amortized loan, the interest rate is converted to the matching rate for each payment period. Compounding monthly and paying monthly gives the usual rate divided by twelve, and mixing the two, such as daily compounding with monthly payments, is handled by converting the rate rather than ignoring the difference. The payment is the level amount that pays off the balance exactly at the end of the term, with each payment made at the end of its period. Interest each period is the balance times the period rate, and whatever is left of the payment reduces the principal.</p>
+
+      <h2>Reading the schedule</h2>
+      <p>The schedule shows what happens to the balance. Early payments are mostly interest, and later ones are mostly principal, because the interest shrinks as the balance falls. The yearly view adds up each year, and the each-payment view lists every installment. If the term does not divide into whole payments, such as 4 years and 5 months of weekly payments, the last payment is smaller. For the deferred loan and the bond, the schedule shows the balance growing year by year.</p>
+      <div class="callout">This calculator gives estimates. Real loans can add fees, insurance, rounding rules or different interest conventions, so use your lender's disclosure for the exact numbers.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is an amortized loan?</h3>
+        <p>An amortized loan is repaid with equal payments at regular intervals until the balance reaches zero. Each payment covers the interest that has built up since the last one, and the rest reduces the principal. Mortgages, car loans, student loans and most personal loans work this way.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a deferred payment loan?</h3>
+        <p>A deferred payment loan has no payments during its life. Interest builds up on the balance, and everything, the principal plus all the interest, is due in one lump sum at the end. Some short-term commercial loans work this way.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does the bond calculation tell me?</h3>
+        <p>A bond pays a fixed amount, its face value, at maturity. Given that amount, the term and the interest rate, the calculator finds how much the lender hands over at the start, which is the face value discounted back at the rate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do compounding and payment frequency work together?</h3>
+        <p>The compounding setting says how often interest is added to the balance, and the pay back setting says how often you make a payment. The calculator converts the rate to the equivalent rate for each payment period, so the two can differ. Choosing monthly for both gives the familiar APR-based payment.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does a lower payment cost more in total?</h3>
+        <p>Stretching the same loan over a longer term lowers each payment but keeps the balance outstanding for longer, so more interest builds up. Try a shorter term, or a more frequent payment, to see the total interest fall.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate a monthly mortgage payment with taxes and insurance.</p>
+      </a>
+
+      <a class="calc-list-card" href="amortization-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Amortization Calculator</h3>
+        <p>See how each payment splits between interest and principal.</p>
+      </a>
+
+      <a class="calc-list-card" href="auto-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Work out car payments, price and total cost.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/loan-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

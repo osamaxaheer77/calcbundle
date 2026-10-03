@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAT Calculator - CalcBundle</title>
+<meta name="description" content="Add or remove VAT from a price. Fill in any two of the VAT rate, net price, gross price and VAT amount, and the calculator finds the rest.">
+<link rel="canonical" href="https://calcbundle.net/calculators/vat-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="VAT Calculator - CalcBundle">
+<meta property="og:description" content="Add or remove VAT from a price. Fill in any two of the VAT rate, net price, gross price and VAT amount, and the calculator finds the rest.">
+<meta property="og:url" content="https://calcbundle.net/calculators/vat-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VAT Calculator - CalcBundle">
+<meta name="twitter:description" content="Add or remove VAT from a price. Fill in any two of the VAT rate, net price, gross price and VAT amount, and the calculator finds the rest.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I add VAT to a price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the net price by one plus the VAT rate as a decimal. At 20% that means multiplying by 1.2, so a net price of 1,200 becomes a gross price of 1,440. Enter the rate and the net price to do this."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I remove VAT from a total?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the gross price by one plus the VAT rate as a decimal. At 20%, divide by 1.2, so 1,440 gives a net price of 1,200 and a VAT amount of 240. Enter the rate and the gross price to do this."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I find the VAT rate that was charged?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the net price and the gross price, or the net price and the VAT amount. The calculator divides the VAT amount by the net price and shows the rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between VAT and sales tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VAT is charged at each stage of production and is usually included in the displayed price. Sales tax in the United States is charged only on the final sale and added at the register. The arithmetic is the same."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I fill in more than two boxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator uses the first pair it can, in the order rate and net price, rate and gross price, rate and VAT amount, net and gross, net and VAT, and then gross and VAT, and works out the rest again."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">VAT Calculator</span>
+    </div>
+    <h1>VAT Calculator</h1>
+    <p>Add VAT to a price, take it out of a total, or find the rate that was charged. Fill in any two boxes and the other two are worked out.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="vat-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <p style="font-size:13px;color:var(--text-secondary);margin:0 0 14px;">Please provide any two values from the following to calculate the remaining values.</p>
+          <div class="field-group">
+            <label for="vat-rate">VAT Rate (%)</label>
+            <input type="number" id="vat-rate" value="20" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="vat-net">Net Price ($, before VAT)</label>
+            <input type="number" id="vat-net" value="1200" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="vat-gross">Gross Price ($, with VAT)</label>
+            <input type="number" id="vat-gross" value="" min="0" step="any" placeholder="Leave empty to calculate">
+          </div>
+          <div class="field-group">
+            <label for="vat-tax">VAT Amount ($)</label>
+            <input type="number" id="vat-tax" value="" min="0" step="any" placeholder="Leave empty to calculate">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+          <button type="button" id="vat-clear" class="calc-submit-btn" style="margin-top:10px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Clear</button>
+        </div>
+        <div class="mortgage-results-card" id="vat-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What VAT is</h2>
+      <p>Value-added tax, or VAT, is a consumption tax charged on the value added to goods and services at each stage of their production and sale. Businesses collect it on behalf of the government and pass the net amount on. Most countries outside the United States use VAT or a similar goods and services tax, often called GST. The price before the tax is the net price, and the price including the tax is the gross price.</p>
+
+      <h2>How the four numbers relate</h2>
+      <p>The gross price equals the net price multiplied by one plus the VAT rate. The VAT amount is the gross price minus the net price. Any two of the four values, the rate, the net price, the gross price and the VAT amount, let you find the other two. To add VAT, enter the rate and the net price. To remove VAT from a total, enter the rate and the gross price. To discover the rate on a receipt, enter the net and gross prices.</p>
+
+      <h2>Using the calculator</h2>
+      <p>Fill in two boxes and leave the others empty. If you fill in more than two, the calculator uses the first pair it can and works the rest out again, so clear a box to solve for it. The amounts are shown with two decimals, and the rate is shown to three decimals. VAT rates differ between countries and between types of goods, so always check the rate that applies to you.</p>
+      <div class="callout">This calculator does simple tax arithmetic. Rounding rules, reduced rates and exemptions vary by country, so check with your tax authority or accountant for official figures.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I add VAT to a price?</h3>
+        <p>Multiply the net price by one plus the VAT rate as a decimal. At 20% that means multiplying by 1.2, so a net price of 1,200 becomes a gross price of 1,440. Enter the rate and the net price to do this.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I remove VAT from a total?</h3>
+        <p>Divide the gross price by one plus the VAT rate as a decimal. At 20%, divide by 1.2, so 1,440 gives a net price of 1,200 and a VAT amount of 240. Enter the rate and the gross price to do this.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I find the VAT rate that was charged?</h3>
+        <p>Enter the net price and the gross price, or the net price and the VAT amount. The calculator divides the VAT amount by the net price and shows the rate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between VAT and sales tax?</h3>
+        <p>VAT is charged at each stage of production and is usually included in the displayed price. Sales tax in the United States is charged only on the final sale and added at the register. The arithmetic is the same.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I fill in more than two boxes?</h3>
+        <p>The calculator uses the first pair it can, in the order rate and net price, rate and gross price, rate and VAT amount, net and gross, net and VAT, and then gross and VAT, and works out the rest again.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="sales-tax-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Sales Tax Calculator</h3>
+        <p>Find the after-tax price, the rate or the before-tax price.</p>
+      </a>
+
+      <a class="calc-list-card" href="discount-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Discount Calculator</h3>
+        <p>Find a sale price, a discount or the amount you save.</p>
+      </a>
+
+      <a class="calc-list-card" href="margin-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Margin Calculator</h3>
+        <p>Work out profit margin and markup from cost and revenue.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/vat-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lease Calculator - CalcBundle</title>
+<meta name="description" content="Work out the monthly payment on a lease from the asset value, residual value, term and rate, or find the interest rate a lease payment implies.">
+<link rel="canonical" href="https://calcbundle.net/calculators/lease-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Lease Calculator - CalcBundle">
+<meta property="og:description" content="Work out the monthly payment on a lease from the asset value, residual value, term and rate, or find the interest rate a lease payment implies.">
+<meta property="og:url" content="https://calcbundle.net/calculators/lease-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lease Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out the monthly payment on a lease from the asset value, residual value, term and rate, or find the interest rate a lease payment implies.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a residual value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The residual value is the estimated worth of the asset at the end of the lease. The lessor sets it at the start, and it is the part of the asset you do not pay off through your monthly payments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a higher residual value lower the payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your payments only need to cover the fall in value from the start to the end of the lease, plus interest. A higher residual value means the asset loses less value, so there is less to pay off each month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the interest rate found from a payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator searches for the monthly rate at which the present value of all the payments, plus the present value of the residual value, equals the asset value. That rate, multiplied by twelve, is the yearly rate shown."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it for a car lease?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can get a rough figure, but car leases usually add a money factor, fees, sales tax and a down payment. The Auto Lease Calculator handles those details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does it say the residual value must be lower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the residual value is equal to or greater than the asset value, the asset is not losing value, so there is nothing to pay off through the lease payments and the calculation does not make sense."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Lease Calculator</span>
+    </div>
+    <h1>Lease Calculator</h1>
+    <p>Find the monthly payment on a lease, or the interest rate hidden in a quoted payment, from the asset value, the residual value and the term.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ls-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="ls-mode">What do you want to find out?</label>
+            <select id="ls-mode" class="unit-select">
+              <option value="rate" selected>Monthly payment from an interest rate</option>
+              <option value="pay">Interest rate from a monthly payment</option>
+            </select>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="ls-value">Asset Value ($)</label>
+              <input type="number" id="ls-value" value="20000" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="ls-residual">Residual Value ($)</label>
+              <input type="number" id="ls-residual" value="8000" min="0" step="any">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="ls-years">Lease Term (years)</label>
+              <input type="number" id="ls-years" value="3" min="0" max="50" step="any">
+            </div>
+            <div class="field-group">
+              <label for="ls-months">Plus (months)</label>
+              <input type="number" id="ls-months" value="0" min="0" step="any">
+            </div>
+          </div>
+
+          <div class="field-group" data-modes="rate">
+            <label for="ls-rate">Interest Rate (%)</label>
+            <input type="number" id="ls-rate" value="6" min="0" max="100" step="any">
+          </div>
+          <div class="field-group" data-modes="pay">
+            <label for="ls-payment">Monthly Payment ($)</label>
+            <input type="number" id="ls-payment" value="400" min="0" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="ls-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How a lease payment works</h2>
+      <p>In a lease you pay for the part of an asset you use rather than the whole thing. The asset value is what it is worth at the start, and the residual value is what it is expected to be worth when the lease ends. Your payments have to cover the drop in value between the two, plus the interest on the money tied up in the asset. That is why a higher residual value gives a lower monthly payment, even though you give the asset back at the end.</p>
+
+      <h2>Finding the rate in a quoted payment</h2>
+      <p>Dealers and lessors often quote a monthly payment without saying what interest rate it contains. Use the second option to work it out. Enter the asset value, the residual value, the term and the payment, and the calculator finds the interest rate that makes the payments and the residual value exactly worth the asset value today. Comparing that rate with loan rates shows whether a lease is a good deal.</p>
+
+      <h2>What to remember</h2>
+      <p>The calculation treats the lease like a loan that ends with a balloon payment equal to the residual value. It does not include fees, taxes, mileage charges or the cost of buying the asset at the end. Auto leases often add a money factor, a down payment and other charges, so use the Auto Lease Calculator for a car lease.</p>
+      <div class="callout">These figures are estimates. Real leases may include fees, taxes, deposits and usage limits that change the payment.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is a residual value?</h3>
+        <p>The residual value is the estimated worth of the asset at the end of the lease. The lessor sets it at the start, and it is the part of the asset you do not pay off through your monthly payments.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does a higher residual value lower the payment?</h3>
+        <p>Your payments only need to cover the fall in value from the start to the end of the lease, plus interest. A higher residual value means the asset loses less value, so there is less to pay off each month.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is the interest rate found from a payment?</h3>
+        <p>The calculator searches for the monthly rate at which the present value of all the payments, plus the present value of the residual value, equals the asset value. That rate, multiplied by twelve, is the yearly rate shown.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use it for a car lease?</h3>
+        <p>You can get a rough figure, but car leases usually add a money factor, fees, sales tax and a down payment. The Auto Lease Calculator handles those details.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does it say the residual value must be lower?</h3>
+        <p>If the residual value is equal to or greater than the asset value, the asset is not losing value, so there is nothing to pay off through the lease payments and the calculation does not make sense.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="auto-lease-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Auto Lease Calculator</h3>
+        <p>Estimate a car lease payment with money factor and fees.</p>
+      </a>
+
+      <a class="calc-list-card" href="loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Loan Calculator</h3>
+        <p>Payments on amortized, deferred and bond-style loans.</p>
+      </a>
+
+      <a class="calc-list-card" href="payment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Payment Calculator</h3>
+        <p>Find a monthly payment or how long a loan takes to pay off.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/lease-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

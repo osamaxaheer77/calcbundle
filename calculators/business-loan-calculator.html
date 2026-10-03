@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Loan Calculator - CalcBundle</title>
+<meta name="description" content="Work out the payment, total interest and real annual rate of a business loan once origination, documentation and other fees are included.">
+<link rel="canonical" href="https://calcbundle.net/calculators/business-loan-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Business Loan Calculator - CalcBundle">
+<meta property="og:description" content="Work out the payment, total interest and real annual rate of a business loan once origination, documentation and other fees are included.">
+<meta property="og:url" content="https://calcbundle.net/calculators/business-loan-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Business Loan Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out the payment, total interest and real annual rate of a business loan once origination, documentation and other fees are included.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the real rate of a business loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The real rate is the yearly rate that makes your payments repay the cash you actually received after fees. It is also called the APR. It is higher than the quoted interest rate whenever the loan has fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an origination fee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An origination fee is a charge for processing the loan, quoted as a percentage of the amount borrowed. A documentation fee is a flat charge for preparing the loan paperwork. Both are counted in the real rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an interest-only business loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With an interest-only loan you pay just the interest on the full balance each month, so the payment stays low and the balance does not fall. The whole principal is due at the end of the term."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does repaying in the end mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There are no payments during the loan. At maturity you pay the principal plus all the interest, which builds up with compounding. This is common with short-term commercial loans."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the compounding setting change the payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The compounding setting decides how often interest is added to the balance. More frequent compounding adds interest sooner, so the same stated rate costs slightly more and the payment is a little higher."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Business Loan Calculator</span>
+    </div>
+    <h1>Business Loan Calculator</h1>
+    <p>Find the payback amount and the true cost of a business loan, including fees, with fixed payments, interest-only payments or a single payment at the end.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="bl-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="bl-amount">Loan Amount ($)</label>
+            <input type="number" id="bl-amount" value="10000" min="0" step="any">
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="bl-rate">Interest Rate (%)</label>
+              <input type="number" id="bl-rate" value="10" min="0" max="100" step="any">
+            </div>
+            <div class="field-group">
+              <label for="bl-compound">Compound</label>
+              <select id="bl-compound" class="unit-select">
+                <option value="annually">Annually (APY)</option>
+                <option value="semiannually">Semi-annually</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="monthly" selected>Monthly (APR)</option>
+                <option value="semimonthly">Semi-monthly</option>
+                <option value="biweekly">Biweekly</option>
+                <option value="weekly">Weekly</option>
+                <option value="daily">Daily</option>
+                <option value="continuously">Continuously</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="bl-years">Loan Term (years)</label>
+              <input type="number" id="bl-years" value="5" min="0" max="50" step="any">
+            </div>
+            <div class="field-group">
+              <label for="bl-months">Plus (months)</label>
+              <input type="number" id="bl-months" value="0" min="0" step="any">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="bl-payback">Pay Back</label>
+            <select id="bl-payback" class="unit-select">
+              <option value="daily">Every Day</option>
+              <option value="weekly">Every Week</option>
+              <option value="biweekly">Every 2 Weeks</option>
+              <option value="halfmonth">Every Half Month</option>
+              <option value="month" selected>Every Month</option>
+              <option value="quarter">Every Quarter</option>
+              <option value="halfyear">Every 6 Months</option>
+              <option value="year">Every Year</option>
+              <option value="interest">Interest Only</option>
+              <option value="end">In the End</option>
+            </select>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="bl-orig">Origination Fee (%)</label>
+              <input type="number" id="bl-orig" value="5" min="0" max="100" step="any">
+            </div>
+            <div class="field-group">
+              <label for="bl-doc">Documentation Fee ($)</label>
+              <input type="number" id="bl-doc" value="750" min="0" step="any">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="bl-other">Other Fees ($)</label>
+            <input type="number" id="bl-other" value="0" min="0" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="bl-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="bl-results-section" hidden>
+      <div class="schedule-header">
+        <h2 id="bl-schedule-title" style="margin:0;font-size:18px;">Amortization Schedule</h2>
+        <div class="schedule-toggle-group" id="bl-toggle">
+          <button type="button" id="bl-toggle-year" class="active">By year</button>
+          <button type="button" id="bl-toggle-each">Each payment</button>
+        </div>
+      </div>
+      <div class="schedule-table-wrap" style="margin-top:16px;">
+        <div id="bl-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What a business loan really costs</h2>
+      <p>The interest rate tells you only part of the price of a business loan. Lenders usually add an origination fee, which is a percentage of the loan, a documentation fee, and sometimes other charges. These come out of the money you receive or are paid up front, but you still repay the whole amount. This calculator adds them up and then works out the real rate: the yearly rate at which your payments repay the cash you actually received. That figure, often called the APR, lets you compare loans fairly.</p>
+
+      <h2>Three ways to repay</h2>
+      <p>Most business loans use regular payments, which can be daily, weekly, monthly or less often, and each payment covers the interest due plus part of the principal. An interest-only loan has you pay just the interest each month and repay the whole principal at the end. A loan repaid in the end has no payments until maturity, when you pay the principal plus all the interest that has built up. Pick the option from the Pay Back list to compare them.</p>
+
+      <h2>Reading the results</h2>
+      <p>The payback amount is what you pay each period. Interest is the total finance charge before fees, and interest plus fees is the full cost of borrowing. The real rate is higher than the quoted rate whenever there are fees, and the shorter the loan, the bigger the gap, because the fees are spread over less time. The rate is shown on the compounding basis you chose, so choosing Annually gives an annual percentage yield.</p>
+      <div class="callout">These figures are estimates. Real business loans may include other charges, different interest conventions or prepayment rules, so check the lender’s disclosure for exact numbers.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the real rate of a business loan?</h3>
+        <p>The real rate is the yearly rate that makes your payments repay the cash you actually received after fees. It is also called the APR. It is higher than the quoted interest rate whenever the loan has fees.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is an origination fee?</h3>
+        <p>An origination fee is a charge for processing the loan, quoted as a percentage of the amount borrowed. A documentation fee is a flat charge for preparing the loan paperwork. Both are counted in the real rate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is an interest-only business loan?</h3>
+        <p>With an interest-only loan you pay just the interest on the full balance each month, so the payment stays low and the balance does not fall. The whole principal is due at the end of the term.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does repaying in the end mean?</h3>
+        <p>There are no payments during the loan. At maturity you pay the principal plus all the interest, which builds up with compounding. This is common with short-term commercial loans.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the compounding setting change the payment?</h3>
+        <p>The compounding setting decides how often interest is added to the balance. More frequent compounding adds interest sooner, so the same stated rate costs slightly more and the payment is a little higher.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="personal-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Personal Loan Calculator</h3>
+        <p>Payment, fees and APR on a personal loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Loan Calculator</h3>
+        <p>Payments on amortized, deferred and bond-style loans.</p>
+      </a>
+
+      <a class="calc-list-card" href="apr-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>APR Calculator</h3>
+        <p>Find the true annual cost of a loan with fees.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/business-loan-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

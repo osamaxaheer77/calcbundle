@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debt Consolidation Calculator - CalcBundle</title>
+<meta name="description" content="Compare your current debts with a single consolidation loan using the true APR, monthly payment, payoff time and total interest, fee included.">
+<link rel="canonical" href="https://calcbundle.net/calculators/debt-consolidation-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Debt Consolidation Calculator - CalcBundle">
+<meta property="og:description" content="Compare your current debts with a single consolidation loan using the true APR, monthly payment, payoff time and total interest, fee included.">
+<meta property="og:url" content="https://calcbundle.net/calculators/debt-consolidation-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Debt Consolidation Calculator - CalcBundle">
+<meta name="twitter:description" content="Compare your current debts with a single consolidation loan using the true APR, monthly payment, payoff time and total interest, fee included.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is APR and why compare it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "APR is the yearly rate that makes your payments repay the cash you actually receive, so it includes fees. Comparing the APR of the new loan with the APR of your current debts shows which really costs less."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are my current debts worked out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator assumes you keep paying the same total each month, which is the sum of your minimum payments, and puts any extra on the debt with the highest rate. It then finds how long that takes and what it costs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does upfront cash flow mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the cash from the loan after the fee, minus the balance of the debts you want to pay off. A negative number means you need to add that much of your own money. A positive number means you would have that much left over."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can consolidation cost more?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A fee, a high rate or a much longer term can make the loan more expensive than your current debts. The calculator tells you when the loan APR is not lower than your current APR."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I keep the money left over from a larger loan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator shows the amount left over, but borrowing more than you owe adds to your debt. It is usually better to borrow only what you need to pay off the old debts."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Debt Consolidation Calculator</span>
+    </div>
+    <h1>Debt Consolidation Calculator</h1>
+    <p>List your debts and a consolidation loan offer, and see whether replacing them with one loan would really cost you less.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="dc-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:0;">Your current debts</p>
+          <div id="dc-rows"></div>
+
+          <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:6px 0 8px;">Consolidation loan</p>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="dc-loan">Loan amount ($)</label>
+              <input type="number" id="dc-loan" value="25000" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="dc-rate">Interest rate (%)</label>
+              <input type="number" id="dc-rate" value="10.99" min="0" max="100" step="any">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="dc-years">Loan term (years)</label>
+              <input type="number" id="dc-years" value="5" min="0" max="50" step="any">
+            </div>
+            <div class="field-group">
+              <label for="dc-months">Plus (months)</label>
+              <input type="number" id="dc-months" value="0" min="0" step="any">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="dc-cost">Loan fee / points</label>
+              <input type="number" id="dc-cost" value="5" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="dc-cost-unit">Fee type</label>
+              <select id="dc-cost-unit" class="unit-select">
+                <option value="p" selected>% of loan</option>
+                <option value="d">$ amount</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="dc-result"></div>
+      </div>
+    </form>
+    <div id="dc-results-section" hidden></div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What debt consolidation does</h2>
+      <p>Debt consolidation means taking out one new loan and using it to pay off several existing debts, such as credit cards. You are then left with one monthly payment, usually at a lower rate than the cards. It can simplify your finances and cut the interest you pay, but only if the new loan really costs less than the old debts. Fees, a longer term and a loan that is too big can all cancel out the saving.</p>
+
+      <h2>Comparing the true cost with APR</h2>
+      <p>The calculator compares the APR of your existing debts with the APR of the consolidation loan. The APR is the yearly rate that makes your payments exactly repay the money you actually receive, so it includes any fee. For your current debts it is worked out from the payments needed to clear them, paying the same total each month and the highest-rate debt first. For the loan it uses the cash left after the fee. If the loan APR is lower, consolidating costs less. If not, the loan is not recommended.</p>
+
+      <h2>Reading the table</h2>
+      <p>The table sets your existing debts beside the consolidation loan: the APR, the monthly payment, how long each takes to pay off, the fee, the cash you would have left or need to add, the total payments and the total interest. A lower monthly payment is not the same as a lower cost, because a longer term means more interest overall. Look at the total payments and the APR together before you decide.</p>
+      <div class="callout">This calculator gives estimates. A lender may charge other fees, set a variable rate or require a different term. Make sure you can afford the new payment, and avoid running up the old cards again after you consolidate.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is APR and why compare it?</h3>
+        <p>APR is the yearly rate that makes your payments repay the cash you actually receive, so it includes fees. Comparing the APR of the new loan with the APR of your current debts shows which really costs less.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How are my current debts worked out?</h3>
+        <p>The calculator assumes you keep paying the same total each month, which is the sum of your minimum payments, and puts any extra on the debt with the highest rate. It then finds how long that takes and what it costs.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does upfront cash flow mean?</h3>
+        <p>It is the cash from the loan after the fee, minus the balance of the debts you want to pay off. A negative number means you need to add that much of your own money. A positive number means you would have that much left over.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can consolidation cost more?</h3>
+        <p>Yes. A fee, a high rate or a much longer term can make the loan more expensive than your current debts. The calculator tells you when the loan APR is not lower than your current APR.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I keep the money left over from a larger loan?</h3>
+        <p>The calculator shows the amount left over, but borrowing more than you owe adds to your debt. It is usually better to borrow only what you need to pay off the old debts.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="debt-payoff-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Debt Payoff Calculator</h3>
+        <p>A payoff plan for any mix of debts, with extra payments.</p>
+      </a>
+
+      <a class="calc-list-card" href="credit-cards-payoff-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Credit Cards Payoff Calculator</h3>
+        <p>A payoff plan for several cards using the debt avalanche.</p>
+      </a>
+
+      <a class="calc-list-card" href="personal-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Personal Loan Calculator</h3>
+        <p>Payment, fees and APR on a personal loan.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/debt-engine.js"></script>
+<script src="../js/debt-consolidation-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

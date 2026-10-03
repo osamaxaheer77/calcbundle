@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit Cards Payoff Calculator - CalcBundle</title>
+<meta name="description" content="Build a payoff plan for several credit cards using the debt avalanche method, with the payoff time, total interest and a payment schedule for each card.">
+<link rel="canonical" href="https://calcbundle.net/calculators/credit-cards-payoff-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Credit Cards Payoff Calculator - CalcBundle">
+<meta property="og:description" content="Build a payoff plan for several credit cards using the debt avalanche method, with the payoff time, total interest and a payment schedule for each card.">
+<meta property="og:url" content="https://calcbundle.net/calculators/credit-cards-payoff-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Credit Cards Payoff Calculator - CalcBundle">
+<meta name="twitter:description" content="Build a payoff plan for several credit cards using the debt avalanche method, with the payoff time, total interest and a payment schedule for each card.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the debt avalanche method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a payoff plan where you pay the minimum on all your cards and put all your extra money on the card with the highest interest rate. Once it is paid off, you move on to the next highest rate. It usually costs the least in interest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is it different from the snowball method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The snowball method pays off the smallest balance first for quick wins, while the avalanche method pays off the highest rate first to save the most money. The avalanche method costs less in interest, but the snowball can feel more motivating."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my budget is less than my minimum payments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator warns you. Paying less than the minimums usually brings late fees, higher rates and a lower credit score, so look for extra money, ask for help, or consider a balance transfer or consolidation loan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it include new purchases?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The plan assumes you stop using the cards. New charges would add to your balances and make the payoff take longer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do my payments change in the schedule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Once a card is paid off, its minimum payment is added to the next card in line, so payments on that card go up. The last payment on each card is usually smaller, because it only covers what is left."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Credit Cards Payoff Calculator</span>
+    </div>
+    <h1>Credit Cards Payoff Calculator</h1>
+    <p>Enter your monthly budget and your cards, and get the cheapest order to pay them off, with a month-by-month plan for each card.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="cp-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="cp-budget">Monthly Budget Set Aside for Credit Cards ($)</label>
+            <input type="number" id="cp-budget" value="500" min="0" step="any">
+          </div>
+          <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:6px 0 0;">Info of your credit cards</p>
+          <div id="cp-rows"></div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="cp-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="cp-results-section" hidden>
+      <h2 style="margin:0 0 6px;font-size:18px;">Payoff Plan by Card</h2>
+      <p style="font-size:13px;color:var(--text-secondary);margin:0 0 16px;">Cards are listed in the order they are paid off. The plan assumes you add no new charges.</p>
+      <div class="schedule-table-wrap">
+        <div id="cp-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">The debt avalanche method</h2>
+      <p>When you owe money on several cards, the cheapest way to clear them is the debt avalanche. You pay the minimum on every card, then put every spare dollar of your monthly budget on the card with the highest interest rate. When that card is gone, the money you were paying on it moves to the card with the next highest rate, and so on. Because the most expensive balances disappear first, you pay the least interest overall.</p>
+
+      <h2>How the plan is built</h2>
+      <p>Each month, interest is added to every card at one twelfth of its yearly rate. Then the minimum payment is made on each card with a balance, and the rest of your budget goes to the highest-rate card. Your total payment stays the same each month, so as cards are paid off, the freed-up minimums speed up the rest. The table shows how long each card takes, the interest it costs, the total you pay on it and the payments you make month by month.</p>
+
+      <h2>Using the results</h2>
+      <p>Set the budget to the amount you can really commit every month. If it is below the sum of the minimum payments, the calculator warns you, because missed minimums bring fees and penalty rates. Try raising the budget a little to see how much sooner you are free of the cards and how much interest you save. The plan assumes you stop adding new charges and that rates stay the same.</p>
+      <div class="callout">This calculator gives estimates and assumes fixed rates and no new spending. Real card rates can change, and issuers may calculate interest daily, so your statements may differ slightly.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the debt avalanche method?</h3>
+        <p>It is a payoff plan where you pay the minimum on all your cards and put all your extra money on the card with the highest interest rate. Once it is paid off, you move on to the next highest rate. It usually costs the least in interest.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is it different from the snowball method?</h3>
+        <p>The snowball method pays off the smallest balance first for quick wins, while the avalanche method pays off the highest rate first to save the most money. The avalanche method costs less in interest, but the snowball can feel more motivating.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if my budget is less than my minimum payments?</h3>
+        <p>The calculator warns you. Paying less than the minimums usually brings late fees, higher rates and a lower credit score, so look for extra money, ask for help, or consider a balance transfer or consolidation loan.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it include new purchases?</h3>
+        <p>No. The plan assumes you stop using the cards. New charges would add to your balances and make the payoff take longer.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do my payments change in the schedule?</h3>
+        <p>Once a card is paid off, its minimum payment is added to the next card in line, so payments on that card go up. The last payment on each card is usually smaller, because it only covers what is left.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="credit-card-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Credit Card Calculator</h3>
+        <p>How long a single card takes to pay off, or what to pay.</p>
+      </a>
+
+      <a class="calc-list-card" href="debt-payoff-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Debt Payoff Calculator</h3>
+        <p>A payoff plan for any mix of debts, with extra payments.</p>
+      </a>
+
+      <a class="calc-list-card" href="debt-consolidation-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Debt Consolidation Calculator</h3>
+        <p>Compare your debts with one consolidation loan.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/debt-engine.js"></script>
+<script src="../js/credit-cards-payoff-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

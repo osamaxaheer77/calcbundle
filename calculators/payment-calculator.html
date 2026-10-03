@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Calculator - CalcBundle</title>
+<meta name="description" content="Find the monthly payment for a loan with a fixed term, or work out how long a fixed monthly payment takes to pay off a loan, with a full payment schedule.">
+<link rel="canonical" href="https://calcbundle.net/calculators/payment-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Payment Calculator - CalcBundle">
+<meta property="og:description" content="Find the monthly payment for a loan with a fixed term, or work out how long a fixed monthly payment takes to pay off a loan, with a full payment schedule.">
+<meta property="og:url" content="https://calcbundle.net/calculators/payment-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Payment Calculator - CalcBundle">
+<meta name="twitter:description" content="Find the monthly payment for a loan with a fixed term, or work out how long a fixed monthly payment takes to pay off a loan, with a full payment schedule.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a fixed term and a fixed payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With a fixed term you choose how long the loan lasts and the calculator finds the monthly payment that clears it in that time. With a fixed payment you choose the amount you will pay each month and the calculator finds how long it takes to pay the loan off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a longer term lower the payment but raise the total cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spreading the balance over more months makes each payment smaller, but the balance stays outstanding for longer, so more interest builds up. The shortest term you can afford usually costs the least overall."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it to see the effect of paying extra?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Use the fixed payment tab and enter a payment higher than the regular one. The calculator shows how much sooner the loan is paid off and how much interest you save compared with the minimum payment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does it say my payment is not enough?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If a monthly payment is no larger than the interest that builds up in a month, none of it goes toward the balance and the loan never gets paid off. Increase the payment above the monthly interest to see a payoff time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the last payment different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the fixed payment tab it usually is. The loan rarely ends on an exact payment, so the final payment is just what remains plus a month of interest. In the fixed term tab every payment is the same."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Payment Calculator</span>
+    </div>
+    <h1>Payment Calculator</h1>
+    <p>Find the monthly payment for a loan you want to repay in a set time, or see how long it takes to pay a loan off with a payment you choose.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="pm-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="pm-mode">What do you want to find out?</label>
+            <select id="pm-mode" class="unit-select">
+              <option value="term" selected>Monthly payment for a fixed term</option>
+              <option value="pay">Time to pay off with a fixed payment</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="pm-amount">Loan Amount ($)</label>
+            <input type="number" id="pm-amount" value="200000" min="0" step="any">
+          </div>
+
+          <div class="field-group" data-modes="term">
+            <label for="pm-years">Loan Term (years)</label>
+            <input type="number" id="pm-years" value="15" min="0" max="100" step="any">
+          </div>
+
+          <div class="field-group" data-modes="pay">
+            <label for="pm-pay">Monthly Payment ($)</label>
+            <input type="number" id="pm-pay" value="2000" min="0" step="any">
+          </div>
+
+          <div class="field-group">
+            <label for="pm-rate">Interest Rate (%)</label>
+            <input type="number" id="pm-rate" value="6" min="0" max="100" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="pm-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="pm-results-section" hidden>
+      <div class="schedule-header">
+        <h2 style="margin:0;font-size:18px;">Amortization Schedule</h2>
+        <div class="schedule-toggle-group">
+          <button type="button" id="pm-toggle-annual" class="active">Annual</button>
+          <button type="button" id="pm-toggle-monthly">Monthly</button>
+        </div>
+      </div>
+      <div id="pm-chart" style="margin:16px 0 20px;"></div>
+      <div class="schedule-table-wrap">
+        <div id="pm-schedule-body"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Two ways to plan a loan payment</h2>
+      <p>Most people come at a loan from one of two directions. Either they know how long they want the loan to last, such as a 15-year mortgage or a 60-month car loan, and want to know the monthly payment. Or they know what they can afford to pay each month and want to know how long it will take to clear the debt. This calculator does both. Pick the fixed term to get a payment, or the fixed payment to get a payoff time.</p>
+
+      <h2>How it works</h2>
+      <p>Interest is charged each month at one twelfth of the yearly rate on whatever balance is left. For a fixed term, the monthly payment is the level amount that brings the balance to exactly zero after the last month. For a fixed payment, the calculator counts how many months of that payment it takes to use up the balance. Because the debt rarely ends on a whole month, the final payment is usually smaller. Early payments are mostly interest, and later ones are mostly principal.</p>
+
+      <h2>Using it to compare choices</h2>
+      <p>Try the same loan over several terms. A longer term gives a lower payment but more total interest, and the shortest term you can comfortably afford usually costs the least. To test extra payments, use the fixed payment option and enter more than the regular amount. The payoff time and total interest show what the extra money saves. This works for credit cards too, though card rates and minimum payments change over time.</p>
+      <div class="callout">The figures are estimates. Real loans can have fees, a different way of counting interest, or payments on a different schedule, so check your lender's own numbers.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the difference between a fixed term and a fixed payment?</h3>
+        <p>With a fixed term you choose how long the loan lasts and the calculator finds the monthly payment that clears it in that time. With a fixed payment you choose the amount you will pay each month and the calculator finds how long it takes to pay the loan off.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does a longer term lower the payment but raise the total cost?</h3>
+        <p>Spreading the balance over more months makes each payment smaller, but the balance stays outstanding for longer, so more interest builds up. The shortest term you can afford usually costs the least overall.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use it to see the effect of paying extra?</h3>
+        <p>Yes. Use the fixed payment tab and enter a payment higher than the regular one. The calculator shows how much sooner the loan is paid off and how much interest you save compared with the minimum payment.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does it say my payment is not enough?</h3>
+        <p>If a monthly payment is no larger than the interest that builds up in a month, none of it goes toward the balance and the loan never gets paid off. Increase the payment above the monthly interest to see a payoff time.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the last payment different?</h3>
+        <p>In the fixed payment tab it usually is. The loan rarely ends on an exact payment, so the final payment is just what remains plus a month of interest. In the fixed term tab every payment is the same.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Loan Calculator</h3>
+        <p>Payments on amortized, deferred and bond-style loans.</p>
+      </a>
+
+      <a class="calc-list-card" href="auto-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Work out car payments, price and total cost.</p>
+      </a>
+
+      <a class="calc-list-card" href="mortgage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Estimate a monthly mortgage payment with taxes and insurance.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/payment-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

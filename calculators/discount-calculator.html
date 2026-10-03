@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discount Calculator - CalcBundle</title>
+<meta name="description" content="Find the sale price after a discount, the percentage discount, or the amount you save. Fill in any two values and the rest are worked out.">
+<link rel="canonical" href="https://calcbundle.net/calculators/discount-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Discount Calculator - CalcBundle">
+<meta property="og:description" content="Find the sale price after a discount, the percentage discount, or the amount you save. Fill in any two values and the rest are worked out.">
+<meta property="og:url" content="https://calcbundle.net/calculators/discount-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Discount Calculator - CalcBundle">
+<meta name="twitter:description" content="Find the sale price after a discount, the percentage discount, or the amount you save. Fill in any two values and the rest are worked out.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate a percentage discount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the original price by the discount percentage as a decimal to get the amount saved, then subtract that from the original price. For 15% off 59.99, the saving is 9.00 and the price is 50.99."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the original price from the sale price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the sale price by one minus the discount as a decimal. If a price after a 15% discount is 50.99, divide by 0.85 to get an original price of 59.99. Enter the discount and the price after discount to do this."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I work out the discount percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the amount saved by the original price and multiply by 100. Enter the original price and the sale price, and the calculator shows the percentage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does fixed amount off mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means a set number of dollars is taken off, such as a 10 coupon. The calculator subtracts it from the price and also shows what percentage of the price it represents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do two discounts add up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A second discount applies to the price after the first, so 20% off and then 10% off is 28% off in total. Run the calculator twice to check a stacked discount."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Discount Calculator</span>
+    </div>
+    <h1>Discount Calculator</h1>
+    <p>Find the price after a discount, the percent off, or how much you save. Fill in any two values and the calculator does the rest.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ds-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <p style="font-size:13px;color:var(--text-secondary);margin:0 0 14px;">Please provide any two values below to calculate.</p>
+          <div class="field-group">
+            <label for="ds-before">Price Before Discount ($)</label>
+            <input type="number" id="ds-before" value="59.99" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="ds-discount" id="ds-discount-label">Discount (% off)</label>
+            <input type="number" id="ds-discount" value="15" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="ds-after">Price After Discount ($)</label>
+            <input type="number" id="ds-after" value="" min="0" step="any" placeholder="Leave empty to calculate">
+          </div>
+          <div class="field-group" id="ds-saved-box">
+            <label for="ds-saved">You Saved ($)</label>
+            <input type="number" id="ds-saved" value="" min="0" step="any" placeholder="Leave empty to calculate">
+          </div>
+          <div class="field-group">
+            <label>Discount type</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="ds-format" value="p" checked>Percent off</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="ds-format" value="f">Fixed amount off</label>
+            </div>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+          <button type="button" id="ds-clear" class="calc-submit-btn" style="margin-top:10px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Clear</button>
+        </div>
+        <div class="mortgage-results-card" id="ds-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How discounts are worked out</h2>
+      <p>A percentage discount takes a share off the original price. The amount you save is the original price multiplied by the percentage, and the sale price is the original price minus that saving. If an item costs 59.99 and is 15% off, you save 9.00 and pay 50.99. A fixed amount discount takes a set number of dollars off, such as 10 off, and the calculator then shows what percentage that works out to.</p>
+
+      <h2>Working backwards</h2>
+      <p>The calculator also works in the other directions. If you know the original price and the sale price, it shows the percentage you saved. If you know the discount and the sale price, it finds the original price by dividing the sale price by one minus the discount. If you know how much you saved and the percentage, it finds the original price. Fill in any two values and leave the others empty.</p>
+
+      <h2>Stacked and fixed discounts</h2>
+      <p>Two discounts do not simply add. Taking 20% off and then a further 10% off gives 28% off in total, not 30%, because the second discount applies to the already reduced price. To check a stacked discount, run the calculator twice, using the first sale price as the starting price for the second discount. Choose fixed amount off when a coupon takes a flat sum off the price.</p>
+      <div class="callout">This calculator does simple price arithmetic. It does not include sales tax, shipping or store rules about which discounts can be combined.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate a percentage discount?</h3>
+        <p>Multiply the original price by the discount percentage as a decimal to get the amount saved, then subtract that from the original price. For 15% off 59.99, the saving is 9.00 and the price is 50.99.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I find the original price from the sale price?</h3>
+        <p>Divide the sale price by one minus the discount as a decimal. If a price after a 15% discount is 50.99, divide by 0.85 to get an original price of 59.99. Enter the discount and the price after discount to do this.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I work out the discount percentage?</h3>
+        <p>Divide the amount saved by the original price and multiply by 100. Enter the original price and the sale price, and the calculator shows the percentage.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does fixed amount off mean?</h3>
+        <p>It means a set number of dollars is taken off, such as a 10 coupon. The calculator subtracts it from the price and also shows what percentage of the price it represents.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do two discounts add up?</h3>
+        <p>No. A second discount applies to the price after the first, so 20% off and then 10% off is 28% off in total. Run the calculator twice to check a stacked discount.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="sales-tax-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Sales Tax Calculator</h3>
+        <p>Find the after-tax price, the rate or the before-tax price.</p>
+      </a>
+
+      <a class="calc-list-card" href="margin-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Margin Calculator</h3>
+        <p>Work out profit margin and markup from cost and revenue.</p>
+      </a>
+
+      <a class="calc-list-card" href="percentage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Percentage Calculator</h3>
+        <p>Work out percentages, changes and ratios.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/discount-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

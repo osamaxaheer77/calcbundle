@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boat Loan Calculator - CalcBundle</title>
+<meta name="description" content="Work out the monthly payment on a boat loan, or the boat price a payment can afford, including down payment, trade-in, sales tax and fees.">
+<link rel="canonical" href="https://calcbundle.net/calculators/boat-loan-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Boat Loan Calculator - CalcBundle">
+<meta property="og:description" content="Work out the monthly payment on a boat loan, or the boat price a payment can afford, including down payment, trade-in, sales tax and fees.">
+<meta property="og:url" content="https://calcbundle.net/calculators/boat-loan-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Boat Loan Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out the monthly payment on a boat loan, or the boat price a payment can afford, including down payment, trade-in, sales tax and fees.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is sales tax charged on the price before or after the trade-in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the state. This calculator works out the tax on the full boat price, which is the safer assumption. In states that tax only the price after the trade-in, the tax will be a little lower."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does including fees and tax in the loan do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It adds the sales tax and fees to the amount you borrow, so you pay less up front but have a larger loan, a higher monthly payment and more interest over the term."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I put down on a boat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lenders often ask for 10% to 20% down. A bigger down payment lowers the loan, the monthly payment and the total interest, and can help you qualify for a better rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the monthly payment option find the boat price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It first finds the loan amount your payment can repay over the term at your rate. It then adds the down payment and trade-in, and allows for tax and fees, to give the boat price that matches the loan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this include insurance and storage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Boat insurance, storage, fuel, docking and maintenance are separate costs. Add them to your budget alongside the loan payment."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Boat Loan Calculator</span>
+    </div>
+    <h1>Boat Loan Calculator</h1>
+    <p>Find the monthly payment on a boat loan, or the most boat a monthly payment will buy, with a down payment, trade-in, sales tax and fees.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="bt-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="bt-mode">What do you want to find out?</label>
+            <select id="bt-mode" class="unit-select">
+              <option value="price" selected>Monthly payment from a boat price</option>
+              <option value="payment">Boat price from a monthly payment</option>
+            </select>
+          </div>
+
+          <div class="field-group" data-modes="price">
+            <label for="bt-price">Boat Price ($)</label>
+            <input type="number" id="bt-price" value="35000" min="0" step="any">
+          </div>
+          <div class="field-group" data-modes="payment">
+            <label for="bt-payment">Monthly Payment ($)</label>
+            <input type="number" id="bt-payment" value="350" min="0" step="any">
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="bt-term">Loan Term</label>
+              <input type="number" id="bt-term" value="10" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="bt-term-unit">Term In</label>
+              <select id="bt-term-unit" class="unit-select">
+                <option value="y" selected>years</option>
+                <option value="m">months</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="bt-rate">Interest Rate (%)</label>
+            <input type="number" id="bt-rate" value="7" min="0" max="100" step="any">
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="bt-down">Down Payment</label>
+              <input type="number" id="bt-down" value="7000" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="bt-down-unit">Down Payment In</label>
+              <select id="bt-down-unit" class="unit-select">
+                <option value="d" selected>$</option>
+                <option value="p">%</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="bt-trade">Trade-in Value ($)</label>
+            <input type="number" id="bt-trade" value="0" min="0" step="any">
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="bt-tax">Sales Tax (%)</label>
+              <input type="number" id="bt-tax" value="7" min="0" max="50" step="any">
+            </div>
+            <div class="field-group">
+              <label for="bt-fees">Title, Registration and Other Fees ($)</label>
+              <input type="number" id="bt-fees" value="2000" min="0" step="any">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="radio-option" style="display:flex;align-items:center;gap:8px;font-weight:500;"><input type="checkbox" id="bt-include" style="width:auto;height:auto;">Include all fees and tax in the loan</label>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="bt-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="bt-results-section" hidden>
+      <div class="schedule-header">
+        <h2 style="margin:0;font-size:18px;">Amortization Schedule</h2>
+        <div class="schedule-toggle-group">
+          <button type="button" id="bt-toggle-annual" class="active">Annual</button>
+          <button type="button" id="bt-toggle-monthly">Monthly</button>
+        </div>
+      </div>
+      <div class="schedule-table-wrap" style="margin-top:16px;">
+        <div id="bt-schedule-body"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How a boat loan is worked out</h2>
+      <p>The amount you borrow is the boat price minus your down payment and any trade-in. If you choose to roll the sales tax and fees into the loan, they are added to that amount, which raises the payment. Otherwise you pay them up front along with the down payment. The monthly payment is the level amount that repays the loan with interest over the term, and the total cost adds the price, the interest, the tax and the fees.</p>
+
+      <h2>Two ways to use it</h2>
+      <p>Start from a boat price to see the payment you would owe. Or start from the monthly payment you can afford, and the calculator works out the loan that payment supports and then the boat price that goes with it, after allowing for the down payment, trade-in, tax and fees. The second approach is a good way to set a budget before you go shopping.</p>
+
+      <h2>Boat loans and terms</h2>
+      <p>Boat loans often run longer than car loans, commonly ten to twenty years for larger boats, and rates are usually higher for older or used boats. A longer term lowers the payment but increases total interest. A larger down payment reduces the amount borrowed and the interest. Insurance, storage, fuel and maintenance are extra costs of owning a boat that this calculator does not include.</p>
+      <div class="callout">This calculator gives estimates. Lenders may round differently, charge other fees or require a minimum down payment, so use your loan offer for exact figures.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Is sales tax charged on the price before or after the trade-in?</h3>
+        <p>It depends on the state. This calculator works out the tax on the full boat price, which is the safer assumption. In states that tax only the price after the trade-in, the tax will be a little lower.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does including fees and tax in the loan do?</h3>
+        <p>It adds the sales tax and fees to the amount you borrow, so you pay less up front but have a larger loan, a higher monthly payment and more interest over the term.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much should I put down on a boat?</h3>
+        <p>Lenders often ask for 10% to 20% down. A bigger down payment lowers the loan, the monthly payment and the total interest, and can help you qualify for a better rate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does the monthly payment option find the boat price?</h3>
+        <p>It first finds the loan amount your payment can repay over the term at your rate. It then adds the down payment and trade-in, and allows for tax and fees, to give the boat price that matches the loan.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this include insurance and storage?</h3>
+        <p>No. Boat insurance, storage, fuel, docking and maintenance are separate costs. Add them to your budget alongside the loan payment.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="auto-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Work out car payments, price and total cost.</p>
+      </a>
+
+      <a class="calc-list-card" href="loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Loan Calculator</h3>
+        <p>Payments on amortized, deferred and bond-style loans.</p>
+      </a>
+
+      <a class="calc-list-card" href="personal-loan-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Personal Loan Calculator</h3>
+        <p>Payment, fees and APR on a personal loan.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/boat-loan-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

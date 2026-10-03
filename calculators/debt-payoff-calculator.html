@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debt Payoff Calculator - CalcBundle</title>
+<meta name="description" content="Plan how to pay off several debts using the debt avalanche method, with optional extra payments, and see the payoff time, interest and schedule for each debt.">
+<link rel="canonical" href="https://calcbundle.net/calculators/debt-payoff-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Debt Payoff Calculator - CalcBundle">
+<meta property="og:description" content="Plan how to pay off several debts using the debt avalanche method, with optional extra payments, and see the payoff time, interest and schedule for each debt.">
+<meta property="og:url" content="https://calcbundle.net/calculators/debt-payoff-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Debt Payoff Calculator - CalcBundle">
+<meta name="twitter:description" content="Plan how to pay off several debts using the debt avalanche method, with optional extra payments, and see the payoff time, interest and schedule for each debt.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the debt avalanche method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a payoff plan where you pay the minimum on all debts and put every spare dollar on the debt with the highest interest rate. When that debt is cleared, you move to the next highest rate. It usually saves the most interest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a fixed total amount mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means your total monthly payment stays the same. When one debt is paid off, the money that was going to it is added to the next debt, which speeds up the payoff of the rest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can I not pay off a debt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the payment on a debt is no more than the interest it earns each month, the balance never falls. The calculator tells you which debt is the problem. Raise its payment or add extra money each month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the one-time payment made?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the month number you enter. The amount is added to that month budget and goes to the highest-rate debt after all the minimum payments are made."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it include new debt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The plan assumes you take on no new debt while you pay these off. New borrowing would add to your balances and slow the plan."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Debt Payoff Calculator</span>
+    </div>
+    <h1>Debt Payoff Calculator</h1>
+    <p>List your debts, add any extra payments you can make, and get the cheapest order to clear them, with a payment schedule for each.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="dp-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div id="dp-rows"></div>
+
+          <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:6px 0 8px;">Extra payments</p>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="dp-month">Per month ($)</label>
+              <input type="number" id="dp-month" value="100" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="dp-year">Once a year ($)</label>
+              <input type="number" id="dp-year" value="0" min="0" step="any">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="dp-once">One-time payment ($)</label>
+              <input type="number" id="dp-once" value="0" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="dp-once-month">Made in month number</label>
+              <input type="number" id="dp-once-month" value="5" min="1" step="1">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Fixed total amount toward your monthly payment?</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="dp-fixed" value="y" checked>Yes</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="dp-fixed" value="n">No</label>
+            </div>
+            <p style="font-size:12px;color:var(--text-secondary);margin:6px 0 0;">If Yes, once a debt is paid off, the money that was going to it is moved to the remaining debts, so the total each month stays the same.</p>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="dp-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="dp-results-section" hidden>
+      <h2 style="margin:0 0 6px;font-size:18px;">Payoff Plan by Debt</h2>
+      <p style="font-size:13px;color:var(--text-secondary);margin:0 0 16px;">Debts are listed in the order they are paid off. The plan assumes you take on no new debt.</p>
+      <div class="schedule-table-wrap">
+        <div id="dp-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the plan works</h2>
+      <p>This calculator uses the debt avalanche method. You pay the minimum on every debt, and any extra money goes to the debt with the highest interest rate. When that debt is paid off, its payment is added to the next highest, and the plan rolls on until every debt is gone. Because you attack the most expensive interest first, you pay the least overall. It works for any mix of debts, such as credit cards, car loans, student loans and mortgages.</p>
+
+      <h2>Extra payments</h2>
+      <p>Extra money makes a big difference. You can add a regular extra amount each month, a larger one once a year, such as a bonus or tax refund, paid in the first month of each year, and a one-time payment in a month you choose. All of it goes to the highest-rate debt first. With the fixed total option switched on, the payments you were making on a cleared debt are moved to the rest, so your monthly outlay never changes but the debts disappear faster.</p>
+
+      <h2>Reading the results</h2>
+      <p>The summary shows how long it takes to become debt free, the total you will pay and the total interest. The table shows each debt in payoff order, with its payoff length, interest, total payments and the payment you make each month. Compare a plan with and without extra payments to see how much time and interest they save.</p>
+      <div class="callout">This calculator gives estimates. It assumes fixed interest rates, monthly interest and no new borrowing. Real loans may have fees, rate changes or rules about prepayment.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the debt avalanche method?</h3>
+        <p>It is a payoff plan where you pay the minimum on all debts and put every spare dollar on the debt with the highest interest rate. When that debt is cleared, you move to the next highest rate. It usually saves the most interest.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does a fixed total amount mean?</h3>
+        <p>It means your total monthly payment stays the same. When one debt is paid off, the money that was going to it is added to the next debt, which speeds up the payoff of the rest.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why can I not pay off a debt?</h3>
+        <p>If the payment on a debt is no more than the interest it earns each month, the balance never falls. The calculator tells you which debt is the problem. Raise its payment or add extra money each month.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When is the one-time payment made?</h3>
+        <p>In the month number you enter. The amount is added to that month budget and goes to the highest-rate debt after all the minimum payments are made.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it include new debt?</h3>
+        <p>No. The plan assumes you take on no new debt while you pay these off. New borrowing would add to your balances and slow the plan.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="credit-cards-payoff-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Credit Cards Payoff Calculator</h3>
+        <p>A payoff plan for several cards using the debt avalanche.</p>
+      </a>
+
+      <a class="calc-list-card" href="debt-consolidation-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Debt Consolidation Calculator</h3>
+        <p>Compare your debts with one consolidation loan.</p>
+      </a>
+
+      <a class="calc-list-card" href="repayment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Repayment Calculator</h3>
+        <p>How long a debt takes to clear, or what to pay each period.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/debt-engine.js"></script>
+<script src="../js/debt-payoff-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

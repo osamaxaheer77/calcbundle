@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit Card Calculator - CalcBundle</title>
+<meta name="description" content="Find how long it takes to pay off a credit card balance with a fixed monthly payment, or the payment needed to clear it within a set time.">
+<link rel="canonical" href="https://calcbundle.net/calculators/credit-card-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Credit Card Calculator - CalcBundle">
+<meta property="og:description" content="Find how long it takes to pay off a credit card balance with a fixed monthly payment, or the payment needed to clear it within a set time.">
+<meta property="og:url" content="https://calcbundle.net/calculators/credit-card-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Credit Card Calculator - CalcBundle">
+<meta name="twitter:description" content="Find how long it takes to pay off a credit card balance with a fixed monthly payment, or the payment needed to clear it within a set time.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does it say my payment is too low?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your payment is no more than the interest charged in a month, none of it reduces the balance, so the card can never be paid off. You need to pay more than the first month of interest, which the message shows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a typical minimum payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many issuers set the minimum at the interest plus 1% of the balance, or at 2% to 3% of the balance, with a lowest amount of around $15. Check your statement for your own rule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the monthly interest worked out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The yearly rate is divided by twelve and applied to the balance each month. The payment is then taken off, and what is left becomes the balance for the next month. Real cards may charge interest daily, which can change the figures slightly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it include new purchases or fees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It assumes you stop using the card and that no fees are added. Any new charges would raise your balance and lengthen the payoff."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I pay off my card faster?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pay more than the minimum, make the payment earlier in the month, and avoid new charges. Try different amounts in the calculator to see how much time and interest each extra payment saves."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Credit Card Calculator</span>
+    </div>
+    <h1>Credit Card Calculator</h1>
+    <p>Find out how long a credit card balance will take to pay off at a payment you choose, or what to pay each month to clear it by a certain date.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="cc-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="cc-balance">Credit Card Balance ($)</label>
+            <input type="number" id="cc-balance" value="8000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="cc-rate">Interest Rate (%)</label>
+            <input type="number" id="cc-rate" value="18" min="0" max="100" step="any">
+          </div>
+
+          <div class="field-group">
+            <label>How do you plan to pay off?</label>
+            <div>
+              <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="radio" name="cc-way" value="pay" checked>Pay a certain amount each month</label>
+              <label class="radio-option" style="display:flex;"><input type="radio" name="cc-way" value="time">Pay off within a certain time</label>
+            </div>
+          </div>
+
+          <div data-modes="pay">
+            <div class="field-group">
+              <label for="cc-payment">Pay Per Month ($)</label>
+              <input type="number" id="cc-payment" value="200" min="0" step="any">
+            </div>
+            <p style="font-size:13px;color:var(--text-secondary);margin:0 0 6px;">Or use a typical card minimum:</p>
+            <div style="margin-bottom:10px;"><button type="button" data-quick="1" style="background:none;border:1px solid var(--border);border-radius:8px;padding:4px 10px;margin:0 6px 6px 0;cursor:pointer;color:var(--accent);font:inherit;font-size:13px;">Interest + 1% of balance</button><button type="button" data-quick="2" style="background:none;border:1px solid var(--border);border-radius:8px;padding:4px 10px;margin:0 6px 6px 0;cursor:pointer;color:var(--accent);font:inherit;font-size:13px;">2% of balance</button><button type="button" data-quick="3" style="background:none;border:1px solid var(--border);border-radius:8px;padding:4px 10px;margin:0 6px 6px 0;cursor:pointer;color:var(--accent);font:inherit;font-size:13px;">3%</button><button type="button" data-quick="4" style="background:none;border:1px solid var(--border);border-radius:8px;padding:4px 10px;margin:0 6px 6px 0;cursor:pointer;color:var(--accent);font:inherit;font-size:13px;">4%</button><button type="button" data-quick="5" style="background:none;border:1px solid var(--border);border-radius:8px;padding:4px 10px;margin:0 6px 6px 0;cursor:pointer;color:var(--accent);font:inherit;font-size:13px;">5%</button></div>
+          </div>
+
+          <div data-modes="time">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="cc-years">Years</label>
+                <input type="number" id="cc-years" value="2" min="0" max="50" step="any">
+              </div>
+              <div class="field-group">
+                <label for="cc-months">Months</label>
+                <input type="number" id="cc-months" value="0" min="0" step="any">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="cc-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="cc-results-section" hidden>
+      <div class="schedule-header">
+        <h2 style="margin:0;font-size:18px;">Payoff Schedule</h2>
+        <div class="schedule-toggle-group">
+          <button type="button" id="cc-toggle-year" class="active">By year</button>
+          <button type="button" id="cc-toggle-month">By month</button>
+        </div>
+      </div>
+      <div class="schedule-table-wrap" style="margin-top:16px;">
+        <div id="cc-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How credit card interest builds up</h2>
+      <p>A credit card charges interest each month on the balance you carry, at one twelfth of the yearly rate. If you pay only a small amount, most of it goes to interest and the balance falls very slowly. That is why a card balance can take years to clear. The calculator shows the effect: enter your balance, rate and payment, and it counts the months until the balance is gone and the total interest you pay on the way.</p>
+
+      <h2>Two ways to plan your payoff</h2>
+      <p>You can choose how much to pay each month and see how long it takes, or choose a target time and see what you need to pay. A typical minimum payment is interest plus 1% of the balance, or a percentage of it such as 2% to 3%, with a floor of about $15. The quick buttons fill in those amounts. Raising the payment even a little shortens the payoff dramatically and saves interest.</p>
+
+      <h2>Tips for paying off a card</h2>
+      <p>Pay more than the minimum, and pay as early in the month as you can, since interest is charged on the balance. Stop adding new charges while you pay the card down. If you have several cards, put extra money on the one with the highest rate. A balance transfer to a card with a lower or zero introductory rate can help, but watch for transfer fees. For several cards at once, use the Credit Cards Payoff Calculator.</p>
+      <div class="callout">This calculator gives estimates. It assumes a fixed rate, one monthly interest charge and no new purchases or fees, so your card statement may differ a little.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Why does it say my payment is too low?</h3>
+        <p>If your payment is no more than the interest charged in a month, none of it reduces the balance, so the card can never be paid off. You need to pay more than the first month of interest, which the message shows.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a typical minimum payment?</h3>
+        <p>Many issuers set the minimum at the interest plus 1% of the balance, or at 2% to 3% of the balance, with a lowest amount of around $15. Check your statement for your own rule.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is the monthly interest worked out?</h3>
+        <p>The yearly rate is divided by twelve and applied to the balance each month. The payment is then taken off, and what is left becomes the balance for the next month. Real cards may charge interest daily, which can change the figures slightly.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it include new purchases or fees?</h3>
+        <p>No. It assumes you stop using the card and that no fees are added. Any new charges would raise your balance and lengthen the payoff.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I pay off my card faster?</h3>
+        <p>Pay more than the minimum, make the payment earlier in the month, and avoid new charges. Try different amounts in the calculator to see how much time and interest each extra payment saves.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="credit-cards-payoff-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Credit Cards Payoff Calculator</h3>
+        <p>A payoff plan for several cards using the debt avalanche.</p>
+      </a>
+
+      <a class="calc-list-card" href="debt-payoff-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Debt Payoff Calculator</h3>
+        <p>A payoff plan for any mix of debts, with extra payments.</p>
+      </a>
+
+      <a class="calc-list-card" href="repayment-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Repayment Calculator</h3>
+        <p>How long a debt takes to clear, or what to pay each period.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/credit-card-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

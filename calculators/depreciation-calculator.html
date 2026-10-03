@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Depreciation Calculator - CalcBundle</title>
+<meta name="description" content="Work out an asset depreciation schedule using the straight line, declining balance or sum of the year’s digits method, with optional partial-year depreciation.">
+<link rel="canonical" href="https://calcbundle.net/calculators/depreciation-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Depreciation Calculator - CalcBundle">
+<meta property="og:description" content="Work out an asset depreciation schedule using the straight line, declining balance or sum of the year’s digits method, with optional partial-year depreciation.">
+<meta property="og:url" content="https://calcbundle.net/calculators/depreciation-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Depreciation Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out an asset depreciation schedule using the straight line, declining balance or sum of the year’s digits method, with optional partial-year depreciation.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is salvage value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Salvage value is the amount you expect the asset to be worth when you stop using it. Depreciation only spreads the cost minus the salvage value, so the book value ends at the salvage value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the double declining balance method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the declining balance method with a depreciation factor of 2. Each year it takes twice the straight line rate of the remaining book value, so the charge is large in the early years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the declining balance method used?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Companies use it for assets that lose value fastest when they are new, such as vehicles and technology. The final year is adjusted so the book value ends at the salvage value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the half-month convention mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It counts whole months from the start date to the end of the accounting year and treats any leftover part of a month as half a month. A full-month convention counts any leftover part as a whole month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the schedule have one more year with partial depreciation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The first accounting period is shortened, so the total life of the asset spills into one more period. The extra last period takes the depreciation not yet recorded."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Depreciation Calculator</span>
+    </div>
+    <h1>Depreciation Calculator</h1>
+    <p>Build a depreciation schedule for an asset using the straight line, declining balance or sum of the year’s digits method, with partial-year options.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="dr-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="dr-method">Depreciation Method</label>
+            <select id="dr-method" class="unit-select">
+              <option value="straight" selected>Straight line</option>
+              <option value="declining">Declining balance</option>
+              <option value="sum">Sum of the year’s digits</option>
+            </select>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="dr-cost">Asset Cost ($)</label>
+              <input type="number" id="dr-cost" value="11000" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="dr-salvage">Salvage Value ($)</label>
+              <input type="number" id="dr-salvage" value="1000" min="0" step="any">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="dr-years">Depreciation Years</label>
+              <input type="number" id="dr-years" value="5" min="1" max="100" step="1">
+            </div>
+            <div class="field-group" id="dr-factor-box">
+              <label for="dr-factor">Depreciation Factor</label>
+              <input type="number" id="dr-factor" value="2" min="0" step="any">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Round to dollars?</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="dr-round" value="y" checked>Yes</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="dr-round" value="n">No</label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Partial year depreciation?</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="dr-partial" value="y">Yes</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="dr-partial" value="n" checked>No</label>
+            </div>
+          </div>
+
+          <div id="dr-partial-box">
+            <div class="field-group">
+              <label for="dr-conv">Convention</label>
+              <select id="dr-conv" class="unit-select">
+                <option value="day">Count every day</option>
+                <option value="halfmonth" selected>Half-month</option>
+                <option value="fullmonth">Full-month</option>
+                <option value="halfquarter">Half-quarter</option>
+                <option value="fullquarter">Full-quarter</option>
+                <option value="halfyear">Half-year</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="dr-start">Start of Asset Service</label>
+              <input type="date" id="dr-start">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="dr-ay-month">Accounting Year Starts In</label>
+                <select id="dr-ay-month" class="unit-select"></select>
+              </div>
+              <div class="field-group">
+                <label for="dr-ay-day">On Day</label>
+                <input type="number" id="dr-ay-day" value="1" min="1" max="31" step="1">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="dr-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="dr-results-section" hidden>
+      <h2 style="margin:0 0 16px;font-size:18px;">Depreciation Schedule</h2>
+      <div class="schedule-table-wrap">
+        <div id="dr-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What depreciation is</h2>
+      <p>Depreciation spreads the cost of an asset, such as a vehicle, machine or computer, over the years it is expected to be useful. Each year, part of the cost is recorded as an expense, and the asset’s book value falls. The depreciable amount is the cost minus the salvage value, the amount the asset is expected to be worth at the end of its useful life. The book value never drops below the salvage value.</p>
+
+      <h2>The three methods</h2>
+      <p>The straight line method takes the same amount every year, which is the depreciable amount divided by the number of years. The declining balance method takes a fixed percentage of the remaining book value each year, so the charge is largest at the start and shrinks over time. The percentage is the depreciation factor divided by the number of years, so a factor of 2 gives the double declining balance method. The sum of the year’s digits method also front-loads the charge, using a fraction that falls each year: for a five year asset the first year takes 5 of 15 parts, the second 4 of 15, and so on.</p>
+
+      <h2>Partial years and accounting years</h2>
+      <p>Assets are rarely put into service on the first day of the accounting year. Turn on partial year depreciation, enter the start date and the date your accounting year begins, and the first year is shortened to the part of the year the asset is in use. The convention decides how that part is counted: by exact days, by months, by quarters, or as half a year. The half conventions count any part of a month or quarter as a half. The schedule then runs over one more accounting period, with the last one making up the rest.</p>
+      <div class="callout">This calculator shows common accounting methods for planning. Tax depreciation rules, such as MACRS in the United States, use their own tables and conventions, so check with an accountant for tax filings.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is salvage value?</h3>
+        <p>Salvage value is the amount you expect the asset to be worth when you stop using it. Depreciation only spreads the cost minus the salvage value, so the book value ends at the salvage value.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the double declining balance method?</h3>
+        <p>It is the declining balance method with a depreciation factor of 2. Each year it takes twice the straight line rate of the remaining book value, so the charge is large in the early years.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When is the declining balance method used?</h3>
+        <p>Companies use it for assets that lose value fastest when they are new, such as vehicles and technology. The final year is adjusted so the book value ends at the salvage value.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does the half-month convention mean?</h3>
+        <p>It counts whole months from the start date to the end of the accounting year and treats any leftover part of a month as half a month. A full-month convention counts any leftover part as a whole month.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the schedule have one more year with partial depreciation?</h3>
+        <p>The first accounting period is shortened, so the total life of the asset spills into one more period. The extra last period takes the depreciation not yet recorded.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="roi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>ROI Calculator</h3>
+        <p>Work out the return on an investment.</p>
+      </a>
+
+      <a class="calc-list-card" href="margin-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Margin Calculator</h3>
+        <p>Work out profit margin and markup from cost and revenue.</p>
+      </a>
+
+      <a class="calc-list-card" href="payback-period-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Payback Period Calculator</h3>
+        <p>How long an investment takes to earn its money back.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/depreciation-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

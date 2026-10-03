@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales Tax Calculator - CalcBundle</title>
+<meta name="description" content="Find the after-tax price, the sales tax rate or the before-tax price from any two of the three, with a table of U.S. state sales tax rates.">
+<link rel="canonical" href="https://calcbundle.net/calculators/sales-tax-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Sales Tax Calculator - CalcBundle">
+<meta property="og:description" content="Find the after-tax price, the sales tax rate or the before-tax price from any two of the three, with a table of U.S. state sales tax rates.">
+<meta property="og:url" content="https://calcbundle.net/calculators/sales-tax-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sales Tax Calculator - CalcBundle">
+<meta name="twitter:description" content="Find the after-tax price, the sales tax rate or the before-tax price from any two of the three, with a table of U.S. state sales tax rates.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I add sales tax to a price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the before-tax price by one plus the tax rate as a decimal. For a 6.5% rate that means multiplying by 1.065, so a $100 item costs $106.50. The calculator does this when you enter the before-tax price and the rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I take sales tax out of a total?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the after-tax total by one plus the tax rate as a decimal. If a receipt shows $106.50 and the rate is 6.5%, divide by 1.065 to get the $100 before-tax price. Enter the rate and the after-tax price, and leave the before-tax box empty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I find out what rate was charged?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the before-tax price and the after-tax price, and leave the rate empty. The calculator divides the after-tax price by the before-tax price, subtracts one, and shows the result as a percentage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the combined sales tax higher than the state rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many counties and cities add their own sales tax on top of the state rate. The combined rate you pay depends on where the sale happens, so check the rate for your exact location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this the same as VAT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The arithmetic is the same, but VAT and GST are charged at each stage of production and are usually included in the displayed price, while U.S. sales tax is added at the register. You can still use this calculator for VAT by entering the VAT rate as the tax rate."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Sales Tax Calculator</span>
+    </div>
+    <h1>Sales Tax Calculator</h1>
+    <p>Fill in any two of the before-tax price, the sales tax rate and the after-tax price, and the calculator finds the third.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="st-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="st-before">Before Tax Price ($)</label>
+            <input type="number" id="st-before" value="100" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="st-rate">Sales Tax Rate (%)</label>
+            <input type="number" id="st-rate" value="6.5" min="0" max="100" step="any">
+          </div>
+          <div class="field-group">
+            <label for="st-final">After Tax Price ($)</label>
+            <input type="number" id="st-final" value="" min="0" step="any" placeholder="Leave empty to calculate">
+          </div>
+          <p style="font-size:12px;color:var(--text-secondary);margin:0 0 14px;">Leave the box you want to find empty.</p>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+          <button type="button" id="st-clear" class="calc-submit-btn" style="margin-top:10px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Clear</button>
+        </div>
+
+        <div class="mortgage-results-card" id="st-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card">
+      <h2 style="margin:0 0 6px;font-size:18px;">U.S. State Sales Tax Rates</h2>
+      <p style="font-size:13px;color:var(--text-secondary);margin:0 0 16px;">General state rates, and the highest combined rate once local and city taxes are added. Press a state's rate to use it in the calculator above. Rates change and some goods are taxed differently, so confirm the rate for your exact location.</p>
+      <div class="schedule-table-wrap">
+        <table class="schedule-table">
+          <thead><tr><th>State</th><th>General State Sales Tax</th><th>Highest Combined With Local Tax</th></tr></thead>
+          <tbody>
+            <tr><td>Alabama</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="4">4%</button></td><td>13.50%</td></tr>
+            <tr><td>Alaska</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="0">0%</button></td><td>7%</td></tr>
+            <tr><td>Arizona</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="5.60">5.60%</button></td><td>10.725%</td></tr>
+            <tr><td>Arkansas</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6.50">6.50%</button></td><td>11.625%</td></tr>
+            <tr><td>California</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="7.25">7.25%</button></td><td>10.50%</td></tr>
+            <tr><td>Colorado</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="2.90">2.90%</button></td><td>10%</td></tr>
+            <tr><td>Connecticut</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6.35">6.35%</button></td><td>6.35%</td></tr>
+            <tr><td>Delaware</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="0">0%</button></td><td>0%</td></tr>
+            <tr><td>District of Columbia</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6">6%</button></td><td>6%</td></tr>
+            <tr><td>Florida</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6">6%</button></td><td>7.50%</td></tr>
+            <tr><td>Georgia</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="4">4%</button></td><td>8%</td></tr>
+            <tr><td>Guam</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="4">4%</button></td><td>4%</td></tr>
+            <tr><td>Hawaii</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="4.166">4.166%</button></td><td>4.712%</td></tr>
+            <tr><td>Idaho</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6">6%</button></td><td>8.50%</td></tr>
+            <tr><td>Illinois</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6.25">6.25%</button></td><td>10.25%</td></tr>
+            <tr><td>Indiana</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="7">7%</button></td><td>7%</td></tr>
+            <tr><td>Iowa</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6">6%</button></td><td>7%</td></tr>
+            <tr><td>Kansas</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6.50">6.50%</button></td><td>11.60%</td></tr>
+            <tr><td>Kentucky</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6">6%</button></td><td>6%</td></tr>
+            <tr><td>Louisiana</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="4.45">4.45%</button></td><td>11.45%</td></tr>
+            <tr><td>Maine</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="5.50">5.50%</button></td><td>5.50%</td></tr>
+            <tr><td>Maryland</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6">6%</button></td><td>6%</td></tr>
+            <tr><td>Massachusetts</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6.25">6.25%</button></td><td>6.25%</td></tr>
+            <tr><td>Michigan</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6">6%</button></td><td>6%</td></tr>
+            <tr><td>Minnesota</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6.875">6.875%</button></td><td>7.875%</td></tr>
+            <tr><td>Mississippi</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="7">7%</button></td><td>7.25%</td></tr>
+            <tr><td>Missouri</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="4.225">4.225%</button></td><td>10.85%</td></tr>
+            <tr><td>Montana</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="0">0%</button></td><td>0%</td></tr>
+            <tr><td>Nebraska</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="5.50">5.50%</button></td><td>7.50%</td></tr>
+            <tr><td>Nevada</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6.85">6.85%</button></td><td>8.375%</td></tr>
+            <tr><td>New Hampshire</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="0">0%</button></td><td>0%</td></tr>
+            <tr><td>New Jersey</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6.625">6.625%</button></td><td>12.625%</td></tr>
+            <tr><td>New Mexico</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="5.125">5.125%</button></td><td>8.688%</td></tr>
+            <tr><td>New York</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="4">4%</button></td><td>8.875%</td></tr>
+            <tr><td>North Carolina</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="4.75">4.75%</button></td><td>7.50%</td></tr>
+            <tr><td>North Dakota</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="5">5%</button></td><td>8%</td></tr>
+            <tr><td>Ohio</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="5.75">5.75%</button></td><td>8%</td></tr>
+            <tr><td>Oklahoma</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="4.50">4.50%</button></td><td>11%</td></tr>
+            <tr><td>Oregon</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="0">0%</button></td><td>0%</td></tr>
+            <tr><td>Pennsylvania</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6">6%</button></td><td>8%</td></tr>
+            <tr><td>Puerto Rico</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="10.50">10.50%</button></td><td>11.50%</td></tr>
+            <tr><td>Rhode Island</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="7">7%</button></td><td>7%</td></tr>
+            <tr><td>South Carolina</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6">6%</button></td><td>9%</td></tr>
+            <tr><td>South Dakota</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="4">4%</button></td><td>6%</td></tr>
+            <tr><td>Tennessee</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="7">7%</button></td><td>9.75%</td></tr>
+            <tr><td>Texas</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6.25">6.25%</button></td><td>8.25%</td></tr>
+            <tr><td>Utah</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6.1">6.1%</button></td><td>8.35%</td></tr>
+            <tr><td>Vermont</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6">6%</button></td><td>7%</td></tr>
+            <tr><td>Virginia</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="5.30">5.30%</button></td><td>7%</td></tr>
+            <tr><td>Washington</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6.50">6.50%</button></td><td>10.60%</td></tr>
+            <tr><td>West Virginia</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="6">6%</button></td><td>7%</td></tr>
+            <tr><td>Wisconsin</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="5">5%</button></td><td>7.9%</td></tr>
+            <tr><td>Wyoming</td><td><button type="button" style="background:none;border:0;color:var(--accent);cursor:pointer;font:inherit;padding:0;text-decoration:underline;" data-state-rate="4">4%</button></td><td>6%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What sales tax is</h2>
+      <p>Sales tax is a consumption tax collected by the seller at the time of purchase and passed on to the government. In the United States there is no federal sales tax. States set their own, and counties and cities often add more, so the rate depends on where you buy. Five states have no statewide sales tax: Alaska, Delaware, Montana, New Hampshire and Oregon, though Alaska allows local taxes. Most other countries use a value-added tax or goods and services tax instead, which works differently but is calculated with the same percentage arithmetic.</p>
+
+      <h2>The three calculations</h2>
+      <p>The three numbers are linked by one formula: the after-tax price equals the before-tax price multiplied by one plus the rate. Knowing any two lets you solve for the third. Use the before-tax price and the rate to find what you will pay at the register. Use the after-tax total and the rate to take the tax back out, for example to find the pre-tax price on a receipt. Use the two prices to discover what rate was charged. Entering all three fills the answer from the first two, so clear one box to solve for it.</p>
+
+      <h2>Deducting sales tax on your income tax</h2>
+      <p>In the United States you can deduct either state and local income taxes or state and local sales taxes on your federal return, but not both, and only if you itemize deductions. Most people deduct income taxes because the amount is usually larger. Someone who made large purchases in a year, such as a car, may come out ahead by deducting sales tax instead. This calculator can help you work out the tax on a single purchase, but it does not prepare a tax deduction.</p>
+      <div class="callout">The rates in the table are general figures and change over time. Local rates, exemptions for items like groceries or medicine, and special taxes on some goods vary by place, so use your receipt or local tax office for the exact rate.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I add sales tax to a price?</h3>
+        <p>Multiply the before-tax price by one plus the tax rate as a decimal. For a 6.5% rate that means multiplying by 1.065, so a $100 item costs $106.50. The calculator does this when you enter the before-tax price and the rate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I take sales tax out of a total?</h3>
+        <p>Divide the after-tax total by one plus the tax rate as a decimal. If a receipt shows $106.50 and the rate is 6.5%, divide by 1.065 to get the $100 before-tax price. Enter the rate and the after-tax price, and leave the before-tax box empty.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I find out what rate was charged?</h3>
+        <p>Enter the before-tax price and the after-tax price, and leave the rate empty. The calculator divides the after-tax price by the before-tax price, subtracts one, and shows the result as a percentage.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is the combined sales tax higher than the state rate?</h3>
+        <p>Many counties and cities add their own sales tax on top of the state rate. The combined rate you pay depends on where the sale happens, so check the rate for your exact location.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this the same as VAT?</h3>
+        <p>The arithmetic is the same, but VAT and GST are charged at each stage of production and are usually included in the displayed price, while U.S. sales tax is added at the register. You can still use this calculator for VAT by entering the VAT rate as the tax rate.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="income-tax-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Income Tax Calculator</h3>
+        <p>Estimate your federal income tax, refund or amount owed.</p>
+      </a>
+
+      <a class="calc-list-card" href="take-home-pay-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Take-Home-Paycheck Calculator</h3>
+        <p>See your pay after federal, payroll and state tax.</p>
+      </a>
+
+      <a class="calc-list-card" href="salary-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Salary Calculator</h3>
+        <p>Convert a salary between hourly, weekly, monthly and yearly pay.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/sales-tax-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
