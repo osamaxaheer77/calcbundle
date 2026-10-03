@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Position Size Calculator - CalcBundle</title>
+<meta name="description" content="Work out how big a trade should be from your account balance, the percentage you are willing to risk, and your entry and stop-loss prices.">
+<link rel="canonical" href="https://calcbundle.net/calculators/position-size-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Position Size Calculator - CalcBundle">
+<meta property="og:description" content="Work out how big a trade should be from your account balance, the percentage you are willing to risk, and your entry and stop-loss prices.">
+<meta property="og:url" content="https://calcbundle.net/calculators/position-size-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Position Size Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out how big a trade should be from your account balance, the percentage you are willing to risk, and your entry and stop-loss prices.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate position size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the amount you are willing to risk, which is balance times risk percentage, by the distance between your entry price and your stop-loss price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What percentage should I risk per trade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many traders risk 1% to 2% of their account on one trade. Lower risk lets you survive a long run of losses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does leverage change my risk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not at the stop. The loss at your stop is set by size and stop distance. Leverage only sets the margin required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the risk to reward ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It compares the possible profit to the possible loss. If you risk 100 USDT to make 300 USDT, the ratio is 3 to 1."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the stop loss guaranteed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. In fast markets the price can jump past your stop, which is called slippage, so the real loss can be larger."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/crypto.html" style="color:inherit;text-decoration:none;">Crypto &amp; Forex</a>
+      <span>/</span>
+      <span class="current">Position Size Calculator</span>
+    </div>
+    <h1>Position Size Calculator</h1>
+    <p>Enter your balance, risk percentage, entry and stop loss to find the position size that keeps your loss to the amount you chose.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ps-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="ps-bal">Account Balance (USDT)</label>
+            <input type="number" id="ps-bal" value="10000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="ps-risk">Risk per Trade (%)</label>
+            <input type="number" id="ps-risk" value="1" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="ps-entry">Entry Price (USDT)</label>
+            <input type="number" id="ps-entry" value="60000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="ps-stop">Stop Loss Price (USDT)</label>
+            <input type="number" id="ps-stop" value="58000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="ps-tp">Take Profit Price (USDT, optional)</label>
+            <input type="number" id="ps-tp" value="66000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="ps-lev">Leverage (x, optional)</label>
+            <input type="number" id="ps-lev" value="10" min="1" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="ps-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Sizing a trade by risk</h2>
+      <p>Risk-based position sizing starts with how much you are willing to lose on one trade, set as a percentage of your account. If you have 10,000 USDT and risk 1%, you accept losing 100 USDT if your stop loss is hit. The position size is that amount divided by the distance between the entry and the stop-loss price. With a stop 2,000 USDT below the entry, the size is 100 ÷ 2,000, which is 0.05 coins.</p>
+
+      <h2>Long or short</h2>
+      <p>The calculator works out the direction for you. If the stop loss is below the entry price it is a long trade. If it is above, it is a short trade. If you add a take-profit price, it must be on the other side of the entry, and the calculator shows the reward, and the risk to reward ratio. A ratio of 3 means the possible gain is three times the possible loss.</p>
+
+      <h2>Leverage and margin</h2>
+      <p>Leverage does not change how much you lose at your stop, since that comes from the size and the stop distance. It only changes how much margin you must put up. Enter a leverage to see the margin needed. If the margin is more than your balance, the trade needs less size or more leverage. Check that your stop sits well before the liquidation price, or the exchange will close the trade first.</p>
+      <div class="callout">Futures trading with leverage carries a high risk of loss. This calculator does simple arithmetic and is not financial advice. Slippage and fees can make a real loss bigger than planned.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate position size?</h3>
+        <p>Divide the amount you are willing to risk, which is balance times risk percentage, by the distance between your entry price and your stop-loss price.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What percentage should I risk per trade?</h3>
+        <p>Many traders risk 1% to 2% of their account on one trade. Lower risk lets you survive a long run of losses.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does leverage change my risk?</h3>
+        <p>Not at the stop. The loss at your stop is set by size and stop distance. Leverage only sets the margin required.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the risk to reward ratio?</h3>
+        <p>It compares the possible profit to the possible loss. If you risk 100 USDT to make 300 USDT, the ratio is 3 to 1.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the stop loss guaranteed?</h3>
+        <p>No. In fast markets the price can jump past your stop, which is called slippage, so the real loss can be larger.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Crypto &amp; Forex Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="liquidation-price-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Liquidation Price Calculator</h3>
+        <p>Where a leveraged position gets liquidated.</p>
+      </a>
+
+      <a class="calc-list-card" href="max-open-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Max Open Calculator</h3>
+        <p>The largest position your margin allows.</p>
+      </a>
+
+      <a class="calc-list-card" href="futures-pnl-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Futures PNL Calculator</h3>
+        <p>Profit, loss and return on a futures trade.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/trading-common.js"></script>
+<script src="../js/position-size-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

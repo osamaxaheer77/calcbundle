@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Risk Reward Ratio Calculator - CalcBundle</title>
+<meta name="description" content="Compare the risk and reward of a trade from its entry, stop loss and take profit, and find the win rate you need to break even.">
+<link rel="canonical" href="https://calcbundle.net/calculators/risk-reward-ratio-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Risk Reward Ratio Calculator - CalcBundle">
+<meta property="og:description" content="Compare the risk and reward of a trade from its entry, stop loss and take profit, and find the win rate you need to break even.">
+<meta property="og:url" content="https://calcbundle.net/calculators/risk-reward-ratio-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Risk Reward Ratio Calculator - CalcBundle">
+<meta name="twitter:description" content="Compare the risk and reward of a trade from its entry, stop loss and take profit, and find the win rate you need to break even.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate risk to reward ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the distance from entry to take profit by the distance from entry to stop loss."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good risk to reward ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many traders look for at least 1 : 2, but the right ratio depends on how often your trades win."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What win rate do I need to break even?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is 1 ÷ (1 + R), where R is the reward divided by the risk. For 1 : 2 it is about 33%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is expected value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the average result per trade, in units of risk, if you repeat the same setup many times at a given win rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to enter the direction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. If the stop loss is below the entry it is a buy, and if it is above it is a sell. The take profit must be on the other side."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/crypto.html" style="color:inherit;text-decoration:none;">Crypto &amp; Forex</a>
+      <span>/</span>
+      <span class="current">Risk Reward Ratio Calculator</span>
+    </div>
+    <h1>Risk Reward Ratio Calculator</h1>
+    <p>Enter your entry, stop loss and take profit prices to see the risk to reward ratio and the win rate you need.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="rr-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="rr-entry">Entry Price</label>
+            <input type="number" id="rr-entry" value="1.085" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="rr-stop">Stop Loss Price</label>
+            <input type="number" id="rr-stop" value="1.08" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="rr-tp">Take Profit Price</label>
+            <input type="number" id="rr-tp" value="1.1" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="rr-amt">Amount Risked (optional)</label>
+            <input type="number" id="rr-amt" value="100" min="0" step="any" placeholder="Money you risk">
+          </div>
+          <div class="field-group">
+            <label for="rr-win">Your Win Rate (%, optional)</label>
+            <input type="number" id="rr-win" value="40" min="0" step="any" placeholder="For expected value">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="rr-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What the ratio is</h2>
+      <p>The risk to reward ratio compares what you stand to lose with what you stand to gain. The risk is the distance from your entry to your stop loss. The reward is the distance from your entry to your take profit. If you risk 50 pips to make 150 pips, the ratio is 1 : 3, and the winning trade pays three times what the losing trade costs.</p>
+
+      <h2>The win rate you need</h2>
+      <p>The ratio tells you how often you must win to break even. With a reward of R times the risk, you break even when your win rate is 1 ÷ (1 + R). At 1 : 3 that is 25%, so you could lose three of every four trades and still not lose money. At 1 : 1 you need to win half the time. The higher the ratio, the lower the win rate you need.</p>
+
+      <h2>Expected value</h2>
+      <p>If you enter your own win rate, the calculator shows the expected result of each trade in units of risk. It is the win rate times the reward ratio, minus the loss rate. A positive number means the setup should make money over many trades, if your win rate estimate is right. A good ratio does not help if the win rate is too low, and a high win rate does not help if the ratio is too small.</p>
+      <div class="callout">Forex trading with leverage carries a high risk of loss. This calculator does simple arithmetic and is not financial advice.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do you calculate risk to reward ratio?</h3>
+        <p>Divide the distance from entry to take profit by the distance from entry to stop loss.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a good risk to reward ratio?</h3>
+        <p>Many traders look for at least 1 : 2, but the right ratio depends on how often your trades win.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What win rate do I need to break even?</h3>
+        <p>It is 1 ÷ (1 + R), where R is the reward divided by the risk. For 1 : 2 it is about 33%.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is expected value?</h3>
+        <p>It is the average result per trade, in units of risk, if you repeat the same setup many times at a given win rate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need to enter the direction?</h3>
+        <p>No. If the stop loss is below the entry it is a buy, and if it is above it is a sell. The take profit must be on the other side.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Crypto &amp; Forex Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="stop-loss-and-take-profit-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Stop Loss and Take Profit Calculator</h3>
+        <p>Price levels and money at risk.</p>
+      </a>
+
+      <a class="calc-list-card" href="lot-size-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Lot Size Calculator</h3>
+        <p>Size a trade from your risk and stop loss.</p>
+      </a>
+
+      <a class="calc-list-card" href="forex-profit-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Forex Profit Calculator</h3>
+        <p>Profit or loss from entry and exit prices.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/trading-common.js"></script>
+<script src="../js/risk-reward-ratio-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

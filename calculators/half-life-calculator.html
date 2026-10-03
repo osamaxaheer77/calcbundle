@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Half-Life Calculator - CalcBundle</title>
+<meta name="description" content="Find the quantity remaining, the starting quantity, the time or the half-life of a decaying substance, and convert between half-life, mean lifetime and decay constant.">
+<link rel="canonical" href="https://calcbundle.net/calculators/half-life-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Half-Life Calculator - CalcBundle">
+<meta property="og:description" content="Find the quantity remaining, the starting quantity, the time or the half-life of a decaying substance, and convert between half-life, mean lifetime and decay constant.">
+<meta property="og:url" content="https://calcbundle.net/calculators/half-life-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Half-Life Calculator - CalcBundle">
+<meta name="twitter:description" content="Find the quantity remaining, the starting quantity, the time or the half-life of a decaying substance, and convert between half-life, mean lifetime and decay constant.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate half-life?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use t½ = t × ln 2 ÷ ln(N0 ÷ Nt), where N0 is the starting amount, Nt is the amount left, and t is the time that passed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is left after 3 half-lives?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One eighth, or 12.5%, is left, because the amount is halved three times."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between half-life and mean lifetime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The half-life is the time for half of the atoms to decay. The mean lifetime is the average time an atom lasts, and it is about 1.44 times longer than the half-life."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the decay constant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the rate of decay, equal to ln 2 divided by the half-life. A larger decay constant means a shorter half-life."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the unit of time matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Time and half-life must be in the same unit. The result for time or half-life comes out in that unit, so use years, days or seconds as you prefer."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Half-Life Calculator</span>
+    </div>
+    <h1>Half-Life Calculator</h1>
+    <p>Give any three of remaining quantity, starting quantity, time and half-life to find the fourth, or convert between half-life, mean lifetime and decay constant.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Half-Life Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Fill in three of the four boxes and leave the one you want to find empty.</p>
+    <form id="hl-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="hl-nt">Quantity Remaining (N<sub>t</sub>)</label>
+            <input type="number" id="hl-nt" value="10" step="any">
+          </div>
+          <div class="field-group">
+            <label for="hl-n0">Initial Quantity (N<sub>0</sub>)</label>
+            <input type="number" id="hl-n0" value="100" step="any">
+          </div>
+          <div class="field-group">
+            <label for="hl-t">Time (t)</label>
+            <input type="number" id="hl-t" value="50" step="any">
+          </div>
+          <div class="field-group">
+            <label for="hl-t12">Half-Life (t<sub>1/2</sub>)</label>
+            <input type="number" id="hl-t12" value="" step="any" placeholder="Leave empty to calculate">
+          </div>
+          <p style="font-size:12px;color:var(--text-secondary);margin:0 0 12px;">Time and half-life must use the same unit, and the quantities the same unit as each other.</p>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+          <button type="button" id="hl-clear" class="calc-submit-btn" style="margin-top:10px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Clear</button>
+        </div>
+        <div class="mortgage-results-card" id="hl-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Half-Life, Mean Lifetime and Decay Constant</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Give any one of the three to get the other two.</p>
+    <form id="hc-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="hc-half">Half-Life (t<sub>1/2</sub>)</label>
+            <input type="number" id="hc-half" value="" step="any">
+          </div>
+          <div class="field-group">
+            <label for="hc-mean">Mean Lifetime (τ)</label>
+            <input type="number" id="hc-mean" value="" step="any">
+          </div>
+          <div class="field-group">
+            <label for="hc-lambda">Decay Constant (λ)</label>
+            <input type="number" id="hc-lambda" value="" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="hc-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What a half-life is</h2>
+      <p>The half-life of a substance is the time it takes for half of it to decay. After one half-life, 50% is left. After two, 25% is left, after three 12.5%, and so on, halving each time. The idea is most often used for radioactive atoms, such as carbon-14, which has a half-life of about 5,730 years, but it fits any process of exponential decay, including some medicines leaving the body.</p>
+
+      <h2>The formula</h2>
+      <p>The quantity left after a time t is the starting quantity multiplied by one half raised to the power t divided by the half-life: N(t) = N0 × (1/2)^(t / t½). The calculator rearranges this to find whichever of the four values you leave out. To find the half-life from the other three, it uses t½ = t × ln 2 ÷ ln(N0 ÷ Nt). The remaining quantity must be smaller than the starting quantity and bigger than zero, because a decaying substance never grows and never quite reaches zero.</p>
+
+      <h2>Mean lifetime and decay constant</h2>
+      <p>Two other numbers describe the same decay. The decay constant λ is the fraction of the substance that decays per unit of time, and equals ln 2 ÷ t½. The mean lifetime τ is the average time an atom survives, and equals 1 ÷ λ, which is t½ ÷ ln 2, about 1.44 times the half-life. The second calculator converts between all three, so you only need to know one.</p>
+      <div class="callout">Half-life describes the average behavior of a very large number of atoms. It cannot tell you when one particular atom will decay.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do you calculate half-life?</h3>
+        <p>Use t½ = t × ln 2 ÷ ln(N0 ÷ Nt), where N0 is the starting amount, Nt is the amount left, and t is the time that passed.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much is left after 3 half-lives?</h3>
+        <p>One eighth, or 12.5%, is left, because the amount is halved three times.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between half-life and mean lifetime?</h3>
+        <p>The half-life is the time for half of the atoms to decay. The mean lifetime is the average time an atom lasts, and it is about 1.44 times longer than the half-life.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the decay constant?</h3>
+        <p>It is the rate of decay, equal to ln 2 divided by the half-life. A larger decay constant means a shorter half-life.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the unit of time matter?</h3>
+        <p>Time and half-life must be in the same unit. The result for time or half-life comes out in that unit, so use years, days or seconds as you prefer.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="exponent-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Exponent Calculator</h3>
+        <p>Solve for the base, exponent or result.</p>
+      </a>
+
+      <a class="calc-list-card" href="log-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Log Calculator</h3>
+        <p>Work out logarithms with any base.</p>
+      </a>
+
+      <a class="calc-list-card" href="percentage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Percentage Calculator</h3>
+        <p>Work out percentages and percentage change.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/half-life-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

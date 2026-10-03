@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Root Calculator - CalcBundle</title>
+<meta name="description" content="Find the square root, cube root or any nth root of a number, with the simplified radical form and a check of the answer.">
+<link rel="canonical" href="https://calcbundle.net/calculators/root-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Root Calculator - CalcBundle">
+<meta property="og:description" content="Find the square root, cube root or any nth root of a number, with the simplified radical form and a check of the answer.">
+<meta property="og:url" content="https://calcbundle.net/calculators/root-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Root Calculator - CalcBundle">
+<meta name="twitter:description" content="Find the square root, cube root or any nth root of a number, with the simplified radical form and a check of the answer.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you find a square root?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Find the number that gives the original when multiplied by itself. For perfect squares, such as 16 or 81, this is a whole number. Others, such as 50, give a long decimal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you take the square root of a negative number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in real numbers. The result is an imaginary number written with i. The square root of −9 is 3i."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a cube root?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the number that gives the original when multiplied by itself three times. The cube root of 64 is 4 because 4 × 4 × 4 is 64."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you calculate the nth root of a number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Raise the number to the power 1 ÷ n. The 4th root of 16 is 16 to the power 0.25, which is 2."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you simplify a square root?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Split the number into a perfect square times another number, then take the root of the perfect square out. For 72, which is 36 × 2, the square root is 6 times the square root of 2."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Root Calculator</span>
+    </div>
+    <h1>Root Calculator</h1>
+    <p>Find the square root, cube root or any other root of a number, with the exact simplified form when there is one.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Square Root Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Find √x for a number x.</p>
+    <form id="sq-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="sq-in">Number (x)</label>
+            <input type="number" id="sq-in" value="50" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="sq-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Cube Root Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Find ∛x for a number x. Negative numbers have a real cube root.</p>
+    <form id="cb-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="cb-in">Number (x)</label>
+            <input type="number" id="cb-in" value="27" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="cb-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">General Root Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Find the nth root of a number, ⁿ√x.</p>
+    <form id="gn-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-row">
+            <div class="field-group">
+              <label for="gn-n">Root (n)</label>
+              <input type="number" id="gn-n" value="4" step="any">
+            </div>
+            <div class="field-group">
+              <label for="gn-x">Number (x)</label>
+              <input type="number" id="gn-x" value="16" step="any">
+            </div>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="gn-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What a root is</h2>
+      <p>The nth root of a number a is the number b that gives a when it is multiplied by itself n times, so bⁿ = a. The square root, where n is 2, is the number that gives the original when squared, so the square root of 16 is 4. The cube root, where n is 3, is the number that gives it when cubed, so the cube root of 27 is 3. Roots are the opposite of powers, and a root can also be written as a fractional exponent: the nth root of a is a to the power 1 ÷ n.</p>
+
+      <h2>Negative numbers</h2>
+      <p>A positive number has a positive and a negative square root, for example both 4 and −4 square to 16, and the calculator shows the positive one, called the principal root. The square root of a negative number is not a real number. It is written with the imaginary unit i, so the square root of −4 is 2i. Odd roots, such as the cube root, do exist for negative numbers: the cube root of −8 is −2. Even roots of negative numbers have no real answer.</p>
+
+      <h2>Simplified radical form</h2>
+      <p>Many roots are not whole numbers, and their decimals go on forever. When the number under the root has a factor that is a perfect power, it can be taken out, which gives a neat exact answer. The square root of 50 equals 5 times the square root of 2, because 50 is 25 × 2 and 25 is a perfect square. The calculator shows this exact form where it applies, along with a decimal value rounded to about 13 decimal places.</p>
+      <div class="callout">Decimal roots are rounded and can be slightly off in the last digit. The check line shows the root raised to the power n, which should return the original number.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do you find a square root?</h3>
+        <p>Find the number that gives the original when multiplied by itself. For perfect squares, such as 16 or 81, this is a whole number. Others, such as 50, give a long decimal.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can you take the square root of a negative number?</h3>
+        <p>Not in real numbers. The result is an imaginary number written with i. The square root of −9 is 3i.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a cube root?</h3>
+        <p>It is the number that gives the original when multiplied by itself three times. The cube root of 64 is 4 because 4 × 4 × 4 is 64.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do you calculate the nth root of a number?</h3>
+        <p>Raise the number to the power 1 ÷ n. The 4th root of 16 is 16 to the power 0.25, which is 2.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do you simplify a square root?</h3>
+        <p>Split the number into a perfect square times another number, then take the root of the perfect square out. For 72, which is 36 × 2, the square root is 6 times the square root of 2.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="exponent-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Exponent Calculator</h3>
+        <p>Solve for the base, exponent or result.</p>
+      </a>
+
+      <a class="calc-list-card" href="log-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Log Calculator</h3>
+        <p>Work out logarithms with any base.</p>
+      </a>
+
+      <a class="calc-list-card" href="pythagorean-theorem-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pythagorean Theorem Calculator</h3>
+        <p>Find the missing side of a right triangle.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/root-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

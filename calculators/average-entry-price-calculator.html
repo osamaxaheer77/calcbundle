@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Average Entry Price Calculator - CalcBundle</title>
+<meta name="description" content="Find your average entry price and total cost when you buy or add to a position several times, with optional profit and loss at the current price.">
+<link rel="canonical" href="https://calcbundle.net/calculators/average-entry-price-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Average Entry Price Calculator - CalcBundle">
+<meta property="og:description" content="Find your average entry price and total cost when you buy or add to a position several times, with optional profit and loss at the current price.">
+<meta property="og:url" content="https://calcbundle.net/calculators/average-entry-price-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Average Entry Price Calculator - CalcBundle">
+<meta name="twitter:description" content="Find your average entry price and total cost when you buy or add to a position several times, with optional profit and loss at the current price.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate average entry price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add up the cost of every buy, which is price times quantity, and divide by the total quantity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does averaging down always help?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It lowers your average price, but it also increases your risk, since you hold more of an asset that is falling. It does not change the value of what you hold."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this for futures positions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. When you add to a position in the same direction, the exchange also shows an average entry price worked out the same way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many positions can I add?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can add up to 20 entries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do fees change the average price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fees raise your real cost. To include them, add the fee to each price, or enter a small extra position for the fee."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/crypto.html" style="color:inherit;text-decoration:none;">Crypto &amp; Forex</a>
+      <span>/</span>
+      <span class="current">Average Entry Price Calculator</span>
+    </div>
+    <h1>Average Entry Price Calculator</h1>
+    <p>Enter each buy price and quantity to see your average entry price, total size and total cost.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="av-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div id="av-rows"></div>
+          <button type="button" id="av-add" class="calc-submit-btn" style="margin:6px 0 12px;background:transparent;color:var(--text-primary);border:1px solid var(--border);">+ Add position</button>
+          <div class="field-group">
+            <label for="av-cur">Current Price (USDT, optional)</label>
+            <input type="number" id="av-cur" value="" min="0" step="any" placeholder="To see profit or loss">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="av-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What the average entry price is</h2>
+      <p>When you buy the same asset several times at different prices, your average entry price is the single price that gives the same total cost for the same total quantity. It is the total amount spent divided by the total quantity bought. If you buy 1 coin at 100 and 1 coin at 80, your average price is 90, even though you never paid 90.</p>
+
+      <h2>Averaging down and up</h2>
+      <p>Adding to a position after the price falls is called averaging down, and it lowers your average entry, so you need a smaller rebound to break even. Adding after the price rises is averaging up, and it raises your average. The calculator handles both, and lets you add as many buys as you need. It works the same for futures positions on one side and for spot buys.</p>
+
+      <h2>Profit and loss at the current price</h2>
+      <p>Enter the current price and the calculator shows the value of the whole position, the profit or loss compared with your total cost, and the return as a percentage. This is the unrealized result you would lock in by selling everything at that price, before any fees.</p>
+      <div class="callout">The average is a weighted average, so larger buys count for more. Fees are not included. Add them to each price if you want your true cost basis.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate average entry price?</h3>
+        <p>Add up the cost of every buy, which is price times quantity, and divide by the total quantity.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does averaging down always help?</h3>
+        <p>It lowers your average price, but it also increases your risk, since you hold more of an asset that is falling. It does not change the value of what you hold.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use this for futures positions?</h3>
+        <p>Yes. When you add to a position in the same direction, the exchange also shows an average entry price worked out the same way.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many positions can I add?</h3>
+        <p>You can add up to 20 entries.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do fees change the average price?</h3>
+        <p>Fees raise your real cost. To include them, add the fee to each price, or enter a small extra position for the fee.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Crypto &amp; Forex Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="futures-pnl-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Futures PNL Calculator</h3>
+        <p>Profit, loss and return on a futures trade.</p>
+      </a>
+
+      <a class="calc-list-card" href="position-size-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Position Size Calculator</h3>
+        <p>Size a trade from the amount you risk.</p>
+      </a>
+
+      <a class="calc-list-card" href="funding-fee-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Funding Fee Calculator</h3>
+        <p>What a perpetual position pays or earns in funding.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/trading-common.js"></script>
+<script src="../js/average-entry-price-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stop Loss and Take Profit Calculator - CalcBundle</title>
+<meta name="description" content="Find stop loss and take profit price levels from your entry, the distance in pips and your position size, with the money at risk and the money to gain.">
+<link rel="canonical" href="https://calcbundle.net/calculators/stop-loss-and-take-profit-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Stop Loss and Take Profit Calculator - CalcBundle">
+<meta property="og:description" content="Find stop loss and take profit price levels from your entry, the distance in pips and your position size, with the money at risk and the money to gain.">
+<meta property="og:url" content="https://calcbundle.net/calculators/stop-loss-and-take-profit-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Stop Loss and Take Profit Calculator - CalcBundle">
+<meta name="twitter:description" content="Find stop loss and take profit price levels from your entry, the distance in pips and your position size, with the money at risk and the money to gain.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate a stop loss price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a buy, subtract the stop distance in pips times the pip size from the entry price. For a sell, add it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate a take profit price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a buy, add the target distance times the pip size to the entry price. For a sell, subtract it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good stop loss in pips?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the pair and the time frame. Many traders base it on recent volatility rather than a fixed number of pips."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the risk to reward ratio here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the take profit distance divided by the stop loss distance. A 30 pip stop and 60 pip target is 1 : 2."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do spreads affect the levels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A buy closes at the bid price and a sell at the ask, so the spread can trigger a stop slightly earlier than the chart suggests."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/crypto.html" style="color:inherit;text-decoration:none;">Crypto &amp; Forex</a>
+      <span>/</span>
+      <span class="current">Stop Loss and Take Profit Calculator</span>
+    </div>
+    <h1>Stop Loss and Take Profit Calculator</h1>
+    <p>Enter your entry price and the stop loss and take profit distances in pips to get the price levels and what each is worth.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="sl-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-row">
+            <div class="field-group"><label for="sl-base">Base Currency</label><select id="sl-base" class="unit-select"></select></div>
+            <div class="field-group"><label for="sl-quote">Quote Currency</label><select id="sl-quote" class="unit-select"></select></div>
+          </div>
+          <div class="field-group"><label for="sl-acct">Account Currency</label><select id="sl-acct" class="unit-select"></select></div>
+          <div class="field-group">
+            <label for="sl-price">Entry Price</label>
+            <input type="number" id="sl-price" value="" min="0" step="any" placeholder="Loading…">
+          </div>
+          <div class="field-group">
+            <label>Direction</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="sl-dir" value="buy" checked>Buy (long)</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="sl-dir" value="sell">Sell (short)</label>
+            </div>
+          </div>
+          <div class="field-row">
+          <div class="field-group">
+            <label for="sl-size">Position Size</label>
+            <input type="number" id="sl-size" value="0.1" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="sl-unit">Size In</label>
+            <select id="sl-unit" class="unit-select"><option value="lot" selected>Standard lots (100,000)</option><option value="mini">Mini lots (10,000)</option><option value="micro">Micro lots (1,000)</option><option value="units">Units</option></select>
+          </div>
+          </div>
+          <div class="field-group">
+            <label for="sl-slp">Stop Loss (pips)</label>
+            <input type="number" id="sl-slp" value="30" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="sl-tpp">Take Profit (pips)</label>
+            <input type="number" id="sl-tpp" value="60" min="0" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+          <p id="sl-fxnote" style="font-size:12px;color:var(--text-secondary);margin:12px 0 0;">Loading exchange rates…</p>
+        </div>
+        <div class="mortgage-results-card" id="sl-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Placing the exits</h2>
+      <p>A stop loss closes a trade at a loss you have chosen, and a take profit closes it at a gain you have chosen. Setting both before you enter takes emotion out of the trade. For a buy, the stop loss is below the entry price and the take profit is above it. For a sell, they are the other way round. The calculator turns the distances you enter in pips into price levels.</p>
+
+      <h2>Money at risk and reward</h2>
+      <p>Each distance in pips is multiplied by the value of a pip for your position size to give the money at risk and the money to gain, in your account currency. Comparing the two gives the risk to reward ratio. For example, a 30 pip stop and a 60 pip target is 1 : 2, so the possible gain is twice the possible loss.</p>
+
+      <h2>Choosing distances</h2>
+      <p>There is no single right distance. Many traders place the stop beyond a recent swing high or low, or a multiple of the average daily range, and set the target at least as far as the stop. A very tight stop is easily hit by normal noise, and a very wide one needs a smaller position to keep the risk the same. Use the lot size calculator to find the position for a given risk.</p>
+      <div class="callout">Forex trading with leverage carries a high risk of loss. This calculator does simple arithmetic and is not financial advice. Exchange rates are loaded from a public service and are mid-market rates, so the price your broker shows will differ slightly.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate a stop loss price?</h3>
+        <p>For a buy, subtract the stop distance in pips times the pip size from the entry price. For a sell, add it.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I calculate a take profit price?</h3>
+        <p>For a buy, add the target distance times the pip size to the entry price. For a sell, subtract it.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a good stop loss in pips?</h3>
+        <p>It depends on the pair and the time frame. Many traders base it on recent volatility rather than a fixed number of pips.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the risk to reward ratio here?</h3>
+        <p>It is the take profit distance divided by the stop loss distance. A 30 pip stop and 60 pip target is 1 : 2.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do spreads affect the levels?</h3>
+        <p>Yes. A buy closes at the bid price and a sell at the ask, so the spread can trigger a stop slightly earlier than the chart suggests.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Crypto &amp; Forex Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="risk-reward-ratio-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Risk Reward Ratio Calculator</h3>
+        <p>Compare risk and reward, and the win rate you need.</p>
+      </a>
+
+      <a class="calc-list-card" href="lot-size-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Lot Size Calculator</h3>
+        <p>Size a trade from your risk and stop loss.</p>
+      </a>
+
+      <a class="calc-list-card" href="pip-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pip Calculator</h3>
+        <p>The value of a pip for your pair and position.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/trading-common.js"></script>
+<script src="../js/forex-common.js"></script>
+<script src="../js/stop-loss-and-take-profit-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

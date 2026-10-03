@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Futures Target Price Calculator - CalcBundle</title>
+<meta name="description" content="Find the price a long or short futures position must reach to hit a target return on margin, from entry price, leverage and target ROI.">
+<link rel="canonical" href="https://calcbundle.net/calculators/futures-target-price-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Futures Target Price Calculator - CalcBundle">
+<meta property="og:description" content="Find the price a long or short futures position must reach to hit a target return on margin, from entry price, leverage and target ROI.">
+<meta property="og:url" content="https://calcbundle.net/calculators/futures-target-price-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Futures Target Price Calculator - CalcBundle">
+<meta name="twitter:description" content="Find the price a long or short futures position must reach to hit a target return on margin, from entry price, leverage and target ROI.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I find a take-profit price for a futures trade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the return you want by your leverage to get the price move, then add it to a long entry or subtract it from a short entry."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far does the price have to move for 100% ROI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 10x leverage it takes a 10% move, at 20x a 5% move, and at 50x a 2% move."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a negative ROI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A negative ROI gives the price at which the trade shows that loss, which is useful for planning stop losses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator include fees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It finds the price for a plain return on margin, before any trading or funding fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a short have a lower target price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A short profits when the price falls, so the target price is below the entry price."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/crypto.html" style="color:inherit;text-decoration:none;">Crypto &amp; Forex</a>
+      <span>/</span>
+      <span class="current">Futures Target Price Calculator</span>
+    </div>
+    <h1>Futures Target Price Calculator</h1>
+    <p>Enter your entry price, leverage and the return you want to find the exit price that gets you there.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ft-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Position</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="ft-side" value="long" checked>Long</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="ft-side" value="short">Short</label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="ft-lev">Leverage (x)</label>
+            <input type="number" id="ft-lev" value="20" min="1" step="any">
+          </div>
+          <div class="field-group">
+            <label for="ft-entry">Entry Price (USDT)</label>
+            <input type="number" id="ft-entry" value="60000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="ft-roi">Target ROI (%)</label>
+            <input type="number" id="ft-roi" value="50" min="-10000" step="any">
+          </div>
+          <div class="field-group">
+            <label for="ft-qty">Quantity (coins, optional)</label>
+            <input type="number" id="ft-qty" value="" min="0" step="any" placeholder="To see the profit in USDT">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="ft-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">From a return to a price</h2>
+      <p>Return on margin equals the price move as a percentage of the entry price, multiplied by the leverage. So the price move you need is the target ROI divided by the leverage. For a long position, the target price is the entry price times one plus that move. For a short position it is the entry price times one minus that move. At 20x, a 50% return needs a 2.5% move in your favor.</p>
+
+      <h2>Using negative targets</h2>
+      <p>Enter a negative ROI to find the price at which you would be down by that amount. This works as a rough stop-loss level, so you can see the price where a trade loses 25% of its margin. Keep in mind that losing 100% of the margin means liquidation, which in practice happens a little earlier because of maintenance margin requirements.</p>
+
+      <h2>Quantity and profit</h2>
+      <p>If you also enter a quantity, the calculator shows the profit or loss in USDT at the target price, and the margin you would need. The table shows target prices for a range of returns, so you can set several take-profit levels at once.</p>
+      <div class="callout">Futures trading with leverage carries a high risk of loss. This calculator does simple arithmetic and is not financial advice.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I find a take-profit price for a futures trade?</h3>
+        <p>Divide the return you want by your leverage to get the price move, then add it to a long entry or subtract it from a short entry.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How far does the price have to move for 100% ROI?</h3>
+        <p>At 10x leverage it takes a 10% move, at 20x a 5% move, and at 50x a 2% move.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use a negative ROI?</h3>
+        <p>Yes. A negative ROI gives the price at which the trade shows that loss, which is useful for planning stop losses.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the calculator include fees?</h3>
+        <p>No. It finds the price for a plain return on margin, before any trading or funding fees.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does a short have a lower target price?</h3>
+        <p>A short profits when the price falls, so the target price is below the entry price.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Crypto &amp; Forex Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="futures-pnl-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Futures PNL Calculator</h3>
+        <p>Profit, loss and return on a futures trade.</p>
+      </a>
+
+      <a class="calc-list-card" href="liquidation-price-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Liquidation Price Calculator</h3>
+        <p>Where a leveraged position gets liquidated.</p>
+      </a>
+
+      <a class="calc-list-card" href="position-size-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Position Size Calculator</h3>
+        <p>Size a trade from the amount you risk.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/trading-common.js"></script>
+<script src="../js/futures-target-price-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

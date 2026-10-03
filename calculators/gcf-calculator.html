@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greatest Common Factor Calculator - CalcBundle</title>
+<meta name="description" content="Find the greatest common factor (GCF) of two or more whole numbers, with the prime factorization steps shown.">
+<link rel="canonical" href="https://calcbundle.net/calculators/gcf-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Greatest Common Factor Calculator - CalcBundle">
+<meta property="og:description" content="Find the greatest common factor (GCF) of two or more whole numbers, with the prime factorization steps shown.">
+<meta property="og:url" content="https://calcbundle.net/calculators/gcf-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Greatest Common Factor Calculator - CalcBundle">
+<meta name="twitter:description" content="Find the greatest common factor (GCF) of two or more whole numbers, with the prime factorization steps shown.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you find the greatest common factor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "List the factors of each number and choose the biggest one they share, or multiply the shared prime factors from their prime factorizations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the GCF of two prime numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is 1, because two different primes share no factor other than 1."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the GCF of 12 and 18?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is 6. The factors of 12 are 1, 2, 3, 4, 6, 12 and the factors of 18 are 1, 2, 3, 6, 9, 18, and the biggest in common is 6."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is GCF the same as GCD or HCF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Greatest common factor, greatest common divisor and highest common factor all name the same value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the GCF used for fractions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the top and bottom of a fraction by their GCF to reduce it to lowest terms. For 12/18 the GCF is 6, so the fraction is 2/3."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Greatest Common Factor Calculator</span>
+    </div>
+    <h1>Greatest Common Factor Calculator</h1>
+    <p>Enter two or more whole numbers to find the largest number that divides all of them, with the steps shown.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="gc-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="gc-in">Numbers</label>
+            <textarea id="gc-in" rows="4" style="width:100%;font:inherit;padding:10px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--text-primary);">330, 75, 450, 225</textarea>
+          </div>
+          <p style="font-size:12px;color:var(--text-secondary);margin:0 0 12px;">Separate the numbers with commas or spaces. Use whole numbers above 0.</p>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="gc-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What the GCF is</h2>
+      <p>The greatest common factor, also called the greatest common divisor or highest common factor, is the largest whole number that divides every number in a set with no remainder. The GCF of 12 and 18 is 6, because 6 is the biggest number that goes into both. Finding the GCF is how you reduce a fraction to its lowest terms and how you split things into equal groups with nothing left over.</p>
+
+      <h2>Prime factorization method</h2>
+      <p>Write each number as a product of primes, then multiply the primes they all share, each taken to the lowest power that appears. For 12, 18 and 24, the factorizations are 2 × 2 × 3, 2 × 3 × 3 and 2 × 2 × 2 × 3. Every number has one 2 and one 3 in common, so the GCF is 2 × 3, which is 6. If the numbers share no prime factor, the GCF is 1, and the numbers are called coprime.</p>
+
+      <h2>The Euclidean algorithm</h2>
+      <p>For big numbers, the Euclidean algorithm is much faster than factoring. Divide the larger number by the smaller, replace the larger with the remainder, and repeat until the remainder is 0. The last non-zero number is the GCF. This calculator uses it for numbers of any size, and shows the prime factorization steps when the numbers are up to about 10 trillion.</p>
+      <div class="callout">The calculator works with whole numbers above 0. The prime factorization steps are shown only for numbers up to about 10 trillion, though the GCF itself is always exact.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do you find the greatest common factor?</h3>
+        <p>List the factors of each number and choose the biggest one they share, or multiply the shared prime factors from their prime factorizations.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the GCF of two prime numbers?</h3>
+        <p>It is 1, because two different primes share no factor other than 1.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the GCF of 12 and 18?</h3>
+        <p>It is 6. The factors of 12 are 1, 2, 3, 4, 6, 12 and the factors of 18 are 1, 2, 3, 6, 9, 18, and the biggest in common is 6.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is GCF the same as GCD or HCF?</h3>
+        <p>Yes. Greatest common factor, greatest common divisor and highest common factor all name the same value.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is the GCF used for fractions?</h3>
+        <p>Divide the top and bottom of a fraction by their GCF to reduce it to lowest terms. For 12/18 the GCF is 6, so the fraction is 2/3.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="lcm-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>LCM Calculator</h3>
+        <p>Find the least common multiple of numbers.</p>
+      </a>
+
+      <a class="calc-list-card" href="factor-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Factor Calculator</h3>
+        <p>List the factors and prime factors of a number.</p>
+      </a>
+
+      <a class="calc-list-card" href="ratio-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Ratio Calculator</h3>
+        <p>Solve a proportion or scale a ratio.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/int-math.js"></script>
+<script src="../js/gcf-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

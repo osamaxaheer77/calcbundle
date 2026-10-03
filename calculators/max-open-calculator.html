@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Open Calculator - CalcBundle</title>
+<meta name="description" content="Find the largest long or short futures position you can open with your balance and leverage, in coins and in USDT.">
+<link rel="canonical" href="https://calcbundle.net/calculators/max-open-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Max Open Calculator - CalcBundle">
+<meta property="og:description" content="Find the largest long or short futures position you can open with your balance and leverage, in coins and in USDT.">
+<meta property="og:url" content="https://calcbundle.net/calculators/max-open-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Max Open Calculator - CalcBundle">
+<meta name="twitter:description" content="Find the largest long or short futures position you can open with your balance and leverage, in coins and in USDT.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate the maximum position size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply your available balance by the leverage to get the position value, then divide by the entry price to get the quantity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it matter if I go long or short?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The size is the same either way. The side only affects where the position would be liquidated."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I open the maximum position?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually not. A position that uses all your margin sits very close to liquidation, so a small move against you can wipe out the margin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the fee reserve reduce the size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The opening fee is paid from the same balance as the margin, so a little less is left for margin."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are exchange leverage limits included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Exchanges may restrict the leverage for large positions, so the real maximum can be lower."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/crypto.html" style="color:inherit;text-decoration:none;">Crypto &amp; Forex</a>
+      <span>/</span>
+      <span class="current">Max Open Calculator</span>
+    </div>
+    <h1>Max Open Calculator</h1>
+    <p>Enter your balance, leverage and entry price to see the biggest position your margin allows.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="mo-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Position</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="mo-side" value="long" checked>Long</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="mo-side" value="short">Short</label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="mo-lev">Leverage (x)</label>
+            <input type="number" id="mo-lev" value="20" min="1" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mo-entry">Entry Price (USDT)</label>
+            <input type="number" id="mo-entry" value="60000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mo-bal">Available Balance (USDT)</label>
+            <input type="number" id="mo-bal" value="1000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="mo-fee">Opening Fee Reserve (%, optional)</label>
+            <input type="number" id="mo-fee" value="0" min="0" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="mo-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the maximum position is found</h2>
+      <p>Your margin limits the size of a leveraged position. The most you can open is your available balance multiplied by the leverage. With 1,000 USDT of margin at 20x, that is 20,000 USDT of position value. Dividing by the entry price turns the value into a quantity of coins, so at 60,000 USDT per coin the most you could open is about 0.3333 coins.</p>
+
+      <h2>Leaving room for fees</h2>
+      <p>An exchange takes the opening fee from your balance, so the margin you can use for the position is a little smaller than the whole balance. Enter the fee as a percentage of the position value, and the calculator solves for the largest position where the margin plus the fee equals your balance. Leave it at 0 for the simple result.</p>
+
+      <h2>Exchange limits</h2>
+      <p>Real exchanges also cap the position by leverage tier, so a high leverage may not be allowed for a large position. Open orders and other positions can use some of your margin too. Check the maximum shown in your trading app before placing an order, and remember that the biggest possible position is rarely the wisest one, since it sits very close to its liquidation price.</p>
+      <div class="callout">Futures trading with leverage carries a high risk of loss. This calculator does simple arithmetic and is not financial advice.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate the maximum position size?</h3>
+        <p>Multiply your available balance by the leverage to get the position value, then divide by the entry price to get the quantity.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it matter if I go long or short?</h3>
+        <p>The size is the same either way. The side only affects where the position would be liquidated.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I open the maximum position?</h3>
+        <p>Usually not. A position that uses all your margin sits very close to liquidation, so a small move against you can wipe out the margin.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the fee reserve reduce the size?</h3>
+        <p>The opening fee is paid from the same balance as the margin, so a little less is left for margin.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are exchange leverage limits included?</h3>
+        <p>No. Exchanges may restrict the leverage for large positions, so the real maximum can be lower.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Crypto &amp; Forex Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="liquidation-price-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Liquidation Price Calculator</h3>
+        <p>Where a leveraged position gets liquidated.</p>
+      </a>
+
+      <a class="calc-list-card" href="position-size-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Position Size Calculator</h3>
+        <p>Size a trade from the amount you risk.</p>
+      </a>
+
+      <a class="calc-list-card" href="futures-pnl-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Futures PNL Calculator</h3>
+        <p>Profit, loss and return on a futures trade.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/trading-common.js"></script>
+<script src="../js/max-open-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

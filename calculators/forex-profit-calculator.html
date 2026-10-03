@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forex Profit Calculator - CalcBundle</title>
+<meta name="description" content="Work out the profit or loss on a forex trade in pips and in your account currency, from the open price, close price and position size.">
+<link rel="canonical" href="https://calcbundle.net/calculators/forex-profit-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Forex Profit Calculator - CalcBundle">
+<meta property="og:description" content="Work out the profit or loss on a forex trade in pips and in your account currency, from the open price, close price and position size.">
+<meta property="og:url" content="https://calcbundle.net/calculators/forex-profit-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Forex Profit Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out the profit or loss on a forex trade in pips and in your account currency, from the open price, close price and position size.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate profit in forex?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the difference between the close and open prices by the position size in units, with the sign set by whether you bought or sold. Then convert to your account currency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many pips is a move of 0.0050?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "50 pips for most pairs, since a pip is 0.0001. For yen pairs a pip is 0.01, so 0.50 is 50 pips."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is 50 pips worth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On a standard lot of a pair quoted in US dollars, 50 pips is worth 500 USD. On a mini lot it is 50 USD and on a micro lot it is 5 USD."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this include the spread?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The spread and any commission are extra costs, so a real trade earns a little less."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between buy and sell here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A buy profits when the close price is above the open price. A sell profits when the close price is below it."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/crypto.html" style="color:inherit;text-decoration:none;">Crypto &amp; Forex</a>
+      <span>/</span>
+      <span class="current">Forex Profit Calculator</span>
+    </div>
+    <h1>Forex Profit Calculator</h1>
+    <p>Enter your open and close prices and position size to see the profit or loss in pips and in your account currency.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="fl-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-row">
+            <div class="field-group"><label for="fl-base">Base Currency</label><select id="fl-base" class="unit-select"></select></div>
+            <div class="field-group"><label for="fl-quote">Quote Currency</label><select id="fl-quote" class="unit-select"></select></div>
+          </div>
+          <div class="field-group"><label for="fl-acct">Account Currency</label><select id="fl-acct" class="unit-select"></select></div>
+          <div class="field-group">
+            <label>Direction</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="fl-dir" value="buy" checked>Buy (long)</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="fl-dir" value="sell">Sell (short)</label>
+            </div>
+          </div>
+          <div class="field-row">
+          <div class="field-group">
+            <label for="fl-size">Position Size</label>
+            <input type="number" id="fl-size" value="1" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="fl-unit">Size In</label>
+            <select id="fl-unit" class="unit-select"><option value="lot" selected>Standard lots (100,000)</option><option value="mini">Mini lots (10,000)</option><option value="micro">Micro lots (1,000)</option><option value="units">Units</option></select>
+          </div>
+          </div>
+          <div class="field-group">
+            <label for="fl-open">Open Price</label>
+            <input type="number" id="fl-open" value="1.08" min="0" step="any" placeholder="Open price">
+          </div>
+          <div class="field-group">
+            <label for="fl-price">Close Price</label>
+            <input type="number" id="fl-price" value="1.085" min="0" step="any" placeholder="Close price">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+          <p id="fl-fxnote" style="font-size:12px;color:var(--text-secondary);margin:12px 0 0;">Loading exchange rates…</p>
+        </div>
+        <div class="mortgage-results-card" id="fl-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the profit is calculated</h2>
+      <p>The result of a forex trade is the difference between the close price and the open price, multiplied by the position size in units. For a buy, you gain when the price rises. For a sell, you gain when it falls. The answer comes out in the quote currency of the pair, and the calculator converts it to your account currency at the current rate.</p>
+
+      <h2>Pips and money</h2>
+      <p>The pip result is the price move divided by the pip size, which is 0.0001 for most pairs and 0.01 for yen pairs. A move from 1.0800 to 1.0850 on EUR/USD is 50 pips. On a standard lot, with a pip worth 10 USD, that is a 500 USD profit for a buy. The calculator shows both, so you can compare trades in pips and in money.</p>
+
+      <h2>What is left out</h2>
+      <p>The calculator does not include spreads, commissions or swap charges for holding a position overnight. These reduce the real result. Check your broker’s costs, and remember that the price you actually get can differ from the price you see because of slippage in a fast market.</p>
+      <div class="callout">Forex trading with leverage carries a high risk of loss. This calculator does simple arithmetic and is not financial advice. Exchange rates are loaded from a public service and are mid-market rates, so the price your broker shows will differ slightly.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do you calculate profit in forex?</h3>
+        <p>Multiply the difference between the close and open prices by the position size in units, with the sign set by whether you bought or sold. Then convert to your account currency.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many pips is a move of 0.0050?</h3>
+        <p>50 pips for most pairs, since a pip is 0.0001. For yen pairs a pip is 0.01, so 0.50 is 50 pips.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much is 50 pips worth?</h3>
+        <p>On a standard lot of a pair quoted in US dollars, 50 pips is worth 500 USD. On a mini lot it is 50 USD and on a micro lot it is 5 USD.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this include the spread?</h3>
+        <p>No. The spread and any commission are extra costs, so a real trade earns a little less.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between buy and sell here?</h3>
+        <p>A buy profits when the close price is above the open price. A sell profits when the close price is below it.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Crypto &amp; Forex Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="pip-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pip Calculator</h3>
+        <p>The value of a pip for your pair and position.</p>
+      </a>
+
+      <a class="calc-list-card" href="stop-loss-and-take-profit-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Stop Loss and Take Profit Calculator</h3>
+        <p>Price levels and money at risk.</p>
+      </a>
+
+      <a class="calc-list-card" href="risk-reward-ratio-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Risk Reward Ratio Calculator</h3>
+        <p>Compare risk and reward, and the win rate you need.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/trading-common.js"></script>
+<script src="../js/forex-common.js"></script>
+<script src="../js/forex-profit-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

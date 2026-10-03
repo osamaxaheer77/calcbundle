@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Percent Error Calculator - CalcBundle</title>
+<meta name="description" content="Work out the percent error between an observed value and a true value, with the signed and absolute error and the steps shown.">
+<link rel="canonical" href="https://calcbundle.net/calculators/percent-error-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Percent Error Calculator - CalcBundle">
+<meta property="og:description" content="Work out the percent error between an observed value and a true value, with the signed and absolute error and the steps shown.">
+<meta property="og:url" content="https://calcbundle.net/calculators/percent-error-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Percent Error Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out the percent error between an observed value and a true value, with the signed and absolute error and the steps shown.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate percent error?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Take the observed value minus the true value, divide by the true value, and multiply by 100. Many classes use the absolute value of the result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can percent error be negative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, if you do not take the absolute value. A negative result means the observed value is smaller than a positive true value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good percent error?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A smaller one is better. Below about 5% is often seen as good in school labs, but what is acceptable depends on the experiment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the true value is zero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Percent error is undefined, since it would mean dividing by zero. Use the absolute error instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between percent error and percent difference?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Percent error compares a measurement with a known true value. Percent difference compares two values when neither is the true one."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Percent Error Calculator</span>
+    </div>
+    <h1>Percent Error Calculator</h1>
+    <p>Compare a measured value with the true value to see how far off it is as a percentage, with the working shown.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="pe-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="pe-obs">Observed Value</label>
+            <input type="number" id="pe-obs" value="10" step="any">
+          </div>
+          <div class="field-group">
+            <label for="pe-true">True Value</label>
+            <input type="number" id="pe-true" value="11" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="pe-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What percent error is</h2>
+      <p>Percent error shows how far a measured, or observed, value is from the true value, as a percentage of the true value. It is used in science classes and labs to judge how good a measurement is. A small percent error means the measurement is close to the accepted value, and a large one suggests a mistake in the method or the equipment.</p>
+
+      <h2>The formula</h2>
+      <p>Subtract the true value from the observed value, divide by the true value, and multiply by 100. The result is negative when the observed value is lower than the true value and positive when it is higher. Many textbooks take the absolute value so the error is always positive, since only the size of the error matters. The calculator shows both the signed error and the absolute error.</p>
+
+      <h2>A worked example</h2>
+      <p>Say you measure a length as 56.891 and the true length is 62.327. The difference is 56.891 minus 62.327, which is negative 5.436. Divide by 62.327 to get negative 0.0872, and multiply by 100 for a percent error of negative 8.72%. As an absolute value, the measurement is off by 8.72%. If the true value is zero, percent error cannot be worked out, because you cannot divide by zero.</p>
+      <div class="callout">Percent error assumes you know the true value. When it is unknown, scientists use the standard deviation of repeated measurements to describe the uncertainty instead.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do you calculate percent error?</h3>
+        <p>Take the observed value minus the true value, divide by the true value, and multiply by 100. Many classes use the absolute value of the result.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can percent error be negative?</h3>
+        <p>Yes, if you do not take the absolute value. A negative result means the observed value is smaller than a positive true value.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a good percent error?</h3>
+        <p>A smaller one is better. Below about 5% is often seen as good in school labs, but what is acceptable depends on the experiment.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if the true value is zero?</h3>
+        <p>Percent error is undefined, since it would mean dividing by zero. Use the absolute error instead.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between percent error and percent difference?</h3>
+        <p>Percent error compares a measurement with a known true value. Percent difference compares two values when neither is the true one.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="percentage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Percentage Calculator</h3>
+        <p>Work out percentages and percentage change.</p>
+      </a>
+
+      <a class="calc-list-card" href="mean-median-mode-range-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mean, Median, Mode Calculator</h3>
+        <p>Find the mean, median, mode and range of numbers.</p>
+      </a>
+
+      <a class="calc-list-card" href="exponent-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Exponent Calculator</h3>
+        <p>Solve for the base, exponent or result.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/percent-error-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

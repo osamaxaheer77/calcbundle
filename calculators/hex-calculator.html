@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hex Calculator - CalcBundle</title>
+<meta name="description" content="Add, subtract, multiply and divide hexadecimal numbers, and convert between hex and decimal, with the decimal working shown.">
+<link rel="canonical" href="https://calcbundle.net/calculators/hex-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Hex Calculator - CalcBundle">
+<meta property="og:description" content="Add, subtract, multiply and divide hexadecimal numbers, and convert between hex and decimal, with the decimal working shown.">
+<meta property="og:url" content="https://calcbundle.net/calculators/hex-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hex Calculator - CalcBundle">
+<meta name="twitter:description" content="Add, subtract, multiply and divide hexadecimal numbers, and convert between hex and decimal, with the decimal working shown.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you add hex numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add the digits column by column from the right, using decimal values for the letters. When a column reaches 16 or more, write the remainder and carry 1. For example, 8AB + B78 is 1423."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do the letters A to F mean in hex?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They stand for the values 10 to 15: A is 10, B is 11, C is 12, D is 13, E is 14, and F is 15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert hex to decimal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply each digit by 16 raised to its position, counting from 0 at the right, and add them up. DAD is 13 × 256 + 10 × 16 + 13, which is 3,501."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert decimal to hex?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the number by 16 repeatedly and keep the remainders, writing 10 to 15 as A to F. Reading the remainders from last to first gives the hex number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is hex used with binary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One hex digit equals exactly four binary digits, so a byte is two hex digits. It is a compact way to write binary values."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Hex Calculator</span>
+    </div>
+    <h1>Hex Calculator</h1>
+    <p>Add, subtract, multiply or divide two hexadecimal numbers, or convert a number between hex and decimal.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Hexadecimal Calculation</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Enter two hex numbers, using the digits 0 to 9 and the letters A to F, and pick an operation.</p>
+    <form id="hx-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="hx-a">First Hex Number</label>
+            <input type="text" id="hx-a" value="8AB" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="hx-op">Operation</label>
+            <select id="hx-op" class="unit-select"><option value="+">Add (+)</option><option value="-">Subtract (−)</option><option value="*">Multiply (×)</option><option value="/">Divide (÷)</option></select>
+          </div>
+          <div class="field-group">
+            <label for="hx-b">Second Hex Number</label>
+            <input type="text" id="hx-b" value="B78" autocomplete="off">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="hx-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Hex to Decimal</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Convert a hexadecimal number to a decimal number.</p>
+    <form id="h2d-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="h2d-in">Hexadecimal Value</label>
+            <input type="text" id="h2d-in" value="DAD" autocomplete="off">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="h2d-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Decimal to Hex</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Convert a whole decimal number to hexadecimal.</p>
+    <form id="d2h-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="d2h-in">Decimal Value</label>
+            <input type="text" id="d2h-in" value="170" autocomplete="off" inputmode="numeric">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="d2h-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card">
+      <h2 style="margin:0 0 16px;font-size:18px;">Hex, decimal and binary</h2>
+      <div class="schedule-table-wrap" style="max-height:none;overflow-x:auto;"><table class="schedule-table"><thead><tr><th>Decimal</th><th>Hex</th><th>Binary</th><th>Decimal</th><th>Hex</th><th>Binary</th></tr></thead><tbody>
+        <tr><td>0</td><td>0</td><td>0000</td><td>8</td><td>8</td><td>1000</td></tr><tr><td>1</td><td>1</td><td>0001</td><td>9</td><td>9</td><td>1001</td></tr>
+        <tr><td>2</td><td>2</td><td>0010</td><td>10</td><td>A</td><td>1010</td></tr><tr><td>3</td><td>3</td><td>0011</td><td>11</td><td>B</td><td>1011</td></tr>
+        <tr><td>4</td><td>4</td><td>0100</td><td>12</td><td>C</td><td>1100</td></tr><tr><td>5</td><td>5</td><td>0101</td><td>13</td><td>D</td><td>1101</td></tr>
+        <tr><td>6</td><td>6</td><td>0110</td><td>14</td><td>E</td><td>1110</td></tr><tr><td>7</td><td>7</td><td>0111</td><td>15</td><td>F</td><td>1111</td></tr>
+      </tbody></table></div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How hexadecimal works</h2>
+      <p>Hexadecimal, or hex, counts in base 16. It needs sixteen digits, so after 0 to 9 it uses the letters A to F for the values 10 to 15. Each place is worth sixteen times the one to its right. The hex number 2F is 2 × 16 plus 15, which is 47 in decimal. Hex is popular in computing because one hex digit stands for exactly four binary digits, so long binary numbers become short and easier to read.</p>
+
+      <h2>Where hex is used</h2>
+      <p>You meet hex in web colors such as #FF8800, where each pair of digits sets the red, green and blue amounts. It also appears in memory addresses, in MAC addresses, in character codes and in the byte values that programmers read when they debug. Two hex digits make up one byte, with values from 00 to FF, which is 0 to 255 in decimal.</p>
+
+      <h2>Using the calculators</h2>
+      <p>The first calculator adds, subtracts, multiplies and divides two hex numbers and shows the same sum in decimal so you can check it. Division gives a whole quotient and a remainder. The other two calculators convert in each direction. Letters can be typed in upper or lower case, results are shown in upper case, and negative whole numbers can be entered with a minus sign. The sums are exact for numbers of any size.</p>
+      <div class="callout">This calculator works with whole numbers. It shows negative numbers with a minus sign, and does not use the two’s complement form that computer hardware uses.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do you add hex numbers?</h3>
+        <p>Add the digits column by column from the right, using decimal values for the letters. When a column reaches 16 or more, write the remainder and carry 1. For example, 8AB + B78 is 1423.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What do the letters A to F mean in hex?</h3>
+        <p>They stand for the values 10 to 15: A is 10, B is 11, C is 12, D is 13, E is 14, and F is 15.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I convert hex to decimal?</h3>
+        <p>Multiply each digit by 16 raised to its position, counting from 0 at the right, and add them up. DAD is 13 × 256 + 10 × 16 + 13, which is 3,501.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I convert decimal to hex?</h3>
+        <p>Divide the number by 16 repeatedly and keep the remainders, writing 10 to 15 as A to F. Reading the remainders from last to first gives the hex number.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is hex used with binary?</h3>
+        <p>One hex digit equals exactly four binary digits, so a byte is two hex digits. It is a compact way to write binary values.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="binary-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Binary Calculator</h3>
+        <p>Calculate with binary numbers and convert to decimal.</p>
+      </a>
+
+      <a class="calc-list-card" href="ip-subnet-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>IP Subnet Calculator</h3>
+        <p>Work out subnet masks and address ranges.</p>
+      </a>
+
+      <a class="calc-list-card" href="roman-numeral-converter.html">
+        <span class="tag live">Live</span>
+        <h3>Roman Numeral Converter</h3>
+        <p>Convert between Roman numerals and numbers.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/hex-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

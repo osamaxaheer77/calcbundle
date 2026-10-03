@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lot Size Calculator - CalcBundle</title>
+<meta name="description" content="Work out the right forex lot size from your account balance, the percentage you risk, and your stop loss in pips.">
+<link rel="canonical" href="https://calcbundle.net/calculators/lot-size-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Lot Size Calculator - CalcBundle">
+<meta property="og:description" content="Work out the right forex lot size from your account balance, the percentage you risk, and your stop loss in pips.">
+<meta property="og:url" content="https://calcbundle.net/calculators/lot-size-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lot Size Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out the right forex lot size from your account balance, the percentage you risk, and your stop loss in pips.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate lot size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the amount you are willing to risk by the stop loss in pips times the pip value of one lot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What percentage should I risk per trade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many traders risk 1% to 2% of the account on a trade. Smaller risk helps the account survive a losing streak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does leverage change my lot size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not through this method. The size is set by your risk, not by leverage, though leverage decides how much margin the position uses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a micro lot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A micro lot is 1,000 units of the base currency, or 0.01 of a standard lot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I round up or down?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Round down, so the loss at your stop does not exceed the amount you planned to risk."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/crypto.html" style="color:inherit;text-decoration:none;">Crypto &amp; Forex</a>
+      <span>/</span>
+      <span class="current">Lot Size Calculator</span>
+    </div>
+    <h1>Lot Size Calculator</h1>
+    <p>Enter your balance, risk percentage and stop loss in pips to find the lot size that keeps your loss to the amount you chose.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ls-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-row">
+            <div class="field-group"><label for="ls-base">Base Currency</label><select id="ls-base" class="unit-select"></select></div>
+            <div class="field-group"><label for="ls-quote">Quote Currency</label><select id="ls-quote" class="unit-select"></select></div>
+          </div>
+          <div class="field-group"><label for="ls-acct">Account Currency</label><select id="ls-acct" class="unit-select"></select></div>
+          <div class="field-group">
+            <label for="ls-price">Current Price</label>
+            <input type="number" id="ls-price" value="" min="0" step="any" placeholder="Loading…">
+          </div>
+          <div class="field-group">
+            <label for="ls-bal">Account Balance (account currency)</label>
+            <input type="number" id="ls-bal" value="10000" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="ls-risk">Risk per Trade (%)</label>
+            <input type="number" id="ls-risk" value="1" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="ls-sl">Stop Loss (pips)</label>
+            <input type="number" id="ls-sl" value="50" min="0" step="any">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+          <p id="ls-fxnote" style="font-size:12px;color:var(--text-secondary);margin:12px 0 0;">Loading exchange rates…</p>
+        </div>
+        <div class="mortgage-results-card" id="ls-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Sizing a forex trade</h2>
+      <p>Most traders decide how much of the account they will risk on one trade, often 1% to 2%, and then set the position size so that a stop-loss exit costs exactly that amount. The risk amount is your balance times the risk percentage. The lot size is the risk amount divided by the stop loss in pips and by the value of one pip for one lot.</p>
+
+      <h2>An example</h2>
+      <p>With a 10,000 USD account risking 1%, you can lose 100 USD. If your stop loss is 50 pips away on EUR/USD, where a pip on one standard lot is worth 10 USD, a full lot would risk 500 USD. The right size is 100 ÷ 500, which is 0.20 lots, or two mini lots. The calculator shows the size in standard, mini and micro lots and in units.</p>
+
+      <h2>Rounding and limits</h2>
+      <p>Brokers allow only certain lot steps, often 0.01 lots, so round the result down to stay within your risk. Remember that the stop loss is not guaranteed in a fast market, and that spreads and slippage can add to the loss. The margin the position needs depends on your leverage, so check it with the margin calculator.</p>
+      <div class="callout">Forex trading with leverage carries a high risk of loss. This calculator does simple arithmetic and is not financial advice. Exchange rates are loaded from a public service and are mid-market rates, so the price your broker shows will differ slightly.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate lot size?</h3>
+        <p>Divide the amount you are willing to risk by the stop loss in pips times the pip value of one lot.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What percentage should I risk per trade?</h3>
+        <p>Many traders risk 1% to 2% of the account on a trade. Smaller risk helps the account survive a losing streak.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does leverage change my lot size?</h3>
+        <p>Not through this method. The size is set by your risk, not by leverage, though leverage decides how much margin the position uses.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a micro lot?</h3>
+        <p>A micro lot is 1,000 units of the base currency, or 0.01 of a standard lot.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I round up or down?</h3>
+        <p>Round down, so the loss at your stop does not exceed the amount you planned to risk.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Crypto &amp; Forex Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="pip-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pip Calculator</h3>
+        <p>The value of a pip for your pair and position.</p>
+      </a>
+
+      <a class="calc-list-card" href="forex-margin-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Forex Margin Calculator</h3>
+        <p>The margin a position needs at your leverage.</p>
+      </a>
+
+      <a class="calc-list-card" href="stop-loss-and-take-profit-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Stop Loss and Take Profit Calculator</h3>
+        <p>Price levels and money at risk.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/trading-common.js"></script>
+<script src="../js/forex-common.js"></script>
+<script src="../js/lot-size-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
