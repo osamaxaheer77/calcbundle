@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RMD Calculator - CalcBundle</title>
+<meta name="description" content="Work out your required minimum distribution from a traditional IRA or 401(k) using the IRS tables, and project your balance and future withdrawals.">
+<link rel="canonical" href="https://calcbundle.net/calculators/rmd-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="RMD Calculator - CalcBundle">
+<meta property="og:description" content="Work out your required minimum distribution from a traditional IRA or 401(k) using the IRS tables, and project your balance and future withdrawals.">
+<meta property="og:url" content="https://calcbundle.net/calculators/rmd-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RMD Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out your required minimum distribution from a traditional IRA or 401(k) using the IRS tables, and project your balance and future withdrawals.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a required minimum distribution?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A required minimum distribution, or RMD, is the smallest amount the IRS makes you withdraw each year from most tax-deferred retirement accounts once you reach a certain age. It is your account balance at the end of the previous year divided by a distribution period from an IRS table."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "At what age do RMDs start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Under the current rules, RMDs start at age 73 if you were born from 1951 through 1959, and at age 75 if you were born in 1960 or later. Your first RMD can be delayed until April 1 of the year after you reach that age, but then you must take two distributions in that year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which IRS table does the calculator use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most people use the Uniform Lifetime Table. If your spouse is your only beneficiary and is more than 10 years younger than you, the Joint Life and Last Survivor Expectancy Table applies instead, which gives a longer distribution period and a smaller required withdrawal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which accounts have RMDs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional, SEP and SIMPLE IRAs and most workplace plans such as 401(k), 403(b) and 457(b) plans have RMDs. Roth IRAs do not require withdrawals during the owner's lifetime. If you have several accounts, calculate each one separately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I miss an RMD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The IRS charges an excise tax on the amount you failed to withdraw. The rate is 25%, and it can fall to 10% if you correct the shortfall promptly. The penalty can sometimes be waived for a reasonable error."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">RMD Calculator</span>
+    </div>
+    <h1>RMD Calculator</h1>
+    <p>Find the minimum you must withdraw this year from a traditional IRA or workplace retirement plan, and see how your balance and withdrawals could run over time.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="rd-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rd-birth">Your Year of Birth</label>
+              <input type="number" id="rd-birth" value="1951" min="1900" step="any">
+            </div>
+            <div class="field-group">
+              <label for="rd-year">Year of RMD</label>
+              <select id="rd-year" class="unit-select"></select>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="rd-balance" id="rd-balance-label">Account Balance as of 12/31 ($)</label>
+            <input type="number" id="rd-balance" value="300000" min="0" step="any">
+          </div>
+
+          <div class="field-group">
+            <label>Is your spouse the sole beneficiary?</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="rd-spouse" value="y" checked>Yes</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="rd-spouse" value="n">No</label>
+            </div>
+          </div>
+
+          <div class="field-group" id="rd-spouse-field">
+            <label for="rd-spouse-birth">Your Spouse's Year of Birth</label>
+            <input type="number" id="rd-spouse-birth" value="1953" min="1900" step="any">
+          </div>
+
+          <div class="field-group">
+            <label for="rd-rate">Estimated Rate of Return (%/yr, optional)</label>
+            <input type="number" id="rd-rate" value="5" min="-20" max="30" step="any">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="rd-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="rd-results-section" hidden>
+      <h2 style="margin:0 0 8px;font-size:18px;">Projected Balance and Distributions</h2>
+      <p id="rd-intro" style="font-size:13px;color:var(--text-secondary);margin:0 0 16px;"></p>
+      <div id="rd-chart" style="margin-bottom:20px;"></div>
+      <div class="schedule-table-wrap">
+        <div id="rd-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What a required minimum distribution is</h2>
+      <p>Money in a traditional IRA or a workplace plan such as a 401(k) has not yet been taxed. The IRS does not let it sit there forever, so once you reach a set age it requires you to withdraw a minimum amount each year, and you pay income tax on what you take. That amount is your required minimum distribution, or RMD. You can always withdraw more, but never less.</p>
+
+      <h2>How the amount is worked out</h2>
+      <p>Take your account balance on December 31 of the previous year, then divide it by a distribution period from an IRS table that depends on your age. The older you are, the smaller the period and the larger the share of the account you must take. Most people use the Uniform Lifetime Table. If your spouse is your only beneficiary and is more than 10 years younger, the Joint Life and Last Survivor table applies, which gives a longer period and a smaller RMD. Both tables come from IRS Publication 590-B.</p>
+
+      <h2>When RMDs begin</h2>
+      <p>The starting age is 73 for people born from 1951 through 1959, and 75 for those born in 1960 or later. Your first RMD is for the year you reach that age, but you may wait until April 1 of the following year to take it. If you do, you must also take that second year's RMD by December 31, which means two taxable withdrawals in one year. After that, each year's RMD is due by December 31.</p>
+
+      <h2>The projection</h2>
+      <p>If you enter an expected return, the calculator assumes you take only the RMD each year, at year end, and that the rest of the balance grows at that rate. It runs from your current age up to 120 and shows the distribution period, withdrawal and remaining balance for every year. Leave the return blank to see just this year's RMD.</p>
+      <div class="callout">This is an estimate based on the standard IRS tables, not tax advice. It does not cover inherited accounts, which follow different rules, or special cases such as still working for the employer that sponsors your plan. Check your own account statements, and your plan or custodian, for the official figures.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is a required minimum distribution?</h3>
+        <p>A required minimum distribution, or RMD, is the smallest amount the IRS makes you withdraw each year from most tax-deferred retirement accounts once you reach a certain age. It is your account balance at the end of the previous year divided by a distribution period from an IRS table.</p>
+      </div>
+      <div class="faq-item">
+        <h3>At what age do RMDs start?</h3>
+        <p>Under the current rules, RMDs start at age 73 if you were born from 1951 through 1959, and at age 75 if you were born in 1960 or later. Your first RMD can be delayed until April 1 of the year after you reach that age, but then you must take two distributions in that year.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which IRS table does the calculator use?</h3>
+        <p>Most people use the Uniform Lifetime Table. If your spouse is your only beneficiary and is more than 10 years younger than you, the Joint Life and Last Survivor Expectancy Table applies instead, which gives a longer distribution period and a smaller required withdrawal.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which accounts have RMDs?</h3>
+        <p>Traditional, SEP and SIMPLE IRAs and most workplace plans such as 401(k), 403(b) and 457(b) plans have RMDs. Roth IRAs do not require withdrawals during the owner's lifetime. If you have several accounts, calculate each one separately.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens if I miss an RMD?</h3>
+        <p>The IRS charges an excise tax on the amount you failed to withdraw. The rate is 25%, and it can fall to 10% if you correct the shortfall promptly. The penalty can sometimes be waived for a reasonable error.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Retirement Calculators</h2>
+    <p class="section-sub">Pick another retirement tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="ira-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>IRA Calculator</h3>
+        <p>Compare Traditional and Roth IRAs with taxable savings.</p>
+      </a>
+
+      <a class="calc-list-card" href="401k-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>401K Calculator</h3>
+        <p>Project your 401(k) balance with employer match and the IRS limit.</p>
+      </a>
+
+      <a class="calc-list-card" href="social-security-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Social Security Calculator</h3>
+        <p>Find the best age to claim Social Security benefits.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/rmd-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

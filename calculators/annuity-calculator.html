@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annuity Calculator - CalcBundle</title>
+<meta name="description" content="Project how an annuity grows during its accumulation phase from a starting principal plus regular annual and monthly additions, with a year-by-year schedule.">
+<link rel="canonical" href="https://calcbundle.net/calculators/annuity-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Annuity Calculator - CalcBundle">
+<meta property="og:description" content="Project how an annuity grows during its accumulation phase from a starting principal plus regular annual and monthly additions, with a year-by-year schedule.">
+<meta property="og:url" content="https://calcbundle.net/calculators/annuity-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Annuity Calculator - CalcBundle">
+<meta name="twitter:description" content="Project how an annuity grows during its accumulation phase from a starting principal plus regular annual and monthly additions, with a year-by-year schedule.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the accumulation phase of an annuity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The accumulation phase is the period when you pay money into an annuity and it grows, before any income is paid out. This calculator covers that phase. The income phase, when the annuity starts paying you, is a separate calculation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between an annuity due and an ordinary annuity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An annuity due takes each addition at the beginning of its period, so it earns interest for the whole period. An ordinary annuity takes it at the end of the period, so it earns nothing until the next one. Adding at the beginning always gives a slightly larger balance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the growth rate applied?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The annual growth rate is converted to an equivalent monthly rate, so a 6% rate grows a balance by exactly 6% over twelve months. The calculator then adds interest to the balance every month, which also lets monthly additions earn their fair share of growth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it for a fixed, variable or indexed annuity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, as an estimate. Enter the rate your contract credits, or the return you expect for a variable annuity. Remember that real annuities can charge fees, surrender charges and caps that this calculator does not include, and a variable annuity's actual return will vary."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Annuity Calculator</span>
+    </div>
+    <h1>Annuity Calculator</h1>
+    <p>See how an annuity grows while you pay into it: a starting principal, regular additions and a growth rate, with a year-by-year and month-by-month schedule.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="an-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="an-principal">Starting Principal ($)</label>
+            <input type="number" id="an-principal" value="20000" min="0" step="any">
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="an-annual">Annual Addition ($)</label>
+              <input type="number" id="an-annual" value="10000" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="an-monthly">Monthly Addition ($)</label>
+              <input type="number" id="an-monthly" value="0" min="0" step="any">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Add at Each Period's</label>
+            <div>
+              <label class="radio-option" style="display:flex;margin-bottom:6px;"><input type="radio" name="an-timing" value="beginning" checked>Beginning (annuity due)</label>
+              <label class="radio-option" style="display:flex;"><input type="radio" name="an-timing" value="end">End (ordinary annuity)</label>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="an-rate">Annual Growth Rate (%)</label>
+              <input type="number" id="an-rate" value="6" min="-50" max="100" step="any">
+            </div>
+            <div class="field-group">
+              <label for="an-years">After (years)</label>
+              <input type="number" id="an-years" value="10" min="0.1" max="100" step="any">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="an-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="an-results-section" hidden>
+      <div class="schedule-header">
+        <h2 style="margin:0;font-size:18px;">Accumulation Schedule</h2>
+        <div class="schedule-toggle-group">
+          <button type="button" id="an-schedule-annual" class="active">Annual</button>
+          <button type="button" id="an-schedule-monthly">Monthly</button>
+        </div>
+      </div>
+      <div id="an-chart" style="max-width:640px;margin:16px auto;"></div>
+      <div class="chart-legend" style="justify-content:center;margin-bottom:16px;">
+        <span><span class="legend-dot" style="background:var(--accent)"></span> Starting principal</span>
+        <span><span class="legend-dot" style="background:#f59e0b"></span> Additions</span>
+        <span><span class="legend-dot" style="background:#10b981"></span> Return / interest</span>
+      </div>
+      <div class="schedule-table-wrap">
+        <div id="an-schedule-body"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What this calculator shows</h2>
+      <p>An annuity is a contract, usually with an insurance company, that turns money you pay in into income later. It has two stages. During the accumulation phase you pay in and the balance grows. During the payout phase the contract pays you back. This calculator covers the first stage: how large the balance becomes after a number of years, given a starting principal, regular additions and a growth rate.</p>
+
+      <h2>Beginning or end of the period</h2>
+      <p>The timing of each addition matters. In an annuity due, money goes in at the start of the period and earns interest straight away. In an ordinary annuity it goes in at the end, so it sits idle until the next period. The difference grows with the length of the term and the size of the rate, which is why the beginning-of-period choice always ends a little higher.</p>
+
+      <h2>How the balance is built</h2>
+      <p>The growth rate you enter is a yearly rate, turned into an equivalent monthly rate. Every month the calculator adds any monthly addition, applies that month's growth, and records the result. Your annual addition lands in the first month of each year, or the twelfth if you chose the end of the period. The starting principal goes in on day one. The annual table adds the twelve months of each year, and the monthly table lets you see every step.</p>
+      <div class="callout">This is an estimate for planning, not a quote. Real annuities often have fees, surrender charges, caps on growth and tax rules on withdrawals that are not included here.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the accumulation phase of an annuity?</h3>
+        <p>The accumulation phase is the period when you pay money into an annuity and it grows, before any income is paid out. This calculator covers that phase. The income phase, when the annuity starts paying you, is a separate calculation.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between an annuity due and an ordinary annuity?</h3>
+        <p>An annuity due takes each addition at the beginning of its period, so it earns interest for the whole period. An ordinary annuity takes it at the end of the period, so it earns nothing until the next one. Adding at the beginning always gives a slightly larger balance.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is the growth rate applied?</h3>
+        <p>The annual growth rate is converted to an equivalent monthly rate, so a 6% rate grows a balance by exactly 6% over twelve months. The calculator then adds interest to the balance every month, which also lets monthly additions earn their fair share of growth.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use it for a fixed, variable or indexed annuity?</h3>
+        <p>Yes, as an estimate. Enter the rate your contract credits, or the return you expect for a variable annuity. Remember that real annuities can charge fees, surrender charges and caps that this calculator does not include, and a variable annuity's actual return will vary.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Retirement Calculators</h2>
+    <p class="section-sub">Pick another retirement tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="retirement-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </a>
+
+      <a class="calc-list-card" href="pension-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pension Calculator</h3>
+        <p>Compare lump sums, monthly pensions and survivor options.</p>
+      </a>
+
+      <a class="calc-list-card" href="savings-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Savings Calculator</h3>
+        <p>Project how a savings balance grows with regular contributions.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/annuity-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

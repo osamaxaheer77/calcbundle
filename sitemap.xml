@@ -357,6 +357,30 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://calcbundle.net/calculators/401k-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/salary-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/estate-tax-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/income-tax-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/marriage-tax-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/take-home-pay-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://calcbundle.net/calculators/scientific-calculator.html</loc>
     <priority>0.7</priority>
   </url>
@@ -426,6 +450,34 @@
   </url>
   <url>
     <loc>https://calcbundle.net/contact.html</loc>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/pension-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/annuity-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/annuity-payout-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/roth-ira-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/ira-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/rmd-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/about.html</loc>
     <priority>0.3</priority>
   </url>
 </urlset>

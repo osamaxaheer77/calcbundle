@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>401K Calculator - CalcBundle</title>
+<meta name="description" content="Project your 401(k) balance at retirement with employer match, salary growth and the IRS limit, estimate early withdrawal costs, and find the contribution that earns your full match.">
+<link rel="canonical" href="https://calcbundle.net/calculators/401k-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="401K Calculator - CalcBundle">
+<meta property="og:description" content="Project your 401(k) balance at retirement with employer match, salary growth and the IRS limit, estimate early withdrawal costs, and find the contribution that earns your full match.">
+<meta property="og:url" content="https://calcbundle.net/calculators/401k-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="401K Calculator - CalcBundle">
+<meta name="twitter:description" content="Project your 401(k) balance at retirement with employer match, salary growth and the IRS limit, estimate early withdrawal costs, and find the contribution that earns your full match.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the employer match work in this calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your employer adds the match percentage of what you contribute, up to the match limit, which is a percent of your salary. With a 50% match up to 3%, contributing 3% or more of your salary earns the most your employer will add, which is 1.5% of your salary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why would my employer stop matching partway through a year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your contributions reach the IRS yearly limit before the year ends, your own contributions stop, and so does the employer match for the rest of that year. The maximize-match tool shows the range of percentages that earns the full match without hitting the limit too early."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the results before or after tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Before tax. Withdrawals from a traditional 401(k) are taxed as ordinary income, so what you keep depends on your tax bracket in retirement. A Roth 401(k) is taxed up front instead, so its withdrawals are generally tax-free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the 401(k) contribution limits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For 2026 you can contribute up to $24,500 of your own money, plus an $8,000 catch-up once you are 50 or older. A larger catch-up applies at ages 60 to 63, which this calculator does not model. The calculator assumes the limit rises with inflation in future years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a penalty for taking money out early?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally yes. Withdrawals before about age 59 and a half face a 10% penalty on top of income tax. Exceptions include a qualifying disability and leaving your employer in or after the year you turn 55, which waives the penalty on that employer's plan."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">401K Calculator</span>
+    </div>
+    <h1>401K Calculator</h1>
+    <p>Project your 401(k) balance at retirement, see what an early withdrawal really costs, and find the contribution that earns your employer's full match. Mainly for U.S. savers.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="k4-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="k4-mode">What do you want to find out?</label>
+            <select id="k4-mode" class="unit-select">
+              <option value="1" selected>Project my 401(k) balance</option>
+              <option value="2">Early withdrawal costs</option>
+              <option value="3">Maximize my employer match</option>
+            </select>
+          </div>
+
+          <div data-modes="1">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="k4-age">Current Age</label>
+                <input type="number" id="k4-age" value="30" min="16" max="100" step="1">
+              </div>
+              <div class="field-group">
+                <label for="k4-income">Annual Salary ($)</label>
+                <input type="number" id="k4-income" value="75000" min="0" step="1000">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="k4-balance">Current Balance ($)</label>
+                <input type="number" id="k4-balance" value="35000" min="0" step="1000">
+              </div>
+              <div class="field-group">
+                <label for="k4-contrib">Your Contribution (% of salary)</label>
+                <input type="number" id="k4-contrib" value="10" min="0" max="100" step="0.5">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="k4-match">Employer Match (%)</label>
+                <input type="number" id="k4-match" value="50" min="0" step="5">
+              </div>
+              <div class="field-group">
+                <label for="k4-matchlimit">Match Limit (% of salary)</label>
+                <input type="number" id="k4-matchlimit" value="3" min="0" max="100" step="0.5">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="k4-retage">Retirement Age</label>
+                <input type="number" id="k4-retage" value="65" min="17" max="100" step="1">
+              </div>
+              <div class="field-group">
+                <label for="k4-life">Life Expectancy</label>
+                <input type="number" id="k4-life" value="85" min="18" max="120" step="1">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="k4-raise">Salary Increase (%/yr)</label>
+                <input type="number" id="k4-raise" value="3" step="0.1">
+              </div>
+              <div class="field-group">
+                <label for="k4-return">Annual Return (%)</label>
+                <input type="number" id="k4-return" value="6" step="0.1">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="k4-infl">Inflation Rate (%/yr)</label>
+              <input type="number" id="k4-infl" value="3" step="0.1">
+            </div>
+            <div class="field-group">
+              <label class="radio-option" style="display:flex;align-items:center;gap:8px;font-weight:500;"><input type="checkbox" id="k4-limit" checked style="width:auto;height:auto;">Apply the IRS contribution limit</label>
+            </div>
+          </div>
+
+          <div data-modes="2">
+            <div class="field-group">
+              <label for="k4-w-amount">Early Withdrawal Amount ($)</label>
+              <input type="number" id="k4-w-amount" value="10000" min="0" step="500">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="k4-w-fed">Federal Tax (%)</label>
+                <input type="number" id="k4-w-fed" value="25" min="0" max="100" step="0.5">
+              </div>
+              <div class="field-group">
+                <label for="k4-w-state">State Tax (%)</label>
+                <input type="number" id="k4-w-state" value="5" min="0" max="100" step="0.5">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="k4-w-local">Local or City Tax (%)</label>
+              <input type="number" id="k4-w-local" value="0" min="0" max="100" step="0.5">
+            </div>
+            <div class="field-group">
+              <label>Are you still employed by this employer?</label>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="k4-employed" value="yes" checked>Yes</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="k4-employed" value="no">No</label>
+            </div>
+            <div class="field-group">
+              <label>Are you 55 or older?</label>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="k4-55" value="yes">Yes</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="k4-55" value="no" checked>No</label>
+            </div>
+            <div class="field-group">
+              <label>Do you have a qualifying disability?</label>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="k4-disabled" value="yes">Yes</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="k4-disabled" value="no" checked>No</label>
+            </div>
+            <div class="field-group">
+              <label>Do you qualify for another penalty exemption?</label>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="k4-exempt" value="yes">Yes</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="k4-exempt" value="no" checked>No</label>
+            </div>
+          </div>
+
+          <div data-modes="3">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="k4-m-age">Current Age</label>
+                <input type="number" id="k4-m-age" value="30" min="16" max="100" step="1">
+              </div>
+              <div class="field-group">
+                <label for="k4-m-income">Annual Salary ($)</label>
+                <input type="number" id="k4-m-income" value="75000" min="0" step="1000">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="k4-m-m1">Match 1 (%)</label>
+                <input type="number" id="k4-m-m1" value="50" min="0" step="5">
+              </div>
+              <div class="field-group">
+                <label for="k4-m-l1">Match 1 Limit (% of salary)</label>
+                <input type="number" id="k4-m-l1" value="3" min="0" max="100" step="0.5">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="k4-m-m2">Match 2 (%, optional)</label>
+                <input type="number" id="k4-m-m2" value="20" min="0" step="5">
+              </div>
+              <div class="field-group">
+                <label for="k4-m-l2">Match 2 Limit (% of salary)</label>
+                <input type="number" id="k4-m-l2" value="6" min="0" max="100" step="0.5">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="k4-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="k4-results-section" hidden>
+      <h2 id="k4-card-title" style="margin:0 0 16px;font-size:18px;">Projected 401(k) Balance</h2>
+      <div id="k4-chart" style="margin-bottom:20px;"></div>
+      <div class="schedule-table-wrap">
+        <div id="k4-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the projection works</h2>
+      <p>Each year your salary rises by the increase you enter, and you contribute your chosen percentage of it. Your employer adds the match, and your balance earns the annual return. Contributions are assumed to arrive evenly through the year, so each year's return is earned on your starting balance plus half of that year's contributions. The yearly IRS limit caps your own contribution, and the calculator assumes that limit rises with inflation and adds a catch-up amount once you are 50.</p>
+
+      <h2>Understanding the employer match</h2>
+      <p>A match is usually written like "50% up to 3%". That means your employer adds 50 cents for every dollar you contribute, but only on the first 3% of your salary. On a $75,000 salary that is at most $1,125 a year. Contributing less than 3% leaves part of that match unclaimed, which is why the match is often described as free money. The maximize-match tool works out the lowest percentage that earns all of it, and the highest one you can contribute before hitting the IRS limit.</p>
+
+      <h2>Taking money out early</h2>
+      <p>Money in a 401(k) is meant to stay until retirement. Withdrawals before about age 59 and a half are taxed as income and, in most cases, hit with an extra 10% penalty. The early withdrawal tool shows how much of the amount you would actually receive after federal, state and local tax and the penalty. A few situations waive the penalty, such as a qualifying disability or leaving your employer in or after the year you turn 55.</p>
+      <div class="callout">This is an estimate for planning, not tax or financial advice. Results are before tax, assume steady returns, and use the 2026 IRS limits. Plan rules vary, so check yours.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How does the employer match work in this calculator?</h3>
+        <p>Your employer adds the match percentage of what you contribute, up to the match limit, which is a percent of your salary. With a 50% match up to 3%, contributing 3% or more of your salary earns the most your employer will add, which is 1.5% of your salary.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why would my employer stop matching partway through a year?</h3>
+        <p>If your contributions reach the IRS yearly limit before the year ends, your own contributions stop, and so does the employer match for the rest of that year. The maximize-match tool shows the range of percentages that earns the full match without hitting the limit too early.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are the results before or after tax?</h3>
+        <p>Before tax. Withdrawals from a traditional 401(k) are taxed as ordinary income, so what you keep depends on your tax bracket in retirement. A Roth 401(k) is taxed up front instead, so its withdrawals are generally tax-free.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What are the 401(k) contribution limits?</h3>
+        <p>For 2026 you can contribute up to $24,500 of your own money, plus an $8,000 catch-up once you are 50 or older. A larger catch-up applies at ages 60 to 63, which this calculator does not model. The calculator assumes the limit rises with inflation in future years.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is there a penalty for taking money out early?</h3>
+        <p>Generally yes. Withdrawals before about age 59 and a half face a 10% penalty on top of income tax. Exceptions include a qualifying disability and leaving your employer in or after the year you turn 55, which waives the penalty on that employer's plan.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="retirement-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </a>
+
+      <a class="calc-list-card" href="social-security-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Social Security Calculator</h3>
+        <p>Find the best age to claim your Social Security benefits.</p>
+      </a>
+
+      <a class="calc-list-card" href="savings-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Savings Calculator</h3>
+        <p>Project how a savings balance grows with regular contributions.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/401k-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

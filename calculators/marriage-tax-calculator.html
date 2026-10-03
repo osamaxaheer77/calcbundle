@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marriage Tax Calculator - CalcBundle</title>
+<meta name="description" content="Compare the federal income tax two people pay as singles with what they would pay on a joint return, and see whether marriage brings a tax penalty or a bonus.">
+<link rel="canonical" href="https://calcbundle.net/calculators/marriage-tax-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Marriage Tax Calculator - CalcBundle">
+<meta property="og:description" content="Compare the federal income tax two people pay as singles with what they would pay on a joint return, and see whether marriage brings a tax penalty or a bonus.">
+<meta property="og:url" content="https://calcbundle.net/calculators/marriage-tax-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Marriage Tax Calculator - CalcBundle">
+<meta name="twitter:description" content="Compare the federal income tax two people pay as singles with what they would pay on a joint return, and see whether marriage brings a tax penalty or a bonus.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the marriage penalty and the marriage bonus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A marriage penalty means a couple pays more federal income tax on a joint return than the two people would pay as singles. A marriage bonus means they pay less. Couples with very different incomes usually get a bonus, while two high earners are the most likely to face a penalty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do two high earners often pay more when married?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Joint brackets are exactly twice as wide as single brackets up through the 32% rate, but the 35% bracket is narrower for couples. Two very high incomes therefore reach the top rates sooner together than they would apart, and phase-outs for credits and deductions can add to the effect."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are retirement contributions treated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Contributions to a 401(k) or similar plan are treated as pre-tax, so they lower federal income tax but not Social Security or Medicare tax. For a self-employed person, the amount is taken as an adjustment to income."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this show married filing separately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It compares two single returns with one joint return, since married filing separately costs more than filing jointly in most cases. Married couples who file separately are also shut out of several credits and deductions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does marriage change Social Security and Medicare tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mostly not, because each person pays those taxes on their own earnings. The one exception is the 0.9% additional Medicare tax, which starts at $200,000 for a single person but $250,000 for a couple, so it can differ between the two situations."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Marriage Tax Calculator</span>
+    </div>
+    <h1>Marriage Tax Calculator</h1>
+    <p>See whether getting married would raise or lower your federal income tax, by comparing two single returns with one joint return. Mainly for U.S. taxpayers.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="mt-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="mt-year">Tax Year</label>
+            <select id="mt-year" class="unit-select">
+              <option value="2026" selected>2026</option>
+              <option value="2025">2025</option>
+            </select>
+          </div>
+
+          <p style="font-size:13px;font-weight:700;color:var(--text-primary);margin:14px 0 10px;">Spouse 1</p>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-salary1">Salary or Business Income ($)</label>
+              <input type="number" id="mt-salary1" value="65000" min="0" step="1000">
+            </div>
+            <div class="field-group">
+              <label for="mt-k4011">401(k), IRA, Savings ($)</label>
+              <input type="number" id="mt-k4011" value="10000" min="0" step="500">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-interest1">Interest and Dividends ($)</label>
+              <input type="number" id="mt-interest1" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="mt-qdiv1">Of Which Qualified ($)</label>
+              <input type="number" id="mt-qdiv1" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-passive1">Rental and Passive ($)</label>
+              <input type="number" id="mt-passive1" value="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="mt-st1">Short-Term Gains ($)</label>
+              <input type="number" id="mt-st1" value="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-lt1">Long-Term Gains ($)</label>
+              <input type="number" id="mt-lt1" value="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="mt-state1">State and City Tax (%)</label>
+              <input type="number" id="mt-state1" value="5" min="0" max="30" step="0.1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-status1">Filing Status as a Single Person</label>
+              <select id="mt-status1" class="unit-select">
+                <option value="single" selected>Single</option>
+                <option value="hoh">Head of Household</option>
+                <option value="qw">Qualified Surviving Spouse</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="mt-deps1">Children Under 17</label>
+              <input type="number" id="mt-deps1" value="0" min="0" step="1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-mortgage1">Mortgage Interest ($)</label>
+              <input type="number" id="mt-mortgage1" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="mt-charity1">Charitable Donations ($)</label>
+              <input type="number" id="mt-charity1" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-student1">Student Loan Interest ($)</label>
+              <input type="number" id="mt-student1" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="mt-childcare1">Child Care Expenses ($)</label>
+              <input type="number" id="mt-childcare1" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="mt-tuition1">College Tuition ($)</label>
+            <input type="number" id="mt-tuition1" value="0" min="0" step="100">
+          </div>
+          <div class="field-group">
+            <label class="radio-option" style="display:flex;align-items:center;gap:8px;font-weight:500;"><input type="checkbox" id="mt-se1" style="width:auto;height:auto;">Self-employed</label>
+          </div>
+
+          <p style="font-size:13px;font-weight:700;color:var(--text-primary);margin:22px 0 10px;">Spouse 2</p>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-salary2">Salary or Business Income ($)</label>
+              <input type="number" id="mt-salary2" value="45000" min="0" step="1000">
+            </div>
+            <div class="field-group">
+              <label for="mt-k4012">401(k), IRA, Savings ($)</label>
+              <input type="number" id="mt-k4012" value="6000" min="0" step="500">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-interest2">Interest and Dividends ($)</label>
+              <input type="number" id="mt-interest2" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="mt-qdiv2">Of Which Qualified ($)</label>
+              <input type="number" id="mt-qdiv2" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-passive2">Rental and Passive ($)</label>
+              <input type="number" id="mt-passive2" value="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="mt-st2">Short-Term Gains ($)</label>
+              <input type="number" id="mt-st2" value="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-lt2">Long-Term Gains ($)</label>
+              <input type="number" id="mt-lt2" value="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="mt-state2">State and City Tax (%)</label>
+              <input type="number" id="mt-state2" value="5" min="0" max="30" step="0.1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-status2">Filing Status as a Single Person</label>
+              <select id="mt-status2" class="unit-select">
+                <option value="single" selected>Single</option>
+                <option value="hoh">Head of Household</option>
+                <option value="qw">Qualified Surviving Spouse</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="mt-deps2">Children Under 17</label>
+              <input type="number" id="mt-deps2" value="0" min="0" step="1">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-mortgage2">Mortgage Interest ($)</label>
+              <input type="number" id="mt-mortgage2" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="mt-charity2">Charitable Donations ($)</label>
+              <input type="number" id="mt-charity2" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="mt-student2">Student Loan Interest ($)</label>
+              <input type="number" id="mt-student2" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="mt-childcare2">Child Care Expenses ($)</label>
+              <input type="number" id="mt-childcare2" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="mt-tuition2">College Tuition ($)</label>
+            <input type="number" id="mt-tuition2" value="0" min="0" step="100">
+          </div>
+          <div class="field-group">
+            <label class="radio-option" style="display:flex;align-items:center;gap:8px;font-weight:500;"><input type="checkbox" id="mt-se2" style="width:auto;height:auto;">Self-employed</label>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="mt-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="mt-results-section" hidden>
+      <h2 style="margin:0 0 16px;font-size:18px;">Side-by-Side Comparison</h2>
+      <div class="schedule-table-wrap">
+        <div id="mt-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What the calculator compares</h2>
+      <p>It works out each person's federal income tax as a single filer, using the filing status you choose, and adds the two together. It then works out the tax on a single joint return that combines both incomes, deductions and children. The difference between the two totals is the marriage penalty or bonus. Social Security and Medicare tax, state tax and retirement contributions are shown too, so you can see the effect on take-home pay.</p>
+
+      <h2>When marriage costs more or less</h2>
+      <p>Joint filing helps most when one person earns much more than the other. The lower earner's unused room in the lower brackets is put to work, and the couple can claim credits and deductions that single filers often cannot. Two similar high incomes are more likely to be pushed into a higher bracket together, and some credits and deductions phase out at joint income limits that are not double the single limits.</p>
+      <div class="callout">This is an estimate for planning, not tax advice. It treats each person's filing status before marriage as you choose it, assumes children and deductions belong to the couple after marriage, and leaves out state tax differences and many less common situations.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What are the marriage penalty and the marriage bonus?</h3>
+        <p>A marriage penalty means a couple pays more federal income tax on a joint return than the two people would pay as singles. A marriage bonus means they pay less. Couples with very different incomes usually get a bonus, while two high earners are the most likely to face a penalty.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do two high earners often pay more when married?</h3>
+        <p>Joint brackets are exactly twice as wide as single brackets up through the 32% rate, but the 35% bracket is narrower for couples. Two very high incomes therefore reach the top rates sooner together than they would apart, and phase-outs for credits and deductions can add to the effect.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How are retirement contributions treated?</h3>
+        <p>Contributions to a 401(k) or similar plan are treated as pre-tax, so they lower federal income tax but not Social Security or Medicare tax. For a self-employed person, the amount is taken as an adjustment to income.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this show married filing separately?</h3>
+        <p>No. It compares two single returns with one joint return, since married filing separately costs more than filing jointly in most cases. Married couples who file separately are also shut out of several credits and deductions.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does marriage change Social Security and Medicare tax?</h3>
+        <p>Mostly not, because each person pays those taxes on their own earnings. The one exception is the 0.9% additional Medicare tax, which starts at $200,000 for a single person but $250,000 for a couple, so it can differ between the two situations.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="income-tax-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Income Tax Calculator</h3>
+        <p>Estimate your federal tax refund or amount owed.</p>
+      </a>
+
+      <a class="calc-list-card" href="salary-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Salary Calculator</h3>
+        <p>Convert pay between hourly, monthly, and annual figures.</p>
+      </a>
+
+      <a class="calc-list-card" href="estate-tax-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Estate Tax Calculator</h3>
+        <p>Estimate the federal estate tax on what you leave behind.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/tax-engine.js"></script>
+<script src="../js/marriage-tax-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

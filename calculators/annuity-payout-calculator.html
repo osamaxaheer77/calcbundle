@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annuity Payout Calculator - CalcBundle</title>
+<meta name="description" content="Find how much an annuity can pay you over a set number of years, or how long a fixed payment will last, with a year-by-year balance schedule.">
+<link rel="canonical" href="https://calcbundle.net/calculators/annuity-payout-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Annuity Payout Calculator - CalcBundle">
+<meta property="og:description" content="Find how much an annuity can pay you over a set number of years, or how long a fixed payment will last, with a year-by-year balance schedule.">
+<meta property="og:url" content="https://calcbundle.net/calculators/annuity-payout-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Annuity Payout Calculator - CalcBundle">
+<meta name="twitter:description" content="Find how much an annuity can pay you over a set number of years, or how long a fixed payment will last, with a year-by-year balance schedule.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a fixed length and a fixed payment payout?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A fixed length payout chooses how many years the money should last and works out the largest equal payment that uses it up exactly. A fixed payment payout chooses the amount you want to receive each period and works out how long the money will last."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the calculator sometimes say you can withdraw forever?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the interest the principal earns in one period is at least as large as your payment, the balance never goes down. You are only spending the earnings, so the principal stays intact and the payments can continue indefinitely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When are the payments made?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Payments are made at the end of each period, like an ordinary annuity. The balance earns interest for the whole period before each payment comes out. The annual growth rate is converted to the matching rate for the payout frequency you choose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the last payment smaller?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a fixed payment payout, usually yes. The money rarely runs out on an exact payment date, so the final payment is whatever remains, including that period's interest. In a fixed length payout, every payment is the same."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this account for life expectancy or taxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It treats the payout as a fixed schedule and shows pre-tax figures. A life annuity from an insurer pays for as long as you live, which is a different product and is priced using life expectancy."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Annuity Payout Calculator</span>
+    </div>
+    <h1>Annuity Payout Calculator</h1>
+    <p>Work out how much an annuity can pay you over a set number of years, or how long a payment of your choosing will last.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ap-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="ap-mode">What do you want to find out?</label>
+            <select id="ap-mode" class="unit-select">
+              <option value="length" selected>How much can I withdraw over a fixed length?</option>
+              <option value="payment">How long will a fixed payment last?</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label for="ap-principal">Starting Principal ($)</label>
+            <input type="number" id="ap-principal" value="500000" min="0" step="any">
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="ap-rate">Interest / Return Rate (%)</label>
+              <input type="number" id="ap-rate" value="6" min="0" max="100" step="any">
+            </div>
+            <div class="field-group" data-modes="length">
+              <label for="ap-years">Years to Payout</label>
+              <input type="number" id="ap-years" value="10" min="0.1" max="100" step="any">
+            </div>
+            <div class="field-group" data-modes="payment">
+              <label for="ap-amount">Amount to Pay Out ($)</label>
+              <input type="number" id="ap-amount" value="5000" min="0" step="any">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="ap-freq">Payout Frequency</label>
+            <select id="ap-freq" class="unit-select">
+              <option value="annually">Annually</option>
+              <option value="semiannually">Semiannually</option>
+              <option value="quarterly">Quarterly</option>
+              <option value="monthly" selected>Monthly</option>
+              <option value="semimonthly">Semimonthly</option>
+              <option value="biweekly">Biweekly</option>
+            </select>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="ap-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="ap-results-section" hidden>
+      <h2 style="margin:0 0 16px;font-size:18px;">Annuity Balances</h2>
+      <div id="ap-chart" style="margin-bottom:20px;"></div>
+      <div class="schedule-table-wrap">
+        <div id="ap-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">The payout phase of an annuity</h2>
+      <p>An annuity has two stages. In the accumulation phase you build up a balance. In the payout phase, which this calculator covers, the balance is paid back to you in a series of equal payments while whatever remains keeps earning interest. Because the leftover money keeps growing, the total you receive is larger than the principal you started with.</p>
+
+      <h2>Fixed length or fixed payment</h2>
+      <p>With a fixed length payout you decide how many years the money should last. The calculator finds the largest equal payment that brings the balance to exactly zero on the last payment date, which is the same arithmetic as a loan payment run in reverse. With a fixed payment payout you decide how much you want each time, and the calculator counts the payments until the money is gone. If your payment is no larger than the interest earned each period, the balance never shrinks and you can withdraw forever.</p>
+
+      <h2>How the numbers are worked out</h2>
+      <p>The yearly rate is converted to the matching rate for your payout frequency, so a 6% yearly rate grows the balance by 6% over a full year whether you are paid monthly or annually. Each period the balance earns interest, then the payment comes out at the end of the period. The yearly schedule adds up the interest and the withdrawals for each year and shows the balance that remains.</p>
+      <div class="callout">This is a planning estimate. Real annuity contracts can charge fees, set payout rates from life expectancy and tax the interest portion of each payment, none of which is included here.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the difference between a fixed length and a fixed payment payout?</h3>
+        <p>A fixed length payout chooses how many years the money should last and works out the largest equal payment that uses it up exactly. A fixed payment payout chooses the amount you want to receive each period and works out how long the money will last.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the calculator sometimes say you can withdraw forever?</h3>
+        <p>If the interest the principal earns in one period is at least as large as your payment, the balance never goes down. You are only spending the earnings, so the principal stays intact and the payments can continue indefinitely.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When are the payments made?</h3>
+        <p>Payments are made at the end of each period, like an ordinary annuity. The balance earns interest for the whole period before each payment comes out. The annual growth rate is converted to the matching rate for the payout frequency you choose.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the last payment smaller?</h3>
+        <p>In a fixed payment payout, usually yes. The money rarely runs out on an exact payment date, so the final payment is whatever remains, including that period's interest. In a fixed length payout, every payment is the same.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this account for life expectancy or taxes?</h3>
+        <p>No. It treats the payout as a fixed schedule and shows pre-tax figures. A life annuity from an insurer pays for as long as you live, which is a different product and is priced using life expectancy.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Retirement Calculators</h2>
+    <p class="section-sub">Pick another retirement tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="annuity-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Annuity Calculator</h3>
+        <p>See how an annuity grows while you pay into it.</p>
+      </a>
+
+      <a class="calc-list-card" href="pension-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pension Calculator</h3>
+        <p>Compare lump sums, monthly pensions and survivor options.</p>
+      </a>
+
+      <a class="calc-list-card" href="retirement-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/annuity-payout-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

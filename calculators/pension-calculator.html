@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pension Calculator - CalcBundle</title>
+<meta name="description" content="Compare a lump sum with a monthly pension, a single-life with a joint-and-survivor payout, or retiring now with working longer for a bigger pension.">
+<link rel="canonical" href="https://calcbundle.net/calculators/pension-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Pension Calculator - CalcBundle">
+<meta property="og:description" content="Compare a lump sum with a monthly pension, a single-life with a joint-and-survivor payout, or retiring now with working longer for a bigger pension.">
+<meta property="og:url" content="https://calcbundle.net/calculators/pension-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pension Calculator - CalcBundle">
+<meta name="twitter:description" content="Compare a lump sum with a monthly pension, a single-life with a joint-and-survivor payout, or retiring now with working longer for a bigger pension.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should I take a lump sum or a monthly pension?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends mostly on how long you expect to live and what you could earn on the lump sum. The calculator finds the break-even age: if you live beyond it, the monthly pension is worth more, and if not, the lump sum is. A monthly pension is guaranteed income for life, while a lump sum gives flexibility and can be left to heirs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a joint-and-survivor pension?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A joint-and-survivor pension keeps paying your spouse after you die, usually at a set share of the original amount such as 50%, 66%, 75% or 100%. In return, the monthly payment while you are both alive is lower than a single-life pension, which stops when you die."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the cost-of-living adjustment do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cost-of-living adjustment, or COLA, raises the pension each year to keep up with rising prices. The calculator applies it from the second year of payments. Most private pensions do not rise with inflation, so enter 0 if yours does not."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the investment return matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pension payments arrive over many years, so each one is discounted back to today at your investment return. A higher return makes future payments worth less now, which favors the lump sum, while a lower return favors the monthly pension."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator include taxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The figures are before tax. The lump sum comparison assumes the money is rolled into a tax-deferred account such as an IRA. If your lump sum would be taxed, enter the after-tax amount instead."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Pension Calculator</span>
+    </div>
+    <h1>Pension Calculator</h1>
+    <p>Weigh the big pension decisions: lump sum or monthly income, single-life or joint-and-survivor payout, and retiring sooner or working longer.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="pn-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-group">
+            <label for="pn-mode">What do you want to compare?</label>
+            <select id="pn-mode" class="unit-select">
+              <option value="1" selected>Lump sum or monthly pension</option>
+              <option value="2">Single-life or joint-and-survivor</option>
+              <option value="3">Retire now or work longer</option>
+            </select>
+          </div>
+
+          <div data-modes="1">
+            <div class="field-group">
+              <label for="pn-age">Your Retirement Age</label>
+              <input type="number" id="pn-age" value="65" min="30" max="100" step="any">
+            </div>
+            <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:4px 0 8px;">Option 1: lump sum payment</p>
+            <div class="field-group">
+              <label for="pn-lump">Lump Sum Payment Amount ($)</label>
+              <input type="number" id="pn-lump" value="800000" min="0" step="any">
+            </div>
+            <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:4px 0 8px;">Option 2: monthly pension payment</p>
+            <div class="field-group">
+              <label for="pn-monthly">Monthly Pension Income ($)</label>
+              <input type="number" id="pn-monthly" value="5000" min="0" step="any">
+            </div>
+          </div>
+
+          <div data-modes="2">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pn-j-age">Your Retirement Age</label>
+                <input type="number" id="pn-j-age" value="65" min="30" max="100" step="any">
+              </div>
+              <div class="field-group">
+                <label for="pn-j-life">Your Life Expectancy</label>
+                <input type="number" id="pn-j-life" value="77" min="30" max="120" step="any">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pn-j-sage">Spouse's Age at Your Retirement</label>
+                <input type="number" id="pn-j-sage" value="62" min="18" max="100" step="any">
+              </div>
+              <div class="field-group">
+                <label for="pn-j-slife">Spouse's Life Expectancy</label>
+                <input type="number" id="pn-j-slife" value="82" min="18" max="120" step="any">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pn-single">Single-Life Pension ($/month)</label>
+                <input type="number" id="pn-single" value="5000" min="0" step="any">
+              </div>
+              <div class="field-group">
+                <label for="pn-joint">Joint Survivor Pension ($/month)</label>
+                <input type="number" id="pn-joint" value="3000" min="0" step="any">
+              </div>
+            </div>
+          </div>
+
+          <div data-modes="3">
+            <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:0 0 8px;">Pension option 1</p>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pn-a1">Retirement Age</label>
+                <input type="number" id="pn-a1" value="60" min="30" max="100" step="any">
+              </div>
+              <div class="field-group">
+                <label for="pn-p1">Monthly Pension ($)</label>
+                <input type="number" id="pn-p1" value="2500" min="0" step="any">
+              </div>
+            </div>
+            <p style="font-size:13px;font-weight:600;color:var(--text-primary);margin:4px 0 8px;">Pension option 2 (work longer)</p>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pn-a2">Retirement Age</label>
+                <input type="number" id="pn-a2" value="65" min="30" max="100" step="any">
+              </div>
+              <div class="field-group">
+                <label for="pn-p2">Monthly Pension ($)</label>
+                <input type="number" id="pn-p2" value="3800" min="0" step="any">
+              </div>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="pn-return">Investment Return (%/yr)</label>
+              <input type="number" id="pn-return" value="5" min="-10" max="30" step="any">
+            </div>
+            <div class="field-group">
+              <label for="pn-cola">Cost-of-Living Adj. (%/yr)</label>
+              <input type="number" id="pn-cola" value="3.5" min="0" max="30" step="any">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="pn-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="pn-results-section" hidden>
+      <h2 id="pn-card-title" style="margin:0 0 16px;font-size:18px;">Equivalent Present Value of the Options</h2>
+      <div id="pn-chart" style="margin-bottom:20px;"></div>
+      <div class="schedule-table-wrap">
+        <div id="pn-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How pensions pay out</h2>
+      <p>The most common pension is a defined-benefit plan, where your employer promises a set income in retirement based on your pay and years of service. Most plans let you take that promise in one of two forms: a one-time lump sum, sometimes called the commuted value, or a stream of monthly payments that lasts for life. This calculator helps with three decisions that usually cannot be undone once you make them.</p>
+
+      <h2>Lump sum or monthly pension</h2>
+      <p>A monthly pension is guaranteed income, and it cannot run out the way a pile of savings can. A lump sum is flexible: you can invest it, spend it as you like and leave what remains to heirs. To compare them, the calculator adds up the pension payments you would collect up to each possible life expectancy, lets them grow with the cost-of-living adjustment, and discounts every year back to your retirement age at your investment return. The break-even age is the first age at which the pension is worth at least as much as the lump sum. Live past it and the pension comes out ahead.</p>
+
+      <h2>Single-life or joint-and-survivor</h2>
+      <p>A single-life pension pays the most each month but stops when you die. A joint-and-survivor pension pays less, and keeps paying your spouse afterwards. The calculator looks at it two ways. The insurance view works out the lump sum that would replace your spouse's survivor income if you died at retirement, and the monthly premium you could pay for term life cover and still break even. The investment view assumes you take the larger single-life check and invest the difference, then compares what you would have saved at your life expectancy with the survivor payments you would have given up.</p>
+
+      <h2>Retire now or work longer</h2>
+      <p>Many plans pay a bigger pension if you retire later. Entering the monthly pension at each age shows how long you need to live for the larger check to make up for the years of smaller payments you gave up. Both pensions are valued at the earlier retirement age so they can be compared fairly. The result leaves out the salary you would earn by working longer, which for many people is the bigger part of the story.</p>
+      <div class="callout">These are estimates for planning, not financial advice. Pension rules, taxes, health, other income and what you would do with a lump sum can all change the right answer, so check your plan's actual figures before you decide.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Should I take a lump sum or a monthly pension?</h3>
+        <p>It depends mostly on how long you expect to live and what you could earn on the lump sum. The calculator finds the break-even age: if you live beyond it, the monthly pension is worth more, and if not, the lump sum is. A monthly pension is guaranteed income for life, while a lump sum gives flexibility and can be left to heirs.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a joint-and-survivor pension?</h3>
+        <p>A joint-and-survivor pension keeps paying your spouse after you die, usually at a set share of the original amount such as 50%, 66%, 75% or 100%. In return, the monthly payment while you are both alive is lower than a single-life pension, which stops when you die.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does the cost-of-living adjustment do?</h3>
+        <p>The cost-of-living adjustment, or COLA, raises the pension each year to keep up with rising prices. The calculator applies it from the second year of payments. Most private pensions do not rise with inflation, so enter 0 if yours does not.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the investment return matter?</h3>
+        <p>Pension payments arrive over many years, so each one is discounted back to today at your investment return. A higher return makes future payments worth less now, which favors the lump sum, while a lower return favors the monthly pension.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this calculator include taxes?</h3>
+        <p>No. The figures are before tax. The lump sum comparison assumes the money is rolled into a tax-deferred account such as an IRA. If your lump sum would be taxed, enter the after-tax amount instead.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Retirement Calculators</h2>
+    <p class="section-sub">Pick another retirement tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="retirement-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </a>
+
+      <a class="calc-list-card" href="401k-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>401K Calculator</h3>
+        <p>Project your 401(k) balance with employer match and the IRS limit.</p>
+      </a>
+
+      <a class="calc-list-card" href="social-security-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Social Security Calculator</h3>
+        <p>Find the best age to claim Social Security benefits.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/pension-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

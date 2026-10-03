@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roth IRA Calculator - CalcBundle</title>
+<meta name="description" content="Estimate your Roth IRA balance at retirement and see how much more it can grow than a regular taxable account, using the 2026 IRS contribution limits.">
+<link rel="canonical" href="https://calcbundle.net/calculators/roth-ira-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Roth IRA Calculator - CalcBundle">
+<meta property="og:description" content="Estimate your Roth IRA balance at retirement and see how much more it can grow than a regular taxable account, using the 2026 IRS contribution limits.">
+<meta property="og:url" content="https://calcbundle.net/calculators/roth-ira-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Roth IRA Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate your Roth IRA balance at retirement and see how much more it can grow than a regular taxable account, using the 2026 IRS contribution limits.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much can I contribute to a Roth IRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For 2026 the limit is $7,500 if you are under 50 and $8,600 if you are 50 or older. You also need earned income at least as large as your contribution, and your income must be below the Roth IRA limits. If you enter more than the limit, the calculator uses the limit instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a Roth IRA beat a taxable account in this comparison?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a Roth IRA the growth is never taxed, and qualified withdrawals in retirement are tax-free. In a taxable account the growth is taxed every year at your marginal rate, which leaves less money to compound. The calculator charges that yearly tax in the taxable account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are Roth IRA contributions tax-deductible?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. You contribute money you have already paid tax on, so there is no deduction. In return the money grows tax-free and you can take qualified withdrawals without paying tax. A traditional IRA works the other way around."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When are contributions added in the calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each year's contribution is added at the end of the year, so it starts earning growth from the following year. Your current balance earns growth for the whole first year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I take money out of a Roth IRA early?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can withdraw your own contributions at any time without tax or penalty. Withdrawing earnings before age 59 and a half, or before the account is five years old, can trigger tax and a 10% penalty, with some exceptions. The calculator assumes you leave the money alone until the retirement age you enter."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Roth IRA Calculator</span>
+    </div>
+    <h1>Roth IRA Calculator</h1>
+    <p>Estimate how large your Roth IRA could be at retirement, and how much more it can hold than the same savings in a regular taxable account.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="rt-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rt-start">Current Balance ($)</label>
+              <input type="number" id="rt-start" value="30000" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="rt-annual">Annual Contribution ($)</label>
+              <input type="number" id="rt-annual" value="7500" min="0" step="any">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label>Maximize contributions?</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="rt-max" value="y">Yes</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="rt-max" value="n" checked>No</label>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rt-rate">Expected Return (%/yr)</label>
+              <input type="number" id="rt-rate" value="6" min="0" max="30" step="any">
+            </div>
+            <div class="field-group">
+              <label for="rt-tax">Marginal Tax Rate (%)</label>
+              <input type="number" id="rt-tax" value="25" min="0" max="60" step="any">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="rt-age">Current Age</label>
+              <input type="number" id="rt-age" value="30" min="0" max="99" step="any">
+            </div>
+            <div class="field-group">
+              <label for="rt-retire">Retirement Age</label>
+              <input type="number" id="rt-retire" value="65" min="1" max="100" step="any">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="rt-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="rt-results-section" hidden>
+      <h2 style="margin:0 0 16px;font-size:18px;">Balance Accumulation</h2>
+      <div id="rt-chart" style="margin-bottom:20px;"></div>
+      <div class="schedule-table-wrap">
+        <div id="rt-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How a Roth IRA works</h2>
+      <p>A Roth IRA is a retirement account you fund with money that has already been taxed. You get no deduction when you contribute, but the money grows without tax, and qualified withdrawals in retirement are tax-free. That makes it most attractive when you expect to pay the same or a higher tax rate later, or when you simply want tax-free income to sit alongside other savings.</p>
+
+      <h2>Contribution limits</h2>
+      <p>For 2026 you can put in up to $7,500 a year, or $8,600 if you are 50 or older, as long as you have at least that much earned income. Contributions also phase out and then stop for higher earners: above roughly $168,000 of income for single filers and $252,000 for married couples filing jointly. Choose "Maximize contributions" and the calculator uses the limit for your age in every year, rising to the higher amount when you turn 50. If you enter more than the limit yourself, it is reduced to the limit.</p>
+
+      <h2>How it compares with a taxable account</h2>
+      <p>The calculator runs the same savings through two accounts. In the Roth IRA the balance simply grows at your expected return. In the taxable account, each year's growth is taxed at your marginal rate, so only the after-tax return compounds. The gap between the two at your retirement age is the value of tax-free growth. Each year's contribution is added at the end of the year, so your starting balance earns growth for the full first year.</p>
+      <div class="callout">This is an estimate for planning, not tax or investment advice. It uses a steady return every year, ignores inflation, keeps contribution limits fixed at their 2026 levels and treats all growth in the taxable account as taxed at one rate.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How much can I contribute to a Roth IRA?</h3>
+        <p>For 2026 the limit is $7,500 if you are under 50 and $8,600 if you are 50 or older. You also need earned income at least as large as your contribution, and your income must be below the Roth IRA limits. If you enter more than the limit, the calculator uses the limit instead.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does a Roth IRA beat a taxable account in this comparison?</h3>
+        <p>In a Roth IRA the growth is never taxed, and qualified withdrawals in retirement are tax-free. In a taxable account the growth is taxed every year at your marginal rate, which leaves less money to compound. The calculator charges that yearly tax in the taxable account.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are Roth IRA contributions tax-deductible?</h3>
+        <p>No. You contribute money you have already paid tax on, so there is no deduction. In return the money grows tax-free and you can take qualified withdrawals without paying tax. A traditional IRA works the other way around.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When are contributions added in the calculation?</h3>
+        <p>Each year's contribution is added at the end of the year, so it starts earning growth from the following year. Your current balance earns growth for the whole first year.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I take money out of a Roth IRA early?</h3>
+        <p>You can withdraw your own contributions at any time without tax or penalty. Withdrawing earnings before age 59 and a half, or before the account is five years old, can trigger tax and a 10% penalty, with some exceptions. The calculator assumes you leave the money alone until the retirement age you enter.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Retirement Calculators</h2>
+    <p class="section-sub">Pick another retirement tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="retirement-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </a>
+
+      <a class="calc-list-card" href="401k-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>401K Calculator</h3>
+        <p>Project your 401(k) balance with employer match and the IRS limit.</p>
+      </a>
+
+      <a class="calc-list-card" href="annuity-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Annuity Calculator</h3>
+        <p>See how an annuity grows while you pay into it.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/roth-ira-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -72,7 +73,7 @@
       <div class="nav-links">
       <a href="../all-calculators.html" class="nav-link">All Calculators</a>
       <a href="../index.html#categories" class="nav-link">Categories</a>
-      <a href="#" class="nav-link">About</a>
+      <a href="../about.html" class="nav-link">About</a>
       </div>
       <div class="nav-search">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -113,18 +114,18 @@
           <div id="ref-balance-fields">
             <div class="field-group">
               <label for="ref-cur-balance">Remaining Balance</label>
-              <input type="number" id="ref-cur-balance" value="250000" min="0" step="1000">
+              <input type="number" id="ref-cur-balance" value="250000" min="0" step="any">
             </div>
             <div class="field-group">
               <label for="ref-cur-payment">Monthly Payment</label>
-              <input type="number" id="ref-cur-payment" value="1800" min="0" step="10">
+              <input type="number" id="ref-cur-payment" value="1800" min="0" step="any">
             </div>
           </div>
 
           <div id="ref-original-fields" hidden>
             <div class="field-group">
               <label for="ref-cur-orig-amount">Original Loan Amount</label>
-              <input type="number" id="ref-cur-orig-amount" value="300000" min="0" step="1000">
+              <input type="number" id="ref-cur-orig-amount" value="300000" min="0" step="any">
             </div>
             <div class="field-group">
               <label for="ref-cur-orig-term">Loan Term (years)</label>
@@ -143,7 +144,7 @@
 
           <div class="field-group">
             <label for="ref-cur-rate">Interest Rate (%)</label>
-            <input type="number" id="ref-cur-rate" value="7" min="0" step="0.01">
+            <input type="number" id="ref-cur-rate" value="7" min="0" step="any">
           </div>
 
           <div class="subsection-title">New Loan</div>
@@ -154,22 +155,22 @@
             </div>
             <div class="field-group">
               <label for="ref-new-rate">Interest Rate (%)</label>
-              <input type="number" id="ref-new-rate" value="6" min="0" step="0.01">
+              <input type="number" id="ref-new-rate" value="6" min="0" step="any">
             </div>
           </div>
           <div class="field-row">
             <div class="field-group">
               <label for="ref-new-points">Points</label>
-              <input type="number" id="ref-new-points" value="2" min="0" step="0.1">
+              <input type="number" id="ref-new-points" value="2" min="0" step="any">
             </div>
             <div class="field-group">
               <label for="ref-new-costs">Costs and Fees ($)</label>
-              <input type="number" id="ref-new-costs" value="1500" min="0" step="50">
+              <input type="number" id="ref-new-costs" value="1500" min="0" step="any">
             </div>
           </div>
           <div class="field-group">
             <label for="ref-new-cashout">Cash Out Amount ($)</label>
-            <input type="number" id="ref-new-cashout" value="0" min="0" step="1000">
+            <input type="number" id="ref-new-cashout" value="0" min="0" step="any">
           </div>
 
           <button type="submit" class="calc-submit-btn">Calculate</button>
@@ -285,6 +286,7 @@
       <a href="../privacy.html">Privacy</a>
       <a href="../terms.html">Terms</a>
       <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
     </div>
   </div>
 </footer>

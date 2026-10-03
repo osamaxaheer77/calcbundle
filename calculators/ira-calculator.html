@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRA Calculator - CalcBundle</title>
+<meta name="description" content="Compare a Traditional, SEP or SIMPLE IRA with a Roth IRA and regular taxable savings, after tax, to see which retirement account leaves you the most.">
+<link rel="canonical" href="https://calcbundle.net/calculators/ira-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="IRA Calculator - CalcBundle">
+<meta property="og:description" content="Compare a Traditional, SEP or SIMPLE IRA with a Roth IRA and regular taxable savings, after tax, to see which retirement account leaves you the most.">
+<meta property="og:url" content="https://calcbundle.net/calculators/ira-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IRA Calculator - CalcBundle">
+<meta name="twitter:description" content="Compare a Traditional, SEP or SIMPLE IRA with a Roth IRA and regular taxable savings, after tax, to see which retirement account leaves you the most.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a Traditional IRA and a Roth IRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Traditional IRA is funded with before-tax money, so you save tax when you contribute, and you pay income tax on withdrawals in retirement. A Roth IRA is funded with after-tax money, so there is no tax saving now, but qualified withdrawals in retirement are tax-free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which is better, a Traditional IRA or a Roth IRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It comes down to your tax rate now compared with your tax rate in retirement. If you expect a lower rate in retirement, the Traditional IRA usually wins. If you expect a higher rate, the Roth IRA usually wins. If the two rates are the same, they end up equal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are the Roth IRA and taxable balances smaller than the Traditional balance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To compare fairly, the calculator assumes you start from the same before-tax amount. After paying your current tax, less is left to put into a Roth IRA or a taxable account, so those balances start smaller. The Traditional balance is shown both before tax and after the tax due on withdrawal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator apply IRA contribution limits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It uses whatever contribution you enter, so it can also model SEP and SIMPLE IRAs, which allow larger contributions. Check the current IRS limit for your account type and age. For a regular IRA in 2026 it is $7,500, or $8,600 if you are 50 or older."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is regular taxable savings taxed in the comparison?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The growth in the taxable account is taxed every year at your current marginal rate, so only the after-tax return compounds. This is why taxable savings finish behind both kinds of IRA."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">IRA Calculator</span>
+    </div>
+    <h1>IRA Calculator</h1>
+    <p>Compare a Traditional, SEP or SIMPLE IRA with a Roth IRA and regular taxable savings, all measured after tax, to see which leaves you with the most.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ir-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="ir-start">Current Balance ($)</label>
+              <input type="number" id="ir-start" value="30000" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="ir-annual">Annual Before-Tax Contribution ($)</label>
+              <input type="number" id="ir-annual" value="7500" min="0" step="any">
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="ir-rate">Expected Rate of Return (%/yr)</label>
+            <input type="number" id="ir-rate" value="6" min="0" max="30" step="any">
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="ir-age">Current Age</label>
+              <input type="number" id="ir-age" value="30" min="0" max="99" step="any">
+            </div>
+            <div class="field-group">
+              <label for="ir-retire">Retirement Age</label>
+              <input type="number" id="ir-retire" value="65" min="1" max="100" step="any">
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="ir-tax">Current Marginal Tax Rate (%)</label>
+              <input type="number" id="ir-tax" value="25" min="0" max="60" step="any">
+            </div>
+            <div class="field-group">
+              <label for="ir-tax-later">Expected Tax Rate in Retirement (%)</label>
+              <input type="number" id="ir-tax-later" value="15" min="0" max="60" step="any">
+            </div>
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="ir-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="ir-results-section" hidden>
+      <h2 style="margin:0 0 16px;font-size:18px;">Balance Accumulation</h2>
+      <div id="ir-chart" style="margin-bottom:20px;"></div>
+      <div class="schedule-table-wrap">
+        <div id="ir-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Traditional or Roth: the tax question</h2>
+      <p>A Traditional IRA, and its employer cousins the SEP and SIMPLE IRA, takes before-tax money. You save tax when you contribute, the money grows untaxed, and you pay ordinary income tax on what you withdraw. A Roth IRA is the mirror image: you pay tax first, then the money grows and comes out tax-free. Because both let the money grow untaxed, the real contest is between the tax rate you pay now and the one you expect to pay in retirement.</p>
+
+      <h2>How the comparison is set up</h2>
+      <p>The calculator imagines you start from the same before-tax amount each year. Put it in a Traditional IRA and all of it goes to work. Put it in a Roth IRA or a taxable account and your current tax comes off first, so a smaller amount is invested. At retirement the Traditional balance is reduced by your expected retirement tax rate so the three accounts can be compared on an after-tax basis. Regular taxable savings are taxed on their growth every year at your current rate, which slows their compounding.</p>
+
+      <h2>Reading the result</h2>
+      <p>If your expected retirement tax rate is lower than your current rate, the Traditional IRA usually comes out ahead. If it is higher, the Roth IRA does. If the two rates match, the accounts finish equal and both beat taxable savings. The calculator does not apply contribution limits, income limits or deduction rules, so check those for your own situation.</p>
+      <div class="callout">This is an estimate for planning, not tax or investment advice. It assumes a steady return, fixed tax rates and no early withdrawals, and it adds each year's contribution at the end of the year.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the difference between a Traditional IRA and a Roth IRA?</h3>
+        <p>A Traditional IRA is funded with before-tax money, so you save tax when you contribute, and you pay income tax on withdrawals in retirement. A Roth IRA is funded with after-tax money, so there is no tax saving now, but qualified withdrawals in retirement are tax-free.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which is better, a Traditional IRA or a Roth IRA?</h3>
+        <p>It comes down to your tax rate now compared with your tax rate in retirement. If you expect a lower rate in retirement, the Traditional IRA usually wins. If you expect a higher rate, the Roth IRA usually wins. If the two rates are the same, they end up equal.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why are the Roth IRA and taxable balances smaller than the Traditional balance?</h3>
+        <p>To compare fairly, the calculator assumes you start from the same before-tax amount. After paying your current tax, less is left to put into a Roth IRA or a taxable account, so those balances start smaller. The Traditional balance is shown both before tax and after the tax due on withdrawal.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this calculator apply IRA contribution limits?</h3>
+        <p>No. It uses whatever contribution you enter, so it can also model SEP and SIMPLE IRAs, which allow larger contributions. Check the current IRS limit for your account type and age. For a regular IRA in 2026 it is $7,500, or $8,600 if you are 50 or older.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is regular taxable savings taxed in the comparison?</h3>
+        <p>The growth in the taxable account is taxed every year at your current marginal rate, so only the after-tax return compounds. This is why taxable savings finish behind both kinds of IRA.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Retirement Calculators</h2>
+    <p class="section-sub">Pick another retirement tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="roth-ira-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Roth IRA Calculator</h3>
+        <p>Estimate a Roth IRA balance against a taxable account.</p>
+      </a>
+
+      <a class="calc-list-card" href="401k-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>401K Calculator</h3>
+        <p>Project your 401(k) balance with employer match and the IRS limit.</p>
+      </a>
+
+      <a class="calc-list-card" href="retirement-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/ira-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

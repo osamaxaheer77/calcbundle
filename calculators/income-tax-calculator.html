@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Income Tax Calculator - CalcBundle</title>
+<meta name="description" content="Estimate your 2025 or 2026 federal income tax refund or amount owed with current brackets, deductions and credits, including tips, overtime, seniors, capital gains and self-employment income.">
+<link rel="canonical" href="https://calcbundle.net/calculators/income-tax-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Income Tax Calculator - CalcBundle">
+<meta property="og:description" content="Estimate your 2025 or 2026 federal income tax refund or amount owed with current brackets, deductions and credits, including tips, overtime, seniors, capital gains and self-employment income.">
+<meta property="og:url" content="https://calcbundle.net/calculators/income-tax-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Income Tax Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate your 2025 or 2026 federal income tax refund or amount owed with current brackets, deductions and credits, including tips, overtime, seniors, capital gains and self-employment income.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which tax years and rules does this calculator use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It uses U.S. federal rules for tax years 2025 and 2026, including the changes from the One Big Beautiful Bill Act: larger standard deductions, a $40,000 cap on the state and local tax deduction, new deductions for tips, overtime, car loan interest and seniors, and a $2,200 child tax credit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it include state income tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It estimates only your federal return. The state and local tax rate you enter is used just to estimate how much state tax you could deduct if you itemize."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are tips and overtime handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your qualified tips and the extra half-time premium part of your overtime pay. The tips deduction is capped at $25,000 and the overtime deduction at $12,500, or $25,000 on a joint return. Both shrink by $100 for every $1,000 of income above $150,000, or $300,000 on a joint return."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why might my result differ from another tax calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tax calculators make different assumptions, and some use older or simplified rules. This one applies phase-outs, the refundable limit on the child tax credit and the current state and local tax cap as written in the tax code. Small differences in what counts as income or how a credit is limited can change the result, and only a tax professional or the IRS can give a final answer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is self-employment income taxed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Self-employment tax is 15.3% on 92.35% of your net business income, split between Social Security and Medicare, and half of it is deductible. The calculator also takes the 20% qualified business income deduction, simplified for higher incomes."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Income Tax Calculator</span>
+    </div>
+    <h1>Income Tax Calculator</h1>
+    <p>Estimate your federal income tax refund or amount owed for 2025 or 2026, with current brackets, deductions and credits. Mainly for U.S. taxpayers.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="it-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-status">Filing Status</label>
+              <select id="it-status" class="unit-select">
+                <option value="single" selected>Single</option>
+                <option value="mfj">Married Filing Jointly</option>
+                <option value="mfs">Married Filing Separately</option>
+                <option value="hoh">Head of Household</option>
+                <option value="qw">Qualified Surviving Spouse</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="it-year">Tax Year</label>
+              <select id="it-year" class="unit-select">
+                <option value="2026">2026 (return filed in 2027)</option>
+                <option value="2025" selected>2025 (return filed in 2026)</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-young">Children Under 17</label>
+              <input type="number" id="it-young" value="0" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="it-other-deps">Other Dependents</label>
+              <input type="number" id="it-other-deps" value="0" min="0" step="1">
+            </div>
+          </div>
+
+          <p style="font-size:13px;font-weight:700;color:var(--text-primary);margin:18px 0 10px;" id="it-person1-title">You</p>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-age1">Age</label>
+              <input type="number" id="it-age1" value="30" min="0" max="120" step="1">
+            </div>
+            <div class="field-group">
+              <label for="it-wages1">Wages and Tips ($)</label>
+              <input type="number" id="it-wages1" value="80000" min="0" step="1000">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-withheld1">Federal Tax Withheld ($)</label>
+              <input type="number" id="it-withheld1" value="9000" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="it-statewh1">State and Local Tax Withheld ($)</label>
+              <input type="number" id="it-statewh1" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="it-medicare1">Medicare Wages ($, optional)</label>
+            <input type="number" id="it-medicare1" value="0" min="0" step="1000">
+          </div>
+
+          <div data-joint hidden>
+            <p style="font-size:13px;font-weight:700;color:var(--text-primary);margin:18px 0 10px;">Person 2</p>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="it-age2">Age</label>
+                <input type="number" id="it-age2" value="30" min="0" max="120" step="1">
+              </div>
+              <div class="field-group">
+                <label for="it-wages2">Wages and Tips ($)</label>
+                <input type="number" id="it-wages2" value="0" min="0" step="1000">
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="it-withheld2">Federal Tax Withheld ($)</label>
+                <input type="number" id="it-withheld2" value="0" min="0" step="100">
+              </div>
+              <div class="field-group">
+                <label for="it-statewh2">State and Local Tax Withheld ($)</label>
+                <input type="number" id="it-statewh2" value="0" min="0" step="100">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="it-medicare2">Medicare Wages ($, optional)</label>
+              <input type="number" id="it-medicare2" value="0" min="0" step="1000">
+            </div>
+          </div>
+
+          <div class="field-group" style="margin-top:6px;">
+            <label class="radio-option" style="display:flex;align-items:center;gap:8px;font-weight:500;"><input type="checkbox" id="it-has-business" style="width:auto;height:auto;">Has self-employment or business income</label>
+          </div>
+          <div data-business hidden>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="it-business1">Business Income, Person 1 ($)</label>
+                <input type="number" id="it-business1" value="0" min="0" step="1000">
+              </div>
+              <div class="field-group">
+                <label for="it-estimated1">Estimated Tax Paid, Person 1 ($)</label>
+                <input type="number" id="it-estimated1" value="0" min="0" step="100">
+              </div>
+            </div>
+            <div data-joint hidden>
+              <div class="field-row">
+                <div class="field-group">
+                  <label for="it-business2">Business Income, Person 2 ($)</label>
+                  <input type="number" id="it-business2" value="0" min="0" step="1000">
+                </div>
+                <div class="field-group">
+                  <label for="it-estimated2">Estimated Tax Paid, Person 2 ($)</label>
+                  <input type="number" id="it-estimated2" value="0" min="0" step="100">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p style="font-size:13px;font-weight:700;color:var(--text-primary);margin:18px 0 10px;">Other Income</p>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-ss">Social Security ($)</label>
+              <input type="number" id="it-ss" value="0" min="0" step="500">
+            </div>
+            <div class="field-group">
+              <label for="it-interest">Interest ($)</label>
+              <input type="number" id="it-interest" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-ord-div">Ordinary Dividends ($)</label>
+              <input type="number" id="it-ord-div" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="it-qual-div">Qualified Dividends ($)</label>
+              <input type="number" id="it-qual-div" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-passive">Rental and Passive ($)</label>
+              <input type="number" id="it-passive" value="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="it-other-income">Other Income ($)</label>
+              <input type="number" id="it-other-income" value="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-stgain">Short-Term Capital Gains ($)</label>
+              <input type="number" id="it-stgain" value="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="it-ltgain">Long-Term Capital Gains ($)</label>
+              <input type="number" id="it-ltgain" value="0" step="100">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="it-state-rate">State and Local Income Tax Rate (%)</label>
+            <input type="number" id="it-state-rate" value="0" min="0" max="30" step="0.1">
+          </div>
+
+          <p style="font-size:13px;font-weight:700;color:var(--text-primary);margin:18px 0 10px;">Deductions and Credits</p>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-tips">Qualified Tips ($)</label>
+              <input type="number" id="it-tips" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="it-overtime">Qualified Overtime Premium ($)</label>
+              <input type="number" id="it-overtime" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-car">Car Loan Interest ($)</label>
+              <input type="number" id="it-car" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="it-ira">IRA Contributions ($)</label>
+              <input type="number" id="it-ira" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-realestate">Real Estate Tax ($)</label>
+              <input type="number" id="it-realestate" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="it-mortgage">Mortgage Interest ($)</label>
+              <input type="number" id="it-mortgage" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-charity">Charitable Donations ($)</label>
+              <input type="number" id="it-charity" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="it-student">Student Loan Interest ($)</label>
+              <input type="number" id="it-student" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="it-childcare">Child and Dependent Care Expenses ($)</label>
+            <input type="number" id="it-childcare" value="0" min="0" step="100">
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-tuition1">College Expenses, Student 1 ($)</label>
+              <input type="number" id="it-tuition1" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="it-tuition2">Student 2 ($)</label>
+              <input type="number" id="it-tuition2" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="it-tuition3">Student 3 ($)</label>
+              <input type="number" id="it-tuition3" value="0" min="0" step="100">
+            </div>
+            <div class="field-group">
+              <label for="it-tuition4">Student 4 ($)</label>
+              <input type="number" id="it-tuition4" value="0" min="0" step="100">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="it-other-ded">Other Itemized Deductions ($)</label>
+            <input type="number" id="it-other-ded" value="0" min="0" step="100">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="it-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the estimate is worked out</h2>
+      <p>The calculator adds up your income, takes off adjustments such as IRA contributions and half of any self-employment tax, and arrives at adjusted gross income. It then subtracts the larger of the standard deduction or your itemized deductions, plus the new tips, overtime, car loan interest and senior deductions where they apply, to reach taxable income. Ordinary income is taxed through the seven brackets, while qualified dividends and long-term gains are taxed at 0%, 15% or 20% on top of it. Credits and what you have already paid, through withholding and estimated payments, then give your refund or balance due.</p>
+
+      <h2>Deductions and credits it handles</h2>
+      <p>Itemized deductions include mortgage interest, charitable gifts, real estate tax and an estimate of state and local income tax, with the state and local total capped at $40,000 for 2025 and $40,400 for 2026. Credits include the child tax credit with its refundable part, a credit for other dependents, the child and dependent care credit, the American Opportunity education credit and the earned income credit. Social Security benefits are taxed on up to 85% depending on your other income, and the 3.8% net investment income tax, additional Medicare tax and alternative minimum tax are included for higher earners.</p>
+      <div class="callout">This is an estimate for planning, not tax advice. It leaves out state taxes, foreign income, itemized medical costs, health savings accounts, energy credits and many other situations. Rules for the credits and deductions also depend on facts the calculator cannot check, such as who qualifies as a dependent.</div>
+
+      <h2>New rules for 2025 and 2026</h2>
+      <p>The One Big Beautiful Bill Act raised the standard deduction to $15,750 for single filers and $31,500 for joint filers in 2025, and added temporary deductions for tips, overtime and car loan interest. People 65 and older get an extra $6,000 deduction each, which shrinks as income rises. Starting in 2026, taxpayers who do not itemize can deduct up to $1,000 of cash gifts to charity, or $2,000 on a joint return, and those who itemize can deduct charity only above 0.5% of their income.</p>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>Which tax years and rules does this calculator use?</h3>
+        <p>It uses U.S. federal rules for tax years 2025 and 2026, including the changes from the One Big Beautiful Bill Act: larger standard deductions, a $40,000 cap on the state and local tax deduction, new deductions for tips, overtime, car loan interest and seniors, and a $2,200 child tax credit.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it include state income tax?</h3>
+        <p>No. It estimates only your federal return. The state and local tax rate you enter is used just to estimate how much state tax you could deduct if you itemize.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How are tips and overtime handled?</h3>
+        <p>Enter your qualified tips and the extra half-time premium part of your overtime pay. The tips deduction is capped at $25,000 and the overtime deduction at $12,500, or $25,000 on a joint return. Both shrink by $100 for every $1,000 of income above $150,000, or $300,000 on a joint return.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why might my result differ from another tax calculator?</h3>
+        <p>Tax calculators make different assumptions, and some use older or simplified rules. This one applies phase-outs, the refundable limit on the child tax credit and the current state and local tax cap as written in the tax code. Small differences in what counts as income or how a credit is limited can change the result, and only a tax professional or the IRS can give a final answer.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is self-employment income taxed?</h3>
+        <p>Self-employment tax is 15.3% on 92.35% of your net business income, split between Social Security and Medicare, and half of it is deductible. The calculator also takes the 20% qualified business income deduction, simplified for higher incomes.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="salary-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Salary Calculator</h3>
+        <p>Convert pay between hourly, monthly, and annual figures.</p>
+      </a>
+
+      <a class="calc-list-card" href="estate-tax-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Estate Tax Calculator</h3>
+        <p>Estimate the federal estate tax on what you leave behind.</p>
+      </a>
+
+      <a class="calc-list-card" href="retirement-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/tax-engine.js"></script>
+<script src="../js/income-tax-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

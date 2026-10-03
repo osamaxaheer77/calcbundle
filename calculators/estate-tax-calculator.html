@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estate Tax Calculator - CalcBundle</title>
+<meta name="description" content="Estimate the federal estate tax on an estate using the 2026 exemption of $15 million and the 40% rate, after debts, expenses, charitable gifts, state taxes and lifetime gifts.">
+<link rel="canonical" href="https://calcbundle.net/calculators/estate-tax-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Estate Tax Calculator - CalcBundle">
+<meta property="og:description" content="Estimate the federal estate tax on an estate using the 2026 exemption of $15 million and the 40% rate, after debts, expenses, charitable gifts, state taxes and lifetime gifts.">
+<meta property="og:url" content="https://calcbundle.net/calculators/estate-tax-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Estate Tax Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate the federal estate tax on an estate using the 2026 exemption of $15 million and the 40% rate, after debts, expenses, charitable gifts, state taxes and lifetime gifts.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the federal estate tax exemption for 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For 2026 each person can pass on up to $15 million before federal estate tax applies. Only the amount above that is taxed, at a rate of 40%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do lifetime gifts count toward the estate tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gifts above the yearly gift tax exclusion use up part of your lifetime exemption, so they are added back to your estate when the tax is worked out. Enter the total of those taxable gifts, not the small gifts that fall under the yearly exclusion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is anything I leave to my spouse taxed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally no. Assets left to a surviving spouse who is a U.S. citizen are deducted through the marital deduction, and a spouse can often carry over an unused exemption. Enter only what passes to other heirs, such as children, to estimate the tax on them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this include state estate or inheritance tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It estimates only the federal tax. Some states add their own estate or inheritance tax, often with a much lower threshold. If you know the state tax amount, enter it as a deduction, since state death taxes reduce the federal taxable estate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between estate tax and inheritance tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Estate tax is paid by the estate before assets are handed out, based on the total value left behind. Inheritance tax is paid by the person who receives the assets. The federal government charges only an estate tax, while a few states charge an inheritance tax."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/financial.html" style="color:inherit;text-decoration:none;">Financial</a>
+      <span>/</span>
+      <span class="current">Estate Tax Calculator</span>
+    </div>
+    <h1>Estate Tax Calculator</h1>
+    <p>Estimate the federal estate tax on what you leave behind, after debts, expenses, charitable gifts and the lifetime exemption. Mainly for U.S. residents.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="est-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+
+          <p style="font-size:13px;font-weight:700;color:var(--text-primary);margin:0 0 10px;">Assets</p>
+          <div class="field-group">
+            <label for="est-residence">Residence and Other Real Estate ($)</label>
+            <input type="number" id="est-residence" value="0" min="0" step="1000">
+          </div>
+          <div class="field-group">
+            <label for="est-stock">Stocks, Bonds and Other Investments ($)</label>
+            <input type="number" id="est-stock" value="0" min="0" step="1000">
+          </div>
+          <div class="field-group">
+            <label for="est-saving">Savings, CDs and Checking ($)</label>
+            <input type="number" id="est-saving" value="0" min="0" step="1000">
+          </div>
+          <div class="field-group">
+            <label for="est-vehicle">Vehicles, Boats and Other Property ($)</label>
+            <input type="number" id="est-vehicle" value="0" min="0" step="1000">
+          </div>
+          <div class="field-group">
+            <label for="est-retirement">Retirement Plans ($)</label>
+            <input type="number" id="est-retirement" value="0" min="0" step="1000">
+          </div>
+          <div class="field-group">
+            <label for="est-insurance">Life Insurance Benefit ($)</label>
+            <input type="number" id="est-insurance" value="0" min="0" step="1000">
+          </div>
+          <div class="field-group">
+            <label for="est-other">Other Assets ($)</label>
+            <input type="number" id="est-other" value="0" min="0" step="1000">
+          </div>
+
+          <p style="font-size:13px;font-weight:700;color:var(--text-primary);margin:20px 0 10px;">Debts, Costs and Deductions</p>
+          <div class="field-group">
+            <label for="est-debt">Debts: Mortgages, Loans, Credit Cards ($)</label>
+            <input type="number" id="est-debt" value="0" min="0" step="1000">
+          </div>
+          <div class="field-group">
+            <label for="est-funeral">Funeral, Administration and Claims ($)</label>
+            <input type="number" id="est-funeral" value="0" min="0" step="1000">
+          </div>
+          <div class="field-group">
+            <label for="est-charity">Charitable Contributions ($)</label>
+            <input type="number" id="est-charity" value="0" min="0" step="1000">
+          </div>
+          <div class="field-group">
+            <label for="est-state">State Inheritance or Estate Taxes ($)</label>
+            <input type="number" id="est-state" value="0" min="0" step="1000">
+          </div>
+
+          <p style="font-size:13px;font-weight:700;color:var(--text-primary);margin:20px 0 10px;">Lifetime Gifts</p>
+          <div class="field-group">
+            <label for="est-gifts">Taxable Gifts Made in Your Lifetime ($)</label>
+            <input type="number" id="est-gifts" value="0" min="0" step="1000">
+          </div>
+
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+
+        <div class="mortgage-results-card" id="est-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the estate tax is worked out</h2>
+      <p>The gross estate is the market value of everything you own when you die: property, investments, savings, retirement accounts, life insurance and other assets. From that, debts, funeral and administration costs, charitable gifts and any state death tax are subtracted to give the net estate. Taxable gifts made during your lifetime are added back, and the total is compared with the lifetime exemption. Only the amount above the exemption is taxed, at a flat 40%.</p>
+
+      <h2>The lifetime exemption</h2>
+      <p>Every person has a lifetime exemption that covers both gifts during life and the estate left at death. It is $15 million for 2026, up from $13.99 million in 2025, so most estates owe no federal estate tax at all. A surviving spouse can often use any exemption the first spouse did not, which can shelter even more for a married couple.</p>
+      <div class="callout">This is an estimate for planning, not legal or tax advice. Estate rules are complex, state taxes can apply at far lower amounts, and trusts and business interests can change the result. Talk to an estate attorney before relying on it.</div>
+
+      <h2>Past exemption amounts</h2>
+      <p>The exemption has grown over time: $5.34 million in 2014, $11.18 million in 2018, $12.92 million in 2023, $13.61 million in 2024, $13.99 million in 2025 and $15 million in 2026. The rate has been 40% since 2013.</p>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the federal estate tax exemption for 2026?</h3>
+        <p>For 2026 each person can pass on up to $15 million before federal estate tax applies. Only the amount above that is taxed, at a rate of 40%.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do lifetime gifts count toward the estate tax?</h3>
+        <p>Gifts above the yearly gift tax exclusion use up part of your lifetime exemption, so they are added back to your estate when the tax is worked out. Enter the total of those taxable gifts, not the small gifts that fall under the yearly exclusion.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is anything I leave to my spouse taxed?</h3>
+        <p>Generally no. Assets left to a surviving spouse who is a U.S. citizen are deducted through the marital deduction, and a spouse can often carry over an unused exemption. Enter only what passes to other heirs, such as children, to estimate the tax on them.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this include state estate or inheritance tax?</h3>
+        <p>No. It estimates only the federal tax. Some states add their own estate or inheritance tax, often with a much lower threshold. If you know the state tax amount, enter it as a deduction, since state death taxes reduce the federal taxable estate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between estate tax and inheritance tax?</h3>
+        <p>Estate tax is paid by the estate before assets are handed out, based on the total value left behind. Inheritance tax is paid by the person who receives the assets. The federal government charges only an estate tax, while a few states charge an inheritance tax.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another financial tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="retirement-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Retirement Calculator</h3>
+        <p>Project how your retirement savings could grow between now and then.</p>
+      </a>
+
+      <a class="calc-list-card" href="401k-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>401K Calculator</h3>
+        <p>Project your 401(k) balance with employer match and the IRS limit.</p>
+      </a>
+
+      <a class="calc-list-card" href="salary-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Salary Calculator</h3>
+        <p>Convert pay between hourly, monthly, and annual figures.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/estate-tax-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
