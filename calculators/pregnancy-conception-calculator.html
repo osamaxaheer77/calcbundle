@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pregnancy Conception Calculator - CalcBundle</title>
+<meta name="description" content="Estimate the date of conception and the likely dates of intercourse from a due date, your last period or an ultrasound.">
+<link rel="canonical" href="https://calcbundle.net/calculators/pregnancy-conception-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Pregnancy Conception Calculator - CalcBundle">
+<meta property="og:description" content="Estimate the date of conception and the likely dates of intercourse from a due date, your last period or an ultrasound.">
+<meta property="og:url" content="https://calcbundle.net/calculators/pregnancy-conception-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pregnancy Conception Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate the date of conception and the likely dates of intercourse from a due date, your last period or an ultrasound.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is the conception date estimated from a due date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A due date is set 280 days after the first day of the last period, and conception is about 14 days after that. So conception is estimated at 266 days before the due date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is there a range of dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ovulation does not always happen on the same day of the cycle, and sperm can survive for several days. The calculator therefore gives a most probable range and a wider range of possible dates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long can sperm live in the body?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sperm can survive for three to five days in the female body, which is why intercourse before ovulation can still lead to pregnancy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does cycle length change the result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Ovulation usually happens about 14 days before the next period starts. A longer cycle means later ovulation and a later conception date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this tell me who the father is?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It only estimates dates and cannot confirm paternity. Only a medical or genetic test can do that."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Pregnancy Conception Calculator</span>
+    </div>
+    <h1>Pregnancy Conception Calculator</h1>
+    <p>Work backward from your due date, last period or ultrasound to estimate when conception most likely happened.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="pcn-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="pcn-method">Calculate Based On</label>
+            <select id="pcn-method" class="unit-select">
+              <option value="due" selected>Due date</option>
+              <option value="lmp">Last period</option>
+              <option value="us">Ultrasound</option>
+            </select>
+          </div>
+          <div id="pcn-due-box" class="field-group">
+            <label for="pcn-due">Your Due Date</label>
+            <input type="date" id="pcn-due">
+          </div>
+          <div id="pcn-lmp-box">
+            <div class="field-group">
+              <label for="pcn-lmp">First Day of Your Last Period</label>
+              <input type="date" id="pcn-lmp">
+            </div>
+            <div class="field-group">
+              <label for="pcn-cycle">Average Length of Your Cycles</label>
+              <select id="pcn-cycle" class="unit-select"><option value="22">22 days</option><option value="23">23 days</option><option value="24">24 days</option><option value="25">25 days</option><option value="26">26 days</option><option value="27">27 days</option><option value="28" selected>28 days</option><option value="29">29 days</option><option value="30">30 days</option><option value="31">31 days</option><option value="32">32 days</option><option value="33">33 days</option><option value="34">34 days</option><option value="35">35 days</option><option value="36">36 days</option><option value="37">37 days</option><option value="38">38 days</option><option value="39">39 days</option><option value="40">40 days</option><option value="41">41 days</option><option value="42">42 days</option><option value="43">43 days</option><option value="44">44 days</option></select>
+            </div>
+          </div>
+          <div id="pcn-us-box">
+            <div class="field-group">
+              <label for="pcn-us-date">Ultrasound Date</label>
+              <input type="date" id="pcn-us-date">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pcn-us-weeks">Pregnancy Length at the Time (weeks)</label>
+                <input type="number" id="pcn-us-weeks" value="8" min="0" max="42" step="1">
+              </div>
+              <div class="field-group">
+                <label for="pcn-us-days">and days</label>
+                <input type="number" id="pcn-us-days" value="0" min="0" max="6" step="1">
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="pcn-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">When did I conceive?</h2>
+      <p>Conception happens when a sperm fertilizes an egg, usually within a day of ovulation. Because ovulation is hard to pin down, the date is worked out from something you do know: your due date, the first day of your last period, or an ultrasound that gave the age of the pregnancy. In a typical 28 day cycle, ovulation falls around day 14, so conception is about two weeks after the last period began and about 38 weeks, or 266 days, before the due date.</p>
+
+      <h2>The range of dates</h2>
+      <p>No method can name the exact day. The calculator shows a most probable range of about five days around the estimate and a wider range of possible dates, since ovulation can come earlier or later than expected. It also shows the dates of intercourse that could have led to the pregnancy. Sperm can live in the body for three to five days, so intercourse up to five days before conception can result in pregnancy.</p>
+
+      <h2>Cycle length and ultrasounds</h2>
+      <p>If you start from your last period, the length of your usual cycle matters. Ovulation tends to happen about 14 days before the next period, so with a 35 day cycle, conception is more likely around day 21 than day 14. For an ultrasound, the calculator takes the date and the length of the pregnancy found by the scan, works back to the start of the last period, and then follows the same steps. Early scans are the most accurate way to date a pregnancy.</p>
+      <div class="callout">These dates are estimates only. They cannot establish when conception happened, and they are not a medical or legal tool. Speak to your doctor or midwife about dating your pregnancy.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How is the conception date estimated from a due date?</h3>
+        <p>A due date is set 280 days after the first day of the last period, and conception is about 14 days after that. So conception is estimated at 266 days before the due date.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is there a range of dates?</h3>
+        <p>Ovulation does not always happen on the same day of the cycle, and sperm can survive for several days. The calculator therefore gives a most probable range and a wider range of possible dates.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How long can sperm live in the body?</h3>
+        <p>Sperm can survive for three to five days in the female body, which is why intercourse before ovulation can still lead to pregnancy.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does cycle length change the result?</h3>
+        <p>Yes. Ovulation usually happens about 14 days before the next period starts. A longer cycle means later ovulation and a later conception date.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can this tell me who the father is?</h3>
+        <p>No. It only estimates dates and cannot confirm paternity. Only a medical or genetic test can do that.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="pregnancy-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pregnancy Calculator</h3>
+        <p>Find your due date and weekly pregnancy timeline.</p>
+      </a>
+
+      <a class="calc-list-card" href="ovulation-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Ovulation Calculator</h3>
+        <p>Estimate your most fertile days.</p>
+      </a>
+
+      <a class="calc-list-card" href="period-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Period Calculator</h3>
+        <p>Predict your next periods.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/pregnancy-conception-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Army Body Fat Calculator - CalcBundle</title>
+<meta name="description" content="Estimate body fat with the U.S. Army tape method from weight and waist measurement, and check it against the maximum allowed for your age and sex.">
+<link rel="canonical" href="https://calcbundle.net/calculators/army-body-fat-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Army Body Fat Calculator - CalcBundle">
+<meta property="og:description" content="Estimate body fat with the U.S. Army tape method from weight and waist measurement, and check it against the maximum allowed for your age and sex.">
+<meta property="og:url" content="https://calcbundle.net/calculators/army-body-fat-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Army Body Fat Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate body fat with the U.S. Army tape method from weight and waist measurement, and check it against the maximum allowed for your age and sex.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Army tape test?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a one-site body fat estimate that uses weight and the circumference of the abdomen at the belly button. The numbers go into a formula that differs for men and women."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum body fat allowed in the Army?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on age and sex. For men it ranges from 20% for ages 17 to 20 up to 26% at 40 and over, and for women from 30% up to 36%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should I measure my waist for this calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stand relaxed and measure around the abdomen at the level of the belly button. Take three measurements, average them, and round to the nearest half inch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the result say 0% for a small waist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formula can give a negative number for a very small waist and a high weight, so the result is held at 0%. A real body fat of zero is not possible, so check your measurements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the result the same as a DXA or body scan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The tape method is a quick estimate that can be several points away from a DXA scan or other lab test. The Army allows a supplemental test for soldiers who do not meet the tape standard."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Army Body Fat Calculator</span>
+    </div>
+    <h1>Army Body Fat Calculator</h1>
+    <p>Estimate your body fat with the Army tape method, from your weight and waist, and see if you meet the standard for your age.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ab-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Sex</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="ab-sex" value="m" checked>Male</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="ab-sex" value="f">Female</label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="ab-units">Units</label>
+            <select id="ab-units" class="unit-select"><option value="us" selected>US (pounds, feet and inches)</option><option value="metric">Metric (kilograms, centimeters)</option></select>
+          </div>
+          <div class="field-group">
+            <label for="ab-age">Age</label>
+            <input type="number" id="ab-age" value="21" min="17" max="120" step="1">
+          </div>
+          <div class="field-group">
+            <label for="ab-weight" id="ab-weight-label">Weight (pounds)</label>
+            <input type="number" id="ab-weight" value="165" min="0" step="any">
+          </div>
+          <div id="ab-waist-us" class="field-row">
+            <div class="field-group">
+              <label for="ab-feet">Waist (feet)</label>
+              <input type="number" id="ab-feet" value="3" min="0" step="1">
+            </div>
+            <div class="field-group">
+              <label for="ab-inch">Waist (inches)</label>
+              <input type="number" id="ab-inch" value="0" min="0" step="any">
+            </div>
+          </div>
+          <div id="ab-waist-metric" class="field-group" style="display:none;">
+            <label for="ab-cm">Waist (centimeters)</label>
+            <input type="number" id="ab-cm" value="91.5" min="0" step="any">
+          </div>
+          <p style="font-size:12px;color:var(--text-secondary);margin:0 0 12px;">Waist is the abdominal circumference at the level of the belly button. Use the average of three measurements.</p>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="ab-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card">
+      <h2 style="margin:0 0 16px;font-size:18px;">Maximum allowable body fat</h2>
+      <table class="schedule-table"><thead><tr><th>Age</th><th>Male</th><th>Female</th></tr></thead><tbody>
+        <tr><td>17–20</td><td>20%</td><td>30%</td></tr>
+        <tr><td>21–27</td><td>22%</td><td>32%</td></tr>
+        <tr><td>28–39</td><td>24%</td><td>34%</td></tr>
+        <tr><td>40 and over</td><td>26%</td><td>36%</td></tr>
+      </tbody></table>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How the Army tape method works</h2>
+      <p>The Army estimates body fat from two numbers: your weight in pounds and your abdominal circumference in inches, measured at the belly button. For men, body fat is 1.99 times the waist, minus 0.12 times the weight, minus 26.97. For women, it is 1.27 times the waist, minus 0.015 times the weight, minus 9.15. The result is rounded to a whole percent and kept between 0% and 100%.</p>
+
+      <h2>Taking the measurements</h2>
+      <p>Stand upright with your arms relaxed at your sides. Measure around the abdomen at the level of the belly button, take the measurement three times, and use the average rounded to the nearest half inch. Weigh yourself and round to the nearest pound. Small errors in the waist matter a lot, since each inch changes the estimate by more than one percentage point for men and women.</p>
+
+      <h2>Meeting the standard</h2>
+      <p>The maximum allowed body fat depends on age and sex, as shown in the table. If your estimate is above it, the calculator shows how many percentage points you need to lose, and the matching amount of body fat in pounds for your current weight. This is a screening estimate based on one measurement. It is not a measure of overall health, and a supplemental test can give a more detailed result.</p>
+      <div class="callout">This calculator follows the tape method of the U.S. Army body composition program as published in 2023. It is an estimate for screening, not an official assessment, and the rules can change, so confirm the current standard with your unit.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the Army tape test?</h3>
+        <p>It is a one-site body fat estimate that uses weight and the circumference of the abdomen at the belly button. The numbers go into a formula that differs for men and women.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the maximum body fat allowed in the Army?</h3>
+        <p>It depends on age and sex. For men it ranges from 20% for ages 17 to 20 up to 26% at 40 and over, and for women from 30% up to 36%.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How should I measure my waist for this calculator?</h3>
+        <p>Stand relaxed and measure around the abdomen at the level of the belly button. Take three measurements, average them, and round to the nearest half inch.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the result say 0% for a small waist?</h3>
+        <p>The formula can give a negative number for a very small waist and a high weight, so the result is held at 0%. A real body fat of zero is not possible, so check your measurements.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the result the same as a DXA or body scan?</h3>
+        <p>No. The tape method is a quick estimate that can be several points away from a DXA scan or other lab test. The Army allows a supplemental test for soldiers who do not meet the tape standard.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="body-fat-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Body Fat Calculator</h3>
+        <p>Estimate body fat from body measurements.</p>
+      </a>
+
+      <a class="calc-list-card" href="bmi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMI Calculator</h3>
+        <p>Work out your body mass index.</p>
+      </a>
+
+      <a class="calc-list-card" href="ideal-weight-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Ideal Weight Calculator</h3>
+        <p>Find an ideal weight range for your height.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/army-body-fat-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pace Calculator - CalcBundle</title>
+<meta name="description" content="Work out running or walking pace, time or distance, with race times and splits, plus a multipoint pace tool, a pace converter and a finish time estimator.">
+<link rel="canonical" href="https://calcbundle.net/calculators/pace-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Pace Calculator - CalcBundle">
+<meta property="og:description" content="Work out running or walking pace, time or distance, with race times and splits, plus a multipoint pace tool, a pace converter and a finish time estimator.">
+<meta property="og:url" content="https://calcbundle.net/calculators/pace-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pace Calculator - CalcBundle">
+<meta name="twitter:description" content="Work out running or walking pace, time or distance, with race times and splits, plus a multipoint pace tool, a pace converter and a finish time estimator.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate running pace?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide your total time by the distance. A 5 kilometer run in 50 minutes and 25 seconds is 10 minutes and 5 seconds per kilometer, or about 16 minutes and 14 seconds per mile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert minutes per mile to miles per hour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide 60 by the pace in minutes. A pace of 10 minutes per mile is 6 miles per hour. The converter does this for any pair of units."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What distances are used for the marathon and half-marathon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A marathon is 42.195 kilometers, which is 26.2 miles, and a half-marathon is 21.0975 kilometers. The race table uses these exact distances."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are the splits worked out?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The splits assume you hold the same pace the whole way. Each split is the pace multiplied by the distance so far, for every whole kilometer and every whole mile you cover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the finish time estimate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It assumes you keep your current pace to the end. Most people slow down over a long race, so a longer race can take more time than the estimate suggests."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Pace Calculator</span>
+    </div>
+    <h1>Pace Calculator</h1>
+    <p>Find your pace, the time a distance will take, or the distance you cover, then see race times and splits for that pace.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Pace Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Pick what to find. Times can be typed as hh:mm:ss, mm:ss or seconds, so 5 minutes 3 seconds can be entered as 5:3.</p>
+    <form id="pc-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="pc-mode">Find</label>
+            <select id="pc-mode" class="unit-select"><option value="pace" selected>Pace</option><option value="time">Time</option><option value="distance">Distance</option></select>
+          </div>
+          <div class="field-group" id="pc-time-box">
+            <label for="pc-time">Time (hh:mm:ss)</label>
+            <input type="text" id="pc-time" value="00:50:25" autocomplete="off">
+          </div>
+          <div id="pc-dist-box">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pc-dist">Distance</label>
+                <input type="number" id="pc-dist" value="5" min="0" step="any">
+              </div>
+              <div class="field-group">
+                <label for="pc-dunit">Unit</label>
+                <select id="pc-dunit" class="unit-select"><option>Miles</option><option selected>Kilometers</option><option>Meters</option><option>Yards</option></select>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="pc-event">Or pick an event</label>
+              <select id="pc-event" class="unit-select">
+                <option value="" selected>Choose an event</option>
+                <option value="M">Marathon</option><option value="HM">Half-Marathon</option><option value="1K">1K</option><option value="5K">5K</option><option value="10K">10K</option>
+                <option value="1M">1 mile</option><option value="5M">5 miles</option><option value="10M">10 miles</option><option value="800m">800 meters</option><option value="1500m">1500 meters</option>
+              </select>
+            </div>
+          </div>
+          <div id="pc-pace-box">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pc-pace">Pace</label>
+                <input type="text" id="pc-pace" value="08:10" autocomplete="off">
+              </div>
+              <div class="field-group">
+                <label for="pc-punit">Pace Unit</label>
+                <select id="pc-punit" class="unit-select"><option value="tpm" selected>Per Mile</option><option value="tpk">Per Kilometer</option><option value="mph">Miles Per Hour</option><option value="kph">Kilometers Per Hour</option><option value="mpm">Meters Per Minute</option><option value="mps">Meters Per Second</option><option value="ypm">Yards Per Minute</option><option value="yps">Yards Per Second</option></select>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="pc-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Multipoint Pace Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Enter the total distance and total elapsed time at each point of a run. The calculator finds the pace of each section and your average pace. Each row must be farther and later than the one above it.</p>
+    <form id="mp-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div id="mp-rows"></div>
+          <div class="field-group" style="margin-top:14px;">
+            <label for="mp-punit">Preferred Pace Unit</label>
+            <select id="mp-punit" class="unit-select"><option value="tpm" selected>Per Mile</option><option value="tpk">Per Kilometer</option><option value="mph">Miles Per Hour</option><option value="kph">Kilometers Per Hour</option><option value="mpm">Meters Per Minute</option><option value="mps">Meters Per Second</option><option value="ypm">Yards Per Minute</option><option value="yps">Yards Per Second</option></select>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="mp-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Pace Converter</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Convert a pace from one unit to another, such as minutes per mile to kilometers per hour.</p>
+    <form id="cv-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-row">
+            <div class="field-group">
+              <label for="cv-value">Pace</label>
+              <input type="text" id="cv-value" value="5:30" autocomplete="off">
+            </div>
+            <div class="field-group">
+              <label for="cv-from-unit">From</label>
+              <select id="cv-from-unit" class="unit-select"><option value="tpm" selected>Per Mile</option><option value="tpk">Per Kilometer</option><option value="mph">Miles Per Hour</option><option value="kph">Kilometers Per Hour</option><option value="mpm">Meters Per Minute</option><option value="mps">Meters Per Second</option><option value="ypm">Yards Per Minute</option><option value="yps">Yards Per Second</option></select>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="cv-to-unit">To</label>
+            <select id="cv-to-unit" class="unit-select"><option value="tpm">Per Mile</option><option value="tpk" selected>Per Kilometer</option><option value="mph">Miles Per Hour</option><option value="kph">Kilometers Per Hour</option><option value="mpm">Meters Per Minute</option><option value="mps">Meters Per Second</option><option value="ypm">Yards Per Minute</option><option value="yps">Yards Per Second</option></select>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="cv-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Finish Time Calculator</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Estimate how long a race will take if you hold your current pace to the end.</p>
+    <form id="ft-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-row">
+            <div class="field-group">
+              <label for="ft-now">Distance So Far</label>
+              <input type="number" id="ft-now" value="1" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="ft-now-unit">Unit</label>
+              <select id="ft-now-unit" class="unit-select"><option>Miles</option><option selected>Kilometers</option><option>Meters</option><option>Yards</option></select>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="ft-time">Elapsed Time (hh:mm:ss)</label>
+            <input type="text" id="ft-time" value="6:15" autocomplete="off">
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="ft-full">Full Distance</label>
+              <input type="number" id="ft-full" value="5" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="ft-full-unit">Unit</label>
+              <select id="ft-full-unit" class="unit-select"><option>Miles</option><option selected>Kilometers</option><option>Meters</option><option>Yards</option></select>
+            </div>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="ft-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What pace means</h2>
+      <p>Pace is how long it takes to cover a set distance, such as minutes per mile or minutes per kilometer. Runners and walkers usually think in pace, while cyclists often use speed, such as miles or kilometers per hour. The two describe the same thing from opposite sides: a faster pace is a smaller time per distance and a higher speed. The calculator shows both, along with meters per minute and meters per second.</p>
+
+      <h2>Finding pace, time or distance</h2>
+      <p>Give any two of time, distance and pace and the third follows. Pace is the time divided by the distance. The time needed is the distance multiplied by the pace. The distance covered is the time divided by the pace. The race table shows what your pace would give over common distances, and the splits show your elapsed time at each kilometer and mile.</p>
+
+      <h2>Multipoint, converter and finish time</h2>
+      <p>The multipoint tool is for runs where you know your total time at several points. It works out the pace of each section so you can see where you sped up or slowed down. The converter changes a pace between units. The finish time tool takes the distance and time you have covered and shows how long the full distance would take if you kept the same pace, which is a rough guide because pace usually drifts during a long race.</p>
+      <div class="callout">Results assume a steady pace over the whole distance. In practice pace changes with hills, weather, fatigue and race tactics, so treat the race times as a guide for planning.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate running pace?</h3>
+        <p>Divide your total time by the distance. A 5 kilometer run in 50 minutes and 25 seconds is 10 minutes and 5 seconds per kilometer, or about 16 minutes and 14 seconds per mile.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I convert minutes per mile to miles per hour?</h3>
+        <p>Divide 60 by the pace in minutes. A pace of 10 minutes per mile is 6 miles per hour. The converter does this for any pair of units.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What distances are used for the marathon and half-marathon?</h3>
+        <p>A marathon is 42.195 kilometers, which is 26.2 miles, and a half-marathon is 21.0975 kilometers. The race table uses these exact distances.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How are the splits worked out?</h3>
+        <p>The splits assume you hold the same pace the whole way. Each split is the pace multiplied by the distance so far, for every whole kilometer and every whole mile you cover.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How accurate is the finish time estimate?</h3>
+        <p>It assumes you keep your current pace to the end. Most people slow down over a long race, so a longer race can take more time than the estimate suggests.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Fitness &amp; Health Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="calorie-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Calorie Calculator</h3>
+        <p>Estimate the calories you need each day.</p>
+      </a>
+
+      <a class="calc-list-card" href="bmi-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMI Calculator</h3>
+        <p>Work out your body mass index.</p>
+      </a>
+
+      <a class="calc-list-card" href="tdee-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>TDEE Calculator</h3>
+        <p>Estimate your total daily energy expenditure.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/pace-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

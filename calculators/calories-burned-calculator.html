@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calories Burned Calculator - CalcBundle</title>
+<meta name="description" content="Estimate the calories you burn from more than 100 activities by duration and body weight, or from the distance you walk, run or cycle.">
+<link rel="canonical" href="https://calcbundle.net/calculators/calories-burned-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Calories Burned Calculator - CalcBundle">
+<meta property="og:description" content="Estimate the calories you burn from more than 100 activities by duration and body weight, or from the distance you walk, run or cycle.">
+<meta property="og:url" content="https://calcbundle.net/calculators/calories-burned-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Calories Burned Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate the calories you burn from more than 100 activities by duration and body weight, or from the distance you walk, run or cycle.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many calories do I burn walking 5 kilometers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your weight and speed. A 70 kilogram person walking at 4 kilometers per hour burns roughly 220 calories over 5 kilometers. Use the distance calculator to try your own numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a MET?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A MET, or metabolic equivalent of task, compares the energy an activity uses with the energy used at rest. A value of 2 means twice the energy of sitting quietly, and 8 means eight times as much."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do heavier people burn more calories?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Moving a larger body takes more energy. For the same activity and time, the calories burned rise with body weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this include the calories I burn at rest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the values count all energy used during the activity, including what the body would use at rest in that time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are the weights between the listed values handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator uses values for 125, 155 and 185 pounds. Between them it moves along a straight line in calories per kilogram, and outside them it keeps the nearest rate per kilogram."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Calories Burned Calculator</span>
+    </div>
+    <h1>Calories Burned Calculator</h1>
+    <p>Estimate the calories burned by an activity from how long you do it, or by walking, running or cycling a distance.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Calories Burned by Activity</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Pick an activity, how long you do it, and your weight.</p>
+    <form id="cb-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="cb-group">Type of Activity</label>
+            <select id="cb-group" class="unit-select"></select>
+          </div>
+          <div class="field-group">
+            <label for="cb-activity">Activity</label>
+            <select id="cb-activity" class="unit-select"></select>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="cb-hours">Hours</label>
+              <input type="number" id="cb-hours" value="" min="0" step="any" placeholder="0">
+            </div>
+            <div class="field-group">
+              <label for="cb-mins">Minutes</label>
+              <input type="number" id="cb-mins" value="45" min="0" step="any">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="cb-weight">Body Weight</label>
+              <input type="number" id="cb-weight" value="70" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="cb-wunit">Unit</label>
+              <select id="cb-wunit" class="unit-select"><option value="p">pounds</option><option value="k" selected>kilograms</option></select>
+            </div>
+          </div>
+          <p style="font-size:12px;color:var(--text-secondary);margin:-4px 0 12px;">80 to 350 pounds or 35 to 160 kilograms.</p>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="cb-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Calories Burned by Distance</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">For walking, running or cycling a set distance at a given speed or pace.</p>
+    <form id="cb2-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="cb2-act">Activity</label>
+            <select id="cb2-act" class="unit-select"><option value="w" selected>Walking</option><option value="r">Running</option><option value="b">Cycling</option></select>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="cb2-speed">Speed or Pace</label>
+              <input type="number" id="cb2-speed" value="4" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="cb2-sunit">Unit</label>
+              <select id="cb2-sunit" class="unit-select">
+                <option value="mpm">minutes per mile</option><option value="mph">miles per hour</option><option value="yps">yards per second</option>
+                <option value="mpk">minutes per kilometer</option><option value="kph" selected>kilometers per hour</option><option value="mps">meters per second</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Or use a typical pace</label>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              <button type="button" class="calc-submit-btn" data-cb2-preset="0" style="width:auto;padding:6px 14px;margin:0;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Slow</button>
+              <button type="button" class="calc-submit-btn" data-cb2-preset="1" style="width:auto;padding:6px 14px;margin:0;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Moderate</button>
+              <button type="button" class="calc-submit-btn" data-cb2-preset="2" style="width:auto;padding:6px 14px;margin:0;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Fast</button>
+              <button type="button" class="calc-submit-btn" data-cb2-preset="3" style="width:auto;padding:6px 14px;margin:0;background:transparent;color:var(--text-primary);border:1px solid var(--border);">Very fast</button>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="cb2-dist">Distance</label>
+              <input type="number" id="cb2-dist" value="5" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="cb2-dunit">Unit</label>
+              <select id="cb2-dunit" class="unit-select"><option value="i">miles</option><option value="y">yards</option><option value="k" selected>kilometers</option><option value="m">meters</option></select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field-group">
+              <label for="cb2-weight">Body Weight</label>
+              <input type="number" id="cb2-weight" value="70" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="cb2-wunit">Unit</label>
+              <select id="cb2-wunit" class="unit-select"><option value="p">pounds</option><option value="k" selected>kilograms</option></select>
+            </div>
+          </div>
+          <p style="font-size:12px;color:var(--text-secondary);margin:-4px 0 12px;">80 to 350 pounds or 35 to 160 kilograms.</p>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="cb2-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How calories burned are estimated</h2>
+      <p>Every activity has a metabolic equivalent, or MET, which shows how hard it works your body compared with sitting quietly. A higher MET burns more energy for each kilogram of body weight each minute. This calculator uses published energy-use values for each activity at body weights of 125, 155 and 185 pounds, and fills in the weights in between. Heavier people burn more for the same activity, because moving a larger body takes more energy.</p>
+
+      <h2>Duration and distance</h2>
+      <p>The first calculator multiplies the hourly rate for your activity and weight by the time you spend on it. The second one is for walking, running and cycling. It takes your speed, finds the hourly rate at that speed by working between the slow, moderate, fast and very fast values, and multiplies it by the time the distance takes. A faster speed burns more per hour, but you also finish sooner, so the calories for a set distance rise more slowly than the hourly figure.</p>
+
+      <h2>How accurate is the result?</h2>
+      <p>The figures are averages for a typical person. Age, body composition, fitness, temperature and how steadily you work all change the real number. People who are fitter usually burn a little less for the same effort, and breaks during a sport or game mean the activity was not done for the whole time. Use the result as a rough guide for planning, not as an exact measurement.</p>
+      <div class="callout">Calorie estimates are rough. They are not medical advice, so speak to a doctor or dietitian before changing your diet or exercise plan in a big way.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How many calories do I burn walking 5 kilometers?</h3>
+        <p>It depends on your weight and speed. A 70 kilogram person walking at 4 kilometers per hour burns roughly 220 calories over 5 kilometers. Use the distance calculator to try your own numbers.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a MET?</h3>
+        <p>A MET, or metabolic equivalent of task, compares the energy an activity uses with the energy used at rest. A value of 2 means twice the energy of sitting quietly, and 8 means eight times as much.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do heavier people burn more calories?</h3>
+        <p>Moving a larger body takes more energy. For the same activity and time, the calories burned rise with body weight.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this include the calories I burn at rest?</h3>
+        <p>Yes, the values count all energy used during the activity, including what the body would use at rest in that time.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How are the weights between the listed values handled?</h3>
+        <p>The calculator uses values for 125, 155 and 185 pounds. Between them it moves along a straight line in calories per kilogram, and outside them it keeps the nearest rate per kilogram.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="calorie-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Calorie Calculator</h3>
+        <p>Estimate the calories you need each day.</p>
+      </a>
+
+      <a class="calc-list-card" href="bmr-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMR Calculator</h3>
+        <p>Find your basal metabolic rate.</p>
+      </a>
+
+      <a class="calc-list-card" href="pace-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pace Calculator</h3>
+        <p>Work out pace, time or distance with splits.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/calories-burned-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Target Heart Rate Calculator - CalcBundle</title>
+<meta name="description" content="Find your target heart rate zones for exercise from your age and resting heart rate, using the Karvonen method or a rating of perceived exertion scale.">
+<link rel="canonical" href="https://calcbundle.net/calculators/target-heart-rate-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Target Heart Rate Calculator - CalcBundle">
+<meta property="og:description" content="Find your target heart rate zones for exercise from your age and resting heart rate, using the Karvonen method or a rating of perceived exertion scale.">
+<meta property="og:url" content="https://calcbundle.net/calculators/target-heart-rate-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Target Heart Rate Calculator - CalcBundle">
+<meta name="twitter:description" content="Find your target heart rate zones for exercise from your age and resting heart rate, using the Karvonen method or a rating of perceived exertion scale.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate my target heart rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Estimate your maximum heart rate, such as 220 minus your age. Then take the percentages of the maximum that fit your goal, for example 50% to 85% for aerobic exercise. With a resting heart rate, use the Karvonen method for a more personal result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Karvonen formula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Target heart rate equals the heart rate reserve times the intensity, plus the resting heart rate. The reserve is the maximum heart rate minus the resting heart rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good resting heart rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most adults have a resting heart rate between 60 and 100 beats per minute. Fitter people often have lower rates, and a measurement taken after waking is the most reliable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which maximum heart rate formula is best?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "None is exact. Haskell and Fox is the simplest, and Tanaka and Nes were fitted to larger studies. A tested maximum is more reliable than any formula."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between the Borg scale and CR10?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both rate how hard exercise feels. The Borg scale runs from 6 to 20 and was designed to line up with heart rate, while the CR10 scale runs from 0 to 10 and is easier to use."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Target Heart Rate Calculator</span>
+    </div>
+    <h1>Target Heart Rate Calculator</h1>
+    <p>Work out the heart rate zones to aim for when you exercise, from your age or tested maximum and your resting heart rate.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="hr-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Max Heart Rate</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="hr-mode" value="a" checked>Estimate from age</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="hr-mode" value="t">Test result</label>
+            </div>
+          </div>
+          <div class="field-group" id="hr-age-box">
+            <label for="hr-age">Age</label>
+            <input type="number" id="hr-age" value="30" min="1" max="110" step="1">
+          </div>
+          <div class="field-group" id="hr-mhr-box" style="display:none;">
+            <label for="hr-mhr">Tested Max Heart Rate (bpm)</label>
+            <input type="number" id="hr-mhr" value="" min="0" step="any">
+          </div>
+          <div class="field-group">
+            <label for="hr-rhr">Resting Heart Rate (bpm, optional)</label>
+            <input type="number" id="hr-rhr" value="70" min="0" step="any">
+          </div>
+          <div class="field-row">
+            <div class="field-group" id="hr-formula-box">
+              <label for="hr-formula">Max Heart Rate Formula</label>
+              <select id="hr-formula" class="unit-select">
+                <option value="h" selected>Haskell &amp; Fox (220 − age)</option>
+                <option value="t">Tanaka (208 − 0.7 × age)</option>
+                <option value="n">Nes (211 − 0.64 × age)</option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="hr-scale">Intensity Scale</label>
+              <select id="hr-scale" class="unit-select">
+                <option value="k" selected>Karvonen (heart rate reserve)</option>
+                <option value="b">Borg RPE scale (6 to 20)</option>
+                <option value="m">Modified Borg CR10 scale</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="hr-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Heart rate terms</h2>
+      <p>Maximum heart rate is the highest number of beats per minute your heart can reach during hard exercise. Resting heart rate is your pulse when you are calm, ideally measured on waking. Heart rate reserve is the gap between the two. The best way to find your maximum is a supervised stress test, so most people estimate it from age. The common Haskell and Fox rule is 220 minus your age, while the Tanaka and Nes formulas were fitted to larger groups and can suit some ages better.</p>
+
+      <h2>The Karvonen method</h2>
+      <p>Zones based on a percentage of the maximum alone ignore how fit you are. The Karvonen method adds your resting heart rate: it takes a percentage of your heart rate reserve and adds the resting rate back. For a maximum of 190 and a resting rate of 70, the reserve is 120, so 70% of the reserve is 84 and the target is 154 beats per minute. Moderate aerobic exercise is usually placed at 50% to 85% of the reserve, and training zones are given in steps of 10%.</p>
+
+      <h2>Perceived exertion scales</h2>
+      <p>You can also judge effort by how hard exercise feels. The Borg scale runs from 6, no effort, to 20, maximum effort, and the modified Borg CR10 scale from 0 to 10. When you enter a resting heart rate, the calculator matches each rating to a heart rate between your resting and maximum rates. Without a resting heart rate it falls back to simple zones as a share of your maximum heart rate.</p>
+      <div class="callout">Heart rate formulas give averages, and your own maximum can differ by 10 or more beats. Some medicines also change heart rate. If you have a heart condition or are new to exercise, ask a doctor before training at high intensity.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate my target heart rate?</h3>
+        <p>Estimate your maximum heart rate, such as 220 minus your age. Then take the percentages of the maximum that fit your goal, for example 50% to 85% for aerobic exercise. With a resting heart rate, use the Karvonen method for a more personal result.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the Karvonen formula?</h3>
+        <p>Target heart rate equals the heart rate reserve times the intensity, plus the resting heart rate. The reserve is the maximum heart rate minus the resting heart rate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a good resting heart rate?</h3>
+        <p>Most adults have a resting heart rate between 60 and 100 beats per minute. Fitter people often have lower rates, and a measurement taken after waking is the most reliable.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which maximum heart rate formula is best?</h3>
+        <p>None is exact. Haskell and Fox is the simplest, and Tanaka and Nes were fitted to larger studies. A tested maximum is more reliable than any formula.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between the Borg scale and CR10?</h3>
+        <p>Both rate how hard exercise feels. The Borg scale runs from 6 to 20 and was designed to line up with heart rate, while the CR10 scale runs from 0 to 10 and is easier to use.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="bmr-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>BMR Calculator</h3>
+        <p>Find your basal metabolic rate.</p>
+      </a>
+
+      <a class="calc-list-card" href="calories-burned-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Calories Burned Calculator</h3>
+        <p>Estimate calories burned by activity.</p>
+      </a>
+
+      <a class="calc-list-card" href="pace-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pace Calculator</h3>
+        <p>Work out pace, time or distance with splits.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/target-heart-rate-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

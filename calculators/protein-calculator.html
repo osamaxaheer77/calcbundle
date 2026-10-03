@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protein Calculator - CalcBundle</title>
+<meta name="description" content="Estimate how many grams of protein you need each day, with recommendations based on your weight, activity level and calorie needs.">
+<link rel="canonical" href="https://calcbundle.net/calculators/protein-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Protein Calculator - CalcBundle">
+<meta property="og:description" content="Estimate how many grams of protein you need each day, with recommendations based on your weight, activity level and calorie needs.">
+<meta property="og:url" content="https://calcbundle.net/calculators/protein-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Protein Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate how many grams of protein you need each day, with recommendations based on your weight, activity level and calorie needs.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much protein do I need per day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A common guide is 0.8 grams per kilogram of body weight for a sedentary adult, which is about 0.36 grams per pound. Active people may need 1.0 to 1.8 grams per kilogram."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do athletes need more protein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. People who train regularly, especially with weights or for endurance, usually do better with more protein, in the range of 1.0 to 1.8 grams per kilogram of body weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the CDC range of 10% to 35% mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means protein can supply 10% to 35% of your daily calories. The calculator turns that into grams using your calorie needs and about 4.1 calories per gram of protein."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is more protein always better?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Beyond what your body can use, extra protein does not add more muscle. Very high intakes can also be a problem for people with kidney disease."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do my results change with activity level?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The ADA guideline is lower for sedentary people and higher for people who exercise, and your calorie needs, which set the CDC range, rise with activity."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Protein Calculator</span>
+    </div>
+    <h1>Protein Calculator</h1>
+    <p>Find the daily protein recommended for your body weight and activity level, using guidelines from health authorities.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="pr-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label>Sex</label>
+            <div>
+              <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="pr-sex" value="m" checked>Male</label>
+              <label class="radio-option" style="display:inline-flex;"><input type="radio" name="pr-sex" value="f">Female</label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="pr-age">Age (18 to 80)</label>
+            <input type="number" id="pr-age" value="25" min="18" max="80" step="1">
+          </div>
+          <div class="field-group">
+            <label for="pr-units">Units</label>
+            <select id="pr-units" class="unit-select"><option value="metric" selected>Metric (cm, kg)</option><option value="us">US (feet, inches, pounds)</option></select>
+          </div>
+          <div id="pr-metric" class="field-row">
+            <div class="field-group">
+              <label for="pr-cm">Height (cm)</label>
+              <input type="number" id="pr-cm" value="180" min="0" step="any">
+            </div>
+            <div class="field-group">
+              <label for="pr-kg">Weight (kg)</label>
+              <input type="number" id="pr-kg" value="60" min="0" step="any">
+            </div>
+          </div>
+          <div id="pr-us" style="display:none;">
+            <div class="field-row">
+              <div class="field-group">
+                <label for="pr-ft">Height (feet)</label>
+                <input type="number" id="pr-ft" value="5" min="0" step="1">
+              </div>
+              <div class="field-group">
+                <label for="pr-in">Height (inches)</label>
+                <input type="number" id="pr-in" value="10" min="0" step="any">
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="pr-lb">Weight (pounds)</label>
+              <input type="number" id="pr-lb" value="160" min="0" step="any">
+            </div>
+          </div>
+          <div class="field-group">
+            <label for="pr-activity">Activity</label>
+            <select id="pr-activity" class="unit-select">
+              <option value="1.2">Sedentary: little or no exercise</option>
+              <option value="1.375" selected>Light: exercise 1-3 times/week</option>
+              <option value="1.465">Moderate: exercise 4-5 times/week</option>
+              <option value="1.55">Active: daily exercise or intense exercise 3-4 times/week</option>
+              <option value="1.725">Very active: intense exercise 6-7 times/week</option>
+              <option value="1.9">Extra active: very intense exercise daily, or physical job</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="pr-formula">BMR Formula</label>
+            <select id="pr-formula" class="unit-select"><option value="m" selected>Mifflin-St Jeor</option><option value="k">Katch-McArdle</option></select>
+          </div>
+          <div class="field-group" id="pr-fat-box" style="display:none;">
+            <label for="pr-fat">Body Fat (%)</label>
+            <input type="number" id="pr-fat" value="20" min="0" max="99" step="any">
+          </div>
+          <p style="font-size:12px;color:var(--text-secondary);margin:0 0 12px;">Exercise means 15 to 30 minutes of raised heart rate activity. Intense exercise is 45 to 120 minutes, and very intense exercise is 2 hours or more.</p>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="pr-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Why protein matters</h2>
+      <p>Protein is the nutrient your body uses to build and repair muscle, skin, bones and enzymes, and to make hormones. Adults need to eat it every day, because the body does not store protein the way it stores fat. Children, people who train hard, and pregnant and nursing women usually need more than the basic recommendation. People with kidney or liver disease may need to limit it, so they should follow a doctor’s advice.</p>
+
+      <h2>The three guidelines</h2>
+      <p>The calculator shows three common recommendations. The American Dietetic Association suggests about 0.8 to 1.0 grams for each kilogram of body weight for people who are not very active, and 1.0 to 1.8 grams for those who exercise regularly. The Centers for Disease Control and Prevention say protein should be 10% to 35% of daily calories, which depends on how many calories you need. The World Health Organization sets a safe lower limit of 0.83 grams per kilogram of body weight.</p>
+
+      <h2>Using the result</h2>
+      <p>The ranges are wide on purpose. If you want to keep muscle while losing weight, or you train for strength, aim for the higher part of the range. If you are sedentary, the lower part is enough. Spreading protein across your meals works better than eating it all at once, and a mix of animal and plant sources, such as fish, eggs, dairy, beans, lentils and nuts, gives a good range of amino acids.</p>
+      <div class="callout">These figures are general guidance for healthy adults, not medical advice. Ask a doctor or dietitian if you have a health condition, are pregnant or nursing, or plan to eat much more protein than usual.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How much protein do I need per day?</h3>
+        <p>A common guide is 0.8 grams per kilogram of body weight for a sedentary adult, which is about 0.36 grams per pound. Active people may need 1.0 to 1.8 grams per kilogram.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do athletes need more protein?</h3>
+        <p>Yes. People who train regularly, especially with weights or for endurance, usually do better with more protein, in the range of 1.0 to 1.8 grams per kilogram of body weight.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does the CDC range of 10% to 35% mean?</h3>
+        <p>It means protein can supply 10% to 35% of your daily calories. The calculator turns that into grams using your calorie needs and about 4.1 calories per gram of protein.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is more protein always better?</h3>
+        <p>No. Beyond what your body can use, extra protein does not add more muscle. Very high intakes can also be a problem for people with kidney disease.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do my results change with activity level?</h3>
+        <p>The ADA guideline is lower for sedentary people and higher for people who exercise, and your calorie needs, which set the CDC range, rise with activity.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="carbohydrate-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Carbohydrate Calculator</h3>
+        <p>Find your daily carbohydrate range.</p>
+      </a>
+
+      <a class="calc-list-card" href="fat-intake-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Fat Intake Calculator</h3>
+        <p>Find your daily fat allowance.</p>
+      </a>
+
+      <a class="calc-list-card" href="macro-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Macro Calculator</h3>
+        <p>Split your calories into protein, carbs and fat.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/nutrition-common.js"></script>
+<script src="../js/protein-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

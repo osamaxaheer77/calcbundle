@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Due Date Calculator - CalcBundle</title>
+<meta name="description" content="Estimate your baby’s due date from your last period, an ultrasound, a conception date or an IVF transfer date, with your pregnancy week and a week by week timeline.">
+<link rel="canonical" href="https://calcbundle.net/calculators/due-date-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Due Date Calculator - CalcBundle">
+<meta property="og:description" content="Estimate your baby’s due date from your last period, an ultrasound, a conception date or an IVF transfer date, with your pregnancy week and a week by week timeline.">
+<meta property="og:url" content="https://calcbundle.net/calculators/due-date-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Due Date Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate your baby’s due date from your last period, an ultrasound, a conception date or an IVF transfer date, with your pregnancy week and a week by week timeline.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is the due date calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is 280 days after the first day of your last period, which is 40 weeks. If your cycle is not 28 days long, the date moves by the difference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is a due date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only about 4% of babies are born on the due date. Most arrive within about two weeks before or after it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the due date from the conception date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add 266 days to the date of conception. This is 38 weeks, since conception happens about two weeks after the start of the last period."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the due date worked out for IVF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator counts back from the embryo transfer using the age of the embryo. A day 3 embryo adds 263 days to the transfer date, a day 5 embryo adds 261 days, and a day 6 embryo adds 260 days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does the second trimester start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The second trimester starts after 12 weeks of pregnancy, and the third trimester after 27 weeks. A baby is considered full term from 37 weeks."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/fitness.html" style="color:inherit;text-decoration:none;">Fitness &amp; Health</a>
+      <span>/</span>
+      <span class="current">Due Date Calculator</span>
+    </div>
+    <h1>Due Date Calculator</h1>
+    <p>Estimate your due date from your last period, an ultrasound, the date of conception or an IVF transfer, and see how far along you are.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="dd-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="dd-method">Estimate Based On</label>
+            <select id="dd-method" class="unit-select">
+              <option value="lmp" selected>Last period</option>
+              <option value="us">Ultrasound</option>
+              <option value="conc">Conception date</option>
+              <option value="ivf">IVF transfer date</option>
+            </select>
+          </div>
+          <div id="dd-lmp-box">
+            <div class="field-group">
+              <label for="dd-lmp">First Day of Your Last Period</label>
+              <input type="date" id="dd-lmp">
+            </div>
+            <div class="field-group">
+              <label for="dd-cycle">Average Length of Your Cycles</label>
+              <select id="dd-cycle" class="unit-select"><option value="22">22 days</option><option value="23">23 days</option><option value="24">24 days</option><option value="25">25 days</option><option value="26">26 days</option><option value="27">27 days</option><option value="28" selected>28 days</option><option value="29">29 days</option><option value="30">30 days</option><option value="31">31 days</option><option value="32">32 days</option><option value="33">33 days</option><option value="34">34 days</option><option value="35">35 days</option><option value="36">36 days</option><option value="37">37 days</option><option value="38">38 days</option><option value="39">39 days</option><option value="40">40 days</option><option value="41">41 days</option><option value="42">42 days</option><option value="43">43 days</option><option value="44">44 days</option></select>
+            </div>
+          </div>
+          <div id="dd-us-box">
+            <div class="field-group">
+              <label for="dd-us-date">Ultrasound Date</label>
+              <input type="date" id="dd-us-date">
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="dd-us-weeks">Pregnancy Length at the Time (weeks)</label>
+                <input type="number" id="dd-us-weeks" value="8" min="0" max="42" step="1">
+              </div>
+              <div class="field-group">
+                <label for="dd-us-days">and days</label>
+                <input type="number" id="dd-us-days" value="0" min="0" max="6" step="1">
+              </div>
+            </div>
+          </div>
+          <div id="dd-conc-box" class="field-group">
+            <label for="dd-conc">Conception Date</label>
+            <input type="date" id="dd-conc">
+          </div>
+          <div id="dd-ivf-box">
+            <div class="field-group">
+              <label for="dd-ivf-date">Transfer Date</label>
+              <input type="date" id="dd-ivf-date">
+            </div>
+            <div class="field-group">
+              <label for="dd-ivf-age">Embryo Age</label>
+              <select id="dd-ivf-age" class="unit-select"><option value="3">3 days</option><option value="5" selected>5 days</option><option value="6">6 days</option></select>
+            </div>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="dd-result"></div>
+      </div>
+    </form>
+
+    <div class="schedule-card" id="dd-schedule" hidden>
+      <h2 style="margin:0 0 16px;font-size:18px;">Pregnancy week by week</h2>
+      <div class="schedule-table-wrap">
+        <div id="dd-table-wrap"></div>
+      </div>
+    </div>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">How a due date is estimated</h2>
+      <p>A full pregnancy lasts about 40 weeks, or 280 days, counted from the first day of the last menstrual period. Adding 280 days to that date gives the standard due date. It is only an estimate: just a small share of babies arrive on the due date, and most are born within a couple of weeks either side. A due date is best seen as the middle of a range, and a baby born between 37 and 42 weeks is considered full term.</p>
+
+      <h2>Other ways to estimate it</h2>
+      <p>If your cycle is longer or shorter than 28 days, ovulation shifts with it, so the due date moves by the same number of days. If you know the date of conception, the due date is 266 days after it. An ultrasound gives the age of the pregnancy on the day of the scan, and the due date follows from that. For IVF, the embryo’s age on the transfer date is taken into account, so a day 5 embryo has about 261 days to go from the transfer. Early ultrasounds are usually the most accurate way to date a pregnancy.</p>
+
+      <h2>Reading the results</h2>
+      <p>The results show your due date, how far along you are in weeks and days, your trimester, the likely date of conception, and the typical size of a baby at this stage. The table lists each pregnancy week with its dates, the trimester it falls in, and a few milestones. Your own doctor or midwife may change the due date after an ultrasound or as the pregnancy goes on.</p>
+      <div class="callout">A due date is an estimate and not a medical diagnosis. Baby size and milestones are averages. Always rely on your doctor or midwife for the dating and care of your pregnancy.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How is the due date calculated?</h3>
+        <p>It is 280 days after the first day of your last period, which is 40 weeks. If your cycle is not 28 days long, the date moves by the difference.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How accurate is a due date?</h3>
+        <p>Only about 4% of babies are born on the due date. Most arrive within about two weeks before or after it.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I find the due date from the conception date?</h3>
+        <p>Add 266 days to the date of conception. This is 38 weeks, since conception happens about two weeks after the start of the last period.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is the due date worked out for IVF?</h3>
+        <p>The calculator counts back from the embryo transfer using the age of the embryo. A day 3 embryo adds 263 days to the transfer date, a day 5 embryo adds 261 days, and a day 6 embryo adds 260 days.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When does the second trimester start?</h3>
+        <p>The second trimester starts after 12 weeks of pregnancy, and the third trimester after 27 weeks. A baby is considered full term from 37 weeks.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Financial Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="pregnancy-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pregnancy Calculator</h3>
+        <p>Find your due date and weekly pregnancy timeline.</p>
+      </a>
+
+      <a class="calc-list-card" href="pregnancy-weight-gain-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pregnancy Weight Gain Calculator</h3>
+        <p>Estimate healthy weight gain during pregnancy.</p>
+      </a>
+
+      <a class="calc-list-card" href="pregnancy-conception-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pregnancy Conception Calculator</h3>
+        <p>Estimate the date of conception.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/due-date-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
