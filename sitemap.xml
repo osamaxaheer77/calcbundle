@@ -796,4 +796,52 @@
     <loc>https://calcbundle.net/calculators/gravel-calculator.html</loc>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/gdp-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/mass-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/weight-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/speed-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/molarity-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/molecular-weight-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/bandwidth-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/bra-size-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/shoe-size-conversion.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/golf-handicap-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/engine-horsepower-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/mileage-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bandwidth Calculator - CalcBundle</title>
+<meta name="description" content="Convert data units, find download or upload time, estimate a website's bandwidth needs, and convert monthly data usage to Mbit/s and back.">
+<link rel="canonical" href="https://calcbundle.net/calculators/bandwidth-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Bandwidth Calculator - CalcBundle">
+<meta property="og:description" content="Convert data units, find download or upload time, estimate a website's bandwidth needs, and convert monthly data usage to Mbit/s and back.">
+<meta property="og:url" content="https://calcbundle.net/calculators/bandwidth-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bandwidth Calculator - CalcBundle">
+<meta name="twitter:description" content="Convert data units, find download or upload time, estimate a website's bandwidth needs, and convert monthly data usage to Mbit/s and back.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many megabytes per second is 100 Mbit/s?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide by 8. A speed of 100 megabits per second moves at most 12.5 megabytes per second."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to download a 1 GB file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 100 Mbit/s it takes 80 seconds, which is 1 minute and 20 seconds, in the best case. At 10 Mbit/s it takes 800 seconds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a megabit and a megabyte?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A megabyte is 8 megabits. Lowercase b is used for bits and uppercase B for bytes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much bandwidth does my website need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the page views by the page size to find the data per period, then convert to Mbit/s and add a redundancy factor, such as 2, for peaks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are kilobytes 1,000 or 1,024 bytes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator uses 1,000, the decimal standard used for network speeds and many storage devices. Operating systems sometimes use 1,024 and call them kibibytes or just kilobytes."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Bandwidth Calculator</span>
+    </div>
+    <h1>Bandwidth Calculator</h1>
+    <p>Four tools for data and bandwidth: a data unit converter, a download time calculator, a website bandwidth estimator and a hosting usage converter.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Data Unit Converter</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Convert between bits and bytes and their decimal multiples. A kilobyte here is 1,000 bytes.</p>
+    <form id="cv-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="cv-v">Amount</label><input type="number" id="cv-v" value="500" min="0" step="any"></div>
+            <select id="cv-u" class="unit-select" aria-label="Unit"></select>
+          </div>
+          <button type="submit" class="calc-submit-btn">Convert</button>
+        </div>
+        <div class="mortgage-results-card" id="cv-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Download or Upload Time</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">How long a file takes to transfer at a given speed, in the best case.</p>
+    <form id="dl-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="dl-s">File Size</label><input type="number" id="dl-s" value="500" min="0" step="any"></div>
+            <select id="dl-su" class="unit-select" aria-label="File Size unit"></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="dl-b">Bandwidth</label><input type="number" id="dl-b" value="5" min="0" step="any"></div>
+            <select id="dl-bu" class="unit-select" aria-label="Bandwidth unit"></select>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="dl-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Website Bandwidth</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Estimate the bandwidth and monthly data your website uses from its traffic and page size.</p>
+    <form id="wb-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="wb-v">Page Views</label><input type="number" id="wb-v" value="5000" min="0" step="any"></div>
+            <select id="wb-pu" class="unit-select" aria-label="Page views period"></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="wb-s">Average Page Size</label><input type="number" id="wb-s" value="500" min="0" step="any"></div>
+            <select id="wb-su" class="unit-select" aria-label="Average Page Size unit"></select>
+          </div>
+          <div class="field-group"><label for="wb-r">Redundancy Factor</label><input type="number" id="wb-r" value="2" min="0" step="any"></div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="wb-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Hosting Bandwidth Converter</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Convert a monthly data allowance into a bandwidth, or the other way around. Fill in one box and leave the other blank.</p>
+    <form id="hs-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="hs-u">Monthly Usage</label><input type="number" id="hs-u" value="1000" min="0" step="any" placeholder="Leave blank to find"></div>
+            <select id="hs-uu" class="unit-select" aria-label="Monthly Usage unit"></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="hs-b">Bandwidth</label><input type="number" id="hs-b" value="" min="0" step="any" placeholder="Leave blank to find"></div>
+            <select id="hs-bu" class="unit-select" aria-label="Bandwidth unit"></select>
+          </div>
+          <button type="submit" class="calc-submit-btn">Convert</button>
+        </div>
+        <div class="mortgage-results-card" id="hs-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Bits, bytes and bandwidth</h2>
+      <p>A bit is the smallest unit of information, either 0 or 1. A byte is 8 bits. Data sizes of files are usually given in bytes, while network speeds are given in bits per second, which is why a 100 Mbit/s connection moves at most 12.5 megabytes each second. In this calculator kilo, mega, giga and tera follow the decimal system, so a kilobit is 1,000 bits and a megabyte is 1,000,000 bytes.</p>
+
+      <h2>Download and upload time</h2>
+      <p>The time is the size of the file in bits divided by the speed in bits per second. A 500 MB file is 4,000 megabits, and at 5 Mbit/s that takes 800 seconds, which is 13 minutes and 20 seconds. This is the best case. Real transfers are slower because of protocol overhead such as TCP and encryption, shared connections, and limits at the server end, so a stated bandwidth is not the rate you will always see.</p>
+
+      <h2>Website bandwidth</h2>
+      <p>Multiply the page views in a period by the average page size to find the data sent in that period, then spread it over the seconds in the period. The month used here is one twelfth of a 365.25 day year, which is 30.4375 days. The redundancy factor adds headroom for traffic spikes, since a link sized for the average would be overwhelmed at peak. Include the traffic from search engine bots, which can be higher than the traffic from real visitors.</p>
+
+      <h2>Hosting plans</h2>
+      <p>Hosts often sell a monthly data allowance, while network gear is rated in Mbit/s. The hosting converter changes one into the other by treating the allowance as spread evenly over the month. A 1,000 GB allowance, for example, is about 3.04 Mbit/s sustained. Real traffic comes in bursts, so the peak speed you need is higher than this average.</p>
+      <div class="callout">Real-world speeds are always lower than the stated bandwidth because of overhead and shared connections.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How many megabytes per second is 100 Mbit/s?</h3>
+        <p>Divide by 8. A speed of 100 megabits per second moves at most 12.5 megabytes per second.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How long does it take to download a 1 GB file?</h3>
+        <p>At 100 Mbit/s it takes 80 seconds, which is 1 minute and 20 seconds, in the best case. At 10 Mbit/s it takes 800 seconds.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between a megabit and a megabyte?</h3>
+        <p>A megabyte is 8 megabits. Lowercase b is used for bits and uppercase B for bytes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much bandwidth does my website need?</h3>
+        <p>Multiply the page views by the page size to find the data per period, then convert to Mbit/s and add a redundancy factor, such as 2, for peaks.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are kilobytes 1,000 or 1,024 bytes?</h3>
+        <p>This calculator uses 1,000, the decimal standard used for network speeds and many storage devices. Operating systems sometimes use 1,024 and call them kibibytes or just kilobytes.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="binary-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Binary Calculator</h3>
+        <p>Convert and calculate with binary numbers.</p>
+      </a>
+
+      <a class="calc-list-card" href="time-duration-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Time Duration Calculator</h3>
+        <p>Time between two times.</p>
+      </a>
+
+      <a class="calc-list-card" href="speed-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Speed Calculator</h3>
+        <p>Speed, distance and time.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/calc-common.js"></script>
+<script src="../js/bandwidth-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

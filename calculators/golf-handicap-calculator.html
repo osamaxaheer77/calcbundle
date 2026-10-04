@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golf Handicap Calculator - CalcBundle</title>
+<meta name="description" content="Find your golf handicap for a course from your handicap index, and work out your handicap index from your recent 18-hole and 9-hole rounds.">
+<link rel="canonical" href="https://calcbundle.net/calculators/golf-handicap-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Golf Handicap Calculator - CalcBundle">
+<meta property="og:description" content="Find your golf handicap for a course from your handicap index, and work out your handicap index from your recent 18-hole and 9-hole rounds.">
+<meta property="og:url" content="https://calcbundle.net/calculators/golf-handicap-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Golf Handicap Calculator - CalcBundle">
+<meta name="twitter:description" content="Find your golf handicap for a course from your handicap index, and work out your handicap index from your recent 18-hole and 9-hole rounds.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate my course handicap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply your handicap index by the slope rating, divide by 113, then add the course rating and subtract par. Round to the nearest whole number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many rounds do I need for a handicap index?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You need scores from at least 54 holes, such as three rounds of 18 holes. Two 9-hole rounds count as one 18-hole round."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a score differential?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a score adjusted for the difficulty of the course: 113 divided by the slope, times the score minus the course rating minus any playing condition adjustment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the playing condition adjustment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A whole number from -1 to 3 that corrects for weather or course conditions that day. Use -1 when conditions made scoring easier and up to 3 when they made it much harder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good golf handicap?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The average handicap index is around 14 for men and 27 for women. A handicap under 10 is considered good, and a scratch golfer has a handicap of 0."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Golf Handicap Calculator</span>
+    </div>
+    <h1>Golf Handicap Calculator</h1>
+    <p>Convert a handicap index into the strokes you get on a course, or enter your recent scores to find your handicap index.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Handicap for a Course</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Find how many strokes you receive on a particular course from your handicap index and the course's rating, slope and par.</p>
+    <form id="gh-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group"><label for="gh-i">Index of Your Handicap</label><input type="number" id="gh-i" value="10" step="any" min="0"></div>
+          <div class="field-group"><label for="gh-r">Rating of Course</label><input type="number" id="gh-r" value="70" step="any" min="0"></div>
+          <div class="field-group"><label for="gh-s">Rating of Course Slope</label><input type="number" id="gh-s" value="121" step="any" min="0"></div>
+          <div class="field-group"><label for="gh-p">Course Par</label><input type="number" id="gh-p" value="72" step="any" min="0"></div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="gh-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Handicap Index from Your Rounds</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Enter the data from at least 54 holes, which is 3 rounds of 18 holes. For each round, give either an 18-hole score or a 9-hole score, not both. The playing condition adjustment is optional, a whole number from -1 to 3. A blank row is skipped.</p>
+    <form id="gi-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card" style="overflow:hidden;">
+          <div class="schedule-table-wrap" style="max-height:420px;overflow:auto;">
+            <table class="schedule-table">
+              <thead><tr><th>Round</th><th>Course rating</th><th>Slope</th><th>18-hole score</th><th>9-hole score</th><th>Adjust</th></tr></thead>
+              <tbody id="gi-body"></tbody>
+            </table>
+          </div>
+          <button type="submit" class="calc-submit-btn" style="margin-top:14px;">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="gi-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What a handicap does</h2>
+      <p>A golf handicap measures a golfer's potential, so that players of different ability can compete fairly. The lower the handicap, the better the golfer. A scratch golfer has a handicap of zero, and a bogey golfer has a handicap of about 18. Handicaps are common in amateur golf and are not used in professional golf. A handicap is not fixed, and it is updated as new scores come in.</p>
+
+      <h2>Course rating, slope and par</h2>
+      <p>The course rating, usually between 67 and 77, is the score a scratch golfer is expected to shoot on that course. The slope rating, from 55 to 155 with 113 as the average, measures how much harder the course is for a bogey golfer than for a scratch golfer. Par is the number of strokes an expert is expected to need. These come from the scorecard of a rated course.</p>
+
+      <h2>Handicap for a course</h2>
+      <p>Your handicap index travels with you, and the course handicap says how many strokes you receive on a given course. It is the index times the slope divided by 113, plus the course rating minus par, rounded to a whole number. With an index of 10 on a course rated 70 with slope 121 and par 72, that is 10 × 121 ÷ 113 + (70 − 72), which is 8.7, so you receive 9 strokes. Take it off your gross score to get your net score.</p>
+
+      <h2>Handicap index</h2>
+      <p>Each round gives a score differential: 113 ÷ slope × (score − course rating − playing condition adjustment). With 3 to 5 rounds, your index is based on the lowest differential, less 2 with 3 rounds and less 1 with 4. With 6 rounds it is the average of the lowest 2, less 1. From 7 rounds it is the average of the best differentials, from 2 of 7 up to 8 of 20. Two 9-hole rounds are combined into one 18-hole round by adding their differentials, and the playing condition adjustment, from -1 to 3, allows for weather and course conditions that day. For a 9-hole round, only half of the adjustment is used.</p>
+      <div class="callout">Official handicaps are issued by golf associations and clubs. This calculator follows the common World Handicap System method but is not an official handicap.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I calculate my course handicap?</h3>
+        <p>Multiply your handicap index by the slope rating, divide by 113, then add the course rating and subtract par. Round to the nearest whole number.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many rounds do I need for a handicap index?</h3>
+        <p>You need scores from at least 54 holes, such as three rounds of 18 holes. Two 9-hole rounds count as one 18-hole round.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a score differential?</h3>
+        <p>It is a score adjusted for the difficulty of the course: 113 divided by the slope, times the score minus the course rating minus any playing condition adjustment.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the playing condition adjustment?</h3>
+        <p>A whole number from -1 to 3 that corrects for weather or course conditions that day. Use -1 when conditions made scoring easier and up to 3 when they made it much harder.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a good golf handicap?</h3>
+        <p>The average handicap index is around 14 for men and 27 for women. A handicap under 10 is considered good, and a scratch golfer has a handicap of 0.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="pace-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pace Calculator</h3>
+        <p>Running pace, time and distance.</p>
+      </a>
+
+      <a class="calc-list-card" href="average-return-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Average Return Calculator</h3>
+        <p>Average growth over several periods.</p>
+      </a>
+
+      <a class="calc-list-card" href="percentage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Percentage Calculator</h3>
+        <p>Work out percentages.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/calc-common.js"></script>
+<script src="../js/golf-handicap-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

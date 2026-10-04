@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GDP Calculator - CalcBundle</title>
+<meta name="description" content="Calculate gross domestic product (GDP) with the expenditure approach or the resource cost-income approach, with a breakdown of every part.">
+<link rel="canonical" href="https://calcbundle.net/calculators/gdp-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="GDP Calculator - CalcBundle">
+<meta property="og:description" content="Calculate gross domestic product (GDP) with the expenditure approach or the resource cost-income approach, with a breakdown of every part.">
+<meta property="og:url" content="https://calcbundle.net/calculators/gdp-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GDP Calculator - CalcBundle">
+<meta name="twitter:description" content="Calculate gross domestic product (GDP) with the expenditure approach or the resource cost-income approach, with a breakdown of every part.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate GDP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With the expenditure approach, add personal consumption, gross investment, government consumption and net exports, where net exports are exports minus imports."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are net exports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Net exports are the value of exports minus the value of imports. They are negative when a country imports more than it exports."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between GDP and GNP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GDP counts what is produced inside a country's borders. GNP counts what is produced by a country's own citizens and companies, wherever they are. The difference is the net income of foreigners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can GDP be negative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A real economy has a positive GDP. A negative result here just means the numbers you entered, such as very large imports, add up to less than zero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What currency should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Any, as long as every box uses the same currency and the same time period. Figures are often given in millions, billions or trillions."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">GDP Calculator</span>
+    </div>
+    <h1>GDP Calculator</h1>
+    <p>Work out a country's gross domestic product from its spending, or from its incomes, using either of the two standard methods.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Expenditure Approach</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">GDP = personal consumption + gross investment + government consumption + net exports. Use any currency, but use the same one for every box. A blank box counts as 0.</p>
+    <form id="ex-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group"><label for="ex-pc">Personal Consumption</label><input type="number" id="ex-pc" value="11000" step="any"></div>
+          <div class="field-group"><label for="ex-gi">Gross Investment</label><input type="number" id="ex-gi" value="3000" step="any"></div>
+          <div class="field-group"><label for="ex-gc">Government Consumption</label><input type="number" id="ex-gc" value="3500" step="any"></div>
+          <div class="field-group"><label for="ex-ex">Exports</label><input type="number" id="ex-ex" value="2000" step="any"></div>
+          <div class="field-group"><label for="ex-im">Imports</label><input type="number" id="ex-im" value="2500" step="any"></div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="ex-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Resource Cost-Income Approach</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">GNP = employee compensation + proprietors' income + rental income + corporate profits + interest income. GDP = GNP + indirect business taxes + depreciation + net income of foreigners.</p>
+    <form id="in-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group"><label for="in-ec">Employee Compensation</label><input type="number" id="in-ec" value="10000" step="any"></div>
+          <div class="field-group"><label for="in-pi">Proprietors' Income</label><input type="number" id="in-pi" value="1200" step="any"></div>
+          <div class="field-group"><label for="in-re">Rental Income</label><input type="number" id="in-re" value="500" step="any"></div>
+          <div class="field-group"><label for="in-cp">Corporate Profits</label><input type="number" id="in-cp" value="2000" step="any"></div>
+          <div class="field-group"><label for="in-ii">Interest Income</label><input type="number" id="in-ii" value="800" step="any"></div>
+          <div class="field-group"><label for="in-ib">Indirect Business Taxes</label><input type="number" id="in-ib" value="1100" step="any"></div>
+          <div class="field-group"><label for="in-de">Depreciation</label><input type="number" id="in-de" value="1900" step="any"></div>
+          <div class="field-group"><label for="in-nf">Net Income of Foreigners</label><input type="number" id="in-nf" value="-100" step="any"></div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="in-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What GDP measures</h2>
+      <p>Gross domestic product is the market value of all the final goods and services produced inside a country in a period, usually a quarter or a year. It is the most common single measure of the size of an economy. Growth of more than about two percent a year is generally taken as a sign of a healthy economy, while two quarters in a row of falling GDP is the usual rule of thumb for a recession.</p>
+
+      <h2>The expenditure approach</h2>
+      <p>This method adds up what is spent on the output. Personal consumption is household spending. Gross investment covers business spending on equipment, buildings and stock, and new housing. Government consumption is public spending on goods and services. Net exports are exports minus imports, so a country that buys more from abroad than it sells has negative net exports, which lowers GDP.</p>
+
+      <h2>The resource cost-income approach</h2>
+      <p>This method adds up what is earned from producing the output. It starts with wages and salaries, the income of owners of unincorporated businesses, rent, company profits and interest, which together give gross national product, or GNP. It then adds indirect business taxes, depreciation, and the net income of foreigners to reach GDP. Net income of foreigners is what foreigners earn inside the country minus what its citizens earn abroad, and it can be negative.</p>
+
+      <h2>Why two methods</h2>
+      <p>In theory, spending on output and income from output are the same number, because every dollar spent is a dollar earned by someone. In practice the two estimates differ a little because of measurement errors, and statisticians report the difference. This page lets you try either method with your own figures.</p>
+      <div class="callout">Real GDP figures are estimated by national statistics agencies. This calculator only adds up the numbers you give it.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do you calculate GDP?</h3>
+        <p>With the expenditure approach, add personal consumption, gross investment, government consumption and net exports, where net exports are exports minus imports.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What are net exports?</h3>
+        <p>Net exports are the value of exports minus the value of imports. They are negative when a country imports more than it exports.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between GDP and GNP?</h3>
+        <p>GDP counts what is produced inside a country's borders. GNP counts what is produced by a country's own citizens and companies, wherever they are. The difference is the net income of foreigners.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can GDP be negative?</h3>
+        <p>A real economy has a positive GDP. A negative result here just means the numbers you entered, such as very large imports, add up to less than zero.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What currency should I use?</h3>
+        <p>Any, as long as every box uses the same currency and the same time period. Figures are often given in millions, billions or trillions.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="inflation-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Inflation Calculator</h3>
+        <p>See how prices change over time.</p>
+      </a>
+
+      <a class="calc-list-card" href="percentage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Percentage Calculator</h3>
+        <p>Work out percentages and growth.</p>
+      </a>
+
+      <a class="calc-list-card" href="average-return-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Average Return Calculator</h3>
+        <p>Average growth over several periods.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/calc-common.js"></script>
+<script src="../js/gdp-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

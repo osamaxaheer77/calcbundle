@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engine Horsepower Calculator - CalcBundle</title>
+<meta name="description" content="Estimate engine horsepower from a vehicle's weight and its quarter mile elapsed time, or from its weight and its trap speed.">
+<link rel="canonical" href="https://calcbundle.net/calculators/engine-horsepower-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Engine Horsepower Calculator - CalcBundle">
+<meta property="og:description" content="Estimate engine horsepower from a vehicle's weight and its quarter mile elapsed time, or from its weight and its trap speed.">
+<meta property="og:url" content="https://calcbundle.net/calculators/engine-horsepower-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Engine Horsepower Calculator - CalcBundle">
+<meta name="twitter:description" content="Estimate engine horsepower from a vehicle's weight and its quarter mile elapsed time, or from its weight and its trap speed.">
+<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I estimate horsepower from quarter mile time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use horsepower = weight in pounds × (5.825 ÷ ET in seconds)³. A 3,200 lb car with a 12.5 second ET makes about 324 horsepower."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I estimate horsepower from trap speed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use horsepower = weight in pounds × (speed in mph ÷ 234)³. A 3,200 lb car with a trap speed of 110 mph makes about 332 horsepower."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many watts is a horsepower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One mechanical horsepower is about 745.7 watts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this wheel horsepower or engine horsepower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formulas estimate engine horsepower. Wheel horsepower is lower because power is lost in the transmission and drivetrain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do the two methods give different answers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They use different parts of the run, and each rests on averages from many cars. The trap speed is usually the better indicator, since it is less affected by the launch."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/other.html" style="color:inherit;text-decoration:none;">Other</a>
+      <span>/</span>
+      <span class="current">Engine Horsepower Calculator</span>
+    </div>
+    <h1>Engine Horsepower Calculator</h1>
+    <p>Use your vehicle's weight and its quarter mile time or finishing speed to estimate the horsepower of the engine.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Elapsed Time (ET) Method</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Horsepower = weight × (5.825 ÷ ET)³, with the weight in pounds and the time in seconds.</p>
+    <form id="et-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="et-w">Vehicle Weight</label><input type="number" id="et-w" value="5000" min="0" step="any"></div>
+            <select id="et-wu" class="unit-select" aria-label="Vehicle Weight unit"><option value="pound" selected>lb</option><option value="ton">ton</option><option value="kilogram">kg</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="et-t">Time to Finish Quarter Mile (ET)</label><input type="number" id="et-t" value="20" min="0" step="any"></div>
+            <select id="et-tu" class="unit-select" aria-label="Time to Finish Quarter Mile (ET) unit"><option value="second" selected>second</option><option value="minute">minute</option><option value="hour">hour</option><option value="day">day</option></select>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="et-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:40px 0 6px;font-size:20px;">Trap-Speed Method</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Horsepower = weight × (speed ÷ 234)³, with the weight in pounds and the speed in miles per hour.</p>
+    <form id="tp-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="tp-w">Vehicle Weight</label><input type="number" id="tp-w" value="5000" min="0" step="any"></div>
+            <select id="tp-wu" class="unit-select" aria-label="Vehicle Weight unit"><option value="pound" selected>lb</option><option value="ton">ton</option><option value="kilogram">kg</option></select>
+          </div>
+          <div class="field-with-toggle">
+            <div class="field-group"><label for="tp-s">Speed When Finishing Quarter Mile</label><input type="number" id="tp-s" value="70" min="0" step="any"></div>
+            <select id="tp-su" class="unit-select" aria-label="Speed When Finishing Quarter Mile unit"><option value="mph" selected>mph</option><option value="kmph">km/h</option><option value="mps">m/s</option></select>
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="tp-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Two ways to estimate power</h2>
+      <p>A car that is more powerful for its weight finishes a quarter mile, 402.3 meters, in less time and at a higher speed. The elapsed time method uses the time: horsepower = weight × (5.825 ÷ ET)³. The trap-speed method uses the speed at the end of the run: horsepower = weight × (speed ÷ 234)³. In both, the weight is in pounds, the time in seconds and the speed in miles per hour, and the calculator converts the other units for you.</p>
+
+      <h2>What weight to use</h2>
+      <p>Use the weight of the vehicle as it ran, which includes the driver, any passengers, fuel and anything else of significant weight. The trap speed is the speed at the quarter-mile mark, not the average speed over the run. To estimate peak horsepower, apply the maximum work output of the engine from start to finish.</p>
+
+      <h2>How accurate it is</h2>
+      <p>These are estimates. They assume a good launch and a vehicle in good condition, and the result depends on gearing, traction, aerodynamics and the weather. Power measured at the wheels is lower than at the engine because of drivetrain losses, and the formulas aim at engine power. Treat the number as a rough guide, and compare the two methods, since the trap speed tends to be the steadier of the two.</p>
+
+      <h2>About horsepower</h2>
+      <p>James Watt defined horsepower in the 18th century to compare steam engines to the horses they replaced. One horsepower is 33,000 foot-pounds of work a minute, which is about 745.7 watts. Engines are measured on a dynamometer, and every engine has a peak horsepower at a certain engine speed, often given as something like 320 HP at 6,500 rpm.</p>
+      <div class="callout">Only measure quarter mile times at a drag strip or other legal venue. Never do it on public roads.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I estimate horsepower from quarter mile time?</h3>
+        <p>Use horsepower = weight in pounds × (5.825 ÷ ET in seconds)³. A 3,200 lb car with a 12.5 second ET makes about 324 horsepower.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I estimate horsepower from trap speed?</h3>
+        <p>Use horsepower = weight in pounds × (speed in mph ÷ 234)³. A 3,200 lb car with a trap speed of 110 mph makes about 332 horsepower.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many watts is a horsepower?</h3>
+        <p>One mechanical horsepower is about 745.7 watts.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this wheel horsepower or engine horsepower?</h3>
+        <p>The formulas estimate engine horsepower. Wheel horsepower is lower because power is lost in the transmission and drivetrain.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do the two methods give different answers?</h3>
+        <p>They use different parts of the run, and each rests on averages from many cars. The trap speed is usually the better indicator, since it is less affected by the launch.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Everyday Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="horsepower-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Horsepower Calculator</h3>
+        <p>Work out horsepower from torque and rpm.</p>
+      </a>
+
+      <a class="calc-list-card" href="speed-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Speed Calculator</h3>
+        <p>Speed, distance and time.</p>
+      </a>
+
+      <a class="calc-list-card" href="gas-mileage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Gas Mileage Calculator</h3>
+        <p>Work out fuel economy.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/calc-common.js"></script>
+<script src="../js/engine-horsepower-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
