@@ -115,13 +115,19 @@
 <section class="calculator-section">
   <div class="container" style="max-width:1100px;">
 
+    <style>
+      .mi-wrap { position: relative; }
+      .mi-list { position: absolute; left: 0; right: 0; top: 100%; z-index: 20; margin: 4px 0 0; padding: 4px; list-style: none; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); box-shadow: var(--shadow-card); max-height: 260px; overflow-y: auto; }
+      .mi-list li { padding: 9px 10px; font-size: 14px; line-height: 1.35; border-radius: 6px; cursor: pointer; color: var(--text-primary); }
+      .mi-list li:hover, .mi-list li.is-active { background: var(--accent-tint); }
+    </style>
     <h2 style="margin:0 0 6px;font-size:20px;">Driving Mileage and Time</h2>
-    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Type a city, an address or a place name. Add the state if the name is common, such as Springfield, IL.</p>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Start typing a city, an address or a place name, and pick one of the suggestions. Add the state if the name is common, such as Springfield, IL.</p>
     <form id="mi-form" novalidate>
       <div class="mortgage-layout">
         <div class="mortgage-form-card">
-          <div class="field-group"><label for="mi-from">From</label><input type="text" id="mi-from" value="New York, NY" autocomplete="off" maxlength="200"></div>
-          <div class="field-group"><label for="mi-to">To</label><input type="text" id="mi-to" value="Boston, MA" autocomplete="off" maxlength="200"></div>
+          <div class="field-group mi-wrap"><label for="mi-from">From</label><input type="text" id="mi-from" value="New York, NY" autocomplete="off" spellcheck="false" maxlength="200" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="mi-from-list"><ul class="mi-list" id="mi-from-list" role="listbox" aria-label="From suggestions" hidden></ul></div>
+          <div class="field-group mi-wrap"><label for="mi-to">To</label><input type="text" id="mi-to" value="Boston, MA" autocomplete="off" spellcheck="false" maxlength="200" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="mi-to-list"><ul class="mi-list" id="mi-to-list" role="listbox" aria-label="To suggestions" hidden></ul></div>
           <button type="submit" class="calc-submit-btn" id="mi-go">Get Mileage &amp; Driving Time</button>
         </div>
         <div class="mortgage-results-card" id="mi-result"><p style="font-size:14px;color:var(--text-secondary);">Press the button to get the mileage and driving time.</p></div>
@@ -139,7 +145,7 @@
       <p>Place names can match more than one town, so add the state, as in Springfield, IL or Paris, TX, or type a full address or a ZIP code. The result shows the place that was found, so you can check that it is the one you meant. If a place cannot be found, try a different spelling or a nearby larger town.</p>
 
       <h2>Data and accuracy</h2>
-      <p>The calculator uses open map data from OpenStreetMap contributors, with the Nominatim service to find places and the OSRM service to find the route. Distances normally agree with commercial map apps to within about one percent, and driving times to within a few minutes per hour. Because the places you type are sent to these services to find the route, avoid entering anything private.</p>
+      <p>The calculator uses open map data from OpenStreetMap contributors, with the Photon and Nominatim services to suggest and find places and the OSRM service to find the route. Distances normally agree with commercial map apps to within about one percent, and driving times to within a few minutes per hour. Because the places you type are sent to these services to find the route, avoid entering anything private.</p>
       <div class="callout">Distance and time are estimates for a car with no traffic. Your actual trip may differ.</div>
 
       <h2>Common questions</h2>
