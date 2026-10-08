@@ -20,11 +20,13 @@
 <meta property="og:title" content="URL Encode / Decode - CalcBundle">
 <meta property="og:description" content="Percent-encode text for safe use in a URL, or decode percent-encoded text back to plain text.">
 <meta property="og:url" content="https://calcbundle.net/calculators/url-encoder.html">
-<meta property="og:image" content="https://calcbundle.net/images/logo.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calcbundle.net/images/og-other.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="URL Encode / Decode - CalcBundle">
 <meta name="twitter:description" content="Percent-encode text for safe use in a URL, or decode percent-encoded text back to plain text.">
-<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
@@ -53,6 +55,7 @@
   ]
 }
 </script>
+<script type="application/ld+json" id="seo-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcbundle.net/"},{"@type":"ListItem","position":2,"name":"Other","item":"https://calcbundle.net/categories/other.html"},{"@type":"ListItem","position":3,"name":"URL Encode / Decode","item":"https://calcbundle.net/calculators/url-encoder.html"}]},{"@type":"WebApplication","name":"URL Encode / Decode","url":"https://calcbundle.net/calculators/url-encoder.html","description":"Percent-encode text for safe use in a URL, or decode percent-encoded text back to plain text.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"CalcBundle","url":"https://calcbundle.net/"}}]}</script>
 </head>
 <body>
 
@@ -126,6 +129,16 @@
       <p>This tool encodes a single value (like a query parameter) the way <code>encodeURIComponent</code> does &mdash; it escapes characters such as &amp;, ?, and / that have special meaning in a URL. Encoding an entire URL at once uses a slightly different rule set that leaves those structural characters alone.</p>
       <div class="callout">Both conversions happen locally in your browser &mdash; nothing you type here is sent anywhere.</div>
 
+      <!--seo-extra-->
+      <h2>A worked example</h2>
+      <p>Encoding the text https://example.com/search?q=hello world with the component method gives https%3A%2F%2Fexample.com%2Fsearch%3Fq%3Dhello%20world. The colon, slashes, question mark and equals sign become percent codes, and the space becomes %20. Paste the encoded text into the decoder and you get the original back.</p>
+
+      <h2>Tips for URLs</h2>
+      <p>Encode only the value that goes into a query string, not the entire address, or the slashes and colons will be changed. Use the component method for a single value and the full-URL method for a whole address. Spaces can appear as %20 or + depending on context, and non-English letters become multi-byte sequences such as %C3%A9 for é. Encoding is not encryption: anyone can decode it.</p>
+
+      <p><strong>You might also need:</strong> <a href="ip-subnet-calculator.html">IP Subnet Calculator</a>, <a href="bandwidth-calculator.html">Bandwidth Calculator</a>, <a href="base64-encoder.html">Base64 Encode / Decode</a>, <a href="binary-calculator.html">Binary Calculator</a>.</p>
+
+      <!--/seo-extra-->
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>When would I need this?</h3>

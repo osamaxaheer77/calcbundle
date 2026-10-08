@@ -20,11 +20,13 @@
 <meta property="og:title" content="Finance Calculator - CalcBundle">
 <meta property="og:description" content="Solve for present value, future value, interest rate, number of periods, or payment in the standard 5-key time-value-of-money equation.">
 <meta property="og:url" content="https://calcbundle.net/calculators/finance-calculator.html">
-<meta property="og:image" content="https://calcbundle.net/images/logo.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Finance Calculator - CalcBundle">
 <meta name="twitter:description" content="Solve for present value, future value, interest rate, number of periods, or payment in the standard 5-key time-value-of-money equation.">
-<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
@@ -62,6 +64,7 @@
   ]
 }
 </script>
+<script type="application/ld+json" id="seo-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcbundle.net/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://calcbundle.net/categories/financial.html"},{"@type":"ListItem","position":3,"name":"Finance Calculator","item":"https://calcbundle.net/calculators/finance-calculator.html"}]},{"@type":"WebApplication","name":"Finance Calculator","url":"https://calcbundle.net/calculators/finance-calculator.html","description":"Solve for present value, future value, interest rate, number of periods, or payment in the standard 5-key time-value-of-money equation.","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"CalcBundle","url":"https://calcbundle.net/"}}]}</script>
 </head>
 <body>
 
@@ -182,6 +185,10 @@
       <p>Cash flowing toward you is positive; cash flowing away from you is negative. A savings deposit is a positive PV (money you have) with negative PMTs (money you keep adding) building toward a positive FV (money you'll have later). A loan flips this: positive PV (money the bank gives you) with positive PMTs you pay back, heading toward zero. Getting the signs right is the difference between a sensible answer and a confusing one.</p>
       <div class="callout">P/Y and C/Y only need to differ when a rate compounds on a different schedule than payments are made — for example, a rate that compounds daily but is paid off monthly. When both happen on the same schedule (the overwhelming majority of real cases), leave both at the same value.</div>
 
+      <!--seo-extra-->
+      <p><strong>You might also need:</strong> <a href="loan-calculator.html">Loan Calculator</a>, <a href="auto-loan-calculator.html">Auto Loan Calculator</a>, <a href="lease-calculator.html">Lease Calculator</a>, <a href="personal-loan-calculator.html">Personal Loan Calculator</a>.</p>
+
+      <!--/seo-extra-->
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Why is my answer negative?</h3>
@@ -218,17 +225,17 @@
         <p>Break a loan down into its full principal-and-interest payment schedule.</p>
       </a>
 
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
+      <a class="calc-list-card" href="interest-calculator.html">
+        <span class="tag live">Live</span>
         <h3>Interest Calculator</h3>
         <p>See how simple interest builds up on a balance over time.</p>
-      </div>
+      </a>
 
-      <div class="calc-list-card">
-        <span class="tag">Coming soon</span>
+      <a class="calc-list-card" href="investment-calculator.html">
+        <span class="tag live">Live</span>
         <h3>Investment Calculator</h3>
         <p>Estimate the future value of an investment with regular contributions.</p>
-      </div>
+      </a>
 
     </div>
   </div>

@@ -20,11 +20,13 @@
 <meta property="og:title" content="Voltage Drop Calculator - CalcBundle">
 <meta property="og:description" content="Estimate the voltage drop across a wire run from its resistance, length, load current, and phase.">
 <meta property="og:url" content="https://calcbundle.net/calculators/voltage-drop-calculator.html">
-<meta property="og:image" content="https://calcbundle.net/images/logo.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calcbundle.net/images/og-other.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Voltage Drop Calculator - CalcBundle">
 <meta name="twitter:description" content="Estimate the voltage drop across a wire run from its resistance, length, load current, and phase.">
-<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
@@ -53,6 +55,7 @@
   ]
 }
 </script>
+<script type="application/ld+json" id="seo-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcbundle.net/"},{"@type":"ListItem","position":2,"name":"Other","item":"https://calcbundle.net/categories/other.html"},{"@type":"ListItem","position":3,"name":"Voltage Drop Calculator","item":"https://calcbundle.net/calculators/voltage-drop-calculator.html"}]},{"@type":"WebApplication","name":"Voltage Drop Calculator","url":"https://calcbundle.net/calculators/voltage-drop-calculator.html","description":"Estimate the voltage drop across a wire run from its resistance, length, load current, and phase.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"CalcBundle","url":"https://calcbundle.net/"}}]}</script>
 </head>
 <body>
 
@@ -155,6 +158,16 @@
       <p>A voltage drop under 5% of the source voltage is the generally recommended limit &mdash; above that, lights can flicker or dim, heaters underperform, and motors run hotter and wear out faster. Running thicker wire (lower resistance) or shortening the run both reduce drop; adding parallel conductor sets per phase splits the current and reduces the effective resistance the same way.</p>
       <div class="callout">This calculator uses a resistance value you provide directly. Wire resistance depends on material, gauge, and temperature &mdash; check your wire's datasheet or the NEC ampacity tables for an accurate figure.</div>
 
+      <!--seo-extra-->
+      <h2>A worked example</h2>
+      <p>A single-phase 120-volt circuit with wire of 1.2 ohms per kilometer, 500 feet from the source to the load, carrying 1 amp, drops 0.3658 volts, which is 0.3048% of the supply. The voltage at the load is 119.6342 V. The distance is one-way, and the calculator doubles it for the return path.</p>
+
+      <h2>Tips for wire sizing</h2>
+      <p>The National Electrical Code suggests keeping the drop to 3% on a branch circuit and 5% on the whole feeder plus branch. Voltage drop rises with current and distance, so for long runs or heavy loads, choose a thicker wire with less resistance. Aluminum has more resistance than copper for the same size. This tool estimates only the drop, and it does not check that the wire can safely carry the current.</p>
+
+      <p><strong>You might also need:</strong> <a href="electricity-calculator.html">Electricity Calculator</a>, <a href="ohms-law-calculator.html">Ohm's Law Calculator</a>, <a href="resistor-calculator.html">Resistor Calculator</a>.</p>
+
+      <!--/seo-extra-->
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Where do I find my wire's resistance value?</h3>

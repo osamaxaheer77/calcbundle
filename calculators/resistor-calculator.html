@@ -20,11 +20,13 @@
 <meta property="og:title" content="Resistor Calculator - CalcBundle">
 <meta property="og:description" content="Decode resistor color bands into an ohm value, or calculate total resistance for resistors in parallel or series.">
 <meta property="og:url" content="https://calcbundle.net/calculators/resistor-calculator.html">
-<meta property="og:image" content="https://calcbundle.net/images/logo.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calcbundle.net/images/og-other.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Resistor Calculator - CalcBundle">
 <meta name="twitter:description" content="Decode resistor color bands into an ohm value, or calculate total resistance for resistors in parallel or series.">
-<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
@@ -53,6 +55,7 @@
   ]
 }
 </script>
+<script type="application/ld+json" id="seo-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcbundle.net/"},{"@type":"ListItem","position":2,"name":"Other","item":"https://calcbundle.net/categories/other.html"},{"@type":"ListItem","position":3,"name":"Resistor Calculator","item":"https://calcbundle.net/calculators/resistor-calculator.html"}]},{"@type":"WebApplication","name":"Resistor Calculator","url":"https://calcbundle.net/calculators/resistor-calculator.html","description":"Decode resistor color bands into an ohm value, or calculate total resistance for resistors in parallel or series.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"CalcBundle","url":"https://calcbundle.net/"}}]}</script>
 </head>
 <body>
 
@@ -169,6 +172,16 @@
       <p>Resistors in series simply add up: R<sub>total</sub> = R1 + R2 + &hellip;. Resistors in parallel combine differently, since current splits between them: 1/R<sub>total</sub> = 1/R1 + 1/R2 + &hellip; &mdash; the total is always less than the smallest individual resistor.</p>
       <div class="callout">This tool covers 4-band and 6-band-minus-temperature-coefficient resistors (4 and 5 bands). Specialty resistors with a temperature coefficient band aren't included.</div>
 
+      <!--seo-extra-->
+      <h2>A worked example</h2>
+      <p>A four-band resistor with brown, black, red and gold bands reads 1, 0, then a multiplier of ×100, which makes 1,000 ohms, or 1 kΩ, with a tolerance of ±5%. The real value is somewhere between 950 Ω and 1,050 Ω. Resistors in parallel, such as 100, 220 and 330 ohms, give a total of 56.897 Ω, while the same three in series add up to 650 Ω.</p>
+
+      <h2>Tips for reading resistors</h2>
+      <p>Hold the resistor with the tolerance band, usually gold or silver, on the right and read from the left. Five-band resistors have a third digit for more precision. Parallel resistors always give a total lower than the smallest one, and series resistors always add. Measure with a multimeter when in doubt, because bands can fade, and check the power rating, which is not shown in the colors.</p>
+
+      <p><strong>You might also need:</strong> <a href="voltage-drop-calculator.html">Voltage Drop Calculator</a>, <a href="electricity-calculator.html">Electricity Calculator</a>, <a href="ohms-law-calculator.html">Ohm's Law Calculator</a>.</p>
+
+      <!--/seo-extra-->
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Which end do I read the bands from?</h3>

@@ -20,11 +20,13 @@
 <meta property="og:title" content="IP Subnet Calculator - CalcBundle">
 <meta property="og:description" content="Calculate network address, broadcast address, usable host range, and subnet mask from an IPv4 address and CIDR prefix.">
 <meta property="og:url" content="https://calcbundle.net/calculators/ip-subnet-calculator.html">
-<meta property="og:image" content="https://calcbundle.net/images/logo.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calcbundle.net/images/og-other.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="IP Subnet Calculator - CalcBundle">
 <meta name="twitter:description" content="Calculate network address, broadcast address, usable host range, and subnet mask from an IPv4 address and CIDR prefix.">
-<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
@@ -53,6 +55,7 @@
   ]
 }
 </script>
+<script type="application/ld+json" id="seo-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcbundle.net/"},{"@type":"ListItem","position":2,"name":"Other","item":"https://calcbundle.net/categories/other.html"},{"@type":"ListItem","position":3,"name":"IP Subnet Calculator","item":"https://calcbundle.net/calculators/ip-subnet-calculator.html"}]},{"@type":"WebApplication","name":"IP Subnet Calculator","url":"https://calcbundle.net/calculators/ip-subnet-calculator.html","description":"Calculate network address, broadcast address, usable host range, and subnet mask from an IPv4 address and CIDR prefix.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"CalcBundle","url":"https://calcbundle.net/"}}]}</script>
 </head>
 <body>
 
@@ -129,6 +132,16 @@
       <p>The first address in a subnet is reserved as the network address and the last is reserved as the broadcast address, so neither can be assigned to a device. /31 and /32 are special cases used for point-to-point links and single-host routes, where this reservation doesn't apply the same way.</p>
       <div class="callout">"Private" IP ranges (like 192.168.x.x, 10.x.x.x, and 172.16&ndash;31.x.x) are reserved for use within local networks and aren't routable on the public internet.</div>
 
+      <!--seo-extra-->
+      <h2>A worked example</h2>
+      <p>Take the address 154.57.196.39 with a /30 prefix (mask 255.255.255.252). The network address is 154.57.196.36 and the broadcast address is 154.57.196.39. The usable host range is 154.57.196.37 to 154.57.196.38, so there are 4 addresses in total and 2 usable hosts. A /30 is the classic size for a point-to-point link between two routers.</p>
+
+      <h2>Tips for subnetting</h2>
+      <p>Each step up in the prefix halves the number of addresses: a /24 has 256, a /25 has 128 and a /26 has 64. Two addresses are always reserved, the network address and the broadcast address. When you plan a network, count the devices you need, leave room to grow and pick the smallest block that fits. Private ranges such as 10.0.0.0/8, 172.16.0.0/12 and 192.168.0.0/16 are not routed on the internet.</p>
+
+      <p><strong>You might also need:</strong> <a href="bandwidth-calculator.html">Bandwidth Calculator</a>, <a href="binary-calculator.html">Binary Calculator</a>, <a href="url-encoder.html">URL Encode / Decode</a>, <a href="hex-calculator.html">Hex Calculator</a>.</p>
+
+      <!--/seo-extra-->
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What's the difference between a subnet mask and CIDR notation?</h3>

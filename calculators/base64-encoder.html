@@ -20,11 +20,13 @@
 <meta property="og:title" content="Base64 Encode / Decode - CalcBundle">
 <meta property="og:description" content="Encode text to Base64 or decode Base64 back to text, entirely in your browser.">
 <meta property="og:url" content="https://calcbundle.net/calculators/base64-encoder.html">
-<meta property="og:image" content="https://calcbundle.net/images/logo.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://calcbundle.net/images/og-other.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Base64 Encode / Decode - CalcBundle">
 <meta name="twitter:description" content="Encode text to Base64 or decode Base64 back to text, entirely in your browser.">
-<meta name="twitter:image" content="https://calcbundle.net/images/logo.png">
+<meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/fraction-calculator.css">
@@ -53,6 +55,7 @@
   ]
 }
 </script>
+<script type="application/ld+json" id="seo-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcbundle.net/"},{"@type":"ListItem","position":2,"name":"Other","item":"https://calcbundle.net/categories/other.html"},{"@type":"ListItem","position":3,"name":"Base64 Encode / Decode","item":"https://calcbundle.net/calculators/base64-encoder.html"}]},{"@type":"WebApplication","name":"Base64 Encode / Decode","url":"https://calcbundle.net/calculators/base64-encoder.html","description":"Encode text to Base64 or decode Base64 back to text, entirely in your browser.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"CalcBundle","url":"https://calcbundle.net/"}}]}</script>
 </head>
 <body>
 
@@ -126,6 +129,16 @@
       <p>Common uses include embedding small images directly in CSS or HTML (data URIs), encoding email attachments, and representing binary tokens or credentials in text-based protocols and config files.</p>
       <div class="callout">Both conversions happen locally in your browser using the standard <code>btoa</code>/<code>atob</code> functions &mdash; nothing you type here is sent anywhere.</div>
 
+      <!--seo-extra-->
+      <h2>A worked example</h2>
+      <p>Encoding the text Hello, CalcBundle! with Base64 gives SGVsbG8sIENhbGNCdW5kbGUh. Paste that string into the decoder and the original text comes back. Base64 turns every 3 bytes of data into 4 characters from a set of 64 safe characters, so the output is about a third longer than the input.</p>
+
+      <h2>Tips for Base64</h2>
+      <p>Base64 is an encoding, not encryption, so do not use it to hide passwords or secrets. It is used to carry binary data, such as images and files, through systems built for text, including email, JSON and data URLs. A string that ends in one or two equals signs is padding. If decoding fails, check for missing characters, line breaks or a URL-safe variant that uses - and _ in place of + and /.</p>
+
+      <p><strong>You might also need:</strong> <a href="url-encoder.html">URL Encode / Decode</a>, <a href="ip-subnet-calculator.html">IP Subnet Calculator</a>, <a href="roman-numeral-converter.html">Roman Numeral Converter</a>, <a href="bandwidth-calculator.html">Bandwidth Calculator</a>.</p>
+
+      <!--/seo-extra-->
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Why does encoded text look longer than the original?</h3>
