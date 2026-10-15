@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Refinance Calculator: Savings &amp; Break-Even - CalcBundle</title>
-<meta name="description" content="Compare your current mortgage against a refinanced one — new payment, true APR including points and fees, lifetime savings, and the break-even point.">
+<title>Mortgage Refinance Break-Even Calculator | CalcBundle</title>
+<meta name="description" content="Estimate how long it could take to recover refinance closing costs. Compare monthly mortgage payments, loan terms, points, and potential interest savings.">
 <link rel="canonical" href="https://calcbundle.net/calculators/refinance-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Refinance Calculator: Savings &amp; Break-Even - CalcBundle">
-<meta property="og:description" content="Compare your current mortgage against a refinanced one — new payment, true APR including points and fees, lifetime savings, and the break-even point.">
+<meta property="og:title" content="Mortgage Refinance Break-Even Calculator | CalcBundle">
+<meta property="og:description" content="Estimate how long it could take to recover refinance closing costs. Compare monthly mortgage payments, loan terms, points, and potential interest savings.">
 <meta property="og:url" content="https://calcbundle.net/calculators/refinance-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Refinance Calculator: Savings &amp; Break-Even - CalcBundle">
-<meta name="twitter:description" content="Compare your current mortgage against a refinanced one — new payment, true APR including points and fees, lifetime savings, and the break-even point.">
+<meta name="twitter:title" content="Mortgage Refinance Break-Even Calculator | CalcBundle">
+<meta name="twitter:description" content="Estimate how long it could take to recover refinance closing costs. Compare monthly mortgage payments, loan terms, points, and potential interest savings.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -50,7 +50,7 @@
       "name": "Does refinancing reset my loan's clock?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Only if you let it. Choosing a new 30-year term when you'd already paid down several years of a previous 30-year loan does restart the countdown — picking a shorter new term (or one that matches your remaining time) avoids stretching the payoff back out."
+        "text": "It depends on the new term. Replacing a loan with 20 years remaining with a new 30-year mortgage extends the repayment schedule. A term closer to the remaining years can avoid that extension, though the monthly payment may be higher."
       }
     },
     {
@@ -58,13 +58,13 @@
       "name": "Is a lower monthly payment always a good sign?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not by itself. A lower payment achieved by extending the term can mean paying more in total interest even at a lower rate — that's exactly why this calculator compares lifetime cost, not just the monthly number."
+        "text": "No. Extending the loan term may reduce monthly payments but increase the total interest paid. Review the new loan term, interest, upfront costs and any cash-out amount before deciding."
       }
     }
   ]
 }
 </script>
-<script type="application/ld+json" id="seo-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcbundle.net/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://calcbundle.net/categories/financial.html"},{"@type":"ListItem","position":3,"name":"Refinance Calculator","item":"https://calcbundle.net/calculators/refinance-calculator.html"}]},{"@type":"WebApplication","name":"Refinance Calculator","url":"https://calcbundle.net/calculators/refinance-calculator.html","description":"Compare your current mortgage against a refinanced one — new payment, true APR including points and fees, lifetime savings, and the break-even point.","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"CalcBundle","url":"https://calcbundle.net/"}}]}</script>
+<script type="application/ld+json" id="seo-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcbundle.net/"},{"@type":"ListItem","position":2,"name":"Financial","item":"https://calcbundle.net/categories/financial.html"},{"@type":"ListItem","position":3,"name":"Refinance Calculator","item":"https://calcbundle.net/calculators/refinance-calculator.html"}]},{"@type":"WebApplication","name":"Refinance Calculator","url":"https://calcbundle.net/calculators/refinance-calculator.html","description":"Estimate how long it could take to recover refinance closing costs. Compare monthly mortgage payments, loan terms, points, and potential interest savings.","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"CalcBundle","url":"https://calcbundle.net/"}}]}</script>
 </head>
 <body>
 
@@ -95,7 +95,7 @@
       <span class="current">Refinance Calculator</span>
     </div>
     <h1>Refinance Calculator</h1>
-    <p>Compare your current mortgage against a refinanced one — new payment, true APR including points and fees, lifetime savings, and how long it takes to break even.</p>
+    <p>Compare your current mortgage with a new loan, including the payment, discount points, closing costs and estimated break-even month. A lower payment alone does not always mean a cheaper refinance.</p>
   </div>
 </section>
 
@@ -185,21 +185,25 @@
     </form>
 
     <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Why the APR is never quite the note rate</h2>
-      <p>A refinance almost always comes with upfront costs — points paid to buy down the rate, lender fees, closing costs. The advertised "note rate" ignores all of that; the APR doesn't. It answers a more honest question: given what you're actually walking away with after fees, what rate would you need to have borrowed at, with no fees at all, to end up paying the same? That's always a little higher than the note rate whenever there are upfront costs, which is why comparing APRs — not note rates — is the fairer way to shop refinance offers.</p>
+      <h2 style="margin-top:0;">When would refinancing pay for itself?</h2>
+      <p>A lower interest rate can reduce your mortgage payment, but refinancing usually involves upfront costs. Enter the balance and payment on your existing loan, then test a new rate, term, points and closing fees. Compare the projected payment, interest and estimated break-even point instead of judging the rate alone.</p>
 
-      <h2>What "break-even" really measures</h2>
-      <p>Refinancing isn't free the moment it closes — you're paying real money upfront to lower your rate. The break-even point is when the interest you've saved by having a cheaper loan finally catches up to and exceeds what you paid to get it. Refinance and move within a couple of years, and you may never reach that point; stay in the loan for a decade, and the savings can be substantial. The math only pays off if you outlast the break-even point.</p>
-      <div class="callout">Break-even is calculated from accumulated interest savings, not from the raw difference in monthly payment — a shorter new loan term can shift the crossover earlier or later than a simple "upfront cost ÷ monthly savings" estimate would suggest.</div>
+      <h2>A quick refinance payment example</h2>
+      <p>Suppose your remaining mortgage balance is $250,000. For a <strong>new 20-year fixed-rate loan at 6%</strong>, the principal-and-interest payment is approximately <strong>$1,791.08 per month</strong> before taxes, insurance or lender fees. At 7% for the same 20-year term, the payment would be approximately <strong>$1,938.25</strong>. This illustrates the payment difference only; whether refinancing is worthwhile also depends on your current loan's remaining term and the new loan's costs.</p>
 
-      <h2>Why cash-out refinancing costs more than it looks</h2>
-      <p>Pulling equity out as cash increases the new loan's balance, which increases both the monthly payment and the total interest charged over the loan's life — on top of whatever rate change you're also making. It can still be the cheapest way to access a large sum of money compared to other borrowing, but it's rarely "free" money in the way it can feel.</p>
+      <h2>What the refinance break-even estimate means</h2>
+      <p>The calculator compares accumulated interest on the current and new loans and reports the first month in which the estimated interest difference reaches the entered upfront costs. This is an <strong>interest-based break-even estimate</strong>, not a guarantee that refinancing saves money overall. A different payoff term, a cash-out amount, or selling the home early can change the decision.</p>
+      <div class="callout">For a simple same-term comparison, you can also estimate a payment-based break-even as closing costs divided by monthly payment savings. This shortcut does not capture differences in loan balances or payoff dates.</div>
 
-      <!--seo-extra-->
-      <p><strong>You might also need:</strong> <a href="fha-loan-calculator.html">FHA Loan Calculator</a>, <a href="va-mortgage-calculator.html">VA Mortgage Calculator</a>, <a href="down-payment-calculator.html">Down Payment Calculator</a>, <a href="rent-vs-buy-calculator.html">Rent vs. Buy Calculator</a>.</p>
+      <h2>APR, points and closing costs</h2>
+      <p>One discount point is 1% of the new loan amount. Paying points and lender fees can make a lower advertised note rate less attractive. This tool estimates an effective rate from the loan amount and the costs you enter; it is <strong>not a substitute for the official APR in a lender's Loan Estimate</strong>, which follows specific disclosure rules and may include other charges.</p>
 
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-a-mortgage-payment-is-calculated.html">How a Mortgage Payment Is Calculated</a>.</p>
+      <h2>Be careful with cash-out refinancing</h2>
+      <p>Cash-out refinancing increases the new loan balance. When you compare total payments, remember that part of the larger balance represents cash received, not simply an additional borrowing cost. Compare offers with the same cash-out amount and check the total interest and fees separately.</p>
+
+      <h2>Which calculator should you use next?</h2>
+      <p>If you're still considering your current loan costs, check the <a href="mortgage-calculator.html">Mortgage Calculator</a> for payment scenarios. To see how payments reduce your balance, use the <a href="amortization-calculator.html">Amortization Calculator</a>. If you want to stay with your current mortgage but pay it down faster, try the <a href="mortgage-payoff-calculator.html">Mortgage Payoff Calculator</a>. For questions about buying another home, use the <a href="house-affordability-calculator.html">House Affordability Calculator</a>.</p>
+      <p>For the payment formula, see <a href="../guides/how-a-mortgage-payment-is-calculated.html">How a Mortgage Payment Is Calculated</a>. If you're weighing renting against ownership, see <a href="../guides/rent-vs-buy-how-to-compare.html">Rent vs Buy: How to Compare</a>.</p>
 
       <h2>Common questions</h2>
       <div class="faq-item">
@@ -208,11 +212,11 @@
       </div>
       <div class="faq-item">
         <h3>Does refinancing reset my loan's clock?</h3>
-        <p>Only if you let it. Choosing a new 30-year term when you'd already paid down several years of a previous 30-year loan does restart the countdown — picking a shorter new term (or one that matches your remaining time) avoids stretching the payoff back out.</p>
+        <p>It depends on the new term. Replacing a loan with 20 years remaining with a new 30-year mortgage extends the repayment schedule. A term closer to the remaining years can avoid that extension, though the monthly payment may be higher.</p>
       </div>
       <div class="faq-item">
         <h3>Is a lower monthly payment always a good sign?</h3>
-        <p>Not by itself. A lower payment achieved by extending the term can mean paying more in total interest even at a lower rate — that's exactly why this calculator compares lifetime cost, not just the monthly number.</p>
+        <p>No. Extending the loan term may reduce monthly payments but increase the total interest paid. Review the new loan term, interest, upfront costs and any cash-out amount before deciding.</p>
       </div>
     </div>
 
