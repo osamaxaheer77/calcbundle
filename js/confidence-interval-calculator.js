@@ -40,13 +40,13 @@
       ? '<p class="tool-result" style="background:#fffbeb;border:1px solid #fde68a;color:#78350f;margin:0 0 12px;">Your sample is smaller than 30. If you only have the sample standard deviation, tick the t-distribution box for a more accurate (wider) interval.</p>'
       : '';
     el('ci-result').innerHTML = spread +
-      `<div class="summary-payment-box"><div class="label">${trim(cl)}% confidence interval</div><div class="value">${trim(mean)} ± ${fixed(margin, 3)}</div><div class="label" style="margin-top:6px;">${fixed(lo, 3)} to ${fixed(hi, 3)}${pct}</div></div>` +
+      `<div class="summary-payment-box"><div class="label">${trim(cl)}% confidence interval</div><div class="value" style="overflow-wrap:anywhere;">${trim(mean)} ± ${fixed(margin, 3)}</div><div class="label" style="margin-top:6px;">${fixed(lo, 3)} to ${fixed(hi, 3)}${pct}</div></div>` +
       `<div class="stat-row"><span>Critical value (${name})</span><strong>${crit.toFixed(4)}</strong></div>` +
       `<div class="stat-row"><span>Standard error (SD ÷ √n)</span><strong>${fixed(se, 4)}</strong></div>` +
       `<div class="stat-row"><span>Margin of error</span><strong>±${fixed(margin, 3)}</strong></div>` +
       `<div class="stat-row"><span>Lower bound</span><strong>${fixed(lo, 3)}</strong></div>` +
       `<div class="stat-row"><span>Upper bound</span><strong>${fixed(hi, 3)}</strong></div>` +
-      `<div class="callout" style="margin-top:14px;"><strong>Steps:</strong> CI = x̄ ± ${name} × s ÷ √n = ${trim(mean)} ± ${crit.toFixed(4)} × ${trim(sd)} ÷ √${n} = ${trim(mean)} ± ${fixed(margin, 3)}.</div>` +
+      `<div class="callout" style="margin-top:14px;overflow-wrap:anywhere;"><strong>Steps:</strong> CI = x̄ ± ${name} × s ÷ √n = ${trim(mean)} ± ${crit.toFixed(4)} × ${trim(sd)} ÷ √${n} = ${trim(mean)} ± ${fixed(margin, 3)}.</div>` +
       bar(lo, hi, mean);
   }
 

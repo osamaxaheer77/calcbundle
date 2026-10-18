@@ -60,7 +60,7 @@
     const sampVar = n > 1 ? ss / (n - 1) : null;
 
     el('st-result').innerHTML =
-      `<div class="summary-payment-box"><div class="label">Mean (Average)</div><div class="value">${f(mean)}</div><div class="label" style="margin-top:6px;">${n} value${n === 1 ? '' : 's'}</div></div>` +
+      `<div class="summary-payment-box"><div class="label">Mean (Average)</div><div class="value" style="overflow-wrap:anywhere;">${f(mean)}</div><div class="label" style="margin-top:6px;">${n} value${n === 1 ? '' : 's'}</div></div>` +
       row('Count', n) +
       row('Sum', f(sum)) +
       row('Median', f(median)) +

@@ -59,7 +59,7 @@
     el('pc-result').innerHTML =
       `<div class="summary-payment-box"><div class="label">Permutations, ${n}P${r} (order matters)</div><div class="value" style="font-size:24px;line-height:1.3;">${show(lp, () => perm(n, r))}</div></div>` +
       `<div class="summary-payment-box" style="margin-top:12px;"><div class="label">Combinations, ${n}C${r} (order does not matter)</div><div class="value" style="font-size:24px;line-height:1.3;">${show(lc, () => comb(n, r))}</div></div>` +
-      `<div class="callout" style="margin-top:14px;"><strong>Steps:</strong><br>` +
+      `<div class="callout" style="margin-top:14px;overflow-wrap:anywhere;"><strong>Steps:</strong><br>` +
       `P = n! ÷ (n − r)! = ${n}! ÷ (${n} − ${r})! = ${n}! ÷ ${nr}!<br>` +
       `C = n! ÷ (r! × (n − r)!) = ${n}! ÷ (${r}! × ${nr}!)</div>` +
       `<h3 style="margin:18px 0 8px;font-size:15px;">If items can repeat</h3>` +

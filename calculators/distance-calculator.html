@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Distance Calculator: 2D, 3D &amp; Lat/Long - CalcBundle</title>
+<meta name="description" content="Find the distance between two points in 2D or 3D, or the shortest distance between two places on Earth from their latitude and longitude.">
+<link rel="canonical" href="https://calcbundle.net/calculators/distance-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Distance Calculator: 2D, 3D &amp; Lat/Long - CalcBundle">
+<meta property="og:description" content="Find the distance between two points in 2D or 3D, or the shortest distance between two places on Earth from their latitude and longitude.">
+<meta property="og:url" content="https://calcbundle.net/calculators/distance-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/og-math.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Distance Calculator: 2D, 3D &amp; Lat/Long - CalcBundle">
+<meta name="twitter:description" content="Find the distance between two points in 2D or 3D, or the shortest distance between two places on Earth from their latitude and longitude.">
+<meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the distance formula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "d = √((x₂ − x₁)² + (y₂ − y₁)²). It comes from the Pythagorean theorem, with the horizontal and vertical gaps as the two shorter sides."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the distance between two coordinates on a map?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the latitude and longitude section. Enter each place in decimal degrees (south and west are negative) or in degrees, minutes and seconds, and the calculator gives the great-circle distance in kilometres and miles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the straight-line distance shorter than the driving distance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roads bend around obstacles and follow a network. The straight-line figure is the shortest possible path, so any road or flight route is at least as long."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the distance in 3D?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add the squared difference of the z-values inside the square root: d = √(Δx² + Δy² + Δz²)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the latitude and longitude distance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It uses an ellipsoidal model of the Earth and is accurate to well under a percent for most pairs of points, which is far more accurate than simple spherical shortcuts."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json" id="seo-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcbundle.net/"},{"@type":"ListItem","position":2,"name":"Math","item":"https://calcbundle.net/categories/math.html"},{"@type":"ListItem","position":3,"name":"Distance Calculator","item":"https://calcbundle.net/calculators/distance-calculator.html"}]},{"@type":"WebApplication","name":"Distance Calculator","url":"https://calcbundle.net/calculators/distance-calculator.html","description":"Find the distance between two points in 2D or 3D, or the shortest distance between two places on Earth from their latitude and longitude.","applicationCategory":"EducationalApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"CalcBundle","url":"https://calcbundle.net/"}}]}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../guides/" class="nav-link">Guides</a><a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Distance Calculator</span>
+    </div>
+    <h1>Distance Calculator</h1>
+    <p>Measure the straight-line distance between two points on a plane, in 3D space, or between two latitude and longitude positions on the Earth.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Distance between two points (2D)</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Enter the x and y coordinates of both points.</p>
+    <form id="d2-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="d2-x1">x₁</label>
+            <input type="text" id="d2-x1" value="1" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="d2-y1">y₁</label>
+            <input type="text" id="d2-y1" value="1" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="d2-x2">x₂</label>
+            <input type="text" id="d2-x2" value="4" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="d2-y2">y₂</label>
+            <input type="text" id="d2-y2" value="5" inputmode="decimal" autocomplete="off">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="d2-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:36px 0 6px;font-size:20px;">Distance between two points in 3D space</h2>
+    <form id="d3-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="d3-x1">x₁</label>
+            <input type="text" id="d3-x1" value="1" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="d3-y1">y₁</label>
+            <input type="text" id="d3-y1" value="1" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="d3-z1">z₁</label>
+            <input type="text" id="d3-z1" value="1" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="d3-x2">x₂</label>
+            <input type="text" id="d3-x2" value="2" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="d3-y2">y₂</label>
+            <input type="text" id="d3-y2" value="2" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="d3-z2">z₂</label>
+            <input type="text" id="d3-z2" value="2" inputmode="decimal" autocomplete="off">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="d3-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:36px 0 6px;font-size:20px;">Distance between two places on Earth</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Enter latitude and longitude as decimal degrees or as degrees, minutes and seconds. South and west are negative in decimal form.</p>
+    <form id="dg-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label class="radio-option" style="display:inline-flex;margin-right:16px;"><input type="radio" name="dg-mode" value="dec" checked>Decimal degrees</label>
+            <label class="radio-option" style="display:inline-flex;"><input type="radio" name="dg-mode" value="dms">Degrees, minutes, seconds</label>
+          </div>
+          <div id="dg-dec">
+          <div class="field-group">
+            <label for="dg-la1">Latitude 1</label>
+            <input type="text" id="dg-la1" value="38.8976" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="dg-lo1">Longitude 1</label>
+            <input type="text" id="dg-lo1" value="-77.0366" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="dg-la2">Latitude 2</label>
+            <input type="text" id="dg-la2" value="39.9496" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="dg-lo2">Longitude 2</label>
+            <input type="text" id="dg-lo2" value="-75.1503" inputmode="decimal" autocomplete="off">
+          </div>
+          </div>
+          <div id="dg-dms" hidden>
+            <label style="font-weight:600;font-size:13px;display:block;margin:10px 0 4px;">Latitude 1</label>
+            <div style="display:flex;gap:6px;align-items:flex-end;flex-wrap:wrap;"><div style="flex:1;min-width:64px;"><label for="dg-lad1" style="font-size:12px;">Degrees</label><input type="text" id="dg-lad1" value="38" inputmode="decimal" autocomplete="off"></div><div style="flex:1;min-width:64px;"><label for="dg-lam1" style="font-size:12px;">Minutes</label><input type="text" id="dg-lam1" value="53" inputmode="decimal" autocomplete="off"></div><div style="flex:1;min-width:64px;"><label for="dg-las1" style="font-size:12px;">Seconds</label><input type="text" id="dg-las1" value="51.36" inputmode="decimal" autocomplete="off"></div><div style="flex:0 0 72px;"><label for="dg-lau1" style="font-size:12px;">&nbsp;</label><select id="dg-lau1"><option value="n" selected>N</option><option value="s">S</option></select></div></div>
+            <label style="font-weight:600;font-size:13px;display:block;margin:10px 0 4px;">Longitude 1</label>
+            <div style="display:flex;gap:6px;align-items:flex-end;flex-wrap:wrap;"><div style="flex:1;min-width:64px;"><label for="dg-lod1" style="font-size:12px;">Degrees</label><input type="text" id="dg-lod1" value="77" inputmode="decimal" autocomplete="off"></div><div style="flex:1;min-width:64px;"><label for="dg-lom1" style="font-size:12px;">Minutes</label><input type="text" id="dg-lom1" value="2" inputmode="decimal" autocomplete="off"></div><div style="flex:1;min-width:64px;"><label for="dg-los1" style="font-size:12px;">Seconds</label><input type="text" id="dg-los1" value="11.76" inputmode="decimal" autocomplete="off"></div><div style="flex:0 0 72px;"><label for="dg-lou1" style="font-size:12px;">&nbsp;</label><select id="dg-lou1"><option value="e">E</option><option value="w" selected>W</option></select></div></div>
+            <label style="font-weight:600;font-size:13px;display:block;margin:10px 0 4px;">Latitude 2</label>
+            <div style="display:flex;gap:6px;align-items:flex-end;flex-wrap:wrap;"><div style="flex:1;min-width:64px;"><label for="dg-lad2" style="font-size:12px;">Degrees</label><input type="text" id="dg-lad2" value="39" inputmode="decimal" autocomplete="off"></div><div style="flex:1;min-width:64px;"><label for="dg-lam2" style="font-size:12px;">Minutes</label><input type="text" id="dg-lam2" value="56" inputmode="decimal" autocomplete="off"></div><div style="flex:1;min-width:64px;"><label for="dg-las2" style="font-size:12px;">Seconds</label><input type="text" id="dg-las2" value="58.56" inputmode="decimal" autocomplete="off"></div><div style="flex:0 0 72px;"><label for="dg-lau2" style="font-size:12px;">&nbsp;</label><select id="dg-lau2"><option value="n" selected>N</option><option value="s">S</option></select></div></div>
+            <label style="font-weight:600;font-size:13px;display:block;margin:10px 0 4px;">Longitude 2</label>
+            <div style="display:flex;gap:6px;align-items:flex-end;flex-wrap:wrap;"><div style="flex:1;min-width:64px;"><label for="dg-lod2" style="font-size:12px;">Degrees</label><input type="text" id="dg-lod2" value="75" inputmode="decimal" autocomplete="off"></div><div style="flex:1;min-width:64px;"><label for="dg-lom2" style="font-size:12px;">Minutes</label><input type="text" id="dg-lom2" value="9" inputmode="decimal" autocomplete="off"></div><div style="flex:1;min-width:64px;"><label for="dg-los2" style="font-size:12px;">Seconds</label><input type="text" id="dg-los2" value="1.08" inputmode="decimal" autocomplete="off"></div><div style="flex:0 0 72px;"><label for="dg-lou2" style="font-size:12px;">&nbsp;</label><select id="dg-lou2"><option value="e">E</option><option value="w" selected>W</option></select></div></div>
+          </div>
+          <button type="submit" class="calc-submit-btn" style="margin-top:12px;">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="dg-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">The distance formula is Pythagoras in disguise</h2>
+      <p>To measure the straight line between two points on a flat grid, treat the horizontal and vertical gaps as the two shorter sides of a right triangle. The distance is the long side: d = &radic;((x&#8322; &minus; x&#8321;)&sup2; + (y&#8322; &minus; y&#8321;)&sup2;). For (1, 1) and (4, 5) the gaps are 3 and 4, so d = &radic;(9 + 16) = &radic;25 = 5, the classic 3-4-5 triangle. The order of the points does not matter, and the result is never negative. The 2D result also gives you the slope, angle and equation of the line joining the two points.</p>
+
+      <h2>Adding the third dimension</h2>
+      <p>In 3D you add one more squared gap: d = &radic;(&Delta;x&sup2; + &Delta;y&sup2; + &Delta;z&sup2;). That is useful for more than computer graphics. The longest straight object that fits in a room 4 m long, 3 m wide and 2.5 m high is the corner-to-corner diagonal, &radic;(16 + 9 + 6.25) = &radic;31.25, about 5.59 m. If you are working in 2D and want the angle between the points, the <a href="slope-calculator.html">Slope Calculator</a> gives it directly.</p>
+
+      <h2>Distance between two places on Earth</h2>
+      <p>Latitude and longitude points sit on a curved surface, so the flat formula does not work over any long distance. This calculator finds the shortest path along the Earth&rsquo;s surface, the so-called great-circle or &ldquo;as the crow flies&rdquo; distance, using a model of the Earth as a slightly flattened sphere (an ellipsoid). Washington, D.C. to Philadelphia comes out at about 200 km (124 miles). It is always shorter than a road or flight route, which is why a driving trip between the same two places is longer. For road distances and travel time in the US, use the <a href="mileage-calculator.html">Mileage Calculator</a>.</p>
+
+      <h2>Entering coordinates correctly</h2>
+      <p>In decimal form, north latitudes and east longitudes are positive and south latitudes and west longitudes are negative, so Washington, D.C. is about 38.9, &minus;77.0. If your coordinates are written as degrees, minutes and seconds (38&deg; 53&prime; 51&Prime; N), switch to the second option and choose N or S and E or W instead of using minus signs. Latitude must be between &minus;90 and 90 and longitude between &minus;180 and 180.</p>
+
+      <h2>Straight-line distance or taxicab distance?</h2>
+      <p>The distance formula gives the straight-line, or Euclidean, distance. In a city laid out as a grid you cannot cut across blocks, so the distance you actually walk is the sum of the horizontal and vertical gaps. For (1, 1) and (4, 5) that is 3 + 4 = 7 blocks, against 5 in a straight line. If you need to turn a distance into a travel time, divide it by your speed, or let the <a href="speed-calculator.html">Speed Calculator</a> do it.</p>
+
+      <h2>Related tools</h2>
+      <p>If the distance you found is one side of a triangle, the <a href="right-triangle-calculator.html">Right Triangle Calculator</a> finds the rest, and the <a href="pythagorean-theorem-calculator.html">Pythagorean Theorem Calculator</a> handles the same formula when you already know two sides. For a triangle with no right angle, use the <a href="triangle-calculator.html">Triangle Calculator</a>.</p>
+      <div class="callout">Earth-surface distances here are shortest-path, straight-over-the-surface figures. They ignore hills, roads, borders and the curve of any real route, so use them for planning and comparison, not for navigation.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the distance formula?</h3>
+        <p>d = √((x₂ − x₁)² + (y₂ − y₁)²). It comes from the Pythagorean theorem, with the horizontal and vertical gaps as the two shorter sides.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I find the distance between two coordinates on a map?</h3>
+        <p>Use the latitude and longitude section. Enter each place in decimal degrees (south and west are negative) or in degrees, minutes and seconds, and the calculator gives the great-circle distance in kilometres and miles.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is the straight-line distance shorter than the driving distance?</h3>
+        <p>Roads bend around obstacles and follow a network. The straight-line figure is the shortest possible path, so any road or flight route is at least as long.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I find the distance in 3D?</h3>
+        <p>Add the squared difference of the z-values inside the square root: d = √(Δx² + Δy² + Δz²).</p>
+      </div>
+      <div class="faq-item">
+        <h3>How accurate is the latitude and longitude distance?</h3>
+        <p>It uses an ellipsoidal model of the Earth and is accurate to well under a percent for most pairs of points, which is far more accurate than simple spherical shortcuts.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="slope-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Slope Calculator</h3>
+        <p>Slope, angle and equation of a line.</p>
+      </a>
+
+      <a class="calc-list-card" href="right-triangle-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Right Triangle Calculator</h3>
+        <p>Sides, angles and area from any two values.</p>
+      </a>
+
+      <a class="calc-list-card" href="pythagorean-theorem-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Pythagorean Theorem Calculator</h3>
+        <p>Find a missing side of a right triangle.</p>
+      </a>
+
+      <a class="calc-list-card" href="mileage-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Mileage Calculator</h3>
+        <p>Driving distance and time between US places.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../guides/">Guides</a><a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/line-common.js"></script>
+<script src="../js/distance-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

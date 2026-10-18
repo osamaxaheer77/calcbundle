@@ -33,11 +33,11 @@
     const lo = Math.min(x, mu), hi = Math.max(x, mu);
     const dp = (v) => String(Number(v.toPrecision(12)));
     el('zs-result').innerHTML =
-      `<div class="summary-payment-box"><div class="label">Z-score</div><div class="value">${z5(z)}</div></div>` +
+      `<div class="summary-payment-box"><div class="label">Z-score</div><div class="value" style="overflow-wrap:anywhere;">${z5(z)}</div></div>` +
       line([`Probability of x &lt; ${dp(x)}`, p(lower)]) +
       line([`Probability of x &gt; ${dp(x)}`, p(upper)]) +
       line([`Probability of ${dp(lo)} &lt; x &lt; ${dp(hi)}`, p(mid)]) +
-      `<div class="callout" style="margin-top:14px;"><strong>Steps:</strong> z = (x &minus; &mu;) &divide; &sigma; = (${dp(x)} &minus; ${dp(mu)}) &divide; ${dp(sd)} = ${z5(z)}.<br>` +
+      `<div class="callout" style="margin-top:14px;overflow-wrap:anywhere;"><strong>Steps:</strong> z = (x &minus; &mu;) &divide; &sigma; = (${dp(x)} &minus; ${dp(mu)}) &divide; ${dp(sd)} = ${z5(z)}.<br>` +
       `P(x &lt; ${dp(x)}) = ${p(lower)} and P(x &gt; ${dp(x)}) = 1 &minus; ${p(lower)} = ${p(upper)}.<br>` +
       `The probability between the mean and your score is ${p(mid)}.</div>`;
   }
@@ -70,7 +70,7 @@
     const lower = S.cdf(z), upper = S.sf(z), between = S.cdf(az) - 0.5, inside = 1 - 2 * S.sf(az), outside = 2 * S.sf(az);
     const zeroLabel = z < 0 ? 'P(Z&lt;x&lt;0)' : 'P(0&lt;x&lt;Z)';
     el('zc-result').innerHTML =
-      `<div class="summary-payment-box"><div class="label">Given ${given}</div><div class="value">Z = ${zShow}</div>${first !== 'zc-z' ? `<div class="label" style="margin-top:6px;">More precisely, Z = ${z5(z)}</div>` : ''}</div>` +
+      `<div class="summary-payment-box"><div class="label">Given ${given}</div><div class="value" style="overflow-wrap:anywhere;">Z = ${zShow}</div>${first !== 'zc-z' ? `<div class="label" style="margin-top:6px;">More precisely, Z = ${z5(z)}</div>` : ''}</div>` +
       line(['P(x&lt;Z)', p(lower)]) + line(['P(x&gt;Z)', p(upper)]) + line([zeroLabel, p(between)]) +
       line(['P(-Z&lt;x&lt;Z)', p(inside)]) + line(['P(x&lt;-Z or x&gt;Z)', p(outside)]);
   }
@@ -83,7 +83,7 @@
     const inside = S.cdf(hi) - S.cdf(lo);
     const num = (v) => String(Number(v.toPrecision(12)));
     el('zr-result').innerHTML =
-      `<div class="summary-payment-box"><div class="label">P(${num(lo)} &lt; x &lt; ${num(hi)})</div><div class="value">${p(inside)}</div></div>` +
+      `<div class="summary-payment-box"><div class="label">P(${num(lo)} &lt; x &lt; ${num(hi)})</div><div class="value" style="overflow-wrap:anywhere;">${p(inside)}</div></div>` +
       line([`P(x &lt; ${num(lo)} or x &gt; ${num(hi)})`, p(1 - inside)]) +
       line([`P(x &lt; ${num(lo)})`, p(S.cdf(lo))]) +
       line([`P(x &gt; ${num(hi)})`, p(S.sf(hi))]);
