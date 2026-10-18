@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z-score Calculator: Z-table &amp; Probability - CalcBundle</title>
+<meta name="description" content="Find the z-score of a value, convert between z-scores and probabilities like a z-table, and find the area between two z-scores.">
+<link rel="canonical" href="https://calcbundle.net/calculators/z-score-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Z-score Calculator: Z-table &amp; Probability - CalcBundle">
+<meta property="og:description" content="Find the z-score of a value, convert between z-scores and probabilities like a z-table, and find the area between two z-scores.">
+<meta property="og:url" content="https://calcbundle.net/calculators/z-score-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/og-math.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Z-score Calculator: Z-table &amp; Probability - CalcBundle">
+<meta name="twitter:description" content="Find the z-score of a value, convert between z-scores and probabilities like a z-table, and find the area between two z-scores.">
+<meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate a z-score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Subtract the mean from your value and divide by the standard deviation: z = (x − μ) ÷ σ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good z-score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on what you are measuring. A positive z-score means above average and a negative one below. For exam results, a z-score above 1 puts you roughly in the top 16%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the percentile from a z-score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the converter and read P(x < Z). That probability, written as a percentage, is the percentile. A z-score of 1.5 gives 0.93319, which is about the 93rd percentile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a z-score be negative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A negative z-score means the value is below the mean. The probability to its left is then less than 0.5."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a z-score and a t-score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A z-score uses the known population standard deviation. A t-score is used when you only have a small sample and must estimate the standard deviation from it, which gives slightly wider tails."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json" id="seo-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcbundle.net/"},{"@type":"ListItem","position":2,"name":"Math","item":"https://calcbundle.net/categories/math.html"},{"@type":"ListItem","position":3,"name":"Z-score Calculator","item":"https://calcbundle.net/calculators/z-score-calculator.html"}]},{"@type":"WebApplication","name":"Z-score Calculator","url":"https://calcbundle.net/calculators/z-score-calculator.html","description":"Find the z-score of a value, convert between z-scores and probabilities like a z-table, and find the area between two z-scores.","applicationCategory":"EducationalApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"CalcBundle","url":"https://calcbundle.net/"}}]}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../guides/" class="nav-link">Guides</a><a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Z-score Calculator</span>
+    </div>
+    <h1>Z-score Calculator</h1>
+    <p>Turn a raw score into a z-score and its probability, look up any z-score or probability without a z-table, or find the chance between two z-scores.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <h2 style="margin:0 0 6px;font-size:20px;">Z-score from a raw score</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Enter a value, the mean of the population and its standard deviation.</p>
+    <form id="zs-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="zs-x">Raw score, x</label>
+            <input type="text" id="zs-x" value="5" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="zs-mean">Population mean, μ</label>
+            <input type="text" id="zs-mean" value="3" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="zs-sd">Standard deviation, σ</label>
+            <input type="text" id="zs-sd" value="2" inputmode="decimal" autocomplete="off">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="zs-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:36px 0 6px;font-size:20px;">Z-score and probability converter</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">This works like a z-table. Fill in any one box and the rest are worked out.</p>
+    <form id="zc-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="zc-z">Z-score, Z</label>
+            <input type="text" id="zc-z" value="2" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="zc-p">Probability, P(x &lt; Z)</label>
+            <input type="text" id="zc-p" value="" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="zc-pg">Probability, P(x &gt; Z)</label>
+            <input type="text" id="zc-pg" value="" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="zc-p0">Probability, P(0 to Z or Z to 0)</label>
+            <input type="text" id="zc-p0" value="" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="zc-pin">Probability, P(-Z &lt; x &lt; Z)</label>
+            <input type="text" id="zc-pin" value="" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="zc-pout">Probability, P(x &lt; -Z or x &gt; Z)</label>
+            <input type="text" id="zc-pout" value="" inputmode="decimal" autocomplete="off">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="zc-result"></div>
+      </div>
+    </form>
+
+    <h2 style="margin:36px 0 6px;font-size:20px;">Probability between two z-scores</h2>
+    <p style="font-size:14px;color:var(--text-secondary);margin:0 0 14px;">Find the area under the normal curve between a left and a right z-score.</p>
+    <form id="zr-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="zr-z1">Left bound, Z</label>
+            <input type="text" id="zr-z1" value="-1" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="zr-z2">Right bound, Z</label>
+            <input type="text" id="zr-z2" value="1" inputmode="decimal" autocomplete="off">
+          </div>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="zr-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What a z-score actually tells you</h2>
+      <p>A z-score says how many standard deviations a value sits above or below the average. A z-score of 0 is exactly average, +1 is one standard deviation above, and &minus;2 is two below. That makes very different things comparable. A 78 on an easy exam and a 64 on a hard one can both be turned into z-scores, and the higher z-score is the better result relative to the group. The calculation is simply (x &minus; &mu;) &divide; &sigma;.</p>
+
+      <h2>A worked example with an exam result</h2>
+      <p>Say a test has a mean of 70 and a standard deviation of 10, and you scored 85. Your z-score is (85 &minus; 70) &divide; 10 = 1.5. Enter those three numbers above and the probability of scoring below 85 comes out as 0.93319, so you did better than about 93% of the group, and about 6.7% scored higher. Because the figure assumes a roughly normal bell-shaped spread of scores, it is a good guide for exams, heights and measurement errors, and a poor one for heavily skewed data like incomes.</p>
+
+      <h2>Using it as a z-table</h2>
+      <p>Before calculators, people looked these probabilities up in a printed z-table. The converter does the same job in both directions. Enter a z-score to see the area to its left, to its right and in between, or enter a probability to get the z-score that goes with it. A few values are worth memorising: the 90th percentile is at z = 1.282, the 95th at 1.645, the 97.5th at 1.96 and the 99th at 2.326. They show up again and again in testing and in building ranges of likely values.</p>
+
+      <h2>The 68-95-99.7 rule, checked</h2>
+      <p>For a normal distribution, about 68% of values fall within one standard deviation of the mean, 95% within two, and 99.7% within three. You can check that with the last box: between z = &minus;1 and 1 the area is 0.68269, between &minus;2 and 2 it is 0.9545, and between &minus;3 and 3 it is 0.9973. A value more than three standard deviations out is rare, about 3 in 1,000, which is why it often gets flagged as an outlier.</p>
+
+      <h2>Where the other inputs come from</h2>
+      <p>If you have a list of raw data instead of a known mean and standard deviation, get them first from the <a href="statistics-calculator.html">Statistics Calculator</a> or the <a href="standard-deviation-calculator.html">Standard Deviation Calculator</a>, then bring the numbers back here. When you are building a range for an unknown average rather than judging one value, the same z-values (1.96 for 95%) drive the <a href="confidence-interval-calculator.html">Confidence Interval Calculator</a>. And for questions about chances of independent events rather than a bell curve, the <a href="probability-calculator.html">Probability Calculator</a> is the right tool.</p>
+
+      <h2>Common mistakes to avoid</h2>
+      <p>Using the sample standard deviation when the population value is known, or the other way round, shifts the z-score slightly, so be clear which one you have. Another mistake is applying a z-score to a sample average without dividing the standard deviation by the square root of the sample size. Finally, remember that the probabilities assume a normal distribution, so check with a quick histogram or common sense before trusting them for strongly lopsided data.</p>
+      <div class="callout">Rule of thumb: a z-score beyond about &plusmn;2 is unusual, and beyond &plusmn;3 is rare. If you see z-scores like 8 or &minus;10 in everyday data, the data is probably not normal or there is an entry error.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do you calculate a z-score?</h3>
+        <p>Subtract the mean from your value and divide by the standard deviation: z = (x − μ) ÷ σ.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a good z-score?</h3>
+        <p>It depends on what you are measuring. A positive z-score means above average and a negative one below. For exam results, a z-score above 1 puts you roughly in the top 16%.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I find the percentile from a z-score?</h3>
+        <p>Use the converter and read P(x < Z). That probability, written as a percentage, is the percentile. A z-score of 1.5 gives 0.93319, which is about the 93rd percentile.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can a z-score be negative?</h3>
+        <p>Yes. A negative z-score means the value is below the mean. The probability to its left is then less than 0.5.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between a z-score and a t-score?</h3>
+        <p>A z-score uses the known population standard deviation. A t-score is used when you only have a small sample and must estimate the standard deviation from it, which gives slightly wider tails.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="standard-deviation-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Standard Deviation Calculator</h3>
+        <p>Get the mean and standard deviation from your data.</p>
+      </a>
+
+      <a class="calc-list-card" href="statistics-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Statistics Calculator</h3>
+        <p>Mean, median, mode, range and spread in one place.</p>
+      </a>
+
+      <a class="calc-list-card" href="confidence-interval-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Confidence Interval Calculator</h3>
+        <p>Use z-values to build a range for the mean.</p>
+      </a>
+
+      <a class="calc-list-card" href="probability-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Probability Calculator</h3>
+        <p>Chances of single and combined events.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../guides/">Guides</a><a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/stats-common.js"></script>
+<script src="../js/z-score-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

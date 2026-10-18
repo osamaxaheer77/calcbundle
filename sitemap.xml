@@ -1120,4 +1120,20 @@
     <lastmod>2026-10-13</lastmod>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/statistics-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/z-score-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/confidence-interval-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://calcbundle.net/calculators/permutation-and-combination-calculator.html</loc>
+    <priority>0.7</priority>
+  </url>
 </urlset>

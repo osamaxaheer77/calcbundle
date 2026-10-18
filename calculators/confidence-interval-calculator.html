@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confidence Interval Calculator for a Mean - CalcBundle</title>
+<meta name="description" content="Find the confidence interval for a population mean from the sample size, sample mean and standard deviation, using the z-score or the t-distribution.">
+<link rel="canonical" href="https://calcbundle.net/calculators/confidence-interval-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Confidence Interval Calculator for a Mean - CalcBundle">
+<meta property="og:description" content="Find the confidence interval for a population mean from the sample size, sample mean and standard deviation, using the z-score or the t-distribution.">
+<meta property="og:url" content="https://calcbundle.net/calculators/confidence-interval-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/og-math.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Confidence Interval Calculator for a Mean - CalcBundle">
+<meta name="twitter:description" content="Find the confidence interval for a population mean from the sample size, sample mean and standard deviation, using the z-score or the t-distribution.">
+<meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate a confidence interval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Take the sample mean and add and subtract the margin of error. The margin of error is the critical value (z or t) times the standard deviation divided by the square root of the sample size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the z-value for a 95% confidence interval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is 1.96. For 90% it is about 1.645 and for 99% it is about 2.576."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a 95% confidence level mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means the method used would capture the true mean in about 95 out of 100 repeated samples. A higher level gives a wider interval."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use the t-distribution instead of z?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use t when the sample is small, usually under 30, and you only know the standard deviation from the sample. For large samples the two give almost the same answer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does sample size affect the margin of error?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A larger sample gives a smaller margin of error. Because of the square root, you need four times the sample size to halve the margin."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json" id="seo-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcbundle.net/"},{"@type":"ListItem","position":2,"name":"Math","item":"https://calcbundle.net/categories/math.html"},{"@type":"ListItem","position":3,"name":"Confidence Interval Calculator","item":"https://calcbundle.net/calculators/confidence-interval-calculator.html"}]},{"@type":"WebApplication","name":"Confidence Interval Calculator","url":"https://calcbundle.net/calculators/confidence-interval-calculator.html","description":"Find the confidence interval for a population mean from the sample size, sample mean and standard deviation, using the z-score or the t-distribution.","applicationCategory":"EducationalApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"CalcBundle","url":"https://calcbundle.net/"}}]}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../guides/" class="nav-link">Guides</a><a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Confidence Interval Calculator</span>
+    </div>
+    <h1>Confidence Interval Calculator</h1>
+    <p>Enter your sample size, mean and standard deviation to get the margin of error and the confidence interval for the true average.</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="ci-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="ci-n">Sample size, n</label>
+            <input type="text" id="ci-n" value="50" inputmode="numeric" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="ci-mean">Sample mean, x̄ (average)</label>
+            <input type="text" id="ci-mean" value="20.6" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="ci-sd">Standard deviation, σ or s</label>
+            <input type="text" id="ci-sd" value="3.2" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="ci-cl">Confidence level (%)</label>
+            <input type="text" id="ci-cl" value="95" inputmode="decimal" autocomplete="off">
+          </div>
+          <label class="radio-option" style="display:flex;margin:0 0 14px;"><input type="checkbox" id="ci-t">Use the t-distribution (better for small samples when you only know s)</label>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="ci-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">What a confidence interval is really saying</h2>
+      <p>You measured a sample, not everyone. The sample mean is your best single guess for the true average of the whole group, but it will not be exactly right. A confidence interval puts a range around that guess. A 95% interval means that if you repeated the whole sampling process many times, about 95 out of 100 of the intervals built this way would contain the true mean. Strictly speaking the 95% describes the method, not this one interval. In everyday use, read it as "the true value is probably somewhere in here", and a higher confidence level gives a wider range.</p>
+
+      <h2>A worked example you can follow</h2>
+      <p>Say you timed 50 customers at the checkout. The average wait was 20.6 minutes with a standard deviation of 3.2. The standard error is 3.2 &divide; &radic;50 = 0.4525. For a 95% interval the z-value is 1.96, so the margin of error is 1.96 &times; 0.4525 = 0.887 minutes. The interval runs from 19.713 to 21.487 minutes. In plain words: the typical wait across all customers is probably between about 19.7 and 21.5 minutes.</p>
+
+      <h2>z or t? Choosing the right critical value</h2>
+      <p>The calculator defaults to the z-value, which is correct when the population standard deviation is known or the sample is large (30 or more is the common rule of thumb). With a small sample where you only have the sample standard deviation s, the t-distribution is the better choice. It gives a slightly larger critical value, so the interval is a little wider and more honest about the extra uncertainty. For example, with 10 values a 95% interval uses t = 2.262 instead of 1.96, which makes the margin of error about 15% larger. Tick the t-distribution box to see the difference on your own numbers.</p>
+
+      <h2>How to make the interval narrower</h2>
+      <p>There are two levers. You can lower the confidence level, since 90% gives a tighter range than 99% (the z-values are 1.645, 1.960 and 2.576 for 90%, 95% and 99%), but that makes you less sure. Or you can collect more data. The margin of error shrinks with the square root of the sample size, so to cut it in half you need four times as many observations. If you are still planning a study, the <a href="sample-size-calculator.html">Sample Size Calculator</a> works backward from the margin of error you want to the number of people you need.</p>
+
+      <h2>Getting the inputs from your data</h2>
+      <p>If you have raw numbers rather than a ready-made mean and standard deviation, paste them into the <a href="statistics-calculator.html">Statistics Calculator</a> or the <a href="standard-deviation-calculator.html">Standard Deviation Calculator</a> and copy the count, mean and sample standard deviation across. To see where the 1.96 comes from, the <a href="z-score-calculator.html">Z-score Calculator</a> converts a confidence level into its z-value, since 95% leaves 2.5% in each tail.</p>
+
+      <h2>What this calculator does not cover</h2>
+      <p>This is the interval for a <em>mean</em>. It does not cover a proportion, such as "52% of voters prefer option A", which uses a different formula. It also assumes the sample was random and the data is roughly bell-shaped or the sample is large enough that the average behaves normally. A confidence interval cannot fix a biased sample: if you only asked the people who were easy to reach, the interval will be neatly centred on the wrong answer.</p>
+      <div class="callout">For samples smaller than 30, the calculator shows a reminder. If you only have the sample standard deviation, tick the t-distribution box so the interval is not too optimistic.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do you calculate a confidence interval?</h3>
+        <p>Take the sample mean and add and subtract the margin of error. The margin of error is the critical value (z or t) times the standard deviation divided by the square root of the sample size.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the z-value for a 95% confidence interval?</h3>
+        <p>It is 1.96. For 90% it is about 1.645 and for 99% it is about 2.576.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does a 95% confidence level mean?</h3>
+        <p>It means the method used would capture the true mean in about 95 out of 100 repeated samples. A higher level gives a wider interval.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When should I use the t-distribution instead of z?</h3>
+        <p>Use t when the sample is small, usually under 30, and you only know the standard deviation from the sample. For large samples the two give almost the same answer.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does sample size affect the margin of error?</h3>
+        <p>A larger sample gives a smaller margin of error. Because of the square root, you need four times the sample size to halve the margin.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="statistics-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Statistics Calculator</h3>
+        <p>Get the mean, count and standard deviation from your data.</p>
+      </a>
+
+      <a class="calc-list-card" href="sample-size-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Sample Size Calculator</h3>
+        <p>Work out how many responses you need.</p>
+      </a>
+
+      <a class="calc-list-card" href="z-score-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Z-score Calculator</h3>
+        <p>See where critical values like 1.96 come from.</p>
+      </a>
+
+      <a class="calc-list-card" href="standard-deviation-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Standard Deviation Calculator</h3>
+        <p>Population or sample, with a margin-of-error table.</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../guides/">Guides</a><a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/stats-common.js"></script>
+<script src="../js/confidence-interval-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>if (location.hostname !== 'calcbundle.net' && location.hostname !== 'www.calcbundle.net') window['ga-disable-G-VWN62JLK2K'] = true;</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VWN62JLK2K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VWN62JLK2K');
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Permutation &amp; Combination Calculator (nPr, nCr) - CalcBundle</title>
+<meta name="description" content="Work out nPr and nCr for any n and r, with the steps, exact whole-number answers, and the counts when items can repeat.">
+<link rel="canonical" href="https://calcbundle.net/calculators/permutation-and-combination-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcBundle">
+<meta property="og:title" content="Permutation &amp; Combination Calculator (nPr, nCr) - CalcBundle">
+<meta property="og:description" content="Work out nPr and nCr for any n and r, with the steps, exact whole-number answers, and the counts when items can repeat.">
+<meta property="og:url" content="https://calcbundle.net/calculators/permutation-and-combination-calculator.html">
+<meta property="og:image" content="https://calcbundle.net/images/og-math.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Permutation &amp; Combination Calculator (nPr, nCr) - CalcBundle">
+<meta name="twitter:description" content="Work out nPr and nCr for any n and r, with the steps, exact whole-number answers, and the counts when items can repeat.">
+<meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fraction-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-calculator.css">
+<link rel="stylesheet" href="../css/mortgage-payoff-calculator.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a permutation and a combination?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a permutation the order of the chosen items matters. In a combination it does not. For the same n and r there are always at least as many permutations as combinations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you calculate nCr?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use n! ÷ (r! × (n − r)!). For 6C2 that is 720 ÷ (2 × 24) = 15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 0! equal to?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "0! is defined as 1. That is why nC0 and nCn are both 1: there is exactly one way to choose nothing, and one way to choose everything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can r be larger than n?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not when items cannot repeat, because you cannot pick more items than exist. With repetition allowed, r can be larger than n, and the n^r formula still applies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many different 5-card poker hands are there?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There are 2,598,960 hands, which is 52C5."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json" id="seo-graph">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcbundle.net/"},{"@type":"ListItem","position":2,"name":"Math","item":"https://calcbundle.net/categories/math.html"},{"@type":"ListItem","position":3,"name":"Permutation and Combination Calculator","item":"https://calcbundle.net/calculators/permutation-and-combination-calculator.html"}]},{"@type":"WebApplication","name":"Permutation and Combination Calculator","url":"https://calcbundle.net/calculators/permutation-and-combination-calculator.html","description":"Work out nPr and nCr for any n and r, with the steps, exact whole-number answers, and the counts when items can repeat.","applicationCategory":"EducationalApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"CalcBundle","url":"https://calcbundle.net/"}}]}</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="logo">
+      <img src="../images/logo.png" alt="CalcBundle" class="logo-img">
+    </a>
+    <nav class="nav">
+      <div class="nav-links">
+      <a href="../all-calculators.html" class="nav-link">All Calculators</a>
+      <a href="../index.html#categories" class="nav-link">Categories</a>
+      <a href="../guides/" class="nav-link">Guides</a><a href="../about.html" class="nav-link">About</a>
+      </div>
+      <div class="nav-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Search calculators..." aria-label="Search calculators">
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="../categories/math.html" style="color:inherit;text-decoration:none;">Math</a>
+      <span>/</span>
+      <span class="current">Permutation and Combination Calculator</span>
+    </div>
+    <h1>Permutation and Combination Calculator</h1>
+    <p>Enter how many items there are and how many you pick, and get the number of permutations (order matters) and combinations (order does not).</p>
+  </div>
+</section>
+
+<section class="calculator-section">
+  <div class="container" style="max-width:1100px;">
+
+    <form id="pc-form" novalidate>
+      <div class="mortgage-layout">
+        <div class="mortgage-form-card">
+          <div class="field-group">
+            <label for="pc-n">Number of items to choose from, n</label>
+            <input type="text" id="pc-n" value="6" inputmode="numeric" autocomplete="off">
+          </div>
+          <div class="field-group">
+            <label for="pc-r">Number of items you pick, r</label>
+            <input type="text" id="pc-r" value="2" inputmode="numeric" autocomplete="off">
+          </div>
+          <p style="font-size:12px;color:var(--text-secondary);margin:0 0 12px;">Whole numbers from 0 to 999,999. The number you pick (r) cannot be bigger than n.</p>
+          <button type="submit" class="calc-submit-btn">Calculate</button>
+        </div>
+        <div class="mortgage-results-card" id="pc-result"></div>
+      </div>
+    </form>
+
+    <div class="fraction-guide" style="margin-top:32px;">
+      <h2 style="margin-top:0;">Permutation or combination: the one question that decides it</h2>
+      <p>Ask yourself: <em>would swapping two of the chosen items give a different result?</em> If yes, order matters, and you want permutations. If no, you want combinations. Picking a gold, silver and bronze medallist from 8 runners is a permutation, because the same three people in a different order is a different outcome. Picking 3 of the 8 to form a committee is a combination, because the group is the same whatever order you name them in.</p>
+
+      <h2>The two formulas</h2>
+      <p>Permutations, nPr = n! &divide; (n &minus; r)!. Combinations, nCr = n! &divide; (r! &times; (n &minus; r)!). Every combination can be arranged in r! different orders, which is why nCr is nPr divided by r!. For the medal example, 8P3 = 8 &times; 7 &times; 6 = 336 ways to award the medals, while 8C3 = 336 &divide; 6 = 56 possible committees.</p>
+
+      <h2>Real-life counts that are worth knowing</h2>
+      <p>The number of five-card poker hands from a 52-card deck is 52C5 = 2,598,960. A 6-number lottery drawn from 49 balls has 49C6 = 13,983,816 possible tickets, so one ticket has a 1 in about 14 million chance of the jackpot. If you want to turn counts into odds, the <a href="probability-calculator.html">Probability Calculator</a> picks up where this one leaves off: the chance of a specific outcome is 1 divided by the number of equally likely possibilities.</p>
+
+      <h2>When items can repeat</h2>
+      <p>The formulas above assume each item can be used once. A 4-digit PIN is different, since digits can repeat, so there are 10 &times; 10 &times; 10 &times; 10 = 10<sup>4</sup> = 10,000 arrangements. That is the "with repetition" line in the results: n<sup>r</sup> for ordered picks, and C(n + r &minus; 1, r) for unordered picks, such as choosing 3 scoops from 6 ice cream flavours where you can repeat a flavour (56 ways). Choose the "with repetition" figure whenever the same item can come up more than once.</p>
+
+      <h2>Very large answers</h2>
+      <p>Factorials grow extremely fast. 20! is already over 2 quintillion, and 100! has 158 digits. For answers up to a few thousand digits the calculator gives you the exact whole number. Beyond that, it shows the size in scientific notation, since nobody can use a 300,000-digit number in practice. If you are working with sets that big, you are usually after a probability, not the raw count.</p>
+
+      <h2>Where to go next</h2>
+      <p>Counting possibilities is usually step one. To turn a count into the odds of an event, use the <a href="probability-calculator.html">Probability Calculator</a>. If your data is a list of numbers rather than a counting problem, the <a href="statistics-calculator.html">Statistics Calculator</a> summarises it. And for questions about how many people you need to survey, rather than how many ways something can happen, the <a href="sample-size-calculator.html">Sample Size Calculator</a> is the right tool.</p>
+      <div class="callout">Quick check: nPr is always at least as big as nCr, and the two are equal only when r is 0 or 1. If your combination count comes out larger than your permutation count, something went wrong.</div>
+
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>What is the difference between a permutation and a combination?</h3>
+        <p>In a permutation the order of the chosen items matters. In a combination it does not. For the same n and r there are always at least as many permutations as combinations.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do you calculate nCr?</h3>
+        <p>Use n! ÷ (r! × (n − r)!). For 6C2 that is 720 ÷ (2 × 24) = 15.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is 0! equal to?</h3>
+        <p>0! is defined as 1. That is why nC0 and nCn are both 1: there is exactly one way to choose nothing, and one way to choose everything.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can r be larger than n?</h3>
+        <p>Not when items cannot repeat, because you cannot pick more items than exist. With repetition allowed, r can be larger than n, and the n^r formula still applies.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many different 5-card poker hands are there?</h3>
+        <p>There are 2,598,960 hands, which is 52C5.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="category-browse" id="categories">
+  <div class="container">
+    <h2>More Math Calculators</h2>
+    <p class="section-sub">Pick another tool to jump straight to it.</p>
+    <div class="calc-list-grid">
+
+      <a class="calc-list-card" href="probability-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Probability Calculator</h3>
+        <p>Turn counts into chances and odds.</p>
+      </a>
+
+      <a class="calc-list-card" href="statistics-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Statistics Calculator</h3>
+        <p>Summarise a list of numbers.</p>
+      </a>
+
+      <a class="calc-list-card" href="factor-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Factor Calculator</h3>
+        <p>Find the factors of a whole number.</p>
+      </a>
+
+      <a class="calc-list-card" href="sample-size-calculator.html">
+        <span class="tag live">Live</span>
+        <h3>Sample Size Calculator</h3>
+        <p>How many responses do you need?</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 CalcBundle. All calculations run locally in your browser.</p>
+    <div class="footer-links">
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../contact.html">Contact</a>
+      <a href="../guides/">Guides</a><a href="../about.html">About</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/permutation-and-combination-calculator.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
