@@ -1,6 +1,7 @@
 /* Guide (article) pages */
 .guide { padding: 28px 0 64px; }
-.guide-container { max-width: 780px; }
+.guide-container { max-width: 1120px; }
+.guide-container > .breadcrumb, .guide-container > .guide-kicker, .guide-container > h1, .guide-container > .guide-lead, .guide-container > .guide-meta, .guide-container > .guide-hero, .guide-container > .guide-chips { max-width: 780px; }
 .guide .breadcrumb { margin-bottom: 18px; }
 .guide-kicker { margin: 0 0 8px; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
 .guide h1 { margin: 0 0 14px; font-size: clamp(28px, 5vw, 40px); line-height: 1.15; letter-spacing: -0.02em; }
@@ -86,3 +87,27 @@
   .about-stats strong { font-size: 26px; min-width: 0; }
   .about-stats span { font-size: 13px; }
 }
+
+/* Guide layout with a related-calculators sidebar */
+.guide-cols { display: block; }
+.guide-cols:not(.has-side) { max-width: 780px; }
+.guide-side { display: none; }
+.guide-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: -12px 0 26px; }
+.guide-chips span { font-size: 13px; font-weight: 700; color: var(--text-muted); margin-right: 4px; }
+.guide-chips a { font-size: 14px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: var(--accent-tint); color: var(--accent); text-decoration: none; }
+.guide-chips a:hover { background: var(--accent); color: #fff; }
+@media (min-width: 1000px) {
+  .guide-cols.has-side { display: grid; grid-template-columns: minmax(0, 760px) 300px; gap: 48px; align-items: start; }
+  .guide-side { display: block; position: sticky; top: 24px; margin-top: 4px; }
+  .guide-chips { display: none; }
+}
+.guide-side-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-card); padding: 18px 18px 14px; }
+.guide-side-card h2 { margin: 0 0 10px; font-size: 16px; }
+.guide-side-card ul { list-style: none; margin: 0; padding: 0; }
+.guide-side-card li { margin: 0; border-top: 1px solid var(--border); }
+.guide-side-card li:first-child { border-top: 0; }
+.guide-side-card li a { display: block; padding: 11px 6px; border-radius: 8px; text-decoration: none; color: var(--text-primary); }
+.guide-side-card li a:hover { background: var(--accent-tint); }
+.guide-side-card li strong { display: block; font-size: 15px; color: var(--accent); }
+.guide-side-card li span { display: block; margin-top: 2px; font-size: 13px; line-height: 1.45; color: var(--text-secondary); }
+.guide-side-all { display: block; margin-top: 8px; padding: 8px 6px 2px; font-size: 14px; font-weight: 600; color: var(--accent); text-decoration: none; }
