@@ -39,26 +39,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What's a \"point,\" exactly?",
+      "name": "How do I know if refinancing is worth it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "One point equals 1% of the loan amount, paid upfront in exchange for a lower interest rate. Whether points are worth paying depends heavily on how long you plan to keep the loan — the longer you stay, the more likely the lower rate earns back its upfront cost."
+        "text": "Compare the monthly saving, the lifetime saving and the break-even month with how long you expect to keep the home. If you will stay past break-even and the new term does not stretch your payoff date too far, it may be worth it."
       }
     },
     {
       "@type": "Question",
-      "name": "Does refinancing reset my loan's clock?",
+      "name": "What does the break-even point mean?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends on the new term. Replacing a loan with 20 years remaining with a new 30-year mortgage extends the repayment schedule. A term closer to the remaining years can avoid that extension, though the monthly payment may be higher."
+        "text": "It is the first month when the interest saved by the new loan equals your upfront costs. After that, the refinance has paid for itself. It is an estimate, not a guarantee."
       }
     },
     {
       "@type": "Question",
-      "name": "Is a lower monthly payment always a good sign?",
+      "name": "What is a discount point?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Extending the loan term may reduce monthly payments but increase the total interest paid. Review the new loan term, interest, upfront costs and any cash-out amount before deciding."
+        "text": "One point is 1% of the loan amount, paid up front to get a lower interest rate. Points make sense only if you keep the loan long enough to recover them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my estimated APR different from my lender's?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator spreads your entered costs over the term to estimate an effective rate. The lender's official APR follows specific disclosure rules and may include other charges. Use the Loan Estimate for comparing offers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a cash-out refinance cheaper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not by default. It increases the loan balance, so you pay interest on the cash you take. Compare offers with the same cash-out amount and check total interest and fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I refinance into a 30-year loan to lower my payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It lowers the payment, but if you restart the clock the total interest often rises. Check the lifetime cost and payoff time shown in the calculator."
       }
     }
   ]
@@ -184,40 +208,61 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">When would refinancing pay for itself?</h2>
-      <p>A lower interest rate can reduce your mortgage payment, but refinancing usually involves upfront costs. Enter the balance and payment on your existing loan, then test a new rate, term, points and closing fees. Compare the projected payment, interest and estimated break-even point instead of judging the rate alone.</p>
-
-      <h2>A quick refinance payment example</h2>
-      <p>Suppose your remaining mortgage balance is $250,000. For a <strong>new 20-year fixed-rate loan at 6%</strong>, the principal-and-interest payment is approximately <strong>$1,791.08 per month</strong> before taxes, insurance or lender fees. At 7% for the same 20-year term, the payment would be approximately <strong>$1,938.25</strong>. This illustrates the payment difference only; whether refinancing is worthwhile also depends on your current loan's remaining term and the new loan's costs.</p>
-
-      <h2>What the refinance break-even estimate means</h2>
-      <p>The calculator compares accumulated interest on the current and new loans and reports the first month in which the estimated interest difference reaches the entered upfront costs. This is an <strong>interest-based break-even estimate</strong>, not a guarantee that refinancing saves money overall. A different payoff term, a cash-out amount, or selling the home early can change the decision.</p>
-      <div class="callout">For a simple same-term comparison, you can also estimate a payment-based break-even as closing costs divided by monthly payment savings. This shortcut does not capture differences in loan balances or payoff dates.</div>
-
-      <h2>APR, points and closing costs</h2>
-      <p>One discount point is 1% of the new loan amount. Paying points and lender fees can make a lower advertised note rate less attractive. This tool estimates an effective rate from the loan amount and the costs you enter; it is <strong>not a substitute for the official APR in a lender's Loan Estimate</strong>, which follows specific disclosure rules and may include other charges.</p>
-
-      <h2>Be careful with cash-out refinancing</h2>
-      <p>Cash-out refinancing increases the new loan balance. When you compare total payments, remember that part of the larger balance represents cash received, not simply an additional borrowing cost. Compare offers with the same cash-out amount and check the total interest and fees separately.</p>
-
-      <h2>Which calculator should you use next?</h2>
-      <p>If you're still considering your current loan costs, check the <a href="mortgage-calculator.html">Mortgage Calculator</a> for payment scenarios. To see how payments reduce your balance, use the <a href="amortization-calculator.html">Amortization Calculator</a>. If you want to stay with your current mortgage but pay it down faster, try the <a href="mortgage-payoff-calculator.html">Mortgage Payoff Calculator</a>. For questions about buying another home, use the <a href="house-affordability-calculator.html">House Affordability Calculator</a>.</p>
-      <p>For the payment formula, see <a href="../guides/how-a-mortgage-payment-is-calculated.html">How a Mortgage Payment Is Calculated</a>. If you're weighing renting against ownership, see <a href="../guides/rent-vs-buy-how-to-compare.html">Rent vs Buy: How to Compare</a>.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A refinance replaces your current mortgage with a new one, and it pays off only if the savings outweigh the costs. With a $250,000 balance at 7% refinanced into a 20-year loan at 6% with 2 points and $1,500 of fees, the new payment is $1,791.08, the loan ends 45 months sooner and the break-even point is month 30.</div>
+      <h2>What a refinance calculator compares</h2>
+      <p>Refinancing replaces your current mortgage with a new one, usually to lower the payment, shorten the term or take out cash. The calculator takes your current balance, payment and rate, then compares them with a new rate, term, points, closing costs and optional cash out. It reports the new payment, the effective APR including costs, the lifetime saving or extra cost, how much faster or slower the loan is paid off, and the break-even month.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>A current balance of $250,000 with a payment of $1,800 at 7%, refinanced into a new 20-year loan at 6% with 2 points and $1,500 of other costs:</p>
+      <div class="calc-table"><table><thead><tr><th></th><th>Current loan</th><th>New loan</th></tr></thead><tbody><tr><td>Loan amount</td><td>$250,000</td><td>$250,000</td></tr><tr><td>Monthly payment</td><td>$1,800</td><td><strong>$1,791.08</strong></td></tr><tr><td>Months left</td><td>285</td><td>240</td></tr><tr><td>Interest rate / APR</td><td>7%</td><td>6% / 6.329%</td></tr><tr><td>Total interest</td><td>$263,000</td><td>$179,859</td></tr><tr><td>Upfront costs (2 points + fees)</td><td>$0</td><td>$6,500</td></tr></tbody></table></div>
+      <p>The new payment is only about $8.92 lower, but the new loan is paid off 45 months sooner. Counting the upfront cost, refinancing saves about <strong>$76,641</strong> over the life of the loan, and the break-even point is <strong>month 30</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Interest saved so far vs the upfront cost</title><desc id="cf1-d">The two lines cross in month 30, the break-even point. After that every month adds to the savings.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Interest saved so far vs the upfront cost</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0k</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$19k</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$39k</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$58k</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$78k</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="168.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">5 yr</text><text x="281.1" y="194" text-anchor="middle" font-size="11" fill="#6b7280">10 yr</text><text x="393.5" y="194" text-anchor="middle" font-size="11" fill="#6b7280">15 yr</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">20 yr</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Months after refinancing</text><polyline class="draw" style="--len:466" points="58.0,175.7 59.9,175.3 61.7,175.0 63.6,174.6 65.5,174.3 67.4,174.0 69.2,173.6 71.1,173.3 73.0,172.9 74.9,172.6 76.7,172.2 78.6,171.9 80.5,171.5 82.4,171.2 84.2,170.8 86.1,170.5 88.0,170.1 89.9,169.8 91.7,169.4 93.6,169.0 95.5,168.7 97.4,168.3 99.2,167.9 101.1,167.6 103.0,167.2 104.9,166.9 106.7,166.5 108.6,166.1 110.5,165.7 112.4,165.4 114.2,165.0 116.1,164.6 118.0,164.2 119.9,163.9 121.7,163.5 123.6,163.1 125.5,162.7 127.4,162.4 129.2,162.0 131.1,161.6 133.0,161.2 134.9,160.8 136.7,160.4 138.6,160.0 140.5,159.6 142.4,159.3 144.2,158.9 146.1,158.5 148.0,158.1 149.8,157.7 151.7,157.3 153.6,156.9 155.5,156.5 157.3,156.1 159.2,155.7 161.1,155.3 163.0,154.9 164.8,154.4 166.7,154.0 168.6,153.6 170.5,153.2 172.3,152.8 174.2,152.4 176.1,152.0 178.0,151.6 179.8,151.1 181.7,150.7 183.6,150.3 185.5,149.9 187.3,149.5 189.2,149.0 191.1,148.6 193.0,148.2 194.8,147.7 196.7,147.3 198.6,146.9 200.5,146.4 202.3,146.0 204.2,145.6 206.1,145.1 208.0,144.7 209.8,144.3 211.7,143.8 213.6,143.4 215.5,142.9 217.3,142.5 219.2,142.0 221.1,141.6 223.0,141.1 224.8,140.7 226.7,140.2 228.6,139.8 230.5,139.3 232.3,138.9 234.2,138.4 236.1,137.9 237.9,137.5 239.8,137.0 241.7,136.6 243.6,136.1 245.4,135.6 247.3,135.2 249.2,134.7 251.1,134.2 252.9,133.7 254.8,133.3 256.7,132.8 258.6,132.3 260.4,131.8 262.3,131.4 264.2,130.9 266.1,130.4 267.9,129.9 269.8,129.4 271.7,128.9 273.6,128.4 275.4,128.0 277.3,127.5 279.2,127.0 281.1,126.5 282.9,126.0 284.8,125.5 286.7,125.0 288.6,124.5 290.4,124.0 292.3,123.5 294.2,123.0 296.1,122.5 297.9,122.0 299.8,121.4 301.7,120.9 303.6,120.4 305.4,119.9 307.3,119.4 309.2,118.9 311.1,118.4 312.9,117.8 314.8,117.3 316.7,116.8 318.6,116.3 320.4,115.7 322.3,115.2 324.2,114.7 326.1,114.2 327.9,113.6 329.8,113.1 331.7,112.5 333.5,112.0 335.4,111.5 337.3,110.9 339.2,110.4 341.0,109.8 342.9,109.3 344.8,108.8 346.7,108.2 348.5,107.7 350.4,107.1 352.3,106.6 354.2,106.0 356.0,105.4 357.9,104.9 359.8,104.3 361.7,103.8 363.5,103.2 365.4,102.6 367.3,102.1 369.2,101.5 371.0,100.9 372.9,100.4 374.8,99.8 376.7,99.2 378.5,98.7 380.4,98.1 382.3,97.5 384.2,96.9 386.0,96.4 387.9,95.8 389.8,95.2 391.7,94.6 393.5,94.0 395.4,93.4 397.3,92.8 399.2,92.2 401.0,91.7 402.9,91.1 404.8,90.5 406.7,89.9 408.5,89.3 410.4,88.7 412.3,88.1 414.2,87.5 416.0,86.9 417.9,86.2 419.8,85.6 421.6,85.0 423.5,84.4 425.4,83.8 427.3,83.2 429.1,82.6 431.0,82.0 432.9,81.3 434.8,80.7 436.6,80.1 438.5,79.5 440.4,78.8 442.3,78.2 444.1,77.6 446.0,77.0 447.9,76.3 449.8,75.7 451.6,75.1 453.5,74.4 455.4,73.8 457.3,73.2 459.1,72.5 461.0,71.9 462.9,71.2 464.8,70.6 466.6,69.9 468.5,69.3 470.4,68.6 472.3,68.0 474.1,67.3 476.0,66.7 477.9,66.0 479.8,65.4 481.6,64.7 483.5,64.0 485.4,63.4 487.3,62.7 489.1,62.1 491.0,61.4 492.9,60.7 494.8,60.0 496.6,59.4 498.5,58.7 500.4,58.0 502.3,57.4 504.1,56.7 506.0,56.0" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="76" y="40" font-size="11.5" fill="#374151">Interest saved so far</text><polyline class="draw" style="--len:450" points="58.0,165.5 59.9,165.5 61.7,165.5 63.6,165.5 65.5,165.5 67.4,165.5 69.2,165.5 71.1,165.5 73.0,165.5 74.9,165.5 76.7,165.5 78.6,165.5 80.5,165.5 82.4,165.5 84.2,165.5 86.1,165.5 88.0,165.5 89.9,165.5 91.7,165.5 93.6,165.5 95.5,165.5 97.4,165.5 99.2,165.5 101.1,165.5 103.0,165.5 104.9,165.5 106.7,165.5 108.6,165.5 110.5,165.5 112.4,165.5 114.2,165.5 116.1,165.5 118.0,165.5 119.9,165.5 121.7,165.5 123.6,165.5 125.5,165.5 127.4,165.5 129.2,165.5 131.1,165.5 133.0,165.5 134.9,165.5 136.7,165.5 138.6,165.5 140.5,165.5 142.4,165.5 144.2,165.5 146.1,165.5 148.0,165.5 149.8,165.5 151.7,165.5 153.6,165.5 155.5,165.5 157.3,165.5 159.2,165.5 161.1,165.5 163.0,165.5 164.8,165.5 166.7,165.5 168.6,165.5 170.5,165.5 172.3,165.5 174.2,165.5 176.1,165.5 178.0,165.5 179.8,165.5 181.7,165.5 183.6,165.5 185.5,165.5 187.3,165.5 189.2,165.5 191.1,165.5 193.0,165.5 194.8,165.5 196.7,165.5 198.6,165.5 200.5,165.5 202.3,165.5 204.2,165.5 206.1,165.5 208.0,165.5 209.8,165.5 211.7,165.5 213.6,165.5 215.5,165.5 217.3,165.5 219.2,165.5 221.1,165.5 223.0,165.5 224.8,165.5 226.7,165.5 228.6,165.5 230.5,165.5 232.3,165.5 234.2,165.5 236.1,165.5 237.9,165.5 239.8,165.5 241.7,165.5 243.6,165.5 245.4,165.5 247.3,165.5 249.2,165.5 251.1,165.5 252.9,165.5 254.8,165.5 256.7,165.5 258.6,165.5 260.4,165.5 262.3,165.5 264.2,165.5 266.1,165.5 267.9,165.5 269.8,165.5 271.7,165.5 273.6,165.5 275.4,165.5 277.3,165.5 279.2,165.5 281.1,165.5 282.9,165.5 284.8,165.5 286.7,165.5 288.6,165.5 290.4,165.5 292.3,165.5 294.2,165.5 296.1,165.5 297.9,165.5 299.8,165.5 301.7,165.5 303.6,165.5 305.4,165.5 307.3,165.5 309.2,165.5 311.1,165.5 312.9,165.5 314.8,165.5 316.7,165.5 318.6,165.5 320.4,165.5 322.3,165.5 324.2,165.5 326.1,165.5 327.9,165.5 329.8,165.5 331.7,165.5 333.5,165.5 335.4,165.5 337.3,165.5 339.2,165.5 341.0,165.5 342.9,165.5 344.8,165.5 346.7,165.5 348.5,165.5 350.4,165.5 352.3,165.5 354.2,165.5 356.0,165.5 357.9,165.5 359.8,165.5 361.7,165.5 363.5,165.5 365.4,165.5 367.3,165.5 369.2,165.5 371.0,165.5 372.9,165.5 374.8,165.5 376.7,165.5 378.5,165.5 380.4,165.5 382.3,165.5 384.2,165.5 386.0,165.5 387.9,165.5 389.8,165.5 391.7,165.5 393.5,165.5 395.4,165.5 397.3,165.5 399.2,165.5 401.0,165.5 402.9,165.5 404.8,165.5 406.7,165.5 408.5,165.5 410.4,165.5 412.3,165.5 414.2,165.5 416.0,165.5 417.9,165.5 419.8,165.5 421.6,165.5 423.5,165.5 425.4,165.5 427.3,165.5 429.1,165.5 431.0,165.5 432.9,165.5 434.8,165.5 436.6,165.5 438.5,165.5 440.4,165.5 442.3,165.5 444.1,165.5 446.0,165.5 447.9,165.5 449.8,165.5 451.6,165.5 453.5,165.5 455.4,165.5 457.3,165.5 459.1,165.5 461.0,165.5 462.9,165.5 464.8,165.5 466.6,165.5 468.5,165.5 470.4,165.5 472.3,165.5 474.1,165.5 476.0,165.5 477.9,165.5 479.8,165.5 481.6,165.5 483.5,165.5 485.4,165.5 487.3,165.5 489.1,165.5 491.0,165.5 492.9,165.5 494.8,165.5 496.6,165.5 498.5,165.5 500.4,165.5 502.3,165.5 504.1,165.5 506.0,165.5" fill="none" stroke="#f34469" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#f34469"/><text x="246" y="40" font-size="11.5" fill="#374151">Upfront cost ($6,500)</text></svg><figcaption>Break-even is when the interest saved so far covers the fees you paid to refinance. Until then, refinancing has not paid for itself.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Total interest: current loan vs refinanced loan</title><desc id="cf2-d">Keeping the current loan means about $263,000 of interest. Refinancing costs about $186,359 in interest plus fees, which is $76,641 less.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Total interest: current loan vs refinanced loan</text><text x="142" y="60" text-anchor="end" font-size="13" fill="#6b7280">Keep current loan</text><rect class="bar" x="150" y="44" width="278.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$263,000</text><text x="142" y="94" text-anchor="end" font-size="13" fill="#6b7280">Refinance (plus costs)</text><rect class="bar" x="150" y="78" width="197.0" height="22" rx="4" fill="#2563eb"/><text x="355.0" y="94" font-size="13" font-weight="700" fill="#111827">$186,359</text></svg><figcaption>Lifetime cost is what matters most when the new loan has a different payoff date.</figcaption></figure>
+      <h2>Break-even: two ways to estimate it</h2>
+      <p><strong>Payment-based.</strong> Divide the upfront cost by the monthly payment saved. For the default example that would be $6,500 &divide; $8.92 = 728 months, which is misleading because the new loan also pays off faster. It works well only when the old and new loans have the same remaining term. For example, refinancing a $300,000 balance at 7% into a 30-year loan at 6% with $4,500 of closing costs lowers the payment from $1,995.91 to $1,798.65, a saving of $197.26 a month, so the payback is about 23 months.</p>
+      <p><strong>Interest-based</strong> (what the calculator uses). It adds up the interest on each loan month by month and finds the first month when the difference reaches your upfront costs. It accounts for different terms, but it is still an estimate, not a guarantee.</p>
+      <p>A common rule of thumb in consumer guidance is to refinance only if you recover the costs in about two years or less, and only if you expect to stay in the home that long.</p>
+      <h2>Points, closing costs and APR</h2>
+      <ul><li><strong>One discount point equals 1% of the loan.</strong> On $300,000 that is $3,000. Points buy a lower rate, so they only pay off if you keep the loan long enough.</li><li><strong>Closing costs</strong> on a refinance can be about as much as on the original purchase loan. Ask for the Loan Estimate and compare.</li><li><strong>APR:</strong> the calculator estimates an effective rate that spreads the costs over the term. The official APR on your lender's Loan Estimate follows set rules and may include other charges, so use that for comparisons between offers.</li><li><strong>Prepayment penalties:</strong> check whether your current loan has one before you refinance.</li></ul>
+      <h2>Cash-out refinancing</h2>
+      <p>A cash-out refinance increases the new loan by the cash you take. Interest is charged on the larger balance, so the payment may rise even at a lower rate. When you compare offers, use the same cash-out amount and look at total interest and fees separately. Part of the bigger balance is cash you received, not a pure cost.</p>
+      <h2>When refinancing makes sense, and when it does not</h2>
+      <ul><li><strong>Good case:</strong> a meaningfully lower rate, you will stay long enough to pass break-even, and the new term does not push your payoff date far into the future.</li><li><strong>Weak case:</strong> a small rate drop with high costs, or you plan to sell soon.</li><li><strong>Watch out:</strong> restarting a 30-year clock on a loan with 15 years left. The payment falls, but total interest can rise.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Looking only at the monthly payment and ignoring the cost and the term.</li><li>Forgetting points and closing costs.</li><li>Comparing advertised rates instead of APR and costs.</li><li>Ignoring how long you will stay in the home.</li><li>Rolling closing costs into the loan without checking the effect on total interest.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Check four numbers together: the new payment, the break-even month, the lifetime savings or cost, and the change in payoff time. If break-even is later than the time you expect to keep the loan, refinancing probably does not pay. Use the Mortgage Calculator to see the full payment with taxes and insurance, and your lender's Loan Estimate for exact figures.</p>
+      <div class="callout">This calculator gives estimates only. Actual offers depend on your credit, the lender and the loan program, and the break-even shown is not a guarantee.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="mortgage-calculator.html">Mortgage Calculator</a> &ndash; full payment with taxes and insurance</li><li><a href="amortization-calculator.html">Amortization Calculator</a> &ndash; interest and principal month by month</li><li><a href="mortgage-payoff-calculator.html">Mortgage Payoff Calculator</a> &ndash; pay off sooner with extra payments</li><li><a href="apr-calculator.html">APR Calculator</a> &ndash; the real cost of a loan with fees</li><li><a href="home-equity-loan-calculator.html">Home Equity Loan Calculator</a> &ndash; borrow against your equity</li><li><a href="heloc-calculator.html">HELOC Calculator</a> &ndash; a home equity line of credit</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-a-mortgage-payment-is-calculated.html">How a Mortgage Payment Is Calculated</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>What's a "point," exactly?</h3>
-        <p>One point equals 1% of the loan amount, paid upfront in exchange for a lower interest rate. Whether points are worth paying depends heavily on how long you plan to keep the loan — the longer you stay, the more likely the lower rate earns back its upfront cost.</p>
+        <h3>How do I know if refinancing is worth it?</h3>
+        <p>Compare the monthly saving, the lifetime saving and the break-even month with how long you expect to keep the home. If you will stay past break-even and the new term does not stretch your payoff date too far, it may be worth it.</p>
       </div>
       <div class="faq-item">
-        <h3>Does refinancing reset my loan's clock?</h3>
-        <p>It depends on the new term. Replacing a loan with 20 years remaining with a new 30-year mortgage extends the repayment schedule. A term closer to the remaining years can avoid that extension, though the monthly payment may be higher.</p>
+        <h3>What does the break-even point mean?</h3>
+        <p>It is the first month when the interest saved by the new loan equals your upfront costs. After that, the refinance has paid for itself. It is an estimate, not a guarantee.</p>
       </div>
       <div class="faq-item">
-        <h3>Is a lower monthly payment always a good sign?</h3>
-        <p>No. Extending the loan term may reduce monthly payments but increase the total interest paid. Review the new loan term, interest, upfront costs and any cash-out amount before deciding.</p>
+        <h3>What is a discount point?</h3>
+        <p>One point is 1% of the loan amount, paid up front to get a lower interest rate. Points make sense only if you keep the loan long enough to recover them.</p>
       </div>
+      <div class="faq-item">
+        <h3>Why is my estimated APR different from my lender's?</h3>
+        <p>The calculator spreads your entered costs over the term to estimate an effective rate. The lender's official APR follows specific disclosure rules and may include other charges. Use the Loan Estimate for comparing offers.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is a cash-out refinance cheaper?</h3>
+        <p>Not by default. It increases the loan balance, so you pay interest on the cash you take. Compare offers with the same cash-out amount and check total interest and fees.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I refinance into a 30-year loan to lower my payment?</h3>
+        <p>It lowers the payment, but if you restart the clock the total interest often rises. Check the lifetime cost and payoff time shown in the calculator.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/" rel="noopener" target="_blank">CFPB: Loan Estimate explainer</a>; <a href="https://www.consumerfinance.gov/ask-cfpb/how-should-i-use-lender-credits-and-points-also-called-discount-points-en-136/" rel="noopener" target="_blank">CFPB: How should I use lender credits and points?</a></p>
     </div>
 
   </div>
