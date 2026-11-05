@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Down Payment Calculator: Cash Needed for a Home | CalcBundle</title>
-<meta name="description" content="Calculate down payment dollars or percentage from a home price and plan for an initial mortgage amount.">
+<meta name="description" content="Work out the cash needed for a home, the price you can afford or your down payment percentage, with closing costs and the monthly payment included.">
 <link rel="canonical" href="https://calcbundle.net/calculators/down-payment-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Down Payment Calculator: Cash Needed for a Home | CalcBundle">
-<meta property="og:description" content="Calculate down payment dollars or percentage from a home price and plan for an initial mortgage amount.">
+<meta property="og:description" content="Work out the cash needed for a home, the price you can afford or your down payment percentage, with closing costs and the monthly payment included.">
 <meta property="og:url" content="https://calcbundle.net/calculators/down-payment-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Down Payment Calculator: Cash Needed for a Home | CalcBundle">
-<meta name="twitter:description" content="Calculate down payment dollars or percentage from a home price and plan for an initial mortgage amount.">
+<meta name="twitter:description" content="Work out the cash needed for a home, the price you can afford or your down payment percentage, with closing costs and the monthly payment included.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,7 +42,7 @@
       "name": "Should I put down more than 20% if I can afford to?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not necessarily. Beyond the 20% threshold, extra cash toward a down payment earns you a smaller loan and lower payment, but that money is no longer liquid — for some buyers, keeping a larger cash reserve or investing the difference is the better trade-off."
+        "text": "Not always. Beyond 20%, extra cash lowers your loan and payment, but it is no longer liquid. Some buyers are better off keeping a larger cash reserve or investing the difference."
       }
     },
     {
@@ -50,15 +50,39 @@
       "name": "Do closing costs vary a lot by location?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — they're influenced by local taxes, title insurance rates, and lender fees, which is why this calculator treats closing costs as an adjustable input rather than a fixed assumption. 3% of the purchase price is a reasonable starting estimate for many U.S. markets."
+        "text": "Yes. They depend on local taxes, title insurance rates and lender fees, which is why the calculator treats closing costs as an adjustable input instead of a fixed amount."
       }
     },
     {
       "@type": "Question",
-      "name": "What if my available cash isn't enough for 20% down plus closing costs?",
+      "name": "Can I buy a home with less than 20% down?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "That's exactly what the third calculator above solves for — plug in your home price and available cash, and it works out the down payment percentage you'd actually land on once closing costs are covered first."
+        "text": "Yes. Many loan programs allow smaller down payments, such as FHA loans at 3.5% for qualifying borrowers. They usually come with mortgage insurance or an equivalent cost until you build equity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is PMI and when does it go away?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Private mortgage insurance protects the lender when your down payment is under 20% on a conventional loan. On many loans you can ask to cancel it once your balance reaches 80% of the original home value, and it ends automatically at 78%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts toward the down payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cash from savings, and in many cases gifts from family. Closing costs are separate. Lenders have rules about where the money comes from, so ask yours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a bigger down payment get me a lower rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can. A larger down payment lowers the lender's risk, which may qualify you for a better rate or remove mortgage insurance. Compare quotes at several down payment levels."
       }
     }
   ]
@@ -258,34 +282,62 @@
       </form>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">A down payment is only part of the cash you need</h2>
-      <p>It's easy to budget for the down payment and forget that closing costs are a separate, immediate expense on top of it — typically 2–5% of the purchase price, covering things like loan origination fees, title insurance, appraisal fees, and prepaid taxes. Two buyers with identical "cash on hand" can afford very different homes once one properly reserves cash for closing costs and the other doesn't.</p>
-
-      <h2>Why 20% is the number everyone mentions</h2>
-      <p>Putting down at least 20% of a home's price typically avoids private mortgage insurance (PMI) on a conventional loan — insurance that protects the lender, not the buyer, and adds a real ongoing cost to the monthly payment. It's a useful target, not a strict requirement: plenty of loan programs allow much smaller down payments, just usually with PMI or an equivalent cost attached until enough equity is built up.</p>
-      <div class="callout">A bigger down payment does double duty: it shrinks the loan amount your interest is calculated on, and it can unlock a lower interest rate or avoid mortgage insurance entirely — both compounding the monthly savings beyond what the smaller loan alone would suggest.</div>
-
-      <!--seo-extra-->
-<figure style="margin:18px 0;max-width:640px"><svg viewBox="0 0 620 125" role="img" aria-label="300 thousand dollar home: 60 thousand dollar down payment and 240 thousand dollar loan before costs" style="width:100%;height:auto"><rect x="2" y="2" width="616" height="120" rx="14" fill="#eff6ff"/><g font-family="Arial,sans-serif" fill="#172554"><text x="22" y="29" font-size="16">Example: $300,000 home</text></g><rect x="20" y="43" width="116" height="34" rx="5" fill="#0f766e"/><rect x="136" y="43" width="464" height="34" rx="5" fill="#2563eb"/><g font-family="Arial,sans-serif" font-size="14" text-anchor="middle" fill="white"><text x="78" y="65">20%</text><text x="368" y="65">80%</text></g><g font-family="Arial,sans-serif" font-size="13" fill="#475569"><text x="20" y="100">$60,000 down</text><text x="440" y="100">$240,000 financed</text></g></svg><figcaption style="color:#64748b;font-size:13px">Illustrative split before closing costs or financed fees.</figcaption></figure><h2>Worked example: what the numbers mean</h2><p>A 20% down payment on a $300,000 home is $60,000, leaving $240,000 before closing costs and fees. A lower payment percentage increases the financed portion.</p><h2>Related calculators</h2><p>Estimate payments with the <a href="mortgage-calculator.html">Mortgage Calculator</a>, then compare the broader home budget with the <a href="house-affordability-calculator.html">House Affordability Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="refinance-calculator.html">Refinance Calculator</a>, <a href="fha-loan-calculator.html">FHA Loan Calculator</a>, <a href="house-affordability-calculator.html">House Affordability Calculator</a>, <a href="va-mortgage-calculator.html">VA Mortgage Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-a-mortgage-payment-is-calculated.html">How a Mortgage Payment Is Calculated</a>.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A down payment is the cash you pay up front; the rest of the price is your loan. For a $500,000 home, 20% down is $100,000 and 3% closing costs add $15,000, so you need about $115,000 in cash and borrow $400,000.</div>
+      <h2>What a down payment is</h2>
+      <p>The down payment is the part of the purchase price you pay in cash. The rest is the loan, so <strong>loan = price &minus; down payment</strong>. A larger down payment means a smaller loan, a smaller monthly payment and less interest over the years. It also affects whether you need mortgage insurance and sometimes the rate a lender offers.</p>
+      <h2>Closing costs are separate</h2>
+      <p>Closing costs are the fees for getting the loan and transferring the property, such as lender fees, title and appraisal charges, and prepaid items. The CFPB describes the cash you need at closing as your down payment plus closing costs, minus any deposit already paid and any seller credits. The calculator lets you enter closing costs as a percentage or a dollar amount; its default is 3% of the price.</p>
+      <h2>Three ways to use the calculator</h2>
+      <ul><li><strong>Find the home price</strong> you can afford from the cash you have and the percentage you want to put down.</li><li><strong>Find the cash you need</strong> for a home at a given price and down payment percentage.</li><li><strong>Find your down payment percentage</strong> from a price and the cash you have available.</li></ul>
+      <h2>Worked examples with the default numbers</h2>
+      <p><strong>1. Price from cash.</strong> With $100,000 of cash, a 20% down payment and 3% closing costs, the cash must cover 23% of the price, so the price is 100,000 &divide; 0.23 = <strong>$434,783</strong>. That means a $86,957 down payment, $13,043 of closing costs, a $347,826 loan and a payment of $2,198.50 a month (6.5%, 30 years).</p>
+      <p><strong>2. Cash from price.</strong> A $500,000 home with 20% down and 3% closing costs needs $100,000 down plus $15,000 in closing costs: <strong>$115,000 in cash</strong>. The loan is $400,000 and the payment is $2,528.27.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Cash needed at closing for a $500,000 home</title><desc id="cf2-d">A 20% down payment is $100,000, and 3% closing costs add $15,000, so you need about $115,000 in cash.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Cash needed at closing for a $500,000 home</text><rect class="bar" x="14.0" y="42" width="427.8" height="30" fill="#2563eb"/><text x="227.9" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">87%</text><rect class="bar" x="441.8" y="42" width="64.2" height="30" fill="#f59e0b"/><text x="473.9" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">13%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Down payment (20%): <tspan font-weight="700">$100,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#f59e0b"/><text x="282" y="98" font-size="12.5" fill="#374151">Closing costs (3%): <tspan font-weight="700">$15,000</tspan></text></svg><figcaption>Many buyers budget for the down payment and forget the closing costs, which are paid at the same time.</figcaption></figure>
+      <p><strong>3. Percentage from cash.</strong> With $100,000 of cash on a $500,000 home, closing costs of $15,000 leave $85,000 for the down payment, which is <strong>17.0%</strong>. The loan is $415,000 and the payment $2,623.08. Because the down payment is under 20%, the calculator reminds you that lenders usually require mortgage insurance (PMI).</p>
+      <h2>How the down payment changes the loan</h2>
+      <p>On a $400,000 home at 6.5% over 30 years, with closing costs of 3% of the price:</p>
+      <div class="calc-table"><table><thead><tr><th>Down payment</th><th>Cash down</th><th>Loan</th><th>Principal and interest</th><th>Cash incl. 3% closing costs</th></tr></thead><tbody><tr><td>3.5%</td><td>$14,000</td><td>$386,000</td><td>$2,440</td><td>$26,000</td></tr><tr><td>5%</td><td>$20,000</td><td>$380,000</td><td>$2,402</td><td>$32,000</td></tr><tr><td>10%</td><td>$40,000</td><td>$360,000</td><td>$2,275</td><td>$52,000</td></tr><tr><td>20%</td><td>$80,000</td><td>$320,000</td><td>$2,023</td><td>$92,000</td></tr><tr><td>25%</td><td>$100,000</td><td>$300,000</td><td>$1,896</td><td>$112,000</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Monthly principal and interest on a $400,000 home by down payment</title><desc id="cf1-d">Going from 3.5% to 20% down lowers the principal-and-interest payment by about $417 a month at 6.5% over 30 years, before any mortgage insurance.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Monthly principal and interest on a $400,000 home by down payment</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">3.5%</text><rect class="bar" x="70" y="44" width="358.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$2,440</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">5%</text><rect class="bar" x="70" y="78" width="352.4" height="22" rx="4" fill="#f59e0b"/><text x="430.4" y="94" font-size="13" font-weight="700" fill="#111827">$2,402</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">10%</text><rect class="bar" x="70" y="112" width="333.9" height="22" rx="4" fill="#f59e0b"/><text x="411.9" y="128" font-size="13" font-weight="700" fill="#111827">$2,275</text><text x="62" y="162" text-anchor="end" font-size="13" fill="#6b7280">20%</text><rect class="bar" x="70" y="146" width="296.8" height="22" rx="4" fill="#2563eb"/><text x="374.8" y="162" font-size="13" font-weight="700" fill="#111827">$2,023</text><text x="62" y="196" text-anchor="end" font-size="13" fill="#6b7280">25%</text><rect class="bar" x="70" y="180" width="278.2" height="22" rx="4" fill="#2563eb"/><text x="356.2" y="196" font-size="13" font-weight="700" fill="#111827">$1,896</text></svg><figcaption>Every extra 5% down on this home lowers the payment by roughly $126 a month, and a down payment of at least 20% usually avoids mortgage insurance on a conventional loan.</figcaption></figure>
+      <h2>The 20% target</h2>
+      <p>Putting down at least 20% of the price usually lets you avoid private mortgage insurance (PMI) on a conventional loan. PMI protects the lender, not you, and adds a monthly cost, often a fraction of a percent to more than one percent of the loan a year depending on your credit and down payment. 20% is a useful target, not a requirement. Many programs accept far less: FHA loans allow as little as 3.5% for qualifying borrowers, and some conventional programs allow 3% to 5% with PMI.</p>
+      <h2>Should you put down more than 20%?</h2>
+      <ul><li><strong>Benefit:</strong> a smaller loan, a lower payment and less interest.</li><li><strong>Cost:</strong> the cash is no longer available for emergencies, repairs, moving costs or investing.</li><li><strong>Balance:</strong> keep an emergency fund after closing. A very large down payment can leave you house-rich and cash-poor.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Saving only for the down payment and forgetting closing costs, moving costs and a reserve.</li><li>Assuming 20% is mandatory and delaying a purchase longer than necessary.</li><li>Using up every dollar of savings, which leaves no cushion for repairs.</li><li>Ignoring PMI when the down payment is under 20%, which makes the real payment higher than the calculator's principal and interest.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Check the cash you need, not just the percentage. Then compare the loan payment with your monthly budget using the Mortgage Calculator, which adds taxes, insurance and PMI. If the payment feels tight, a larger down payment, a cheaper home or a longer saving period may be better than stretching.</p>
+      <div class="callout">This calculator gives estimates and does not include property tax, insurance, PMI or loan-program rules. Your lender's Loan Estimate will show actual figures.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="mortgage-calculator.html">Mortgage Calculator</a> &ndash; add taxes, insurance and PMI to the payment</li><li><a href="house-affordability-calculator.html">House Affordability Calculator</a> &ndash; find a price range from income and debts</li><li><a href="fha-loan-calculator.html">FHA Loan Calculator</a> &ndash; low down payment option</li><li><a href="va-mortgage-calculator.html">VA Mortgage Calculator</a> &ndash; VA loan estimates</li><li><a href="rent-vs-buy-calculator.html">Rent vs Buy Calculator</a> &ndash; compare renting with buying</li><li><a href="refinance-calculator.html">Refinance Calculator</a> &ndash; compare a new loan with your current one</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-much-house-can-you-afford.html">How Much House Can You Afford?</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Should I put down more than 20% if I can afford to?</h3>
-        <p>Not necessarily. Beyond the 20% threshold, extra cash toward a down payment earns you a smaller loan and lower payment, but that money is no longer liquid — for some buyers, keeping a larger cash reserve or investing the difference is the better trade-off.</p>
+        <p>Not always. Beyond 20%, extra cash lowers your loan and payment, but it is no longer liquid. Some buyers are better off keeping a larger cash reserve or investing the difference.</p>
       </div>
       <div class="faq-item">
         <h3>Do closing costs vary a lot by location?</h3>
-        <p>Yes — they're influenced by local taxes, title insurance rates, and lender fees, which is why this calculator treats closing costs as an adjustable input rather than a fixed assumption. 3% of the purchase price is a reasonable starting estimate for many U.S. markets.</p>
+        <p>Yes. They depend on local taxes, title insurance rates and lender fees, which is why the calculator treats closing costs as an adjustable input instead of a fixed amount.</p>
       </div>
       <div class="faq-item">
-        <h3>What if my available cash isn't enough for 20% down plus closing costs?</h3>
-        <p>That's exactly what the third calculator above solves for — plug in your home price and available cash, and it works out the down payment percentage you'd actually land on once closing costs are covered first.</p>
+        <h3>Can I buy a home with less than 20% down?</h3>
+        <p>Yes. Many loan programs allow smaller down payments, such as FHA loans at 3.5% for qualifying borrowers. They usually come with mortgage insurance or an equivalent cost until you build equity.</p>
       </div>
+      <div class="faq-item">
+        <h3>What is PMI and when does it go away?</h3>
+        <p>Private mortgage insurance protects the lender when your down payment is under 20% on a conventional loan. On many loans you can ask to cancel it once your balance reaches 80% of the original home value, and it ends automatically at 78%.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What counts toward the down payment?</h3>
+        <p>Cash from savings, and in many cases gifts from family. Closing costs are separate. Lenders have rules about where the money comes from, so ask yours.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does a bigger down payment get me a lower rate?</h3>
+        <p>It can. A larger down payment lowers the lender's risk, which may qualify you for a better rate or remove mortgage insurance. Compare quotes at several down payment levels.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/" rel="noopener" target="_blank">CFPB: Loan Estimate explainer</a></p>
     </div>
 
   </div>
