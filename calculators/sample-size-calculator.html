@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sample Size Calculator: Confidence &amp; Margin of Error | CalcBundle</title>
-<meta name="description" content="Estimate survey sample size based on confidence level, expected proportion and desired margin of error.">
+<title>Sample Size Calculator: Confidence &amp; Margin of Error</title>
+<meta name="description" content="Find how many survey responses you need for a confidence level and margin of error, or the margin of error from a sample you already have.">
 <link rel="canonical" href="https://calcbundle.net/calculators/sample-size-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Sample Size Calculator: Confidence &amp; Margin of Error | CalcBundle">
-<meta property="og:description" content="Estimate survey sample size based on confidence level, expected proportion and desired margin of error.">
+<meta property="og:title" content="Sample Size Calculator: Confidence &amp; Margin of Error">
+<meta property="og:description" content="Find how many survey responses you need for a confidence level and margin of error, or the margin of error from a sample you already have.">
 <meta property="og:url" content="https://calcbundle.net/calculators/sample-size-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sample Size Calculator: Confidence &amp; Margin of Error | CalcBundle">
-<meta name="twitter:description" content="Estimate survey sample size based on confidence level, expected proportion and desired margin of error.">
+<meta name="twitter:title" content="Sample Size Calculator: Confidence &amp; Margin of Error">
+<meta name="twitter:description" content="Find how many survey responses you need for a confidence level and margin of error, or the margin of error from a sample you already have.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Why does population size stop mattering above a certain point?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The finite population correction factor shrinks toward 1 as the population grows large relative to the sample — once your population is, say, 20× your sample size or more, the correction becomes negligible, which is why very large or \"unlimited\" populations give essentially the same answer."
+        "text": "The finite population correction approaches 1 as the population gets large compared with the sample. Once the population is around 20 times the sample or more, the correction is negligible, so very large or unlimited populations give essentially the same answer."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "What confidence level should I use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "95% is the most common default across research and polling. Higher confidence levels (99%+) require larger samples for the same margin of error, since you're demanding more certainty."
+        "text": "Most surveys use 95%. Use 99% when mistakes are costly, but remember it needs a noticeably larger sample. 90% is sometimes used for quick, low-stakes estimates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why use 50% for the expected proportion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the most conservative choice because p × (1 − p) is largest at 50%, so it gives the biggest sample size. If you have a good estimate from earlier work, a different value gives a smaller sample."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the margin of error?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the plus-or-minus range around your sample result. If 60% of a sample says yes with a margin of ±5%, the true share is probably between 55% and 65% at the stated confidence level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a bigger sample always better?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It reduces random error, but with diminishing returns, and it cannot fix bias from a poor sampling method or badly worded questions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many responses do I need for subgroups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Calculate the sample size for each subgroup you want to report on separately. The margin of error for a subgroup is based on its own number of responses."
       }
     }
   ]
@@ -167,32 +199,63 @@
       </form>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Why sample size and margin of error trade off</h2>
-      <p>A larger sample gets you closer to the true population value, shrinking your margin of error &mdash; but with rapidly diminishing returns. Cutting the margin of error in half requires roughly quadrupling the sample size, since the relationship follows an inverse-square pattern.</p>
-
-      <h2>Why "population proportion" matters</h2>
-      <p>If you don't know the true proportion you're estimating, use 50% &mdash; it's the most conservative assumption, since it maximizes the required sample size (p(1-p) is largest when p=0.5). If you have a rough estimate already (from prior research or a pilot study), using it gives a more efficient, smaller required sample.</p>
-      <div class="callout">The "population size" field only matters for finite, boundable populations (like employees at a specific company). For anything effectively unlimited &mdash; general public opinion, for example &mdash; leave it blank.</div>
-
-      <!--seo-extra-->
-<h2>Quick numerical check</h2><p>For a large population, a 95% confidence level, 50% estimated proportion and ±5 percentage-point margin of error give an initial sample-size estimate of roughly 385 respondents, before adjustments.</p><p>Related: <a href="confidence-interval-calculator.html">Confidence Interval Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="random-number-generator.html">Random Number Generator</a>, <a href="percent-error-calculator.html">Percent Error Calculator</a>, <a href="probability-calculator.html">Probability Calculator</a>, <a href="mean-median-mode-range-calculator.html">Mean, Median, Mode, Range Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <!--next-->
-      <p><strong>What next?</strong> Already collected your data? The <a href="confidence-interval-calculator.html">Confidence Interval Calculator</a> turns your sample mean and standard deviation into a range for the true average, and the <a href="statistics-calculator.html">Statistics Calculator</a> gives you those inputs from a raw list. The <a href="z-score-calculator.html">Z-score Calculator</a> shows where the z-values behind the sample size formula come from.</p>
-      <!--/next-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Sample size depends on confidence level, margin of error and the expected proportion. For a large population, 95% confidence, 50% expected proportion and a margin of error of &plusmn;5%, you need 385 responses. Cutting the margin in half takes about four times as many.</div>
+      <h2>What sample size means for a survey</h2>
+      <p>A survey cannot ask everyone, so it asks a sample and uses it to estimate the whole population. The <strong>margin of error</strong> says how far the sample result is likely to be from the true value, and the <strong>confidence level</strong> says how sure you want to be that the true value falls inside that range. The calculator tells you how many responses you need to hit both targets, or the margin of error you get from a sample you already have.</p>
+      <h2>The formula</h2>
+      <p>For a proportion (the share of people who answer &ldquo;yes&rdquo;), the starting sample size is <strong>n&#8320; = z&sup2; &times; p &times; (1 &minus; p) &divide; e&sup2;</strong>, where z is the value for your confidence level, p is the expected proportion and e is the margin of error as a decimal. For a limited population of size N, it is reduced by the <strong>finite population correction</strong>: <strong>n = n&#8320; &divide; (1 + (n&#8320; &minus; 1) &divide; N)</strong>. The result is always rounded up.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>For a large population, 95% confidence (z = 1.96), p = 50% and a margin of error of &plusmn;5%: n&#8320; = 1.96&sup2; &times; 0.5 &times; 0.5 &divide; 0.05&sup2; = <strong>384.16</strong>, which rounds up to <strong>385</strong> responses.</p>
+      <p>If the population is limited to <strong>1,000</strong> people, the correction brings the number down to <strong>278</strong>. A small population needs a much larger share of its members, while for a very large population the answer barely changes.</p>
+      <h2>How the margin of error drives the sample size</h2>
+      <div class="calc-table"><table><thead><tr><th>Margin of error</th><th>Responses needed (95% confidence, p = 50%)</th></tr></thead><tbody><tr><td>&plusmn;1%</td><td>9,604</td></tr><tr><td>&plusmn;2%</td><td>2,401</td></tr><tr><td>&plusmn;3%</td><td>1,068</td></tr><tr><td>&plusmn;4%</td><td>601</td></tr><tr><td>&plusmn;5%</td><td>385</td></tr><tr><td>&plusmn;7%</td><td>196</td></tr><tr><td>&plusmn;10%</td><td>97</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Responses needed at 95% confidence for each margin of error</title><desc id="cf1-d">Halving the margin of error from 10% to 5% takes the sample from 97 to 385, roughly four times as many responses.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Responses needed at 95% confidence for each margin of error</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">&amp;plusmn;1%</text><rect class="bar" x="70" y="44" width="358.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">9,604</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">&amp;plusmn;2%</text><rect class="bar" x="70" y="78" width="89.5" height="22" rx="4" fill="#9ca3af"/><text x="167.5" y="94" font-size="13" font-weight="700" fill="#111827">2,401</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">&amp;plusmn;3%</text><rect class="bar" x="70" y="112" width="39.8" height="22" rx="4" fill="#9ca3af"/><text x="117.8" y="128" font-size="13" font-weight="700" fill="#111827">1,068</text><text x="62" y="162" text-anchor="end" font-size="13" fill="#6b7280">&amp;plusmn;5%</text><rect class="bar" x="70" y="146" width="14.4" height="22" rx="4" fill="#2563eb"/><text x="92.4" y="162" font-size="13" font-weight="700" fill="#111827">385</text><text x="62" y="196" text-anchor="end" font-size="13" fill="#6b7280">&amp;plusmn;10%</text><rect class="bar" x="70" y="180" width="3.6" height="22" rx="4" fill="#9ca3af"/><text x="81.6" y="196" font-size="13" font-weight="700" fill="#111827">97</text></svg><figcaption>The relationship is inverse-square: to cut the margin in half, you need about four times as many responses.</figcaption></figure>
+      <h2>Confidence level and expected proportion</h2>
+      <div class="calc-table"><table><thead><tr><th>Confidence level</th><th>z-value</th><th>Responses at &plusmn;5%</th></tr></thead><tbody><tr><td>80%</td><td>1.28</td><td>164</td></tr><tr><td>90%</td><td>1.65</td><td>273</td></tr><tr><td>95%</td><td>1.96</td><td>385</td></tr><tr><td>99%</td><td>2.58</td><td>666</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Responses needed at a margin of error of 5%</title><desc id="cf2-d">Going from 95% to 99% confidence raises the sample from 385 to 666.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Responses needed at a margin of error of 5%</text><text x="112" y="60" text-anchor="end" font-size="13" fill="#6b7280">90% confidence</text><rect class="bar" x="120" y="44" width="126.3" height="22" rx="4" fill="#9ca3af"/><text x="254.3" y="60" font-size="13" font-weight="700" fill="#111827">273</text><text x="112" y="94" text-anchor="end" font-size="13" fill="#6b7280">95% confidence</text><rect class="bar" x="120" y="78" width="178.0" height="22" rx="4" fill="#10b981"/><text x="306.0" y="94" font-size="13" font-weight="700" fill="#111827">385</text><text x="112" y="128" text-anchor="end" font-size="13" fill="#6b7280">99% confidence</text><rect class="bar" x="120" y="112" width="308.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">666</text></svg><figcaption>Higher confidence is more expensive. Most surveys settle for 95%.</figcaption></figure>
+      <p>The <strong>expected proportion</strong> also matters. If you have no idea, use 50%, the most cautious choice because it needs the largest sample. If earlier data suggests a different value, you need fewer responses:</p>
+      <div class="calc-table"><table><thead><tr><th>Expected proportion</th><th>Responses at 95% confidence and &plusmn;5%</th></tr></thead><tbody><tr><td>10%</td><td>139</td></tr><tr><td>20%</td><td>246</td></tr><tr><td>30%</td><td>323</td></tr><tr><td>50%</td><td>385</td></tr></tbody></table></div>
+      <h2>Finding the margin of error from a sample you have</h2>
+      <p>The second tool works backwards. With 400 responses, 95% confidence and p = 50%, the margin of error is about <strong>&plusmn;4.9%</strong>. So if 60% of respondents answer yes, the true figure is probably between about 55% and 65%.</p>
+      <h2>Planning example: surveying customers</h2>
+      <p>A company wants to survey its <strong>5,000 customers</strong> at 95% confidence and a margin of error of &plusmn;5%. With the finite population correction, it needs <strong>357</strong> completed responses. If past surveys got a 40% response rate, it should invite about <strong>893</strong> customers (357 &divide; 0.40, rounded up). For the same goal across a very large population the number would be 385, so a small, known population needs a larger share of its members but fewer total responses.</p>
+      <h2>When the formula does not apply</h2>
+      <ul><li><strong>Non-random samples:</strong> a self-selected online poll can be biased no matter how big it is. The formula assumes a random sample.</li><li><strong>Subgroups:</strong> the margin applies to the whole sample. Results for a subgroup (for example, one age band) have a larger margin because fewer people are in it.</li><li><strong>Non-response:</strong> if only 30% of people reply, you must contact about three times as many to get the responses you need.</li><li><strong>Averages instead of proportions:</strong> measuring a mean needs the standard deviation, not p.</li><li><strong>Complex designs:</strong> clustered or weighted surveys usually need more responses than this simple formula.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using the sample size for the whole survey when you need enough responses for each subgroup.</li><li>Forgetting non-response when planning how many people to invite.</li><li>Entering the population size for a very large group, which adds nothing.</li><li>Treating the margin of error as the only source of error. Bad questions and biased sampling are bigger risks.</li><li>Entering 5 when the field expects a percentage and vice versa.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The number is the minimum number of valid responses. Plan to invite more people than that to allow for non-response, and use the same confidence level when reporting results. If the required sample is too large, accept a wider margin of error or lower confidence level, or narrow the question to a smaller population.</p>
+      <div class="callout">This calculator assumes a simple random sample. Survey design, question wording and response rates can matter more than the sample size itself.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="confidence-interval-calculator.html">Confidence Interval Calculator</a> &ndash; turn sample results into a range</li><li><a href="standard-deviation-calculator.html">Standard Deviation Calculator</a> &ndash; measure spread in your data</li><li><a href="z-score-calculator.html">Z-Score Calculator</a> &ndash; where the z-values come from</li><li><a href="probability-calculator.html">Probability Calculator</a> &ndash; work out chances of events</li><li><a href="statistics-calculator.html">Statistics Calculator</a> &ndash; summary statistics for a list of numbers</li><li><a href="random-number-generator.html">Random Number Generator</a> &ndash; pick a random sample</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Why does population size stop mattering above a certain point?</h3>
-        <p>The finite population correction factor shrinks toward 1 as the population grows large relative to the sample &mdash; once your population is, say, 20&times; your sample size or more, the correction becomes negligible, which is why very large or "unlimited" populations give essentially the same answer.</p>
+        <p>The finite population correction approaches 1 as the population gets large compared with the sample. Once the population is around 20 times the sample or more, the correction is negligible, so very large or unlimited populations give essentially the same answer.</p>
       </div>
       <div class="faq-item">
         <h3>What confidence level should I use?</h3>
-        <p>95% is the most common default across research and polling. Higher confidence levels (99%+) require larger samples for the same margin of error, since you're demanding more certainty.</p>
+        <p>Most surveys use 95%. Use 99% when mistakes are costly, but remember it needs a noticeably larger sample. 90% is sometimes used for quick, low-stakes estimates.</p>
       </div>
+      <div class="faq-item">
+        <h3>Why use 50% for the expected proportion?</h3>
+        <p>It is the most conservative choice because p &times; (1 &minus; p) is largest at 50%, so it gives the biggest sample size. If you have a good estimate from earlier work, a different value gives a smaller sample.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the margin of error?</h3>
+        <p>It is the plus-or-minus range around your sample result. If 60% of a sample says yes with a margin of &plusmn;5%, the true share is probably between 55% and 65% at the stated confidence level.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is a bigger sample always better?</h3>
+        <p>It reduces random error, but with diminishing returns, and it cannot fix bias from a poor sampling method or badly worded questions.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many responses do I need for subgroups?</h3>
+        <p>Calculate the sample size for each subgroup you want to report on separately. The margin of error for a subgroup is based on its own number of responses.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.itl.nist.gov/div898/handbook/prc/section2/prc222.htm" rel="noopener" target="_blank">NIST/SEMATECH e-Handbook: Sample sizes required (for a mean)</a></p>
     </div>
 
   </div>
