@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Federal Income Tax Calculator: Refund, Tax Owed & Brackets | CalcBundle</title>
-<meta name="description" content="Estimate U.S. federal income tax, withholding differences and potential refund or balance due for supported tax years.">
+<title>Federal Income Tax Calculator: Refund, Tax Owed &amp; Brackets</title>
+<meta name="description" content="Estimate your U.S. federal income tax refund or amount owed for 2025 or 2026 with current brackets, deductions and credits, including self-employment tax.">
 <link rel="canonical" href="https://calcbundle.net/calculators/income-tax-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Federal Income Tax Calculator: Refund, Tax Owed & Brackets | CalcBundle">
-<meta property="og:description" content="Estimate U.S. federal income tax, withholding differences and potential refund or balance due for supported tax years.">
+<meta property="og:title" content="Federal Income Tax Calculator: Refund, Tax Owed &amp; Brackets">
+<meta property="og:description" content="Estimate your U.S. federal income tax refund or amount owed for 2025 or 2026 with current brackets, deductions and credits, including self-employment tax.">
 <meta property="og:url" content="https://calcbundle.net/calculators/income-tax-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Federal Income Tax Calculator: Refund, Tax Owed & Brackets | CalcBundle">
-<meta name="twitter:description" content="Estimate U.S. federal income tax, withholding differences and potential refund or balance due for supported tax years.">
+<meta name="twitter:title" content="Federal Income Tax Calculator: Refund, Tax Owed &amp; Brackets">
+<meta name="twitter:description" content="Estimate your U.S. federal income tax refund or amount owed for 2025 or 2026 with current brackets, deductions and credits, including self-employment tax.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -39,42 +39,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Which tax years and rules does this calculator use?",
+      "name": "What is the difference between a marginal and an effective tax rate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It uses U.S. federal rules for tax years 2025 and 2026, including the changes from the One Big Beautiful Bill Act: larger standard deductions, a $40,000 cap on the state and local tax deduction, new deductions for tips, overtime, car loan interest and seniors, and a $2,200 child tax credit."
+        "text": "The marginal rate is the rate on your last dollar of income, such as 22%. The effective rate is your total tax divided by your total income, such as 11.3% in the example. Because of progressive brackets, the effective rate is always lower than the top marginal rate."
       }
     },
     {
       "@type": "Question",
-      "name": "Does it include state income tax?",
+      "name": "Does moving into a higher bracket reduce my take-home pay?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. It estimates only your federal return. The state and local tax rate you enter is used just to estimate how much state tax you could deduct if you itemize."
+        "text": "No. Only the income above the bracket threshold is taxed at the higher rate, so extra income always leaves you with more money after tax."
       }
     },
     {
       "@type": "Question",
-      "name": "How are tips and overtime handled?",
+      "name": "What is the difference between a tax credit and a deduction?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Enter your qualified tips and the extra half-time premium part of your overtime pay. The tips deduction is capped at $25,000 and the overtime deduction at $12,500, or $25,000 on a joint return. Both shrink by $100 for every $1,000 of income above $150,000, or $300,000 on a joint return."
+        "text": "A deduction lowers the income that is taxed. A credit reduces the tax itself, dollar for dollar. A $1,000 credit is worth more than a $1,000 deduction."
       }
     },
     {
       "@type": "Question",
-      "name": "Why might my result differ from another tax calculator?",
+      "name": "Why do self-employed people owe extra tax?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Tax calculators make different assumptions, and some use older or simplified rules. This one applies phase-outs, the refundable limit on the child tax credit and the current state and local tax cap as written in the tax code. Small differences in what counts as income or how a credit is limited can change the result, and only a tax professional or the IRS can give a final answer."
+        "text": "They pay both the employee and employer shares of Social Security and Medicare tax (self-employment tax), and nothing is withheld from business income, so estimated payments are needed."
       }
     },
     {
       "@type": "Question",
-      "name": "How is self-employment income taxed?",
+      "name": "Does this include state income tax?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Self-employment tax is 15.3% on 92.35% of your net business income, split between Social Security and Medicare, and half of it is deductible. The calculator also takes the 20% qualified business income deduction, simplified for higher incomes."
+        "text": "No. It estimates U.S. federal income tax only. State and local income tax paid can affect itemized deductions, up to the cap, but the state tax itself is not calculated."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the estimate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is designed for planning. The result can differ from your return because of situations the calculator does not model and facts it cannot check. Use IRS forms and instructions to prepare your return."
       }
     }
   ]
@@ -357,48 +365,67 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How the estimate is worked out</h2>
-      <p>The calculator adds up your income, takes off adjustments such as IRA contributions and half of any self-employment tax, and arrives at adjusted gross income. It then subtracts the larger of the standard deduction or your itemized deductions, plus the new tips, overtime, car loan interest and senior deductions where they apply, to reach taxable income. Ordinary income is taxed through the seven brackets, while qualified dividends and long-term gains are taxed at 0%, 15% or 20% on top of it. Credits and what you have already paid, through withholding and estimated payments, then give your refund or balance due.</p>
-
-      <h2>Deductions and credits it handles</h2>
-      <p>Itemized deductions include mortgage interest, charitable gifts, real estate tax and an estimate of state and local income tax, with the state and local total capped at $40,000 for 2025 and $40,400 for 2026. Credits include the child tax credit with its refundable part, a credit for other dependents, the child and dependent care credit, the American Opportunity education credit and the earned income credit. Social Security benefits are taxed on up to 85% depending on your other income, and the 3.8% net investment income tax, additional Medicare tax and alternative minimum tax are included for higher earners.</p>
-      <div class="callout">This is an estimate for planning, not tax advice. It leaves out state taxes, foreign income, itemized medical costs, health savings accounts, energy credits and many other situations. Rules for the credits and deductions also depend on facts the calculator cannot check, such as who qualifies as a dependent.</div>
-
-      <h2>New rules for 2025 and 2026</h2>
-      <p>The One Big Beautiful Bill Act raised the standard deduction to $15,750 for single filers and $31,500 for joint filers in 2025, and added temporary deductions for tips, overtime and car loan interest. People 65 and older get an extra $6,000 deduction each, which shrinks as income rises. Starting in 2026, taxpayers who do not itemize can deduct up to $1,000 of cash gifts to charity, or $2,000 on a joint return, and those who itemize can deduct charity only above 0.5% of their income.</p>
-
-      <!--seo-extra-->
-      <h2>Worked example: interpreting the result</h2>
-      <p>For a simple reconciliation, $7,500 in estimated total tax minus $8,000 in withholding yields a potential $500 refund, assuming no other payments or adjustments. This is not a tax bracket calculation.</p>
-      <h2>Related calculators</h2>
-      <p>Compare net paycheck deductions with the <a href="take-home-pay-calculator.html">Take-Home Pay Calculator</a>, or compare two single filers with a married return in the <a href="marriage-tax-calculator.html">Marriage Tax Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="take-home-pay-calculator.html">Take-Home-Paycheck Calculator</a>, <a href="salary-calculator.html">Salary Calculator</a>, <a href="budget-calculator.html">Budget Calculator</a>, <a href="marriage-tax-calculator.html">Marriage Tax Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/marginal-vs-effective-tax-rate.html">Marginal vs Effective Tax Rate</a>.</p>
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Federal income tax is worked out in layers: income minus deductions gives taxable income, which is taxed bracket by bracket, then credits and withholding are subtracted. A single filer with $80,000 of wages in 2025 has $64,250 of taxable income and owes about $9,049 in tax, an effective rate of 11.3%.</div>
+      <h2>How federal income tax is calculated</h2>
+      <p>The calculator follows the same steps as a U.S. federal return:</p>
+      <ul><li><strong>Total income</strong>: wages, self-employment income, interest, dividends, capital gains and other income.</li><li><strong>Adjusted gross income (AGI)</strong>: total income minus adjustments such as IRA contributions, student loan interest and half of self-employment tax.</li><li><strong>Taxable income</strong>: AGI minus the larger of the standard deduction or your itemized deductions, plus the special deductions for tips, overtime, car loan interest and seniors where they apply.</li><li><strong>Tax before credits</strong>: taxable income run through the progressive brackets. Qualified dividends and long-term gains use their own 0%, 15% and 20% rates.</li><li><strong>Credits</strong> reduce the tax directly. <strong>Payments</strong> (withholding and estimated tax) are then subtracted to give a refund or a balance due.</li></ul>
+      <p>&ldquo;Progressive&rdquo; means each rate applies only to the slice of income inside its bracket. Moving into a higher bracket never reduces your take-home pay, because only the extra dollars are taxed at the higher rate.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>A single filer, age 30, with $80,000 of wages and $9,000 withheld, for tax year 2025. The standard deduction is $15,750, so taxable income is 80,000 &minus; $15,750 = <strong>$64,250</strong>. The tax is built bracket by bracket:</p>
+      <div class="calc-table"><table><thead><tr><th>Bracket</th><th>Income in bracket</th><th>Rate</th><th>Tax</th></tr></thead><tbody><tr><td>$0 to $11,925</td><td>$11,925</td><td>10%</td><td>$1,192.50</td></tr><tr><td>$11,925 to $48,475</td><td>$36,550</td><td>12%</td><td>$4,386.00</td></tr><tr><td>$48,475 to $103,350</td><td>$15,775</td><td>22%</td><td>$3,470.50</td></tr><tr><td><strong>Total</strong></td><td>$64,250</td><td></td><td><strong>$9,049.00</strong></td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">How $80,000 of wages is treated (single, 2025)</title><desc id="cf1-d">The first $15,750 is covered by the standard deduction, then income is taxed in layers at 10%, 12% and 22%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">How $80,000 of wages is treated (single, 2025)</text><rect class="bar" x="14.0" y="42" width="96.9" height="30" fill="#9ca3af"/><text x="62.4" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">20%</text><rect class="bar" x="110.9" y="42" width="73.3" height="30" fill="#60a5fa"/><text x="147.5" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">15%</text><rect class="bar" x="184.2" y="42" width="224.8" height="30" fill="#2563eb"/><text x="296.6" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">46%</text><rect class="bar" x="409.0" y="42" width="97.0" height="30" fill="#1e3a8a"/><text x="457.5" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">20%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#9ca3af"/><text x="32" y="98" font-size="12.5" fill="#374151">Standard deduction (not taxed): <tspan font-weight="700">$15,750</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#60a5fa"/><text x="282" y="98" font-size="12.5" fill="#374151">Taxed at 10%: <tspan font-weight="700">$11,925</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="120" font-size="12.5" fill="#374151">Taxed at 12%: <tspan font-weight="700">$36,550</tspan></text><rect x="264" y="110" width="12" height="12" rx="2" fill="#1e3a8a"/><text x="282" y="120" font-size="12.5" fill="#374151">Taxed at 22%: <tspan font-weight="700">$15,775</tspan></text></svg><figcaption>Only the part of income above the standard deduction is taxed, and each layer has its own rate.</figcaption></figure>
+      <p>The result is $9,049 of tax, an <strong>effective rate of 11.3%</strong> of the $80,000, even though the top bracket reached is 22% (the marginal rate). Because only $9,000 was withheld, the filer owes about <strong>$49</strong> when filing.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Tax owed in each bracket on $64,250 of taxable income</title><desc id="cf2-d">The 22% rate applies only to the $15,775 that falls in that bracket, not to the whole income.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Tax owed in each bracket on $64,250 of taxable income</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">10% bracket</text><rect class="bar" x="100" y="44" width="89.2" height="22" rx="4" fill="#60a5fa"/><text x="197.2" y="60" font-size="13" font-weight="700" fill="#111827">$1,192.50</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">12% bracket</text><rect class="bar" x="100" y="78" width="328.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">$4,386.00</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">22% bracket</text><rect class="bar" x="100" y="112" width="259.5" height="22" rx="4" fill="#1e3a8a"/><text x="367.5" y="128" font-size="13" font-weight="700" fill="#111827">$3,470.50</text></svg><figcaption>Effective rate and marginal rate are different things. The marginal rate tells you the tax on your next dollar; the effective rate is your total tax divided by your income.</figcaption></figure>
+      <h2>Example: a married couple with two children</h2>
+      <p>A married couple filing jointly (2025), $90,000 and $60,000 of wages, $16,000 withheld in total, and two children under 17:</p>
+      <div class="calc-table"><table><thead><tr><th>Step</th><th>Amount</th></tr></thead><tbody><tr><td>Total income</td><td>$150,000</td></tr><tr><td>Standard deduction (joint)</td><td>$31,500</td></tr><tr><td>Taxable income</td><td>$118,500</td></tr><tr><td>Tax before credits</td><td>$15,898</td></tr><tr><td>Child tax credit (2 &times; $2,200)</td><td>$4,400</td></tr><tr><td>Total tax</td><td>$11,498</td></tr><tr><td>Withheld</td><td>$16,000</td></tr><tr><td><strong>Refund</strong></td><td><strong>$4,502</strong></td></tr></tbody></table></div>
+      <p>Credits reduce tax dollar for dollar, so the $4,400 child tax credit is worth more than a $4,400 deduction would be. Withholding that is higher than the final tax comes back as the refund.</p>
+      <h2>Example: self-employed income</h2>
+      <p>A single filer with $60,000 of net business income and no wages. Self-employed people pay <strong>self-employment tax</strong> (12.4% Social Security up to a wage limit plus 2.9% Medicare) on 92.35% of net earnings, and can deduct half of it. Here that is $8,478 of self-employment tax. Income tax comes to $3,603 after the standard deduction and the 20% qualified business income deduction the engine applies to business income. With $6,000 of estimated tax already paid, the balance due is about <strong>$6,080</strong>.</p>
+      <p>This is why self-employed people make quarterly estimated payments: nothing is withheld from business income.</p>
+      <h2>2025 and 2026 numbers at a glance</h2>
+      <div class="calc-table"><table><thead><tr><th>Item</th><th>2025</th><th>2026</th></tr></thead><tbody><tr><td>Standard deduction, single</td><td>$15,750</td><td>$16,100</td></tr><tr><td>Standard deduction, married filing jointly</td><td>$31,500</td><td>$32,200</td></tr><tr><td>Standard deduction, head of household</td><td>$23,625</td><td>$24,150</td></tr><tr><td>Single: 10% bracket tops out at</td><td>$11,925</td><td>$12,400</td></tr><tr><td>Single: 12% bracket tops out at</td><td>$48,475</td><td>$50,400</td></tr><tr><td>Single: 22% bracket tops out at</td><td>$103,350</td><td>$105,700</td></tr><tr><td>Child tax credit per child</td><td>$2,200</td><td>$2,200</td></tr><tr><td>IRA contribution limit</td><td>$7,000</td><td>$7,500</td></tr></tbody></table></div>
+      <p>The calculator includes the 2025 return (filed in 2026) and the 2026 return (filed in 2027), using the figures above.</p>
+      <h2>What the calculator includes and leaves out</h2>
+      <ul><li><strong>Included:</strong> standard or itemized deductions (mortgage interest, charity, real estate tax, state and local tax with the cap), the child tax credit, credit for other dependents, child and dependent care credit, American Opportunity credit, earned income credit, taxation of Social Security, net investment income tax, additional Medicare tax and alternative minimum tax.</li><li><strong>Not included:</strong> state income tax owed, foreign income, medical expense deductions, health savings accounts, energy credits and many special situations.</li><li>Some rules depend on facts the calculator cannot check, such as who qualifies as a dependent.</li></ul>
+      <h2>Refund or balance due: managing withholding</h2>
+      <p>A large refund means you lent the government money all year; a large balance due can bring penalties. If the result is far from zero, adjust your withholding on Form W-4 with your employer, or change your estimated payments. Run the calculator again after any change in income, filing status, or family size.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Confusing marginal and effective rates. A 22% bracket does not mean 22% of all income is taxed.</li><li>Forgetting that credits reduce tax while deductions only reduce taxable income.</li><li>Leaving out self-employment tax, which is separate from income tax.</li><li>Entering withholding for only one spouse on a joint return.</li><li>Using the wrong tax year or filing status.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Start with the balance: a negative number means you owe, a positive one means a refund. Then look at total tax and your effective rate to see what share of income goes to federal tax. The marginal rate shows the effect of extra income or deductions at the top of your income. Use the result to plan, and confirm any numbers on your return against IRS forms and instructions.</p>
+      <div class="callout">This calculator gives federal estimates for planning and is not tax advice. Tax rules change and many personal circumstances are not covered. Check with the IRS or a tax professional.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="take-home-pay-calculator.html">Take-Home Pay Calculator</a> &ndash; estimate your paycheck after taxes</li><li><a href="salary-calculator.html">Salary Calculator</a> &ndash; convert pay between hourly and yearly</li><li><a href="marriage-tax-calculator.html">Marriage Tax Calculator</a> &ndash; compare filing separately and jointly</li><li><a href="sales-tax-calculator.html">Sales Tax Calculator</a> &ndash; add or remove sales tax</li><li><a href="retirement-calculator.html">Retirement Calculator</a> &ndash; plan savings and retirement income</li><li><a href="estate-tax-calculator.html">Estate Tax Calculator</a> &ndash; estimate federal estate tax</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/marginal-vs-effective-tax-rate.html">Marginal vs Effective Tax Rate</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Which tax years and rules does this calculator use?</h3>
-        <p>It uses U.S. federal rules for tax years 2025 and 2026, including the changes from the One Big Beautiful Bill Act: larger standard deductions, a $40,000 cap on the state and local tax deduction, new deductions for tips, overtime, car loan interest and seniors, and a $2,200 child tax credit.</p>
+        <h3>What is the difference between a marginal and an effective tax rate?</h3>
+        <p>The marginal rate is the rate on your last dollar of income, such as 22%. The effective rate is your total tax divided by your total income, such as 11.3% in the example. Because of progressive brackets, the effective rate is always lower than the top marginal rate.</p>
       </div>
       <div class="faq-item">
-        <h3>Does it include state income tax?</h3>
-        <p>No. It estimates only your federal return. The state and local tax rate you enter is used just to estimate how much state tax you could deduct if you itemize.</p>
+        <h3>Does moving into a higher bracket reduce my take-home pay?</h3>
+        <p>No. Only the income above the bracket threshold is taxed at the higher rate, so extra income always leaves you with more money after tax.</p>
       </div>
       <div class="faq-item">
-        <h3>How are tips and overtime handled?</h3>
-        <p>Enter your qualified tips and the extra half-time premium part of your overtime pay. The tips deduction is capped at $25,000 and the overtime deduction at $12,500, or $25,000 on a joint return. Both shrink by $100 for every $1,000 of income above $150,000, or $300,000 on a joint return.</p>
+        <h3>What is the difference between a tax credit and a deduction?</h3>
+        <p>A deduction lowers the income that is taxed. A credit reduces the tax itself, dollar for dollar. A $1,000 credit is worth more than a $1,000 deduction.</p>
       </div>
       <div class="faq-item">
-        <h3>Why might my result differ from another tax calculator?</h3>
-        <p>Tax calculators make different assumptions, and some use older or simplified rules. This one applies phase-outs, the refundable limit on the child tax credit and the current state and local tax cap as written in the tax code. Small differences in what counts as income or how a credit is limited can change the result, and only a tax professional or the IRS can give a final answer.</p>
+        <h3>Why do self-employed people owe extra tax?</h3>
+        <p>They pay both the employee and employer shares of Social Security and Medicare tax (self-employment tax), and nothing is withheld from business income, so estimated payments are needed.</p>
       </div>
       <div class="faq-item">
-        <h3>How is self-employment income taxed?</h3>
-        <p>Self-employment tax is 15.3% on 92.35% of your net business income, split between Social Security and Medicare, and half of it is deductible. The calculator also takes the 20% qualified business income deduction, simplified for higher incomes.</p>
+        <h3>Does this include state income tax?</h3>
+        <p>No. It estimates U.S. federal income tax only. State and local income tax paid can affect itemized deductions, up to the cap, but the state tax itself is not calculated.</p>
       </div>
+      <div class="faq-item">
+        <h3>How accurate is the estimate?</h3>
+        <p>It is designed for planning. The result can differ from your return because of situations the calculator does not model and facts it cannot check. Use IRS forms and instructions to prepare your return.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.irs.gov/filing/federal-income-tax-rates-and-brackets" rel="noopener" target="_blank">IRS: Federal income tax rates and brackets</a>; <a href="https://www.irs.gov/credits-deductions/individuals/child-tax-credit" rel="noopener" target="_blank">IRS: Child Tax Credit</a>; <a href="https://www.irs.gov/individuals/self-employed" rel="noopener" target="_blank">IRS: Self-employed individuals</a></p>
     </div>
 
   </div>
