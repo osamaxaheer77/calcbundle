@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BMI Calculator: Body Mass Index & Weight Range | CalcBundle</title>
-<meta name="description" content="Calculate BMI from height and weight, compare adult BMI categories and view an illustrative weight range.">
+<meta name="description" content="Calculate your BMI from height and weight, see your adult category, the healthy weight range for your height, BMI Prime and Ponderal Index.">
 <link rel="canonical" href="https://calcbundle.net/calculators/bmi-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="BMI Calculator: Body Mass Index & Weight Range | CalcBundle">
-<meta property="og:description" content="Calculate BMI from height and weight, compare adult BMI categories and view an illustrative weight range.">
+<meta property="og:description" content="Calculate your BMI from height and weight, see your adult category, the healthy weight range for your height, BMI Prime and Ponderal Index.">
 <meta property="og:url" content="https://calcbundle.net/calculators/bmi-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-fitness.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="BMI Calculator: Body Mass Index & Weight Range | CalcBundle">
-<meta name="twitter:description" content="Calculate BMI from height and weight, compare adult BMI categories and view an illustrative weight range.">
+<meta name="twitter:description" content="Calculate your BMI from height and weight, see your adult category, the healthy weight range for your height, BMI Prime and Ponderal Index.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-fitness.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Does this calculator account for children and teens?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can enter any age, but the weight-status classification shown uses the standard adult (WHO) BMI ranges. Children and teens are typically assessed against age- and sex-specific percentile growth charts instead, which this calculator doesn't model."
+        "text": "You can enter any age, but the category shown uses the adult ranges. Children and teens are assessed with age- and sex-specific growth charts, which this calculator does not model, so use a paediatric chart or ask a doctor for anyone under 20."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "Why does the healthy weight range change with height?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Because BMI itself is weight divided by height squared — for any given BMI target, taller people can weigh more and shorter people need to weigh less to land in the same range."
+        "text": "BMI divides weight by height squared. For a fixed target BMI, a taller person can weigh more and a shorter person must weigh less, so the range shifts with height. See the table above for typical heights."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a BMI of 25 to 30 unhealthy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not automatically. It is classed as overweight, which is a screening flag rather than a diagnosis. Waist size, blood pressure, blood sugar, cholesterol and fitness give a much clearer picture of health risk."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can athletes have a high BMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI uses only height and weight. Muscle is denser than fat, so a muscular person can reach 25 or more with low body fat. In that case, body fat percentage or waist size is a better guide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between BMI and BMI Prime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI Prime is BMI divided by 25. It turns the result into a ratio against the top of the normal range: below 1 is under the limit, above 1 is over it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is BMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a quick and consistent screening tool for groups, but it is less precise for individuals because it cannot separate fat from muscle or show where fat sits. Treat it as a first signal, not a verdict."
       }
     }
   ]
@@ -149,36 +181,61 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What BMI actually measures</h2>
-      <p>Body Mass Index estimates body leanness or corpulence from just height and weight, and is widely used as a quick, general indicator of whether someone is underweight, normal weight, overweight, or obese. It's an imperfect measure — it can't distinguish muscle from fat — but it's a useful first signal for whether further testing might be worth it.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> BMI is your weight in kilograms divided by your height in metres squared. An adult who is 5 ft 10 in and weighs 160 lb has a BMI of 23.0, which is in the normal range of 18.5 to under 25. The calculator also shows the healthy weight range for your height, BMI Prime and the Ponderal Index.</div>
+      <h2>How BMI is calculated</h2>
+      <p>Body Mass Index is your weight divided by the square of your height. In metric units the formula is <strong>BMI = weight (kg) &divide; height (m)&sup2;</strong>. In US units it is <strong>BMI = 703 &times; weight (lb) &divide; height (in)&sup2;</strong>; the 703 simply converts pounds and inches to the metric result. The calculator accepts either set of units and shows the same number.</p>
+      <p>Because height is squared, a taller person can weigh more at the same BMI. That is also why the healthy weight range the calculator shows changes with height.</p>
+      <h2>Adult BMI categories</h2>
+      <p>The CDC groups adults (age 20 and over) by BMI as follows: under 18.5 is underweight, 18.5 up to 25 is a healthy weight, 25 up to 30 is overweight, and 30 or more is obesity, which is split into class 1 (30 to under 35), class 2 (35 to under 40) and class 3 (40 and above). The result panel uses the same cut-offs and also splits the underweight range into mild, moderate and severe thinness.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 134" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where a BMI of 23.0 falls</title><desc id="cf1-d">A BMI of 23.0 sits in the normal range, which runs from 18.5 up to but not including 25.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Where a BMI of 23.0 falls</text><rect class="bar" x="14.0" y="62" width="68.9" height="26" fill="#60a5fa"/><text x="48.4" y="106" text-anchor="middle" font-size="11.5" fill="#374151">Under 18.5</text><rect class="bar" x="82.9" y="62" width="127.9" height="26" fill="#10b981"/><text x="146.8" y="106" text-anchor="middle" font-size="11.5" fill="#374151">18.5 to 25: normal</text><rect class="bar" x="210.8" y="62" width="98.4" height="26" fill="#fbbf24"/><text x="260.0" y="106" text-anchor="middle" font-size="11.5" fill="#374151">25 to 30</text><rect class="bar" x="309.2" y="62" width="196.8" height="26" fill="#f87171"/><text x="407.6" y="106" text-anchor="middle" font-size="11.5" fill="#374151">30 to 40+</text><path d="M170.6 58 l-7 -12 h14 z" fill="#111827"/><text x="170.6" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">BMI 23.0</text></svg><figcaption>The coloured bands show the standard adult ranges. The marker shows the default example, a person who is 5 ft 10 in and weighs 160 lb.</figcaption></figure>
+      <h2>Worked example</h2>
+      <p>A person who is 5 feet 10 inches (70 in) tall and weighs 160 pounds: BMI = 703 &times; 160 &divide; 70&sup2; = 112,480 &divide; 4,900 = <strong>23.0</strong>. That is in the normal range. For this height, a BMI between 18.5 and 25 corresponds to about 129 to 174 pounds.</p>
+      <p>The same arithmetic can put people in very different places. Here are three examples:</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">BMI of three example adults</title><desc id="cf2-d">Three adults: 5 ft 10 in at 160 lb has a BMI of 23.0, 6 ft at 220 lb has 29.8 and 5 ft 6 in at 200 lb has 32.3.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">BMI of three example adults</text><text x="112" y="60" text-anchor="end" font-size="13" fill="#6b7280">5 ft 10, 160 lb</text><rect class="bar" x="120" y="44" width="219.0" height="22" rx="4" fill="#10b981"/><text x="347.0" y="60" font-size="13" font-weight="700" fill="#111827">23.0</text><text x="112" y="94" text-anchor="end" font-size="13" fill="#6b7280">6 ft 0, 220 lb</text><rect class="bar" x="120" y="78" width="284.7" height="22" rx="4" fill="#fbbf24"/><text x="412.7" y="94" font-size="13" font-weight="700" fill="#111827">29.8</text><text x="112" y="128" text-anchor="end" font-size="13" fill="#6b7280">5 ft 6, 200 lb</text><rect class="bar" x="120" y="112" width="308.0" height="22" rx="4" fill="#f87171"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">32.3</text></svg><figcaption>Same formula, different heights and weights. The 6 ft 0 in person at 220 lb is just under the obesity line even if much of that weight is muscle, which is a limit of BMI covered below.</figcaption></figure>
       <h2>BMI Prime and Ponderal Index</h2>
-      <p>BMI Prime is simply your BMI divided by 25 (the upper edge of the "normal" range), giving a dimensionless ratio that makes it easy to see how far above or below that threshold someone falls. The Ponderal Index is a similar leanness measure, but it cubes height instead of squaring it, which makes it more reliable than BMI for people at the very tall or very short ends of the height range.</p>
-      <div class="callout">BMI doesn't account for muscle mass, bone density, or body composition. A muscular athlete can show a high BMI while carrying very little body fat — BMI is best used as a starting point, not a diagnosis.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: how to interpret an estimate</h2><p>A person weighing 70 kg at 1.75 m tall has a BMI of 70 ÷ 1.75² ≈ 22.9. BMI is a screening measure; it cannot distinguish muscle from body fat.</p><h2>Related calculators</h2><p>For a range based on height, use the <a href="healthy-weight-calculator.html">Healthy Weight Calculator</a>. For additional body composition estimates, see the <a href="body-fat-calculator.html">Body Fat Calculator</a>.</p>
-      <h2>A worked example</h2>
-      <p>An adult who is 5 feet 10 inches tall and weighs 160 pounds has a BMI of 23.0 kg/m², which falls in the normal range of 18.5 to 25. For that height, the healthy weight range is about 128.9 to 174.3 pounds. The BMI Prime of 0.92 means the person is at 92% of the upper limit of the healthy range, and the Ponderal Index of 12.9 kg/m³ is a version of BMI that suits very tall or very short people better.</p>
-
-      <h2>Tips for reading BMI</h2>
-      <p>BMI is a quick screening number, not a diagnosis. It does not separate muscle from fat, so athletes can score as overweight, and it ignores where fat is stored. Waist size, body fat percentage, blood pressure and blood tests tell you more. For children and teens, BMI is compared with growth charts for their age rather than fixed cut-offs. Talk to a health professional before acting on a result.</p>
-
-      <p><strong>You might also need:</strong> <a href="body-fat-calculator.html">Body Fat Calculator</a>, <a href="ideal-weight-calculator.html">Ideal Weight Calculator</a>, <a href="body-type-calculator.html">Body Type Calculator</a>, <a href="healthy-weight-calculator.html">Healthy Weight Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/bmi-vs-body-fat.html">BMI vs Body Fat Percentage</a>.</p>
-
+      <p><strong>BMI Prime</strong> is your BMI divided by 25, the upper edge of the normal range. A value below 1 means you are under that limit and above 1 means you are over it. For the example, 23.0 &divide; 25 = <strong>0.92</strong>, so the person is at 92% of the upper limit.</p>
+      <p>The <strong>Ponderal Index</strong> divides weight by height cubed (kg/m&sup3;) instead of squared. It is sometimes preferred for people who are much taller or shorter than average, because the squared formula tends to over-state BMI for tall people. The example comes to <strong>12.9 kg/m&sup3;</strong>.</p>
+      <h2>Healthy weight range by height</h2>
+      <p>Weights that give a BMI between 18.5 and 25 at common adult heights:</p>
+      <div class="calc-table"><table><thead><tr><th>Height</th><th>Weight range (lb)</th><th>Weight range (kg)</th></tr></thead><tbody><tr><td>5 ft 0 in</td><td>95&ndash;128 lb</td><td>43&ndash;58 kg</td></tr><tr><td>5 ft 4 in</td><td>108&ndash;146 lb</td><td>49&ndash;66 kg</td></tr><tr><td>5 ft 6 in</td><td>115&ndash;155 lb</td><td>52&ndash;70 kg</td></tr><tr><td>5 ft 8 in</td><td>122&ndash;164 lb</td><td>55&ndash;75 kg</td></tr><tr><td>5 ft 10 in</td><td>129&ndash;174 lb</td><td>58&ndash;79 kg</td></tr><tr><td>6 ft 0 in</td><td>136&ndash;184 lb</td><td>62&ndash;84 kg</td></tr><tr><td>6 ft 2 in</td><td>144&ndash;195 lb</td><td>65&ndash;88 kg</td></tr><tr><td>6 ft 4 in</td><td>152&ndash;205 lb</td><td>69&ndash;93 kg</td></tr></tbody></table></div>
+      <h2>What BMI cannot tell you</h2>
+      <ul><li>It does not measure body fat directly. The CDC notes that BMI does not distinguish between fat, muscle and bone.</li><li>It does not show where fat is stored. Fat around the waist carries more health risk than fat on the hips and thighs, so waist size is a useful second number.</li><li>It can read high for muscular people and low for people who have lost muscle, such as some older adults.</li><li>Adult cut-offs do not apply to children and teens. Their BMI is compared with growth charts for their age and sex, which this calculator does not model.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing units, such as pounds with centimetres. Keep one system or use the unit switch above.</li><li>Entering height in inches only when the form asks for feet and inches (or the other way round).</li><li>Treating BMI as a diagnosis. It is a screening number; a doctor looks at your history, blood pressure and lab results as well.</li><li>Chasing the exact boundary. A BMI of 24.9 and 25.1 are not meaningfully different.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Use the category as a starting point and the healthy weight range as a rough guide for your height. If your BMI is outside the normal range, or you are an athlete, a more detailed look helps: compare it with your waist measurement and body fat estimate, and talk to a health professional before making big changes. The Body Fat Calculator and the BMI vs body fat guide explain how the measures differ.</p>
+      <div class="callout">This calculator is for information only and is not medical advice. BMI is one screening measure and does not diagnose any condition.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="healthy-weight-calculator.html">Healthy Weight Calculator</a> &ndash; a weight range based on your height</li><li><a href="body-fat-calculator.html">Body Fat Calculator</a> &ndash; estimate body fat percentage from measurements</li><li><a href="ideal-weight-calculator.html">Ideal Weight Calculator</a> &ndash; compare common ideal-weight formulas</li><li><a href="bmr-calculator.html">BMR Calculator</a> &ndash; how many calories your body burns at rest</li><li><a href="calorie-calculator.html">Calorie Calculator</a> &ndash; daily calories for maintaining or changing weight</li><li><a href="body-type-calculator.html">Body Type Calculator</a> &ndash; see your body shape and frame</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/bmi-vs-body-fat.html">BMI vs Body Fat Percentage</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Does this calculator account for children and teens?</h3>
-        <p>You can enter any age, but the weight-status classification shown uses the standard adult (WHO) BMI ranges. Children and teens are typically assessed against age- and sex-specific percentile growth charts instead, which this calculator doesn't model.</p>
+        <p>You can enter any age, but the category shown uses the adult ranges. Children and teens are assessed with age- and sex-specific growth charts, which this calculator does not model, so use a paediatric chart or ask a doctor for anyone under 20.</p>
       </div>
       <div class="faq-item">
         <h3>Why does the healthy weight range change with height?</h3>
-        <p>Because BMI itself is weight divided by height squared — for any given BMI target, taller people can weigh more and shorter people need to weigh less to land in the same range.</p>
+        <p>BMI divides weight by height squared. For a fixed target BMI, a taller person can weigh more and a shorter person must weigh less, so the range shifts with height. See the table above for typical heights.</p>
       </div>
+      <div class="faq-item">
+        <h3>Is a BMI of 25 to 30 unhealthy?</h3>
+        <p>Not automatically. It is classed as overweight, which is a screening flag rather than a diagnosis. Waist size, blood pressure, blood sugar, cholesterol and fitness give a much clearer picture of health risk.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why can athletes have a high BMI?</h3>
+        <p>BMI uses only height and weight. Muscle is denser than fat, so a muscular person can reach 25 or more with low body fat. In that case, body fat percentage or waist size is a better guide.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between BMI and BMI Prime?</h3>
+        <p>BMI Prime is BMI divided by 25. It turns the result into a ratio against the top of the normal range: below 1 is under the limit, above 1 is over it.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How accurate is BMI?</h3>
+        <p>It is a quick and consistent screening tool for groups, but it is less precise for individuals because it cannot separate fat from muscle or show where fat sits. Treat it as a first signal, not a verdict.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.cdc.gov/bmi/about/index.html" rel="noopener" target="_blank">CDC: About BMI</a>; <a href="https://www.cdc.gov/bmi/adult-calculator/bmi-categories.html" rel="noopener" target="_blank">CDC: Adult BMI categories</a></p>
     </div>
 
   </div>
