@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GPA Calculator: Credits, Grades &amp; Target GPA | CalcBundle</title>
-<meta name="description" content="Calculate grade-point average from course grades and credit hours, and explore target GPA scenarios.">
+<meta name="description" content="Calculate your GPA from course grades and credit hours on a 4.3 scale, or find the GPA you need in your remaining credits to reach a target.">
 <link rel="canonical" href="https://calcbundle.net/calculators/gpa-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="GPA Calculator: Credits, Grades &amp; Target GPA | CalcBundle">
-<meta property="og:description" content="Calculate grade-point average from course grades and credit hours, and explore target GPA scenarios.">
+<meta property="og:description" content="Calculate your GPA from course grades and credit hours on a 4.3 scale, or find the GPA you need in your remaining credits to reach a target.">
 <meta property="og:url" content="https://calcbundle.net/calculators/gpa-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GPA Calculator: Credits, Grades &amp; Target GPA | CalcBundle">
-<meta name="twitter:description" content="Calculate grade-point average from course grades and credit hours, and explore target GPA scenarios.">
+<meta name="twitter:description" content="Calculate your GPA from course grades and credit hours on a 4.3 scale, or find the GPA you need in your remaining credits to reach a target.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "What about P (Pass) or NP (Not Pass) grades?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Leave those courses out of the GPA calculation — pass/fail grades typically don't count toward GPA at most schools."
+        "text": "Leave those courses out of the GPA. Pass/fail grades normally earn credit but do not count toward GPA at most schools."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "Can I calculate GPA for just one semester?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — only enter the courses from that semester. To track a cumulative GPA across semesters, include every course you've taken."
+        "text": "Yes. Enter only the courses from that semester. For a cumulative GPA, include every course across all semesters, or use the planning tool with your current GPA and credits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator support weighted GPAs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It uses the standard unweighted scale where A+ is 4.3. Schools that weight AP, IB or honors courses add points, so your official weighted GPA will be higher."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I raise my GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the planning tool to see the GPA you must earn in the remaining credits. Earlier semesters carry more leverage because fewer credits are already behind you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my school show a different GPA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scales differ (A+ may be 4.0 or 4.3), retaken courses may be treated differently, and transfer credit may be excluded. Your transcript is the official figure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What GPA do I need for the next semester to reach my target?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your current GPA, current credits, target GPA and the credits you will take. The result is the average GPA you need across those credits."
       }
     }
   ]
@@ -134,34 +166,58 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">The 4.3 grade scale used here</h2>
-      <p>A+ = 4.3, A = 4, A- = 3.7, B+ = 3.3, B = 3, B- = 2.7, C+ = 2.3, C = 2, C- = 1.7, D+ = 1.3, D = 1, D- = 0.7, F = 0. Each course's grade points (grade value &times; credits) are summed and divided by total credits to get GPA &mdash; so a 4-credit course affects your GPA twice as much as a 2-credit one.</p>
-
-      <h2>How the planning tool works</h2>
-      <p>It solves for the GPA you'd need across your remaining credits so that, combined with your current GPA and credits, the overall average reaches your target. If the required GPA comes out above 4.3, the target isn't reachable with a standard scale in the credits you have left.</p>
-      <div class="callout">Grading scales vary by school &mdash; some don't use +/- grades, and some weight AP/IB/honors courses differently. This calculator uses the standard unweighted 4.3 scale.</div>
-
-      <!--seo-extra-->
-<h2>Quick numerical check</h2><p>A 3-credit course worth 4.0 grade points and a 1-credit course worth 2.0 produce (3 × 4 + 1 × 2) ÷ 4 = 3.5 GPA on a four-point scale.</p><p>Related: <a href="grade-calculator.html">Grade Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>A student takes a 4-credit course and earns an A+, a 2-credit course and earns a B, and a 3-credit course and earns an A. With A+ worth 4.3 and A worth 4.0 on this scale, that is 17.2 + 6.0 + 12.0 = 35.2 grade points over 9 credits, a GPA of 3.911. In the planning tool, a student with a 2.8 GPA over 25 credits who wants a 3.0 overall needs a 3.333 in the next 15 credits.</p>
-
-      <h2>Tips for GPA planning</h2>
-      <p>Check how your school treats plus and minus grades, since some cap an A at 4.0. Retaken courses may replace the old grade or average with it, and pass-fail courses usually do not count. Use the planning tool early: it is much easier to raise a GPA when many credits remain. If the required GPA comes out above 4.0, the target is out of reach, and you need to lower it or add more credits.</p>
-
-      <p><strong>You might also need:</strong> <a href="grade-calculator.html">Grade Calculator</a>, <a href="college-cost-calculator.html">College Cost Calculator</a>, <a href="percentage-calculator.html">Percentage Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> GPA is total grade points divided by total credits, where each course's points are its grade value times its credits. A 4-credit A+ (4.3), a 2-credit B (3.0) and a 3-credit A (4.0) give 35.2 points over 9 credits, a GPA of 3.911.</div>
+      <h2>How GPA is calculated</h2>
+      <p>Grade point average is a weighted average. Each course turns its letter grade into grade points, multiplies that by its credit hours, and the total is divided by the total credits: <strong>GPA = &Sigma;(grade points &times; credits) &divide; &Sigma;(credits)</strong>. Because of the weighting, a 4-credit course affects your GPA twice as much as a 2-credit course.</p>
+      <h2>The 4.3 scale used here</h2>
+      <div class="calc-table"><table><thead><tr><th>Grade</th><th>Points</th><th>Grade</th><th>Points</th><th>Grade</th><th>Points</th></tr></thead><tbody><tr><td>A+</td><td>4.3</td><td>B-</td><td>2.7</td><td>D</td><td>1</td></tr><tr><td>A</td><td>4</td><td>C+</td><td>2.3</td><td>D-</td><td>0.7</td></tr><tr><td>A-</td><td>3.7</td><td>C</td><td>2</td><td>F</td><td>0</td></tr><tr><td>B+</td><td>3.3</td><td>C-</td><td>1.7</td><td></td><td></td></tr><tr><td>B</td><td>3</td><td>D+</td><td>1.3</td><td></td><td></td></tr></tbody></table></div>
+      <p>The calculator uses the standard <em>unweighted</em> scale shown above, where A+ is 4.3. Schools differ: many cap an A+ at 4.0, some have no plus or minus grades, and some give extra points for AP, IB or honors courses. Check your school's scale before relying on any result. Pass/fail (P, NP) courses are normally left out of the GPA.</p>
+      <h2>Worked example: course grades</h2>
+      <p>A student takes a 4-credit course and earns an A+, a 2-credit course and earns a B, and a 3-credit course and earns an A (the courses the calculator starts with):</p>
+      <div class="calc-table"><table><thead><tr><th>Course</th><th>Credits</th><th>Grade</th><th>Points per credit</th><th>Grade points</th></tr></thead><tbody><tr><td>Course 1</td><td>4</td><td>A+</td><td>4.3</td><td>17.2</td></tr><tr><td>Course 1</td><td>2</td><td>B</td><td>3</td><td>6.0</td></tr><tr><td>Course 1</td><td>3</td><td>A</td><td>4</td><td>12.0</td></tr><tr><td><strong>Total</strong></td><td><strong>9</strong></td><td></td><td></td><td><strong>35.2</strong></td></tr></tbody></table></div>
+      <p>GPA = 35.2 &divide; 9 = <strong>3.911</strong>.</p>
+      <h2>Worked example: planning a target GPA</h2>
+      <p>A student has a 2.8 GPA over 25 credits and wants a 3.0 overall after 15 more credits. The GPA needed in those 15 credits is (3.0 &times; 40 &minus; 2.8 &times; 25) &divide; 15 = <strong>3.333</strong>. If the answer is above 4.3 the target is out of reach on this scale in the credits you have left.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">GPA needed in the next 15 credits (current 2.8 over 25 credits)</title><desc id="cf1-d">Raising 2.8 to 3.0 needs 3.33 in the next 15 credits; 3.4 would need 4.40, which is above the top of the scale.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">GPA needed in the next 15 credits (current 2.8 over 25 credits)</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">Target 3.0</text><rect class="bar" x="90" y="44" width="256.1" height="22" rx="4" fill="#10b981"/><text x="354.1" y="60" font-size="13" font-weight="700" fill="#111827">3.33</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">Target 3.1</text><rect class="bar" x="90" y="78" width="276.5" height="22" rx="4" fill="#10b981"/><text x="374.5" y="94" font-size="13" font-weight="700" fill="#111827">3.60</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">Target 3.2</text><rect class="bar" x="90" y="112" width="297.0" height="22" rx="4" fill="#10b981"/><text x="395.0" y="128" font-size="13" font-weight="700" fill="#111827">3.87</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">Target 3.3</text><rect class="bar" x="90" y="146" width="317.5" height="22" rx="4" fill="#f59e0b"/><text x="415.5" y="162" font-size="13" font-weight="700" fill="#111827">4.13</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">Target 3.4</text><rect class="bar" x="90" y="180" width="338.0" height="22" rx="4" fill="#f87171"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">4.40 (out of reach)</text></svg><figcaption>Small target increases quickly become hard: each tenth of a point adds a large amount to the GPA you must earn in the remaining credits.</figcaption></figure>
+      <h2>Why GPA gets harder to move over time</h2>
+      <p>Credits you have already earned carry the same weight as new ones, so the more you have, the less one semester can change your GPA. A student with a 3.0 and 15 credits who earns straight 4.0 grades for 15 credits ends at 3.50. With 120 credits earned, the same perfect semester only reaches 3.11.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">GPA after one perfect semester (15 credits of 4.0), starting from 3.0</title><desc id="cf2-d">One semester of straight 4.0 grades lifts a 3.0 GPA to 3.50 with 15 credits earned but only to 3.11 with 120, because earlier credits carry more weight.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">GPA after one perfect semester (15 credits of 4.0), starting from 3.0</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">15 credits earned</text><rect class="bar" x="130" y="44" width="298.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">3.50</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">30 credits earned</text><rect class="bar" x="130" y="78" width="283.8" height="22" rx="4" fill="#2563eb"/><text x="421.8" y="94" font-size="13" font-weight="700" fill="#111827">3.33</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">60 credits earned</text><rect class="bar" x="130" y="112" width="272.5" height="22" rx="4" fill="#2563eb"/><text x="410.5" y="128" font-size="13" font-weight="700" fill="#111827">3.20</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">90 credits earned</text><rect class="bar" x="130" y="146" width="267.6" height="22" rx="4" fill="#2563eb"/><text x="405.6" y="162" font-size="13" font-weight="700" fill="#111827">3.14</text><text x="122" y="196" text-anchor="end" font-size="13" fill="#6b7280">120 credits earned</text><rect class="bar" x="130" y="180" width="264.9" height="22" rx="4" fill="#2563eb"/><text x="402.9" y="196" font-size="13" font-weight="700" fill="#111827">3.11</text></svg><figcaption>This is why planning early matters: the same effort moves your GPA far more in the first year than in the last.</figcaption></figure>
+      <p>A single course matters less than people fear when many credits are behind it. For a student with a 3.4 GPA over 60 credits, a 3-credit B&minus; takes the GPA to 3.37 and a 3-credit C takes it to 3.33. Similarly, to raise a 3.2 GPA over 45 credits to 3.5 by earning only 4.0 grades you would need about 27 more credits.</p>
+      <h2>Retakes, pass/fail and transfer credit</h2>
+      <ul><li><strong>Retaken courses:</strong> some schools replace the old grade, others average the two. Enter what your school does.</li><li><strong>Pass/fail:</strong> usually earns credit but does not count in GPA. Leave those courses out.</li><li><strong>Transfer credit:</strong> often counts toward credits but not toward your GPA.</li><li><strong>Weighted grades:</strong> AP, IB and honors courses may add a point at some high schools. This calculator is unweighted.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Averaging the grade points without weighting by credits.</li><li>Using a 4.0 scale when your school gives A+ a 4.3, or the reverse.</li><li>Counting a pass/fail course.</li><li>Setting a target that the remaining credits cannot reach.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The GPA is only as good as the scale behind it, so compare it with the one on your transcript. In the planning tool, check whether the required GPA is under 4.0 (realistic), between 4.0 and 4.3 (possible only with plus grades on an A+ scale) or above 4.3 (out of reach). If it is out of reach, either lower the target or add more credits to spread the effort.</p>
+      <div class="callout">This calculator is for planning. Your school's official GPA policy and transcript decide your real GPA.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="grade-calculator.html">Grade Calculator</a> &ndash; weighted course grade and final exam needs</li><li><a href="college-cost-calculator.html">College Cost Calculator</a> &ndash; estimate the cost of a degree</li><li><a href="percentage-calculator.html">Percentage Calculator</a> &ndash; convert scores to percentages</li><li><a href="student-loan-calculator.html">Student Loan Calculator</a> &ndash; plan student loan payments</li><li><a href="mean-median-mode-range-calculator.html">Mean, Median, Mode Calculator</a> &ndash; average a list of scores</li><li><a href="time-calculator.html">Time Calculator</a> &ndash; plan study time</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What about P (Pass) or NP (Not Pass) grades?</h3>
-        <p>Leave those courses out of the GPA calculation &mdash; pass/fail grades typically don't count toward GPA at most schools.</p>
+        <p>Leave those courses out of the GPA. Pass/fail grades normally earn credit but do not count toward GPA at most schools.</p>
       </div>
       <div class="faq-item">
         <h3>Can I calculate GPA for just one semester?</h3>
-        <p>Yes &mdash; only enter the courses from that semester. To track a cumulative GPA across semesters, include every course you've taken.</p>
+        <p>Yes. Enter only the courses from that semester. For a cumulative GPA, include every course across all semesters, or use the planning tool with your current GPA and credits.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this calculator support weighted GPAs?</h3>
+        <p>No. It uses the standard unweighted scale where A+ is 4.3. Schools that weight AP, IB or honors courses add points, so your official weighted GPA will be higher.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I raise my GPA?</h3>
+        <p>Use the planning tool to see the GPA you must earn in the remaining credits. Earlier semesters carry more leverage because fewer credits are already behind you.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does my school show a different GPA?</h3>
+        <p>Scales differ (A+ may be 4.0 or 4.3), retaken courses may be treated differently, and transfer credit may be excluded. Your transcript is the official figure.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What GPA do I need for the next semester to reach my target?</h3>
+        <p>Enter your current GPA, current credits, target GPA and the credits you will take. The result is the average GPA you need across those credits.</p>
       </div>
     </div>
 
