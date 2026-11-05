@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mean Median Mode Range Calculator With Examples | CalcBundle</title>
-<meta name="description" content="Calculate the average, middle value, most common value and range of a data set.">
+<meta name="description" content="Find the mean, median, mode and range of any list of numbers, with the count, sum and sorted data. Worked examples show how each one is found.">
 <link rel="canonical" href="https://calcbundle.net/calculators/mean-median-mode-range-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Mean Median Mode Range Calculator With Examples | CalcBundle">
-<meta property="og:description" content="Calculate the average, middle value, most common value and range of a data set.">
+<meta property="og:description" content="Find the mean, median, mode and range of any list of numbers, with the count, sum and sorted data. Worked examples show how each one is found.">
 <meta property="og:url" content="https://calcbundle.net/calculators/mean-median-mode-range-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mean Median Mode Range Calculator With Examples | CalcBundle">
-<meta name="twitter:description" content="Calculate the average, middle value, most common value and range of a data set.">
+<meta name="twitter:description" content="Find the mean, median, mode and range of any list of numbers, with the count, sum and sorted data. Worked examples show how each one is found.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What if every value appears exactly once?",
+      "name": "When should I use the median instead of the mean?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Then there's no mode — nothing repeats, so nothing qualifies as \"most frequent.\""
+        "text": "Use the median when the data is skewed or has outliers, such as incomes or home prices. A single extreme value drags the mean but barely changes the median."
       }
     },
     {
       "@type": "Question",
-      "name": "Can there be more than one mode?",
+      "name": "Can a data set have more than one mode?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — if two or more values tie for the highest frequency, the data set is multimodal and all of them are reported as modes."
+        "text": "Yes. If two or more values tie for the highest count, all of them are modes. If no value repeats there is no mode."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the median of an even number of values?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sort the data and take the average of the two middle values. For 4, 8, 15, 16 that is (8 + 15) ÷ 2 = 11.5."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the range tell me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the distance between the smallest and largest value. It is simple, but one extreme value changes it a lot, so use the standard deviation for a fuller picture of spread."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I enter decimals or negative numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Separate the numbers with commas or spaces. Decimals and negatives work in the same way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the mean the same as the average?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In everyday speech, yes: the arithmetic mean is what most people call the average. Median and mode are other kinds of average."
       }
     }
   ]
@@ -108,38 +140,60 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Four different ways to summarize data</h2>
-      <p>Mean is the arithmetic average &mdash; sum divided by count. Median is the middle value once the data is sorted (or the average of the two middle values, for an even count). Mode is whichever value appears most often &mdash; a data set can have no mode, one mode, or several (multimodal) if there's a tie. Range is simply the largest value minus the smallest.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Mean is the sum divided by the count, median is the middle value when sorted, mode is the most frequent value and range is the largest minus the smallest. For 10, 2, 38, 23, 38, 23 and 21 the mean is 22.1429, the median is 23, the modes are 23 and 38, and the range is 36.</div>
+      <h2>What mean, median, mode and range tell you</h2>
+      <ul><li><strong>Mean</strong> (the average): the sum of the values divided by how many there are.</li><li><strong>Median</strong>: the middle value once the data is sorted. With an even count it is the average of the two middle values.</li><li><strong>Mode</strong>: the value that appears most often. A list can have one mode, several modes or none.</li><li><strong>Range</strong>: the largest value minus the smallest. It measures how spread out the data is.</li></ul>
+      <p>Each one summarises a different feature, so using them together gives a better picture than any single number.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>Take 10, 2, 38, 23, 38, 23 and 21. Sorted, they read <strong>2, 10, 21, 23, 23, 38, 38</strong>.</p>
+      <div class="calc-table"><table><thead><tr><th>Measure</th><th>How it is found</th><th>Result</th></tr></thead><tbody><tr><td>Count (N)</td><td>number of values</td><td>7</td></tr><tr><td>Sum</td><td>2 + 10 + 21 + 23 + 23 + 38 + 38</td><td>155</td></tr><tr><td>Mean</td><td>155 &divide; 7</td><td><strong>22.1429</strong></td></tr><tr><td>Median</td><td>the middle (4th) of 7 sorted values</td><td><strong>23</strong></td></tr><tr><td>Mode</td><td>23 and 38 each appear twice</td><td><strong>23 and 38</strong></td></tr><tr><td>Range</td><td>38 &minus; 2</td><td><strong>36</strong></td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 170" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Dot plot of the default data with the mean and median</title><desc id="cf2-d">Seven values from 2 to 38. The mean is 22.1 and the median is 23, so they are close together.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Default data: mean 22.1, median 23</text><line x1="30" y1="110" x2="490" y2="110" stroke="#9ca3af"/><line x1="30.0" y1="110" x2="30.0" y2="115" stroke="#9ca3af"/><text x="30.0" y="128" text-anchor="middle" font-size="11" fill="#6b7280">0</text><line x1="145.0" y1="110" x2="145.0" y2="115" stroke="#9ca3af"/><text x="145.0" y="128" text-anchor="middle" font-size="11" fill="#6b7280">10</text><line x1="260.0" y1="110" x2="260.0" y2="115" stroke="#9ca3af"/><text x="260.0" y="128" text-anchor="middle" font-size="11" fill="#6b7280">20</text><line x1="375.0" y1="110" x2="375.0" y2="115" stroke="#9ca3af"/><text x="375.0" y="128" text-anchor="middle" font-size="11" fill="#6b7280">30</text><line x1="490.0" y1="110" x2="490.0" y2="115" stroke="#9ca3af"/><text x="490.0" y="128" text-anchor="middle" font-size="11" fill="#6b7280">40</text><circle class="bar" cx="53.0" cy="100" r="8" fill="#2563eb"/><circle class="bar" cx="145.0" cy="100" r="8" fill="#2563eb"/><circle class="bar" cx="271.5" cy="100" r="8" fill="#2563eb"/><circle class="bar" cx="294.5" cy="100" r="8" fill="#2563eb"/><circle class="bar" cx="294.5" cy="82" r="8" fill="#2563eb"/><circle class="bar" cx="467.0" cy="100" r="8" fill="#2563eb"/><circle class="bar" cx="467.0" cy="82" r="8" fill="#2563eb"/><line x1="284.6" y1="40" x2="284.6" y2="110" stroke="#f34469" stroke-width="2" stroke-dasharray="4 3"/><text x="278.6" y="56" text-anchor="end" font-size="12" font-weight="700" fill="#f34469">mean 22.1</text><line x1="294.5" y1="40" x2="294.5" y2="110" stroke="#10b981" stroke-width="2"/><text x="300.5" y="56" font-size="12" font-weight="700" fill="#10b981">median 23</text></svg><figcaption>Each dot is one value, stacked when it repeats. The mean and median are close here because the data is fairly balanced.</figcaption></figure>
       <h2>Why the median resists outliers</h2>
-      <p>Mean and range are both easily distorted by a single extreme value, since they depend on the actual magnitude of every number. Median doesn't &mdash; it only cares about position in the sorted order, so an outlier just becomes the new highest (or lowest) value without shifting the middle. That's why median is often a better "typical value" for skewed data, like income or home prices.</p>
-      <div class="callout">Always look at more than one of these together. A data set can have the same mean as another and still look completely different in spread and shape &mdash; mean, median, mode, and range each reveal something the others miss.</div>
-
-      <!--seo-extra-->
-<h2>Quick numerical check</h2><p>In the list 2, 3, 3, 4 and 18, the mean is 6, the median is 3, the mode is 3 and the range is 16. No single measure summarizes every aspect.</p><p>Related: <a href="standard-deviation-calculator.html">Standard Deviation Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>Take the numbers 10, 2, 38, 23, 38, 23 and 21. Sorted, they read 2, 10, 21, 23, 23, 38, 38. The sum is 155 and there are 7 values, so the mean is 22.1429. The median, the middle value, is 23. The mode is both 23 and 38, since each appears twice. The range is 38 − 2 = 36.</p>
-
-      <h2>Tips for summarizing data</h2>
-      <p>Use the median when the data has outliers, because one very large value pulls the mean up but barely moves the median. The mode is the only one of the four that works for categories as well as numbers. If a set has no repeated value there is no mode, and a set can have more than one. Separate the numbers with commas or spaces, and check for typos, since one wrong digit can change the mean.</p>
-
-      <p><strong>You might also need:</strong> <a href="standard-deviation-calculator.html">Standard Deviation Calculator</a>, <a href="probability-calculator.html">Probability Calculator</a>, <a href="percent-error-calculator.html">Percent Error Calculator</a>, <a href="sample-size-calculator.html">Sample Size Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <!--next-->
-      <p><strong>What next?</strong> If you also need the standard deviation and variance, the <a href="statistics-calculator.html">Statistics Calculator</a> gives them alongside the geometric mean and the sorted data. To see how far one value sits from the mean, use the <a href="z-score-calculator.html">Z-score Calculator</a>, and for a range likely to contain the true average, try the <a href="confidence-interval-calculator.html">Confidence Interval Calculator</a>.</p>
-      <!--/next-->
+      <p>The mean uses every value&rsquo;s size, so one extreme number can drag it a long way. The median only cares about position. Take five salaries: $40,000, $42,000, $45,000, $48,000 and $250,000. The mean is <strong>$85,000</strong>, higher than four of the five people earn. The median is <strong>$45,000</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Same five salaries: mean vs median</title><desc id="cf1-d">One salary of $250,000 pulls the mean to $85,000, while the median stays at $45,000, closer to what most of the group earns.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Same five salaries: mean vs median</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">Mean</text><rect class="bar" x="80" y="44" width="348.0" height="22" rx="4" fill="#f87171"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$85,000</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">Median</text><rect class="bar" x="80" y="78" width="184.2" height="22" rx="4" fill="#10b981"/><text x="272.2" y="94" font-size="13" font-weight="700" fill="#111827">$45,000</text></svg><figcaption>For skewed data such as incomes, house prices or waiting times, the median is usually the better &ldquo;typical&rdquo; value.</figcaption></figure>
+      <h2>More examples</h2>
+      <ul><li><strong>Even number of values:</strong> 4, 8, 15, 16. The two middle values are 8 and 15, so the median is (8 + 15) &divide; 2 = <strong>11.5</strong>.</li><li><strong>No mode:</strong> 1, 2, 3, 4, 5. No value repeats, so there is no mode.</li><li><strong>Two modes (bimodal):</strong> in the default data, 23 and 38 tie, so both are modes.</li><li><strong>Quick check:</strong> in 2, 3, 3, 4 and 18 the mean is 6, the median is 3, the mode is 3 and the range is 16. The 18 pulls the mean far above the rest.</li></ul>
+      <h2>Which one should you use?</h2>
+      <div class="calc-table"><table><thead><tr><th>Situation</th><th>Better choice</th></tr></thead><tbody><tr><td>Fairly symmetrical numbers, no extreme values</td><td>Mean</td></tr><tr><td>Skewed data or outliers (income, prices)</td><td>Median</td></tr><tr><td>Categories such as favourite colour or shoe size</td><td>Mode</td></tr><tr><td>How spread out the data is</td><td>Range, and for more detail the standard deviation</td></tr></tbody></table></div>
+      <p>When the mean is much higher than the median the data is skewed to the right (a few very large values). When the mean is lower than the median it is skewed to the left.</p>
+      <h2>Where these measures are used</h2>
+      <ul><li><strong>Test scores:</strong> the mean gives the class average, the median shows what the middle student scored and the range shows the gap between best and worst.</li><li><strong>Pricing and shopping:</strong> the mode shows the most popular size or price point, which helps decide what to stock.</li><li><strong>Weather and sport:</strong> the mean of daily temperatures or match scores smooths out day-to-day swings.</li><li><strong>A weighted mean:</strong> if some values count more than others (such as course grades weighted by credits), a plain mean is not enough; use the Grade or GPA Calculator instead.</li></ul>
+      <p>In a perfectly symmetrical data set with a single peak, the mean, median and mode are all the same. The further apart they are, the more skewed the data.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Forgetting to sort the data before finding the median by hand.</li><li>Dividing by the wrong count when some values repeat. Count every value, repeats included.</li><li>Reporting the mean for skewed data without checking the median.</li><li>Treating &ldquo;no mode&rdquo; as zero. It means no value repeats.</li><li>Typing a stray comma or letter in the list. One wrong digit changes the mean.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Compare the mean and median first. If they are close, the data is fairly balanced and either is a fair centre. If they differ a lot, look at the range and the sorted list for outliers. For a measure of spread that uses every value, the Standard Deviation Calculator is the next step.</p>
+      <div class="callout">The calculator summarises the numbers you enter. It cannot tell you whether the data was collected fairly or whether a value is a mistake.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="standard-deviation-calculator.html">Standard Deviation Calculator</a> &ndash; measure how spread out the data is</li><li><a href="statistics-calculator.html">Statistics Calculator</a> &ndash; variance, geometric mean and more</li><li><a href="z-score-calculator.html">Z-Score Calculator</a> &ndash; see how far a value is from the mean</li><li><a href="probability-calculator.html">Probability Calculator</a> &ndash; work out chances of events</li><li><a href="percent-error-calculator.html">Percent Error Calculator</a> &ndash; compare a measured and a true value</li><li><a href="sample-size-calculator.html">Sample Size Calculator</a> &ndash; plan how much data you need</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>What if every value appears exactly once?</h3>
-        <p>Then there's no mode &mdash; nothing repeats, so nothing qualifies as "most frequent."</p>
+        <h3>When should I use the median instead of the mean?</h3>
+        <p>Use the median when the data is skewed or has outliers, such as incomes or home prices. A single extreme value drags the mean but barely changes the median.</p>
       </div>
       <div class="faq-item">
-        <h3>Can there be more than one mode?</h3>
-        <p>Yes &mdash; if two or more values tie for the highest frequency, the data set is multimodal and all of them are reported as modes.</p>
+        <h3>Can a data set have more than one mode?</h3>
+        <p>Yes. If two or more values tie for the highest count, all of them are modes. If no value repeats there is no mode.</p>
       </div>
+      <div class="faq-item">
+        <h3>What is the median of an even number of values?</h3>
+        <p>Sort the data and take the average of the two middle values. For 4, 8, 15, 16 that is (8 + 15) &divide; 2 = 11.5.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does the range tell me?</h3>
+        <p>It is the distance between the smallest and largest value. It is simple, but one extreme value changes it a lot, so use the standard deviation for a fuller picture of spread.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I enter decimals or negative numbers?</h3>
+        <p>Yes. Separate the numbers with commas or spaces. Decimals and negatives work in the same way.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the mean the same as the average?</h3>
+        <p>In everyday speech, yes: the arithmetic mean is what most people call the average. Median and mode are other kinds of average.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm" rel="noopener" target="_blank">NIST/SEMATECH e-Handbook: Measures of Location</a></p>
     </div>
 
   </div>
