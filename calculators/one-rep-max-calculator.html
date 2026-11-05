@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>One Rep Max Calculator: Estimated 1RM From Reps | CalcBundle</title>
-<meta name="description" content="Estimate a one-repetition maximum for strength training from a weight lifted for multiple repetitions.">
+<meta name="description" content="Estimate your one rep max (1RM) from a weight lifted for up to 10 reps using Epley, Brzycki or Lombardi, with percentage and rep tables.">
 <link rel="canonical" href="https://calcbundle.net/calculators/one-rep-max-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="One Rep Max Calculator: Estimated 1RM From Reps | CalcBundle">
-<meta property="og:description" content="Estimate a one-repetition maximum for strength training from a weight lifted for multiple repetitions.">
+<meta property="og:description" content="Estimate your one rep max (1RM) from a weight lifted for up to 10 reps using Epley, Brzycki or Lombardi, with percentage and rep tables.">
 <meta property="og:url" content="https://calcbundle.net/calculators/one-rep-max-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-fitness.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="One Rep Max Calculator: Estimated 1RM From Reps | CalcBundle">
-<meta name="twitter:description" content="Estimate a one-repetition maximum for strength training from a weight lifted for multiple repetitions.">
+<meta name="twitter:description" content="Estimate your one rep max (1RM) from a weight lifted for up to 10 reps using Epley, Brzycki or Lombardi, with percentage and rep tables.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-fitness.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -39,42 +39,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How do I calculate my one rep max?",
+      "name": "Which one rep max formula is the most accurate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Lift a weight you can do between 2 and 10 times, then use a formula. With the Epley formula the 1RM is the weight times one plus the reps divided by 30."
+        "text": "None is best for everyone. Epley, Brzycki and Lombardi agree closely at low reps. Use one formula consistently so that changes in your estimate reflect real changes in strength."
       }
     },
     {
       "@type": "Question",
-      "name": "Which 1RM formula is the best?",
+      "name": "How many reps should I use for the estimate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "None is best for everyone. Epley and Brzycki are the most used, and they match at 10 reps. Lombardi gives slightly higher numbers at low reps. Try more than one to see the range."
+        "text": "Between 2 and 10, taken close to failure. The fewer reps, the closer the estimate usually is. Estimates from higher reps are less reliable."
       }
     },
     {
       "@type": "Question",
-      "name": "Why should I use 10 reps or fewer?",
+      "name": "Is it safe to test a true one rep max?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The formulas are built from data on sets of fewer than about 10 reps. Beyond that, fatigue and endurance play a larger part and the estimate becomes less reliable."
+        "text": "It is demanding and risky without a spotter or safety equipment, which is why many lifters estimate it from a lighter set instead."
       }
     },
     {
       "@type": "Question",
-      "name": "How accurate is an estimated one rep max?",
+      "name": "Why do my results differ by exercise?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is usually within about 10% of a tested max, and closer when you use fewer reps. Beginners and very fast-improving lifters may see bigger gaps."
+        "text": "Each lift has its own max. Muscle groups, leverage and technique all differ, so your squat, bench press and deadlift have separate 1RMs."
       }
     },
     {
       "@type": "Question",
-      "name": "What percentage of 1RM should I train at?",
+      "name": "What percentage of my max should I train at?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends on the goal. About 70% to 80% for 7 to 12 reps suits muscle growth, around 70% for 10 to 15 reps suits endurance, and 80% to 100% for 1 to 3 reps suits strength."
+        "text": "It depends on your goal. Heavier weights and fewer reps are used for strength, moderate weights for muscle growth and lighter weights for endurance. The tables show the weight for each percentage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I recalculate my 1RM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every few weeks, using a recent hard set. As you get stronger the number changes, and your working weights should follow it."
       }
     }
   ]
@@ -158,43 +166,60 @@
       <div class="schedule-table-wrap" style="max-height:none;"><div id="rm-pct-table"></div></div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What a one rep max is</h2>
-      <p>Your one rep max, or 1RM, is the most weight you can lift for a single clean repetition of an exercise. It is different for each lift, such as the bench press, squat or deadlift. Knowing it helps you pick training weights as a share of your best, and lets you track strength over time. Testing a true 1RM is hard on the body and best done with a spotter, so many people estimate it from a lighter set.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Your one rep max is the most you can lift once. It can be estimated from a lighter set: lifting 100 kg for 5 reps gives about 116.7 kg with the Epley formula (100 &times; (1 + 5 &divide; 30)), and the calculator turns that into working weights by percentage.</div>
+      <h2>What a one rep max is</h2>
+      <p>Your one rep max (1RM) is the heaviest weight you can lift for one clean repetition of an exercise. It is specific to each lift, so your bench press, squat and deadlift all have different 1RMs. Knowing it lets you pick training weights as a percentage of your best and track strength over time. Testing a true 1RM is hard on the body and should only be done with a spotter, so many lifters estimate it from a lighter set of several repetitions.</p>
       <h2>The three formulas</h2>
-      <p>The Epley formula multiplies the weight by one plus the reps divided by 30. The Brzycki formula multiplies it by 36 divided by 37 minus the reps. The Lombardi formula multiplies it by the reps raised to the power 0.10. All three agree closely at low reps and drift apart as the reps go up, and Epley and Brzycki give the same answer at 10 reps. Estimates are best when you use a weight you can lift between 2 and 10 times, and the fewer reps you needed, the closer the estimate tends to be.</p>
-
-      <h2>Using the tables</h2>
-      <p>The first table shows the weight you could expect to lift for each number of reps, as a share of your estimated 1RM. The second table runs the other way: for a given percentage of your 1RM it shows how many reps you can expect. Lighter weights for more reps suit endurance, moderate weights suit muscle growth, and weights near your maximum for 1 to 3 reps suit strength. Use a spotter for heavy sets and stop if your form breaks down.</p>
-      <div class="callout">These are estimates from a formula, not a measured maximum. Real results vary from lifter to lifter and exercise to exercise, so treat the numbers as a starting point and lift safely.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: reading the estimate</h2><p>If you can lift 80 kg for five repetitions, the simple Epley estimate is 80 × (1 + 5/30) ≈ 93.3 kg. Real maximums vary with training and movement.</p><h2>Related calculators</h2><p>For heart-rate workout zones, use the <a href="target-heart-rate-calculator.html">Target Heart Rate Calculator</a>. For energy spent in exercise, visit the <a href="calories-burned-calculator.html">Calories Burned Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="target-heart-rate-calculator.html">Target Heart Rate Calculator</a>, <a href="calories-burned-calculator.html">Calories Burned Calculator</a>, <a href="pace-calculator.html">Pace Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <ul><li><strong>Epley:</strong> 1RM = weight &times; (1 + reps &divide; 30)</li><li><strong>Brzycki:</strong> 1RM = weight &times; 36 &divide; (37 &minus; reps)</li><li><strong>Lombardi:</strong> 1RM = weight &times; reps<sup>0.10</sup></li></ul>
+      <p>All three agree closely at low reps and drift apart as reps increase. Epley and Brzycki give exactly the same answer at 10 reps (a multiplier of 1.333). Estimates work best when the set was between 2 and 10 reps and you went close to failure; fewer reps usually means a more reliable estimate.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>You lift 100 kg for 5 repetitions. With the Epley formula: 100 &times; (1 + 5 &divide; 30) = 100 &times; 1.1667 = <strong>116.7 kg</strong>. The calculator also shows 90%, 80% and 70% of that max: 105.0, 93.3 and 81.7 kg.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Estimated 1RM from 100 kg for 5 reps</title><desc id="cf2-d">The three formulas give 112.5 to 117.5 kg for the same set, a spread of about 4%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Estimated 1RM from 100 kg for 5 reps</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">Epley</text><rect class="bar" x="90" y="44" width="335.7" height="22" rx="4" fill="#2563eb"/><text x="433.7" y="60" font-size="13" font-weight="700" fill="#111827">116.7 kg</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">Brzycki</text><rect class="bar" x="90" y="78" width="323.7" height="22" rx="4" fill="#2563eb"/><text x="421.7" y="94" font-size="13" font-weight="700" fill="#111827">112.5 kg</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">Lombardi</text><rect class="bar" x="90" y="112" width="338.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">117.5 kg</text></svg><figcaption>The formulas differ by a few percent. Pick one and use it consistently so that changes in the number reflect real changes in strength.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">1RM multiplier by number of reps</title><desc id="cf1-d">At 5 reps the multipliers are 1.167 (Epley), 1.125 (Brzycki) and 1.175 (Lombardi). At 10 reps Epley and Brzycki are both 1.333.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">1RM multiplier by number of reps</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">0.00</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">0.38</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">0.75</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">1.12</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">1.50</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">1</text><text x="157.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">3</text><text x="257.1" y="194" text-anchor="middle" font-size="11" fill="#6b7280">5</text><text x="356.7" y="194" text-anchor="middle" font-size="11" fill="#6b7280">7</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">10</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Repetitions completed</text><polyline class="draw" style="--len:450" points="58.0,92.0 107.8,86.4 157.6,83.6 207.3,80.8 257.1,78.0 306.9,75.2 356.7,72.4 406.4,69.6 456.2,66.8 506.0,64.0" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Epley</text><polyline class="draw" style="--len:450" points="58.0,92.0 107.8,89.6 157.6,87.1 207.3,84.4 257.1,81.5 306.9,78.5 356.7,75.2 406.4,71.7 456.2,68.0 506.0,64.0" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="246" y="40" font-size="11.5" fill="#374151">Brzycki</text><polyline class="draw" style="--len:450" points="58.0,92.0 107.8,86.0 157.6,82.2 207.3,79.5 257.1,77.3 306.9,75.5 356.7,74.0 406.4,72.6 456.2,71.4 506.0,70.3" fill="none" stroke="#f34469" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="398" y="34" width="12" height="4" rx="2" fill="#f34469"/><text x="416" y="40" font-size="11.5" fill="#374151">Lombardi</text></svg><figcaption>Every extra repetition adds to the estimate, but the formulas disagree more as reps climb past about 10.</figcaption></figure>
+      <h2>Repetitions and percentage of your max</h2>
+      <p>The first table in the calculator shows what weight you could expect to lift for a given number of reps. For the example (Epley, 1RM of 116.7 kg):</p>
+      <div class="calc-table"><table><thead><tr><th>Repetitions</th><th>Weight</th><th>% of 1RM</th></tr></thead><tbody><tr><td>1</td><td>116.7 kg</td><td>100%</td></tr><tr><td>2</td><td>109.4 kg</td><td>94%</td></tr><tr><td>3</td><td>106.1 kg</td><td>91%</td></tr><tr><td>4</td><td>102.9 kg</td><td>88%</td></tr><tr><td>5</td><td>100.0 kg</td><td>86%</td></tr><tr><td>6</td><td>97.2 kg</td><td>83%</td></tr><tr><td>8</td><td>92.1 kg</td><td>79%</td></tr><tr><td>10</td><td>87.5 kg</td><td>75%</td></tr><tr><td>12</td><td>83.3 kg</td><td>71%</td></tr><tr><td>15</td><td>77.8 kg</td><td>67%</td></tr><tr><td>20</td><td>70.0 kg</td><td>60%</td></tr></tbody></table></div>
+      <p>The second table runs the other way: for a given percentage of your max, how many reps you can expect.</p>
+      <div class="calc-table"><table><thead><tr><th>% of 1RM</th><th>Weight</th><th>Reps</th></tr></thead><tbody><tr><td>100%</td><td>116.7 kg</td><td>1</td></tr><tr><td>95%</td><td>110.8 kg</td><td>1</td></tr><tr><td>90%</td><td>105.0 kg</td><td>3</td></tr><tr><td>85%</td><td>99.2 kg</td><td>5</td></tr><tr><td>80%</td><td>93.3 kg</td><td>7</td></tr><tr><td>75%</td><td>87.5 kg</td><td>10</td></tr><tr><td>70%</td><td>81.7 kg</td><td>12</td></tr><tr><td>65%</td><td>75.8 kg</td><td>16</td></tr><tr><td>60%</td><td>70.0 kg</td><td>20</td></tr><tr><td>55%</td><td>64.2 kg</td><td>24</td></tr><tr><td>50%</td><td>58.3 kg</td><td>30</td></tr></tbody></table></div>
+      <h2>Using your 1RM in training</h2>
+      <ul><li><strong>Around 1 to 5 reps at roughly 85% to 100% of your max</strong> is commonly used for building maximal strength.</li><li><strong>Around 6 to 12 reps at moderate weights</strong> is commonly used for muscle growth.</li><li><strong>15 or more reps with lighter weights</strong> builds muscular endurance.</li><li>These ranges overlap and good programmes mix them. They are general patterns, not rules.</li><li>Adults are advised to include muscle-strengthening activity on at least two days a week.</li></ul>
+      <h2>Safety and accuracy</h2>
+      <ul><li>Estimates are not a measured max. Fatigue, sleep, technique and exercise choice change real results by several percent.</li><li>Use a spotter or safety bars for any heavy set, and stop if your form breaks down.</li><li>Do not attempt a new max straight from an estimate. Warm up and build up in steps.</li><li>Estimates from more than about 10 reps are less reliable, which is why the calculator limits the input to 1 to 10.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using a set that was far from failure. If you could have done many more reps, the estimate is too low.</li><li>Switching formulas between workouts and mistaking the difference for progress.</li><li>Comparing a machine lift with a free-weight lift. Each exercise has its own 1RM.</li><li>Mixing units. Check the kilograms or pounds setting before reading the answer.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Treat the estimate as a starting point. Recalculate every few weeks from a recent hard set, and use the percentage tables to choose working weights. If your estimated max is changing quickly, shorter test cycles give a clearer picture; if it barely moves, look at sleep, nutrition and programming before changing the exercise.</p>
+      <div class="callout">This calculator gives an estimate and is not coaching or medical advice. Lift within your ability and ask a qualified trainer or doctor if you are unsure.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="target-heart-rate-calculator.html">Target Heart Rate Calculator</a> &ndash; heart rate zones for training</li><li><a href="calories-burned-calculator.html">Calories Burned Calculator</a> &ndash; energy used by exercise</li><li><a href="protein-calculator.html">Protein Calculator</a> &ndash; daily protein for training</li><li><a href="lean-body-mass-calculator.html">Lean Body Mass Calculator</a> &ndash; estimate non-fat mass</li><li><a href="macro-calculator.html">Macro Calculator</a> &ndash; protein, carbs and fat targets</li><li><a href="pace-calculator.html">Pace Calculator</a> &ndash; running speed and finish times</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>How do I calculate my one rep max?</h3>
-        <p>Lift a weight you can do between 2 and 10 times, then use a formula. With the Epley formula the 1RM is the weight times one plus the reps divided by 30.</p>
+        <h3>Which one rep max formula is the most accurate?</h3>
+        <p>None is best for everyone. Epley, Brzycki and Lombardi agree closely at low reps. Use one formula consistently so that changes in your estimate reflect real changes in strength.</p>
       </div>
       <div class="faq-item">
-        <h3>Which 1RM formula is the best?</h3>
-        <p>None is best for everyone. Epley and Brzycki are the most used, and they match at 10 reps. Lombardi gives slightly higher numbers at low reps. Try more than one to see the range.</p>
+        <h3>How many reps should I use for the estimate?</h3>
+        <p>Between 2 and 10, taken close to failure. The fewer reps, the closer the estimate usually is. Estimates from higher reps are less reliable.</p>
       </div>
       <div class="faq-item">
-        <h3>Why should I use 10 reps or fewer?</h3>
-        <p>The formulas are built from data on sets of fewer than about 10 reps. Beyond that, fatigue and endurance play a larger part and the estimate becomes less reliable.</p>
+        <h3>Is it safe to test a true one rep max?</h3>
+        <p>It is demanding and risky without a spotter or safety equipment, which is why many lifters estimate it from a lighter set instead.</p>
       </div>
       <div class="faq-item">
-        <h3>How accurate is an estimated one rep max?</h3>
-        <p>It is usually within about 10% of a tested max, and closer when you use fewer reps. Beginners and very fast-improving lifters may see bigger gaps.</p>
+        <h3>Why do my results differ by exercise?</h3>
+        <p>Each lift has its own max. Muscle groups, leverage and technique all differ, so your squat, bench press and deadlift have separate 1RMs.</p>
       </div>
       <div class="faq-item">
-        <h3>What percentage of 1RM should I train at?</h3>
-        <p>It depends on the goal. About 70% to 80% for 7 to 12 reps suits muscle growth, around 70% for 10 to 15 reps suits endurance, and 80% to 100% for 1 to 3 reps suits strength.</p>
+        <h3>What percentage of my max should I train at?</h3>
+        <p>It depends on your goal. Heavier weights and fewer reps are used for strength, moderate weights for muscle growth and lighter weights for endurance. The tables show the weight for each percentage.</p>
       </div>
+      <div class="faq-item">
+        <h3>How often should I recalculate my 1RM?</h3>
+        <p>Every few weeks, using a recent hard set. As you get stronger the number changes, and your working weights should follow it.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://odphp.health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines" rel="noopener" target="_blank">Physical Activity Guidelines for Americans</a></p>
     </div>
 
   </div>
