@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Salary Calculator: Hourly, Weekly, Monthly & Annual Pay | CalcBundle</title>
-<meta name="description" content="Convert wages or salaries across hourly, daily, weekly, monthly and annual time periods, adjusting workdays and leave.">
+<title>Salary Calculator: Hourly, Weekly, Monthly &amp; Annual Pay</title>
+<meta name="description" content="Convert any pay between hourly, daily, weekly, bi-weekly, monthly and yearly amounts, with and without unpaid holidays and vacation days.">
 <link rel="canonical" href="https://calcbundle.net/calculators/salary-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Salary Calculator: Hourly, Weekly, Monthly & Annual Pay | CalcBundle">
-<meta property="og:description" content="Convert wages or salaries across hourly, daily, weekly, monthly and annual time periods, adjusting workdays and leave.">
+<meta property="og:title" content="Salary Calculator: Hourly, Weekly, Monthly &amp; Annual Pay">
+<meta property="og:description" content="Convert any pay between hourly, daily, weekly, bi-weekly, monthly and yearly amounts, with and without unpaid holidays and vacation days.">
 <meta property="og:url" content="https://calcbundle.net/calculators/salary-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Salary Calculator: Hourly, Weekly, Monthly & Annual Pay | CalcBundle">
-<meta name="twitter:description" content="Convert wages or salaries across hourly, daily, weekly, monthly and annual time periods, adjusting workdays and leave.">
+<meta name="twitter:title" content="Salary Calculator: Hourly, Weekly, Monthly &amp; Annual Pay">
+<meta name="twitter:description" content="Convert any pay between hourly, daily, weekly, bi-weekly, monthly and yearly amounts, with and without unpaid holidays and vacation days.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,31 +42,47 @@
       "name": "What is the difference between unadjusted and adjusted pay?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Unadjusted figures assume you are paid for every working day of the year. Adjusted figures subtract your holidays and vacation days, so they show the pay you actually receive over a year when those days are unpaid."
+        "text": "Unadjusted figures assume you are paid for every working day of the year. Adjusted figures subtract your holiday and vacation days. The adjusted number is a better estimate of what you receive if that time off is unpaid."
       }
     },
     {
       "@type": "Question",
-      "name": "Which amounts does the calculator treat as adjusted?",
+      "name": "How is a monthly salary turned into an hourly rate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Hourly and daily amounts are treated as unadjusted pay, since they are earned only on days you work. Weekly, bi-weekly, semi-monthly, monthly, quarterly and yearly amounts are treated as your actual pay after time off, and the calculator works back to the hourly or daily rate that produces it."
+        "text": "Multiply by 12 to get the yearly salary, then divide by your yearly hours (weekly hours × 52). For 40 hours a week that is 2,080 hours."
       }
     },
     {
       "@type": "Question",
-      "name": "Why does the calculator use 260 days a year?",
+      "name": "Why is a bi-weekly cheque smaller than a semi-monthly one?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A year has 52 weeks, and a standard work week has five weekdays, which makes 260 weekdays. Holidays and vacation days are counted against that total, so ten holidays and fifteen vacation days leave 235 paid working days."
+        "text": "There are 26 bi-weekly pay periods in a year but only 24 semi-monthly ones. The same yearly salary is split into more, smaller cheques."
       }
     },
     {
       "@type": "Question",
-      "name": "How is semi-monthly pay different from bi-weekly pay?",
+      "name": "Does this include tax?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Semi-monthly pay is paid twice a month, so there are 24 paychecks a year. Bi-weekly pay is paid every two weeks, so there are 26 paychecks a year, and each one is smaller for the same annual salary."
+        "text": "No. All figures are gross, before tax and deductions. Use the Take-Home Pay Calculator or Income Tax Calculator to see net pay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many working days are there in a year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There are 260 weekdays in a normal year (52 weeks × 5 days). The calculator subtracts your holidays and vacation days from that number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this for part-time work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Enter your actual hours per week and days per week, and the conversions will follow your schedule."
       }
     }
   ]
@@ -159,41 +175,63 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How the conversion works</h2>
-      <p>Everything is converted through a yearly figure. An hourly rate becomes a year by multiplying by your weekly hours and 52 weeks. A daily rate uses your days per week instead. A weekly, monthly or yearly amount is multiplied by its number of pay periods in a year: 52, 12 or 1. From the yearly figure the calculator divides back out to every other pay period, so a bi-weekly check is one twenty-sixth of the year and a semi-monthly check is one twenty-fourth.</p>
-
-      <h2>Unadjusted versus adjusted</h2>
-      <p>The two columns answer different questions. Unadjusted pay assumes you are paid for all 260 weekdays in a year. Adjusted pay takes off your holidays and vacation days, which gives the amount you receive across the year when those days are not paid. If you enter an hourly or daily rate, the adjusted column shows how much less you earn over a year after time off. If you enter a weekly, monthly or yearly salary, it is treated as already adjusted, and the unadjusted column shows the higher rate you earn on each day you actually work.</p>
-      <div class="callout">The figures are before tax and deductions. To see what lands in your account, use a take-home pay calculator.</div>
-
-      <!--seo-extra-->
-      <figure style="margin:18px 0;max-width:640px"><svg viewBox="0 0 620 125" role="img" aria-label="Salary conversion example: 25 dollars per hour times 40 hours a week times 52 weeks equals 52 thousand dollars annually" style="width:100%;height:auto"><rect x="2" y="3" width="616" height="119" rx="13" fill="#eff6ff"/><g font-family="Arial,sans-serif" text-anchor="middle"><text x="103" y="50" font-size="20" fill="#1d4ed8">$25/hour</text><text x="216" y="50" font-size="20" fill="#475569">×</text><text x="306" y="50" font-size="20" fill="#1d4ed8">40 hours</text><text x="418" y="50" font-size="20" fill="#475569">×</text><text x="520" y="50" font-size="20" fill="#1d4ed8">52 weeks</text><text x="310" y="96" font-size="21" fill="#0f766e">= $52,000 gross per year</text></g></svg><figcaption style="color:#64748b;font-size:13px">Illustrative gross pay before taxes, deductions and unpaid leave.</figcaption></figure>
-      <h2>Worked example: interpreting the result</h2>
-      <p>At 40 hours per week for 52 weeks, $25 per hour is $52,000 in gross annual pay before taxes and unpaid time away: 25 × 40 × 52.</p>
-      <h2>Related calculators</h2>
-      <p>Use the <a href="take-home-pay-calculator.html">Take-Home Pay Calculator</a> to estimate net pay, or the <a href="income-tax-calculator.html">Income Tax Calculator</a> to explore federal tax estimates.</p>
-
-      <p><strong>You might also need:</strong> <a href="marriage-tax-calculator.html">Marriage Tax Calculator</a>, <a href="estate-tax-calculator.html">Estate Tax Calculator</a>, <a href="take-home-pay-calculator.html">Take-Home-Paycheck Calculator</a>, <a href="commission-calculator.html">Commission Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/marginal-vs-effective-tax-rate.html">Marginal vs Effective Tax Rate</a>.</p>
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> To convert pay, turn it into a yearly figure and divide by the periods you want. At $50 an hour for 40 hours a week that is $104,000 a year before time off, or $94,000 a year after 10 holidays and 15 vacation days are unpaid, which is $7,833 a month.</div>
+      <h2>How the conversion works</h2>
+      <p>Everything is converted through a yearly figure. An <strong>hourly</strong> rate becomes a year by multiplying by your weekly hours and 52 weeks. A <strong>daily</strong> rate uses your days per week instead. A weekly, bi-weekly, semi-monthly, monthly or quarterly amount is multiplied by its number of pay periods in a year (52, 26, 24, 12 or 4). From the yearly figure the calculator divides back out to every other period.</p>
+      <div class="calc-table"><table><thead><tr><th>Pay period</th><th>Periods per year</th></tr></thead><tbody><tr><td>Weekly</td><td>52</td></tr><tr><td>Bi-weekly (every two weeks)</td><td>26</td></tr><tr><td>Semi-monthly (twice a month)</td><td>24</td></tr><tr><td>Monthly</td><td>12</td></tr><tr><td>Quarterly</td><td>4</td></tr><tr><td>Hourly</td><td>hours per week &times; 52 (2,080 at 40 hours)</td></tr></tbody></table></div>
+      <p>Note the difference between bi-weekly and semi-monthly. Bi-weekly pay arrives 26 times a year, so two months each year contain three paydays. Semi-monthly pay arrives 24 times, always twice a month. The same salary is split into 26 smaller bi-weekly cheques or 24 larger semi-monthly ones.</p>
+      <h2>Unadjusted vs adjusted pay</h2>
+      <p>The two columns answer different questions. <strong>Unadjusted</strong> pay assumes you are paid for all 260 weekdays of the year. <strong>Adjusted</strong> pay takes off unpaid holidays and vacation days, which gives what you actually receive across the year.</p>
+      <ul><li>If you enter an <strong>hourly or daily</strong> rate, it is treated as unadjusted and the adjusted column shows how much less you earn after unpaid time off.</li><li>If you enter a <strong>weekly, monthly or yearly</strong> salary, it is treated as already adjusted, and the unadjusted column shows the higher rate you earn on each day you actually work.</li></ul>
+      <h2>Worked example: $50 an hour</h2>
+      <p>At $50 an hour, 40 hours a week and 5 days a week, with 10 holidays and 15 vacation days (the calculator&rsquo;s starting values), the unadjusted year is 50 &times; 40 &times; 52 = <strong>$104,000</strong>. Time off takes (260 &minus; 25) &divide; 260 = 90.4% of that, so the adjusted year is <strong>$94,000</strong>.</p>
+      <div class="calc-table"><table><thead><tr><th>Pay period</th><th>Unadjusted</th><th>Adjusted</th></tr></thead><tbody><tr><td>Hourly</td><td>$50.00</td><td>$45.19</td></tr><tr><td>Daily</td><td>$400.00</td><td>$361.54</td></tr><tr><td>Weekly</td><td>$2,000.00</td><td>$1,807.69</td></tr><tr><td>Bi-weekly</td><td>$4,000.00</td><td>$3,615.38</td></tr><tr><td>Semi-monthly</td><td>$4,333.33</td><td>$3,916.67</td></tr><tr><td>Monthly</td><td>$8,666.67</td><td>$7,833.33</td></tr><tr><td>Quarterly</td><td>$26,000.00</td><td>$23,500.00</td></tr><tr><td>Annual</td><td>$104,000.00</td><td>$94,000.00</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">The 260 weekdays in a year with 10 holidays and 15 vacation days</title><desc id="cf1-d">Of the 260 weekdays, 235 are worked and 25 are time off, so unpaid time off reduces yearly pay to 90% of the unadjusted figure.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The 260 weekdays in a year with 10 holidays and 15 vacation days</text><rect class="bar" x="14.0" y="42" width="444.7" height="30" fill="#2563eb"/><text x="236.3" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">90%</text><rect class="bar" x="458.7" y="42" width="28.4" height="30" fill="#f59e0b"/><rect class="bar" x="487.1" y="42" width="18.9" height="30" fill="#9ca3af"/><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Days worked: <tspan font-weight="700">235 days</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#f59e0b"/><text x="282" y="98" font-size="12.5" fill="#374151">Vacation days: <tspan font-weight="700">15 days</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#9ca3af"/><text x="32" y="120" font-size="12.5" fill="#374151">Holidays: <tspan font-weight="700">10 days</tspan></text></svg><figcaption>Paid time off keeps your pay the same. This view matters when holidays and vacation are unpaid, as with contractors and some hourly jobs.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Yearly pay at $50 an hour</title><desc id="cf2-d">At $50 an hour the unadjusted yearly pay is $104,000. Taking off 25 unpaid days reduces it to $94,000.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Yearly pay at $50 an hour</text><text x="162" y="60" text-anchor="end" font-size="13" fill="#6b7280">Unadjusted (all 260 days)</text><rect class="bar" x="170" y="44" width="258.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$104,000</text><text x="162" y="94" text-anchor="end" font-size="13" fill="#6b7280">Adjusted (25 days unpaid)</text><rect class="bar" x="170" y="78" width="233.2" height="22" rx="4" fill="#10b981"/><text x="411.2" y="94" font-size="13" font-weight="700" fill="#111827">$94,000</text></svg><figcaption>The adjusted figure is the better estimate of what an hourly worker with unpaid time off will earn in a year.</figcaption></figure>
+      <h2>Worked example: starting from a salary</h2>
+      <p>Say you earn <strong>$60,000 a year</strong> and have 25 days off. The calculator treats that as your adjusted pay. Spread over the 235 days you actually work, the unadjusted equivalent is $66,383 a year, or about <strong>$31.91 an hour</strong> on a 40-hour week. Compared with simply dividing by 2,080 hours ($28.85 an hour), the difference is what the time off is worth.</p>
+      <h2>Quick reference: common hourly rates</h2>
+      <div class="calc-table"><table><thead><tr><th>Hourly rate</th><th>Yearly (2,080 h)</th><th>Monthly</th><th>Bi-weekly</th><th>Weekly (40 h)</th></tr></thead><tbody><tr><td>$15</td><td>$31,200</td><td>$2,600</td><td>$1,200</td><td>$600</td></tr><tr><td>$20</td><td>$41,600</td><td>$3,467</td><td>$1,600</td><td>$800</td></tr><tr><td>$25</td><td>$52,000</td><td>$4,333</td><td>$2,000</td><td>$1,000</td></tr><tr><td>$30</td><td>$62,400</td><td>$5,200</td><td>$2,400</td><td>$1,200</td></tr><tr><td>$40</td><td>$83,200</td><td>$6,933</td><td>$3,200</td><td>$1,600</td></tr><tr><td>$50</td><td>$104,000</td><td>$8,667</td><td>$4,000</td><td>$2,000</td></tr></tbody></table></div>
+      <p>A handy shortcut: at 40 hours a week, the hourly rate &times; 2 is the yearly pay in thousands (for example, $25 an hour is about $52,000 a year).</p>
+      <h2>Comparing an hourly offer with a salary</h2>
+      <p>A higher hourly rate does not always mean higher pay. Suppose one job pays <strong>$60,000 a year</strong> with paid time off, and another pays <strong>$30 an hour</strong> with unpaid time off. The hourly job looks bigger: 30 &times; 2,080 = $62,400. But with 10 holidays and 15 vacation days unpaid, the adjusted pay is $56,400, which is $3,600 less than the salary. Always compare the adjusted figures, and add benefits such as health insurance and retirement matching before deciding.</p>
+      <p>Overtime is not included in the calculator. In the United States, covered non-exempt employees are generally paid at least one and a half times their regular rate for hours over 40 in a week, so five overtime hours at $25 an hour would add about $187.50 to a week&rsquo;s pay.</p>
+      <h2>What this calculator does not include</h2>
+      <ul><li>Taxes and deductions. All figures are gross (before tax). For take-home pay use the Take-Home Pay Calculator, and for tax use the Income Tax Calculator.</li><li>Overtime, bonuses and commission.</li><li>Employer benefits such as health insurance and retirement contributions.</li><li>Part-year work or irregular hours.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing up bi-weekly (26 cheques) and semi-monthly (24 cheques).</li><li>Assuming 4 weeks in a month. A month averages about 4.33 weeks (52 &divide; 12), so monthly pay is not four weekly cheques.</li><li>Ignoring unpaid time off when comparing an hourly job with a salaried one.</li><li>Comparing gross pay with a net figure from another source.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Use the unadjusted column to compare rates between jobs on a like-for-like basis, and the adjusted column to estimate real yearly income when time off is unpaid. If you are weighing an hourly offer against a salary, convert both to the same period and also compare benefits and taxes.</p>
+      <div class="callout">This calculator converts gross pay using standard assumptions and is not tax or financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="take-home-pay-calculator.html">Take-Home Pay Calculator</a> &ndash; estimate pay after tax</li><li><a href="income-tax-calculator.html">Income Tax Calculator</a> &ndash; estimate federal income tax</li><li><a href="hours-calculator.html">Hours Calculator</a> &ndash; add up hours worked</li><li><a href="time-card-calculator.html">Time Card Calculator</a> &ndash; total a timesheet</li><li><a href="commission-calculator.html">Commission Calculator</a> &ndash; estimate commission pay</li><li><a href="401k-calculator.html">401(k) Calculator</a> &ndash; plan retirement savings from salary</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/marginal-vs-effective-tax-rate.html">Marginal vs Effective Tax Rate</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What is the difference between unadjusted and adjusted pay?</h3>
-        <p>Unadjusted figures assume you are paid for every working day of the year. Adjusted figures subtract your holidays and vacation days, so they show the pay you actually receive over a year when those days are unpaid.</p>
+        <p>Unadjusted figures assume you are paid for every working day of the year. Adjusted figures subtract your holiday and vacation days. The adjusted number is a better estimate of what you receive if that time off is unpaid.</p>
       </div>
       <div class="faq-item">
-        <h3>Which amounts does the calculator treat as adjusted?</h3>
-        <p>Hourly and daily amounts are treated as unadjusted pay, since they are earned only on days you work. Weekly, bi-weekly, semi-monthly, monthly, quarterly and yearly amounts are treated as your actual pay after time off, and the calculator works back to the hourly or daily rate that produces it.</p>
+        <h3>How is a monthly salary turned into an hourly rate?</h3>
+        <p>Multiply by 12 to get the yearly salary, then divide by your yearly hours (weekly hours &times; 52). For 40 hours a week that is 2,080 hours.</p>
       </div>
       <div class="faq-item">
-        <h3>Why does the calculator use 260 days a year?</h3>
-        <p>A year has 52 weeks, and a standard work week has five weekdays, which makes 260 weekdays. Holidays and vacation days are counted against that total, so ten holidays and fifteen vacation days leave 235 paid working days.</p>
+        <h3>Why is a bi-weekly cheque smaller than a semi-monthly one?</h3>
+        <p>There are 26 bi-weekly pay periods in a year but only 24 semi-monthly ones. The same yearly salary is split into more, smaller cheques.</p>
       </div>
       <div class="faq-item">
-        <h3>How is semi-monthly pay different from bi-weekly pay?</h3>
-        <p>Semi-monthly pay is paid twice a month, so there are 24 paychecks a year. Bi-weekly pay is paid every two weeks, so there are 26 paychecks a year, and each one is smaller for the same annual salary.</p>
+        <h3>Does this include tax?</h3>
+        <p>No. All figures are gross, before tax and deductions. Use the Take-Home Pay Calculator or Income Tax Calculator to see net pay.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many working days are there in a year?</h3>
+        <p>There are 260 weekdays in a normal year (52 weeks &times; 5 days). The calculator subtracts your holidays and vacation days from that number.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use this for part-time work?</h3>
+        <p>Yes. Enter your actual hours per week and days per week, and the conversions will follow your schedule.</p>
       </div>
     </div>
 
