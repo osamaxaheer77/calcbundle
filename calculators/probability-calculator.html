@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Probability Calculator: Events &amp; Normal Distribution | CalcBundle</title>
-<meta name="description" content="Calculate the chance of independent events, combined outcomes or values under a normal distribution.">
+<title>Probability Calculator: Events &amp; Normal Distribution</title>
+<meta name="description" content="Find the probability of independent events (both, either, neither) or the chance a value falls between two bounds on a normal distribution.">
 <link rel="canonical" href="https://calcbundle.net/calculators/probability-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Probability Calculator: Events &amp; Normal Distribution | CalcBundle">
-<meta property="og:description" content="Calculate the chance of independent events, combined outcomes or values under a normal distribution.">
+<meta property="og:title" content="Probability Calculator: Events &amp; Normal Distribution">
+<meta property="og:description" content="Find the probability of independent events (both, either, neither) or the chance a value falls between two bounds on a normal distribution.">
 <meta property="og:url" content="https://calcbundle.net/calculators/probability-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Probability Calculator: Events &amp; Normal Distribution | CalcBundle">
-<meta name="twitter:description" content="Calculate the chance of independent events, combined outcomes or values under a normal distribution.">
+<meta name="twitter:title" content="Probability Calculator: Events &amp; Normal Distribution">
+<meta name="twitter:description" content="Find the probability of independent events (both, either, neither) or the chance a value falls between two bounds on a normal distribution.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What if my events aren't independent?",
+      "name": "What if my events are not independent?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Then you need conditional probability — P(A and B) = P(A) × P(B|A), where P(B|A) is the probability of B given that A already happened. This calculator's \"two independent events\" tool assumes no such dependency."
+        "text": "Then you need conditional probability: P(A and B) = P(A) × P(B given A). This calculator assumes independence, so it will not give the right answer when one event changes the chance of the other."
       }
     },
     {
       "@type": "Question",
-      "name": "Why use z-scores for the normal distribution?",
+      "name": "How is the normal distribution probability worked out?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Every normal distribution has a different mean and spread, but converting to z-scores (standard deviations from the mean) maps any of them onto the same standard normal curve, so one set of probability tables (or one formula) works for all of them."
+        "text": "The calculator converts each bound to a z-score and finds the area under the standard normal curve between them. That area equals the probability of a value falling in that range."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does P(A Δ B) mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the probability that A or B happens but not both, which is the union minus the intersection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I enter infinity as a bound?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Use -inf or inf for a one-sided probability, for example the chance of a value above a certain number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do probabilities have to add to 1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All possible outcomes together add to 1. Two events A and B do not need to add to 1 unless they cover every outcome and cannot overlap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the answer different from my intuition?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chance is often counter-intuitive, for example with small overlaps or repeated trials. Writing down the formula and checking whether events are really independent usually finds the reason."
       }
     }
   ]
@@ -154,38 +186,63 @@
       </form>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Independent events, explained</h2>
-      <p>Two events are independent if one occurring doesn't change the probability of the other. For independent events, the probability of both happening is just P(A) &times; P(B) &mdash; that's the intersection. The union (A or B or both) is P(A) + P(B) minus the intersection, since otherwise the overlap would be counted twice.</p>
-
-      <h2>Why the normal distribution matters</h2>
-      <p>Many real-world measurements &mdash; heights, test scores, measurement errors &mdash; cluster around an average in a predictable bell-curve pattern. The normal distribution calculator converts your bounds into z-scores (how many standard deviations from the mean) and finds the area under the curve between them, which corresponds to the probability of a value falling in that range.</p>
-      <div class="callout">P(A &Delta; B), the "exclusive or," means A or B happens but not both simultaneously &mdash; it's the union minus twice the intersection, removing the overlap entirely rather than counting it once.</div>
-
-      <!--seo-extra-->
-<h2>Quick numerical check</h2><p>If a fair die is rolled once, the probability of a six is 1/6, or approximately 16.67%. Two independent sixes in a row have probability 1/36, approximately 2.78%.</p><p>Related: <a href="permutation-and-combination-calculator.html">Permutation and Combination Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>If event A has a probability of 0.65 and event B has a probability of 0.349, and they are independent, the chance of both is 0.65 × 0.349 = 0.22685. The chance of A or B or both is 0.65 + 0.349 − 0.22685 = 0.77215, and the chance of neither is 0.22785. For a normal distribution with a mean of 68 and a standard deviation of 4, the chance of a value between 60 and 72 is 0.81859, or 81.9%.</p>
-
-      <h2>Tips for probability</h2>
-      <p>Independent means that one event does not change the chance of the other, as with two coin flips, but not with drawing two cards from one deck without replacement. Probabilities are always between 0 and 1. For the normal curve, the z-scores shown, here −2 and 1, say how many standard deviations the bounds are from the mean, and about 68% of values fall within one standard deviation and 95% within two.</p>
-
-      <p><strong>You might also need:</strong> <a href="sample-size-calculator.html">Sample Size Calculator</a>, <a href="random-number-generator.html">Random Number Generator</a>, <a href="standard-deviation-calculator.html">Standard Deviation Calculator</a>, <a href="percent-error-calculator.html">Percent Error Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <!--next-->
-      <p><strong>What next?</strong> If your question is "how many ways can this happen?" before it is "how likely is it?", count the outcomes first with the <a href="permutation-and-combination-calculator.html">Permutation and Combination Calculator</a>. For chances based on a bell curve, such as exam scores or heights, use the <a href="z-score-calculator.html">Z-score Calculator</a>.</p>
-      <!--/next-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Probability runs from 0 to 1. For independent events, P(A and B) = P(A) &times; P(B). With P(A) = 0.65 and P(B) = 0.349 the chance of both is 0.22685 and of A or B or both is 0.77215. For a normal distribution with mean 68 and standard deviation 4, the chance of a value between 60 and 72 is 81.9%.</div>
+      <h2>What probability measures</h2>
+      <p>Probability is a number from 0 (impossible) to 1 (certain) that says how likely an event is. You can write it as a decimal (0.25), a fraction (1/4) or a percentage (25%). The calculator has two tools: one combines the probabilities of two independent events, and the other finds the probability that a value from a normal distribution falls between two bounds.</p>
+      <h2>Two independent events</h2>
+      <p>Two events are <strong>independent</strong> when one happening does not change the chance of the other, like two separate coin flips. Given P(A) and P(B), the calculator finds:</p>
+      <ul><li><strong>Both happen</strong> (intersection): P(A) &times; P(B)</li><li><strong>A or B or both</strong> (union): P(A) + P(B) &minus; P(A and B). The overlap is subtracted so it is not counted twice.</li><li><strong>Exactly one happens</strong> (A or B but not both): the union minus the intersection.</li><li><strong>Neither happens:</strong> 1 &minus; the union. Also the complements P(A&prime;) = 1 &minus; P(A) and P(B&prime;) = 1 &minus; P(B).</li></ul>
+      <h2>Worked example: independent events</h2>
+      <p>With P(A) = 0.65 and P(B) = 0.349 (the calculator&rsquo;s starting values):</p>
+      <div class="calc-table"><table><thead><tr><th>Result</th><th>Calculation</th><th>Value</th></tr></thead><tbody><tr><td>Both A and B</td><td>0.65 &times; 0.349</td><td><strong>0.22685</strong></td></tr><tr><td>A or B or both</td><td>0.65 + 0.349 &minus; 0.22685</td><td><strong>0.77215</strong></td></tr><tr><td>A or B, not both</td><td>0.77215 &minus; 0.22685</td><td>0.5453</td></tr><tr><td>Neither</td><td>1 &minus; 0.77215</td><td>0.22785</td></tr><tr><td>A does not happen</td><td>1 &minus; 0.65</td><td>0.35</td></tr><tr><td>B does not happen</td><td>1 &minus; 0.349</td><td>0.651</td></tr></tbody></table></div>
+      <h2>Everyday probability examples</h2>
+      <ul><li><strong>A fair die:</strong> the chance of a six is 1/6 &asymp; 16.67%. Two sixes in a row (independent) is 1/36 &asymp; 2.78%.</li><li><strong>At least one head in 3 coin flips:</strong> it is easier to find the opposite. No heads is 0.5 &times; 0.5 &times; 0.5 = 0.125, so at least one head is 1 &minus; 0.125 = <strong>0.875</strong>.</li><li><strong>Dependent events:</strong> drawing two aces from a deck without replacement is not 4/52 &times; 4/52. The second draw depends on the first: 4/52 &times; 3/51 &asymp; <strong>0.0045</strong>. The independent-event formula does not apply here.</li></ul>
+      <h2>The normal distribution</h2>
+      <p>Many measurements, such as heights, test scores and measurement errors, cluster around an average in a bell curve. The calculator turns your bounds into <strong>z-scores</strong> (how many standard deviations a value is from the mean): <strong>z = (x &minus; mean) &divide; standard deviation</strong>, then finds the area under the curve between them. You can enter a bound such as <em>-inf</em> or <em>inf</em> for a one-sided probability.</p>
+      <h2>Worked example: normal distribution</h2>
+      <p>Heights with a mean of 68 inches and a standard deviation of 4. What is the chance of a height between 60 and 72? The z-scores are (60 &minus; 68) &divide; 4 = <strong>-2</strong> and (72 &minus; 68) &divide; 4 = <strong>1</strong>. The area between them is <strong>0.81859</strong>, or 81.9%.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 205" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Normal curve with the area between 60 and 72 shaded</title><desc id="cf2-d">The shaded area between z = -2 and z = 1 is 81.9% of the total area, which is the probability of a value between 60 and 72.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Mean 68, standard deviation 4: P(60 &lt; X &lt; 72) = 81.9%</text><polygon class="bar" points="140.0,160 140.0,143.8 141.5,143.0 143.0,142.1 144.5,141.2 146.0,140.3 147.5,139.4 149.0,138.4 150.5,137.4 152.0,136.3 153.5,135.2 155.0,134.1 156.5,133.0 158.0,131.8 159.5,130.6 161.0,129.3 162.5,128.0 164.0,126.7 165.5,125.4 167.0,124.0 168.5,122.6 170.0,121.1 171.5,119.7 173.0,118.2 174.5,116.6 176.0,115.1 177.5,113.5 179.0,111.9 180.5,110.2 182.0,108.6 183.5,106.9 185.0,105.2 186.5,103.5 188.0,101.7 189.5,100.0 191.0,98.2 192.5,96.4 194.0,94.6 195.5,92.8 197.0,91.0 198.5,89.2 200.0,87.4 201.5,85.6 203.0,83.8 204.5,82.0 206.0,80.2 207.5,78.4 209.0,76.6 210.5,74.8 212.0,73.1 213.5,71.4 215.0,69.7 216.5,68.0 218.0,66.3 219.5,64.7 221.0,63.1 222.5,61.6 224.0,60.0 225.5,58.6 227.0,57.1 228.5,55.7 230.0,54.4 231.5,53.1 233.0,51.8 234.5,50.7 236.0,49.5 237.5,48.4 239.0,47.4 240.5,46.5 242.0,45.6 243.5,44.8 245.0,44.0 246.5,43.3 248.0,42.7 249.5,42.1 251.0,41.7 252.5,41.2 254.0,40.9 255.5,40.7 257.0,40.5 258.5,40.4 260.0,40.3 261.5,40.4 263.0,40.5 264.5,40.7 266.0,40.9 267.5,41.2 269.0,41.7 270.5,42.1 272.0,42.7 273.5,43.3 275.0,44.0 276.5,44.8 278.0,45.6 279.5,46.5 281.0,47.4 282.5,48.4 284.0,49.5 285.5,50.7 287.0,51.8 288.5,53.1 290.0,54.4 291.5,55.7 293.0,57.1 294.5,58.6 296.0,60.0 297.5,61.6 299.0,63.1 300.5,64.7 302.0,66.3 303.5,68.0 305.0,69.7 306.5,71.4 308.0,73.1 309.5,74.8 311.0,76.6 312.5,78.4 314.0,80.2 315.5,82.0 317.0,83.8 318.5,85.6 320.0,87.4 320.0,160" fill="#bfdbfe"/><polyline points="20.0,160.0 21.5,160.0 23.0,160.0 24.5,159.9 26.0,159.9 27.5,159.9 29.0,159.9 30.5,159.9 32.0,159.9 33.5,159.9 35.0,159.9 36.5,159.9 38.0,159.9 39.5,159.9 41.0,159.8 42.5,159.8 44.0,159.8 45.5,159.8 47.0,159.8 48.5,159.8 50.0,159.7 51.5,159.7 53.0,159.7 54.5,159.7 56.0,159.6 57.5,159.6 59.0,159.6 60.5,159.5 62.0,159.5 63.5,159.4 65.0,159.4 66.5,159.3 68.0,159.3 69.5,159.2 71.0,159.2 72.5,159.1 74.0,159.0 75.5,158.9 77.0,158.9 78.5,158.8 80.0,158.7 81.5,158.6 83.0,158.5 84.5,158.3 86.0,158.2 87.5,158.1 89.0,157.9 90.5,157.8 92.0,157.6 93.5,157.5 95.0,157.3 96.5,157.1 98.0,156.9 99.5,156.7 101.0,156.4 102.5,156.2 104.0,155.9 105.5,155.7 107.0,155.4 108.5,155.1 110.0,154.7 111.5,154.4 113.0,154.0 114.5,153.7 116.0,153.3 117.5,152.9 119.0,152.4 120.5,152.0 122.0,151.5 123.5,151.0 125.0,150.5 126.5,149.9 128.0,149.4 129.5,148.8 131.0,148.1 132.5,147.5 134.0,146.8 135.5,146.1 137.0,145.4 138.5,144.6 140.0,143.8 141.5,143.0 143.0,142.1 144.5,141.2 146.0,140.3 147.5,139.4 149.0,138.4 150.5,137.4 152.0,136.3 153.5,135.2 155.0,134.1 156.5,133.0 158.0,131.8 159.5,130.6 161.0,129.3 162.5,128.0 164.0,126.7 165.5,125.4 167.0,124.0 168.5,122.6 170.0,121.1 171.5,119.7 173.0,118.2 174.5,116.6 176.0,115.1 177.5,113.5 179.0,111.9 180.5,110.2 182.0,108.6 183.5,106.9 185.0,105.2 186.5,103.5 188.0,101.7 189.5,100.0 191.0,98.2 192.5,96.4 194.0,94.6 195.5,92.8 197.0,91.0 198.5,89.2 200.0,87.4 201.5,85.6 203.0,83.8 204.5,82.0 206.0,80.2 207.5,78.4 209.0,76.6 210.5,74.8 212.0,73.1 213.5,71.4 215.0,69.7 216.5,68.0 218.0,66.3 219.5,64.7 221.0,63.1 222.5,61.6 224.0,60.0 225.5,58.6 227.0,57.1 228.5,55.7 230.0,54.4 231.5,53.1 233.0,51.8 234.5,50.7 236.0,49.5 237.5,48.4 239.0,47.4 240.5,46.5 242.0,45.6 243.5,44.8 245.0,44.0 246.5,43.3 248.0,42.7 249.5,42.1 251.0,41.7 252.5,41.2 254.0,40.9 255.5,40.7 257.0,40.5 258.5,40.4 260.0,40.3 261.5,40.4 263.0,40.5 264.5,40.7 266.0,40.9 267.5,41.2 269.0,41.7 270.5,42.1 272.0,42.7 273.5,43.3 275.0,44.0 276.5,44.8 278.0,45.6 279.5,46.5 281.0,47.4 282.5,48.4 284.0,49.5 285.5,50.7 287.0,51.8 288.5,53.1 290.0,54.4 291.5,55.7 293.0,57.1 294.5,58.6 296.0,60.0 297.5,61.6 299.0,63.1 300.5,64.7 302.0,66.3 303.5,68.0 305.0,69.7 306.5,71.4 308.0,73.1 309.5,74.8 311.0,76.6 312.5,78.4 314.0,80.2 315.5,82.0 317.0,83.8 318.5,85.6 320.0,87.4 321.5,89.2 323.0,91.0 324.5,92.8 326.0,94.6 327.5,96.4 329.0,98.2 330.5,100.0 332.0,101.7 333.5,103.5 335.0,105.2 336.5,106.9 338.0,108.6 339.5,110.2 341.0,111.9 342.5,113.5 344.0,115.1 345.5,116.6 347.0,118.2 348.5,119.7 350.0,121.1 351.5,122.6 353.0,124.0 354.5,125.4 356.0,126.7 357.5,128.0 359.0,129.3 360.5,130.6 362.0,131.8 363.5,133.0 365.0,134.1 366.5,135.2 368.0,136.3 369.5,137.4 371.0,138.4 372.5,139.4 374.0,140.3 375.5,141.2 377.0,142.1 378.5,143.0 380.0,143.8 381.5,144.6 383.0,145.4 384.5,146.1 386.0,146.8 387.5,147.5 389.0,148.1 390.5,148.8 392.0,149.4 393.5,149.9 395.0,150.5 396.5,151.0 398.0,151.5 399.5,152.0 401.0,152.4 402.5,152.9 404.0,153.3 405.5,153.7 407.0,154.0 408.5,154.4 410.0,154.7 411.5,155.1 413.0,155.4 414.5,155.7 416.0,155.9 417.5,156.2 419.0,156.4 420.5,156.7 422.0,156.9 423.5,157.1 425.0,157.3 426.5,157.5 428.0,157.6 429.5,157.8 431.0,157.9 432.5,158.1 434.0,158.2 435.5,158.3 437.0,158.5 438.5,158.6 440.0,158.7 441.5,158.8 443.0,158.9 444.5,158.9 446.0,159.0 447.5,159.1 449.0,159.2 450.5,159.2 452.0,159.3 453.5,159.3 455.0,159.4 456.5,159.4 458.0,159.5 459.5,159.5 461.0,159.6 462.5,159.6 464.0,159.6 465.5,159.7 467.0,159.7 468.5,159.7 470.0,159.7 471.5,159.8 473.0,159.8 474.5,159.8 476.0,159.8 477.5,159.8 479.0,159.8 480.5,159.9 482.0,159.9 483.5,159.9 485.0,159.9 486.5,159.9 488.0,159.9 489.5,159.9 491.0,159.9 492.5,159.9 494.0,159.9 495.5,159.9 497.0,160.0 498.5,160.0 500.0,160.0" fill="none" stroke="#2563eb" stroke-width="2.5"/><line x1="20" y1="160" x2="500" y2="160" stroke="#9ca3af"/><text x="20.0" y="176" text-anchor="middle" font-size="11" fill="#6b7280">52</text><text x="80.0" y="176" text-anchor="middle" font-size="11" fill="#6b7280">56</text><text x="140.0" y="176" text-anchor="middle" font-size="11" fill="#6b7280">60</text><text x="200.0" y="176" text-anchor="middle" font-size="11" fill="#6b7280">64</text><text x="260.0" y="176" text-anchor="middle" font-size="11" fill="#6b7280">68</text><text x="320.0" y="176" text-anchor="middle" font-size="11" fill="#6b7280">72</text><text x="380.0" y="176" text-anchor="middle" font-size="11" fill="#6b7280">76</text><text x="440.0" y="176" text-anchor="middle" font-size="11" fill="#6b7280">80</text><text x="500.0" y="176" text-anchor="middle" font-size="11" fill="#6b7280">84</text><text x="260" y="194" text-anchor="middle" font-size="11" fill="#6b7280">Value (the mean plus or minus 4 standard deviations)</text></svg><figcaption>The shaded area is the probability. The total area under the whole curve is 1.</figcaption></figure>
+      <p>One-sided versions of the same question: the chance of a height <em>above 76</em> is 2.3% (z = 2), and the chance of one <em>below 60</em> is 2.3% (z = &minus;2).</p>
+      <h2>The 68-95-99.7 rule</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Share of values within 1, 2 and 3 standard deviations</title><desc id="cf1-d">About 68%, 95% and 99.7% of values fall within one, two and three standard deviations of the mean, here for a mean of 68 and a standard deviation of 4.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Share of values within 1, 2 and 3 standard deviations</text><text x="142" y="60" text-anchor="end" font-size="13" fill="#6b7280">within 1 SD (64 to 72)</text><rect class="bar" x="150" y="44" width="190.3" height="22" rx="4" fill="#60a5fa"/><text x="348.3" y="60" font-size="13" font-weight="700" fill="#111827">68.3%</text><text x="142" y="94" text-anchor="end" font-size="13" fill="#6b7280">within 2 SD (60 to 76)</text><rect class="bar" x="150" y="78" width="266.1" height="22" rx="4" fill="#2563eb"/><text x="424.1" y="94" font-size="13" font-weight="700" fill="#111827">95.4%</text><text x="142" y="128" text-anchor="end" font-size="13" fill="#6b7280">within 3 SD (56 to 80)</text><rect class="bar" x="150" y="112" width="278.0" height="22" rx="4" fill="#1e3a8a"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">99.7%</text></svg><figcaption>A useful shortcut: about two thirds of values are within one standard deviation, and almost all are within three.</figcaption></figure>
+      <h2>Choosing the right model</h2>
+      <ul><li><strong>Equally likely outcomes</strong> (dice, cards, coins): probability = favourable outcomes &divide; total outcomes. Count carefully, and use the Permutation and Combination Calculator when the counting is hard.</li><li><strong>Independent events:</strong> multiply for &ldquo;and&rdquo;, and use the union formula for &ldquo;or&rdquo;. Check that one event really does not change the other.</li><li><strong>Measurements with a bell curve</strong> (heights, errors, scores): use the normal distribution with the right mean and standard deviation.</li><li><strong>Repeated trials:</strong> for &ldquo;at least once&rdquo; questions, work out the chance of it never happening and subtract from 1.</li></ul>
+      <p>If you are not sure which applies, write the question as a sentence and ask: are the outcomes counted, combined, or measured on a scale?</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Using the independent-event formulas when events affect each other (drawing without replacement, for example).</li><li>Adding probabilities for &ldquo;A or B&rdquo; without subtracting the overlap.</li><li>Entering percentages (65) where decimals (0.65) are required.</li><li>Using a normal distribution for data that is clearly skewed or bounded.</li><li>Confusing the standard deviation with the variance.</li></ul>
+      <h2>How to read your result</h2>
+      <p>A probability of 0.77 means that in the long run about 77 out of 100 repeats would have the outcome. It does not guarantee any single result. For a normal distribution, check that the mean and standard deviation really describe your data, then use the z-scores to judge how unusual a value is: beyond 2 in either direction is rare, beyond 3 is very rare.</p>
+      <div class="callout">This calculator gives mathematical results from the numbers you enter. Real-world data may not follow the assumptions of independence or a normal distribution.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="permutation-and-combination-calculator.html">Permutation and Combination Calculator</a> &ndash; count outcomes before finding probabilities</li><li><a href="z-score-calculator.html">Z-Score Calculator</a> &ndash; see how far a value is from the mean</li><li><a href="standard-deviation-calculator.html">Standard Deviation Calculator</a> &ndash; measure spread in a data set</li><li><a href="sample-size-calculator.html">Sample Size Calculator</a> &ndash; plan a survey</li><li><a href="random-number-generator.html">Random Number Generator</a> &ndash; simulate chance events</li><li><a href="mean-median-mode-range-calculator.html">Mean, Median, Mode Calculator</a> &ndash; summarise a list of numbers</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>What if my events aren't independent?</h3>
-        <p>Then you need conditional probability &mdash; P(A and B) = P(A) &times; P(B|A), where P(B|A) is the probability of B given that A already happened. This calculator's "two independent events" tool assumes no such dependency.</p>
+        <h3>What if my events are not independent?</h3>
+        <p>Then you need conditional probability: P(A and B) = P(A) &times; P(B given A). This calculator assumes independence, so it will not give the right answer when one event changes the chance of the other.</p>
       </div>
       <div class="faq-item">
-        <h3>Why use z-scores for the normal distribution?</h3>
-        <p>Every normal distribution has a different mean and spread, but converting to z-scores (standard deviations from the mean) maps any of them onto the same standard normal curve, so one set of probability tables (or one formula) works for all of them.</p>
+        <h3>How is the normal distribution probability worked out?</h3>
+        <p>The calculator converts each bound to a z-score and finds the area under the standard normal curve between them. That area equals the probability of a value falling in that range.</p>
       </div>
+      <div class="faq-item">
+        <h3>What does P(A Δ B) mean?</h3>
+        <p>It is the probability that A or B happens but not both, which is the union minus the intersection.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I enter infinity as a bound?</h3>
+        <p>Yes. Use -inf or inf for a one-sided probability, for example the chance of a value above a certain number.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do probabilities have to add to 1?</h3>
+        <p>All possible outcomes together add to 1. Two events A and B do not need to add to 1 unless they cover every outcome and cannot overlap.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is the answer different from my intuition?</h3>
+        <p>Chance is often counter-intuitive, for example with small overlaps or repeated trials. Writing down the formula and checking whether events are really independent usually finds the reason.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda3661.htm" rel="noopener" target="_blank">NIST/SEMATECH e-Handbook: Normal Distribution</a></p>
     </div>
 
   </div>
