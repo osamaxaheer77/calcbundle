@@ -83,11 +83,10 @@
       const weeks = op * (parseInt(el('date-add-weeks').value, 10) || 0);
       const days = op * (parseInt(el('date-add-days').value, 10) || 0);
 
-      const result = new Date(
-        start.getFullYear() + years,
-        start.getMonth() + months,
-        start.getDate() + weeks * 7 + days
-      );
+      // Add years and months first and keep the day inside the target month, so Jan 31 + 1 month is the last day of February.
+      const target = new Date(start.getFullYear() + years, start.getMonth() + months, 1);
+      const lastDayOfTarget = new Date(target.getFullYear(), target.getMonth() + 1, 0).getDate();
+      const result = new Date(target.getFullYear(), target.getMonth(), Math.min(start.getDate(), lastDayOfTarget) + weeks * 7 + days);
 
       const dateFmt = result.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
       const weekdayFmt = result.toLocaleDateString('en-US', { weekday: 'long' });

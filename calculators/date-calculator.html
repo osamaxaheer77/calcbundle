@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Date Calculator: Days Between &amp; Add or Subtract | CalcBundle</title>
-<meta name="description" content="Count days between calendar dates or add and subtract years, months, weeks and days from a starting date.">
+<meta name="description" content="Count the days, weeks, months and years between two dates, or add and subtract time from a date. Includes an option to count the end day too.">
 <link rel="canonical" href="https://calcbundle.net/calculators/date-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Date Calculator: Days Between &amp; Add or Subtract | CalcBundle">
-<meta property="og:description" content="Count days between calendar dates or add and subtract years, months, weeks and days from a starting date.">
+<meta property="og:description" content="Count the days, weeks, months and years between two dates, or add and subtract time from a date. Includes an option to count the end day too.">
 <meta property="og:url" content="https://calcbundle.net/calculators/date-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Date Calculator: Days Between &amp; Add or Subtract | CalcBundle">
-<meta name="twitter:description" content="Count days between calendar dates or add and subtract years, months, weeks and days from a starting date.">
+<meta name="twitter:description" content="Count the days, weeks, months and years between two dates, or add and subtract time from a date. Includes an option to count the end day too.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,10 +38,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Does the \"add/subtract\" tool handle month-end overflow correctly?",
+      "name": "Does the add/subtract tool handle month ends correctly?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — adding, say, 1 month to Jan 31 lands on the correct date even when the target month is shorter, following standard calendar rollover rules."
+        "text": "Yes. Adding one month to January 31 gives the last day of February, because the day is kept inside the target month. Years and months are added first, then weeks and days."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "Can I subtract time instead of adding it?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — switch the operation to \"Subtract\" in the second tool to count backward from the start date."
+        "text": "Yes. Switch the operation to Subtract in the second tool to count backward from the start date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the include end day option there?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some counts include both the first and the last day, for example a rental from the 1st through the 10th. The option adds one day to the total for that case."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator skip weekends or holidays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It counts calendar days. For working days, remove weekends and holidays yourself or use the Day Counter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I get months and days as well as total days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The breakdown shows whole months and the leftover days from your start date, which is easier to read for long spans. The total days figure is an exact count that does not depend on month lengths."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are leap years handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator uses the standard calendar, so February 29 exists in leap years and the day count is exact across years."
       }
     }
   ]
@@ -160,37 +192,58 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How the difference is counted</h2>
-      <p>The "Days Between Two Dates" tool breaks the gap into whole years, months, and days the same way our <a href="age-calculator.html">Age Calculator</a> does &mdash; anchored to the day-of-month of the start date, so a month is only "complete" once that anchor day is reached again. The calendar-day total is a straight count of days between the two dates, unaffected by that breakdown.</p>
-
-      <h2>Why "include end day" matters</h2>
-      <p>By default, the gap between Jan 1 and Jan 2 is counted as 1 day &mdash; the number of nights, essentially. Checking "include end day" instead counts both endpoints, which is useful for things like "how many days does this rental cover" where both the check-in and check-out day count.</p>
-      <div class="callout">This calculator doesn't factor in holidays or business days &mdash; it always returns the plain calendar-day difference.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understand the result</h2>
-      <p>From January 1 to January 11 of the same year is 10 elapsed days; including both calendar dates counts 11 days. Check whether you need elapsed time or an inclusive day count.</p>
-      <h2>Related calculators</h2>
-      <p>To calculate a person's age as of a particular date, use the <a href="age-calculator.html">Age Calculator</a>. For clock-time differences, see the <a href="time-duration-calculator.html">Time Duration Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>From January 1, 2026 to December 25, 2026 is 11 months and 24 days, which is 51 weeks and 1 day, or 358 calendar days. To add time to a date, start on January 15, 2026, add 1 year, 2 months and 10 days, and the result is March 25, 2027, a Thursday. The calculator also shows the day of the week for the answer.</p>
-
-      <h2>Tips for date maths</h2>
-      <p>Decide whether the end day counts. The page has an option to include the end day: without it, Monday to Tuesday is 1 day, and with it the same span is 2 days. Months have different lengths, so adding a month to January 31 lands on the last day of February. For deadlines in business days, use the Day Counter instead.</p>
-
-      <p><strong>You might also need:</strong> <a href="age-calculator.html">Age Calculator</a>, <a href="time-calculator.html">Time Calculator</a>, <a href="sleep-calculator.html">Sleep Calculator</a>, <a href="hours-calculator.html">Hours Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> To find the time between two dates, count the days from the earlier to the later one. From January 1 to December 25, 2026 is 358 calendar days, or 11 months and 24 days. To add time, start from a date and add years, months, weeks and days: January 15, 2026 plus 1 year, 2 months and 10 days is March 25, 2027.</div>
+      <h2>What this date calculator does</h2>
+      <p>The page has two tools. <strong>Days Between Two Dates</strong> tells you how long it is from one date to another, in years, months and days, in total weeks and days, and as a plain number of calendar days. <strong>Add or Subtract Time</strong> starts from a date, adds or subtracts years, months, weeks and days, and gives the resulting date with its day of the week.</p>
+      <h2>Worked example: days between two dates</h2>
+      <p>From January 1, 2026 to December 25, 2026:</p>
+      <div class="calc-table"><table><thead><tr><th>Result</th><th>Value</th></tr></thead><tbody><tr><td>Years, months and days</td><td>11 months 24 days</td></tr><tr><td>Weeks and days</td><td>51 weeks, 1 day</td></tr><tr><td>Calendar days (end day not counted)</td><td><strong>358</strong></td></tr><tr><td>Calendar days (include end day)</td><td>359</td></tr></tbody></table></div>
+      <p>The year/month/day breakdown counts whole months from the start date: eleven months after January 1 is December 1, and December 25 is 24 days later. The total in days is a straight count of days and does not depend on that breakdown.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Four ways to count Jan 1 to Dec 25, 2026</title><desc id="cf1-d">The same two dates give 358 elapsed days, 359 if the end day counts, about 256 weekdays, or 51 full weeks.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Four ways to count Jan 1 to Dec 25, 2026</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">Calendar days</text><rect class="bar" x="130" y="44" width="297.2" height="22" rx="4" fill="#2563eb"/><text x="435.2" y="60" font-size="13" font-weight="700" fill="#111827">358</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">Including end day</text><rect class="bar" x="130" y="78" width="298.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">359</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">Approx. weekdays</text><rect class="bar" x="130" y="112" width="212.5" height="22" rx="4" fill="#f59e0b"/><text x="350.5" y="128" font-size="13" font-weight="700" fill="#111827">256</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">Full weeks</text><rect class="bar" x="130" y="146" width="42.3" height="22" rx="4" fill="#6b7280"/><text x="180.3" y="162" font-size="13" font-weight="700" fill="#111827">51</text></svg><figcaption>The right number depends on what you are counting. A hotel stay counts nights, a ticket valid &ldquo;through&rdquo; a date counts both ends, and a work deadline counts weekdays.</figcaption></figure>
+      <h2>Should the end day be included?</h2>
+      <p>By default the gap between January 1 and January 2 is <strong>1 day</strong>: the time that has elapsed. Tick &ldquo;Include end day&rdquo; and the same span counts as 2 days, because both calendar dates are counted. Use the default for ages, countdowns and notice periods. Use the inclusive count for something that covers both dates, such as a rental from the 1st through the 10th, which is 10 days inclusive but 9 days elapsed.</p>
+      <h2>Worked example: adding time to a date</h2>
+      <p>Starting on January 15, 2026, add 1 year, 2 months and 10 days. The calculator adds the years and months first (March 15, 2027), then the 10 days, giving <strong>March 25, 2027, a Thursday</strong>.</p>
+      <p>Subtracting works the same way in reverse. For example, a 90-day notice period that ends on December 25, 2026 started on <strong>September 26, 2026</strong>. And 100 days after January 1, 2026 is <strong>April 11, 2026</strong>.</p>
+      <h2>What happens at the end of a month</h2>
+      <p>Months have different lengths, so adding months to a date near the end of a month needs a rule. The calculator keeps the day inside the target month. Adding one month to January 31, 2026 gives <strong>February 28, 2026</strong>, the last day of February, and adding a year to February 29, 2028 gives February 28, 2029. Weeks and days are added after the months, so they always move the date by exactly that many days.</p>
+      <h2>Calendar facts that affect date maths</h2>
+      <ul><li>A common year has 365 days and a leap year has 366. A year is a leap year if it is divisible by 4, except century years that are not divisible by 400, so 2028 is a leap year and 2100 is not.</li><li>Months have 28 to 31 days, so &ldquo;one month&rdquo; is not a fixed number of days.</li><li>A week is always 7 days, so adding weeks is exact.</li><li>The calculator counts calendar days only. It does not remove weekends or holidays. As a rough guide, about 5 of every 7 days are weekdays, so 358 days is roughly 256 weekdays before holidays.</li></ul>
+      <h2>Common uses</h2>
+      <ul><li>Counting down to a wedding, trip or exam.</li><li>Finding the date a deadline, warranty or notice period ends.</li><li>Working out how long ago something happened.</li><li>Checking how many nights a booking covers (elapsed days) or how many calendar days (inclusive).</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Forgetting whether the end day counts. It changes the answer by exactly one.</li><li>Assuming all months are 30 days when planning &ldquo;three months from now&rdquo;.</li><li>Expecting business days. For working days, subtract weekends and holidays yourself or use the Day Counter.</li><li>Entering the start date after the end date. The first tool needs the earlier date first.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Look at the unit you need. For a deadline, the resulting date and weekday matter most. For a duration, the total days or weeks are easier to compare than a breakdown into months. If the answer will be used for a contract or a legal deadline, check how that document counts days, because some count both ends and some skip weekends.</p>
+      <div class="callout">This calculator counts calendar days and does not account for time zones, public holidays or the rules of any specific contract or law.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="age-calculator.html">Age Calculator</a> &ndash; exact age as of any date</li><li><a href="time-calculator.html">Time Calculator</a> &ndash; add and subtract hours, minutes and seconds</li><li><a href="time-duration-calculator.html">Time Duration Calculator</a> &ndash; the time between two clock times</li><li><a href="day-counter.html">Day Counter</a> &ndash; count days, including business days</li><li><a href="day-of-the-week-calculator.html">Day of the Week Calculator</a> &ndash; find the weekday of any date</li><li><a href="time-zone-calculator.html">Time Zone Calculator</a> &ndash; convert times between places</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Does the "add/subtract" tool handle month-end overflow correctly?</h3>
-        <p>Yes &mdash; adding, say, 1 month to Jan 31 lands on the correct date even when the target month is shorter, following standard calendar rollover rules.</p>
+        <h3>Does the add/subtract tool handle month ends correctly?</h3>
+        <p>Yes. Adding one month to January 31 gives the last day of February, because the day is kept inside the target month. Years and months are added first, then weeks and days.</p>
       </div>
       <div class="faq-item">
         <h3>Can I subtract time instead of adding it?</h3>
-        <p>Yes &mdash; switch the operation to "Subtract" in the second tool to count backward from the start date.</p>
+        <p>Yes. Switch the operation to Subtract in the second tool to count backward from the start date.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is the include end day option there?</h3>
+        <p>Some counts include both the first and the last day, for example a rental from the 1st through the 10th. The option adds one day to the total for that case.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the calculator skip weekends or holidays?</h3>
+        <p>No. It counts calendar days. For working days, remove weekends and holidays yourself or use the Day Counter.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do I get months and days as well as total days?</h3>
+        <p>The breakdown shows whole months and the leftover days from your start date, which is easier to read for long spans. The total days figure is an exact count that does not depend on month lengths.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How are leap years handled?</h3>
+        <p>The calculator uses the standard calendar, so February 29 exists in leap years and the day count is exact across years.</p>
       </div>
     </div>
 
