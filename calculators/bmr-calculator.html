@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BMR Calculator: Resting Calories & Activity Estimates | CalcBundle</title>
-<meta name="description" content="Estimate basal metabolic rate using your profile and explore how activity changes energy needs.">
+<title>BMR Calculator: Resting Calories &amp; Activity Levels</title>
+<meta name="description" content="Estimate your basal metabolic rate with Mifflin-St Jeor, Harris-Benedict or Katch-McArdle, then see daily calorie needs at six activity levels.">
 <link rel="canonical" href="https://calcbundle.net/calculators/bmr-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="BMR Calculator: Resting Calories & Activity Estimates | CalcBundle">
-<meta property="og:description" content="Estimate basal metabolic rate using your profile and explore how activity changes energy needs.">
+<meta property="og:title" content="BMR Calculator: Resting Calories &amp; Activity Levels">
+<meta property="og:description" content="Estimate your basal metabolic rate with Mifflin-St Jeor, Harris-Benedict or Katch-McArdle, then see daily calorie needs at six activity levels.">
 <meta property="og:url" content="https://calcbundle.net/calculators/bmr-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-fitness.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BMR Calculator: Resting Calories & Activity Estimates | CalcBundle">
-<meta name="twitter:description" content="Estimate basal metabolic rate using your profile and explore how activity changes energy needs.">
+<meta name="twitter:title" content="BMR Calculator: Resting Calories &amp; Activity Levels">
+<meta name="twitter:description" content="Estimate your basal metabolic rate with Mifflin-St Jeor, Harris-Benedict or Katch-McArdle, then see daily calorie needs at six activity levels.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-fitness.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "How is this different from the Calorie Calculator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "They share the same underlying formulas. This page focuses on BMR itself and shows the full range of activity-level outcomes; the Calorie Calculator frames the same numbers around weight maintenance, loss, and gain targets."
+        "text": "They use the same underlying formulas. This page focuses on BMR itself and shows the full range of activity levels. The Calorie Calculator frames the same numbers around maintaining, losing or gaining weight."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "Which formula should I choose?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mifflin-St Jeor is the most broadly accurate and is used by default. Katch-McArdle can be more accurate if you know your body fat percentage, since it accounts for lean body mass directly rather than total weight."
+        "text": "Mifflin-St Jeor is the default and is a good general choice. Katch-McArdle can be more accurate if you know your body fat percentage, because it works from lean body mass instead of total weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is BMR the same as calories I should eat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. BMR is only the energy used at rest. Your daily needs are BMR multiplied by an activity factor, which is why the activity table is included."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I eat less than my BMR to lose weight faster?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is not recommended for long periods without medical advice. Very low intakes make it hard to get enough nutrients and are hard to keep up. A moderate deficit of about 500 calories a day is a common starting point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my result differ from other calculators?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Different websites use different formulas and different activity factors. Differences of a few percent are normal. Pick one tool and use real changes in your weight to fine-tune it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does BMR change with age?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it tends to decrease gradually as muscle mass falls. Recalculate when your age, weight or body composition changes noticeably."
       }
     }
   ]
@@ -157,36 +189,60 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What BMR actually measures</h2>
-      <p>Basal Metabolic Rate is the energy your body needs just to keep vital organs running — heart, brain, lungs, and the rest — while completely at rest and not digesting food. For most people it accounts for roughly 70% of total daily energy expenditure, with physical activity and digestion making up the rest.</p>
-
-      <h2>BMR vs. daily calorie needs</h2>
-      <p>BMR alone isn't how many calories you should eat — it's the baseline your body burns doing nothing. Multiplying it by an activity factor (from 1.2 for sedentary up to 1.9 for extremely active) estimates total daily calories burned, which is what the activity-level table above shows.</p>
-      <div class="callout">BMR varies with muscle mass, age, genetics, and even ambient temperature — no formula captures all of it. Treat this as a starting estimate, not a precise measurement; a calorimetry device is the only way to measure BMR directly.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: how to interpret an estimate</h2><p>If a formula estimates resting needs of 1,600 calories per day, multiplying by an illustrative activity factor of 1.5 gives 2,400 calories daily. Actual energy expenditure can differ.</p><h2>Related calculators</h2><p>To choose an intake goal, use the <a href="calorie-calculator.html">Calorie Calculator</a>. For a separate expenditure estimate, see the <a href="tdee-calculator.html">TDEE Calculator</a>.</p>
-      <h2>A worked example</h2>
-      <p>For a 25-year-old man who is 5 feet 10 inches tall and weighs 160 pounds, the Mifflin-St Jeor equation gives a basal metabolic rate of 1,717 calories a day. Multiply by an activity factor to get daily needs: about 2,060 calories if he is sedentary, 2,361 with light exercise one to three times a week, and 2,515 with exercise four to five times a week. Eating at the right level for your activity keeps your weight steady.</p>
-
-      <h2>Tips for using BMR</h2>
-      <p>BMR is the energy your body uses at complete rest, so you should not eat below it for long without medical advice. If you know your body fat percentage, the Katch-McArdle formula can be more accurate than the default, especially for very lean or very muscular people. Recalculate when your weight changes by more than a few pounds, because your needs shift as you gain or lose.</p>
-
-      <p><strong>You might also need:</strong> <a href="tdee-calculator.html">TDEE Calculator</a>, <a href="calorie-calculator.html">Calorie Calculator</a>, <a href="calories-burned-calculator.html">Calories Burned Calculator</a>, <a href="macro-calculator.html">Macro Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-many-calories-do-you-need.html">How Many Calories Do You Need?</a>.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> BMR is the number of calories your body burns at rest. A 25-year-old man who is 5 ft 10 in and weighs 160 lb has a BMR of about 1,717 calories a day (Mifflin-St Jeor). Multiply it by an activity factor, from 1.2 to 1.9, to estimate total daily needs, from about 2,060 to 3,262 calories.</div>
+      <h2>What BMR means</h2>
+      <p>Basal metabolic rate is the energy your body uses just to stay alive at rest: keeping the heart beating, the lungs working and body temperature steady. For most people it is the largest part of daily energy use, often around 60% to 70%. The rest comes from moving around, exercise and digesting food. BMR is not the amount you should eat. It is the baseline your body burns doing nothing, which you then scale up for your activity.</p>
+      <h2>The three formulas in this calculator</h2>
+      <ul><li><strong>Mifflin-St Jeor</strong> (the default): men = 10 &times; kg + 6.25 &times; cm &minus; 5 &times; age + 5; women = same but &minus; 161. It was built from measurements on 498 adults and is widely used because it tends to be more accurate than the older equation.</li><li><strong>Revised Harris-Benedict</strong>: men = 13.397 &times; kg + 4.799 &times; cm &minus; 5.677 &times; age + 88.362; women = 9.247 &times; kg + 3.098 &times; cm &minus; 4.330 &times; age + 447.593. The original 1919 version was found to over-estimate by about 5% in the Mifflin study.</li><li><strong>Katch-McArdle</strong>: 370 + 21.6 &times; lean body mass (kg). It needs your body fat percentage, which is why it can be better for very lean or very muscular people.</li></ul>
+      <h2>Worked example</h2>
+      <p>A 25-year-old man who is 5 ft 10 in (177.8 cm) and weighs 160 lb (72.6 kg). Mifflin-St Jeor: 10 &times; 72.6 + 6.25 &times; 177.8 &minus; 5 &times; 25 + 5 = <strong>1,717 calories a day</strong>.</p>
+      <p>Multiplying by an activity factor gives total daily needs. The calculator shows all six levels:</p>
+      <div class="calc-table"><table><thead><tr><th>Activity level</th><th>Factor</th><th>Daily calories</th></tr></thead><tbody><tr><td>Sedentary</td><td>1.2</td><td>2,060</td></tr><tr><td>Exercise 1-3 times/week</td><td>1.375</td><td>2,361</td></tr><tr><td>Exercise 4-5 times/week</td><td>1.465</td><td>2,515</td></tr><tr><td>Daily or intense 3-4 times/week</td><td>1.55</td><td>2,661</td></tr><tr><td>Intense exercise 6-7 times/week</td><td>1.725</td><td>2,962</td></tr><tr><td>Very intense or physical job</td><td>1.9</td><td>3,262</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Daily calories at each activity level (default example)</title><desc id="cf1-d">Using a BMR of 1,717 calories: sedentary 2,060, up to 3,262 for a very active person.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Daily calories at each activity level (default example)</text><text x="112" y="60" text-anchor="end" font-size="13" fill="#6b7280">Sedentary</text><rect class="bar" x="120" y="44" width="194.5" height="22" rx="4" fill="#f34469"/><text x="322.5" y="60" font-size="13" font-weight="700" fill="#111827">2,060</text><text x="112" y="94" text-anchor="end" font-size="13" fill="#6b7280">Light (1-3/wk)</text><rect class="bar" x="120" y="78" width="222.9" height="22" rx="4" fill="#f34469"/><text x="350.9" y="94" font-size="13" font-weight="700" fill="#111827">2,361</text><text x="112" y="128" text-anchor="end" font-size="13" fill="#6b7280">Moderate (4-5/wk)</text><rect class="bar" x="120" y="112" width="237.5" height="22" rx="4" fill="#f34469"/><text x="365.5" y="128" font-size="13" font-weight="700" fill="#111827">2,515</text><text x="112" y="162" text-anchor="end" font-size="13" fill="#6b7280">Active (3-4 hard)</text><rect class="bar" x="120" y="146" width="251.3" height="22" rx="4" fill="#f34469"/><text x="379.3" y="162" font-size="13" font-weight="700" fill="#111827">2,661</text><text x="112" y="196" text-anchor="end" font-size="13" fill="#6b7280">Intense (6-7/wk)</text><rect class="bar" x="120" y="180" width="279.6" height="22" rx="4" fill="#f34469"/><text x="407.6" y="196" font-size="13" font-weight="700" fill="#111827">2,962</text><text x="112" y="230" text-anchor="end" font-size="13" fill="#6b7280">Very intense</text><rect class="bar" x="120" y="214" width="308.0" height="22" rx="4" fill="#f34469"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">3,262</text></svg><figcaption>The same body can need roughly 1,202 more calories a day when very active compared with sedentary.</figcaption></figure>
+      <h2>How much the formula choice matters</h2>
+      <p>Different equations give different answers for the same person. With a body fat of 20%, the example gives 1,717 (Mifflin-St Jeor), 1,772 (Harris-Benedict) and 1,624 (Katch-McArdle). The gap is under 10%, which is normal; no formula captures every person.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Three formulas, same person</title><desc id="cf2-d">The same 25-year-old man gets 1,717, 1,772 or 1,624 calories depending on the formula.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Three formulas, same person</text><text x="142" y="60" text-anchor="end" font-size="13" fill="#6b7280">Mifflin-St Jeor</text><rect class="bar" x="150" y="44" width="269.4" height="22" rx="4" fill="#2563eb"/><text x="427.4" y="60" font-size="13" font-weight="700" fill="#111827">1,717</text><text x="142" y="94" text-anchor="end" font-size="13" fill="#6b7280">Harris-Benedict</text><rect class="bar" x="150" y="78" width="278.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">1,772</text><text x="142" y="128" text-anchor="end" font-size="13" fill="#6b7280">Katch-McArdle (20% fat)</text><rect class="bar" x="150" y="112" width="254.8" height="22" rx="4" fill="#f59e0b"/><text x="412.8" y="128" font-size="13" font-weight="700" fill="#111827">1,624</text></svg><figcaption>Treat the result as a range, then adjust using real-world changes in your weight over two or three weeks.</figcaption></figure>
+      <p>A second example: a 30-year-old woman who is 5 ft 5 in and weighs 140 lb gets 1,356 calories from Mifflin-St Jeor (10 &times; 63.5 + 6.25 &times; 165.1 &minus; 5 &times; 30 &minus; 161).</p>
+      <h2>What raises or lowers BMR</h2>
+      <ul><li><strong>Body size and muscle:</strong> bigger bodies and more lean mass burn more at rest.</li><li><strong>Age:</strong> BMR tends to fall gradually with age, partly because muscle declines.</li><li><strong>Sex:</strong> men on average have more lean mass, which is why the formulas differ.</li><li><strong>Other factors:</strong> genetics, thyroid function, pregnancy, illness and extreme temperatures. None of these is captured by a formula.</li></ul>
+      <h2>Using BMR to plan food intake</h2>
+      <p>To keep your weight, eat about your total daily needs (BMR &times; activity factor). A common rule of thumb is that a daily deficit of about 500 calories leads to roughly one pound of loss a week. Going below your BMR for long is not recommended without medical supervision, because it makes it hard to get enough nutrients. Recalculate whenever your weight changes by more than a few pounds.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Eating your BMR and ignoring activity. BMR excludes everything you do all day.</li><li>Overestimating the activity level. Most people who sit for work and exercise a few times a week fit the 1.375 or 1.465 rows.</li><li>Entering weight in pounds with the metric tab selected (or the reverse).</li><li>Treating the number as exact. It is an estimate with an error of roughly 10%.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Read your BMR as a floor and the activity table as your range of daily needs. Pick the row that matches your real week, then watch your weight for two to three weeks. If it is stable, you have found your maintenance level. If it rises or falls, adjust by about 100 to 200 calories and check again.</p>
+      <div class="callout">This calculator gives estimates for healthy adults and is not medical advice. Ask a doctor or dietitian before large changes to your eating.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="calorie-calculator.html">Calorie Calculator</a> &ndash; turn BMR into a daily calorie goal</li><li><a href="tdee-calculator.html">TDEE Calculator</a> &ndash; total daily energy expenditure</li><li><a href="calories-burned-calculator.html">Calories Burned Calculator</a> &ndash; energy used by different activities</li><li><a href="macro-calculator.html">Macro Calculator</a> &ndash; split calories into protein, carbs and fat</li><li><a href="body-fat-calculator.html">Body Fat Calculator</a> &ndash; get the body fat value for Katch-McArdle</li><li><a href="bmi-calculator.html">BMI Calculator</a> &ndash; check your body mass index</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-many-calories-do-you-need.html">How Many Calories Do You Need?</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How is this different from the Calorie Calculator?</h3>
-        <p>They share the same underlying formulas. This page focuses on BMR itself and shows the full range of activity-level outcomes; the Calorie Calculator frames the same numbers around weight maintenance, loss, and gain targets.</p>
+        <p>They use the same underlying formulas. This page focuses on BMR itself and shows the full range of activity levels. The Calorie Calculator frames the same numbers around maintaining, losing or gaining weight.</p>
       </div>
       <div class="faq-item">
         <h3>Which formula should I choose?</h3>
-        <p>Mifflin-St Jeor is the most broadly accurate and is used by default. Katch-McArdle can be more accurate if you know your body fat percentage, since it accounts for lean body mass directly rather than total weight.</p>
+        <p>Mifflin-St Jeor is the default and is a good general choice. Katch-McArdle can be more accurate if you know your body fat percentage, because it works from lean body mass instead of total weight.</p>
       </div>
+      <div class="faq-item">
+        <h3>Is BMR the same as calories I should eat?</h3>
+        <p>No. BMR is only the energy used at rest. Your daily needs are BMR multiplied by an activity factor, which is why the activity table is included.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I eat less than my BMR to lose weight faster?</h3>
+        <p>It is not recommended for long periods without medical advice. Very low intakes make it hard to get enough nutrients and are hard to keep up. A moderate deficit of about 500 calories a day is a common starting point.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does my result differ from other calculators?</h3>
+        <p>Different websites use different formulas and different activity factors. Differences of a few percent are normal. Pick one tool and use real changes in your weight to fine-tune it.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does BMR change with age?</h3>
+        <p>Yes, it tends to decrease gradually as muscle mass falls. Recalculate when your age, weight or body composition changes noticeably.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" rel="noopener" target="_blank">Mifflin et al., Am J Clin Nutr 1990 (PubMed)</a>; <a href="https://www.dietaryguidelines.gov/" rel="noopener" target="_blank">Dietary Guidelines for Americans</a></p>
     </div>
 
   </div>
