@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calories Burned Calculator: Exercise & Duration | CalcBundle</title>
-<meta name="description" content="Estimate exercise energy expenditure from activity type, duration and body weight.">
+<title>Calories Burned Calculator: Exercise &amp; Duration</title>
+<meta name="description" content="Estimate calories burned from your activity, duration and body weight, or work out the calories for a walk, run or ride of a set distance.">
 <link rel="canonical" href="https://calcbundle.net/calculators/calories-burned-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Calories Burned Calculator: Exercise & Duration | CalcBundle">
-<meta property="og:description" content="Estimate exercise energy expenditure from activity type, duration and body weight.">
+<meta property="og:title" content="Calories Burned Calculator: Exercise &amp; Duration">
+<meta property="og:description" content="Estimate calories burned from your activity, duration and body weight, or work out the calories for a walk, run or ride of a set distance.">
 <meta property="og:url" content="https://calcbundle.net/calculators/calories-burned-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-fitness.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Calories Burned Calculator: Exercise & Duration | CalcBundle">
-<meta name="twitter:description" content="Estimate exercise energy expenditure from activity type, duration and body weight.">
+<meta name="twitter:title" content="Calories Burned Calculator: Exercise &amp; Duration">
+<meta name="twitter:description" content="Estimate calories burned from your activity, duration and body weight, or work out the calories for a walk, run or ride of a set distance.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-fitness.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,7 +42,7 @@
       "name": "How many calories do I burn walking 5 kilometers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends on your weight and speed. A 70 kilogram person walking at 4 kilometers per hour burns roughly 220 calories over 5 kilometers. Use the distance calculator to try your own numbers."
+        "text": "It depends on your weight and speed. A 70 kilogram person walking 5 km at 4 km/h burns roughly 218 calories over about 75 minutes. Use the distance tool to try your own numbers."
       }
     },
     {
@@ -58,23 +58,31 @@
       "name": "Why do heavier people burn more calories?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Moving a larger body takes more energy. For the same activity and time, the calories burned rise with body weight."
+        "text": "Moving a larger body takes more energy. For the same activity and time, a heavier person burns more, which is why the result changes with body weight."
       }
     },
     {
       "@type": "Question",
-      "name": "Does this include the calories I burn at rest?",
+      "name": "Does a faster pace burn more calories for the same distance?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, the values count all energy used during the activity, including what the body would use at rest in that time."
+        "text": "Only a little. A faster pace burns more per hour but you finish sooner, so the total for a fixed distance rises much more slowly than the hourly rate."
       }
     },
     {
       "@type": "Question",
-      "name": "How are the weights between the listed values handled?",
+      "name": "How accurate is this calculator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The calculator uses values for 125, 155 and 185 pounds. Between them it moves along a straight line in calories per kilogram, and outside them it keeps the nearest rate per kilogram."
+        "text": "The numbers are averages for a typical person. Fitness, age, body composition, terrain and temperature all change the real value, so use the result as a planning guide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I eat back the calories I burn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not automatically. The estimate is rough and it is easy to overestimate it. If you are trying to lose weight, adjust your intake by watching your weight trend over a few weeks instead of matching each workout."
       }
     }
   ]
@@ -216,28 +224,39 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How calories burned are estimated</h2>
-      <p>Every activity has a metabolic equivalent, or MET, which shows how hard it works your body compared with sitting quietly. A higher MET burns more energy for each kilogram of body weight each minute. This calculator uses published energy-use values for each activity at body weights of 125, 155 and 185 pounds, and fills in the weights in between. Heavier people burn more for the same activity, because moving a larger body takes more energy.</p>
-
-      <h2>Duration and distance</h2>
-      <p>The first calculator multiplies the hourly rate for your activity and weight by the time you spend on it. The second one is for walking, running and cycling. It takes your speed, finds the hourly rate at that speed by working between the slow, moderate, fast and very fast values, and multiplies it by the time the distance takes. A faster speed burns more per hour, but you also finish sooner, so the calories for a set distance rise more slowly than the hourly figure.</p>
-
-      <h2>How accurate is the result?</h2>
-      <p>The figures are averages for a typical person. Age, body composition, fitness, temperature and how steadily you work all change the real number. People who are fitter usually burn a little less for the same effort, and breaks during a sport or game mean the activity was not done for the whole time. Use the result as a rough guide for planning, not as an exact measurement.</p>
-      <div class="callout">Calorie estimates are rough. They are not medical advice, so speak to a doctor or dietitian before changing your diet or exercise plan in a big way.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: how to interpret an estimate</h2><p>Using the approximate MET method, a 70 kg person doing a 4-MET activity for half an hour uses about 140 kcal: 4 × 70 × 0.5. MET estimates vary with activity intensity and fitness.</p><h2>Related calculators</h2><p>For total daily expenditure, use the <a href="tdee-calculator.html">TDEE Calculator</a>. For food energy targets, see the <a href="calorie-calculator.html">Calorie Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="bmr-calculator.html">BMR Calculator</a>, <a href="tdee-calculator.html">TDEE Calculator</a>, <a href="fat-intake-calculator.html">Fat Intake Calculator</a>, <a href="calorie-calculator.html">Calorie Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-many-calories-do-you-need.html">How Many Calories Do You Need?</a>.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Calories burned equals the hourly rate for your activity at your body weight times the hours you do it. A 70 kg (154 lb) person walking slowly for 45 minutes burns about 110 calories, and 30 minutes of moderate running burns about 369 at 155 lb.</div>
+      <h2>How the calculator estimates calories burned</h2>
+      <p>Every activity has an energy cost that depends on how hard it is and how heavy you are. The calculator stores published hourly energy-use values for each activity at body weights of 125, 155 and 185 pounds and works out the values in between. Below 125 lb and above 185 lb it keeps the per-kilogram rate fixed. The core formula is simple: <strong>calories = calories per hour at your weight &times; hours</strong>.</p>
+      <p>Scientists describe effort in <strong>METs</strong> (metabolic equivalents). One MET is the energy used sitting quietly, so a 4-MET activity uses four times as much. The rough rule behind the tables is calories per hour &asymp; MET &times; body weight in kg, which is why heavier people burn more for the same effort.</p>
+      <p>The page has two tools: <em>by duration</em> (pick an activity and how long you did it) and <em>by distance</em> (walking, running or cycling a set distance at a given speed).</p>
+      <h2>Worked example: the default settings</h2>
+      <p>The calculator starts with a 45-minute slow walk for a 70 kg (154 lb) person. A slow walk is about 147 calories an hour at that weight, so 45 minutes (0.75 hours) burns about <strong>110 calories</strong>.</p>
+      <h2>How activities compare</h2>
+      <p>For a 155 lb person, here is what 30 minutes of different activities burns, from the same tables:</p>
+      <div class="calc-table"><table><thead><tr><th>Activity</th><th>Per hour</th><th>30 minutes</th></tr></thead><tbody><tr><td>TV</td><td>74</td><td>37</td></tr><tr><td>Walking, moderate</td><td>192</td><td>96</td></tr><tr><td>Weight lifting</td><td>216</td><td>108</td></tr><tr><td>Yoga</td><td>288</td><td>144</td></tr><tr><td>Swimming, moderate</td><td>432</td><td>216</td></tr><tr><td>Tennis</td><td>504</td><td>252</td></tr><tr><td>Cycling, moderate</td><td>720</td><td>360</td></tr><tr><td>Running, moderate</td><td>738</td><td>369</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 318" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Calories burned in 30 minutes at 155 lb (70 kg)</title><desc id="cf1-d">Thirty minutes of moderate running burns about 369 calories, compared with about 96 for walking at a moderate pace.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Calories burned in 30 minutes at 155 lb (70 kg)</text><text x="132" y="60" text-anchor="end" font-size="13" fill="#6b7280">TV</text><rect class="bar" x="140" y="44" width="28.8" height="22" rx="4" fill="#9ca3af"/><text x="176.8" y="60" font-size="13" font-weight="700" fill="#111827">37</text><text x="132" y="94" text-anchor="end" font-size="13" fill="#6b7280">Walking, moderate</text><rect class="bar" x="140" y="78" width="74.9" height="22" rx="4" fill="#9ca3af"/><text x="222.9" y="94" font-size="13" font-weight="700" fill="#111827">96</text><text x="132" y="128" text-anchor="end" font-size="13" fill="#6b7280">Weight lifting</text><rect class="bar" x="140" y="112" width="84.3" height="22" rx="4" fill="#9ca3af"/><text x="232.3" y="128" font-size="13" font-weight="700" fill="#111827">108</text><text x="132" y="162" text-anchor="end" font-size="13" fill="#6b7280">Yoga</text><rect class="bar" x="140" y="146" width="112.4" height="22" rx="4" fill="#9ca3af"/><text x="260.4" y="162" font-size="13" font-weight="700" fill="#111827">144</text><text x="132" y="196" text-anchor="end" font-size="13" fill="#6b7280">Swimming, moderate</text><rect class="bar" x="140" y="180" width="168.6" height="22" rx="4" fill="#9ca3af"/><text x="316.6" y="196" font-size="13" font-weight="700" fill="#111827">216</text><text x="132" y="230" text-anchor="end" font-size="13" fill="#6b7280">Tennis</text><rect class="bar" x="140" y="214" width="196.7" height="22" rx="4" fill="#9ca3af"/><text x="344.7" y="230" font-size="13" font-weight="700" fill="#111827">252</text><text x="132" y="264" text-anchor="end" font-size="13" fill="#6b7280">Cycling, moderate</text><rect class="bar" x="140" y="248" width="281.0" height="22" rx="4" fill="#f34469"/><text x="429.0" y="264" font-size="13" font-weight="700" fill="#111827">360</text><text x="132" y="298" text-anchor="end" font-size="13" fill="#6b7280">Running, moderate</text><rect class="bar" x="140" y="282" width="288.0" height="22" rx="4" fill="#f34469"/><text x="436.0" y="298" font-size="13" font-weight="700" fill="#111827">369</text></svg><figcaption>Intensity matters more than the label. Vigorous activities burn about three times as much per minute as light ones.</figcaption></figure>
+      <h2>Body weight changes the result</h2>
+      <p>The same 30 minutes of moderate running burns about 308 calories at 125 lb, 369 at 155 lb and 430 at 185 lb. Weight is the reason two people doing the same workout see different numbers.</p>
+      <h2>By distance: walking, running and cycling</h2>
+      <p>For distance-based activities the calculator finds the hourly rate for your speed by working between the slow, moderate, fast and very fast values, then multiplies by the time the distance takes. A faster pace burns more per hour but finishes sooner, so calories for a fixed distance rise much more slowly than the hourly rate. For a 70 kg person:</p>
+      <div class="calc-table"><table><thead><tr><th>Activity</th><th>Time</th><th>Calories</th></tr></thead><tbody><tr><td>Walk 5 km at 4 km/h</td><td>75 min</td><td>218</td></tr><tr><td>Run 5 km at 6 mph</td><td>31 min</td><td>381</td></tr><tr><td>Cycle 20 km at 15 mph</td><td>50 min</td><td>594</td></tr></tbody></table></div>
+      <p>Distance is a better way to compare workouts than time, because it shows what the same trip costs at different speeds.</p>
+      <h2>What affects the real number</h2>
+      <ul><li><strong>Fitness:</strong> fitter people are more efficient and usually burn slightly less for the same effort.</li><li><strong>Body composition and age:</strong> muscle burns more than fat, and metabolism changes with age.</li><li><strong>Conditions:</strong> hills, wind, heat and cold change the effort.</li><li><strong>Breaks:</strong> in games and sports, rests mean you were not working the whole time. Enter only the active minutes.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Entering the whole session length for a sport that includes long rests.</li><li>Adding the "calories burned" back as extra food. Exercise numbers are rough, and over-eating after training is easy.</li><li>Ignoring the unit selector (pounds or kilograms).</li><li>Counting calories from activities of daily life twice if you also use a total-daily-energy figure such as TDEE.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Treat the figure as a good estimate, not a measurement. For weight management, a pound of body fat holds roughly 3,500 calories, so one hard workout does not change much on its own. What matters is the weekly total. The Physical Activity Guidelines for Americans recommend that adults get at least 150 minutes of moderate aerobic activity a week, which for a 155 lb person walking at a moderate pace is about 480 calories a week.</p>
+      <div class="callout">Calorie estimates are rough and are not medical advice. Check with a doctor or dietitian before making big changes to your diet or exercise.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="calorie-calculator.html">Calorie Calculator</a> &ndash; daily calories to maintain, lose or gain weight</li><li><a href="bmr-calculator.html">BMR Calculator</a> &ndash; calories your body burns at rest</li><li><a href="tdee-calculator.html">TDEE Calculator</a> &ndash; total daily energy expenditure</li><li><a href="pace-calculator.html">Pace Calculator</a> &ndash; work out running speed and finish times</li><li><a href="target-heart-rate-calculator.html">Target Heart Rate Calculator</a> &ndash; find your training heart rate zones</li><li><a href="fat-intake-calculator.html">Fat Intake Calculator</a> &ndash; daily fat targets</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-many-calories-do-you-need.html">How Many Calories Do You Need?</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How many calories do I burn walking 5 kilometers?</h3>
-        <p>It depends on your weight and speed. A 70 kilogram person walking at 4 kilometers per hour burns roughly 220 calories over 5 kilometers. Use the distance calculator to try your own numbers.</p>
+        <p>It depends on your weight and speed. A 70 kilogram person walking 5 km at 4 km/h burns roughly 218 calories over about 75 minutes. Use the distance tool to try your own numbers.</p>
       </div>
       <div class="faq-item">
         <h3>What is a MET?</h3>
@@ -245,16 +264,21 @@
       </div>
       <div class="faq-item">
         <h3>Why do heavier people burn more calories?</h3>
-        <p>Moving a larger body takes more energy. For the same activity and time, the calories burned rise with body weight.</p>
+        <p>Moving a larger body takes more energy. For the same activity and time, a heavier person burns more, which is why the result changes with body weight.</p>
       </div>
       <div class="faq-item">
-        <h3>Does this include the calories I burn at rest?</h3>
-        <p>Yes, the values count all energy used during the activity, including what the body would use at rest in that time.</p>
+        <h3>Does a faster pace burn more calories for the same distance?</h3>
+        <p>Only a little. A faster pace burns more per hour but you finish sooner, so the total for a fixed distance rises much more slowly than the hourly rate.</p>
       </div>
       <div class="faq-item">
-        <h3>How are the weights between the listed values handled?</h3>
-        <p>The calculator uses values for 125, 155 and 185 pounds. Between them it moves along a straight line in calories per kilogram, and outside them it keeps the nearest rate per kilogram.</p>
+        <h3>How accurate is this calculator?</h3>
+        <p>The numbers are averages for a typical person. Fitness, age, body composition, terrain and temperature all change the real value, so use the result as a planning guide.</p>
       </div>
+      <div class="faq-item">
+        <h3>Should I eat back the calories I burn?</h3>
+        <p>Not automatically. The estimate is rough and it is easy to overestimate it. If you are trying to lose weight, adjust your intake by watching your weight trend over a few weeks instead of matching each workout.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://pacompendium.com/" rel="noopener" target="_blank">Compendium of Physical Activities</a>; <a href="https://odphp.health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines" rel="noopener" target="_blank">Physical Activity Guidelines for Americans</a></p>
     </div>
 
   </div>
