@@ -51,8 +51,8 @@
       el('ir-result').innerHTML = '<p class="tool-result is-error">Enter the loan amount, term, and monthly payment.</p>';
       return;
     }
-    if (payment * termMonths <= loanAmount) {
-      el('ir-result').innerHTML = '<p class="tool-result is-error">This monthly payment is too low to pay off the loan over this term at any positive interest rate.</p>';
+    if (payment * termMonths < loanAmount) {
+      el('ir-result').innerHTML = '<p class="tool-result is-error">This monthly payment is too low to pay off the loan over this term, even at a 0% interest rate.</p>';
       return;
     }
 
