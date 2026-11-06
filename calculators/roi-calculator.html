@@ -42,7 +42,7 @@
       "name": "Can ROI be negative?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — if the amount returned is less than what was invested, both ROI and annualized ROI will be negative, reflecting a net loss."
+        "text": "Yes. If the amount returned is less than what was invested, both ROI and annualized ROI are negative, showing a net loss."
       }
     },
     {
@@ -50,7 +50,39 @@
       "name": "Does ROI account for fees or taxes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not unless you build them into the \"amount invested\" or \"amount returned\" figures yourself — this calculator works purely from whatever two numbers you give it."
+        "text": "Not unless you build them into the amount invested or the amount returned. The calculator works only from the two numbers you give it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between ROI and annualized ROI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Total ROI is the overall gain as a percentage of the amount invested. Annualized ROI turns it into an equivalent yearly rate so investments held for different lengths of time can be compared."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the time calculated from dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The number of days between the two dates is divided by 365 to give years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use IRR instead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use IRR when money goes in or out at several different dates. ROI only handles a single starting amount and a single final amount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a higher ROI always better?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not always. A high ROI may come from a small investment, a short time or higher risk. Compare annualized returns and consider the size and risk of the investment."
       }
     }
   ]
@@ -138,28 +170,66 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Why ROI is popular despite being simple</h2>
-      <p>ROI strips an investment down to one question: for every dollar in, how many dollars came out? That simplicity is exactly why it's so widely used — it works for a stock portfolio, a rental property, a marketing campaign, or a sheep farm, without needing any special financial modeling. The tradeoff is that plain ROI says nothing about how long the money was tied up, which is where annualized ROI comes in.</p>
-
-      <h2>Why annualized ROI tells a different story</h2>
-      <p>A 100% ROI sounds identical whether it took six months or twenty years — but those are wildly different outcomes. Annualized ROI converts the total return into an equivalent constant yearly rate, the same way IRR does, making it possible to fairly compare investments held for different lengths of time.</p>
-      <div class="callout">Plain ROI ignores the time value of money entirely — it's a useful first-pass filter, but for investments with cash flows spread across multiple points in time (not just a single start and end), IRR is the more accurate tool.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: total ROI and time held</h2><p>Suppose you invest $1,000 and receive $1,200 after two years. Your profit is $200, so total ROI is ($1,200 − $1,000) ÷ $1,000 × 100 = <strong>20%</strong>. Annualized ROI is ($1,200 ÷ $1,000)<sup>1/2</sup> − 1, or about <strong>9.54% a year</strong>. Annualizing helps you compare different holding periods, but it does not account for ongoing contributions, fees or risk.</p><h2>How to interpret the result</h2><p>Include relevant costs in the investment amount before comparing returns. Total ROI shows overall gain or loss; annualized ROI spreads that gain over the holding period. For multiple cash flows at different times, use a cash-flow-based return measure instead.</p>
-      
-      <p>Comparing projects held for different lengths of time? Start here for total and annualized ROI, then use the <a href="average-return-calculator.html">Average Return Calculator</a> to examine returns across several periods. If contributions and withdrawals occurred on different dates, try the <a href="irr-calculator.html">IRR Calculator</a>. The <a href="payback-period-calculator.html">Payback Period Calculator</a> shows how long it takes to recover an investment.</p>
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> ROI is the gain divided by the amount invested. $1,000 that becomes $2,000 is a 100% total ROI; over the default 4.25 years that is 17.7% a year annualized.</div>
+      <h2>Why ROI is popular despite being simple</h2>
+      <p>Return on investment strips an investment down to one question: for every dollar in, how many dollars came out? It works for a stock portfolio, a rental property, a marketing campaign or a business project, with no special modelling. The trade-off is that plain ROI says nothing about how long the money was tied up. That is where annualized ROI comes in.</p>
+      <h2>The two formulas</h2>
+      <ul><li><strong>Total ROI</strong> = (amount returned &minus; amount invested) &divide; amount invested &times; 100.</li><li><strong>Annualized ROI</strong> = ((amount returned &divide; amount invested)<sup>1/years</sup> &minus; 1) &times; 100, the constant yearly rate that would produce the same result.</li></ul>
+      <h2>Worked example with the default numbers</h2>
+      <p>Invest $1,000 on January 1, 2022 and receive $2,000 on April 1, 2026. The gain is $1,000, so total ROI is <strong>100%</strong>. The holding period is 1,551 days, or <strong>4.249 years</strong> (days divided by 365). Annualized ROI is (2 &divide; 1)<sup>1/4.249</sup> &minus; 1 = <strong>17.72%</strong> a year.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Where the $2,000 returned in the default example comes from</title><desc id="cf3-d">Half of what you get back is your own money. The profit of $1,000 is a 100% total ROI.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the $2,000 returned in the default example comes from</text><rect class="bar" x="14.0" y="42" width="246.0" height="30" fill="#2563eb"/><text x="137.0" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">50%</text><rect class="bar" x="260.0" y="42" width="246.0" height="30" fill="#10b981"/><text x="383.0" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">50%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Amount invested: <tspan font-weight="700">$1,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Profit: <tspan font-weight="700">$1,000</tspan></text></svg><figcaption>The profit is the part of the return above what you put in.</figcaption></figure>
+      <p>A simpler check: $1,000 that becomes $1,200 after two years is a profit of $200, a total ROI of <strong>20%</strong>, and an annualized ROI of <strong>9.54%</strong> a year.</p>
+      <h2>Time changes the story</h2>
+      <p>A 100% ROI sounds the same whether it took six months or twenty years, but those are very different results. Annualizing converts total ROI into an equivalent yearly rate so that investments held for different lengths of time can be compared fairly.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Annualized ROI for the same 100% total ROI, by holding time</title><desc id="cf1-d">A 100% gain in 1 year is 100% a year, but over 20 years it is only 3.5% a year. Time is half of the story.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Annualized ROI for the same 100% total ROI, by holding time</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 years</text><rect class="bar" x="90" y="44" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">100.0%</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">2 years</text><rect class="bar" x="90" y="78" width="140.0" height="22" rx="4" fill="#9ca3af"/><text x="238.0" y="94" font-size="13" font-weight="700" fill="#111827">41.4%</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">4.25 years</text><rect class="bar" x="90" y="112" width="59.9" height="22" rx="4" fill="#2563eb"/><text x="157.9" y="128" font-size="13" font-weight="700" fill="#111827">17.7%</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">5 years</text><rect class="bar" x="90" y="146" width="50.3" height="22" rx="4" fill="#9ca3af"/><text x="148.3" y="162" font-size="13" font-weight="700" fill="#111827">14.9%</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">10 years</text><rect class="bar" x="90" y="180" width="24.3" height="22" rx="4" fill="#9ca3af"/><text x="122.3" y="196" font-size="13" font-weight="700" fill="#111827">7.2%</text><text x="82" y="230" text-anchor="end" font-size="13" fill="#6b7280">20 years</text><rect class="bar" x="90" y="214" width="11.9" height="22" rx="4" fill="#9ca3af"/><text x="109.9" y="230" font-size="13" font-weight="700" fill="#111827">3.5%</text></svg><figcaption>Same total ROI, very different yearly return.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Holding period</th><th>Total ROI</th><th>Annualized ROI</th></tr></thead><tbody><tr><td>1 years</td><td>100%</td><td>100.00%</td></tr><tr><td>2 years</td><td>100%</td><td>41.42%</td></tr><tr><td>4.25 years</td><td>100%</td><td>17.72%</td></tr><tr><td>5 years</td><td>100%</td><td>14.87%</td></tr><tr><td>10 years</td><td>100%</td><td>7.18%</td></tr><tr><td>20 years</td><td>100%</td><td>3.53%</td></tr></tbody></table></div>
+      <h2>A quick rule of thumb</h2>
+      <p>To estimate how long it takes a yearly return to double your money, divide 72 by the percentage. At 4% a year it takes about 18 years, at 6% about 12 years and at 12% about 6 years. The default 100% total ROI over 4.25 years works out to about 18% a year, which the rule of 72 would double in about 4.1 years, close to the real holding period.</p>
+      <h2>Negative returns</h2>
+      <p>If the amount returned is less than the amount invested, ROI is negative. $1,000 that falls to $800 over two years is a total ROI of <strong>-20%</strong> and an annualized ROI of <strong>-10.56%</strong> a year.</p>
+      <h2>Dollars versus percent</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Two projects: profit in dollars vs total ROI</title><desc id="cf2-d">Project A returns $500 on $1,000 (50%); Project B returns $10,000 on $50,000 (20%). A larger profit is not a larger ROI.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Two projects: profit in dollars vs total ROI</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">Project A ROI</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">50%</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Project B ROI</text><rect class="bar" x="110" y="78" width="127.2" height="22" rx="4" fill="#9ca3af"/><text x="245.2" y="94" font-size="13" font-weight="700" fill="#111827">20%</text></svg><figcaption>ROI shows efficiency; dollars show size. Look at both.</figcaption></figure>
+      <h2>Include every cost</h2>
+      <p>The calculator works only from the two numbers you give it, so build costs into them. If $150 of fees and taxes were taken from the $2,000 in the default example, you would enter $1,850 as the amount returned. ROI becomes <strong>85%</strong> and annualized ROI <strong>15.58%</strong>. Fees and taxes can take a large bite out of returns over time.</p>
+      <h2>What ROI does not do</h2>
+      <ul><li>It does not account for deposits and withdrawals at different dates. For those, use the IRR Calculator.</li><li>It ignores risk. A high ROI from a risky bet is not the same as a steady one.</li><li>It does not say how long it took to get your money back. The Payback Period Calculator does.</li><li>Annualizing assumes the return compounds at a constant rate, which real investments rarely do.</li></ul>
+      <h2>Using dates or a length</h2>
+      <p>You can enter the investment time as a start and end date, or as a length in years. Dates are converted to years by dividing the number of days by 365. Choose whichever you know; the result is the same for the same length of time.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Comparing total ROI of investments held for different times.</li><li>Leaving out fees, taxes or maintenance costs.</li><li>Using the final value of a position that includes new deposits you made later.</li><li>Treating annualized ROI as a guarantee of future returns.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the total ROI. Below it are the gain in dollars, the annualized ROI and the length in years, with a chart of what you put in and what you earned. Compare annualized figures between investments, and use the Average Return Calculator when you have several periods.</p>
+      <div class="callout">Past returns do not predict future results. This calculator is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="irr-calculator.html">IRR Calculator</a> &ndash; returns with several cash flows</li><li><a href="average-return-calculator.html">Average Return Calculator</a> &ndash; returns across several periods</li><li><a href="payback-period-calculator.html">Payback Period Calculator</a> &ndash; how long to recover an investment</li><li><a href="investment-calculator.html">Investment Calculator</a> &ndash; growth with deposits</li><li><a href="future-value-calculator.html">Future Value Calculator</a> &ndash; what money grows into</li><li><a href="percentage-calculator.html">Percentage Calculator</a> &ndash; percent change and difference</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Can ROI be negative?</h3>
-        <p>Yes — if the amount returned is less than what was invested, both ROI and annualized ROI will be negative, reflecting a net loss.</p>
+        <p>Yes. If the amount returned is less than what was invested, both ROI and annualized ROI are negative, showing a net loss.</p>
       </div>
       <div class="faq-item">
         <h3>Does ROI account for fees or taxes?</h3>
-        <p>Not unless you build them into the "amount invested" or "amount returned" figures yourself — this calculator works purely from whatever two numbers you give it.</p>
+        <p>Not unless you build them into the amount invested or the amount returned. The calculator works only from the two numbers you give it.</p>
       </div>
+      <div class="faq-item">
+        <h3>What is the difference between ROI and annualized ROI?</h3>
+        <p>Total ROI is the overall gain as a percentage of the amount invested. Annualized ROI turns it into an equivalent yearly rate so investments held for different lengths of time can be compared.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is the time calculated from dates?</h3>
+        <p>The number of days between the two dates is divided by 365 to give years.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When should I use IRR instead?</h3>
+        <p>Use IRR when money goes in or out at several different dates. ROI only handles a single starting amount and a single final amount.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is a higher ROI always better?</h3>
+        <p>Not always. A high ROI may come from a small investment, a short time or higher risk. Compare annualized returns and consider the size and risk of the investment.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" rel="noopener" target="_blank">Investor.gov: Compound Interest Calculator</a>; <a href="https://www.irs.gov/taxtopics/tc409" rel="noopener" target="_blank">IRS: Topic no. 409, Capital gains and losses</a></p>
     </div>
 
   </div>
