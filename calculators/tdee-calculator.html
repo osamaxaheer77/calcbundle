@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TDEE Calculator: Total Daily Energy Expenditure | CalcBundle</title>
-<meta name="description" content="Estimate daily calorie expenditure from resting energy requirements and an activity factor.">
+<meta name="description" content="Estimate your total daily energy expenditure from BMR and activity level, with calorie targets for gaining or losing weight at 0.5, 1 and 2 pounds a week.">
 <link rel="canonical" href="https://calcbundle.net/calculators/tdee-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="TDEE Calculator: Total Daily Energy Expenditure | CalcBundle">
-<meta property="og:description" content="Estimate daily calorie expenditure from resting energy requirements and an activity factor.">
+<meta property="og:description" content="Estimate your total daily energy expenditure from BMR and activity level, with calorie targets for gaining or losing weight at 0.5, 1 and 2 pounds a week.">
 <meta property="og:url" content="https://calcbundle.net/calculators/tdee-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-fitness.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TDEE Calculator: Total Daily Energy Expenditure | CalcBundle">
-<meta name="twitter:description" content="Estimate daily calorie expenditure from resting energy requirements and an activity factor.">
+<meta name="twitter:description" content="Estimate your total daily energy expenditure from BMR and activity level, with calorie targets for gaining or losing weight at 0.5, 1 and 2 pounds a week.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-fitness.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "How is TDEE different from BMR?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "BMR is just the energy your body needs at complete rest. TDEE adds everything else — activity, exercise, and digestion — on top of BMR, so it's always a higher number."
+        "text": "BMR is the energy your body needs at complete rest. TDEE adds everything else, activity, exercise and digestion, on top of BMR, so it is always a higher number."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "How is this different from the Calorie Calculator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "They compute the same underlying number, but our Calorie Calculator also lets you pick between three different BMR formulas (including one based on body fat percentage) if you want more control over the estimate."
+        "text": "They compute the same underlying number, but the Calorie Calculator also lets you pick between three BMR formulas, including one based on body fat percentage, if you want more control over the estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which activity level should I choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose what matches an ordinary week. Most people overrate their activity, so if you are unsure, choose the lower level and adjust after tracking your weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the 3,500 calories per pound rule exact?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is a rough estimate. As you lose weight your energy needs fall, so loss usually slows over time at the same intake."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many calories below TDEE is safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A deficit of 250 to 500 calories a day is the usual range. Going more than about 1,000 below TDEE is generally not recommended without medical supervision."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the result different for men and women?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Mifflin-St Jeor formula adds 5 for men and subtracts 161 for women, reflecting average differences in body composition."
       }
     }
   ]
@@ -161,36 +193,64 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What TDEE means</h2>
-      <p>Total Daily Energy Expenditure is everything your body burns in a day: your basal metabolic rate (energy used at rest), plus digestion, plus all activity &mdash; exercise and everyday movement alike. This calculator estimates BMR with the Mifflin-St Jeor equation, then multiplies it by an activity factor to reach TDEE, which also represents your calorie maintenance level.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> TDEE is the calories you burn in a day. A 25-year-old man who is 5 ft 10 in and 165 lb has a BMR of 1,740 and, with moderate exercise, a TDEE of 2,549 calories a day. Eating about 500 fewer calories is the usual target for losing 1 pound a week.</div>
+      <h2>What TDEE means</h2>
+      <p>Total Daily Energy Expenditure (TDEE) is everything your body burns in a day: your basal metabolic rate (energy used at rest), the energy to digest food, and all movement, from daily activity to deliberate exercise. This calculator estimates BMR with the Mifflin-St Jeor equation and multiplies it by an activity factor. The result is also your <strong>maintenance level</strong>: eating that many calories should keep your weight steady.</p>
+      <h2>The formula</h2>
+      <ul><li><strong>BMR (men)</strong> = 10 &times; weight in kg + 6.25 &times; height in cm &minus; 5 &times; age + 5.</li><li><strong>BMR (women)</strong> = 10 &times; weight in kg + 6.25 &times; height in cm &minus; 5 &times; age &minus; 161.</li><li><strong>TDEE</strong> = BMR &times; activity factor.</li></ul>
+      <h2>Worked example with the default numbers</h2>
+      <p>A 25-year-old man who is 5 ft 10 in (177.8 cm) and weighs 165 lb (74.8 kg). His BMR is <strong>1,740 calories</strong> a day. With moderate exercise four to five times a week the factor is 1.465, so his TDEE is <strong>2,549 calories</strong> a day. His BMI is 23.7, in the normal range. A woman of the same age, height and weight would have a BMR of 1,574 and a TDEE of 2,305, because the formula subtracts 161 instead of adding 5.</p>
+      <h2>Activity levels</h2>
+      <div class="calc-table"><table><thead><tr><th>Activity level</th><th>Factor</th><th>TDEE for the default person</th></tr></thead><tbody><tr><td>Sedentary</td><td>x 1.2</td><td>2,088</td></tr><tr><td>Light</td><td>x 1.375</td><td>2,392</td></tr><tr><td>Moderate</td><td>x 1.465</td><td>2,549</td></tr><tr><td>Active</td><td>x 1.55</td><td>2,696</td></tr><tr><td>Very active</td><td>x 1.725</td><td>3,001</td></tr><tr><td>Extra active</td><td>x 1.9</td><td>3,305</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">TDEE for the default person at each activity level (calories a day)</title><desc id="cf1-d">Choosing &amp;ldquo;Extra active&amp;rdquo; instead of &amp;ldquo;Sedentary&amp;rdquo; adds 1,218 calories a day to the same person&amp;rsquo;s estimate, so the honest choice matters.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">TDEE for the default person at each activity level (calories a day)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">Sedentary</text><rect class="bar" x="110" y="44" width="200.8" height="22" rx="4" fill="#9ca3af"/><text x="318.8" y="60" font-size="13" font-weight="700" fill="#111827">2,088</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Light</text><rect class="bar" x="110" y="78" width="230.1" height="22" rx="4" fill="#9ca3af"/><text x="348.1" y="94" font-size="13" font-weight="700" fill="#111827">2,392</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">Moderate</text><rect class="bar" x="110" y="112" width="245.2" height="22" rx="4" fill="#2563eb"/><text x="363.2" y="128" font-size="13" font-weight="700" fill="#111827">2,549</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">Active</text><rect class="bar" x="110" y="146" width="259.4" height="22" rx="4" fill="#9ca3af"/><text x="377.4" y="162" font-size="13" font-weight="700" fill="#111827">2,696</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">Very active</text><rect class="bar" x="110" y="180" width="288.7" height="22" rx="4" fill="#9ca3af"/><text x="406.7" y="196" font-size="13" font-weight="700" fill="#111827">3,001</text><text x="102" y="230" text-anchor="end" font-size="13" fill="#6b7280">Extra active</text><rect class="bar" x="110" y="214" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">3,305</text></svg><figcaption>Most people overrate their activity, which inflates the result.</figcaption></figure>
+      <p>Pick the level that matches an ordinary week, not your best week. Light is exercise one to three times a week, moderate four to five times, active daily or hard exercise three to four times, and the top two levels are for very intense training or a physical job.</p>
       <h2>Using TDEE for a goal</h2>
-      <p>Eating at your TDEE maintains your current weight. A calorie deficit below it leads to weight loss; a surplus above it leads to weight gain &mdash; roughly 3,500 calories corresponds to about 1 pound of body weight, which is where the weekly rate estimates below come from.</p>
-      <div class="callout">Cutting more than about 1,000 calories a day below TDEE is generally not recommended &mdash; it risks muscle loss and a slower metabolism. Consult a doctor or dietitian before pursuing aggressive changes.</div>
-
-      <!--seo-extra-->
-<h2>Worked example and interpretation</h2><p>At an estimated BMR of 1,600 calories and an activity factor of 1.5, projected TDEE is 2,400 calories per day. Actual expenditure is variable.</p><h2>Related calculators and context</h2><p>For resting energy alone, use the <a href="bmr-calculator.html">BMR Calculator</a>. For an intake goal, see the <a href="calorie-calculator.html">Calorie Calculator</a>.</p>
-      <h2>A worked example</h2>
-      <p>A 25-year-old man who is 5 feet 10 inches tall and weighs 165 pounds has a BMR of 1,740 calories a day. With moderate exercise four to five times a week, his total daily energy expenditure is 2,549 calories. To gain 1 pound a week he would eat about 3,049 calories a day, and to lose 1 pound a week about 2,049, since a pound of body weight is roughly 3,500 calories.</p>
-
-      <h2>Tips for using TDEE</h2>
-      <p>Pick the activity level honestly, since most people overrate it. Treat the result as a starting point, track your weight for two to three weeks and adjust by 100 to 200 calories if it does not move as expected. Aim for a loss of no more than 1 to 2 pounds a week, and do not eat below the BMR without medical supervision. Muscle mass and age change your needs.</p>
-
-      <p><strong>You might also need:</strong> <a href="calorie-calculator.html">Calorie Calculator</a>, <a href="macro-calculator.html">Macro Calculator</a>, <a href="bmr-calculator.html">BMR Calculator</a>, <a href="protein-calculator.html">Protein Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-many-calories-do-you-need.html">How Many Calories Do You Need?</a>.</p>
-
+      <p>Eating at your TDEE maintains weight. A deficit leads to loss and a surplus to gain. The calculator uses the rule that about 3,500 calories equals 1 pound of body weight, so 500 calories a day is about 1 pound a week. The table shows each target and its share of TDEE:</p>
+      <div class="calc-table"><table><thead><tr><th>Goal</th><th>Rate</th><th>Calories a day</th><th>Share of TDEE</th></tr></thead><tbody><tr><td>Extreme weight gain</td><td>2 lb/week</td><td>3,549</td><td>139%</td></tr><tr><td>Weight gain</td><td>1 lb/week</td><td>3,049</td><td>120%</td></tr><tr><td>Mild weight gain</td><td>0.5 lb/week</td><td>2,799</td><td>110%</td></tr><tr><td><strong>Maintain</strong></td><td></td><td>2,549</td><td>100%</td></tr><tr><td>Mild weight loss</td><td>0.5 lb/week</td><td>2,299</td><td>90%</td></tr><tr><td>Weight loss</td><td>1 lb/week</td><td>2,049</td><td>80%</td></tr><tr><td>Extreme weight loss</td><td>2 lb/week</td><td>1,549</td><td>61%</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 284" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Daily calories for each goal (default person)</title><desc id="cf2-d">Eating 2,549 calories a day is the maintenance level; 500 fewer is the usual 1 lb a week loss target.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Daily calories for each goal (default person)</text><text x="142" y="60" text-anchor="end" font-size="13" fill="#6b7280">Extreme weight gain</text><rect class="bar" x="150" y="44" width="278.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">3,549</text><text x="142" y="94" text-anchor="end" font-size="13" fill="#6b7280">Weight gain</text><rect class="bar" x="150" y="78" width="238.8" height="22" rx="4" fill="#f59e0b"/><text x="396.8" y="94" font-size="13" font-weight="700" fill="#111827">3,049</text><text x="142" y="128" text-anchor="end" font-size="13" fill="#6b7280">Mild weight gain</text><rect class="bar" x="150" y="112" width="219.2" height="22" rx="4" fill="#f59e0b"/><text x="377.2" y="128" font-size="13" font-weight="700" fill="#111827">2,799</text><text x="142" y="162" text-anchor="end" font-size="13" fill="#6b7280">Maintain</text><rect class="bar" x="150" y="146" width="199.7" height="22" rx="4" fill="#2563eb"/><text x="357.7" y="162" font-size="13" font-weight="700" fill="#111827">2,549</text><text x="142" y="196" text-anchor="end" font-size="13" fill="#6b7280">Mild weight loss</text><rect class="bar" x="150" y="180" width="180.1" height="22" rx="4" fill="#10b981"/><text x="338.1" y="196" font-size="13" font-weight="700" fill="#111827">2,299</text><text x="142" y="230" text-anchor="end" font-size="13" fill="#6b7280">Weight loss</text><rect class="bar" x="150" y="214" width="160.5" height="22" rx="4" fill="#10b981"/><text x="318.5" y="230" font-size="13" font-weight="700" fill="#111827">2,049</text><text x="142" y="264" text-anchor="end" font-size="13" fill="#6b7280">Extreme weight loss</text><rect class="bar" x="150" y="248" width="121.3" height="22" rx="4" fill="#10b981"/><text x="279.3" y="264" font-size="13" font-weight="700" fill="#111827">1,549</text></svg><figcaption>The usual targets are 250 to 500 calories either side of maintenance.</figcaption></figure>
+      <p>The 3,500-calorie rule is a simple estimate. As you lose weight your TDEE falls, so the same deficit produces slower loss over time, and the NIDDK Body Weight Planner models this. Cutting more than about 1,000 calories a day below TDEE is generally not recommended, since it risks muscle loss; do not eat below your BMR without medical supervision.</p>
+      <h2>How age changes it</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">TDEE for the same man at different ages (moderate activity)</title><desc id="cf3-d">The formula takes 5 calories off BMR each year, so TDEE falls about 73 a day each decade at this activity level.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">TDEE for the same man at different ages (moderate activity)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">Age 25</text><rect class="bar" x="80" y="44" width="348.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">2,549</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">Age 35</text><rect class="bar" x="80" y="78" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="426.0" y="94" font-size="13" font-weight="700" fill="#111827">2,475</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">Age 45</text><rect class="bar" x="80" y="112" width="328.0" height="22" rx="4" fill="#9ca3af"/><text x="416.0" y="128" font-size="13" font-weight="700" fill="#111827">2,402</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">Age 55</text><rect class="bar" x="80" y="146" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="406.0" y="162" font-size="13" font-weight="700" fill="#111827">2,329</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">Age 65</text><rect class="bar" x="80" y="180" width="308.0" height="22" rx="4" fill="#9ca3af"/><text x="396.0" y="196" font-size="13" font-weight="700" fill="#111827">2,256</text></svg><figcaption>The same body and activity level burns less each decade.</figcaption></figure>
+      <h2>What the estimate misses</h2>
+      <ul><li>Muscle mass: muscle burns more than fat, so two people of the same weight can differ. The Calorie Calculator offers the Katch-McArdle formula if you know your body fat.</li><li>Daily variation: NEAT (fidgeting, walking, standing) can differ a lot between people.</li><li>Medical conditions, medicines, pregnancy and breastfeeding.</li><li>Measurement error in your own weight and activity.</li></ul>
+      <h2>Turning the number into a plan</h2>
+      <p>Treat the TDEE as a starting point. Track your weight for two to three weeks, using a weekly average, and adjust by 100 to 200 calories if it does not move as expected. Aim for no more than 1 to 2 pounds of loss a week. For the split of protein, carbohydrate and fat, use the Macro Calculator.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Choosing a higher activity level than your week really has.</li><li>Treating TDEE as exact. It is an estimate within roughly a few hundred calories.</li><li>Cutting too deeply and too fast.</li><li>Counting exercise calories twice, once in the activity factor and again as extra food allowance.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is your maintenance calories. Below it are your BMI, your BMR and the calorie targets for gaining and losing weight. If your weight does not respond as the table predicts after a few weeks, adjust the calories rather than trusting the formula.</p>
+      <div class="callout">This calculator gives estimates for healthy adults, not medical advice. Ask a doctor or dietitian about your own needs.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="calorie-calculator.html">Calorie Calculator</a> &ndash; choose between three BMR formulas</li><li><a href="bmr-calculator.html">BMR Calculator</a> &ndash; calories burned at rest</li><li><a href="macro-calculator.html">Macro Calculator</a> &ndash; protein, carbs and fat</li><li><a href="protein-calculator.html">Protein Calculator</a> &ndash; how much protein you need</li><li><a href="bmi-calculator.html">BMI Calculator</a> &ndash; body mass index</li><li><a href="calories-burned-calculator.html">Calories Burned Calculator</a> &ndash; energy used in exercise</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-many-calories-do-you-need.html">How Many Calories Do You Need?</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How is TDEE different from BMR?</h3>
-        <p>BMR is just the energy your body needs at complete rest. TDEE adds everything else &mdash; activity, exercise, and digestion &mdash; on top of BMR, so it's always a higher number.</p>
+        <p>BMR is the energy your body needs at complete rest. TDEE adds everything else, activity, exercise and digestion, on top of BMR, so it is always a higher number.</p>
       </div>
       <div class="faq-item">
         <h3>How is this different from the Calorie Calculator?</h3>
-        <p>They compute the same underlying number, but our <a href="calorie-calculator.html">Calorie Calculator</a> also lets you pick between three different BMR formulas (including one based on body fat percentage) if you want more control over the estimate.</p>
+        <p>They compute the same underlying number, but the Calorie Calculator also lets you pick between three BMR formulas, including one based on body fat percentage, if you want more control over the estimate.</p>
       </div>
+      <div class="faq-item">
+        <h3>Which activity level should I choose?</h3>
+        <p>Choose what matches an ordinary week. Most people overrate their activity, so if you are unsure, choose the lower level and adjust after tracking your weight.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the 3,500 calories per pound rule exact?</h3>
+        <p>No. It is a rough estimate. As you lose weight your energy needs fall, so loss usually slows over time at the same intake.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many calories below TDEE is safe?</h3>
+        <p>A deficit of 250 to 500 calories a day is the usual range. Going more than about 1,000 below TDEE is generally not recommended without medical supervision.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is the result different for men and women?</h3>
+        <p>The Mifflin-St Jeor formula adds 5 for men and subtracts 161 for women, reflecting average differences in body composition.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/2305711/" rel="noopener" target="_blank">Mifflin et al., Am J Clin Nutr 1990 (PubMed)</a>; <a href="https://www.niddk.nih.gov/bwp" rel="noopener" target="_blank">NIDDK: Body Weight Planner</a></p>
     </div>
 
   </div>
