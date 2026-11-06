@@ -42,7 +42,7 @@
       "name": "What interest rate should I use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use whatever rate reflects the return you could reasonably earn elsewhere on your money — often called the discount rate. A higher assumed rate always produces a lower present value."
+        "text": "Use the rate that reflects the return you could reasonably earn elsewhere on your money, called the discount rate. A higher assumed rate always produces a lower present value."
       }
     },
     {
@@ -50,7 +50,39 @@
       "name": "Does timing (beginning vs. end of period) really matter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — deposits made at the beginning of each period earn one extra period of interest compared to deposits made at the end, so present value (and future value) will be slightly higher under the \"beginning\" option."
+        "text": "Yes. Payments made at the beginning of each period are one period closer to today, so their present value is slightly higher than the same payments at the end of each period."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between present value and future value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are two views of the same relationship. Present value discounts a future amount back to today; future value grows today's amount forward."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the present value lower than the future amount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because money today could be earning interest. To reach a given amount later, you need less now."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it to compare a lump sum with payments?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Find the present value of the payments with the second tool and compare it with the lump sum, trying more than one discount rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it account for inflation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if your discount rate includes it. Use the Inflation Calculator to see the effect on purchasing power separately."
       }
     }
   ]
@@ -166,28 +198,63 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Why a dollar today isn't a dollar tomorrow</h2>
-      <p>Present value is the flip side of compound interest: instead of asking what money grows into, it asks what a future amount is worth right now, given that money in hand could otherwise be earning interest. The higher the interest rate or the further out the future payment, the less that future money is worth today.</p>
-
-      <h2>Lump sum vs. a stream of deposits</h2>
-      <p>The first calculator above discounts a single future amount back to today. The second discounts an entire series of equal, recurring deposits — useful for valuing things like an annuity, a pension stream, or a planned savings habit in today's dollars.</p>
-      <div class="callout">Present value and future value are two views of the same relationship. If you already know the deposit amount and want to know what it grows into instead, use the <a href="future-value-calculator.html">Future Value Calculator</a>.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: what is future money worth today?</h2><p>Suppose you expect to receive $1,100 in one year and use a 10% annual discount rate. Its present value is $1,100 ÷ 1.10 = <strong>$1,000</strong>. A higher discount rate produces a lower present value when other inputs stay the same. For a series of payments, use the periodic-payment section instead of treating the entire series as one future lump sum.</p>
-      
-      <p>To project what a balance could grow to, try the <a href="future-value-calculator.html">Future Value Calculator</a>. For saving regularly toward a goal, use the <a href="savings-calculator.html">Savings Calculator</a>. The <a href="roi-calculator.html">ROI Calculator</a> measures investment return rather than discounted value.</p>
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Present value is what a future amount is worth today. $1,000 received in 10 years at a 6% discount rate is worth $558.39 now, and $100 a year for 10 years is worth $736.01. The higher the rate, the lower the value.</div>
+      <h2>Why a dollar today is worth more than a dollar later</h2>
+      <p>Present value is the flip side of compound interest. Instead of asking what money grows into, it asks what a future amount is worth right now, given that money in hand could be earning interest. The higher the interest rate, or the further away the payment, the less it is worth today. The rate you use is called the <strong>discount rate</strong>.</p>
+      <h2>Tool 1: a single future amount</h2>
+      <p>The formula is <strong>PV = FV &divide; (1 + r)<sup>n</sup></strong>. With the defaults, $1,000 received in 10 years at 6% has a present value of <strong>$558.39</strong>, so the interest is $441.61. A simpler check: $1,100 expected in one year at a 10% discount rate is worth $1,100 &divide; 1.10 = <strong>$1,000.00</strong> today.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">Where the default $1,000 in 10 years comes from (6%)</title><desc id="cf4-d">Putting $558.39 aside today at 6% grows to $1,000 in 10 years; the difference is the interest.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the default $1,000 in 10 years comes from (6%)</text><rect class="bar" x="14.0" y="42" width="274.7" height="30" fill="#2563eb"/><text x="151.4" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">56%</text><rect class="bar" x="288.7" y="42" width="217.3" height="30" fill="#10b981"/><text x="397.4" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">44%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Present value: <tspan font-weight="700">$558.39</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Interest earned: <tspan font-weight="700">$441.61</tspan></text></svg><figcaption>Present value plus the interest it earns equals the future amount.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Present value of $1,000 received in 10 years, by discount rate</title><desc id="cf1-d">At a 2% rate the $1,000 is worth $820.35 today; at 10% it is worth only $385.54.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Present value of $1,000 received in 10 years, by discount rate</text><text x="52" y="60" text-anchor="end" font-size="13" fill="#6b7280">2%</text><rect class="bar" x="60" y="44" width="368.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$820.35</text><text x="52" y="94" text-anchor="end" font-size="13" fill="#6b7280">4%</text><rect class="bar" x="60" y="78" width="303.1" height="22" rx="4" fill="#9ca3af"/><text x="371.1" y="94" font-size="13" font-weight="700" fill="#111827">$675.56</text><text x="52" y="128" text-anchor="end" font-size="13" fill="#6b7280">6%</text><rect class="bar" x="60" y="112" width="250.5" height="22" rx="4" fill="#2563eb"/><text x="318.5" y="128" font-size="13" font-weight="700" fill="#111827">$558.39</text><text x="52" y="162" text-anchor="end" font-size="13" fill="#6b7280">8%</text><rect class="bar" x="60" y="146" width="207.8" height="22" rx="4" fill="#9ca3af"/><text x="275.8" y="162" font-size="13" font-weight="700" fill="#111827">$463.19</text><text x="52" y="196" text-anchor="end" font-size="13" fill="#6b7280">10%</text><rect class="bar" x="60" y="180" width="173.0" height="22" rx="4" fill="#9ca3af"/><text x="241.0" y="196" font-size="13" font-weight="700" fill="#111827">$385.54</text></svg><figcaption>A higher discount rate always lowers the present value.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Present value of $1,000 at a 6% discount rate, by years until you receive it</title><desc id="cf2-d">Money received in 30 years is worth only $174.11 today at 6%, a sixth of its face value.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Present value of $1,000 at a 6% discount rate, by years until you receive it</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 year</text><rect class="bar" x="90" y="44" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$943.40</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">5 years</text><rect class="bar" x="90" y="78" width="267.7" height="22" rx="4" fill="#9ca3af"/><text x="365.7" y="94" font-size="13" font-weight="700" fill="#111827">$747.26</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">10 years</text><rect class="bar" x="90" y="112" width="200.1" height="22" rx="4" fill="#2563eb"/><text x="298.1" y="128" font-size="13" font-weight="700" fill="#111827">$558.39</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">20 years</text><rect class="bar" x="90" y="146" width="111.7" height="22" rx="4" fill="#9ca3af"/><text x="209.7" y="162" font-size="13" font-weight="700" fill="#111827">$311.80</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">30 years</text><rect class="bar" x="90" y="180" width="62.4" height="22" rx="4" fill="#9ca3af"/><text x="160.4" y="196" font-size="13" font-weight="700" fill="#111827">$174.11</text></svg><figcaption>Distance in time matters as much as the rate.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Discount rate</th><th>PV of $1,000 in 10 years</th></tr></thead><tbody><tr><td>2%</td><td>$820.35</td></tr><tr><td>4%</td><td>$675.56</td></tr><tr><td>6%</td><td>$558.39</td></tr><tr><td>8%</td><td>$463.19</td></tr><tr><td>10%</td><td>$385.54</td></tr></tbody></table></div>
+      <h2>Tool 2: a series of equal payments</h2>
+      <p>The second tool values a stream of equal payments, such as an annuity, a pension or a savings habit. For $100 a year for 10 years at 6% with payments at the end of each year, the present value is <strong>$736.01</strong>. The same stream would grow to $1,318.08 (the future value), and you would pay in $1,000, so interest is $318.08. If payments come at the <strong>beginning</strong> of each period, the present value is higher: <strong>$780.17</strong>, because each payment is one period closer.</p>
+      <h2>Using present value to decide</h2>
+      <p><strong>An offer now or later.</strong> Suppose someone offers $40,000 today or $50,000 in 5 years, and you could earn 5% elsewhere. The $50,000 is worth $39,176 today, so taking $40,000 now is the better deal in money terms. At a 0% rate the later offer would win.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Offer $40,000 now or $50,000 in 5 years (discount rate 5%)</title><desc id="cf3-d">At a 5% discount rate the later $50,000 is worth $39,176 today, so the $40,000 now is better by $824.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Offer $40,000 now or $50,000 in 5 years (discount rate 5%)</text><text x="182" y="60" text-anchor="end" font-size="13" fill="#6b7280">Take $40,000 now</text><rect class="bar" x="190" y="44" width="238.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$40,000</text><text x="182" y="94" text-anchor="end" font-size="13" fill="#6b7280">$50,000 in 5 years, in today&#x27;s money</text><rect class="bar" x="190" y="78" width="233.1" height="22" rx="4" fill="#f59e0b"/><text x="431.1" y="94" font-size="13" font-weight="700" fill="#111827">$39,176</text></svg><figcaption>Discounting puts amounts received at different times on the same footing.</figcaption></figure>
+      <p><strong>Lump sum or payments.</strong> Compare a $120,000 lump sum with $10,000 a year for 20 years. At a 5% discount rate the payments are worth $124,622 today, so they are worth slightly more than the lump sum; at 7% they are worth $105,940, so the lump sum is better. The right rate depends on what you could actually earn, so test more than one.</p>
+      <h2>Choosing a discount rate</h2>
+      <p>Use the return you could reasonably earn elsewhere on the money, with similar risk. A safe rate, such as a savings rate or a government bond yield, suits safe payments; a higher rate suits riskier ones. Because the answer depends heavily on this rate, show it alongside the result and try a range.</p>
+      <h2>Present value and loans</h2>
+      <p>The same idea values a loan. The present value of all your future loan payments, discounted at the loan&rsquo;s own interest rate, equals the amount you borrowed. That is how the payment on a loan is worked out, and why a loan at a lower rate has a lower payment for the same amount. Use the Loan Calculator to see it in action.</p>
+      <h2>What it leaves out</h2>
+      <ul><li>Inflation, unless your discount rate already includes it.</li><li>Taxes and fees on the money you receive.</li><li>The risk that a future payment is not made.</li><li>Changes in the discount rate over time.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using the same rate for risky and safe payments.</li><li>Mixing periods: an annual rate with monthly payments gives a wrong answer.</li><li>Forgetting whether payments come at the beginning or the end of each period.</li><li>Treating present value as a prediction. It is a comparison tool.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the present value, the amount that would grow to your future amount if invested at the discount rate. Below it are the future value, the total of your payments (for the series tool) and the interest. To project what a balance grows to, use the Future Value Calculator; for saving regularly toward a goal, use the Savings Calculator.</p>
+      <div class="callout">Results depend on the discount rate you choose and are not a forecast. They are not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="future-value-calculator.html">Future Value Calculator</a> &ndash; what money grows into</li><li><a href="investment-calculator.html">Investment Calculator</a> &ndash; solve for deposits, rate or time</li><li><a href="savings-calculator.html">Savings Calculator</a> &ndash; savings with yearly increases</li><li><a href="roi-calculator.html">ROI Calculator</a> &ndash; return on investment</li><li><a href="inflation-calculator.html">Inflation Calculator</a> &ndash; value over time</li><li><a href="finance-calculator.html">Finance Calculator</a> &ndash; general finance maths</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What interest rate should I use?</h3>
-        <p>Use whatever rate reflects the return you could reasonably earn elsewhere on your money — often called the discount rate. A higher assumed rate always produces a lower present value.</p>
+        <p>Use the rate that reflects the return you could reasonably earn elsewhere on your money, called the discount rate. A higher assumed rate always produces a lower present value.</p>
       </div>
       <div class="faq-item">
         <h3>Does timing (beginning vs. end of period) really matter?</h3>
-        <p>Yes — deposits made at the beginning of each period earn one extra period of interest compared to deposits made at the end, so present value (and future value) will be slightly higher under the "beginning" option.</p>
+        <p>Yes. Payments made at the beginning of each period are one period closer to today, so their present value is slightly higher than the same payments at the end of each period.</p>
       </div>
+      <div class="faq-item">
+        <h3>What is the difference between present value and future value?</h3>
+        <p>They are two views of the same relationship. Present value discounts a future amount back to today; future value grows today's amount forward.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is the present value lower than the future amount?</h3>
+        <p>Because money today could be earning interest. To reach a given amount later, you need less now.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use it to compare a lump sum with payments?</h3>
+        <p>Yes. Find the present value of the payments with the second tool and compare it with the lump sum, trying more than one discount rate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it account for inflation?</h3>
+        <p>Only if your discount rate includes it. Use the Inflation Calculator to see the effect on purchasing power separately.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" rel="noopener" target="_blank">Investor.gov: Compound Interest Calculator</a></p>
     </div>
 
   </div>
