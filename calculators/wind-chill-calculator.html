@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wind Chill Calculator - CalcBundle</title>
-<meta name="description" content="Calculate the wind chill temperature — how cold it actually feels — from wind speed and air temperature.">
+<title>Wind Chill Calculator: How Cold It Feels - CalcBundle</title>
+<meta name="description" content="Work out how cold it really feels from the air temperature and wind speed with the National Weather Service formula, with frostbite guidance.">
 <link rel="canonical" href="https://calcbundle.net/calculators/wind-chill-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Wind Chill Calculator - CalcBundle">
-<meta property="og:description" content="Calculate the wind chill temperature — how cold it actually feels — from wind speed and air temperature.">
+<meta property="og:title" content="Wind Chill Calculator: How Cold It Feels - CalcBundle">
+<meta property="og:description" content="Work out how cold it really feels from the air temperature and wind speed with the National Weather Service formula, with frostbite guidance.">
 <meta property="og:url" content="https://calcbundle.net/calculators/wind-chill-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Wind Chill Calculator - CalcBundle">
-<meta name="twitter:description" content="Calculate the wind chill temperature — how cold it actually feels — from wind speed and air temperature.">
+<meta name="twitter:title" content="Wind Chill Calculator: How Cold It Feels - CalcBundle">
+<meta name="twitter:description" content="Work out how cold it really feels from the air temperature and wind speed with the National Weather Service formula, with frostbite guidance.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Why doesn't this work above 50°F?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The formula was derived from cold-weather skin heat-loss models and isn't valid or meaningful at warmer temperatures — for hot, humid weather, see our Heat Index Calculator instead."
+        "text": "The formula was derived from cold-weather skin heat-loss models and is not defined at warmer temperatures. For hot, humid weather, see the Heat Index Calculator."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "Does humidity affect wind chill?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No — wind chill depends only on temperature and wind speed. Humidity's effect on perceived temperature is captured separately by the heat index, used for warm weather instead."
+        "text": "No. Wind chill depends only on temperature and wind speed. Humidity's effect on perceived temperature is captured by the heat index, which is used in warm weather."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the frostbite warning mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At a wind chill of about -19°F or lower, exposed skin can freeze in about 30 minutes. At 0°F or lower the risk grows with longer exposure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does wind chill make pipes or cars colder than the air?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Wind chill describes the cooling effect on exposed skin. Objects only cool to the actual air temperature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the calculator reject low wind speeds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formula is defined only for winds above 3 mph. Below that, there is no meaningful wind chill."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can sunshine change the wind chill?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The National Weather Service says bright sunshine may raise the effective wind chill by 10 to 18 degrees F."
       }
     }
   ]
@@ -127,33 +159,64 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">The National Weather Service formula</h2>
-      <p>This calculator uses the North American wind chill formula adopted by the US National Weather Service and Environment Canada: WC = 35.74 + 0.6215T &minus; 35.75V<sup>0.16</sup> + 0.4275TV<sup>0.16</sup>, where T is air temperature in &deg;F and V is wind speed in mph. It's valid for temperatures at or below 50&deg;F and wind speeds of at least 3 mph.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Wind chill is how cold the air feels on exposed skin. At 10&deg;F with a 15 mph wind, the National Weather Service formula gives &minus;6.6&deg;F (&minus;21.4&deg;C). It applies at or below 50&deg;F with wind above 3 mph.</div>
+      <h2>The National Weather Service formula</h2>
+      <p>The calculator uses the North American wind chill formula adopted by the US National Weather Service and Environment Canada: <strong>WC = 35.74 + 0.6215T &minus; 35.75V<sup>0.16</sup> + 0.4275TV<sup>0.16</sup></strong>, where T is the air temperature in &deg;F and V is the wind speed in mph. The index is defined only for temperatures at or below 50&deg;F and wind speeds above 3 mph, so outside that range the calculator shows a message instead of a number.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>At an air temperature of 10&deg;F with a 15 mph wind: 15<sup>0.16</sup> = 1.542, so WC = 35.74 + 6.215 &minus; 55.13 + 6.59 = <strong>&minus;6.6&deg;F</strong>, which is <strong>&minus;21.4&deg;C</strong> or 251.7 K. It feels about 16.6 degrees colder than the thermometer says. Wind chill is the same whatever unit you enter: 15 mph is 24.1 km/h, 6.7 m/s or 13.0 knots.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Wind chill at an air temperature of 10&amp;deg;F by wind speed (&amp;deg;F)</title><desc id="cf1-d">Bars are drawn from -40&amp;deg;F so that negative values show. At 10&amp;deg;F, a 5 mph wind feels like 1.2&amp;deg;F and a 40 mph wind like &amp;minus;14.8&amp;deg;F.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Wind chill at an air temperature of 10&amp;deg;F by wind speed (&amp;deg;F)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">5 mph</text><rect class="bar" x="80" y="44" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">1.2</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">10 mph</text><rect class="bar" x="80" y="78" width="307.7" height="22" rx="4" fill="#9ca3af"/><text x="395.7" y="94" font-size="13" font-weight="700" fill="#111827">&amp;minus;3.5</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">15 mph</text><rect class="bar" x="80" y="112" width="282.0" height="22" rx="4" fill="#2563eb"/><text x="370.0" y="128" font-size="13" font-weight="700" fill="#111827">&amp;minus;6.6</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">20 mph</text><rect class="bar" x="80" y="146" width="262.7" height="22" rx="4" fill="#9ca3af"/><text x="350.7" y="162" font-size="13" font-weight="700" fill="#111827">&amp;minus;8.9</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">30 mph</text><rect class="bar" x="80" y="180" width="233.9" height="22" rx="4" fill="#9ca3af"/><text x="321.9" y="196" font-size="13" font-weight="700" fill="#111827">&amp;minus;12.3</text><text x="72" y="230" text-anchor="end" font-size="13" fill="#6b7280">40 mph</text><rect class="bar" x="80" y="214" width="212.3" height="22" rx="4" fill="#9ca3af"/><text x="300.3" y="230" font-size="13" font-weight="700" fill="#111827">&amp;minus;14.8</text></svg><figcaption>More wind means a lower wind chill, at a decreasing rate.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">How many degrees colder than the thermometer it feels at 10&amp;deg;F</title><desc id="cf2-d">The first few miles per hour matter most: the drop is 8.8&amp;deg; at 5 mph and 24.8&amp;deg; at 40 mph, so eight times the wind gives less than 3 times the drop.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">How many degrees colder than the thermometer it feels at 10&amp;deg;F</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">5 mph</text><rect class="bar" x="80" y="44" width="122.8" height="22" rx="4" fill="#9ca3af"/><text x="210.8" y="60" font-size="13" font-weight="700" fill="#111827">8.8&amp;deg;</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">10 mph</text><rect class="bar" x="80" y="78" width="189.7" height="22" rx="4" fill="#9ca3af"/><text x="277.7" y="94" font-size="13" font-weight="700" fill="#111827">13.5&amp;deg;</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">15 mph</text><rect class="bar" x="80" y="112" width="232.4" height="22" rx="4" fill="#2563eb"/><text x="320.4" y="128" font-size="13" font-weight="700" fill="#111827">16.6&amp;deg;</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">20 mph</text><rect class="bar" x="80" y="146" width="264.5" height="22" rx="4" fill="#9ca3af"/><text x="352.5" y="162" font-size="13" font-weight="700" fill="#111827">18.9&amp;deg;</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">30 mph</text><rect class="bar" x="80" y="180" width="312.2" height="22" rx="4" fill="#9ca3af"/><text x="400.2" y="196" font-size="13" font-weight="700" fill="#111827">22.3&amp;deg;</text><text x="72" y="230" text-anchor="end" font-size="13" fill="#6b7280">40 mph</text><rect class="bar" x="80" y="214" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">24.8&amp;deg;</text></svg><figcaption>The first breeze takes the biggest bite.</figcaption></figure>
+      <h2>Wind chill chart</h2>
+      <p>Wind chill in &deg;F for common temperatures and wind speeds, from the same formula. The National Weather Service gives the example of 0&deg;F with a 15 mph wind: a wind chill of -19&deg;F, where exposed skin can freeze in 30 minutes.</p>
+      <div class="calc-table"><table><thead><tr><th>Air temperature</th><th>5 mph</th><th>10 mph</th><th>15 mph</th><th>20 mph</th><th>30 mph</th><th>40 mph</th></tr></thead><tbody><tr><td>40&deg;F</td><td>36</td><td>34</td><td>32</td><td>30</td><td>28</td><td>27</td></tr><tr><td>30&deg;F</td><td>25</td><td>21</td><td>19</td><td>17</td><td>15</td><td>13</td></tr><tr><td>20&deg;F</td><td>13</td><td>9</td><td>6</td><td>4</td><td>1</td><td>&minus;1</td></tr><tr><td>10&deg;F</td><td>1</td><td>&minus;4</td><td>&minus;7</td><td>&minus;9</td><td>&minus;12</td><td>&minus;15</td></tr><tr><td>0&deg;F</td><td>&minus;11</td><td>&minus;16</td><td>&minus;19</td><td>&minus;22</td><td>&minus;26</td><td>&minus;29</td></tr><tr><td>&minus;10&deg;F</td><td>&minus;22</td><td>&minus;28</td><td>&minus;32</td><td>&minus;35</td><td>&minus;39</td><td>&minus;43</td></tr><tr><td>&minus;20&deg;F</td><td>&minus;34</td><td>&minus;41</td><td>&minus;45</td><td>&minus;48</td><td>&minus;53</td><td>&minus;57</td></tr></tbody></table></div>
       <h2>Why wind makes it feel colder</h2>
-      <p>Moving air strips away the thin layer of warmed air your body maintains near your skin, speeding up heat loss through convection. Faster wind means faster heat loss, which your body perceives as a lower temperature even though the air itself hasn't actually changed.</p>
-      <div class="callout">Wind chill is an estimate, not an exact science &mdash; different countries use slightly different formulas, so figures can vary a bit between weather services.</div>
-
-      <!--seo-extra-->
-      <h2>A worked example</h2>
-      <p>With an air temperature of 10°F and a wind speed of 15 mph, the wind chill is −6.6°F, or −21.4°C. It feels about 17 degrees colder than the thermometer says, and the page warns of a frostbite risk with extended exposure. At the same temperature with no wind there would be no wind chill.</p>
-
-      <h2>Tips for cold weather</h2>
-      <p>The National Weather Service formula applies to air temperatures at or below 50°F and winds above 3 mph. Wind chill affects exposed skin, and it does not lower the actual temperature of objects like water pipes or cars. Dress in layers, cover your ears, hands and face, and keep skin dry. Frostbite can begin in 30 minutes at wind chills near −20°F, and sooner when it is colder.</p>
-
-      <p><strong>You might also need:</strong> <a href="dew-point-calculator.html">Dew Point Calculator</a>, <a href="heat-index-calculator.html">Heat Index Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p>Moving air strips away the thin layer of warmed air your body keeps near the skin, speeding up heat loss through convection. Faster wind means faster heat loss, which your body perceives as a lower temperature even though the air has not changed. Wind chill describes the effect on exposed skin. It does not lower the actual temperature of objects such as water pipes or cars, which can cool only down to the air temperature.</p>
+      <h2>What the risk message means</h2>
+      <ul><li>Wind chill at or below &minus;19&deg;F: frostbite possible in as little as 30 minutes on exposed skin.</li><li>Wind chill at or below 0&deg;F: frostbite risk with extended exposure; cover exposed skin.</li><li>Above 0&deg;F: low frostbite risk, but dress warmly for comfort.</li></ul>
+      <p>These thresholds follow the National Weather Service chart. Frostbite times shrink as it gets colder, and sooner for children, older adults and people with poor circulation.</p>
+      <h2>Sun, humidity and the limits of the formula</h2>
+      <ul><li>Bright sunshine can raise the wind chill temperature by 10 to 18&deg;F, according to the National Weather Service.</li><li>Humidity does not enter the formula: wind chill depends only on temperature and wind speed. Humidity matters in warm weather through the heat index.</li><li>Different countries use slightly different formulas, so figures can differ a little between weather services.</li><li>The formula is not valid above 50&deg;F or for winds under 3 mph.</li></ul>
+      <h2>Alerts and warnings</h2>
+      <p>Weather services use the wind chill, together with local conditions, to decide when to issue cold weather advisories or extreme cold warnings. The thresholds differ from region to region because people in colder climates are used to it, so check the alerts for your own area as well as the number from this calculator. Wind chill values in forecasts are for exposed skin at about face height, not for a person who is dressed for the cold.</p>
+      <h2>Planning for work and play outdoors</h2>
+      <p>Use the chart to plan: a morning run, a walk to school or a day on the slopes can feel very different at 20&deg;F with a 5 mph breeze (13&deg;F) than with a 30 mph wind (1&deg;F). If the number is close to a frostbite threshold, shorten the time outside, add a wind-proof layer, or move the activity indoors.</p>
+      <h2>Cold-weather tips</h2>
+      <ul><li>Dress in layers, with a wind-proof outer layer.</li><li>Cover ears, hands, face and neck, and keep skin dry.</li><li>Limit time outside when the wind chill is below 0&deg;F, and watch for numbness or pale skin.</li><li>Check on neighbours and bring pets in.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using the calculator above 50&deg;F. For hot weather use the Heat Index Calculator.</li><li>Entering the temperature in the wrong unit. Check the selector.</li><li>Expecting wind chill to freeze things that are above freezing.</li><li>Ignoring wet clothing, which makes any wind chill more dangerous.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the &ldquo;feels like&rdquo; temperature in &deg;F, with the same value in &deg;C and kelvin below it and a frostbite note. Compare it with the air temperature to see the wind effect, and use the chart above to see how it changes if the wind picks up.</p>
+      <div class="callout">Wind chill is an estimate for exposed skin. In severe cold, follow local weather service warnings.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="heat-index-calculator.html">Heat Index Calculator</a> &ndash; how hot it feels</li><li><a href="dew-point-calculator.html">Dew Point Calculator</a> &ndash; humidity and dew point</li><li><a href="speed-calculator.html">Speed Calculator</a> &ndash; speed, distance and time</li><li><a href="conversion-calculator.html">Conversion Calculator</a> &ndash; temperature and speed units</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Why doesn't this work above 50&deg;F?</h3>
-        <p>The formula was derived from cold-weather skin heat-loss models and isn't valid or meaningful at warmer temperatures &mdash; for hot, humid weather, see our <a href="heat-index-calculator.html">Heat Index Calculator</a> instead.</p>
+        <h3>Why doesn't this work above 50°F?</h3>
+        <p>The formula was derived from cold-weather skin heat-loss models and is not defined at warmer temperatures. For hot, humid weather, see the Heat Index Calculator.</p>
       </div>
       <div class="faq-item">
         <h3>Does humidity affect wind chill?</h3>
-        <p>No &mdash; wind chill depends only on temperature and wind speed. Humidity's effect on perceived temperature is captured separately by the heat index, used for warm weather instead.</p>
+        <p>No. Wind chill depends only on temperature and wind speed. Humidity's effect on perceived temperature is captured by the heat index, which is used in warm weather.</p>
       </div>
+      <div class="faq-item">
+        <h3>What does the frostbite warning mean?</h3>
+        <p>At a wind chill of about -19°F or lower, exposed skin can freeze in about 30 minutes. At 0°F or lower the risk grows with longer exposure.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does wind chill make pipes or cars colder than the air?</h3>
+        <p>No. Wind chill describes the cooling effect on exposed skin. Objects only cool to the actual air temperature.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the calculator reject low wind speeds?</h3>
+        <p>The formula is defined only for winds above 3 mph. Below that, there is no meaningful wind chill.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can sunshine change the wind chill?</h3>
+        <p>Yes. The National Weather Service says bright sunshine may raise the effective wind chill by 10 to 18 degrees F.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.weather.gov/safety/cold-wind-chill-chart" rel="noopener" target="_blank">National Weather Service: Understanding wind chill</a>; <a href="https://www.weather.gov/safety/cold" rel="noopener" target="_blank">National Weather Service: Cold weather safety</a></p>
     </div>
 
   </div>
