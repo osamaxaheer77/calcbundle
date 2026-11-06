@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pension Calculator: Lump Sum vs Monthly Income | CalcBundle</title>
-<meta name="description" content="Compare pension lump-sum and monthly-payment options, survivor benefits and different retirement ages using planning assumptions.">
+<title>Pension Calculator: Lump Sum vs Monthly Income</title>
+<meta name="description" content="Compare a pension lump sum with monthly income, single-life with joint-and-survivor, or retiring now with working longer, using return and COLA assumptions.">
 <link rel="canonical" href="https://calcbundle.net/calculators/pension-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Pension Calculator: Lump Sum vs Monthly Income | CalcBundle">
-<meta property="og:description" content="Compare pension lump-sum and monthly-payment options, survivor benefits and different retirement ages using planning assumptions.">
+<meta property="og:title" content="Pension Calculator: Lump Sum vs Monthly Income">
+<meta property="og:description" content="Compare a pension lump sum with monthly income, single-life with joint-and-survivor, or retiring now with working longer, using return and COLA assumptions.">
 <meta property="og:url" content="https://calcbundle.net/calculators/pension-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Pension Calculator: Lump Sum vs Monthly Income | CalcBundle">
-<meta name="twitter:description" content="Compare pension lump-sum and monthly-payment options, survivor benefits and different retirement ages using planning assumptions.">
+<meta name="twitter:title" content="Pension Calculator: Lump Sum vs Monthly Income">
+<meta name="twitter:description" content="Compare a pension lump sum with monthly income, single-life with joint-and-survivor, or retiring now with working longer, using return and COLA assumptions.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -39,10 +39,18 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Should I take a lump sum or a monthly pension?",
+      "name": "What is the break-even age?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends mostly on how long you expect to live and what you could earn on the lump sum. The calculator finds the break-even age: if you live beyond it, the monthly pension is worth more, and if not, the lump sum is. A monthly pension is guaranteed income for life, while a lump sum gives flexibility and can be left to heirs."
+        "text": "It is the first age at which the monthly pension is worth at least as much as the lump sum, with each year of payments discounted back to your retirement age. If you live to that age or longer, the pension comes out ahead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I take the lump sum or the monthly pension?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on your health, other income, and your confidence in investing a lump sum. A pension is guaranteed for life, while a lump sum is flexible and can be left to heirs. The calculator shows the age at which the pension wins."
       }
     },
     {
@@ -50,7 +58,7 @@
       "name": "What is a joint-and-survivor pension?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A joint-and-survivor pension keeps paying your spouse after you die, usually at a set share of the original amount such as 50%, 66%, 75% or 100%. In return, the monthly payment while you are both alive is lower than a single-life pension, which stops when you die."
+        "text": "It pays a lower monthly amount while you are alive and continues paying your spouse after you die. A single-life pension pays more but stops at your death."
       }
     },
     {
@@ -58,23 +66,23 @@
       "name": "What does the cost-of-living adjustment do?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The cost-of-living adjustment, or COLA, raises the pension each year to keep up with rising prices. The calculator applies it from the second year of payments. Most private pensions do not rise with inflation, so enter 0 if yours does not."
+        "text": "It raises the pension each year by the percentage you enter. A larger COLA makes the pension worth more, so the break-even age falls."
       }
     },
     {
       "@type": "Question",
-      "name": "Why does the investment return matter?",
+      "name": "Does the calculator include taxes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pension payments arrive over many years, so each one is discounted back to today at your investment return. A higher return makes future payments worth less now, which favors the lump sum, while a lower return favors the monthly pension."
+        "text": "No. A lump sum rolled into an IRA is not taxed up front, but if it would be taxed, enter the after-tax amount. Pension income is generally taxable."
       }
     },
     {
       "@type": "Question",
-      "name": "Does this calculator include taxes?",
+      "name": "Is the pension safe?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. The figures are before tax. The lump sum comparison assumes the money is rolled into a tax-deferred account such as an IRA. If your lump sum would be taxed, enter the after-tax amount instead."
+        "text": "It is only as safe as the plan behind it. In the United States, many private pensions are insured by the Pension Benefit Guaranty Corporation up to certain limits."
       }
     }
   ]
@@ -232,52 +240,65 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How pensions pay out</h2>
-      <p>The most common pension is a defined-benefit plan, where your employer promises a set income in retirement based on your pay and years of service. Most plans let you take that promise in one of two forms: a one-time lump sum, sometimes called the commuted value, or a stream of monthly payments that lasts for life. This calculator helps with three decisions that usually cannot be undone once you make them.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Lump sum or pension? With $800,000 against $5,000 a month at 65, a 5% return and a 3.5% COLA, the break-even age is 81: live past it and the monthly pension is worth more.</div>
+      <h2>How pensions pay out</h2>
+      <p>The most common pension is a <strong>defined-benefit plan</strong>, where your employer promises a set income in retirement based on your pay and years of service. Most plans let you take that promise in one of two forms: a one-time lump sum, sometimes called the commuted value, or a stream of monthly payments that lasts for life. The calculator helps with three decisions that usually cannot be undone once you make them: lump sum or monthly pension, single-life or joint-and-survivor, and retiring now or working longer. Choose the comparison at the top of the page.</p>
       <h2>Lump sum or monthly pension</h2>
-      <p>A monthly pension is guaranteed income, and it cannot run out the way a pile of savings can. A lump sum is flexible: you can invest it, spend it as you like and leave what remains to heirs. To compare them, the calculator adds up the pension payments you would collect up to each possible life expectancy, lets them grow with the cost-of-living adjustment, and discounts every year back to your retirement age at your investment return. The break-even age is the first age at which the pension is worth at least as much as the lump sum. Live past it and the pension comes out ahead.</p>
-
+      <p>A monthly pension is guaranteed income that cannot run out the way savings can. A lump sum is flexible: you can invest it, spend it as you like and leave what remains to heirs. To compare them the calculator adds up the pension payments you would collect up to each possible life expectancy, lets them grow with the cost-of-living adjustment (COLA), and discounts every year back to your retirement age at your investment return. The <strong>break-even age</strong> is the first age at which the pension is worth at least as much as the lump sum. Live past it and the pension comes out ahead.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on retirement at age <strong>65</strong>, a lump sum of <strong>$800,000</strong>, a pension of <strong>$5,000 a month</strong>, an investment return of <strong>5%</strong> a year and a COLA of <strong>3.5%</strong>. Year one of the pension is 12 &times; $5,000 = $60,000, so a simple count says the lump sum equals about 13.3 years of pension. But money received later is worth less today, and the COLA raises each year&rsquo;s payment by 3.5%. Each year&rsquo;s payments are discounted at 5% back to age 65 (taken at mid-year). With those assumptions the break-even is <strong>age 81</strong>: if you expect to live to 81 or older, the monthly pension is worth more, and otherwise the lump sum is.</p>
+      <div class="calc-table"><table><thead><tr><th>Life expectancy</th><th>Lump sum</th><th>Value of the monthly pension</th><th>Better option</th></tr></thead><tbody><tr><td>70</td><td>$800,000</td><td>$284,524</td><td>Lump sum</td></tr><tr><td>75</td><td>$800,000</td><td>$549,297</td><td>Lump sum</td></tr><tr><td>80</td><td>$800,000</td><td>$795,690</td><td>Lump sum</td></tr><tr><td>85</td><td>$800,000</td><td>$1,024,980</td><td>Monthly pension</td></tr><tr><td>90</td><td>$800,000</td><td>$1,238,353</td><td>Monthly pension</td></tr><tr><td>95</td><td>$800,000</td><td>$1,436,914</td><td>Monthly pension</td></tr><tr><td>100</td><td>$800,000</td><td>$1,621,692</td><td>Monthly pension</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Value at 65 of $5,000 a month for life, by age reached (lump sum is $800,000)</title><desc id="cf1-d">The pension is worth less than $800,000 until age 81, then more. That is the break-even life expectancy for these assumptions.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Value at 65 of $5,000 a month for life, by age reached (lump sum is $800,000)</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0.0M</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$0.4M</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$0.9M</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$1.3M</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$1.8M</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">66</text><text x="176.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">75</text><text x="308.4" y="194" text-anchor="middle" font-size="11" fill="#6b7280">85</text><text x="440.1" y="194" text-anchor="middle" font-size="11" fill="#6b7280">95</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Life expectancy</text><polyline class="draw" style="--len:464" points="58.0,171.8 71.2,167.6 84.4,163.5 97.5,159.5 110.7,155.5 123.9,151.6 137.1,147.7 150.2,143.9 163.4,140.2 176.6,136.5 189.8,132.8 202.9,129.2 216.1,125.7 229.3,122.2 242.5,118.8 255.6,115.4 268.8,112.0 282.0,108.7 295.2,105.5 308.4,102.3 321.5,99.1 334.7,96.0 347.9,92.9 361.1,89.9 374.2,86.9 387.4,84.0 400.6,81.1 413.8,78.2 426.9,75.4 440.1,72.6 453.3,69.9 466.5,67.2 479.6,64.5 492.8,61.9 506.0,59.3" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="76" y="40" font-size="11.5" fill="#374151">Monthly pension</text><polyline class="draw" style="--len:450" points="58.0,118.4 71.2,118.4 84.4,118.4 97.5,118.4 110.7,118.4 123.9,118.4 137.1,118.4 150.2,118.4 163.4,118.4 176.6,118.4 189.8,118.4 202.9,118.4 216.1,118.4 229.3,118.4 242.5,118.4 255.6,118.4 268.8,118.4 282.0,118.4 295.2,118.4 308.4,118.4 321.5,118.4 334.7,118.4 347.9,118.4 361.1,118.4 374.2,118.4 387.4,118.4 400.6,118.4 413.8,118.4 426.9,118.4 440.1,118.4 453.3,118.4 466.5,118.4 479.6,118.4 492.8,118.4 506.0,118.4" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="246" y="40" font-size="11.5" fill="#374151">Lump sum</text></svg><figcaption>The pension catches up with the lump sum at the break-even age.</figcaption></figure>
+      <h2>What moves the break-even age</h2>
+      <p><strong>Investment return.</strong> The more you expect to earn on a lump sum, the less the pension is worth in today&rsquo;s terms, so the break-even age rises. <strong>Lump sum size.</strong> A larger offer needs a longer life to beat. <strong>COLA.</strong> A pension that rises each year is worth more, so the break-even age falls as COLA rises.</p>
+      <div class="calc-table"><table><thead><tr><th>Change</th><th>Setting</th><th>Break-even age</th></tr></thead><tbody><tr><td>Investment return</td><td>3%</td><td>79</td></tr><tr><td>Investment return</td><td>5%</td><td>81</td></tr><tr><td>Investment return</td><td>7%</td><td>84</td></tr><tr><td>Lump sum</td><td>$600,000</td><td>76</td></tr><tr><td>Lump sum</td><td>$800,000</td><td>81</td></tr><tr><td>Lump sum</td><td>$1,000,000</td><td>85</td></tr><tr><td>COLA</td><td>0%</td><td>87</td></tr><tr><td>COLA</td><td>2%</td><td>83</td></tr><tr><td>COLA</td><td>3.5%</td><td>81</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Break-even age for the lump sum against $5,000 a month at different investment returns</title><desc id="cf2-d">A higher investment return favours the lump sum, so the pension has to be collected until a later age to win: age 79 at 3% against age 84 at 7%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Break-even age for the lump sum against $5,000 a month at different investment returns</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">3% return</text><rect class="bar" x="100" y="44" width="308.5" height="22" rx="4" fill="#9ca3af"/><text x="416.5" y="60" font-size="13" font-weight="700" fill="#111827">age 79</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">5% return</text><rect class="bar" x="100" y="78" width="316.3" height="22" rx="4" fill="#2563eb"/><text x="424.3" y="94" font-size="13" font-weight="700" fill="#111827">age 81</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">7% return</text><rect class="bar" x="100" y="112" width="328.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">age 84</text></svg><figcaption>Higher returns favour the lump sum.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Break-even age by lump sum size ($5,000 a month, 5% return)</title><desc id="cf3-d">The bigger the lump sum offered, the longer you must live for the monthly pension to be worth more.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Break-even age by lump sum size ($5,000 a month, 5% return)</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">$600,000</text><rect class="bar" x="100" y="44" width="293.3" height="22" rx="4" fill="#9ca3af"/><text x="401.3" y="60" font-size="13" font-weight="700" fill="#111827">age 76</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">$800,000</text><rect class="bar" x="100" y="78" width="312.6" height="22" rx="4" fill="#2563eb"/><text x="420.6" y="94" font-size="13" font-weight="700" fill="#111827">age 81</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">$1,000,000</text><rect class="bar" x="100" y="112" width="328.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">age 85</text></svg><figcaption>A bigger lump sum takes longer to beat.</figcaption></figure>
       <h2>Single-life or joint-and-survivor</h2>
-      <p>A single-life pension pays the most each month but stops when you die. A joint-and-survivor pension pays less, and keeps paying your spouse afterwards. The calculator looks at it two ways. The insurance view works out the lump sum that would replace your spouse's survivor income if you died at retirement, and the monthly premium you could pay for term life cover and still break even. The investment view assumes you take the larger single-life check and invest the difference, then compares what you would have saved at your life expectancy with the survivor payments you would have given up.</p>
-
+      <p>A <strong>single-life</strong> pension pays the most each month but stops when you die. A <strong>joint-and-survivor</strong> pension pays less and keeps paying your spouse afterwards. The default compares $5,000 a month single-life with $3,000 a month joint, for a retiree of 65 with a life expectancy of 77 and a spouse aged 62 with a life expectancy of 82. The monthly difference is <strong>$2,000</strong>. The calculator takes two views.</p>
+      <ul><li><strong>Insurance view.</strong> If you died at retirement, your spouse would need about <strong>$657,173</strong> to replace the survivor pension of $3,000 a month for their expected 20 years. If you can buy a term life policy for that amount for less than the pension difference, the single-life pension plus insurance may be better.</li><li><strong>Investment view.</strong> Take the single-life pension and invest the $2,000 difference each month. By the end of age 77 you would have about <strong>$514,709</strong>, against about <strong>$428,530</strong> of survivor payments still to be paid to your spouse, so the single-life pension comes out ahead on these numbers.</li></ul>
+      <div class="calc-table"><table><thead><tr><th>If you die at</th><th>Spouse age</th><th>Invested difference</th><th>Survivor payments owed</th><th>Better option</th></tr></thead><tbody><tr><td>65</td><td>62</td><td>$24,000</td><td>$652,231</td><td>Joint-and-survivor</td></tr><tr><td>70</td><td>67</td><td>$177,345</td><td>$601,357</td><td>Joint-and-survivor</td></tr><tr><td>75</td><td>72</td><td>$400,591</td><td>$493,057</td><td>Joint-and-survivor</td></tr><tr><td>80</td><td>77</td><td>$718,222</td><td>$303,326</td><td>Single-life</td></tr><tr><td>85</td><td>82</td><td>$1,162,450</td><td>$0</td><td>Single-life</td></tr><tr><td>90</td><td>87</td><td>$1,775,543</td><td>$0</td><td>Single-life</td></tr><tr><td>95</td><td>92</td><td>$2,612,813</td><td>$0</td><td>Single-life</td></tr><tr><td>100</td><td>97</td><td>$3,746,480</td><td>$0</td><td>Single-life</td></tr></tbody></table></div>
+      <p>If your spouse is not expected to outlive your retirement date, or you expect to outlive your spouse, the single-life pension is the better choice, since no survivor payments would be left to collect.</p>
       <h2>Retire now or work longer</h2>
-      <p>Many plans pay a bigger pension if you retire later. Entering the monthly pension at each age shows how long you need to live for the larger check to make up for the years of smaller payments you gave up. Both pensions are valued at the earlier retirement age so they can be compared fairly. The result leaves out the salary you would earn by working longer, which for many people is the bigger part of the story.</p>
-      <div class="callout">These are estimates for planning, not financial advice. Pension rules, taxes, health, other income and what you would do with a lump sum can all change the right answer, so check your plan's actual figures before you decide.</div>
-
-      <!--seo-extra-->
-      <figure style="margin:20px 0;max-width:680px"><svg viewBox="0 0 640 150" role="img" aria-label="Illustrative pension choice: one lump sum versus regular monthly income" style="width:100%;height:auto"><rect x="4" y="5" width="632" height="140" rx="14" fill="#eff6ff"/><g font-family="Arial,sans-serif" fill="#172554" font-size="15"><text x="28" y="35">Lump sum</text><text x="28" y="96">Monthly payments</text></g><rect x="205" y="21" width="285" height="27" rx="6" fill="#2563eb"/><g fill="#0f766e"><rect x="205" y="82" width="46" height="27" rx="5"/><rect x="259" y="82" width="46" height="27" rx="5"/><rect x="313" y="82" width="46" height="27" rx="5"/><rect x="367" y="82" width="46" height="27" rx="5"/><rect x="421" y="82" width="46" height="27" rx="5"/></g><g font-family="Arial,sans-serif" fill="#475569" font-size="12"><text x="497" y="38">One payment</text><text x="479" y="100">Repeated income</text></g></svg><figcaption style="color:#64748b;font-size:13px;margin-top:5px">A lump sum arrives at once; monthly pensions provide payments over time. Actual value depends on plan rules and lifespan.</figcaption></figure>
-      <h2>Worked example: understand the numbers</h2>
-      <p>A pension paying $1,500 each month provides $18,000 in payments over one year before taxes. A $180,000 lump sum equals ten years of those payments in simple dollar terms, but that comparison ignores investment returns, inflation, lifespan and survivor benefits.</p>
-      <h2>Related retirement planning tools</h2>
-      <p>For drawing down a fixed balance over time, open the <a href="annuity-payout-calculator.html">Annuity Payout Calculator</a>. For broader retirement saving and spending scenarios, try the <a href="retirement-calculator.html">Retirement Calculator</a>. For timing government benefits, see the <a href="social-security-calculator.html">Social Security Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="rmd-calculator.html">RMD Calculator</a>, <a href="annuity-payout-calculator.html">Annuity Payout Calculator</a>, <a href="social-security-calculator.html">Social Security Calculator</a>, <a href="retirement-calculator.html">Retirement Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-much-do-you-need-to-retire.html">How Much Do You Need to Retire?</a>.</p>
+      <p>The third comparison weighs retiring early on a smaller pension against working longer for a larger one. The default compares retiring at <strong>60</strong> for $2,500 a month with retiring at <strong>65</strong> for $3,800 a month, an extra $1,300 a month for waiting. Counting only the pensions and valuing them at age 60, the later retirement wins if you expect to live to <strong>87</strong> or older. The comparison leaves out the salary you would earn by working longer, which is a real gain, so the true case for working longer is stronger.</p>
+      <div class="calc-table"><table><thead><tr><th>Life expectancy</th><th>Retire at 60</th><th>Retire at 65</th><th>Better option</th></tr></thead><tbody><tr><td>70</td><td>$274,648</td><td>$169,428</td><td>Retire at 60</td></tr><tr><td>75</td><td>$397,845</td><td>$327,095</td><td>Retire at 60</td></tr><tr><td>80</td><td>$512,490</td><td>$473,818</td><td>Retire at 60</td></tr><tr><td>85</td><td>$619,177</td><td>$610,355</td><td>Retire at 60</td></tr><tr><td>90</td><td>$718,457</td><td>$737,414</td><td>Retire at 65</td></tr><tr><td>95</td><td>$810,846</td><td>$855,654</td><td>Retire at 65</td></tr><tr><td>100</td><td>$896,822</td><td>$965,685</td><td>Retire at 65</td></tr></tbody></table></div>
+      <h2>What the calculator does not include</h2>
+      <ul><li><strong>Taxes.</strong> A lump sum rolled into an IRA is not taxed up front, but pension income is usually taxable. If a lump sum would be taxed, enter the after-tax amount.</li><li><strong>Plan rules.</strong> Plans differ in how they set lump sums and survivor reductions. Use the numbers on your own statement.</li><li><strong>Plan strength.</strong> A pension is only as safe as the plan behind it. In the US, many private plans are insured by the Pension Benefit Guaranty Corporation, within limits.</li><li><strong>Health and family.</strong> Your health, your spouse&rsquo;s health and your other income all matter more than any formula.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Comparing the lump sum with a few years of pension without discounting.</li><li>Using a return rate that is too high. A small change moves the break-even by years.</li><li>Forgetting the COLA, which is often a big part of a pension&rsquo;s value.</li><li>Ignoring the spouse in the single-life decision.</li><li>Treating the break-even age as a forecast. It is a comparison point.</li></ul>
+      <h2>How to read your result</h2>
+      <p>For each comparison, the large figure is the break-even age or the better choice, with a sentence that explains it in words. The chart shows the value of each option at every life expectancy, and the table repeats it every five years. Try different returns and COLAs to see how sensitive the answer is.</p>
+      <div class="callout">This is a planning estimate, not a quote or advice. Pension plans differ, so confirm your options in writing and consider a financial adviser before making an irreversible choice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="retirement-calculator.html">Retirement Calculator</a> &ndash; plan your retirement savings</li><li><a href="401k-calculator.html">401(k) Calculator</a> &ndash; grow a 401(k)</li><li><a href="social-security-calculator.html">Social Security Calculator</a> &ndash; estimate your benefits</li><li><a href="annuity-payout-calculator.html">Annuity Payout Calculator</a> &ndash; payments from a balance</li><li><a href="ira-calculator.html">IRA Calculator</a> &ndash; Traditional versus Roth</li><li><a href="rmd-calculator.html">RMD Calculator</a> &ndash; required minimum distributions</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Should I take a lump sum or a monthly pension?</h3>
-        <p>It depends mostly on how long you expect to live and what you could earn on the lump sum. The calculator finds the break-even age: if you live beyond it, the monthly pension is worth more, and if not, the lump sum is. A monthly pension is guaranteed income for life, while a lump sum gives flexibility and can be left to heirs.</p>
+        <h3>What is the break-even age?</h3>
+        <p>It is the first age at which the monthly pension is worth at least as much as the lump sum, with each year of payments discounted back to your retirement age. If you live to that age or longer, the pension comes out ahead.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I take the lump sum or the monthly pension?</h3>
+        <p>It depends on your health, other income, and your confidence in investing a lump sum. A pension is guaranteed for life, while a lump sum is flexible and can be left to heirs. The calculator shows the age at which the pension wins.</p>
       </div>
       <div class="faq-item">
         <h3>What is a joint-and-survivor pension?</h3>
-        <p>A joint-and-survivor pension keeps paying your spouse after you die, usually at a set share of the original amount such as 50%, 66%, 75% or 100%. In return, the monthly payment while you are both alive is lower than a single-life pension, which stops when you die.</p>
+        <p>It pays a lower monthly amount while you are alive and continues paying your spouse after you die. A single-life pension pays more but stops at your death.</p>
       </div>
       <div class="faq-item">
         <h3>What does the cost-of-living adjustment do?</h3>
-        <p>The cost-of-living adjustment, or COLA, raises the pension each year to keep up with rising prices. The calculator applies it from the second year of payments. Most private pensions do not rise with inflation, so enter 0 if yours does not.</p>
+        <p>It raises the pension each year by the percentage you enter. A larger COLA makes the pension worth more, so the break-even age falls.</p>
       </div>
       <div class="faq-item">
-        <h3>Why does the investment return matter?</h3>
-        <p>Pension payments arrive over many years, so each one is discounted back to today at your investment return. A higher return makes future payments worth less now, which favors the lump sum, while a lower return favors the monthly pension.</p>
+        <h3>Does the calculator include taxes?</h3>
+        <p>No. A lump sum rolled into an IRA is not taxed up front, but if it would be taxed, enter the after-tax amount. Pension income is generally taxable.</p>
       </div>
       <div class="faq-item">
-        <h3>Does this calculator include taxes?</h3>
-        <p>No. The figures are before tax. The lump sum comparison assumes the money is rolled into a tax-deferred account such as an IRA. If your lump sum would be taxed, enter the after-tax amount instead.</p>
+        <h3>Is the pension safe?</h3>
+        <p>It is only as safe as the plan behind it. In the United States, many private pensions are insured by the Pension Benefit Guaranty Corporation up to certain limits.</p>
       </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Defined_benefit_pension_plan" rel="noopener" target="_blank">Wikipedia: Defined benefit pension plan</a>; <a href="https://www.pbgc.gov/" rel="noopener" target="_blank">Pension Benefit Guaranty Corporation</a>; <a href="https://www.irs.gov/retirement-plans/plan-participant-employee/rollovers-of-retirement-plan-and-ira-distributions" rel="noopener" target="_blank">IRS: Rollovers of retirement plan and IRA distributions</a>; <a href="https://www.irs.gov/taxtopics/tc410" rel="noopener" target="_blank">IRS: Topic no. 410, Pensions and annuity income</a></p>
     </div>
 
   </div>
