@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Annuity Payout Calculator: Payment & Duration | CalcBundle</title>
-<meta name="description" content="Estimate regular annuity payments over a specified term or how long a chosen payment could last based on principal and assumed interest.">
+<title>Annuity Payout Calculator: Payment &amp; Duration</title>
+<meta name="description" content="Estimate the equal payments an annuity balance can pay over a set number of years, or how long a chosen payment will last, with a yearly balance schedule.">
 <link rel="canonical" href="https://calcbundle.net/calculators/annuity-payout-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Annuity Payout Calculator: Payment & Duration | CalcBundle">
-<meta property="og:description" content="Estimate regular annuity payments over a specified term or how long a chosen payment could last based on principal and assumed interest.">
+<meta property="og:title" content="Annuity Payout Calculator: Payment &amp; Duration">
+<meta property="og:description" content="Estimate the equal payments an annuity balance can pay over a set number of years, or how long a chosen payment will last, with a yearly balance schedule.">
 <meta property="og:url" content="https://calcbundle.net/calculators/annuity-payout-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Annuity Payout Calculator: Payment & Duration | CalcBundle">
-<meta name="twitter:description" content="Estimate regular annuity payments over a specified term or how long a chosen payment could last based on principal and assumed interest.">
+<meta name="twitter:title" content="Annuity Payout Calculator: Payment &amp; Duration">
+<meta name="twitter:description" content="Estimate the equal payments an annuity balance can pay over a set number of years, or how long a chosen payment will last, with a yearly balance schedule.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,39 +42,47 @@
       "name": "What is the difference between a fixed length and a fixed payment payout?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A fixed length payout chooses how many years the money should last and works out the largest equal payment that uses it up exactly. A fixed payment payout chooses the amount you want to receive each period and works out how long the money will last."
+        "text": "A fixed length payout chooses how many years the money should last and works out the largest equal payment that uses it up exactly. A fixed payment payout chooses the amount you want to receive each period and works out how long the money lasts."
       }
     },
     {
       "@type": "Question",
-      "name": "Why does the calculator sometimes say you can withdraw forever?",
+      "name": "How is the payout payment calculated?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If the interest the principal earns in one period is at least as large as your payment, the balance never goes down. You are only spending the earnings, so the principal stays intact and the payments can continue indefinitely."
+        "text": "The yearly rate is converted to a rate for each period, and the payment is the principal times that rate divided by one minus the rate plus one raised to the power of minus the number of payments. For $500,000 at 6% over 10 years, monthly, that is $5,511.20."
       }
     },
     {
       "@type": "Question",
-      "name": "When are the payments made?",
+      "name": "Why does the tool say Forever?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Payments are made at the end of each period, like an ordinary annuity. The balance earns interest for the whole period before each payment comes out. The annual growth rate is converted to the matching rate for the payout frequency you choose."
+        "text": "When the payment is no more than the interest the balance earns each period, the balance never falls, so you can withdraw that amount indefinitely and keep the principal."
       }
     },
     {
       "@type": "Question",
-      "name": "Is the last payment smaller?",
+      "name": "Why is the total I receive higher than the principal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In a fixed payment payout, usually yes. The money rarely runs out on an exact payment date, so the final payment is whatever remains, including that period's interest. In a fixed length payout, every payment is the same."
+        "text": "The money that has not yet been paid out keeps earning interest, so the payments add up to more than the starting balance."
       }
     },
     {
       "@type": "Question",
-      "name": "Does this account for life expectancy or taxes?",
+      "name": "Does this include taxes and fees?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. It treats the payout as a fixed schedule and shows pre-tax figures. A life annuity from an insurer pays for as long as you live, which is a different product and is priced using life expectancy."
+        "text": "No. Real annuity contracts can charge fees and tax part of each payment, none of which is included here."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this a quote from an insurer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is a mathematical projection. Insurers often set payouts from life expectancy and add guarantees and charges, so the actual offer will differ."
       }
     }
   ]
@@ -177,48 +185,71 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">The payout phase of an annuity</h2>
-      <p>An annuity has two stages. In the accumulation phase you build up a balance. In the payout phase, which this calculator covers, the balance is paid back to you in a series of equal payments while whatever remains keeps earning interest. Because the leftover money keeps growing, the total you receive is larger than the principal you started with.</p>
-
-      <h2>Fixed length or fixed payment</h2>
-      <p>With a fixed length payout you decide how many years the money should last. The calculator finds the largest equal payment that brings the balance to exactly zero on the last payment date, which is the same arithmetic as a loan payment run in reverse. With a fixed payment payout you decide how much you want each time, and the calculator counts the payments until the money is gone. If your payment is no larger than the interest earned each period, the balance never shrinks and you can withdraw forever.</p>
-
-      <h2>How the numbers are worked out</h2>
-      <p>The yearly rate is converted to the matching rate for your payout frequency, so a 6% yearly rate grows the balance by 6% over a full year whether you are paid monthly or annually. Each period the balance earns interest, then the payment comes out at the end of the period. The yearly schedule adds up the interest and the withdrawals for each year and shows the balance that remains.</p>
-      <div class="callout">This is a planning estimate. Real annuity contracts can charge fees, set payout rates from life expectancy and tax the interest portion of each payment, none of which is included here.</div>
-
-      <!--seo-extra-->
-      <figure style="margin:20px 0;max-width:680px"><svg viewBox="0 0 640 140" role="img" aria-label="Illustrative zero-interest annuity payout of twelve thousand dollars as twelve monthly one-thousand-dollar payments" style="width:100%;height:auto"><rect x="4" y="4" width="632" height="132" rx="14" fill="#eff6ff"/><text x="25" y="38" fill="#172554" font-family="Arial,sans-serif" font-size="16">$12,000 starting principal</text><path d="M25 50 H615" stroke="#94a3b8" stroke-width="2"/><g fill="#2563eb"><rect x="26" y="62" width="42" height="30" rx="4"/><rect x="75" y="62" width="42" height="30" rx="4"/><rect x="124" y="62" width="42" height="30" rx="4"/><rect x="173" y="62" width="42" height="30" rx="4"/><rect x="222" y="62" width="42" height="30" rx="4"/><rect x="271" y="62" width="42" height="30" rx="4"/><rect x="320" y="62" width="42" height="30" rx="4"/><rect x="369" y="62" width="42" height="30" rx="4"/><rect x="418" y="62" width="42" height="30" rx="4"/><rect x="467" y="62" width="42" height="30" rx="4"/><rect x="516" y="62" width="42" height="30" rx="4"/><rect x="565" y="62" width="42" height="30" rx="4"/></g><text x="320" y="117" text-anchor="middle" fill="#475569" font-family="Arial,sans-serif" font-size="14">12 monthly payments of $1,000 at 0% return</text></svg><figcaption style="color:#64748b;font-size:13px;margin-top:5px">An illustrative payout schedule, not an insurer quote or guaranteed income.</figcaption></figure>
-      <h2>Worked example: understand the numbers</h2>
-      <p>With a $12,000 principal, 0% return and 12 equal monthly payouts, each payment is $1,000. At a positive return rate, the payment pattern and duration can change; insurer fees, guarantees and taxes are not established by this simple example.</p>
-      <h2>Related retirement planning tools</h2>
-      <p>If you're still building the balance, try the <a href="annuity-calculator.html">Annuity Growth Calculator</a>. For income planning beyond annuities, use the <a href="retirement-calculator.html">Retirement Calculator</a> or <a href="pension-calculator.html">Pension Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="retirement-calculator.html">Retirement Calculator</a>, <a href="401k-calculator.html">401K Calculator</a>, <a href="rmd-calculator.html">RMD Calculator</a>, <a href="ira-calculator.html">IRA Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> $500,000 at 6% paid out monthly over 10 years gives $5,511.20 a month, and the 120 payments total $661,344. A fixed $5,000 a month on the same balance lasts about 11.4 years.</div>
+      <h2>The payout phase of an annuity</h2>
+      <p>An annuity has two stages. In the <strong>accumulation phase</strong> you build up a balance. In the <strong>payout phase</strong>, which this calculator covers, the balance is paid back to you in equal payments while the money that remains keeps earning interest. Because the leftover money keeps growing, the total you receive is more than the principal you start with.</p>
+      <h2>Two questions the calculator answers</h2>
+      <ul><li><strong>How much can I withdraw over a fixed length?</strong> You choose the years, and the tool finds the largest equal payment that brings the balance to exactly zero on the last payment. It is the arithmetic of a loan payment run in reverse.</li><li><strong>How long will a fixed payment last?</strong> You choose the amount per period, and the tool counts the payments until the money is gone. If the payment is no more than the interest earned each period, the balance never falls and the tool says <em>Forever</em>.</li></ul>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on a principal of <strong>$500,000</strong>, a return of <strong>6%</strong> a year, a payout of <strong>10 years</strong> and monthly payments. A 6% yearly rate is converted to the matching monthly rate, 1.06<sup>1/12</sup> &minus; 1 = 0.486755%, so the balance grows by exactly 6% over a full year. With 120 payments, the payment is P &times; i &divide; (1 &minus; (1 + i)<sup>&minus;120</sup>) = <strong>$5,511.20 a month</strong>. The 120 payments total <strong>$661,344.16</strong>, which is your $500,000 plus <strong>$161,344.16</strong> of interest earned on the part still invested.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Where the $661,344 of payments comes from</title><desc id="cf2-d">Of everything you receive, 76% is your own principal and 24% is interest earned while the balance is still invested.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the $661,344 of payments comes from</text><rect class="bar" x="14.0" y="42" width="372.0" height="30" fill="#2563eb"/><text x="200.0" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">76%</text><rect class="bar" x="386.0" y="42" width="120.0" height="30" fill="#10b981"/><text x="446.0" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">24%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Your starting principal: <tspan font-weight="700">$500,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Interest earned while paying out: <tspan font-weight="700">$161,344</tspan></text></svg><figcaption>Most of the payout is your own money, with the rest earned along the way.</figcaption></figure>
+      <h2>The yearly schedule</h2>
+      <p>Each period the balance earns interest and then the payment comes out at the end of the period. The yearly table adds up the interest and withdrawals and shows the balance that is left.</p>
+      <div class="calc-table"><table><thead><tr><th>Year</th><th>Beginning balance</th><th>Interest</th><th>Withdrawals</th><th>Ending balance</th></tr></thead><tbody><tr><td>1</td><td>$500,000.00</td><td>$28,200.44</td><td>$66,134.42</td><td>$462,066.02</td></tr><tr><td>2</td><td>$462,066.02</td><td>$25,924.40</td><td>$66,134.42</td><td>$421,856.00</td></tr><tr><td>3</td><td>$421,856.00</td><td>$23,511.80</td><td>$66,134.42</td><td>$379,233.38</td></tr><tr><td>4</td><td>$379,233.38</td><td>$20,954.44</td><td>$66,134.42</td><td>$334,053.41</td></tr><tr><td>5</td><td>$334,053.41</td><td>$18,243.64</td><td>$66,134.42</td><td>$286,162.63</td></tr><tr><td>6</td><td>$286,162.63</td><td>$15,370.19</td><td>$66,134.42</td><td>$235,398.41</td></tr><tr><td>7</td><td>$235,398.41</td><td>$12,324.34</td><td>$66,134.42</td><td>$181,588.34</td></tr><tr><td>8</td><td>$181,588.34</td><td>$9,095.74</td><td>$66,134.42</td><td>$124,549.66</td></tr><tr><td>9</td><td>$124,549.66</td><td>$5,673.42</td><td>$66,134.42</td><td>$64,088.66</td></tr><tr><td>10</td><td>$64,088.66</td><td>$2,045.76</td><td>$66,134.42</td><td>$0.00</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Balance and interest earned by year on $500,000 paid out over 10 years at 6%</title><desc id="cf1-d">The balance falls to zero at year 10 while the interest earned along the way climbs to $161,344.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Balance and interest earned by year on $500,000 paid out over 10 years at 6%</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0k</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$135k</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$270k</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$405k</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$540k</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="147.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">2</text><text x="237.2" y="194" text-anchor="middle" font-size="11" fill="#6b7280">4</text><text x="326.8" y="194" text-anchor="middle" font-size="11" fill="#6b7280">6</text><text x="416.4" y="194" text-anchor="middle" font-size="11" fill="#6b7280">8</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">10</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Year</text><polyline class="draw" style="--len:465" points="58.0,59.3 102.8,68.2 147.6,77.6 192.4,87.5 237.2,98.1 282.0,109.2 326.8,121.1 371.6,133.6 416.4,146.9 461.2,161.0 506.0,176.0" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Balance</text><polyline class="draw" style="--len:451" points="58.0,176.0 102.8,169.4 147.6,163.4 192.4,157.9 237.2,153.0 282.0,148.7 326.8,145.2 371.6,142.3 416.4,140.2 461.2,138.8 506.0,138.4" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="246" y="40" font-size="11.5" fill="#374151">Interest earned so far</text></svg><figcaption>The balance reaches zero exactly at the last payment.</figcaption></figure>
+      <h2>Changing the payout length</h2>
+      <p>A longer payout means smaller payments but more interest overall. At 6% on $500,000 with monthly payments:</p>
+      <div class="calc-table"><table><thead><tr><th>Payout length</th><th>Monthly payment</th><th>Total paid</th><th>Interest earned</th></tr></thead><tbody><tr><td>5 years</td><td>$9,629.49</td><td>$577,769.49</td><td>$77,769.49</td></tr><tr><td>10 years</td><td>$5,511.20</td><td>$661,344.16</td><td>$161,344.16</td></tr><tr><td>20 years</td><td>$3,536.46</td><td>$848,750.48</td><td>$348,750.48</td></tr><tr><td>30 years</td><td>$2,946.85</td><td>$1,060,866.75</td><td>$560,866.75</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Monthly payment from $500,000 at 6%, by payout length</title><desc id="cf3-d">A longer payout means smaller payments: $5,511 a month over 10 years and $2,947 over 30.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Monthly payment from $500,000 at 6%, by payout length</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">5 years</text><rect class="bar" x="80" y="44" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$9,629</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">10 years</text><rect class="bar" x="80" y="78" width="199.2" height="22" rx="4" fill="#2563eb"/><text x="287.2" y="94" font-size="13" font-weight="700" fill="#111827">$5,511</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">20 years</text><rect class="bar" x="80" y="112" width="127.8" height="22" rx="4" fill="#9ca3af"/><text x="215.8" y="128" font-size="13" font-weight="700" fill="#111827">$3,536</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">30 years</text><rect class="bar" x="80" y="146" width="106.5" height="22" rx="4" fill="#9ca3af"/><text x="194.5" y="162" font-size="13" font-weight="700" fill="#111827">$2,947</text></svg><figcaption>Spreading the money over more years lowers each payment.</figcaption></figure>
+      <h2>Changing the return rate</h2>
+      <p>At 0% the payout is just principal divided by the number of payments. $12,000 over 12 months gives exactly $1,000 each. For the default $500,000 over 10 years, the return makes a large difference:</p>
+      <div class="calc-table"><table><thead><tr><th>Return rate</th><th>Monthly payment</th></tr></thead><tbody><tr><td>0%</td><td>$4,166.67</td></tr><tr><td>3%</td><td>$4,818.70</td></tr><tr><td>6%</td><td>$5,511.20</td></tr><tr><td>9%</td><td>$6,239.14</td></tr></tbody></table></div>
+      <h2>Changing the payment frequency</h2>
+      <p>The tool offers annual, semiannual, quarterly, monthly, semimonthly (24 a year) and biweekly (26 a year) payments. The yearly rate stays the same, so the total received barely changes, but the amount per payment does. Paying more often means each payment is smaller and the money sits invested a little less long, so the annual total is a touch lower.</p>
+      <div class="calc-table"><table><thead><tr><th>Frequency</th><th>Payments a year</th><th>Payment</th><th>Paid per year</th><th>Total over 10 years</th></tr></thead><tbody><tr><td>Annually</td><td>1</td><td>$67,933.98</td><td>$67,933.98</td><td>$679,339.79</td></tr><tr><td>Semiannually</td><td>2</td><td>$33,472.22</td><td>$66,944.44</td><td>$669,444.39</td></tr><tr><td>Quarterly</td><td>4</td><td>$16,614.21</td><td>$66,456.85</td><td>$664,568.51</td></tr><tr><td>Monthly</td><td>12</td><td>$5,511.20</td><td>$66,134.42</td><td>$661,344.16</td></tr><tr><td>Semimonthly</td><td>24</td><td>$2,752.26</td><td>$66,054.13</td><td>$660,541.33</td></tr><tr><td>Biweekly</td><td>26</td><td>$2,540.31</td><td>$66,047.96</td><td>$660,479.63</td></tr></tbody></table></div>
+      <h2>How long a fixed payment lasts</h2>
+      <p>Switch the question to &ldquo;How long will a fixed payment last?&rdquo; and enter $5,000 a month on the same $500,000 at 6%. The interest earned in the first month is $2,433.78, so only the rest of each $5,000 reduces the balance. The money lasts <strong>11.45 years</strong>. The table shows other payments.</p>
+      <div class="calc-table"><table><thead><tr><th>Monthly payment</th><th>How long it lasts</th></tr></thead><tbody><tr><td>$3,000</td><td>28.62 years</td></tr><tr><td>$4,000</td><td>16.09 years</td></tr><tr><td>$5,000</td><td>11.45 years</td></tr><tr><td>$6,000</td><td>8.93 years</td></tr><tr><td>$8,000</td><td>6.23 years</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">How long a fixed monthly payment lasts on $500,000 at 6% (years)</title><desc id="cf4-d">A payment of $5,000 a month lasts about 11.4 years, while $3,000 a month lasts about 29 years, since the balance keeps earning about $2,434 a month at the start.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">How long a fixed monthly payment lasts on $500,000 at 6% (years)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">$3,000</text><rect class="bar" x="80" y="44" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">28.6 years</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">$4,000</text><rect class="bar" x="80" y="78" width="195.7" height="22" rx="4" fill="#9ca3af"/><text x="283.7" y="94" font-size="13" font-weight="700" fill="#111827">16.1 years</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">$5,000</text><rect class="bar" x="80" y="112" width="139.2" height="22" rx="4" fill="#2563eb"/><text x="227.2" y="128" font-size="13" font-weight="700" fill="#111827">11.4 years</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">$6,000</text><rect class="bar" x="80" y="146" width="108.6" height="22" rx="4" fill="#9ca3af"/><text x="196.6" y="162" font-size="13" font-weight="700" fill="#111827">8.9 years</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">$8,000</text><rect class="bar" x="80" y="180" width="75.7" height="22" rx="4" fill="#9ca3af"/><text x="163.7" y="196" font-size="13" font-weight="700" fill="#111827">6.2 years</text></svg><figcaption>A small increase in the payment shortens the time a lot.</figcaption></figure>
+      <h2>When the answer is forever</h2>
+      <p>If the payment is no more than the interest earned each period, the balance never falls. At 6% a year the first month&rsquo;s interest on $500,000 is $2,433.78, so a payment of $2,400 a month is below that and the tool reports <strong>Forever</strong>, with the principal intact. The tool also reports Forever if the payout would last longer than 200 years.</p>
+      <h2>What this tool leaves out</h2>
+      <ul><li><strong>Fees.</strong> Real contracts may charge fees that reduce the return.</li><li><strong>Life expectancy.</strong> Insurers often set payouts from your age and life expectancy, and a life annuity pays for as long as you live, which a fixed-term calculation does not.</li><li><strong>Taxes.</strong> A part of each payment may be taxable income, depending on the contract and how it was funded.</li><li><strong>Guarantees and inflation.</strong> The tool assumes a constant return and level payments, so it does not model rising prices.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Treating the result as an insurer&rsquo;s quote. It is a mathematical projection.</li><li>Using a return rate that is too optimistic. A small change in the rate moves the payment a lot.</li><li>Forgetting that the payout length is in years, not payments.</li><li>Entering a payment below the interest and expecting an end date.</li><li>Mixing up the monthly rate and the yearly rate. The tool takes the yearly rate.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the payment, or the number of years, depending on your question. Below it are the number of payments, the total you receive, your starting principal and the interest earned, with a chart of the balance and a yearly table. If the tool says Forever, the interest each period is at least as large as the payment.</p>
+      <div class="callout">This is a planning estimate, not a quote or a guarantee. For a real annuity, compare the contract terms, fees and tax treatment with a qualified adviser.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="annuity-calculator.html">Annuity Calculator</a> &ndash; grow an annuity before payouts begin</li><li><a href="retirement-calculator.html">Retirement Calculator</a> &ndash; plan your retirement savings</li><li><a href="pension-calculator.html">Pension Calculator</a> &ndash; pension income</li><li><a href="rmd-calculator.html">RMD Calculator</a> &ndash; required minimum distributions</li><li><a href="401k-calculator.html">401(k) Calculator</a> &ndash; grow a 401(k)</li><li><a href="ira-calculator.html">IRA Calculator</a> &ndash; grow an IRA</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What is the difference between a fixed length and a fixed payment payout?</h3>
-        <p>A fixed length payout chooses how many years the money should last and works out the largest equal payment that uses it up exactly. A fixed payment payout chooses the amount you want to receive each period and works out how long the money will last.</p>
+        <p>A fixed length payout chooses how many years the money should last and works out the largest equal payment that uses it up exactly. A fixed payment payout chooses the amount you want to receive each period and works out how long the money lasts.</p>
       </div>
       <div class="faq-item">
-        <h3>Why does the calculator sometimes say you can withdraw forever?</h3>
-        <p>If the interest the principal earns in one period is at least as large as your payment, the balance never goes down. You are only spending the earnings, so the principal stays intact and the payments can continue indefinitely.</p>
+        <h3>How is the payout payment calculated?</h3>
+        <p>The yearly rate is converted to a rate for each period, and the payment is the principal times that rate divided by one minus the rate plus one raised to the power of minus the number of payments. For $500,000 at 6% over 10 years, monthly, that is $5,511.20.</p>
       </div>
       <div class="faq-item">
-        <h3>When are the payments made?</h3>
-        <p>Payments are made at the end of each period, like an ordinary annuity. The balance earns interest for the whole period before each payment comes out. The annual growth rate is converted to the matching rate for the payout frequency you choose.</p>
+        <h3>Why does the tool say Forever?</h3>
+        <p>When the payment is no more than the interest the balance earns each period, the balance never falls, so you can withdraw that amount indefinitely and keep the principal.</p>
       </div>
       <div class="faq-item">
-        <h3>Is the last payment smaller?</h3>
-        <p>In a fixed payment payout, usually yes. The money rarely runs out on an exact payment date, so the final payment is whatever remains, including that period's interest. In a fixed length payout, every payment is the same.</p>
+        <h3>Why is the total I receive higher than the principal?</h3>
+        <p>The money that has not yet been paid out keeps earning interest, so the payments add up to more than the starting balance.</p>
       </div>
       <div class="faq-item">
-        <h3>Does this account for life expectancy or taxes?</h3>
-        <p>No. It treats the payout as a fixed schedule and shows pre-tax figures. A life annuity from an insurer pays for as long as you live, which is a different product and is priced using life expectancy.</p>
+        <h3>Does this include taxes and fees?</h3>
+        <p>No. Real annuity contracts can charge fees and tax part of each payment, none of which is included here.</p>
       </div>
+      <div class="faq-item">
+        <h3>Is this a quote from an insurer?</h3>
+        <p>No. It is a mathematical projection. Insurers often set payouts from life expectancy and add guarantees and charges, so the actual offer will differ.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/insurance-products/annuities" rel="noopener" target="_blank">Investor.gov: Annuities</a>; <a href="https://www.finra.org/investors/investing/investment-products/annuities" rel="noopener" target="_blank">FINRA: Annuities</a>; <a href="https://www.irs.gov/taxtopics/tc410" rel="noopener" target="_blank">IRS: Topic no. 410, Pensions and annuity income</a>; <a href="https://en.wikipedia.org/wiki/Annuity" rel="noopener" target="_blank">Wikipedia: Annuity</a></p>
     </div>
 
   </div>
