@@ -42,7 +42,7 @@
       "name": "What if I only want a lump sum with no recurring deposits?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Leave the Periodic Deposit at 0 — the calculator will simply compound the starting amount at the given rate for the given number of periods."
+        "text": "Leave the periodic deposit at 0. The calculator then simply compounds the starting amount at the given rate for the given number of periods."
       }
     },
     {
@@ -50,7 +50,39 @@
       "name": "Does timing (beginning vs. end of period) matter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — deposits made at the beginning of each period earn one extra period of interest compared to deposits made at the end, producing a slightly higher future value."
+        "text": "Yes. Deposits made at the beginning of each period earn one extra period of interest, producing a slightly higher future value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the PV figure in the results mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the value today of the whole cash flow stream: the starting amount plus the present value of every future deposit. It is always less than the future value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I choose an interest rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use a cautious, long-term figure and test a lower one. Actual returns change from year to year, and savings rates differ from investment returns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do periods have to be years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, but the rate must match the period. For monthly deposits, use the monthly rate and the number of months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it include taxes or inflation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The result is before tax and in future dollars. Use the Inflation Calculator to see what it could buy in today's terms."
       }
     }
   ]
@@ -135,30 +167,66 @@
       <div class="schedule-table-wrap" id="fv-table-wrap"></div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What future value captures</h2>
-      <p>Future value answers the mirror-image question to present value: given money you have today (and possibly add to over time), how much will it be worth at a set point in the future once compound interest has had time to work? It's the math behind every savings account projection, retirement estimate, and investment growth chart.</p>
-
-      <h2>Starting amount vs. periodic deposits</h2>
-      <p>This calculator combines both pieces at once — a lump sum that starts growing immediately, plus a recurring deposit added each period. The "PV (Present Value)" figure in the results is the value today of the entire cash flow stream (starting amount plus the present value of every future deposit), which will always discount back to less than the future value shown.</p>
-      <div class="callout">Future value and present value are two views of the same relationship. If you already know a target future amount and want to know what it's worth today instead, use the <a href="present-value-calculator.html">Present Value Calculator</a>.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: future value with yearly deposits</h2><p>Start with $1,000, add $100 <strong>at the end of each year</strong> for 10 years, and assume 6% interest per year. The starting $1,000 grows to about $1,790.85; the deposits grow to about $1,318.08. Together the projected future value is <strong>$3,108.93</strong>. You contributed $2,000 in total, so approximately $1,108.93 comes from growth.</p><h2>Tips for future-value projections</h2><p>Beginning-of-period deposits earn one extra period of interest compared with end-of-period deposits. Try more than one reasonable assumed rate rather than treating a single forecast as guaranteed. Taxes, fees and inflation may reduce how much the eventual balance is worth.</p>
-      
-      <p>To work backward from a future amount to its worth today, open the <a href="present-value-calculator.html">Present Value Calculator</a>. To solve for a missing contribution or rate, use the <a href="investment-calculator.html">Investment Calculator</a>. Read <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a> for more about compounding over time.</p>
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a>.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Future value is what money will be worth after it earns interest. $1,000 plus $100 a year for 10 years at 6% grows to $3,108.93, of which $1,108.93 is interest.</div>
+      <h2>What future value captures</h2>
+      <p>Future value answers the mirror-image question to present value: given money you have today, and possibly add to over time, how much will it be worth at a set point in the future once compound interest has had time to work? It is the maths behind savings projections, retirement estimates and investment growth charts. The formula for a starting amount PV and a deposit PMT each period is <strong>FV = PV &times; (1 + r)<sup>n</sup> + PMT &times; ((1 + r)<sup>n</sup> &minus; 1) &divide; r</strong>, where r is the rate per period and n the number of periods.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>Start with $1,000, add $100 at the end of each year for 10 years, and assume 6% interest per year. The starting $1,000 grows to <strong>$1,790.85</strong>. The deposits grow to <strong>$1,318.08</strong>. Together the projected future value is <strong>$3,108.93</strong>. You contributed $2,000 in total, so about <strong>$1,108.93</strong> comes from growth. The &ldquo;PV&rdquo; figure the calculator shows, $1,736.01, is the value today of the whole stream: the starting amount plus the present value of every deposit, which always discounts to less than the future value.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where the $3,109 future value comes from (default inputs)</title><desc id="cf1-d">You put in $2,000 in total ($1,000 plus 10 deposits of $100), and $1,109, or 36% of the final amount, is growth.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the $3,109 future value comes from (default inputs)</text><rect class="bar" x="14.0" y="42" width="158.3" height="30" fill="#2563eb"/><text x="93.1" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">32%</text><rect class="bar" x="172.3" y="42" width="158.3" height="30" fill="#6366f1"/><text x="251.4" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">32%</text><rect class="bar" x="330.5" y="42" width="175.5" height="30" fill="#10b981"/><text x="418.3" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">36%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Starting amount: <tspan font-weight="700">$1,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#6366f1"/><text x="282" y="98" font-size="12.5" fill="#374151">Your deposits: <tspan font-weight="700">$1,000</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#10b981"/><text x="32" y="120" font-size="12.5" fill="#374151">Interest: <tspan font-weight="700">$1,109</tspan></text></svg><figcaption>Starting amount, deposits and interest, added together.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Balance over 10 years: with $100 deposits vs the $1,000 left alone (6%)</title><desc id="cf2-d">The deposits lift the end balance from $1,791 to $3,109.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Balance over 10 years: with $100 deposits vs the $1,000 left alone (6%)</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0.0k</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$0.8k</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$1.7k</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$2.5k</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$3.4k</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="147.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">2</text><text x="237.2" y="194" text-anchor="middle" font-size="11" fill="#6b7280">4</text><text x="326.8" y="194" text-anchor="middle" font-size="11" fill="#6b7280">6</text><text x="416.4" y="194" text-anchor="middle" font-size="11" fill="#6b7280">8</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">10</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Years</text><polyline class="draw" style="--len:457" points="58.0,138.5 102.8,132.5 147.6,126.1 192.4,119.4 237.2,112.2 282.0,104.6 326.8,96.6 371.6,88.1 416.4,79.0 461.2,69.5 506.0,59.3" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="76" y="40" font-size="11.5" fill="#374151">With $100 a year</text><polyline class="draw" style="--len:451" points="58.0,138.5 102.8,136.2 147.6,133.8 192.4,131.3 237.2,128.6 282.0,125.8 326.8,122.8 371.6,119.6 416.4,116.2 461.2,112.6 506.0,108.8" fill="none" stroke="#9ca3af" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#9ca3af"/><text x="246" y="40" font-size="11.5" fill="#374151">Starting amount only</text></svg><figcaption>Regular deposits make the curve steeper, because each one also earns interest.</figcaption></figure>
+      <h2>Beginning or end of the period?</h2>
+      <p>The deposit can be made at the end or the beginning of each period. Deposits made at the beginning earn one extra period of interest. With the default inputs, beginning-of-year deposits give <strong>$3,188.01</strong> instead of $3,108.93, a gain of $79.08 from the extra year of interest on each deposit.</p>
+      <h2>How the rate changes the result</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Future value after 10 years by interest rate ($1,000 start, $100 a year)</title><desc id="cf3-d">Going from 2% to 10% takes the result from $2,314 to $4,187, so the rate assumption matters a great deal.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Future value after 10 years by interest rate ($1,000 start, $100 a year)</text><text x="52" y="60" text-anchor="end" font-size="13" fill="#6b7280">2%</text><rect class="bar" x="60" y="44" width="203.4" height="22" rx="4" fill="#9ca3af"/><text x="271.4" y="60" font-size="13" font-weight="700" fill="#111827">$2,314</text><text x="52" y="94" text-anchor="end" font-size="13" fill="#6b7280">4%</text><rect class="bar" x="60" y="78" width="235.6" height="22" rx="4" fill="#9ca3af"/><text x="303.6" y="94" font-size="13" font-weight="700" fill="#111827">$2,681</text><text x="52" y="128" text-anchor="end" font-size="13" fill="#6b7280">6%</text><rect class="bar" x="60" y="112" width="273.2" height="22" rx="4" fill="#2563eb"/><text x="341.2" y="128" font-size="13" font-weight="700" fill="#111827">$3,109</text><text x="52" y="162" text-anchor="end" font-size="13" fill="#6b7280">8%</text><rect class="bar" x="60" y="146" width="317.0" height="22" rx="4" fill="#9ca3af"/><text x="385.0" y="162" font-size="13" font-weight="700" fill="#111827">$3,608</text><text x="52" y="196" text-anchor="end" font-size="13" fill="#6b7280">10%</text><rect class="bar" x="60" y="180" width="368.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">$4,187</text></svg><figcaption>A few percentage points of return change the outcome far more than most people expect.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Interest rate</th><th>Future value after 10 years</th></tr></thead><tbody><tr><td>2%</td><td>$2,313.97</td></tr><tr><td>4%</td><td>$2,680.85</td></tr><tr><td>6%</td><td>$3,108.93</td></tr><tr><td>8%</td><td>$3,607.58</td></tr><tr><td>10%</td><td>$4,187.48</td></tr></tbody></table></div>
+      <h2>How time changes the result</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">Future value by number of years at 6% ($1,000 start, $100 a year)</title><desc id="cf4-d">Time does the work: interest is $1,109 over 10 years but $9,649 over 30 years.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Future value by number of years at 6% ($1,000 start, $100 a year)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">5 years</text><rect class="bar" x="80" y="44" width="48.5" height="22" rx="4" fill="#9ca3af"/><text x="136.5" y="60" font-size="13" font-weight="700" fill="#111827">$1,902</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">10 years</text><rect class="bar" x="80" y="78" width="79.3" height="22" rx="4" fill="#2563eb"/><text x="167.3" y="94" font-size="13" font-weight="700" fill="#111827">$3,109</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">20 years</text><rect class="bar" x="80" y="112" width="175.6" height="22" rx="4" fill="#9ca3af"/><text x="263.6" y="128" font-size="13" font-weight="700" fill="#111827">$6,886</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">30 years</text><rect class="bar" x="80" y="146" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">$13,649</text></svg><figcaption>Longer periods let interest earn interest, so growth accelerates.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Years</th><th>Future value</th><th>Interest earned</th></tr></thead><tbody><tr><td>5</td><td>$1,901.93</td><td>$401.93</td></tr><tr><td>10</td><td>$3,108.93</td><td>$1,108.93</td></tr><tr><td>20</td><td>$6,885.69</td><td>$3,885.69</td></tr><tr><td>30</td><td>$13,649.31</td><td>$9,649.31</td></tr></tbody></table></div>
+      <p>A handy check is the rule of 72: at 6% a sum doubles in about 72 &divide; 6 = 12 years.</p>
+      <h2>Reading the period-by-period table</h2>
+      <p>The table under the result lists every period. In year 1 of the default plan, the $1,000 earns 6% = $60.00 of interest and the $100 deposit is added at the end, so the balance goes from $1,000.00 to $1,160.00. In year 2, interest is calculated on the larger $1,160.00 balance, and so on. Watching how the interest column grows each row is the quickest way to see compounding at work, and why starting early matters more than the size of any one deposit.</p>
+      <h2>A savings-goal example</h2>
+      <p>Suppose you want to know what $200 a month might become. Use 12 periods a year: enter the number of months, the monthly rate (the yearly rate divided by 12) and a deposit of $200. For 5 years at 6% a year that is 60 periods at 0.5%, giving about $13,954 from $12,000 of deposits. The matching Investment Calculator can solve for the monthly amount needed to reach a target instead.</p>
+      <h2>Using it for real plans</h2>
+      <ul><li>Try more than one reasonable rate rather than treating a single forecast as certain.</li><li>Taxes, fees and inflation reduce what the eventual balance is worth. See the Inflation Calculator for the purchasing-power effect.</li><li>To work backwards from a target amount to what it is worth today, use the Present Value Calculator.</li><li>To solve for a missing deposit, rate or time, use the Investment Calculator.</li></ul>
+      <h2>What if there are no deposits?</h2>
+      <p>Leave the periodic deposit at 0 and the calculator simply compounds the starting amount. The default $1,000 at 6% for 10 years becomes $1,790.85.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing periods: an annual rate with monthly deposits gives a wrong answer. Use matching periods.</li><li>Assuming a high rate will last for decades.</li><li>Forgetting taxes and inflation.</li><li>Entering the rate as a decimal, such as 0.06. The box takes a percentage.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the projected future value. Below it are the present value of the cash flows, the total of your deposits and the total interest, with a chart and a period-by-period table showing the start balance, deposit, interest and end balance. Change one input at a time to see which assumption moves the answer most.</p>
+      <div class="callout">This calculator gives projections, not guaranteed results. It is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="present-value-calculator.html">Present Value Calculator</a> &ndash; what future money is worth today</li><li><a href="investment-calculator.html">Investment Calculator</a> &ndash; solve for deposits, rate or time</li><li><a href="compound-interest-calculator.html">Compounding Frequency Converter</a> &ndash; compare compounding</li><li><a href="savings-calculator.html">Savings Calculator</a> &ndash; savings with yearly increases</li><li><a href="inflation-calculator.html">Inflation Calculator</a> &ndash; what the future amount will buy</li><li><a href="finance-calculator.html">Finance Calculator</a> &ndash; general finance maths</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What if I only want a lump sum with no recurring deposits?</h3>
-        <p>Leave the Periodic Deposit at 0 — the calculator will simply compound the starting amount at the given rate for the given number of periods.</p>
+        <p>Leave the periodic deposit at 0. The calculator then simply compounds the starting amount at the given rate for the given number of periods.</p>
       </div>
       <div class="faq-item">
         <h3>Does timing (beginning vs. end of period) matter?</h3>
-        <p>Yes — deposits made at the beginning of each period earn one extra period of interest compared to deposits made at the end, producing a slightly higher future value.</p>
+        <p>Yes. Deposits made at the beginning of each period earn one extra period of interest, producing a slightly higher future value.</p>
       </div>
+      <div class="faq-item">
+        <h3>What does the PV figure in the results mean?</h3>
+        <p>It is the value today of the whole cash flow stream: the starting amount plus the present value of every future deposit. It is always less than the future value.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I choose an interest rate?</h3>
+        <p>Use a cautious, long-term figure and test a lower one. Actual returns change from year to year, and savings rates differ from investment returns.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do periods have to be years?</h3>
+        <p>No, but the rate must match the period. For monthly deposits, use the monthly rate and the number of months.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it include taxes or inflation?</h3>
+        <p>No. The result is before tax and in future dollars. Use the Inflation Calculator to see what it could buy in today's terms.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" rel="noopener" target="_blank">Investor.gov: Compound Interest Calculator</a></p>
     </div>
 
   </div>
