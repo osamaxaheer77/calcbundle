@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VAT Calculator: Add, Remove or Find VAT Rate | CalcBundle</title>
-<meta name="description" content="Add VAT to a net price, extract VAT from a gross price, or work out an effective rate from supplied values.">
+<title>VAT Calculator: Add, Remove or Find the VAT Rate</title>
+<meta name="description" content="Add VAT to a net price, take it out of a gross price, or find the VAT rate from any two of the rate, net price, gross price and VAT amount.">
 <link rel="canonical" href="https://calcbundle.net/calculators/vat-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="VAT Calculator: Add, Remove or Find VAT Rate | CalcBundle">
-<meta property="og:description" content="Add VAT to a net price, extract VAT from a gross price, or work out an effective rate from supplied values.">
+<meta property="og:title" content="VAT Calculator: Add, Remove or Find the VAT Rate">
+<meta property="og:description" content="Add VAT to a net price, take it out of a gross price, or find the VAT rate from any two of the rate, net price, gross price and VAT amount.">
 <meta property="og:url" content="https://calcbundle.net/calculators/vat-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="VAT Calculator: Add, Remove or Find VAT Rate | CalcBundle">
-<meta name="twitter:description" content="Add VAT to a net price, extract VAT from a gross price, or work out an effective rate from supplied values.">
+<meta name="twitter:title" content="VAT Calculator: Add, Remove or Find the VAT Rate">
+<meta name="twitter:description" content="Add VAT to a net price, take it out of a gross price, or find the VAT rate from any two of the rate, net price, gross price and VAT amount.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,39 +42,47 @@
       "name": "How do I add VAT to a price?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Multiply the net price by one plus the VAT rate as a decimal. At 20% that means multiplying by 1.2, so a net price of 1,200 becomes a gross price of 1,440. Enter the rate and the net price to do this."
+        "text": "Multiply the net price by one plus the VAT rate. At 20 percent, $1,200 becomes $1,200 times 1.20, which is $1,440, and the VAT is $240."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I remove VAT from a total?",
+      "name": "How do I remove VAT from a price?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Divide the gross price by one plus the VAT rate as a decimal. At 20%, divide by 1.2, so 1,440 gives a net price of 1,200 and a VAT amount of 240. Enter the rate and the gross price to do this."
+        "text": "Divide the gross price by one plus the VAT rate. At 20 percent, $1,440 divided by 1.20 gives a net price of $1,200, and the VAT is $240."
       }
     },
     {
       "@type": "Question",
-      "name": "How can I find the VAT rate that was charged?",
+      "name": "Why is taking 20 percent off the gross price wrong?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Enter the net price and the gross price, or the net price and the VAT amount. The calculator divides the VAT amount by the net price and shows the rate."
+        "text": "VAT is 20 percent of the net price, which is only one sixth, about 16.7 percent, of the gross price. Taking 20 percent of the gross price removes too much."
       }
     },
     {
       "@type": "Question",
-      "name": "What is the difference between VAT and sales tax?",
+      "name": "How do I find the VAT rate from two prices?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "VAT is charged at each stage of production and is usually included in the displayed price. Sales tax in the United States is charged only on the final sale and added at the register. The arithmetic is the same."
+        "text": "Subtract the net price from the gross price to get the VAT, divide it by the net price and multiply by 100. For $100 net and $123 gross, the rate is 23 percent."
       }
     },
     {
       "@type": "Question",
-      "name": "What if I fill in more than two boxes?",
+      "name": "How many boxes should I fill in?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The calculator uses the first pair it can, in the order rate and net price, rate and gross price, rate and VAT amount, net and gross, net and VAT, and then gross and VAT, and works out the rest again."
+        "text": "Any two of the four. If you fill in more, the calculator uses the first pair it can and works the rest out again, so clear a box to solve for it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do VAT rates differ by country?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and by type of goods. In the UK the standard rate is 20 percent, with a reduced rate of 5 percent and a zero rate for some goods. Check the rate that applies to you."
       }
     }
   ]
@@ -145,48 +153,63 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What VAT is</h2>
-      <p>Value-added tax, or VAT, is a consumption tax charged on the value added to goods and services at each stage of their production and sale. Businesses collect it on behalf of the government and pass the net amount on. Most countries outside the United States use VAT or a similar goods and services tax, often called GST. The price before the tax is the net price, and the price including the tax is the gross price.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Gross = net &times; (1 + rate). At 20% VAT, a net price of $1,200 has $240 of VAT and a gross price of $1,440. To remove VAT, divide the gross price by 1.20, not subtract 20%.</div>
+      <h2>What VAT is</h2>
+      <p>Value-added tax, or VAT, is a consumption tax charged on the value added to goods and services at each stage of their production and sale. Businesses collect it on behalf of the government and pass the net amount on. Most countries outside the United States use VAT or a similar goods and services tax, often called GST. The price before the tax is the <strong>net</strong> price, and the price including the tax is the <strong>gross</strong> price.</p>
       <h2>How the four numbers relate</h2>
-      <p>The gross price equals the net price multiplied by one plus the VAT rate. The VAT amount is the gross price minus the net price. Any two of the four values, the rate, the net price, the gross price and the VAT amount, let you find the other two. To add VAT, enter the rate and the net price. To remove VAT from a total, enter the rate and the gross price. To discover the rate on a receipt, enter the net and gross prices.</p>
-
-      <h2>Using the calculator</h2>
-      <p>Fill in two boxes and leave the others empty. If you fill in more than two, the calculator uses the first pair it can and works the rest out again, so clear a box to solve for it. The amounts are shown with two decimals, and the rate is shown to three decimals. VAT rates differ between countries and between types of goods, so always check the rate that applies to you.</p>
-      <div class="callout">This calculator does simple tax arithmetic. Rounding rules, reduced rates and exemptions vary by country, so check with your tax authority or accountant for official figures.</div>
-
-      <!--seo-extra-->
-      <figure style="margin:18px 0;max-width:640px"><svg viewBox="0 0 620 128" role="img" aria-label="VAT price breakdown: net price 100 plus VAT 20 equals gross price 120" style="width:100%;height:auto"><rect x="2" y="3" width="616" height="122" rx="13" fill="#eff6ff"/><rect x="38" y="34" width="390" height="44" rx="6" fill="#2563eb"/><rect x="428" y="34" width="78" height="44" rx="6" fill="#0f766e"/><g fill="white" font-family="Arial,sans-serif" text-anchor="middle" font-size="17"><text x="230" y="62">Net 100</text><text x="467" y="62">VAT 20</text></g><text x="316" y="104" font-family="Arial,sans-serif" fill="#172554" text-anchor="middle" font-size="17">Gross total = 120 at 20% VAT</text></svg><figcaption style="color:#64748b;font-size:13px">For a tax-inclusive total, calculate the VAT portion using the net price.</figcaption></figure>
-      <h2>Worked example: interpreting the result</h2>
-      <p>At 20% VAT, a net price of 100 becomes a gross price of 120. Conversely, VAT included in a gross price of 120 is 20, not 24.</p>
-      <h2>Related calculators</h2>
-      <p>For sales tax outside VAT systems, see the <a href="sales-tax-calculator.html">Sales Tax Calculator</a>. If discounts apply before tax, compare the <a href="discount-calculator.html">Discount Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="discount-calculator.html">Discount Calculator</a>, <a href="tip-calculator.html">Tip Calculator</a>, <a href="sales-tax-calculator.html">Sales Tax Calculator</a>, <a href="percentage-calculator.html">Percentage Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p><strong>Gross = net &times; (1 + rate)</strong>, and <strong>VAT amount = gross &minus; net</strong>. Any two of the four values, the rate, the net price, the gross price and the VAT amount, give the other two. To add VAT, enter the rate and the net price. To remove VAT from a total, enter the rate and the gross price. To discover the rate on a receipt, enter the net and gross prices.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens with a rate of <strong>20%</strong> and a net price of <strong>$1,200</strong>. The VAT amount is 1,200 &times; 20% = <strong>$240.00</strong>, and the gross price is 1,200 + 240 = <strong>$1,440.00</strong>. The result box shows the gross price, the rate, the net price, the VAT amount and the gross price again.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Gross price of a $1,200 net price at different VAT rates</title><desc id="cf1-d">At 20% VAT the $1,200 net price becomes $1,440.00, of which $240.00 is tax.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Gross price of a $1,200 net price at different VAT rates</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">5% VAT</text><rect class="bar" x="90" y="44" width="283.9" height="22" rx="4" fill="#9ca3af"/><text x="381.9" y="60" font-size="13" font-weight="700" fill="#111827">$1,260.00</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">10% VAT</text><rect class="bar" x="90" y="78" width="297.4" height="22" rx="4" fill="#9ca3af"/><text x="395.4" y="94" font-size="13" font-weight="700" fill="#111827">$1,320.00</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">15% VAT</text><rect class="bar" x="90" y="112" width="311.0" height="22" rx="4" fill="#9ca3af"/><text x="409.0" y="128" font-size="13" font-weight="700" fill="#111827">$1,380.00</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">20% VAT</text><rect class="bar" x="90" y="146" width="324.5" height="22" rx="4" fill="#2563eb"/><text x="422.5" y="162" font-size="13" font-weight="700" fill="#111827">$1,440.00</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">25% VAT</text><rect class="bar" x="90" y="180" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">$1,500.00</text></svg><figcaption>Net $1,200 at five different rates.</figcaption></figure>
+      <h2>All six pairs of inputs</h2>
+      <p>Fill in any two boxes and leave the others empty:</p>
+      <div class="calc-table"><table><thead><tr><th>Case</th><th>You enter</th><th>Rate</th><th>Net</th><th>VAT amount</th><th>Gross</th></tr></thead><tbody><tr><td>Add VAT</td><td>rate 20%, net $1,200</td><td>20%</td><td>$1,200.00</td><td>$240.00</td><td>$1,440.00</td></tr><tr><td>Remove VAT</td><td>rate 20%, gross $1,440</td><td>20%</td><td>$1,200.00</td><td>$240.00</td><td>$1,440.00</td></tr><tr><td>Find the rate</td><td>net $100, gross $123</td><td>23%</td><td>$100.00</td><td>$23.00</td><td>$123.00</td></tr><tr><td>Rate and VAT amount</td><td>rate 5%, VAT $8</td><td>5%</td><td>$160.00</td><td>$8.00</td><td>$168.00</td></tr><tr><td>Net and VAT amount</td><td>net $500, VAT $35</td><td>7%</td><td>$500.00</td><td>$35.00</td><td>$535.00</td></tr><tr><td>Gross and VAT amount</td><td>gross $120, VAT $20</td><td>20%</td><td>$100.00</td><td>$20.00</td><td>$120.00</td></tr></tbody></table></div>
+      <h2>Removing VAT from a total</h2>
+      <p>A common mistake is to take the rate off the gross price. With a gross price of $1,440 at 20%, taking 20% of 1,440 gives $288.00, which is too much. The right VAT is gross &minus; gross &divide; 1.20 = <strong>$240.00</strong>, a net price of $1,200.00. VAT is a fixed share of the net price, so it is a smaller share of the gross price: 16.7% at a 20% rate.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">VAT as a share of the gross (tax-inclusive) price</title><desc id="cf2-d">A 20% VAT rate is one sixth, 16.7%, of the price with VAT included, not 20%. This is why taking 20% off a gross price removes too much.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">VAT as a share of the gross (tax-inclusive) price</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">5% rate</text><rect class="bar" x="90" y="44" width="80.5" height="22" rx="4" fill="#9ca3af"/><text x="178.5" y="60" font-size="13" font-weight="700" fill="#111827">4.76%</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">10% rate</text><rect class="bar" x="90" y="78" width="153.6" height="22" rx="4" fill="#9ca3af"/><text x="251.6" y="94" font-size="13" font-weight="700" fill="#111827">9.09%</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">15% rate</text><rect class="bar" x="90" y="112" width="220.4" height="22" rx="4" fill="#9ca3af"/><text x="318.4" y="128" font-size="13" font-weight="700" fill="#111827">13.04%</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">20% rate</text><rect class="bar" x="90" y="146" width="281.7" height="22" rx="4" fill="#2563eb"/><text x="379.7" y="162" font-size="13" font-weight="700" fill="#111827">16.67%</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">25% rate</text><rect class="bar" x="90" y="180" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">20.00%</text></svg><figcaption>VAT is a smaller share of the gross price than the rate.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Rate</th><th>Share of the gross price that is VAT</th></tr></thead><tbody><tr><td>5%</td><td>4.76%</td></tr><tr><td>10%</td><td>9.09%</td></tr><tr><td>15%</td><td>13.04%</td></tr><tr><td>20%</td><td>16.67%</td></tr><tr><td>25%</td><td>20.00%</td></tr></tbody></table></div>
+      <h2>Finding the rate on a receipt</h2>
+      <p>If a receipt shows a net price of $100 and a gross of $123, the tax is $23 and the rate is 23 &divide; 100 = <strong>23%</strong>. The calculator shows the rate to three decimals, so a rate that does not come out evenly, such as 7.5%, appears as 7.5. You can also use the net price and the VAT amount, or the gross price and the VAT amount, as in the table above.</p>
+      <h2>Rates and categories</h2>
+      <p>VAT rates differ between countries and between types of goods. In the UK, according to GOV.UK, the standard rate is 20% and applies to most goods and services, a reduced rate of 5% applies to some items such as home energy, and a zero rate applies to most food and children&rsquo;s clothes. Zero-rated goods are taxable at 0%, which is different from being outside the scope of VAT. Other countries have different rates and rules, so always check the rate that applies to you. Table of the three UK-style rates on a net price and on a gross price of $100:</p>
+      <div class="calc-table"><table><thead><tr><th>Rate type</th><th>Rate</th><th>Gross price when net is $100</th><th>VAT inside a gross price of $100</th></tr></thead><tbody><tr><td>Zero rate</td><td>0%</td><td>$100.00</td><td>$0.00</td></tr><tr><td>Reduced rate</td><td>5%</td><td>$105.00</td><td>$4.76</td></tr><tr><td>Standard rate</td><td>20%</td><td>$120.00</td><td>$16.67</td></tr></tbody></table></div>
+      <h2>Rounding</h2>
+      <p>The calculator shows amounts to two decimals, as on an invoice. Shops and tax authorities have their own rules for rounding on each line or on the total, which can differ by a cent or two. For an invoice, follow the method of your tax authority.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Taking the VAT rate of the gross price instead of dividing by one plus the rate.</li><li>Filling in more than two boxes. The calculator then works out the others again from the first pair it can use.</li><li>Using a rate that does not apply to the goods, such as a standard rate for a reduced-rate item.</li><li>Mixing up zero-rated and exempt supplies.</li><li>Forgetting that this tool uses a dollar sign. The arithmetic is the same for any currency.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the gross price with VAT, with a line below that gives the rate and the net price. The rows list the rate, the net price, the VAT amount and the gross price. If you filled in more than two boxes, a note says which values were used.</p>
+      <div class="callout">This calculator does simple tax arithmetic. Rounding rules, reduced rates and exemptions vary by country, so check with your tax authority or adviser.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="sales-tax-calculator.html">Sales Tax Calculator</a> &ndash; tax on a purchase</li><li><a href="discount-calculator.html">Discount Calculator</a> &ndash; the price after a discount</li><li><a href="margin-calculator.html">Margin Calculator</a> &ndash; price, cost and profit</li><li><a href="percentage-calculator.html">Percentage Calculator</a> &ndash; percent change and difference</li><li><a href="commission-calculator.html">Commission Calculator</a> &ndash; sales earnings and tiers</li><li><a href="tip-calculator.html">Tip Calculator</a> &ndash; tips and bill splitting</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do I add VAT to a price?</h3>
-        <p>Multiply the net price by one plus the VAT rate as a decimal. At 20% that means multiplying by 1.2, so a net price of 1,200 becomes a gross price of 1,440. Enter the rate and the net price to do this.</p>
+        <p>Multiply the net price by one plus the VAT rate. At 20 percent, $1,200 becomes $1,200 times 1.20, which is $1,440, and the VAT is $240.</p>
       </div>
       <div class="faq-item">
-        <h3>How do I remove VAT from a total?</h3>
-        <p>Divide the gross price by one plus the VAT rate as a decimal. At 20%, divide by 1.2, so 1,440 gives a net price of 1,200 and a VAT amount of 240. Enter the rate and the gross price to do this.</p>
+        <h3>How do I remove VAT from a price?</h3>
+        <p>Divide the gross price by one plus the VAT rate. At 20 percent, $1,440 divided by 1.20 gives a net price of $1,200, and the VAT is $240.</p>
       </div>
       <div class="faq-item">
-        <h3>How can I find the VAT rate that was charged?</h3>
-        <p>Enter the net price and the gross price, or the net price and the VAT amount. The calculator divides the VAT amount by the net price and shows the rate.</p>
+        <h3>Why is taking 20 percent off the gross price wrong?</h3>
+        <p>VAT is 20 percent of the net price, which is only one sixth, about 16.7 percent, of the gross price. Taking 20 percent of the gross price removes too much.</p>
       </div>
       <div class="faq-item">
-        <h3>What is the difference between VAT and sales tax?</h3>
-        <p>VAT is charged at each stage of production and is usually included in the displayed price. Sales tax in the United States is charged only on the final sale and added at the register. The arithmetic is the same.</p>
+        <h3>How do I find the VAT rate from two prices?</h3>
+        <p>Subtract the net price from the gross price to get the VAT, divide it by the net price and multiply by 100. For $100 net and $123 gross, the rate is 23 percent.</p>
       </div>
       <div class="faq-item">
-        <h3>What if I fill in more than two boxes?</h3>
-        <p>The calculator uses the first pair it can, in the order rate and net price, rate and gross price, rate and VAT amount, net and gross, net and VAT, and then gross and VAT, and works out the rest again.</p>
+        <h3>How many boxes should I fill in?</h3>
+        <p>Any two of the four. If you fill in more, the calculator uses the first pair it can and works the rest out again, so clear a box to solve for it.</p>
       </div>
+      <div class="faq-item">
+        <h3>Do VAT rates differ by country?</h3>
+        <p>Yes, and by type of goods. In the UK the standard rate is 20 percent, with a reduced rate of 5 percent and a zero rate for some goods. Check the rate that applies to you.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.gov.uk/vat-rates" rel="noopener" target="_blank">GOV.UK: VAT rates</a>; <a href="https://taxation-customs.ec.europa.eu/taxation/vat/vat-directive/vat-rates_en" rel="noopener" target="_blank">European Commission: VAT rates</a>; <a href="https://en.wikipedia.org/wiki/Value-added_tax" rel="noopener" target="_blank">Wikipedia: Value-added tax</a></p>
     </div>
 
   </div>
