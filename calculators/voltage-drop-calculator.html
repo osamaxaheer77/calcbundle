@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voltage Drop Calculator for Wire Runs | CalcBundle</title>
-<meta name="description" content="Estimate electrical voltage loss in a wire run from current, conductor details and length.">
+<title>Voltage Drop Calculator: Wire Size, Length &amp; Current</title>
+<meta name="description" content="Find the voltage drop, drop percentage and voltage at the load for a wire run from resistance, distance and current, for DC, single-phase and 3-phase circuits.">
 <link rel="canonical" href="https://calcbundle.net/calculators/voltage-drop-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Voltage Drop Calculator for Wire Runs | CalcBundle">
-<meta property="og:description" content="Estimate electrical voltage loss in a wire run from current, conductor details and length.">
+<meta property="og:title" content="Voltage Drop Calculator: Wire Size, Length &amp; Current">
+<meta property="og:description" content="Find the voltage drop, drop percentage and voltage at the load for a wire run from resistance, distance and current, for DC, single-phase and 3-phase circuits.">
 <meta property="og:url" content="https://calcbundle.net/calculators/voltage-drop-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Voltage Drop Calculator for Wire Runs | CalcBundle">
-<meta name="twitter:description" content="Estimate electrical voltage loss in a wire run from current, conductor details and length.">
+<meta name="twitter:title" content="Voltage Drop Calculator: Wire Size, Length &amp; Current">
+<meta name="twitter:description" content="Find the voltage drop, drop percentage and voltage at the load for a wire run from resistance, distance and current, for DC, single-phase and 3-phase circuits.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Where do I find my wire's resistance value?",
+      "name": "How do I calculate voltage drop?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Manufacturer datasheets list it, often in ohms per 1,000 feet or ohms per kilometer. NEC Chapter 9, Table 8 also publishes standard DC resistance values for common copper and aluminum wire gauges."
+        "text": "Multiply the current by the wire resistance per unit length and by the one-way distance, then by 2 for DC or single-phase circuits or by 1.732 for three-phase. For 12 AWG copper at 15 A over 100 feet on 120 V, the drop is about 4.76 volts."
       }
     },
     {
       "@type": "Question",
-      "name": "Does this account for AC reactance, not just resistance?",
+      "name": "Why is the distance multiplied by two?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No — this uses resistance only, which is accurate for DC and a reasonable approximation for AC at typical power-line frequencies over shorter runs. For precise AC work with reactance, use impedance data from your wire's specification."
+        "text": "Current has to travel out to the load and back again, so the conductor length in the circuit is twice the one-way distance. You enter only the one-way distance and the calculator handles the return."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What voltage drop is acceptable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A common guide is 3% on a branch circuit and 5% overall. These are recommendations, not hard limits. The calculator warns when the drop is above 5%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do I find my wire's resistance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Look it up in the manufacturer datasheet or a wire gauge table. Resistance depends on the material, size and temperature. For example, 12 AWG copper is about 1.588 ohms per 1000 feet at 20 degrees Celsius."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I reduce voltage drop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use thicker wire, shorten the run, lower the current, add parallel conductor sets or use a higher supply voltage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator check that the wire can carry the current?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It only estimates the voltage drop. Safe current depends on the wire size, insulation and installation, so check an ampacity table or your local code."
       }
     }
   ]
@@ -150,35 +182,66 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Where the formula comes from</h2>
-      <p>Current has to travel down the wire and back, so the effective resistance is doubled for DC and single-phase AC circuits: Voltage Drop = 2 &times; I &times; R &times; D. Three-phase circuits use &radic;3 instead of 2, since the phases share the return path differently. R is the wire's resistance per unit length, and D is the one-way run distance.</p>
-
-      <h2>Keeping drop under control</h2>
-      <p>A voltage drop under 5% of the source voltage is the generally recommended limit &mdash; above that, lights can flicker or dim, heaters underperform, and motors run hotter and wear out faster. Running thicker wire (lower resistance) or shortening the run both reduce drop; adding parallel conductor sets per phase splits the current and reduces the effective resistance the same way.</p>
-      <div class="callout">This calculator uses a resistance value you provide directly. Wire resistance depends on material, gauge, and temperature &mdash; check your wire's datasheet or the NEC ampacity tables for an accurate figure.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: verify the calculation</h2><p>If an electrical conductor path has total resistance 0.2 Ω and carries 10 A, voltage drop is 10 × 0.2 = 2 V. Actual installations require the correct full circuit path and safety standards.</p><h2>Related calculators</h2><p>For further calculations, see <a href="ohms-law-calculator.html">Ohm's Law Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>A single-phase 120-volt circuit with wire of 1.2 ohms per kilometer, 500 feet from the source to the load, carrying 1 amp, drops 0.3658 volts, which is 0.3048% of the supply. The voltage at the load is 119.6342 V. The distance is one-way, and the calculator doubles it for the return path.</p>
-
-      <h2>Tips for wire sizing</h2>
-      <p>The National Electrical Code suggests keeping the drop to 3% on a branch circuit and 5% on the whole feeder plus branch. Voltage drop rises with current and distance, so for long runs or heavy loads, choose a thicker wire with less resistance. Aluminum has more resistance than copper for the same size. This tool estimates only the drop, and it does not check that the wire can safely carry the current.</p>
-
-      <p><strong>You might also need:</strong> <a href="electricity-calculator.html">Electricity Calculator</a>, <a href="ohms-law-calculator.html">Ohm's Law Calculator</a>, <a href="resistor-calculator.html">Resistor Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Voltage drop = 2 &times; current &times; resistance per length &times; one-way distance. The default 500 ft run at 1 A and 120 V drops 0.3658 V (0.3048%). A 100 ft run of 12 AWG copper at 15 A drops 4.76 V (3.97%).</div>
+      <h2>What the calculator does</h2>
+      <p>Enter the wire&rsquo;s resistance, the source voltage, the supply type, the one-way distance and the load current. The calculator returns the <strong>voltage drop in volts</strong>, the drop as a <strong>percentage of the supply</strong> and the <strong>voltage left at the load</strong>. If the drop is above 5%, it adds a warning. You can enter resistance in &Omega;/km, &Omega;/m, m&Omega;/m, &Omega;/1000 ft, &Omega;/ft or m&Omega;/ft, and distance in feet, metres, miles or kilometres.</p>
+      <h2>The formula</h2>
+      <p><strong>Voltage drop = factor &times; current &times; resistance per length &times; one-way distance &divide; parallel sets.</strong> The factor is 2 for DC and single-phase AC, because current flows out along one conductor and back along the other, so the wire in the loop is twice the distance. For balanced three-phase AC the factor is &radic;3, about 1.732. Parallel conductor sets per phase share the current, so they divide the resistance: two sets halve the drop.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens with 1.2 &Omega;/km, 120 V, single-phase AC, one conductor set, 500 feet and 1 A. Convert the distance: 500 ft &times; 0.3048 = 152.4 m, and 1.2 &Omega;/km is 0.0012 &Omega;/m. Then 2 &times; 1 A &times; 0.0012 &Omega;/m &times; 152.4 m = <strong>0.3658 V</strong>. As a share of 120 V that is <strong>0.3048%</strong>, leaving <strong>119.6342 V</strong> at the load. This is far below the 5% warning level, which is why no warning shows. The drop is small because the current is only 1 A.</p>
+      <h2>A realistic example: 12 AWG copper at 15 A</h2>
+      <p>Wire tables give resistance in ohms per 1,000 feet. At 20&deg;C, 12 AWG copper is about 1.588 &Omega;/1000 ft. On a 100 ft run at 15 A and 120 V single-phase: 2 &times; 15 &times; 1.588 &times; 0.1 = <strong>4.764 V</strong>, or <strong>3.97%</strong>, leaving 115.24 V. Switch to 14 AWG (2.525 &Omega;/1000 ft) and the drop becomes 7.575 V, or 6.31%, which trips the 5% warning. With 10 AWG (0.9989 &Omega;/1000 ft) it falls to 2.997 V, or 2.5%.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Voltage drop on a 100 ft run at 15 A and 120 V by copper wire size (percent of supply)</title><desc id="cf1-d">Only 14 AWG goes above 5% here (6.31%). Moving from 14 AWG to 12 AWG cuts the drop from 7.57 V to 4.76 V.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Voltage drop on a 100 ft run at 15 A and 120 V by copper wire size (percent of supply)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">14 AWG</text><rect class="bar" x="80" y="44" width="348.0" height="22" rx="4" fill="#dc2626"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">6.31%</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">12 AWG</text><rect class="bar" x="80" y="78" width="218.9" height="22" rx="4" fill="#f59e0b"/><text x="306.9" y="94" font-size="13" font-weight="700" fill="#111827">3.97%</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">10 AWG</text><rect class="bar" x="80" y="112" width="137.7" height="22" rx="4" fill="#10b981"/><text x="225.7" y="128" font-size="13" font-weight="700" fill="#111827">2.5%</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">8 AWG</text><rect class="bar" x="80" y="146" width="86.6" height="22" rx="4" fill="#10b981"/><text x="174.6" y="162" font-size="13" font-weight="700" fill="#111827">1.57%</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">6 AWG</text><rect class="bar" x="80" y="180" width="54.5" height="22" rx="4" fill="#10b981"/><text x="142.5" y="196" font-size="13" font-weight="700" fill="#111827">0.99%</text><text x="72" y="230" text-anchor="end" font-size="13" fill="#6b7280">4 AWG</text><rect class="bar" x="80" y="214" width="34.2" height="22" rx="4" fill="#10b981"/><text x="122.2" y="230" font-size="13" font-weight="700" fill="#111827">0.62%</text></svg><figcaption>Thicker wire means a smaller drop, all else equal.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Wire size</th><th>Resistance (&Omega;/1000 ft)</th><th>Drop (V)</th><th>Drop (%)</th><th>Voltage at load</th></tr></thead><tbody><tr><td>14 AWG</td><td>2.525</td><td>7.575</td><td>6.31%</td><td>112.42 V</td></tr><tr><td>12 AWG</td><td>1.588</td><td>4.764</td><td>3.97%</td><td>115.24 V</td></tr><tr><td>10 AWG</td><td>0.9989</td><td>2.997</td><td>2.5%</td><td>117 V</td></tr><tr><td>8 AWG</td><td>0.6282</td><td>1.885</td><td>1.57%</td><td>118.12 V</td></tr><tr><td>6 AWG</td><td>0.3951</td><td>1.185</td><td>0.99%</td><td>118.81 V</td></tr><tr><td>4 AWG</td><td>0.2485</td><td>0.745</td><td>0.62%</td><td>119.25 V</td></tr></tbody></table></div>
+      <p>Resistance values are for copper at 20&deg;C from the standard American wire gauge table. Real wire runs warmer, which raises resistance, so a hot cable drops slightly more than the table suggests.</p>
+      <h2>How distance and current change the result</h2>
+      <p>Both distance and current scale the drop in a straight line. On 12 AWG copper at 15 A, a 100 ft run drops 3.97%, a 200 ft run 7.94%, and a run of about 76 ft reaches 3% while about 126 ft reaches 5%. A lighter load shortens the effect in the same way.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">12 AWG copper at 15 A and 120 V: drop by one-way distance (percent of supply)</title><desc id="cf2-d">Drop grows in a straight line with distance, so doubling the run doubles the loss: 3.97% at 100 ft and 7.94% at 200 ft.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">12 AWG copper at 15 A and 120 V: drop by one-way distance (percent of supply)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">25 ft</text><rect class="bar" x="80" y="44" width="43.5" height="22" rx="4" fill="#10b981"/><text x="131.5" y="60" font-size="13" font-weight="700" fill="#111827">0.99%</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">50 ft</text><rect class="bar" x="80" y="78" width="87.0" height="22" rx="4" fill="#10b981"/><text x="175.0" y="94" font-size="13" font-weight="700" fill="#111827">1.99%</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">75 ft</text><rect class="bar" x="80" y="112" width="130.5" height="22" rx="4" fill="#10b981"/><text x="218.5" y="128" font-size="13" font-weight="700" fill="#111827">2.98%</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">100 ft</text><rect class="bar" x="80" y="146" width="174.0" height="22" rx="4" fill="#f59e0b"/><text x="262.0" y="162" font-size="13" font-weight="700" fill="#111827">3.97%</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">150 ft</text><rect class="bar" x="80" y="180" width="261.0" height="22" rx="4" fill="#dc2626"/><text x="349.0" y="196" font-size="13" font-weight="700" fill="#111827">5.96%</text><text x="72" y="230" text-anchor="end" font-size="13" fill="#6b7280">200 ft</text><rect class="bar" x="80" y="214" width="348.0" height="22" rx="4" fill="#dc2626"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">7.94%</text></svg><figcaption>Double the distance, double the drop.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>One-way distance</th><th>Drop (V)</th><th>Drop (%)</th><th>Voltage at load</th></tr></thead><tbody><tr><td>25 ft</td><td>1.191</td><td>0.99%</td><td>118.81 V</td></tr><tr><td>50 ft</td><td>2.382</td><td>1.99%</td><td>117.62 V</td></tr><tr><td>75 ft</td><td>3.573</td><td>2.98%</td><td>116.43 V</td></tr><tr><td>100 ft</td><td>4.764</td><td>3.97%</td><td>115.24 V</td></tr><tr><td>150 ft</td><td>7.146</td><td>5.96%</td><td>112.85 V</td></tr><tr><td>200 ft</td><td>9.528</td><td>7.94%</td><td>110.47 V</td></tr></tbody></table></div>
+      <div class="calc-table"><table><thead><tr><th>Load current</th><th>Drop (V)</th><th>Drop (%)</th></tr></thead><tbody><tr><td>5 A</td><td>1.588</td><td>1.32%</td></tr><tr><td>10 A</td><td>3.176</td><td>2.65%</td></tr><tr><td>15 A</td><td>4.764</td><td>3.97%</td></tr><tr><td>20 A</td><td>6.352</td><td>5.29%</td></tr></tbody></table></div>
+      <h2>Supply type and parallel conductors</h2>
+      <p>At the same current, distance and wire, a three-phase circuit drops 86.6% of the single-phase figure, because the factor is &radic;3 rather than 2. DC and single-phase give the same number. Adding a second parallel conductor set per phase halves the resistance: the 12 AWG example drops to 2.382 V instead of 4.764 V with two sets.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Voltage drop for the same wire, current and distance at 240 V, by supply type (volts)</title><desc id="cf3-d">The tool uses a factor of 2 for DC and single-phase and &amp;radic;3 (about 1.732) for three-phase, so a three-phase drop is 86.6% of the single-phase figure.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Voltage drop for the same wire, current and distance at 240 V, by supply type (volts)</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">DC</text><rect class="bar" x="130" y="44" width="298.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">4.764 V</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">AC single phase</text><rect class="bar" x="130" y="78" width="298.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">4.764 V</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">AC 3-phase</text><rect class="bar" x="130" y="112" width="258.1" height="22" rx="4" fill="#10b981"/><text x="396.1" y="128" font-size="13" font-weight="700" fill="#111827">4.126 V</text></svg><figcaption>Three-phase loses less for the same current.</figcaption></figure>
+      <p>A higher supply voltage lowers the percentage, not the volts. The same 12 AWG run at 240 V loses 4.764 V, which is 1.99% of the supply instead of 3.97% at 120 V.</p>
+      <h2>How much drop is acceptable?</h2>
+      <p>A common guide is 3% for a branch circuit and 5% for feeder and branch together. In the US National Electrical Code these figures appear as informational notes, which are recommendations for reasonable efficiency, not hard limits. The calculator&rsquo;s warning uses 5%. Excessive drop dims lights, slows motors and makes them run hotter, and reduces heater output, so many designers aim for 3% or less on long runs.</p>
+      <h2>What the tool does not check</h2>
+      <ul><li><strong>Safe current.</strong> It only estimates the drop. Whether the wire can carry the current without overheating is a separate ampacity question.</li><li><strong>Temperature.</strong> Copper resistance rises by roughly 0.4% for each degree Celsius, so use a value for the operating temperature if you need accuracy.</li><li><strong>Power factor and reactance.</strong> The calculation uses resistance only, which suits DC and short or small AC runs. Large AC cables also have reactance.</li><li><strong>Material.</strong> Aluminium has higher resistance than copper for the same size, so enter its own figure.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Entering the round-trip distance. The tool expects one-way distance and already doubles it for the return path.</li><li>Using a resistance in the wrong unit, such as &Omega;/1000 ft entered as &Omega;/km. Check the unit box.</li><li>Forgetting the parallel set count when wires are doubled up.</li><li>Treating a result under 5% as proof that the wire is safe.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the voltage lost along the wire. Below it, the percentage compares that loss with the supply, and the last line gives the voltage the load actually receives. A red note appears when the drop is above 5%. If it does, shorten the run, use thicker wire, add a parallel set or raise the supply voltage.</p>
+      <div class="callout">This is an estimate for planning. Follow your local electrical code and have installation work checked by a qualified electrician.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="ohms-law-calculator.html">Ohm's Law Calculator</a> &ndash; voltage, current and resistance</li><li><a href="resistor-calculator.html">Resistor Calculator</a> &ndash; colour bands, series and parallel</li><li><a href="electricity-calculator.html">Electricity Calculator</a> &ndash; power and energy cost</li><li><a href="horsepower-calculator.html">Horsepower Calculator</a> &ndash; motor power and torque</li><li><a href="scientific-calculator.html">Scientific Calculator</a> &ndash; general maths</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Where do I find my wire's resistance value?</h3>
-        <p>Manufacturer datasheets list it, often in ohms per 1,000 feet or ohms per kilometer. NEC Chapter 9, Table 8 also publishes standard DC resistance values for common copper and aluminum wire gauges.</p>
+        <h3>How do I calculate voltage drop?</h3>
+        <p>Multiply the current by the wire resistance per unit length and by the one-way distance, then by 2 for DC or single-phase circuits or by 1.732 for three-phase. For 12 AWG copper at 15 A over 100 feet on 120 V, the drop is about 4.76 volts.</p>
       </div>
       <div class="faq-item">
-        <h3>Does this account for AC reactance, not just resistance?</h3>
-        <p>No &mdash; this uses resistance only, which is accurate for DC and a reasonable approximation for AC at typical power-line frequencies over shorter runs. For precise AC work with reactance, use impedance data from your wire's specification.</p>
+        <h3>Why is the distance multiplied by two?</h3>
+        <p>Current has to travel out to the load and back again, so the conductor length in the circuit is twice the one-way distance. You enter only the one-way distance and the calculator handles the return.</p>
       </div>
+      <div class="faq-item">
+        <h3>What voltage drop is acceptable?</h3>
+        <p>A common guide is 3% on a branch circuit and 5% overall. These are recommendations, not hard limits. The calculator warns when the drop is above 5%.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Where do I find my wire's resistance?</h3>
+        <p>Look it up in the manufacturer datasheet or a wire gauge table. Resistance depends on the material, size and temperature. For example, 12 AWG copper is about 1.588 ohms per 1000 feet at 20 degrees Celsius.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I reduce voltage drop?</h3>
+        <p>Use thicker wire, shorten the run, lower the current, add parallel conductor sets or use a higher supply voltage.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the calculator check that the wire can carry the current?</h3>
+        <p>No. It only estimates the voltage drop. Safe current depends on the wire size, insulation and installation, so check an ampacity table or your local code.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Voltage_drop" rel="noopener" target="_blank">Wikipedia: Voltage drop</a>; <a href="https://en.wikipedia.org/wiki/American_wire_gauge" rel="noopener" target="_blank">Wikipedia: American wire gauge (resistance table)</a>; <a href="https://en.wikipedia.org/wiki/Three-phase_electric_power" rel="noopener" target="_blank">Wikipedia: Three-phase electric power</a></p>
     </div>
 
   </div>
