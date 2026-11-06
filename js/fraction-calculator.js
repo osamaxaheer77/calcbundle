@@ -127,7 +127,7 @@ const FractionMath = {
         beforeReduceNum = combined;
         beforeReduceDen = L;
         stepsHtml += `<div class="step"><span class="step-label">1. Match the denominators</span>
-          <p>${formatFraction(f1.num, f1.den)} and ${formatFraction(f2.num, f2.den)} don't share a denominator, so first find the smallest number both ${f1.den} and ${f2.den} divide into evenly — that's ${L}.</p></div>`;
+          <p>${f1.den === f2.den ? `${formatFraction(f1.num, f1.den)} and ${formatFraction(f2.num, f2.den)} already share the denominator ${L}, so nothing needs rescaling.` : `${formatFraction(f1.num, f1.den)} and ${formatFraction(f2.num, f2.den)} don't share a denominator, so first find the smallest number both ${f1.den} and ${f2.den} divide into evenly — that's ${L}.`}</p></div>`;
         stepsHtml += `<div class="step"><span class="step-label">2. Rescale each fraction</span>
           <p>${formatFraction(f1.num, f1.den)} × ${factor1}/${factor1} = ${formatFraction(n1, L)} &nbsp;&nbsp; ${formatFraction(f2.num, f2.den)} × ${factor2}/${factor2} = ${formatFraction(n2, L)}</p></div>`;
         stepsHtml += `<div class="step"><span class="step-label">3. ${op === '+' ? 'Add' : 'Subtract'} the numerators</span>
