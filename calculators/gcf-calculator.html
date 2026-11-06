@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greatest Common Factor Calculator - CalcBundle</title>
-<meta name="description" content="Find the greatest common factor (GCF) of two or more whole numbers, with the prime factorization steps shown.">
+<title>GCF Calculator: Greatest Common Factor with Steps</title>
+<meta name="description" content="Find the greatest common factor (GCF or GCD) of two or more whole numbers, with prime factorization steps, the Euclidean algorithm and worked examples.">
 <link rel="canonical" href="https://calcbundle.net/calculators/gcf-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Greatest Common Factor Calculator - CalcBundle">
-<meta property="og:description" content="Find the greatest common factor (GCF) of two or more whole numbers, with the prime factorization steps shown.">
+<meta property="og:title" content="GCF Calculator: Greatest Common Factor with Steps">
+<meta property="og:description" content="Find the greatest common factor (GCF or GCD) of two or more whole numbers, with prime factorization steps, the Euclidean algorithm and worked examples.">
 <meta property="og:url" content="https://calcbundle.net/calculators/gcf-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Greatest Common Factor Calculator - CalcBundle">
-<meta name="twitter:description" content="Find the greatest common factor (GCF) of two or more whole numbers, with the prime factorization steps shown.">
+<meta name="twitter:title" content="GCF Calculator: Greatest Common Factor with Steps">
+<meta name="twitter:description" content="Find the greatest common factor (GCF or GCD) of two or more whole numbers, with prime factorization steps, the Euclidean algorithm and worked examples.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,7 +42,7 @@
       "name": "How do you find the greatest common factor?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "List the factors of each number and choose the biggest one they share, or multiply the shared prime factors from their prime factorizations."
+        "text": "List the factors of each number and choose the biggest one they share, or multiply the shared prime factors from their prime factorizations. For large numbers, use the Euclidean algorithm."
       }
     },
     {
@@ -58,23 +58,31 @@
       "name": "What is the GCF of 12 and 18?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is 6. The factors of 12 are 1, 2, 3, 4, 6, 12 and the factors of 18 are 1, 2, 3, 6, 9, 18, and the biggest in common is 6."
+        "text": "It is 6. The factors of 12 are 1, 2, 3, 4, 6 and 12, those of 18 are 1, 2, 3, 6, 9 and 18, and the largest one in both lists is 6."
       }
     },
     {
       "@type": "Question",
-      "name": "Is GCF the same as GCD or HCF?",
+      "name": "What is the difference between GCF, GCD and HCF?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Greatest common factor, greatest common divisor and highest common factor all name the same value."
+        "text": "Nothing. They are three names for the same number: the greatest common factor, greatest common divisor and highest common factor."
       }
     },
     {
       "@type": "Question",
-      "name": "How is the GCF used for fractions?",
+      "name": "How do I use the GCF to reduce a fraction?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Divide the top and bottom of a fraction by their GCF to reduce it to lowest terms. For 12/18 the GCF is 6, so the fraction is 2/3."
+        "text": "Divide the numerator and the denominator by their GCF. The GCF of 84 and 126 is 42, so 84/126 becomes 2/3."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many numbers can I enter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From 2 to 50 whole numbers above 0, separated by commas, spaces or semicolons."
       }
     }
   ]
@@ -132,28 +140,42 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What the GCF is</h2>
-      <p>The greatest common factor, also called the greatest common divisor or highest common factor, is the largest whole number that divides every number in a set with no remainder. The GCF of 12 and 18 is 6, because 6 is the biggest number that goes into both. Finding the GCF is how you reduce a fraction to its lowest terms and how you split things into equal groups with nothing left over.</p>
-
-      <h2>Prime factorization method</h2>
-      <p>Write each number as a product of primes, then multiply the primes they all share, each taken to the lowest power that appears. For 12, 18 and 24, the factorizations are 2 × 2 × 3, 2 × 3 × 3 and 2 × 2 × 2 × 3. Every number has one 2 and one 3 in common, so the GCF is 2 × 3, which is 6. If the numbers share no prime factor, the GCF is 1, and the numbers are called coprime.</p>
-
-      <h2>The Euclidean algorithm</h2>
-      <p>For big numbers, the Euclidean algorithm is much faster than factoring. Divide the larger number by the smaller, replace the larger with the remainder, and repeat until the remainder is 0. The last non-zero number is the GCF. This calculator uses it for numbers of any size, and shows the prime factorization steps when the numbers are up to about 10 trillion.</p>
-      <div class="callout">The calculator works with whole numbers above 0. The prime factorization steps are shown only for numbers up to about 10 trillion, though the GCF itself is always exact.</div>
-
-      <!--seo-extra-->
-      <p><strong>You might also need:</strong> <a href="exponent-calculator.html">Exponent Calculator</a>, <a href="log-calculator.html">Log Calculator</a>, <a href="lcm-calculator.html">Least Common Multiple Calculator</a>, <a href="root-calculator.html">Root Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <!--next-->
-      <p><strong>What next?</strong> For very large numbers, the <a href="big-number-calculator.html">Big Number Calculator</a> finds the GCD and LCM exactly. To reduce a fraction using the GCF you just found, use the <a href="fraction-calculator.html">Fraction Calculator</a>.</p>
-      <!--/next-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> The GCF is the largest whole number that divides every number in a list. GCF(12, 18) = 6, and the default numbers 330, 75, 450 and 225 have a GCF of 15. Numbers with a GCF of 1 are coprime.</div>
+      <h2>What the GCF is</h2>
+      <p>The greatest common factor, also called the greatest common divisor (GCD) or highest common factor, is the largest whole number that divides every number in a set with no remainder. The GCF of 12 and 18 is 6, because 6 is the biggest number that goes into both. Enter two or more whole numbers above 0, separated by commas, spaces or semicolons, up to 50 numbers.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on <strong>330, 75, 450, 225</strong>. The tool writes each as a product of primes and keeps the primes they all share, each to the lowest power it appears:</p>
+      <p>330 = 2 &times; 3 &times; 5 &times; 11<br>75 = 3 &times; 5 &times; 5<br>450 = 2 &times; 3 &times; 3 &times; 5 &times; 5<br>225 = 3 &times; 3 &times; 5 &times; 5<br>All four contain one 3 and one 5, and 75 has no 2 or 11, so the shared primes are 3 and 5. GCF(330, 75, 450, 225) = 3 &times; 5 = <strong>15</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">The four default numbers and their greatest common factor</title><desc id="cf1-d">Every number divides evenly by 15: 330 = 15 &amp;times; 22, 75 = 15 &amp;times; 5, 450 = 15 &amp;times; 30 and 225 = 15 &amp;times; 15.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The four default numbers and their greatest common factor</text><text x="52" y="60" text-anchor="end" font-size="13" fill="#6b7280">330</text><rect class="bar" x="60" y="44" width="269.9" height="22" rx="4" fill="#9ca3af"/><text x="337.9" y="60" font-size="13" font-weight="700" fill="#111827">330</text><text x="52" y="94" text-anchor="end" font-size="13" fill="#6b7280">75</text><rect class="bar" x="60" y="78" width="61.3" height="22" rx="4" fill="#9ca3af"/><text x="129.3" y="94" font-size="13" font-weight="700" fill="#111827">75</text><text x="52" y="128" text-anchor="end" font-size="13" fill="#6b7280">450</text><rect class="bar" x="60" y="112" width="368.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">450</text><text x="52" y="162" text-anchor="end" font-size="13" fill="#6b7280">225</text><rect class="bar" x="60" y="146" width="184.0" height="22" rx="4" fill="#9ca3af"/><text x="252.0" y="162" font-size="13" font-weight="700" fill="#111827">225</text><text x="52" y="196" text-anchor="end" font-size="13" fill="#6b7280">GCF</text><rect class="bar" x="60" y="180" width="12.3" height="22" rx="4" fill="#2563eb"/><text x="80.3" y="196" font-size="13" font-weight="700" fill="#111827">15</text></svg><figcaption>Fifteen divides every number in the list.</figcaption></figure>
+      <h2>Method 1: list the factors</h2>
+      <p>List the factors of each number and pick the biggest one they share. The factors of 12 are 1, 2, 3, 4, 6 and 12, and of 18 are 1, 2, 3, 6, 9 and 18. The shared ones are 1, 2, 3 and 6, so the GCF is 6. This is easy for small numbers and slow for large ones.</p>
+      <h2>Method 2: prime factorization</h2>
+      <p>Write each number as a product of primes and multiply the shared primes. For 12, 18 and 24 the factorizations are 2 &times; 2 &times; 3, 2 &times; 3 &times; 3 and 2 &times; 2 &times; 2 &times; 3. Each has one 2 and one 3 in common, so the GCF is 2 &times; 3 = 6. If the numbers share no prime, the GCF is 1 and they are called <strong>coprime</strong>, like 8 and 15.</p>
+      <h2>Method 3: the Euclidean algorithm</h2>
+      <p>For large numbers it is much faster than factoring. Divide the larger number by the smaller, replace the larger with the remainder, and repeat until the remainder is 0. The last non-zero number is the GCF. For 1,071 and 462:</p>
+      <div class="calc-table"><table><thead><tr><th>Dividend</th><th>Divisor</th><th>Quotient</th><th>Remainder</th></tr></thead><tbody><tr><td>1071</td><td>462</td><td>2</td><td>147</td></tr><tr><td>462</td><td>147</td><td>3</td><td>21</td></tr><tr><td>147</td><td>21</td><td>7</td><td>0</td></tr></tbody></table></div>
+      <p>The remainder reaches 0 after three divisions, and the last divisor is <strong>21</strong>, so GCF(1,071, 462) = 21. The calculator uses this method for numbers of any size, so the GCF is always exact. For example GCF(123,456,789, 987,654,321) = 9. The prime factorization steps are shown only for numbers up to about 10 trillion.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">The Euclidean algorithm on 1,071 and 462: the numbers shrink to the GCF</title><desc id="cf2-d">Each step replaces the pair with the smaller number and the remainder. When the remainder is 0, the last non-zero number, 21, is the GCF.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The Euclidean algorithm on 1,071 and 462: the numbers shrink to the GCF</text><text x="132" y="60" text-anchor="end" font-size="13" fill="#6b7280">Start: 1,071</text><rect class="bar" x="140" y="44" width="288.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">1,071</text><text x="132" y="94" text-anchor="end" font-size="13" fill="#6b7280">Then: 462</text><rect class="bar" x="140" y="78" width="124.2" height="22" rx="4" fill="#9ca3af"/><text x="272.2" y="94" font-size="13" font-weight="700" fill="#111827">462</text><text x="132" y="128" text-anchor="end" font-size="13" fill="#6b7280">Remainder: 147</text><rect class="bar" x="140" y="112" width="39.5" height="22" rx="4" fill="#9ca3af"/><text x="187.5" y="128" font-size="13" font-weight="700" fill="#111827">147</text><text x="132" y="162" text-anchor="end" font-size="13" fill="#6b7280">Remainder: 21</text><rect class="bar" x="140" y="146" width="5.6" height="22" rx="4" fill="#2563eb"/><text x="153.6" y="162" font-size="13" font-weight="700" fill="#111827">21 (the GCF)</text><text x="132" y="196" text-anchor="end" font-size="13" fill="#6b7280">Remainder: 0</text><rect class="bar" x="140" y="180" width="2.0" height="22" rx="4" fill="#10b981"/><text x="150.0" y="196" font-size="13" font-weight="700" fill="#111827">0, stop</text></svg><figcaption>The Euclidean algorithm shrinks the problem quickly.</figcaption></figure>
+      <h2>Pairs and their GCFs</h2>
+      <div class="calc-table"><table><thead><tr><th>Numbers</th><th>GCF</th><th>After dividing by the GCF</th></tr></thead><tbody><tr><td>12 and 18</td><td>6</td><td>2 and 3</td></tr><tr><td>48 and 36</td><td>12</td><td>4 and 3</td></tr><tr><td>8 and 15</td><td>1</td><td>8 and 15</td></tr><tr><td>100 and 75</td><td>25</td><td>4 and 3</td></tr><tr><td>252 and 105</td><td>21</td><td>12 and 5</td></tr><tr><td>1071 and 462</td><td>21</td><td>51 and 22</td></tr></tbody></table></div>
+      <p>The last column shows the numbers left after dividing out the GCF. They are always coprime, which is why dividing by the GCF puts a fraction in lowest terms.</p>
+      <h2>What the GCF is used for</h2>
+      <ul><li><strong>Reducing fractions.</strong> The GCF of 84 and 126 is 42, so 84/126 = 2/3.</li><li><strong>Equal groups.</strong> To split 24 apples and 36 oranges into identical baskets with nothing left over, use GCF(24, 36) = 12 baskets, each with 2 apples and 3 oranges.</li><li><strong>Tiling.</strong> The largest square tile that fits a 450 cm by 330 cm floor exactly is GCF(450, 330) = 30 cm, which takes 15 &times; 11 = 165 tiles.</li><li><strong>Ratios.</strong> Dividing every term of a ratio by the GCF gives the simplest form.</li></ul>
+      <h2>GCF and LCM</h2>
+      <p>The least common multiple is the other half of the pair. For two numbers, GCF &times; LCM = the product of the numbers. For 12 and 18 the GCF is 6 and the LCM is 36, and 6 &times; 36 = 216 = 12 &times; 18. That relation holds only for two numbers at a time. Use the LCM Calculator for the multiple.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing up the greatest common factor with the least common multiple.</li><li>Taking the largest factor of only one number, instead of the largest factor shared by all.</li><li>Using the highest power of each prime rather than the lowest.</li><li>Entering 0, negatives or decimals. The tool needs whole numbers above 0.</li><li>Forgetting that the GCF can be 1 when the numbers are coprime.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large line shows the GCF written as GCF(numbers) and the answer. Below it, when the numbers are small enough, are the prime factorizations and the line that multiplies the shared primes. A note says whether the numbers are coprime or divide evenly by the GCF.</p>
+      <div class="callout">The GCF is exact for any size of whole number, because the calculator uses arbitrary-precision arithmetic.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="lcm-calculator.html">LCM Calculator</a> &ndash; least common multiple</li><li><a href="factor-calculator.html">Factor Calculator</a> &ndash; every factor of a number</li><li><a href="ratio-calculator.html">Ratio Calculator</a> &ndash; simplify and solve ratios</li><li><a href="fraction-calculator.html">Fraction Calculator</a> &ndash; reduce fractions</li><li><a href="big-number-calculator.html">Big Number Calculator</a> &ndash; exact GCD and LCM of huge numbers</li><li><a href="exponent-calculator.html">Exponent Calculator</a> &ndash; powers and roots</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do you find the greatest common factor?</h3>
-        <p>List the factors of each number and choose the biggest one they share, or multiply the shared prime factors from their prime factorizations.</p>
+        <p>List the factors of each number and choose the biggest one they share, or multiply the shared prime factors from their prime factorizations. For large numbers, use the Euclidean algorithm.</p>
       </div>
       <div class="faq-item">
         <h3>What is the GCF of two prime numbers?</h3>
@@ -161,16 +183,21 @@
       </div>
       <div class="faq-item">
         <h3>What is the GCF of 12 and 18?</h3>
-        <p>It is 6. The factors of 12 are 1, 2, 3, 4, 6, 12 and the factors of 18 are 1, 2, 3, 6, 9, 18, and the biggest in common is 6.</p>
+        <p>It is 6. The factors of 12 are 1, 2, 3, 4, 6 and 12, those of 18 are 1, 2, 3, 6, 9 and 18, and the largest one in both lists is 6.</p>
       </div>
       <div class="faq-item">
-        <h3>Is GCF the same as GCD or HCF?</h3>
-        <p>Yes. Greatest common factor, greatest common divisor and highest common factor all name the same value.</p>
+        <h3>What is the difference between GCF, GCD and HCF?</h3>
+        <p>Nothing. They are three names for the same number: the greatest common factor, greatest common divisor and highest common factor.</p>
       </div>
       <div class="faq-item">
-        <h3>How is the GCF used for fractions?</h3>
-        <p>Divide the top and bottom of a fraction by their GCF to reduce it to lowest terms. For 12/18 the GCF is 6, so the fraction is 2/3.</p>
+        <h3>How do I use the GCF to reduce a fraction?</h3>
+        <p>Divide the numerator and the denominator by their GCF. The GCF of 84 and 126 is 42, so 84/126 becomes 2/3.</p>
       </div>
+      <div class="faq-item">
+        <h3>How many numbers can I enter?</h3>
+        <p>From 2 to 50 whole numbers above 0, separated by commas, spaces or semicolons.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Greatest_common_divisor" rel="noopener" target="_blank">Wikipedia: Greatest common divisor</a>; <a href="https://en.wikipedia.org/wiki/Euclidean_algorithm" rel="noopener" target="_blank">Wikipedia: Euclidean algorithm</a>; <a href="https://en.wikipedia.org/wiki/Coprime_integers" rel="noopener" target="_blank">Wikipedia: Coprime integers</a></p>
     </div>
 
   </div>
