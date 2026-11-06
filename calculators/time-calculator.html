@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Time Calculator: Add or Subtract Durations | CalcBundle</title>
-<meta name="description" content="Add and subtract hours, minutes and seconds, or adjust a starting date and time by a duration.">
+<meta name="description" content="Add or subtract days, hours, minutes and seconds with automatic carrying, or add a duration to a start date and time to get the new date and weekday.">
 <link rel="canonical" href="https://calcbundle.net/calculators/time-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Time Calculator: Add or Subtract Durations | CalcBundle">
-<meta property="og:description" content="Add and subtract hours, minutes and seconds, or adjust a starting date and time by a duration.">
+<meta property="og:description" content="Add or subtract days, hours, minutes and seconds with automatic carrying, or add a duration to a start date and time to get the new date and weekday.">
 <meta property="og:url" content="https://calcbundle.net/calculators/time-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Time Calculator: Add or Subtract Durations | CalcBundle">
-<meta name="twitter:description" content="Add and subtract hours, minutes and seconds, or adjust a starting date and time by a duration.">
+<meta name="twitter:description" content="Add or subtract days, hours, minutes and seconds with automatic carrying, or add a duration to a start date and time to get the new date and weekday.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Can I leave a field blank?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — any blank field is treated as zero."
+        "text": "Yes. Any blank field is treated as zero."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "Does this account for daylight saving time changes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — because the \"add/subtract from a date\" tool works in your browser's local time zone, results correctly skip or repeat an hour across a daylight saving transition, just as a clock on the wall would."
+        "text": "The date tool adds exact elapsed time in your browser's local time zone, so across a daylight saving change the wall clock can show a one-hour difference. To land on the same clock time on a later day, add days with the Date Calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert minutes to decimal hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the minutes by 60. 45 minutes is 0.75 hours, and 1 hour 45 minutes is 1.75 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a negative result mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You subtracted a larger duration from a smaller one. The minus sign in front of the days, hours, minutes and seconds shows that the second value was bigger."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add more than two durations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add two at a time and use the result as the first value for the next addition, or convert every duration to seconds and add them together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is 90 minutes not 1.9 hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hours have 60 minutes, not 100. 90 minutes is one hour and 30 minutes, which is 1.5 hours."
       }
     }
   ]
@@ -201,37 +233,61 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How the totals are figured</h2>
-      <p>Every value is first converted to seconds, added or subtracted, then converted back into a whole day/hour/minute/second breakdown &mdash; the same way you'd carry over units by hand (60 seconds roll into a minute, 24 hours roll into a day).</p>
-
-      <h2>A note on negative results</h2>
-      <p>Subtracting a larger duration from a smaller one produces a negative total, shown with a minus sign in front of the day/hour/minute/second breakdown.</p>
-      <div class="callout">The "add/subtract from a date" tool uses your browser's local time zone for both the starting time and the result &mdash; it doesn't convert between time zones. For that, use the Time Zone Calculator.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: check the result</h2>
-      <p>Adding 1 hour 45 minutes to 2 hours 30 minutes gives 4 hours 15 minutes. The 75 combined minutes become one hour and 15 minutes.</p>
-      <h2>Related tools</h2>
-      <p>For elapsed time between timestamps, try the <a href="time-duration-calculator.html">Time Duration Calculator</a>. For shifts and payroll, use the <a href="time-card-calculator.html">Time Card Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>Add 2 days, 5 hours and 30 minutes to 1 day, 20 hours, 45 minutes and 20 seconds, and the result is 4 days, 2 hours, 15 minutes and 20 seconds. That is also 98.26 hours, 5,895.33 minutes or 353,720 seconds. In the second tool, adding that same span to a start date of January 15, 2026 gives a date, a time and the day of the week.</p>
-
-      <h2>Tips for time maths</h2>
-      <p>Time units do not use base 10, so 90 minutes is 1 hour 30 minutes, not 1.9 hours. To turn minutes into a decimal hour, divide by 60. A subtraction that goes below zero shows a negative result, which means the second value is larger. For clock times, such as the time between 9:15 AM and 5:40 PM, use the Hours Calculator.</p>
-
-      <p><strong>You might also need:</strong> <a href="hours-calculator.html">Hours Calculator</a>, <a href="time-duration-calculator.html">Time Duration Calculator</a>, <a href="age-calculator.html">Age Calculator</a>, <a href="day-counter.html">Day Counter</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> To add times, convert them to seconds, add, and convert back: 60 seconds make a minute, 60 minutes an hour and 24 hours a day. 2 days 5 hours 30 minutes plus 1 day 20 hours 45 minutes 20 seconds is 4 days, 2 hours, 15 minutes, 20 seconds.</div>
+      <h2>How the calculator adds and subtracts time</h2>
+      <p>Time is not decimal: there are 60 seconds in a minute, 60 minutes in an hour and 24 hours in a day. To avoid carrying mistakes the calculator converts everything to <strong>seconds</strong>, adds or subtracts, and then converts back into days, hours, minutes and seconds. The page has two tools: <em>add or subtract two durations</em> and <em>add or subtract a duration from a date and time</em>.</p>
+      <ul><li>1 minute = 60 seconds</li><li>1 hour = 60 minutes = 3,600 seconds</li><li>1 day = 24 hours = 86,400 seconds</li></ul>
+      <h2>Worked example: adding two durations</h2>
+      <p>The calculator starts with 2 days 5 hours 30 minutes plus 1 day 20 hours 45 minutes 20 seconds. In seconds that is 192,600 + 161,120 = 353,720.</p>
+      <div class="calc-table"><table><thead><tr><th>Unit</th><th>Result</th></tr></thead><tbody><tr><td>Days, hours, minutes, seconds</td><td><strong>4 days, 2 hours, 15 minutes, 20 seconds</strong></td></tr><tr><td>Total hours</td><td>98.26</td></tr><tr><td>Total minutes</td><td>5,895.33</td></tr><tr><td>Total seconds</td><td>353,720</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Adding two durations (in hours)</title><desc id="cf1-d">The two durations add to 98.26 hours, which is 4 days, 2 hours, 15 minutes, 20 seconds.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Adding two durations (in hours)</text><text x="112" y="60" text-anchor="end" font-size="13" fill="#6b7280">First duration</text><rect class="bar" x="120" y="44" width="167.7" height="22" rx="4" fill="#2563eb"/><text x="295.7" y="60" font-size="13" font-weight="700" fill="#111827">53.50 h</text><text x="112" y="94" text-anchor="end" font-size="13" fill="#6b7280">Second duration</text><rect class="bar" x="120" y="78" width="140.3" height="22" rx="4" fill="#10b981"/><text x="268.3" y="94" font-size="13" font-weight="700" fill="#111827">44.76 h</text><text x="112" y="128" text-anchor="end" font-size="13" fill="#6b7280">Total</text><rect class="bar" x="120" y="112" width="308.0" height="22" rx="4" fill="#f34469"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">98.26 h</text></svg><figcaption>The same amount of time can be written as days and hours, or as one large number of hours, minutes or seconds.</figcaption></figure>
+      <h2>Worked example: adding to a date and time</h2>
+      <p>The second tool starts from a date and time and adds a duration. Starting at <strong>9:30 AM on January 15, 2026</strong> and adding 3 days 18 hours 45 minutes gives <strong>January 19, 2026 at 4:15 AM, a Monday</strong>. The 18 hours 45 minutes carry the clock past midnight, which is why the result lands on January 19 rather than January 18.</p>
+      <h2>Adding a list of times (laps, tracks, shifts)</h2>
+      <p>To total several times, add them one after another. For example, 1:45:30 + 2:15:50 + 0:58:20 = 17,980 seconds, which is <strong>4:59:40</strong> (about 4.99 hours). Enter two at a time and use the result as the next input, or convert everything to seconds first.</p>
+      <h2>Minutes to decimal hours</h2>
+      <p>Payroll and billing often need hours as decimals. Divide the minutes by 60:</p>
+      <div class="calc-table"><table><thead><tr><th>Minutes</th><th>Decimal hours</th></tr></thead><tbody><tr><td>5</td><td>0.0833</td></tr><tr><td>10</td><td>0.1667</td></tr><tr><td>15</td><td>0.25</td></tr><tr><td>20</td><td>0.3333</td></tr><tr><td>30</td><td>0.50</td></tr><tr><td>40</td><td>0.6667</td></tr><tr><td>45</td><td>0.75</td></tr><tr><td>50</td><td>0.8333</td></tr></tbody></table></div>
+      <p>So 1 hour 45 minutes is 1.75 hours, not 1.45. A common error is writing 90 minutes as 1.9 hours; it is 1.5 hours.</p>
+      <h2>Where people use it</h2>
+      <ul><li><strong>Projects and timesheets:</strong> total the hours spent on tasks, then convert to decimal hours for billing.</li><li><strong>Cooking and travel:</strong> add legs of a journey or stages of a recipe to find the total time.</li><li><strong>Running and swimming:</strong> total lap or split times, or work out a finish time.</li><li><strong>Media:</strong> add the lengths of videos, tracks or recordings to see the total playing time.</li><li><strong>Deadlines:</strong> add a lead time to a start date and time to see when something is due.</li></ul>
+      <h2>Negative results</h2>
+      <p>If you subtract a larger duration from a smaller one, the result is negative and shown with a minus sign in front of the days, hours, minutes and seconds. It simply means the second value was bigger. Use the Time Duration Calculator if you want the time between two clock times.</p>
+      <h2>Daylight saving time and the date tool</h2>
+      <p>The date tool adds an exact amount of elapsed time using your browser&rsquo;s local time zone. Adding 24 hours is exactly 24 hours of elapsed time, so across a daylight saving change the clock on the wall can look an hour earlier or later than you expect. If you want the same clock time on a later date, add days with the Date Calculator instead. The tool does not convert between time zones; use the Time Zone Calculator for that.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Treating minutes as decimals, such as 1.45 for 1 hour 45 minutes.</li><li>Forgetting to carry: 75 minutes is 1 hour 15 minutes.</li><li>Adding clock times (such as 3:30 PM plus 4:15 PM). Add durations, or use the Hours Calculator for shifts.</li><li>Entering days when you meant hours.</li><li>Expecting the tool to adjust for time zones.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The breakdown shows the answer as days, hours, minutes and seconds, and the totals underneath show the same amount as a single unit, which is handy for spreadsheets and invoices. For a date result, check the weekday shown to confirm the day is what you expected.</p>
+      <div class="callout">This calculator does simple arithmetic on the numbers you enter. For payroll or legal deadlines, check the rules that apply to your case.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="time-duration-calculator.html">Time Duration Calculator</a> &ndash; the time between two clock times</li><li><a href="hours-calculator.html">Hours Calculator</a> &ndash; add up hours worked</li><li><a href="time-card-calculator.html">Time Card Calculator</a> &ndash; total a timesheet</li><li><a href="date-calculator.html">Date Calculator</a> &ndash; days between dates and adding days</li><li><a href="time-zone-calculator.html">Time Zone Calculator</a> &ndash; convert times between places</li><li><a href="age-calculator.html">Age Calculator</a> &ndash; exact age as of any date</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Can I leave a field blank?</h3>
-        <p>Yes &mdash; any blank field is treated as zero.</p>
+        <p>Yes. Any blank field is treated as zero.</p>
       </div>
       <div class="faq-item">
         <h3>Does this account for daylight saving time changes?</h3>
-        <p>Yes &mdash; because the "add/subtract from a date" tool works in your browser's local time zone, results correctly skip or repeat an hour across a daylight saving transition, just as a clock on the wall would.</p>
+        <p>The date tool adds exact elapsed time in your browser's local time zone, so across a daylight saving change the wall clock can show a one-hour difference. To land on the same clock time on a later day, add days with the Date Calculator.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I convert minutes to decimal hours?</h3>
+        <p>Divide the minutes by 60. 45 minutes is 0.75 hours, and 1 hour 45 minutes is 1.75 hours.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does a negative result mean?</h3>
+        <p>You subtracted a larger duration from a smaller one. The minus sign in front of the days, hours, minutes and seconds shows that the second value was bigger.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I add more than two durations?</h3>
+        <p>Add two at a time and use the result as the first value for the next addition, or convert every duration to seconds and add them together.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is 90 minutes not 1.9 hours?</h3>
+        <p>Hours have 60 minutes, not 100. 90 minutes is one hour and 30 minutes, which is 1.5 hours.</p>
       </div>
     </div>
 
