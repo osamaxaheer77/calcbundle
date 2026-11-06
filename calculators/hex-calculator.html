@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hex Calculator: Hexadecimal Arithmetic & Conversion | CalcBundle</title>
-<meta name="description" content="Calculate arithmetic on hexadecimal numbers and convert hex values to and from decimal.">
+<title>Hex Calculator: Hexadecimal Math &amp; Conversion</title>
+<meta name="description" content="Add, subtract, multiply and divide hexadecimal numbers of any size, or convert between hex and decimal, with the decimal working shown for checking.">
 <link rel="canonical" href="https://calcbundle.net/calculators/hex-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Hex Calculator: Hexadecimal Arithmetic & Conversion | CalcBundle">
-<meta property="og:description" content="Calculate arithmetic on hexadecimal numbers and convert hex values to and from decimal.">
+<meta property="og:title" content="Hex Calculator: Hexadecimal Math &amp; Conversion">
+<meta property="og:description" content="Add, subtract, multiply and divide hexadecimal numbers of any size, or convert between hex and decimal, with the decimal working shown for checking.">
 <meta property="og:url" content="https://calcbundle.net/calculators/hex-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hex Calculator: Hexadecimal Arithmetic & Conversion | CalcBundle">
-<meta name="twitter:description" content="Calculate arithmetic on hexadecimal numbers and convert hex values to and from decimal.">
+<meta name="twitter:title" content="Hex Calculator: Hexadecimal Math &amp; Conversion">
+<meta name="twitter:description" content="Add, subtract, multiply and divide hexadecimal numbers of any size, or convert between hex and decimal, with the decimal working shown for checking.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -58,7 +58,7 @@
       "name": "How do I convert hex to decimal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Multiply each digit by 16 raised to its position, counting from 0 at the right, and add them up. DAD is 13 × 256 + 10 × 16 + 13, which is 3,501."
+        "text": "Multiply each digit by 16 raised to its position, counting from 0 at the right, and add them up. DAD is 13 x 256 + 10 x 16 + 13, which is 3,501."
       }
     },
     {
@@ -75,6 +75,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "One hex digit equals exactly four binary digits, so a byte is two hex digits. It is a compact way to write binary values."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator accept a 0x prefix?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A leading 0x is ignored, so 0x8AB and 8AB give the same result."
       }
     }
   ]
@@ -181,22 +189,43 @@
       </tbody></table></div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How hexadecimal works</h2>
-      <p>Hexadecimal, or hex, counts in base 16. It needs sixteen digits, so after 0 to 9 it uses the letters A to F for the values 10 to 15. Each place is worth sixteen times the one to its right. The hex number 2F is 2 × 16 plus 15, which is 47 in decimal. Hex is popular in computing because one hex digit stands for exactly four binary digits, so long binary numbers become short and easier to read.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Hex is base 16, using 0 to 9 and A to F. 8AB + B78 = 1423 in hex (2,219 + 2,936 = 5,155). DAD in hex is 3,501 in decimal, and 170 in decimal is AA in hex.</div>
+      <h2>How hexadecimal works</h2>
+      <p>Hexadecimal, or hex, counts in base 16. It needs sixteen digits, so after 0 to 9 it uses the letters A to F for the values 10 to 15. Each place is worth sixteen times the one to its right. The hex number 2F is 2 &times; 16 + 15, which is 47 in decimal. Hex is popular in computing because one hex digit stands for exactly four binary digits, so long binary numbers become short and easy to read.</p>
+      <div class="calc-table"><table><thead><tr><th>Hex digit</th><th>Decimal</th><th>Binary</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>0000</td></tr><tr><td>1</td><td>1</td><td>0001</td></tr><tr><td>2</td><td>2</td><td>0010</td></tr><tr><td>3</td><td>3</td><td>0011</td></tr><tr><td>4</td><td>4</td><td>0100</td></tr><tr><td>5</td><td>5</td><td>0101</td></tr><tr><td>6</td><td>6</td><td>0110</td></tr><tr><td>7</td><td>7</td><td>0111</td></tr><tr><td>8</td><td>8</td><td>1000</td></tr><tr><td>9</td><td>9</td><td>1001</td></tr><tr><td>A</td><td>10</td><td>1010</td></tr><tr><td>B</td><td>11</td><td>1011</td></tr><tr><td>C</td><td>12</td><td>1100</td></tr><tr><td>D</td><td>13</td><td>1101</td></tr><tr><td>E</td><td>14</td><td>1110</td></tr><tr><td>F</td><td>15</td><td>1111</td></tr></tbody></table></div>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens with 8AB and B78, which are 2,219 and 2,936 in decimal. Adding them gives <strong>1423</strong> in hex (2,219 + 2,936 = 5,155). Column by column: B + 8 = 19, which is 13 hex, so write 3 and carry 1; and so on until the sum is 1423. Subtracting gives -2CD (-717), multiplying gives 636928 (6,514,984) and dividing 8AB by B78 gives a quotient of 0 and a remainder of 8AB (in decimal 0 remainder 2219).</p>
+      <div class="calc-table"><table><thead><tr><th>Operation</th><th>Hex result</th><th>Decimal check</th></tr></thead><tbody><tr><td>8AB + B78</td><td>1423</td><td>2,219 + 2,936 = 5,155</td></tr><tr><td>8AB &minus; B78</td><td>-2CD</td><td>2,219 &minus; 2,936 = -717</td></tr><tr><td>8AB &times; B78</td><td>636928</td><td>2,219 &times; 2,936 = 6,514,984</td></tr><tr><td>8AB &divide; B78</td><td>0 remainder 8AB</td><td>2,219 &divide; 2,936 = 0 remainder 2219</td></tr></tbody></table></div>
+      <h2>Converting hex to decimal</h2>
+      <p>Multiply each digit by 16 raised to its position, counting from 0 at the right, and add the results. DAD is 13 &times; 256 + 10 &times; 16 + 13 = <strong>3,501</strong>, the page&rsquo;s default hex-to-decimal example. The number 8AB is 8 &times; 256 + 10 &times; 16 + 11 = 2,219.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Value of each place in a 4-digit hex number</title><desc id="cf1-d">Each place is worth 16 times the one to its right: 1, 16, 256 and 4,096.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Value of each place in a 4-digit hex number</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">16^3</text><rect class="bar" x="70" y="44" width="358.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">4,096</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">16^2</text><rect class="bar" x="70" y="78" width="22.4" height="22" rx="4" fill="#2563eb"/><text x="100.4" y="94" font-size="13" font-weight="700" fill="#111827">256</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">16^1</text><rect class="bar" x="70" y="112" width="2.0" height="22" rx="4" fill="#2563eb"/><text x="80.0" y="128" font-size="13" font-weight="700" fill="#111827">16</text><text x="62" y="162" text-anchor="end" font-size="13" fill="#6b7280">16^0</text><rect class="bar" x="70" y="146" width="2.0" height="22" rx="4" fill="#2563eb"/><text x="80.0" y="162" font-size="13" font-weight="700" fill="#111827">1</text></svg><figcaption>The places grow by a factor of 16.</figcaption></figure>
+      <h2>Converting decimal to hex</h2>
+      <p>Divide the number by 16 repeatedly, keep the remainders and write 10 to 15 as A to F. Reading them from the last to the first gives the hex number. For 3,501:</p>
+      <div class="calc-table"><table><thead><tr><th>Divide</th><th>Quotient</th><th>Remainder</th><th>Hex digit</th></tr></thead><tbody><tr><td>3,501 &divide; 16</td><td>218</td><td>13</td><td>D</td></tr><tr><td>218 &divide; 16</td><td>13</td><td>10</td><td>A</td></tr><tr><td>13 &divide; 16</td><td>0</td><td>13</td><td>D</td></tr></tbody></table></div>
+      <p>Reading the digits bottom to top gives <strong>DAD</strong>. The page&rsquo;s decimal-to-hex default is 170, which is <strong>AA</strong> (10 &times; 16 + 10).</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Digits needed to write the number 3,501 in three bases</title><desc id="cf2-d">Hex is compact: 3,501 is 110110101101 in binary but just DAD in hex.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Digits needed to write the number 3,501 in three bases</text><text x="132" y="60" text-anchor="end" font-size="13" fill="#6b7280">Binary</text><rect class="bar" x="140" y="44" width="288.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">12</text><text x="132" y="94" text-anchor="end" font-size="13" fill="#6b7280">Decimal</text><rect class="bar" x="140" y="78" width="96.0" height="22" rx="4" fill="#2563eb"/><text x="244.0" y="94" font-size="13" font-weight="700" fill="#111827">4</text><text x="132" y="128" text-anchor="end" font-size="13" fill="#6b7280">Hexadecimal (DAD)</text><rect class="bar" x="140" y="112" width="72.0" height="22" rx="4" fill="#10b981"/><text x="220.0" y="128" font-size="13" font-weight="700" fill="#111827">3</text></svg><figcaption>Hex is a shorter way to write the same value.</figcaption></figure>
+      <h2>Hex and binary</h2>
+      <p>One hex digit equals exactly four binary digits (bits), so a byte of 8 bits is two hex digits, with values from 00 to FF, or 0 to 255 in decimal. To convert, replace each hex digit with its four bits: A is 1010, so AA is 10101010, which is 170 in decimal. The Binary Calculator does arithmetic in base 2.</p>
+      <div class="calc-table"><table><thead><tr><th>Hex byte</th><th>Decimal</th><th>Binary</th></tr></thead><tbody><tr><td>00</td><td>0</td><td>00000000</td></tr><tr><td>0F</td><td>15</td><td>00001111</td></tr><tr><td>10</td><td>16</td><td>00010000</td></tr><tr><td>7F</td><td>127</td><td>01111111</td></tr><tr><td>80</td><td>128</td><td>10000000</td></tr><tr><td>AA</td><td>170</td><td>10101010</td></tr><tr><td>FF</td><td>255</td><td>11111111</td></tr></tbody></table></div>
       <h2>Where hex is used</h2>
-      <p>You meet hex in web colors such as #FF8800, where each pair of digits sets the red, green and blue amounts. It also appears in memory addresses, in MAC addresses, in character codes and in the byte values that programmers read when they debug. Two hex digits make up one byte, with values from 00 to FF, which is 0 to 255 in decimal.</p>
-
-      <h2>Using the calculators</h2>
-      <p>The first calculator adds, subtracts, multiplies and divides two hex numbers and shows the same sum in decimal so you can check it. Division gives a whole quotient and a remainder. The other two calculators convert in each direction. Letters can be typed in upper or lower case, results are shown in upper case, and negative whole numbers can be entered with a minus sign. The sums are exact for numbers of any size.</p>
-      <div class="callout">This calculator works with whole numbers. It shows negative numbers with a minus sign, and does not use the two’s complement form that computer hardware uses.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: check the result</h2><p>Hexadecimal 1F equals decimal 31: 1 × 16 + 15. Adding hex 1 produces hex 20, or decimal 32.</p><h2>Related math calculators</h2><p>For base 2 arithmetic, try the <a href="binary-calculator.html">Binary Calculator</a>. For exact large integers, see the <a href="big-number-calculator.html">Big Number Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="roman-numeral-converter.html">Roman Numeral Converter</a>, <a href="base64-encoder.html">Base64 Encode / Decode</a>, <a href="binary-calculator.html">Binary Calculator</a>, <a href="url-encoder.html">URL Encode / Decode</a>.</p>
-
-      <!--/seo-extra-->
+      <ul><li><strong>Web colors:</strong> #FF8800 sets red to FF (255), green to 88 (136) and blue to 00 (0), which is orange.</li><li><strong>Memory addresses and MAC addresses:</strong> long values are written in hex.</li><li><strong>Character codes and byte values:</strong> programmers read hex when they debug.</li><li><strong>Unicode:</strong> code points are written in hex, such as U+00E9.</li></ul>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">The orange color #FF8800: red, green and blue amounts (0 to 255)</title><desc id="cf3-d">Each pair of hex digits is one color channel from 00 (none) to FF (full).</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The orange color #FF8800: red, green and blue amounts (0 to 255)</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">Red (FF)</text><rect class="bar" x="100" y="44" width="328.0" height="22" rx="4" fill="#ef4444"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">255</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">Green (88)</text><rect class="bar" x="100" y="78" width="174.9" height="22" rx="4" fill="#10b981"/><text x="282.9" y="94" font-size="13" font-weight="700" fill="#111827">136</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">Blue (00)</text><rect class="bar" x="100" y="112" width="2.0" height="22" rx="4" fill="#3b82f6"/><text x="110.0" y="128" font-size="13" font-weight="700" fill="#111827">0</text></svg><figcaption>A color is three hex pairs.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Color code</th><th>Name</th><th>Red</th><th>Green</th><th>Blue</th></tr></thead><tbody><tr><td>#FF0000</td><td>Red</td><td>255</td><td>0</td><td>0</td></tr><tr><td>#00FF00</td><td>Green</td><td>0</td><td>255</td><td>0</td></tr><tr><td>#0000FF</td><td>Blue</td><td>0</td><td>0</td><td>255</td></tr><tr><td>#FF8800</td><td>Orange</td><td>255</td><td>136</td><td>0</td></tr><tr><td>#FFFFFF</td><td>White</td><td>255</td><td>255</td><td>255</td></tr><tr><td>#808080</td><td>Gray</td><td>128</td><td>128</td><td>128</td></tr></tbody></table></div>
+      <p>The CSS specification defines these six-digit codes as hex colors; every pair is one channel.</p>
+      <h2>Handy values to remember</h2>
+      <div class="calc-table"><table><thead><tr><th>Hex</th><th>Decimal</th><th>Why it matters</th></tr></thead><tbody><tr><td>10</td><td>16</td><td>The base itself</td></tr><tr><td>64</td><td>100</td><td>One hundred</td></tr><tr><td>FF</td><td>255</td><td>The largest byte value</td></tr><tr><td>100</td><td>256</td><td>One more than a byte holds</td></tr><tr><td>3E8</td><td>1,000</td><td>One thousand</td></tr><tr><td>FFFF</td><td>65,535</td><td>The largest 16-bit value</td></tr><tr><td>FFFFFF</td><td>16,777,215</td><td>The largest 24-bit value, white as a web color</td></tr></tbody></table></div>
+      <p>Programmers mark hex numbers with a prefix so they are not mistaken for decimal: 0x in many languages, # for colors in CSS and &amp;H in some older languages. This calculator accepts 0x, and ignores it.</p>
+      <h2>Entering numbers</h2>
+      <ul><li>Use digits 0 to 9 and letters A to F, upper or lower case. Results are shown in upper case.</li><li>A 0x prefix, such as 0x8AB, is accepted and ignored.</li><li>Negative whole numbers use a minus sign.</li><li>Only whole numbers are supported. Fractions and two's complement are not used.</li><li>The sums are exact for numbers of any size.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using letters beyond F, such as G.</li><li>Forgetting that D is 13, not 4, when converting by hand.</li><li>Confusing the decimal number 170 with the hex number 170, which is 368 in decimal.</li><li>Dividing and expecting a fraction. Division gives a whole quotient and a remainder.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large line is the hex result, with both numbers in hex and the same calculation in decimal underneath so you can check it. The other two tools convert one number at a time. For binary arithmetic use the Binary Calculator, and for very large decimal numbers the Big Number Calculator.</p>
+      <div class="callout">The calculator works with whole numbers. Hardware or exam questions that use a fixed word size may handle negative numbers differently.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="binary-calculator.html">Binary Calculator</a> &ndash; base 2 arithmetic and conversion</li><li><a href="big-number-calculator.html">Big Number Calculator</a> &ndash; very large decimal numbers</li><li><a href="ip-subnet-calculator.html">IP Subnet Calculator</a> &ndash; addresses and subnets</li><li><a href="roman-numeral-converter.html">Roman Numeral Converter</a> &ndash; another number system</li><li><a href="base64-encoder.html">Base64 Encoder</a> &ndash; encode and decode text</li><li><a href="url-encoder.html">URL Encoder</a> &ndash; encode URLs safely</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do you add hex numbers?</h3>
@@ -208,7 +237,7 @@
       </div>
       <div class="faq-item">
         <h3>How do I convert hex to decimal?</h3>
-        <p>Multiply each digit by 16 raised to its position, counting from 0 at the right, and add them up. DAD is 13 × 256 + 10 × 16 + 13, which is 3,501.</p>
+        <p>Multiply each digit by 16 raised to its position, counting from 0 at the right, and add them up. DAD is 13 x 256 + 10 x 16 + 13, which is 3,501.</p>
       </div>
       <div class="faq-item">
         <h3>How do I convert decimal to hex?</h3>
@@ -218,6 +247,11 @@
         <h3>Why is hex used with binary?</h3>
         <p>One hex digit equals exactly four binary digits, so a byte is two hex digits. It is a compact way to write binary values.</p>
       </div>
+      <div class="faq-item">
+        <h3>Does the calculator accept a 0x prefix?</h3>
+        <p>Yes. A leading 0x is ignored, so 0x8AB and 8AB give the same result.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://cs50.harvard.edu/x/notes/0/" rel="noopener" target="_blank">CS50: Lecture 0, binary and computers</a>; <a href="https://www.w3.org/TR/css-color-4/" rel="noopener" target="_blank">W3C: CSS Color Module Level 4 (hex colors)</a></p>
     </div>
 
   </div>
