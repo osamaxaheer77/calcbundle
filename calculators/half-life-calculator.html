@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Half-Life Calculator: Exponential Decay & Remaining Amount | CalcBundle</title>
-<meta name="description" content="Calculate how much material remains after a given time or solve for half-life and elapsed time.">
+<title>Half-Life Calculator: Decay, Remaining Amount &amp; Time</title>
+<meta name="description" content="Find the remaining amount, starting amount, elapsed time or half-life of a decaying substance, and convert between half-life, mean lifetime and decay constant.">
 <link rel="canonical" href="https://calcbundle.net/calculators/half-life-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Half-Life Calculator: Exponential Decay & Remaining Amount | CalcBundle">
-<meta property="og:description" content="Calculate how much material remains after a given time or solve for half-life and elapsed time.">
+<meta property="og:title" content="Half-Life Calculator: Decay, Remaining Amount &amp; Time">
+<meta property="og:description" content="Find the remaining amount, starting amount, elapsed time or half-life of a decaying substance, and convert between half-life, mean lifetime and decay constant.">
 <meta property="og:url" content="https://calcbundle.net/calculators/half-life-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Half-Life Calculator: Exponential Decay & Remaining Amount | CalcBundle">
-<meta name="twitter:description" content="Calculate how much material remains after a given time or solve for half-life and elapsed time.">
+<meta name="twitter:title" content="Half-Life Calculator: Decay, Remaining Amount &amp; Time">
+<meta name="twitter:description" content="Find the remaining amount, starting amount, elapsed time or half-life of a decaying substance, and convert between half-life, mean lifetime and decay constant.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,7 +42,7 @@
       "name": "How do you calculate half-life?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use t½ = t × ln 2 ÷ ln(N0 ÷ Nt), where N0 is the starting amount, Nt is the amount left, and t is the time that passed."
+        "text": "Use t½ = t × ln 2 ÷ ln(N0 ÷ Nt), where N0 is the starting amount, Nt is the amount left and t is the time that passed. For 100 falling to 10 over 50 time units, the half-life is 15.05."
       }
     },
     {
@@ -58,7 +58,7 @@
       "name": "What is the difference between half-life and mean lifetime?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The half-life is the time for half of the atoms to decay. The mean lifetime is the average time an atom lasts, and it is about 1.44 times longer than the half-life."
+        "text": "The half-life is the time for half of the substance to decay. The mean lifetime is the average survival time of an atom, equal to the half-life divided by ln 2, about 1.44 times longer."
       }
     },
     {
@@ -66,15 +66,23 @@
       "name": "What is the decay constant?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is the rate of decay, equal to ln 2 divided by the half-life. A larger decay constant means a shorter half-life."
+        "text": "It is the fraction that decays per unit of time, equal to ln 2 divided by the half-life. It is the reciprocal of the mean lifetime."
       }
     },
     {
       "@type": "Question",
-      "name": "Does the unit of time matter?",
+      "name": "Can a substance fully disappear after enough half-lives?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Time and half-life must be in the same unit. The result for time or half-life comes out in that unit, so use years, days or seconds as you prefer."
+        "text": "In the model it never reaches exactly zero, since each half-life halves what is left. In practice, only a few atoms remain after many half-lives, and the last ones decay at random times."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this for medicines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many drugs leave the body in a way that looks like exponential decay, so the same formulas apply as a model. Real dosing depends on more factors, so follow professional advice."
       }
     }
   ]
@@ -170,29 +178,43 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What a half-life is</h2>
-      <p>The half-life of a substance is the time it takes for half of it to decay. After one half-life, 50% is left. After two, 25% is left, after three 12.5%, and so on, halving each time. The idea is most often used for radioactive atoms, such as carbon-14, which has a half-life of about 5,730 years, but it fits any process of exponential decay, including some medicines leaving the body.</p>
-
-      <h2>The formula</h2>
-      <p>The quantity left after a time t is the starting quantity multiplied by one half raised to the power t divided by the half-life: N(t) = N0 × (1/2)^(t / t½). The calculator rearranges this to find whichever of the four values you leave out. To find the half-life from the other three, it uses t½ = t × ln 2 ÷ ln(N0 ÷ Nt). The remaining quantity must be smaller than the starting quantity and bigger than zero, because a decaying substance never grows and never quite reaches zero.</p>
-
-      <h2>Mean lifetime and decay constant</h2>
-      <p>Two other numbers describe the same decay. The decay constant λ is the fraction of the substance that decays per unit of time, and equals ln 2 ÷ t½. The mean lifetime τ is the average time an atom survives, and equals 1 ÷ λ, which is t½ ÷ ln 2, about 1.44 times the half-life. The second calculator converts between all three, so you only need to know one.</p>
-      <div class="callout">Half-life describes the average behavior of a very large number of atoms. It cannot tell you when one particular atom will decay.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: check the result</h2><p>Starting with 80 units and a half-life of five years leaves 40 units after five years and 20 after ten years, assuming ideal exponential decay.</p><h2>Related math calculators</h2><p>For exponential expressions, use the <a href="exponent-calculator.html">Exponent Calculator</a>. For logarithmic solving, see the <a href="log-calculator.html">Log Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="speed-calculator.html">Speed Calculator</a>, <a href="conversion-calculator.html">Conversion Calculator</a>, <a href="molecular-weight-calculator.html">Molecular Weight Calculator</a>, <a href="density-calculator.html">Density Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <!--next-->
-      <p><strong>What next?</strong> Half-life is a geometric sequence with a ratio of one half. The <a href="number-sequence-calculator.html">Number Sequence Calculator</a> lists the amount after each step and the total, and the <a href="scientific-notation-calculator.html">Scientific Notation Calculator</a> helps with very small remaining amounts.</p>
-      <!--/next-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> After one half-life, 50% of a substance is left, then 25%, then 12.5%. With 100 units falling to 10 over 50 time units, the half-life is 15.0514997832. Carbon-14 (5,730 years) takes about 19,035 years to fall to 10%.</div>
+      <h2>What the calculator does</h2>
+      <p>The page has two tools. The first takes <strong>any three</strong> of the quantity remaining (N<sub>t</sub>), the initial quantity (N<sub>0</sub>), the elapsed time (t) and the half-life (t<sub>&frac12;</sub>), and finds the fourth. The second converts between the half-life, the mean lifetime and the decay constant, so you only need to know one of them.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The first tool opens with 10 units remaining out of 100 after 50 time units, and the half-life blank. The half-life is t<sub>&frac12;</sub> = t &times; ln 2 &divide; ln(N<sub>0</sub> &divide; N<sub>t</sub>) = 50 &times; 0.693147 &divide; ln 10 = <strong>15.0514997832</strong>. The same result also shows the mean lifetime, <strong>21.7147240952</strong>, and the decay constant, <strong>0.0460517018599</strong> per time unit. Check: 50 &divide; 15.0515 is 3.32 half-lives, and 100 &times; 0.5<sup>3.32</sup> is 10. The second tool opens with a half-life of 5,730, the figure for carbon-14, and returns a mean lifetime of <strong>8,266.64258429</strong> and a decay constant of <strong>0.000120968094339</strong>.</p>
+      <h2>The formulas</h2>
+      <ul><li><strong>Remaining amount:</strong> N<sub>t</sub> = N<sub>0</sub> &times; (1/2)<sup>t / t&frac12;</sup></li><li><strong>Initial amount:</strong> N<sub>0</sub> = N<sub>t</sub> &times; 2<sup>t / t&frac12;</sup></li><li><strong>Elapsed time:</strong> t = t<sub>&frac12;</sub> &times; ln(N<sub>0</sub> &divide; N<sub>t</sub>) &divide; ln 2</li><li><strong>Half-life:</strong> t<sub>&frac12;</sub> = t &times; ln 2 &divide; ln(N<sub>0</sub> &divide; N<sub>t</sub>)</li><li><strong>Decay constant:</strong> &lambda; = ln 2 &divide; t<sub>&frac12;</sub>, and <strong>mean lifetime:</strong> &tau; = 1 &divide; &lambda; = t<sub>&frac12;</sub> &divide; ln 2</li></ul>
+      <h2>Finding the remaining amount</h2>
+      <p>Start with 80 units and a half-life of 5 years. After 5 years 40 units are left, and after 10 years there are 80 &times; 0.5<sup>2</sup> = <strong>20</strong> units. The table shows how fast the share falls after whole numbers of half-lives.</p>
+      <div class="calc-table"><table><thead><tr><th>Half-lives elapsed</th><th>Fraction left</th><th>Percent left</th></tr></thead><tbody><tr><td>0</td><td>1/1</td><td>100%</td></tr><tr><td>1</td><td>1/2</td><td>50%</td></tr><tr><td>2</td><td>1/4</td><td>25%</td></tr><tr><td>3</td><td>1/8</td><td>12.5%</td></tr><tr><td>4</td><td>1/16</td><td>6.25%</td></tr><tr><td>5</td><td>1/32</td><td>3.125%</td></tr><tr><td>6</td><td>1/64</td><td>1.5625%</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Share of a substance left after each half-life (percent)</title><desc id="cf1-d">Each half-life halves what is left: 50% after one, 25% after two, 12.5% after three and 1.56% after six. The curve never quite reaches zero.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Share of a substance left after each half-life (percent)</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">0%</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">27%</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">54%</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">81%</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">108%</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="132.7" y="194" text-anchor="middle" font-size="11" fill="#6b7280">1</text><text x="207.3" y="194" text-anchor="middle" font-size="11" fill="#6b7280">2</text><text x="282.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">3</text><text x="356.7" y="194" text-anchor="middle" font-size="11" fill="#6b7280">4</text><text x="431.3" y="194" text-anchor="middle" font-size="11" fill="#6b7280">5</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">6</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Half-lives elapsed</text><polyline class="draw" style="--len:477" points="58.0,59.3 132.7,117.7 207.3,146.8 282.0,161.4 356.7,168.7 431.3,172.4 506.0,174.2" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Percent remaining</text></svg><figcaption>Half-life is exponential decay: the share halves at equal time steps.</figcaption></figure>
+      <h2>Finding how long it took</h2>
+      <p>Leave the time blank and enter the other three. For a sample of carbon-14 with a half-life of 5,730 years, falling to 25% takes two half-lives, or 11,460 years. Falling to 10% takes t = 5,730 &times; ln 10 &divide; ln 2 = <strong>19,035 years</strong>, not the 1.5 half-lives you might guess, because the decay slows as less remains. Radiocarbon dating uses this same relation to turn the share of carbon-14 left in a sample into an age.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Years for carbon-14 (half-life 5,730 years) to fall to each share of the original</title><desc id="cf2-d">Solving t = t&amp;frac12; &amp;times; ln(N0 &amp;divide; Nt) &amp;divide; ln 2 gives 11,460 years to reach 25% (two half-lives), but 19,035 years to reach 10%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Years for carbon-14 (half-life 5,730 years) to fall to each share of the original</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">50% left</text><rect class="bar" x="90" y="44" width="50.9" height="22" rx="4" fill="#9ca3af"/><text x="148.9" y="60" font-size="13" font-weight="700" fill="#111827">5,730 years</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">25% left</text><rect class="bar" x="90" y="78" width="101.7" height="22" rx="4" fill="#9ca3af"/><text x="199.7" y="94" font-size="13" font-weight="700" fill="#111827">11,460 years</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">10% left</text><rect class="bar" x="90" y="112" width="169.0" height="22" rx="4" fill="#2563eb"/><text x="267.0" y="128" font-size="13" font-weight="700" fill="#111827">19,035 years</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">1% left</text><rect class="bar" x="90" y="146" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">38,069 years</text></svg><figcaption>Time to decay grows with each tenfold drop.</figcaption></figure>
+      <h2>Finding the starting amount</h2>
+      <p>Leave the initial quantity blank. If 12.5 units remain after 3 half-lives, the starting amount was N<sub>0</sub> = 12.5 &times; 2<sup>3</sup> = <strong>100</strong>. Working backwards in this way is how a dose or a sample size at an earlier time is estimated.</p>
+      <h2>Half-life, mean lifetime and decay constant</h2>
+      <p>The decay constant &lambda; is the fraction that decays per unit of time, in the continuous sense. The mean lifetime &tau; is the average time an atom survives, and equals t<sub>&frac12;</sub> &divide; ln 2, which is about 1.4427 half-lives. After one mean lifetime, 1/e, or 36.8%, of the original remains.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">What is left after different amounts of time (percent of the original)</title><desc id="cf3-d">One mean lifetime is about 1.44 half-lives, so 36.8% is left after one mean lifetime, a little less than the 50% left after one half-life.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">What is left after different amounts of time (percent of the original)</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 half-life</text><rect class="bar" x="130" y="44" width="298.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">50%</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">1 mean lifetime</text><rect class="bar" x="130" y="78" width="219.3" height="22" rx="4" fill="#10b981"/><text x="357.3" y="94" font-size="13" font-weight="700" fill="#111827">36.8%</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">2 half-lives</text><rect class="bar" x="130" y="112" width="149.0" height="22" rx="4" fill="#2563eb"/><text x="287.0" y="128" font-size="13" font-weight="700" fill="#111827">25%</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">3 mean lifetimes</text><rect class="bar" x="130" y="146" width="29.7" height="22" rx="4" fill="#10b981"/><text x="167.7" y="162" font-size="13" font-weight="700" fill="#111827">4.98%</text></svg><figcaption>Half-lives and mean lifetimes mark different points on the same curve.</figcaption></figure>
+      <h2>Some real half-lives</h2>
+      <div class="calc-table"><table><thead><tr><th>Substance</th><th>Approximate half-life</th></tr></thead><tbody><tr><td>Technetium-99m (medical imaging)</td><td>6.01 hours</td></tr><tr><td>Radon-222</td><td>3.82 days</td></tr><tr><td>Iodine-131</td><td>8.02 days</td></tr><tr><td>Cesium-137</td><td>30.2 years</td></tr><tr><td>Carbon-14</td><td>5,730 years</td></tr><tr><td>Uranium-238</td><td>4.47 billion years</td></tr></tbody></table></div>
+      <p>With iodine-131 at about 8.02 days, a 100-unit sample has about 7.5 units left after 30 days (100 &times; 0.5<sup>30 &divide; 8.02</sup>). The half-life of a substance is fixed by its nature and does not depend on how much you have.</p>
+      <h2>What the tool does not cover</h2>
+      <ul><li>It models <strong>decay</strong>, so the remaining amount must be smaller than the initial amount and greater than zero.</li><li>It describes a very large number of atoms. It cannot say when one particular atom will decay.</li><li>Medicines leaving the body often follow the same pattern, but real bodies add absorption and other effects. Treat the result as a model, not medical advice.</li><li>Chains of decay, where the product is also radioactive, need more than a single half-life.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing time units, such as a half-life in years and a time in days.</li><li>Entering all four values and expecting a check. With all four filled, the tool recalculates the half-life from the other three.</li><li>Expecting a substance to be gone after two half-lives. A quarter remains.</li><li>Confusing the mean lifetime with the half-life. The mean lifetime is about 44% longer.</li><li>Entering the percent left as a decimal in one box and a count in the other. Use the same units for both quantities.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large figure is the quantity you left blank, and a small line below it shows the formula that was used. When the half-life is calculated, the page also lists the mean lifetime and the decay constant. Large and small values are shown in the form 1.2 &times; 10<sup>n</sup> once they go outside a normal range.</p>
+      <div class="callout">This calculator models ideal exponential decay. For radiation safety, medical dosing or dating work, rely on measured data and a qualified professional.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="exponent-calculator.html">Exponent Calculator</a> &ndash; powers, roots and missing exponents</li><li><a href="log-calculator.html">Log Calculator</a> &ndash; logarithms of any base</li><li><a href="percentage-calculator.html">Percentage Calculator</a> &ndash; percent change and difference</li><li><a href="scientific-notation-calculator.html">Scientific Notation Calculator</a> &ndash; very small remaining amounts</li><li><a href="number-sequence-calculator.html">Number Sequence Calculator</a> &ndash; the amount after each step</li><li><a href="molecular-weight-calculator.html">Molecular Weight Calculator</a> &ndash; the mass of a compound</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do you calculate half-life?</h3>
-        <p>Use t½ = t × ln 2 ÷ ln(N0 ÷ Nt), where N0 is the starting amount, Nt is the amount left, and t is the time that passed.</p>
+        <p>Use t&frac12; = t &times; ln 2 &divide; ln(N0 &divide; Nt), where N0 is the starting amount, Nt is the amount left and t is the time that passed. For 100 falling to 10 over 50 time units, the half-life is 15.05.</p>
       </div>
       <div class="faq-item">
         <h3>How much is left after 3 half-lives?</h3>
@@ -200,16 +222,21 @@
       </div>
       <div class="faq-item">
         <h3>What is the difference between half-life and mean lifetime?</h3>
-        <p>The half-life is the time for half of the atoms to decay. The mean lifetime is the average time an atom lasts, and it is about 1.44 times longer than the half-life.</p>
+        <p>The half-life is the time for half of the substance to decay. The mean lifetime is the average survival time of an atom, equal to the half-life divided by ln 2, about 1.44 times longer.</p>
       </div>
       <div class="faq-item">
         <h3>What is the decay constant?</h3>
-        <p>It is the rate of decay, equal to ln 2 divided by the half-life. A larger decay constant means a shorter half-life.</p>
+        <p>It is the fraction that decays per unit of time, equal to ln 2 divided by the half-life. It is the reciprocal of the mean lifetime.</p>
       </div>
       <div class="faq-item">
-        <h3>Does the unit of time matter?</h3>
-        <p>Time and half-life must be in the same unit. The result for time or half-life comes out in that unit, so use years, days or seconds as you prefer.</p>
+        <h3>Can a substance fully disappear after enough half-lives?</h3>
+        <p>In the model it never reaches exactly zero, since each half-life halves what is left. In practice, only a few atoms remain after many half-lives, and the last ones decay at random times.</p>
       </div>
+      <div class="faq-item">
+        <h3>Can I use this for medicines?</h3>
+        <p>Many drugs leave the body in a way that looks like exponential decay, so the same formulas apply as a model. Real dosing depends on more factors, so follow professional advice.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Half-life" rel="noopener" target="_blank">Wikipedia: Half-life</a>; <a href="https://en.wikipedia.org/wiki/Exponential_decay" rel="noopener" target="_blank">Wikipedia: Exponential decay</a>; <a href="https://en.wikipedia.org/wiki/Radiocarbon_dating" rel="noopener" target="_blank">Wikipedia: Radiocarbon dating</a></p>
     </div>
 
   </div>
