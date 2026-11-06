@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Percent Error Calculator: Experimental vs Actual | CalcBundle</title>
-<meta name="description" content="Calculate absolute percentage error from measured and accepted values with the equation shown.">
+<title>Percent Error Calculator: Observed vs True Value</title>
+<meta name="description" content="Find percent error from an observed and a true value, with the signed and absolute error, the steps shown and worked examples from the lab.">
 <link rel="canonical" href="https://calcbundle.net/calculators/percent-error-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Percent Error Calculator: Experimental vs Actual | CalcBundle">
-<meta property="og:description" content="Calculate absolute percentage error from measured and accepted values with the equation shown.">
+<meta property="og:title" content="Percent Error Calculator: Observed vs True Value">
+<meta property="og:description" content="Find percent error from an observed and a true value, with the signed and absolute error, the steps shown and worked examples from the lab.">
 <meta property="og:url" content="https://calcbundle.net/calculators/percent-error-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Percent Error Calculator: Experimental vs Actual | CalcBundle">
-<meta name="twitter:description" content="Calculate absolute percentage error from measured and accepted values with the equation shown.">
+<meta name="twitter:title" content="Percent Error Calculator: Observed vs True Value">
+<meta name="twitter:description" content="Find percent error from an observed and a true value, with the signed and absolute error, the steps shown and worked examples from the lab.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,7 +42,7 @@
       "name": "How do you calculate percent error?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Take the observed value minus the true value, divide by the true value, and multiply by 100. Many classes use the absolute value of the result."
+        "text": "Subtract the true value from the observed value, divide by the true value, and multiply by 100. An observed 10 against a true 11 gives minus 9.0909 percent."
       }
     },
     {
@@ -50,15 +50,7 @@
       "name": "Can percent error be negative?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, if you do not take the absolute value. A negative result means the observed value is smaller than a positive true value."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a good percent error?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A smaller one is better. Below about 5% is often seen as good in school labs, but what is acceptable depends on the experiment."
+        "text": "Yes. It is negative when the observed value is lower than the true value. Many textbooks use the absolute value so the error is always positive, and the calculator shows both."
       }
     },
     {
@@ -66,15 +58,31 @@
       "name": "What if the true value is zero?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Percent error is undefined, since it would mean dividing by zero. Use the absolute error instead."
+        "text": "Percent error is undefined, because it would mean dividing by zero. Use the absolute error in the units of the measurement instead."
       }
     },
     {
       "@type": "Question",
-      "name": "What is the difference between percent error and percent difference?",
+      "name": "What is a good percent error?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Percent error compares a measurement with a known true value. Percent difference compares two values when neither is the true one."
+        "text": "It depends on the experiment. A school lab might accept under 5 percent, while a precision measurement may need under 0.1 percent. Compare it with what your equipment can deliver."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between percent error and percent change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Percent error compares a measurement with a known true value. Percent change compares a new value with an old one. Both use a similar formula but with different bases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I do not know the true value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Percent error needs one. When it is unknown, scientists use the standard deviation of repeated measurements to describe the uncertainty instead."
       }
     }
   ]
@@ -135,43 +143,62 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What percent error is</h2>
-      <p>Percent error shows how far a measured, or observed, value is from the true value, as a percentage of the true value. It is used in science classes and labs to judge how good a measurement is. A small percent error means the measurement is close to the accepted value, and a large one suggests a mistake in the method or the equipment.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Percent error = (observed &minus; true) &divide; |true| &times; 100. An observed 10 against a true 11 is -9.0909%, or 9.0909% absolute. A reading of 56.891 against 62.327 is -8.7217%.</div>
+      <h2>What percent error is</h2>
+      <p>Percent error shows how far a measured, or <strong>observed</strong>, value is from the <strong>true</strong> (accepted) value, as a percentage of the true value. It is used in science classes and labs to judge how good a measurement is. A small percent error means the measurement is close to the accepted value, and a large one suggests a mistake in the method or the equipment.</p>
       <h2>The formula</h2>
-      <p>Subtract the true value from the observed value, divide by the true value, and multiply by 100. The result is negative when the observed value is lower than the true value and positive when it is higher. Many textbooks take the absolute value so the error is always positive, since only the size of the error matters. The calculator shows both the signed error and the absolute error.</p>
-
-      <h2>A worked example</h2>
-      <p>Say you measure a length as 56.891 and the true length is 62.327. The difference is 56.891 minus 62.327, which is negative 5.436. Divide by 62.327 to get negative 0.0872, and multiply by 100 for a percent error of negative 8.72%. As an absolute value, the measurement is off by 8.72%. If the true value is zero, percent error cannot be worked out, because you cannot divide by zero.</p>
-      <div class="callout">Percent error assumes you know the true value. When it is unknown, scientists use the standard deviation of repeated measurements to describe the uncertainty instead.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: check the result</h2><p>A measured value of 48 compared with an accepted value of 50 differs by 2. The percent error is |48 − 50| ÷ 50 × 100% = 4%.</p><h2>Related math calculators</h2><p>To find a percentage increase or decrease instead, use the <a href="percentage-calculator.html">Percentage Calculator</a>. To round a measurement, see the <a href="rounding-calculator.html">Rounding Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="mean-median-mode-range-calculator.html">Mean, Median, Mode, Range Calculator</a>, <a href="standard-deviation-calculator.html">Standard Deviation Calculator</a>, <a href="random-number-generator.html">Random Number Generator</a>, <a href="probability-calculator.html">Probability Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p><strong>Percent error = (observed &minus; true) &divide; |true| &times; 100.</strong> Subtract the true value from the observed value, divide by the size of the true value, and multiply by 100. The result is negative when the observed value is lower than the true value and positive when it is higher. Many textbooks use the absolute value so that the error is always positive, since only its size matters. The calculator shows both the signed error and the absolute error, as well as the plain difference.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on an observed value of <strong>10</strong> and a true value of <strong>11</strong>. The difference is 10 &minus; 11 = &minus;1. Divide by 11 to get &minus;0.0909, and multiply by 100: a percent error of <strong>-9.0909%</strong>, which is an absolute error of <strong>9.0909%</strong>. The tool lists each step: (10 &minus; 11) &divide; 11 &times; 100 = &minus;1 &divide; 11 &times; 100 = &minus;0.09090909 &times; 100 = -9.0909%. The absolute error in the units of the measurement is 1.</p>
+      <h2>More examples</h2>
+      <div class="calc-table"><table><thead><tr><th>Measurement</th><th>Difference</th><th>Percent error</th><th>Absolute error</th></tr></thead><tbody><tr><td>Default: observed 10, true 11</td><td>-1</td><td>-9.0909%</td><td>9.0909%</td></tr><tr><td>Textbook length: 56.891 vs 62.327</td><td>-5.436</td><td>-8.7217%</td><td>8.7217%</td></tr><tr><td>Check value: 48 vs 50</td><td>-2</td><td>-4%</td><td>4%</td></tr><tr><td>Gravity: 9.65 vs 9.81 m/s&sup2;</td><td>-0.16</td><td>-1.631%</td><td>1.631%</td></tr><tr><td>Density of aluminium: 2.62 vs 2.70 g/cm&sup3;</td><td>-0.08</td><td>-2.963%</td><td>2.963%</td></tr><tr><td>Boiling point: 98.5 vs 100 &deg;C</td><td>-1.5</td><td>-1.5%</td><td>1.5%</td></tr></tbody></table></div>
+      <p>For the textbook length of 56.891 against 62.327, the difference is &minus;5.436, dividing by 62.327 gives &minus;0.0872, and the percent error is <strong>&minus;8.7217%</strong>, about &minus;8.72%. In words, the measurement is off by about 8.72%. A measured value of 48 against an accepted value of 50 is off by 2, so the absolute percent error is 2 &divide; 50 &times; 100 = 4%.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Absolute percent error in the example measurements</title><desc id="cf1-d">Every example comes in under 10%, and the boiling point reading is the closest, at 1.5%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Absolute percent error in the example measurements</text><text x="132" y="60" text-anchor="end" font-size="13" fill="#6b7280">Default</text><rect class="bar" x="140" y="44" width="288.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">9.0909%</text><text x="132" y="94" text-anchor="end" font-size="13" fill="#6b7280">Textbook length</text><rect class="bar" x="140" y="78" width="276.3" height="22" rx="4" fill="#9ca3af"/><text x="424.3" y="94" font-size="13" font-weight="700" fill="#111827">8.7217%</text><text x="132" y="128" text-anchor="end" font-size="13" fill="#6b7280">Check value</text><rect class="bar" x="140" y="112" width="126.7" height="22" rx="4" fill="#9ca3af"/><text x="274.7" y="128" font-size="13" font-weight="700" fill="#111827">4%</text><text x="132" y="162" text-anchor="end" font-size="13" fill="#6b7280">Gravity</text><rect class="bar" x="140" y="146" width="51.7" height="22" rx="4" fill="#9ca3af"/><text x="199.7" y="162" font-size="13" font-weight="700" fill="#111827">1.631%</text><text x="132" y="196" text-anchor="end" font-size="13" fill="#6b7280">Density of aluminium</text><rect class="bar" x="140" y="180" width="93.9" height="22" rx="4" fill="#9ca3af"/><text x="241.9" y="196" font-size="13" font-weight="700" fill="#111827">2.963%</text><text x="132" y="230" text-anchor="end" font-size="13" fill="#6b7280">Boiling point</text><rect class="bar" x="140" y="214" width="47.5" height="22" rx="4" fill="#9ca3af"/><text x="195.5" y="230" font-size="13" font-weight="700" fill="#111827">1.5%</text></svg><figcaption>All the examples are within 10 per cent.</figcaption></figure>
+      <h2>Over and under</h2>
+      <p>Readings above and below the true value give errors of opposite sign. With a true value of 50, a reading of 55 has a percent error of <strong>+10%</strong> and a reading of 45 has <strong>&minus;10%</strong>. The sign tells you the direction, which can help you find the cause: a thermometer that always reads low, for example, gives a negative error every time.</p>
+      <div class="calc-table"><table><thead><tr><th>Observed</th><th>Difference</th><th>Percent error (true value 50)</th></tr></thead><tbody><tr><td>40</td><td>-10</td><td>-20%</td></tr><tr><td>45</td><td>-5</td><td>-10%</td></tr><tr><td>49</td><td>-1</td><td>-2%</td></tr><tr><td>50</td><td>0</td><td>0%</td></tr><tr><td>51</td><td>1</td><td>+2%</td></tr><tr><td>55</td><td>5</td><td>+10%</td></tr><tr><td>60</td><td>10</td><td>+20%</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 284" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Signed percent error for observed values around a true value of 50</title><desc id="cf2-d">Amber bars are readings below the true value (negative error) and green bars are readings above it (positive error). The size of the bar is the absolute error.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Signed percent error for observed values around a true value of 50</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">observed 40</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">-20%</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">observed 45</text><rect class="bar" x="110" y="78" width="159.0" height="22" rx="4" fill="#f59e0b"/><text x="277.0" y="94" font-size="13" font-weight="700" fill="#111827">-10%</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">observed 49</text><rect class="bar" x="110" y="112" width="31.8" height="22" rx="4" fill="#f59e0b"/><text x="149.8" y="128" font-size="13" font-weight="700" fill="#111827">-2%</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">observed 50</text><rect class="bar" x="110" y="146" width="2.0" height="22" rx="4" fill="#10b981"/><text x="120.0" y="162" font-size="13" font-weight="700" fill="#111827">+0%</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">observed 51</text><rect class="bar" x="110" y="180" width="31.8" height="22" rx="4" fill="#10b981"/><text x="149.8" y="196" font-size="13" font-weight="700" fill="#111827">+2%</text><text x="102" y="230" text-anchor="end" font-size="13" fill="#6b7280">observed 55</text><rect class="bar" x="110" y="214" width="159.0" height="22" rx="4" fill="#10b981"/><text x="277.0" y="230" font-size="13" font-weight="700" fill="#111827">+10%</text><text x="102" y="264" text-anchor="end" font-size="13" fill="#6b7280">observed 60</text><rect class="bar" x="110" y="248" width="318.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="264" font-size="13" font-weight="700" fill="#111827">+20%</text></svg><figcaption>The size of the error is the same either side.</figcaption></figure>
+      <h2>What counts as a small error?</h2>
+      <p>There is no universal limit. A school lab might accept an error under 5% and a precision experiment might need 0.1% or better. Compare your result with what the method and the equipment can deliver. If the percent error is larger than the stated precision of your instrument, look for a systematic problem such as a miscalibrated scale, a heat loss, or a reading taken from the wrong angle.</p>
+      <h2>Special cases</h2>
+      <ul><li><strong>A true value of zero.</strong> Percent error is undefined, because the formula divides by the true value. Use the absolute error instead.</li><li><strong>A negative true value.</strong> The calculator divides by the size of the true value, so a reading above the true value always has a positive error. For true &minus;10 and observed &minus;9, the error is +10%.</li><li><strong>When the true value is unknown.</strong> Scientists use the spread of repeated measurements, such as the standard deviation, to describe uncertainty instead.</li></ul>
+      <h2>Percent error and other percent measures</h2>
+      <p>Percent error compares a measurement with a known standard. <strong>Percent change</strong> compares an old and a new value. <strong>Percent difference</strong> compares two values when neither is the standard. The formulas look alike but use different bases, so pick the one that fits. The Percentage Calculator covers percent change and difference.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Dividing by the observed value instead of the true value.</li><li>Forgetting to multiply by 100.</li><li>Swapping the observed and true values, which changes the sign and, slightly, the size of the result.</li><li>Reporting a negative error when your textbook asks for the absolute value.</li><li>Rounding too early. Keep extra decimals until the last step.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the signed percent error, with the absolute error percentage beneath it. The Steps box shows the formula with your numbers. Below it is the absolute error in the units of your measurement.</p>
+      <div class="callout">Percent error needs a trustworthy true value. If the accepted value itself is uncertain, the percent error is only as reliable as that value.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="percentage-calculator.html">Percentage Calculator</a> &ndash; percent change and difference</li><li><a href="mean-median-mode-range-calculator.html">Mean, Median, Mode & Range Calculator</a> &ndash; summarise repeated measurements</li><li><a href="standard-deviation-calculator.html">Standard Deviation Calculator</a> &ndash; the spread of measurements</li><li><a href="exponent-calculator.html">Exponent Calculator</a> &ndash; powers and roots</li><li><a href="scientific-calculator.html">Scientific Calculator</a> &ndash; general maths</li><li><a href="half-life-calculator.html">Half Life Calculator</a> &ndash; decay and remaining amount</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do you calculate percent error?</h3>
-        <p>Take the observed value minus the true value, divide by the true value, and multiply by 100. Many classes use the absolute value of the result.</p>
+        <p>Subtract the true value from the observed value, divide by the true value, and multiply by 100. An observed 10 against a true 11 gives minus 9.0909 percent.</p>
       </div>
       <div class="faq-item">
         <h3>Can percent error be negative?</h3>
-        <p>Yes, if you do not take the absolute value. A negative result means the observed value is smaller than a positive true value.</p>
-      </div>
-      <div class="faq-item">
-        <h3>What is a good percent error?</h3>
-        <p>A smaller one is better. Below about 5% is often seen as good in school labs, but what is acceptable depends on the experiment.</p>
+        <p>Yes. It is negative when the observed value is lower than the true value. Many textbooks use the absolute value so the error is always positive, and the calculator shows both.</p>
       </div>
       <div class="faq-item">
         <h3>What if the true value is zero?</h3>
-        <p>Percent error is undefined, since it would mean dividing by zero. Use the absolute error instead.</p>
+        <p>Percent error is undefined, because it would mean dividing by zero. Use the absolute error in the units of the measurement instead.</p>
       </div>
       <div class="faq-item">
-        <h3>What is the difference between percent error and percent difference?</h3>
-        <p>Percent error compares a measurement with a known true value. Percent difference compares two values when neither is the true one.</p>
+        <h3>What is a good percent error?</h3>
+        <p>It depends on the experiment. A school lab might accept under 5 percent, while a precision measurement may need under 0.1 percent. Compare it with what your equipment can deliver.</p>
       </div>
+      <div class="faq-item">
+        <h3>What is the difference between percent error and percent change?</h3>
+        <p>Percent error compares a measurement with a known true value. Percent change compares a new value with an old one. Both use a similar formula but with different bases.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I do not know the true value?</h3>
+        <p>Percent error needs one. When it is unknown, scientists use the standard deviation of repeated measurements to describe the uncertainty instead.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Approximation_error" rel="noopener" target="_blank">Wikipedia: Approximation error</a>; <a href="https://en.wikipedia.org/wiki/Accuracy_and_precision" rel="noopener" target="_blank">Wikipedia: Accuracy and precision</a>; <a href="https://en.wikipedia.org/wiki/Observational_error" rel="noopener" target="_blank">Wikipedia: Observational error</a></p>
     </div>
 
   </div>

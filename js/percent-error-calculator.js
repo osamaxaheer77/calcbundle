@@ -13,13 +13,13 @@
     const obs = read('pe-obs'), tru = read('pe-true');
     if (Number.isNaN(obs) || Number.isNaN(tru)) { el('pe-result').innerHTML = '<p class="tool-result is-error">Enter both values as numbers.</p>'; return; }
     if (tru === 0) { el('pe-result').innerHTML = '<p class="tool-result is-error">Percent error is undefined when the true value is 0, because it would mean dividing by 0.</p>'; return; }
-    const diff = obs - tru, rel = diff / tru, pct = rel * 100;
+    const diff = obs - tru, rel = diff / Math.abs(tru), pct = rel * 100;
     el('pe-result').innerHTML =
       `<div class="summary-payment-box"><div class="label">Percent error</div><div class="value">${fmt(pct)}%</div><div class="label" style="margin-top:6px;">${fmt(Math.abs(pct))}% absolute error</div></div>` +
       '<h3 style="margin:16px 0 6px;font-size:15px;">Steps</h3>' +
-      '<p style="font-size:13px;line-height:1.7;margin:0;">Percent error = (observed − true) ÷ true × 100<br>' +
-      `= (${num(obs)} − ${num(tru)}) ÷ ${num(tru)} × 100<br>` +
-      `= ${num(diff)} ÷ ${num(tru)} × 100<br>` +
+      '<p style="font-size:13px;line-height:1.7;margin:0;">Percent error = (observed − true) ÷ |true| × 100<br>' +
+      `= (${num(obs)} − ${num(tru)}) ÷ ${num(Math.abs(tru))} × 100<br>` +
+      `= ${num(diff)} ÷ ${num(Math.abs(tru))} × 100<br>` +
       `= ${num(rel)} × 100<br>= ${fmt(pct)}%</p>` +
       `<div class="stat-row"><span>Absolute error</span><strong>${num(Math.abs(diff))}</strong></div>`;
   }
