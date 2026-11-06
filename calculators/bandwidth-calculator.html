@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bandwidth Calculator: Data Transfer Time &amp; Speed | CalcBundle</title>
-<meta name="description" content="Estimate network data transfer time or throughput from file size and connection rate.">
+<title>Bandwidth Calculator: Transfer Time &amp; Data Needs</title>
+<meta name="description" content="Work out file download and upload time, convert bits to bytes, and estimate the bandwidth a website or hosting plan needs from traffic and data allowance.">
 <link rel="canonical" href="https://calcbundle.net/calculators/bandwidth-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Bandwidth Calculator: Data Transfer Time &amp; Speed | CalcBundle">
-<meta property="og:description" content="Estimate network data transfer time or throughput from file size and connection rate.">
+<meta property="og:title" content="Bandwidth Calculator: Transfer Time &amp; Data Needs">
+<meta property="og:description" content="Work out file download and upload time, convert bits to bytes, and estimate the bandwidth a website or hosting plan needs from traffic and data allowance.">
 <meta property="og:url" content="https://calcbundle.net/calculators/bandwidth-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bandwidth Calculator: Data Transfer Time &amp; Speed | CalcBundle">
-<meta name="twitter:description" content="Estimate network data transfer time or throughput from file size and connection rate.">
+<meta name="twitter:title" content="Bandwidth Calculator: Transfer Time &amp; Data Needs">
+<meta name="twitter:description" content="Work out file download and upload time, convert bits to bytes, and estimate the bandwidth a website or hosting plan needs from traffic and data allowance.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,39 +42,47 @@
       "name": "How many megabytes per second is 100 Mbit/s?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Divide by 8. A speed of 100 megabits per second moves at most 12.5 megabytes per second."
+        "text": "Divide by 8. A 100 Mbit/s connection moves at most 12.5 megabytes each second."
       }
     },
     {
       "@type": "Question",
-      "name": "How long does it take to download a 1 GB file?",
+      "name": "How is download time calculated?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "At 100 Mbit/s it takes 80 seconds, which is 1 minute and 20 seconds, in the best case. At 10 Mbit/s it takes 800 seconds."
+        "text": "Convert the file size to bits, convert the speed to bits per second, and divide. A 500 MB file is 4,000 megabits, so at 5 Mbit/s it takes 800 seconds, or 13 minutes 20 seconds."
       }
     },
     {
       "@type": "Question",
-      "name": "What is the difference between a megabit and a megabyte?",
+      "name": "Why is my real download slower than the calculator says?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A megabyte is 8 megabits. Lowercase b is used for bits and uppercase B for bytes."
+        "text": "The calculator gives the best case. Protocol overhead, encryption, Wi-Fi, shared connections and server limits all reduce real throughput."
       }
     },
     {
       "@type": "Question",
-      "name": "How much bandwidth does my website need?",
+      "name": "What does the redundancy factor do?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Multiply the page views by the page size to find the data per period, then convert to Mbit/s and add a redundancy factor, such as 2, for peaks."
+        "text": "It multiplies the average bandwidth to leave headroom for traffic spikes. A factor of 2 doubles the average."
       }
     },
     {
       "@type": "Question",
-      "name": "Are kilobytes 1,000 or 1,024 bytes?",
+      "name": "How is a monthly data allowance turned into Mbit/s?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This calculator uses 1,000, the decimal standard used for network speeds and many storage devices. Operating systems sometimes use 1,024 and call them kibibytes or just kilobytes."
+        "text": "The allowance is spread evenly over a month of 30.4375 days. A 1,000 GB allowance works out to about 3.04 Mbit/s."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator use 1,000 or 1,024 for kilo and mega?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It uses 1,000, the decimal system, so a megabyte is 1,000,000 bytes. A mebibyte (MiB) is 1,048,576 bytes."
       }
     }
   ]
@@ -191,47 +199,70 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Bits, bytes and bandwidth</h2>
-      <p>A bit is the smallest unit of information, either 0 or 1. A byte is 8 bits. Data sizes of files are usually given in bytes, while network speeds are given in bits per second, which is why a 100 Mbit/s connection moves at most 12.5 megabytes each second. In this calculator kilo, mega, giga and tera follow the decimal system, so a kilobit is 1,000 bits and a megabyte is 1,000,000 bytes.</p>
-
-      <h2>Download and upload time</h2>
-      <p>The time is the size of the file in bits divided by the speed in bits per second. A 500 MB file is 4,000 megabits, and at 5 Mbit/s that takes 800 seconds, which is 13 minutes and 20 seconds. This is the best case. Real transfers are slower because of protocol overhead such as TCP and encryption, shared connections, and limits at the server end, so a stated bandwidth is not the rate you will always see.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A 500 MB file is 4,000 megabits, so at 5 Mbit/s it takes 13 minutes 20 seconds in the best case. 5,000 daily page views of 500 KB need about 0.2314814815 Mbit/s on average, and 1,000 GB a month works out to 3.04205643 Mbit/s.</div>
+      <h2>What the calculator does</h2>
+      <p>The page has four tools. The <strong>data unit converter</strong> changes an amount between bits and bytes in decimal units. The <strong>download and upload time</strong> tool tells you how long a file takes at a given speed. The <strong>website bandwidth</strong> tool estimates the speed and monthly data a site needs from its traffic. The <strong>hosting converter</strong> turns a monthly data allowance into an average speed, or the reverse.</p>
+      <h2>Bits, bytes and bandwidth</h2>
+      <p>A bit is the smallest unit of information, 0 or 1. A byte is 8 bits. File sizes are usually written in bytes, while network speeds are written in bits per second, which is why a 100 Mbit/s connection moves at most 12.5 megabytes each second. In this calculator, kilo, mega, giga and tera follow the decimal system, so a kilobit is 1,000 bits and a megabyte is 1,000,000 bytes. Disk and memory tools sometimes use 1,024-based units, written KiB, MiB and GiB: a 500 MiB file is 524.288 MB.</p>
+      <h2>Worked example: converting 500 MB</h2>
+      <p>The converter opens on <strong>500 MB</strong>. In bits that is 500 &times; 8,000,000 = 4,000,000,000. The other units follow by division:</p>
+      <div class="calc-table"><table><thead><tr><th>Unit</th><th>500 MB equals</th></tr></thead><tbody><tr><td>bits</td><td>4,000,000,000</td></tr><tr><td>kilobits</td><td>4,000,000</td></tr><tr><td>megabits</td><td>4,000</td></tr><tr><td>gigabits</td><td>4</td></tr><tr><td>terabits</td><td>0.004</td></tr><tr><td>Bytes</td><td>500,000,000</td></tr><tr><td>Kilobytes</td><td>500,000</td></tr><tr><td>Gigabytes</td><td>0.5</td></tr><tr><td>Terabytes</td><td>0.0005</td></tr></tbody></table></div>
+      <h2>Worked example: download time</h2>
+      <p>The download tool opens on a <strong>500 MB</strong> file and a speed of <strong>5 Mbit/s</strong>. The file is 4,000 megabits, so the time is 4,000 &divide; 5 = 800 seconds, shown as <strong>13 minutes 20 seconds</strong>. The tool also lists 800 total seconds, 13.33333333 minutes and 0.2222222222 hours.</p>
+      <h2>Download time at common speeds</h2>
+      <p>For a 1 GB file (8,000 megabits), time = 8,000 &divide; speed:</p>
+      <div class="calc-table"><table><thead><tr><th>Speed</th><th>Time for 1 GB</th><th>Total seconds</th></tr></thead><tbody><tr><td>10 Mbit/s</td><td>13 minutes 20 seconds</td><td>800</td></tr><tr><td>50 Mbit/s</td><td>2 minutes 40 seconds</td><td>160</td></tr><tr><td>100 Mbit/s</td><td>1 minute 20 seconds</td><td>80</td></tr><tr><td>500 Mbit/s</td><td>16 seconds</td><td>16</td></tr><tr><td>1000 Mbit/s</td><td>8 seconds</td><td>8</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Time to download a 1 GB file at different speeds (seconds, best case)</title><desc id="cf1-d">A tenfold faster link is a tenfold shorter wait: 800 seconds at 10 Mbit/s, 8 seconds at 1,000 Mbit/s.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Time to download a 1 GB file at different speeds (seconds, best case)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">10 Mbit/s</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">13 minutes 20 seconds</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">50 Mbit/s</text><rect class="bar" x="110" y="78" width="63.6" height="22" rx="4" fill="#9ca3af"/><text x="181.6" y="94" font-size="13" font-weight="700" fill="#111827">2 minutes 40 seconds</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">100 Mbit/s</text><rect class="bar" x="110" y="112" width="31.8" height="22" rx="4" fill="#2563eb"/><text x="149.8" y="128" font-size="13" font-weight="700" fill="#111827">1 minute 20 seconds</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">500 Mbit/s</text><rect class="bar" x="110" y="146" width="6.4" height="22" rx="4" fill="#9ca3af"/><text x="124.4" y="162" font-size="13" font-weight="700" fill="#111827">16 seconds</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">1000 Mbit/s</text><rect class="bar" x="110" y="180" width="3.2" height="22" rx="4" fill="#9ca3af"/><text x="121.2" y="196" font-size="13" font-weight="700" fill="#111827">8 seconds</text></svg><figcaption>Faster links cut the wait in proportion.</figcaption></figure>
+      <h2>Why real downloads take longer</h2>
+      <p>The tool gives the best case. Real transfers are slower for several reasons: protocol overhead, encryption, Wi-Fi interference, a connection shared with other devices, and limits at the server. Even on a clean wired Ethernet link, TCP over IPv4 carries 1,460 bytes of data in 1,538 bytes on the wire, an efficiency of about 94.9%. At that efficiency the 500 MB file at 5 Mbit/s takes about <strong>14 minutes 3 seconds</strong> rather than 13 minutes 20 seconds, and Wi-Fi is usually further below the link rate.</p>
       <h2>Website bandwidth</h2>
-      <p>Multiply the page views in a period by the average page size to find the data sent in that period, then spread it over the seconds in the period. The month used here is one twelfth of a 365.25 day year, which is 30.4375 days. The redundancy factor adds headroom for traffic spikes, since a link sized for the average would be overwhelmed at peak. Include the traffic from search engine bots, which can be higher than the traffic from real visitors.</p>
-
-      <h2>Hosting plans</h2>
-      <p>Hosts often sell a monthly data allowance, while network gear is rated in Mbit/s. The hosting converter changes one into the other by treating the allowance as spread evenly over the month. A 1,000 GB allowance, for example, is about 3.04 Mbit/s sustained. Real traffic comes in bursts, so the peak speed you need is higher than this average.</p>
-      <div class="callout">Real-world speeds are always lower than the stated bandwidth because of overhead and shared connections.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: verify the calculation</h2><p>A 100 MB file corresponds to about 800 megabits in decimal units. At a steady 100 megabits per second, the theoretical transfer time is 8 seconds before protocol overhead.</p><h2>Related calculators</h2><p>For further calculations, see <a href="conversion-calculator.html">Unit Conversion Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="binary-calculator.html">Binary Calculator</a>, <a href="hex-calculator.html">Hex Calculator</a>, <a href="ip-subnet-calculator.html">IP Subnet Calculator</a>, <a href="roman-numeral-converter.html">Roman Numeral Converter</a>.</p>
-
-      <!--/seo-extra-->
+      <p>Enter the page views in a period and the average page size, and the tool spreads the data over the seconds in the period. The page opens on <strong>5,000 page views a day</strong> with pages of <strong>500 KB</strong> and a redundancy factor of <strong>2</strong>. The data is 5,000 &times; 500 KB = 2,500,000 KB a day, which is 20,000,000,000 bits spread over 86,400 seconds: <strong>0.2314814815 Mbit/s</strong> on average. The redundancy factor of 2 doubles it to <strong>0.462962963 Mbit/s</strong>, which is about <strong>152.1875 GB per month</strong> (the tool counts a month as 30.4375 days). Without the factor, the monthly total is 76.09375 GB.</p>
+      <div class="calc-table"><table><thead><tr><th>Average page size</th><th>Average speed</th><th>Data per month</th></tr></thead><tbody><tr><td>100 KB</td><td>0.0462962963 Mbit/s</td><td>15.21875 GB</td></tr><tr><td>500 KB</td><td>0.2314814815 Mbit/s</td><td>76.09375 GB</td></tr><tr><td>1,000 KB</td><td>0.462962963 Mbit/s</td><td>152.1875 GB</td></tr><tr><td>2,000 KB</td><td>0.9259259259 Mbit/s</td><td>304.375 GB</td></tr><tr><td>5,000 KB</td><td>2.314814815 Mbit/s</td><td>760.9375 GB</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Data a site sends in a month with 5,000 page views a day, by average page size (GB)</title><desc id="cf2-d">At 500 KB a page, 5,000 daily views send about 76.09375 GB a month, and 152.1875 GB with the default redundancy of 2.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Data a site sends in a month with 5,000 page views a day, by average page size (GB)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">100 KB pages</text><rect class="bar" x="110" y="44" width="6.4" height="22" rx="4" fill="#9ca3af"/><text x="124.4" y="60" font-size="13" font-weight="700" fill="#111827">15.21875 GB</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">500 KB pages</text><rect class="bar" x="110" y="78" width="31.8" height="22" rx="4" fill="#2563eb"/><text x="149.8" y="94" font-size="13" font-weight="700" fill="#111827">76.09375 GB</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">1,000 KB pages</text><rect class="bar" x="110" y="112" width="63.6" height="22" rx="4" fill="#9ca3af"/><text x="181.6" y="128" font-size="13" font-weight="700" fill="#111827">152.1875 GB</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">2,000 KB pages</text><rect class="bar" x="110" y="146" width="127.2" height="22" rx="4" fill="#9ca3af"/><text x="245.2" y="162" font-size="13" font-weight="700" fill="#111827">304.375 GB</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">5,000 KB pages</text><rect class="bar" x="110" y="180" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">760.9375 GB</text></svg><figcaption>Page weight drives the monthly data.</figcaption></figure>
+      <p>The redundancy factor adds headroom for traffic spikes, since a link sized for the average would be swamped at peak. A factor of 2 to 3 is common. Include traffic from search engine bots, which can be larger than the traffic from real visitors.</p>
+      <h2>Hosting bandwidth converter</h2>
+      <p>Hosts often sell a monthly data allowance, while network gear is rated in Mbit/s. The converter treats the allowance as spread evenly over a month of 30.4375 days. With the default 1,000 GB, the average is 8,000,000,000,000 bits &divide; 2,629,800 seconds = <strong>3.04205643 Mbit/s</strong>. Enter a speed instead and leave the usage blank to go the other way: 100 Mbit/s sustained for a month is about 32,872.5 GB.</p>
+      <div class="calc-table"><table><thead><tr><th>Monthly allowance</th><th>Average speed</th></tr></thead><tbody><tr><td>100 GB</td><td>0.304205643 Mbit/s</td></tr><tr><td>500 GB</td><td>1.521028215 Mbit/s</td></tr><tr><td>1,000 GB</td><td>3.04205643 Mbit/s</td></tr><tr><td>5,000 GB</td><td>15.21028215 Mbit/s</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Average speed a monthly data allowance works out to (Mbit/s)</title><desc id="cf3-d">A 1,000 GB allowance is about 3.04 Mbit/s spread evenly over the month. Real traffic is bursty, so the peak needed is higher.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Average speed a monthly data allowance works out to (Mbit/s)</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">100 GB a month</text><rect class="bar" x="130" y="44" width="6.0" height="22" rx="4" fill="#9ca3af"/><text x="144.0" y="60" font-size="13" font-weight="700" fill="#111827">0.304205643 Mbit/s</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">500 GB a month</text><rect class="bar" x="130" y="78" width="29.8" height="22" rx="4" fill="#9ca3af"/><text x="167.8" y="94" font-size="13" font-weight="700" fill="#111827">1.521028215 Mbit/s</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">1,000 GB a month</text><rect class="bar" x="130" y="112" width="59.6" height="22" rx="4" fill="#2563eb"/><text x="197.6" y="128" font-size="13" font-weight="700" fill="#111827">3.04205643 Mbit/s</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">5,000 GB a month</text><rect class="bar" x="130" y="146" width="298.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">15.21028215 Mbit/s</text></svg><figcaption>Allowances look small as speeds.</figcaption></figure>
+      <h2>More examples</h2>
+      <ul><li><strong>An online backup.</strong> Uploading a 200 GB backup at an upload speed of 20 Mbit/s is 1,600,000 megabits &divide; 20 = 80,000 seconds, or <strong>22 hours 13 minutes 20 seconds</strong>. Upload speeds are usually lower than download speeds, so this is the number to check for backups.</li><li><strong>A 4K movie.</strong> A 20 GB file at 50 Mbit/s is 160,000 megabits &divide; 50 = 3,200 seconds, or <strong>53 minutes 20 seconds</strong>.</li><li><strong>A software update.</strong> A 2 GB update at 100 Mbit/s takes 2 minutes 40 seconds in the best case.</li></ul>
+      <p>To go between megabits and megabytes per second, divide by 8:</p>
+      <div class="calc-table"><table><thead><tr><th>Speed</th><th>Megabytes per second</th></tr></thead><tbody><tr><td>10 Mbit/s</td><td>1.25</td></tr><tr><td>50 Mbit/s</td><td>6.25</td></tr><tr><td>100 Mbit/s</td><td>12.5</td></tr><tr><td>500 Mbit/s</td><td>62.5</td></tr><tr><td>1,000 Mbit/s</td><td>125</td></tr></tbody></table></div>
+      <h2>Common mistakes</h2>
+      <ul><li>Confusing Mbit/s with MB/s. Divide by 8 to go from megabits per second to megabytes per second.</li><li>Using binary sizes with decimal speeds. A MiB is about 4.9% larger than a MB.</li><li>Expecting the quoted speed in practice. Real throughput is lower.</li><li>Sizing a server for the average rather than the peak. Use the redundancy factor.</li><li>Forgetting bots and background traffic in page views.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the answer for that tool: the converted amount list, the transfer time, the speed needed, or the converted allowance. Time is shown in days, hours, minutes and seconds, and the download tool also lists total seconds, minutes and hours. Treat every figure as an estimate and leave a margin.</p>
+      <div class="callout">These calculations are theoretical. Latency, congestion, overhead and limits at the other end all reduce real speeds.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="binary-calculator.html">Binary Calculator</a> &ndash; base 2 arithmetic</li><li><a href="hex-calculator.html">Hex Calculator</a> &ndash; base 16 arithmetic</li><li><a href="time-duration-calculator.html">Time Duration Calculator</a> &ndash; the time between two moments</li><li><a href="speed-calculator.html">Speed Calculator</a> &ndash; speed, distance and time</li><li><a href="ip-subnet-calculator.html">IP Subnet Calculator</a> &ndash; addresses and subnets</li><li><a href="conversion-calculator.html">Conversion Calculator</a> &ndash; convert between units</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How many megabytes per second is 100 Mbit/s?</h3>
-        <p>Divide by 8. A speed of 100 megabits per second moves at most 12.5 megabytes per second.</p>
+        <p>Divide by 8. A 100 Mbit/s connection moves at most 12.5 megabytes each second.</p>
       </div>
       <div class="faq-item">
-        <h3>How long does it take to download a 1 GB file?</h3>
-        <p>At 100 Mbit/s it takes 80 seconds, which is 1 minute and 20 seconds, in the best case. At 10 Mbit/s it takes 800 seconds.</p>
+        <h3>How is download time calculated?</h3>
+        <p>Convert the file size to bits, convert the speed to bits per second, and divide. A 500 MB file is 4,000 megabits, so at 5 Mbit/s it takes 800 seconds, or 13 minutes 20 seconds.</p>
       </div>
       <div class="faq-item">
-        <h3>What is the difference between a megabit and a megabyte?</h3>
-        <p>A megabyte is 8 megabits. Lowercase b is used for bits and uppercase B for bytes.</p>
+        <h3>Why is my real download slower than the calculator says?</h3>
+        <p>The calculator gives the best case. Protocol overhead, encryption, Wi-Fi, shared connections and server limits all reduce real throughput.</p>
       </div>
       <div class="faq-item">
-        <h3>How much bandwidth does my website need?</h3>
-        <p>Multiply the page views by the page size to find the data per period, then convert to Mbit/s and add a redundancy factor, such as 2, for peaks.</p>
+        <h3>What does the redundancy factor do?</h3>
+        <p>It multiplies the average bandwidth to leave headroom for traffic spikes. A factor of 2 doubles the average.</p>
       </div>
       <div class="faq-item">
-        <h3>Are kilobytes 1,000 or 1,024 bytes?</h3>
-        <p>This calculator uses 1,000, the decimal standard used for network speeds and many storage devices. Operating systems sometimes use 1,024 and call them kibibytes or just kilobytes.</p>
+        <h3>How is a monthly data allowance turned into Mbit/s?</h3>
+        <p>The allowance is spread evenly over a month of 30.4375 days. A 1,000 GB allowance works out to about 3.04 Mbit/s.</p>
       </div>
+      <div class="faq-item">
+        <h3>Does the calculator use 1,000 or 1,024 for kilo and mega?</h3>
+        <p>It uses 1,000, the decimal system, so a megabyte is 1,000,000 bytes. A mebibyte (MiB) is 1,048,576 bytes.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://physics.nist.gov/cuu/Units/binary.html" rel="noopener" target="_blank">NIST: Prefixes for binary multiples</a>; <a href="https://en.wikipedia.org/wiki/Data-rate_units" rel="noopener" target="_blank">Wikipedia: Data-rate units</a>; <a href="https://en.wikipedia.org/wiki/Ethernet_frame" rel="noopener" target="_blank">Wikipedia: Ethernet frame</a></p>
     </div>
 
   </div>
