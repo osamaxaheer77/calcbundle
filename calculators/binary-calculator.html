@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Binary Calculator: Arithmetic & Decimal Conversion | CalcBundle</title>
-<meta name="description" content="Add, subtract, multiply or divide binary values and convert binary to and from decimal.">
+<title>Binary Calculator: Arithmetic &amp; Decimal Conversion</title>
+<meta name="description" content="Add, subtract, multiply and divide binary numbers of any length, or convert between binary and decimal, with the decimal working shown for checking.">
 <link rel="canonical" href="https://calcbundle.net/calculators/binary-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Binary Calculator: Arithmetic & Decimal Conversion | CalcBundle">
-<meta property="og:description" content="Add, subtract, multiply or divide binary values and convert binary to and from decimal.">
+<meta property="og:title" content="Binary Calculator: Arithmetic &amp; Decimal Conversion">
+<meta property="og:description" content="Add, subtract, multiply and divide binary numbers of any length, or convert between binary and decimal, with the decimal working shown for checking.">
 <meta property="og:url" content="https://calcbundle.net/calculators/binary-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Binary Calculator: Arithmetic & Decimal Conversion | CalcBundle">
-<meta name="twitter:description" content="Add, subtract, multiply or divide binary values and convert binary to and from decimal.">
+<meta name="twitter:title" content="Binary Calculator: Arithmetic &amp; Decimal Conversion">
+<meta name="twitter:description" content="Add, subtract, multiply and divide binary numbers of any length, or convert between binary and decimal, with the decimal working shown for checking.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -66,7 +66,7 @@
       "name": "What happens when I divide binary numbers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The calculator gives a whole number quotient and a remainder, both in binary and decimal. Division by zero is not possible."
+        "text": "The calculator gives a whole-number quotient and a remainder, both in binary and decimal. Division by zero is not possible."
       }
     },
     {
@@ -75,6 +75,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "You can use a minus sign for a negative whole number. Fractional binary numbers, with a binary point, are not supported."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long can the numbers be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no fixed limit. The calculator uses arbitrary-precision integers, so very long binary numbers are handled exactly."
       }
     }
   ]
@@ -180,22 +188,43 @@
       </tbody></table></div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How binary works</h2>
-      <p>The binary system counts in base 2. Where decimal uses ten digits, 0 to 9, and each place is worth ten times the one to its right, binary uses only 0 and 1, and each place is worth twice the one to its right. The binary number 1011 is 1 × 8, plus 0 × 4, plus 1 × 2, plus 1 × 1, which is 11 in decimal. Computers use binary because it is easy to build circuits that detect only two states, on and off.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Binary is base 2, using only 0 and 1. 10101010 in binary is 170 in decimal, and 10101010 + 11001100 = 101110110 (170 + 204 = 374). To convert, add the place values of the 1 bits.</div>
+      <h2>How binary works</h2>
+      <p>The binary system counts in base 2. Where decimal uses ten digits, 0 to 9, and each place is worth ten times the one to its right, binary uses only 0 and 1 and each place is worth twice the one to its right. The binary number 1011 is 1 &times; 8 + 0 &times; 4 + 1 &times; 2 + 1 &times; 1, which is 11 in decimal. Computers use binary because circuits that detect only two states, on and off, are easy to build and reliable.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens with two binary numbers, 10101010 and 11001100, which are 170 and 204 in decimal. Added together they give <strong>101110110</strong> in binary, which is 374 in decimal (170 + 204). Subtracting gives -100010 (-34), multiplying gives 1000011101111000 (34,680), and dividing gives a quotient of 0 and a remainder of 10101010, in decimal 0 remainder 170.</p>
+      <div class="calc-table"><table><thead><tr><th>Operation</th><th>Binary result</th><th>Decimal check</th></tr></thead><tbody><tr><td>10101010 + 11001100</td><td>101110110</td><td>170 + 204 = 374</td></tr><tr><td>10101010 &minus; 11001100</td><td>-100010</td><td>170 &minus; 204 = -34</td></tr><tr><td>10101010 &times; 11001100</td><td>1000011101111000</td><td>170 &times; 204 = 34,680</td></tr><tr><td>10101010 &divide; 11001100</td><td>0 remainder 10101010</td><td>170 &divide; 204 = 0 remainder 170</td></tr></tbody></table></div>
+      <h2>Dividing the other way round</h2>
+      <p>Because 170 is smaller than 204, the default division gives a quotient of 0 with the whole of 170 left as the remainder. Swap the numbers and 11001100 &divide; 10101010 gives a quotient of <strong>1</strong> and a remainder of <strong>100010</strong>, which is 204 &divide; 170 = 1 remainder 34 in decimal, because 204 = 170 &times; 1 + 34. You can always check a division by multiplying the quotient by the divisor and adding the remainder.</p>
+      <h2>Why computers use binary</h2>
+      <p>Electronic circuits are most reliable when they only have to tell two states apart, such as a high and a low voltage. Every number, letter, picture and sound in a computer is stored as patterns of those two states. Larger values are built by grouping bits: 8 bits make a byte, and common word sizes are 16, 32 and 64 bits.</p>
+      <h2>Converting binary to decimal</h2>
+      <p>To convert binary to decimal, add up the place value of every 1. Counting from 0 at the right, the place values are 1, 2, 4, 8, 16, 32, 64, 128 and so on. For 10101010 the 1s are in places worth 128, 32, 8 and 2, so the value is <strong>170</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 318" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Place values of the default number 10101010 (the 1 bits are the ones that count)</title><desc id="cf2-d">Add the place values of the 1 bits: 128 + 32 + 8 + 2 = 170.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Place values of the default number 10101010 (the 1 bits are the ones that count)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">2^7 = 128</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">128</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">2^6 = 64</text><rect class="bar" x="110" y="78" width="2.0" height="22" rx="4" fill="#e5e7eb"/><text x="120.0" y="94" font-size="13" font-weight="700" fill="#111827">0</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">2^5 = 32</text><rect class="bar" x="110" y="112" width="79.5" height="22" rx="4" fill="#10b981"/><text x="197.5" y="128" font-size="13" font-weight="700" fill="#111827">32</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">2^4 = 16</text><rect class="bar" x="110" y="146" width="2.0" height="22" rx="4" fill="#e5e7eb"/><text x="120.0" y="162" font-size="13" font-weight="700" fill="#111827">0</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">2^3 = 8</text><rect class="bar" x="110" y="180" width="19.9" height="22" rx="4" fill="#10b981"/><text x="137.9" y="196" font-size="13" font-weight="700" fill="#111827">8</text><text x="102" y="230" text-anchor="end" font-size="13" fill="#6b7280">2^2 = 4</text><rect class="bar" x="110" y="214" width="2.0" height="22" rx="4" fill="#e5e7eb"/><text x="120.0" y="230" font-size="13" font-weight="700" fill="#111827">0</text><text x="102" y="264" text-anchor="end" font-size="13" fill="#6b7280">2^1 = 2</text><rect class="bar" x="110" y="248" width="5.0" height="22" rx="4" fill="#10b981"/><text x="123.0" y="264" font-size="13" font-weight="700" fill="#111827">2</text><text x="102" y="298" text-anchor="end" font-size="13" fill="#6b7280">2^0 = 1</text><rect class="bar" x="110" y="282" width="2.0" height="22" rx="4" fill="#e5e7eb"/><text x="120.0" y="298" font-size="13" font-weight="700" fill="#111827">0</text></svg><figcaption>Only the places holding a 1 contribute to the total.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Place (power of 2)</th><th>Place value</th><th>Bit in 10101010</th><th>Contribution</th></tr></thead><tbody><tr><td>2<sup>7</sup></td><td>128</td><td>1</td><td>128</td></tr><tr><td>2<sup>6</sup></td><td>64</td><td>0</td><td>0</td></tr><tr><td>2<sup>5</sup></td><td>32</td><td>1</td><td>32</td></tr><tr><td>2<sup>4</sup></td><td>16</td><td>0</td><td>0</td></tr><tr><td>2<sup>3</sup></td><td>8</td><td>1</td><td>8</td></tr><tr><td>2<sup>2</sup></td><td>4</td><td>0</td><td>0</td></tr><tr><td>2<sup>1</sup></td><td>2</td><td>1</td><td>2</td></tr><tr><td>2<sup>0</sup></td><td>1</td><td>0</td><td>0</td></tr></tbody></table></div>
+      <h2>Converting decimal to binary</h2>
+      <p>Divide the number by 2 again and again and write down the remainders, then read them from last to first. For 170:</p>
+      <div class="calc-table"><table><thead><tr><th>Divide</th><th>Quotient</th><th>Remainder</th></tr></thead><tbody><tr><td>170 &divide; 2</td><td>85</td><td>0</td></tr><tr><td>85 &divide; 2</td><td>42</td><td>1</td></tr><tr><td>42 &divide; 2</td><td>21</td><td>0</td></tr><tr><td>21 &divide; 2</td><td>10</td><td>1</td></tr><tr><td>10 &divide; 2</td><td>5</td><td>0</td></tr><tr><td>5 &divide; 2</td><td>2</td><td>1</td></tr><tr><td>2 &divide; 2</td><td>1</td><td>0</td></tr><tr><td>1 &divide; 2</td><td>0</td><td>1</td></tr></tbody></table></div>
+      <p>Reading the remainders from the bottom to the top gives <strong>10101010</strong>.</p>
       <h2>Binary arithmetic</h2>
-      <p>Addition, subtraction, multiplication and division follow the same rules as in decimal, except you carry or borrow when a column reaches 2 instead of 10. In addition, 1 + 1 is 10, which is a 0 with a carry of 1. This calculator does the sums exactly, for numbers of any length, and shows the matching decimal calculation so you can check the answer. Division gives a whole quotient and a remainder.</p>
-
-      <h2>Converting between binary and decimal</h2>
-      <p>To convert binary to decimal, add up the place value of every 1. To convert decimal to binary, divide the number by 2 again and again and write down the remainders from last to first. The calculators above do both directions for you. Negative numbers are shown with a minus sign, not in the two’s complement form that computer hardware uses.</p>
-      <div class="callout">This calculator works with whole numbers. Fractions and floating point values are stored differently inside computers, and are not covered here.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: check the result</h2><p>Binary 1011 equals decimal 11 because 8 + 0 + 2 + 1 = 11. Adding binary 1 produces 1100, equivalent to decimal 12.</p><h2>Related math calculators</h2><p>To work with base 16, see the <a href="hex-calculator.html">Hex Calculator</a>. For large decimal calculations, use the <a href="big-number-calculator.html">Big Number Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="hex-calculator.html">Hex Calculator</a>, <a href="roman-numeral-converter.html">Roman Numeral Converter</a>, <a href="bandwidth-calculator.html">Bandwidth Calculator</a>, <a href="base64-encoder.html">Base64 Encode / Decode</a>.</p>
-
-      <!--/seo-extra-->
+      <p>Addition, subtraction, multiplication and division follow the same rules as in decimal, except you carry or borrow when a column reaches 2 instead of 10. In addition, 1 + 1 is 10 (write 0, carry 1), and 1 + 1 + 1 is 11. The calculator does the sums exactly, for numbers of any length, using arbitrary-precision integers, and shows the matching decimal calculation so you can check the answer. Division gives a whole-number quotient and a remainder. Division by zero is not possible and shows a message.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">How many values n bits can hold (2 to the power n)</title><desc id="cf1-d">Each extra bit doubles the number of values: 8 bits hold 256 values (0 to 255) and 12 bits hold 4,096.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">How many values n bits can hold (2 to the power n)</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 bits</text><rect class="bar" x="70" y="44" width="2.0" height="22" rx="4" fill="#9ca3af"/><text x="80.0" y="60" font-size="13" font-weight="700" fill="#111827">2</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">2 bits</text><rect class="bar" x="70" y="78" width="2.0" height="22" rx="4" fill="#9ca3af"/><text x="80.0" y="94" font-size="13" font-weight="700" fill="#111827">4</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">4 bits</text><rect class="bar" x="70" y="112" width="2.0" height="22" rx="4" fill="#9ca3af"/><text x="80.0" y="128" font-size="13" font-weight="700" fill="#111827">16</text><text x="62" y="162" text-anchor="end" font-size="13" fill="#6b7280">8 bits</text><rect class="bar" x="70" y="146" width="22.4" height="22" rx="4" fill="#2563eb"/><text x="100.4" y="162" font-size="13" font-weight="700" fill="#111827">256</text><text x="62" y="196" text-anchor="end" font-size="13" fill="#6b7280">10 bits</text><rect class="bar" x="70" y="180" width="89.5" height="22" rx="4" fill="#9ca3af"/><text x="167.5" y="196" font-size="13" font-weight="700" fill="#111827">1,024</text><text x="62" y="230" text-anchor="end" font-size="13" fill="#6b7280">12 bits</text><rect class="bar" x="70" y="214" width="358.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">4,096</text></svg><figcaption>Every extra bit doubles what a binary number can represent.</figcaption></figure>
+      <h2>Bits, bytes and common values</h2>
+      <p>A single binary digit is a bit and eight bits make a byte, which can hold 0 to 255. Some common values written in binary, padded to a byte:</p>
+      <div class="calc-table"><table><thead><tr><th>Decimal</th><th>Binary (8 bits)</th></tr></thead><tbody><tr><td>1</td><td>00000001</td></tr><tr><td>5</td><td>00000101</td></tr><tr><td>10</td><td>00001010</td></tr><tr><td>65</td><td>01000001</td></tr><tr><td>127</td><td>01111111</td></tr><tr><td>170</td><td>10101010</td></tr><tr><td>255</td><td>11111111</td></tr></tbody></table></div>
+      <div class="calc-table"><table><thead><tr><th>Power of 2</th><th>Value</th></tr></thead><tbody><tr><td>2<sup>0</sup></td><td>1</td></tr><tr><td>2<sup>1</sup></td><td>2</td></tr><tr><td>2<sup>2</sup></td><td>4</td></tr><tr><td>2<sup>3</sup></td><td>8</td></tr><tr><td>2<sup>4</sup></td><td>16</td></tr><tr><td>2<sup>5</sup></td><td>32</td></tr><tr><td>2<sup>6</sup></td><td>64</td></tr><tr><td>2<sup>7</sup></td><td>128</td></tr><tr><td>2<sup>8</sup></td><td>256</td></tr><tr><td>2<sup>10</sup></td><td>1,024</td></tr><tr><td>2<sup>16</sup></td><td>65,536</td></tr><tr><td>2<sup>32</sup></td><td>4,294,967,296</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Digits needed: the same number in binary, decimal and hexadecimal</title><desc id="cf3-d">Binary is long: 170 needs 8 binary digits, 3 decimal digits and 2 hexadecimal digits.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Digits needed: the same number in binary, decimal and hexadecimal</text><text x="112" y="60" text-anchor="end" font-size="13" fill="#6b7280">Binary (170)</text><rect class="bar" x="120" y="44" width="308.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">8</text><text x="112" y="94" text-anchor="end" font-size="13" fill="#6b7280">Decimal (170)</text><rect class="bar" x="120" y="78" width="115.5" height="22" rx="4" fill="#2563eb"/><text x="243.5" y="94" font-size="13" font-weight="700" fill="#111827">3</text><text x="112" y="128" text-anchor="end" font-size="13" fill="#6b7280">Hexadecimal (AA)</text><rect class="bar" x="120" y="112" width="77.0" height="22" rx="4" fill="#10b981"/><text x="205.0" y="128" font-size="13" font-weight="700" fill="#111827">2</text></svg><figcaption>Hexadecimal (see the Hex Calculator) is a shorter way to write the same binary data.</figcaption></figure>
+      <h2>What this calculator does not do</h2>
+      <ul><li>Negative numbers are shown with a minus sign, not in the two&rsquo;s complement form computer hardware uses.</li><li>Only whole numbers are supported. Fractions with a binary point and floating-point values are stored differently and are not covered.</li><li>It does not apply a fixed word size, so there is no overflow: results can be any length.</li><li>Remainders take the sign of the first number, as with integer division in many programming languages.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Typing a digit other than 0 or 1, which is rejected.</li><li>Reading binary digits from the wrong end. The rightmost digit is the 1s place.</li><li>Forgetting to carry when adding 1 + 1.</li><li>Confusing a decimal number such as 170 with a binary number when entering it in the binary box.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large line is the binary result. Below it are the two operands in binary and the same sum in decimal, so you can check the answer. The other two tools convert one number at a time: binary to decimal, and decimal to binary. For base 16 use the Hex Calculator, and for very large decimal numbers use the Big Number Calculator.</p>
+      <div class="callout">The results are exact for whole numbers. For hardware or exam questions that use a fixed number of bits, check how negative numbers and overflow are handled.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="hex-calculator.html">Hex Calculator</a> &ndash; base 16 arithmetic and conversion</li><li><a href="big-number-calculator.html">Big Number Calculator</a> &ndash; very large decimal numbers</li><li><a href="ip-subnet-calculator.html">IP Subnet Calculator</a> &ndash; binary in networking</li><li><a href="roman-numeral-converter.html">Roman Numeral Converter</a> &ndash; another number system</li><li><a href="exponent-calculator.html">Exponent Calculator</a> &ndash; powers of two</li><li><a href="bandwidth-calculator.html">Bandwidth Calculator</a> &ndash; bits and bytes in practice</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do you add binary numbers?</h3>
@@ -211,12 +240,17 @@
       </div>
       <div class="faq-item">
         <h3>What happens when I divide binary numbers?</h3>
-        <p>The calculator gives a whole number quotient and a remainder, both in binary and decimal. Division by zero is not possible.</p>
+        <p>The calculator gives a whole-number quotient and a remainder, both in binary and decimal. Division by zero is not possible.</p>
       </div>
       <div class="faq-item">
         <h3>Can I enter negative or fractional binary numbers?</h3>
         <p>You can use a minus sign for a negative whole number. Fractional binary numbers, with a binary point, are not supported.</p>
       </div>
+      <div class="faq-item">
+        <h3>How long can the numbers be?</h3>
+        <p>There is no fixed limit. The calculator uses arbitrary-precision integers, so very long binary numbers are handled exactly.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://cs50.harvard.edu/x/notes/0/" rel="noopener" target="_blank">CS50: Lecture 0, binary and computers</a>; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt" rel="noopener" target="_blank">MDN: BigInt (arbitrary-precision integers)</a></p>
     </div>
 
   </div>
