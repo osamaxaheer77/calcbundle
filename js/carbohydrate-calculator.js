@@ -39,7 +39,7 @@
           return `<p style="margin:0 0 10px;font-size:14px;line-height:1.5;"><strong>You need ${cal} Calories/day to ${g.phrase}.</strong> ${text}</p>`;
         }).join('');
     }
-    html += '<p style="font-size:12px;color:var(--text-secondary);margin:12px 0 0;">*The Institute of Medicine recommends that adults in the U.S. and Canada get 40% to 65% of their energy from carbohydrates. The Food and Agriculture Organization and the World Health Organization recommend 55% to 75%, with no more than 10% directly from sugars.</p>';
+    html += '<p style="font-size:12px;color:var(--text-secondary);margin:12px 0 0;">*The Institute of Medicine recommends that adults in the U.S. and Canada get 45% to 65% of their energy from carbohydrates. The Food and Agriculture Organization and the World Health Organization recommend 55% to 75%, with no more than 10% directly from sugars.</p>';
     el('cb-table-wrap').innerHTML = html;
     el('cb-below').hidden = false;
   }
