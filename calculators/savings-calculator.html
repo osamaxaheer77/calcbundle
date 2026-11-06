@@ -39,18 +39,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Why does compounding frequency matter here if I'm also contributing monthly?",
+      "name": "Why does compounding frequency matter if I also contribute monthly?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "They're independent settings — compounding frequency controls how often interest is calculated and added, while your contribution schedule controls when new money goes in. This calculator handles both correctly even when they don't match, the same way a real bank account would."
+        "text": "They are independent settings. Compounding frequency controls how often interest is calculated and added, and your contribution schedule controls when new money goes in. The calculator combines both."
       }
     },
     {
       "@type": "Question",
-      "name": "What if I want to model a shrinking contribution instead of a growing one?",
+      "name": "What does the contribution increase do?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Enter a negative increase percentage — the contribution amount will decline by that percentage each year instead of growing."
+        "text": "It raises the amount each year by the percentage you enter, for example a 3% raise in your monthly saving. Set it to 0 to keep contributions flat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I enter a tax rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes for a taxable savings account or brokerage account, because interest is usually taxed each year. Leave it at 0% for tax-advantaged accounts such as a 401(k), IRA or HSA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When are the deposits made?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monthly deposits go in at the start of each month and annual deposits at the end of each year, which the calculator uses to build the schedule."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the projection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It assumes a steady interest rate. Actual savings rates and investment returns change, so use the result as a planning estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my savings insured?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deposits at FDIC-insured banks are insured up to at least $250,000 per bank. Investments are not insured against loss. Check that your institution is covered."
       }
     }
   ]
@@ -164,30 +196,64 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Why two separate contribution streams</h2>
-      <p>Real savings habits rarely fit one pattern — a monthly auto-transfer from a paycheck, plus an annual lump sum from a bonus or tax refund, are common together. Letting each grow at its own rate (a raise might bump your monthly contribution 3% a year; a bonus might not grow at all) makes the projection match how people actually save, rather than forcing everything into one contribution schedule.</p>
-
-      <h2>Why taxes matter for a projection, not just a tax return</h2>
-      <p>Interest earned in a taxable account is usually taxed as income each year, even if you never withdraw it — which means the interest that actually compounds forward is smaller than the interest earned. Modeling the tax rate here estimates the real, after-tax growth rate rather than an optimistic pre-tax number that overstates what you'll actually end up with.</p>
-      <div class="callout">Tax-advantaged accounts (like a 401(k), IRA, or HSA) don't tax interest as it's earned — leaving the tax rate at 0% models that kind of account more accurately than a taxable brokerage or savings account.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: monthly savings without interest</h2><p>Start with $500, add $100 every month for one year, and set the interest rate to 0% and annual contribution to $0. With no contribution increase or tax impact, the ending balance is <strong>$1,700</strong>: $500 + (12 × $100). You can then enter an assumed interest rate to see how compounding changes the projection. This zero-interest baseline makes it easier to separate your contributions from the growth they might earn.</p>
-      
-      <p>Trying to decide whether to save more each month or make an extra annual deposit? Compare both contribution schedules here, then use the <a href="investment-calculator.html">Investment Calculator</a> if you need to solve for a target contribution or return rate. For an explanation of why the balance grows over time, see <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a>. To compare rates quoted with different compounding frequencies, use the <a href="compound-interest-calculator.html">Compounding Frequency Converter</a>.</p>
-      <!--/seo-extra-->
-      <p><strong>Read the guides:</strong> <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a>, <a href="../guides/how-inflation-erodes-your-money.html">How Inflation Erodes Your Money</a>.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Savings grow from deposits plus interest. $20,000 with $5,000 added each year, rising 3% a year, at 3% interest for 10 years becomes $92,117: $77,319 is money you put in and $14,798 is interest.</div>
+      <h2>How the savings calculator works</h2>
+      <p>The calculator projects how an initial deposit grows when you add money regularly. It has two separate contribution streams: a <strong>monthly</strong> amount added at the start of each month and an <strong>annual</strong> amount added at the end of each year, each with its own yearly increase. You also set the interest rate, how often it compounds, the years to save and a tax rate on interest. It then builds the balance month by month.</p>
+      <h2>Why two contribution streams?</h2>
+      <p>Real saving rarely follows one pattern: an automatic monthly transfer plus an occasional lump sum from a bonus or tax refund is common. Letting each stream grow at its own rate (a raise might lift the monthly amount 3% a year, while a bonus may not grow) makes the projection closer to what people actually do.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>Start with $20,000, add $5,000 at the end of each year increasing 3% a year, and earn 3% compounded annually for 10 years. The balance reaches <strong>$92,117</strong>. You contributed $77,319 in total (the starting deposit plus $57,319 of yearly deposits), so <strong>$14,798</strong> is interest.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where the default 10-year balance comes from</title><desc id="cf1-d">Of the $92,117 ending balance, $77,319 is money you put in and $14,798 is interest.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the default 10-year balance comes from</text><rect class="bar" x="14.0" y="42" width="106.8" height="30" fill="#2563eb"/><text x="67.4" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">22%</text><rect class="bar" x="120.8" y="42" width="306.1" height="30" fill="#10b981"/><text x="273.9" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">62%</text><rect class="bar" x="427.0" y="42" width="79.0" height="30" fill="#f59e0b"/><text x="466.5" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">16%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Starting deposit: <tspan font-weight="700">$20,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Your yearly deposits: <tspan font-weight="700">$57,319</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#f59e0b"/><text x="32" y="120" font-size="12.5" fill="#374151">Interest earned: <tspan font-weight="700">$14,798</tspan></text></svg><figcaption>In this plan the money you put in does most of the work; the interest rate is modest.</figcaption></figure>
+      <h2>Monthly or annual deposits?</h2>
+      <p>The same $5,000 a year goes in either way, but timing matters. Saving $5,000 at the end of each year for 10 years at 3% gives <strong>$57,319</strong>. Saving it as $416.67 a month (at the start of each month) gives <strong>$58,247</strong>, about $927 more, because the money starts earning earlier.</p>
+      <h2>Raising contributions as you earn more</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">$400 a month for 20 years at 3%: flat vs rising 3% a year</title><desc id="cf2-d">Raising the monthly amount by 3% each year ends at $171,060, against $131,064 if it stays flat.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">$400 a month for 20 years at 3%: flat vs rising 3% a year</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0k</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$45k</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$90k</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$135k</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$180k</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="170.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">5</text><text x="282.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">10</text><text x="394.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">15</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">20</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Years</text><polyline class="draw" style="--len:467" points="58.0,176.0 80.4,172.6 102.8,169.0 125.2,165.1 147.6,161.0 170.0,156.7 192.4,152.2 214.8,147.4 237.2,142.3 259.6,137.0 282.0,131.4 304.4,125.4 326.8,119.2 349.2,112.6 371.6,105.7 394.0,98.4 416.4,90.7 438.8,82.7 461.2,74.2 483.6,65.3 506.0,56.0" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="76" y="40" font-size="11.5" fill="#374151">Rising contributions</text><polyline class="draw" style="--len:459" points="58.0,176.0 80.4,172.6 102.8,169.1 125.2,165.4 147.6,161.7 170.0,157.8 192.4,153.9 214.8,149.8 237.2,145.6 259.6,141.2 282.0,136.8 304.4,132.2 326.8,127.4 349.2,122.6 371.6,117.5 394.0,112.4 416.4,107.0 438.8,101.5 461.2,95.9 483.6,90.1 506.0,84.1" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="246" y="40" font-size="11.5" fill="#374151">Flat contributions</text></svg><figcaption>A 3% yearly increase costs little each year but adds up over two decades.</figcaption></figure>
+      <p>A small yearly raise in the monthly amount adds $39,995 over 20 years compared with keeping it flat, with $32,978 more paid in.</p>
+      <h2>Why tax changes the projection</h2>
+      <p>Interest in a taxable account is usually taxed as income each year, even if you do not withdraw it, so only the after-tax interest compounds. Enter your tax rate to see the real growth. Tax-advantaged accounts such as a 401(k), IRA or HSA do not tax interest as it is earned, so leave the rate at 0% for those.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">$20,000 plus $400 a month for 15 years at 4%: ending balance by tax rate</title><desc id="cf3-d">A tax-free account ends at $134,202. A taxable account with a 32% rate on interest ends at $118,483, about $15,719 less.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">$20,000 plus $400 a month for 15 years at 4%: ending balance by tax rate</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">Tax rate 0%</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$134,202</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Tax rate 12%</text><rect class="bar" x="110" y="78" width="303.4" height="22" rx="4" fill="#9ca3af"/><text x="421.4" y="94" font-size="13" font-weight="700" fill="#111827">$128,025</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">Tax rate 22%</text><rect class="bar" x="110" y="112" width="291.8" height="22" rx="4" fill="#9ca3af"/><text x="409.8" y="128" font-size="13" font-weight="700" fill="#111827">$123,141</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">Tax rate 32%</text><rect class="bar" x="110" y="146" width="280.8" height="22" rx="4" fill="#9ca3af"/><text x="398.8" y="162" font-size="13" font-weight="700" fill="#111827">$118,483</text></svg><figcaption>Tax on interest is a quiet drag on growth, which is why account type matters.</figcaption></figure>
+      <h2>Does compounding frequency matter?</h2>
+      <p>Only a little at savings-account rates. With the default plan, annual compounding ends at $92,117 and daily compounding at $92,365, a difference of $248 over ten years. The interest rate, the amount you save and the number of years matter far more than how often interest is credited. Compare accounts by APY, which already includes compounding, so two offers can be judged on one number.</p>
+      <h2>Saving toward a goal: an emergency fund</h2>
+      <p>If you start with $2,000 and add $500 a month at 4% interest, you reach an $18,000 emergency fund (six months of $3,000 spending) in about <strong>31 months (2.6 years)</strong>. Use the Investment Calculator to solve backwards for the monthly amount needed by a deadline.</p>
+      <h2>Where to keep savings</h2>
+      <ul><li>Savings accounts and CDs at banks insured by the FDIC are covered up to at least $250,000 per bank.</li><li>Money for short-term goals belongs in low-risk accounts; money for long-term goals can take more risk but can lose value.</li><li>Compare rates by APY, and check fees and minimum balances.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Assuming the current interest rate will last. Savings rates change.</li><li>Ignoring tax and inflation.</li><li>Entering a monthly amount in the annual box, or both streams for the same money.</li><li>Letting savings sit idle in an account that pays almost nothing.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Compare the ending balance with what you paid in to see how much growth you are getting, then try small changes: a higher monthly amount, a yearly increase, a better rate. The schedule under the result shows the balance year by year. For a view of compounding with different frequencies, see the Compounding Frequency Converter.</p>
+      <div class="callout">This calculator gives projections, not guaranteed balances. It is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="investment-calculator.html">Investment Calculator</a> &ndash; solve for the contribution or time to reach a goal</li><li><a href="interest-calculator.html">Interest Calculator</a> &ndash; compound growth with tax and inflation</li><li><a href="compound-interest-calculator.html">Compounding Frequency Converter</a> &ndash; compare rates and compounding</li><li><a href="cd-calculator.html">CD Calculator</a> &ndash; fixed-rate certificate of deposit</li><li><a href="inflation-calculator.html">Inflation Calculator</a> &ndash; what your savings will buy</li><li><a href="budget-calculator.html">Budget Calculator</a> &ndash; find money to save</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Why does compounding frequency matter here if I'm also contributing monthly?</h3>
-        <p>They're independent settings — compounding frequency controls how often interest is calculated and added, while your contribution schedule controls when new money goes in. This calculator handles both correctly even when they don't match, the same way a real bank account would.</p>
+        <h3>Why does compounding frequency matter if I also contribute monthly?</h3>
+        <p>They are independent settings. Compounding frequency controls how often interest is calculated and added, and your contribution schedule controls when new money goes in. The calculator combines both.</p>
       </div>
       <div class="faq-item">
-        <h3>What if I want to model a shrinking contribution instead of a growing one?</h3>
-        <p>Enter a negative increase percentage — the contribution amount will decline by that percentage each year instead of growing.</p>
+        <h3>What does the contribution increase do?</h3>
+        <p>It raises the amount each year by the percentage you enter, for example a 3% raise in your monthly saving. Set it to 0 to keep contributions flat.</p>
       </div>
+      <div class="faq-item">
+        <h3>Should I enter a tax rate?</h3>
+        <p>Yes for a taxable savings account or brokerage account, because interest is usually taxed each year. Leave it at 0% for tax-advantaged accounts such as a 401(k), IRA or HSA.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When are the deposits made?</h3>
+        <p>Monthly deposits go in at the start of each month and annual deposits at the end of each year, which the calculator uses to build the schedule.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How accurate is the projection?</h3>
+        <p>It assumes a steady interest rate. Actual savings rates and investment returns change, so use the result as a planning estimate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are my savings insured?</h3>
+        <p>Deposits at FDIC-insured banks are insured up to at least $250,000 per bank. Investments are not insured against loss. Check that your institution is covered.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.fdic.gov/resources/deposit-insurance/" rel="noopener" target="_blank">FDIC: Deposit Insurance</a>; <a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" rel="noopener" target="_blank">Investor.gov: Compound Interest Calculator</a></p>
     </div>
 
   </div>
