@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Day of the Week Calculator for Any Calendar Date | CalcBundle</title>
-<meta name="description" content="Look up which weekday a calendar date falls on and see its position in the month.">
+<title>Day of the Week Calculator: Find the Weekday of Any Date</title>
+<meta name="description" content="Find which weekday any date from the year 1 to 9999 falls on, with the day of the year, the position of that weekday in the year and a month calendar.">
 <link rel="canonical" href="https://calcbundle.net/calculators/day-of-the-week-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Day of the Week Calculator for Any Calendar Date | CalcBundle">
-<meta property="og:description" content="Look up which weekday a calendar date falls on and see its position in the month.">
+<meta property="og:title" content="Day of the Week Calculator: Find the Weekday of Any Date">
+<meta property="og:description" content="Find which weekday any date from the year 1 to 9999 falls on, with the day of the year, the position of that weekday in the year and a month calendar.">
 <meta property="og:url" content="https://calcbundle.net/calculators/day-of-the-week-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Day of the Week Calculator for Any Calendar Date | CalcBundle">
-<meta name="twitter:description" content="Look up which weekday a calendar date falls on and see its position in the month.">
+<meta name="twitter:title" content="Day of the Week Calculator: Find the Weekday of Any Date">
+<meta name="twitter:description" content="Find which weekday any date from the year 1 to 9999 falls on, with the day of the year, the position of that weekday in the year and a month calendar.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,7 +42,7 @@
       "name": "How do I find the day of the week for a date?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Enter the month, day and year. The calculator counts the days since a known date and names the weekday for you."
+        "text": "Enter the month, day and year. The calculator counts the days since a known date, January 1, 1970, which was a Thursday, and names the weekday from the remainder after dividing by 7."
       }
     },
     {
@@ -58,23 +58,31 @@
       "name": "Does it handle leap years?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. A year is a leap year if it divides by 4, except century years, which must divide by 400. So 2000 and 2024 are leap years and 1900 and 2100 are not."
+        "text": "Yes. A year is a leap year if it divides by 4, except century years that do not divide by 400. So 2000 was a leap year, but 1900 and 2100 are not."
       }
     },
     {
       "@type": "Question",
-      "name": "What happens if I enter February 30?",
+      "name": "What happens if I enter a date that does not exist?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Dates that do not exist are moved on to the next valid date. February 30 in a leap year becomes March 1, and in other years it becomes March 2."
+        "text": "The date rolls on to the next valid day. For example, February 29, 2025 becomes March 1, 2025, and the result says so."
       }
     },
     {
       "@type": "Question",
-      "name": "Does it work for historical dates?",
+      "name": "Why is the 13th more often a Friday?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It uses the Gregorian calendar for all dates, so for dates before it was adopted in 1582 it shows the weekday as if the calendar had always been in use."
+        "text": "The Gregorian calendar repeats every 400 years, and over that cycle the 13th falls on a Friday 688 times, slightly more than any other weekday."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work for dates before 1582?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, but it uses the Gregorian calendar extended backwards. A date recorded in the old Julian calendar can fall on a different weekday."
       }
     }
   ]
@@ -132,30 +140,46 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Finding the weekday of a date</h2>
-      <p>Every date falls on one of seven weekdays, and the pattern repeats exactly every 7 days. The calculator counts the days from a known date, in this case 1 January 1970, which was a Thursday, and uses the remainder after dividing by 7 to name the weekday. It works for any year from 1 to 9999. Because the leap year rules are built in, it handles February 29 correctly, including the century years that are not leap years, such as 1900 and 2100.</p>
-
-      <h2>The facts it shows</h2>
-      <p>Besides the weekday, the calculator tells you which day of the year the date is, out of 365 or 366, and how many days are left. It also tells you which occurrence of that weekday it is in the year, for example the 40th Sunday, out of 52 or 53, and how many are left. A calendar for the month is shown with the date marked.</p>
-
-      <h2>Calendars and old dates</h2>
-      <p>The calculator uses the Gregorian calendar, which is the one in use almost everywhere today, and applies it to every date, even those before it was adopted. The Gregorian calendar was introduced in October 1582, and countries switched at different times, so a historical date written in the old Julian calendar can fall on a different weekday. Dates before 1582 here show the weekday in the Gregorian calendar extended backwards.</p>
-      <div class="callout">A date that does not exist, such as February 29 in a year that is not a leap year, is moved on to the next valid day, March 1.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: check the result</h2>
-      <p>January 1, 2025 was a Wednesday. Seven days later, January 8, 2025 was also a Wednesday, because a complete week always returns to the same weekday.</p>
-      <h2>Related tools</h2>
-      <p>For counting calendar days between dates, see the <a href="date-calculator.html">Date Calculator</a>. For a person's age on a date, use the <a href="age-calculator.html">Age Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="time-card-calculator.html">Time Card Calculator</a>, <a href="time-zone-calculator.html">Time Zone Calculator</a>, <a href="day-counter.html">Day Counter</a>, <a href="sleep-calculator.html">Sleep Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Enter a month, day and year to find the weekday. January 1, 2025 was a Wednesday, the 1st of 53 Wednesdays that year, and July 4, 2026 is a Saturday, the 185th day of the year.</div>
+      <h2>What the calculator does</h2>
+      <p>Enter a month, day and year, and the calculator names the <strong>weekday</strong>. It also shows which day of the year the date is, which occurrence of that weekday it is within the year, and a calendar for the month with the date highlighted. It works for any year from 1 to 9999.</p>
+      <p>The page opens on today&rsquo;s date, so the examples below use fixed dates. Type them in to reproduce the results.</p>
+      <h2>Worked example: January 1, 2025</h2>
+      <p>January 1, 2025 is a <strong>Wednesday</strong>. It is day <strong>1st of 365</strong> in the year, with 364 left. It is also <strong>the 1st of 53 Wednesdays</strong> in 2025, with 52 left. There are 53 Wednesdays in 2025 because 365 days is 52 weeks plus one extra day, and that extra day is a Wednesday.</p>
+      <p>Seven days later, January 8, 2025, is a Wednesday as well, since a complete week always returns to the same weekday.</p>
+      <h2>How the weekday is found</h2>
+      <p>The calculator counts the days from a known date, <strong>January 1, 1970</strong>, which was a <strong>Thursday</strong>, and divides by 7. The remainder names the weekday. For July 4, 2026, there are 20,638 days since January 1, 1970. Counting Sunday as 0, Thursday is 4, so the weekday is (4 + 20,638) mod 7 = 6, which is <strong>Saturday</strong>. The tool also reports it as the <strong>185th</strong> day of the year (185th of 365, 180 left) and the 27th Saturday of 52 or 53.</p>
+      <h2>Some well-known dates</h2>
+      <div class="calc-table"><table><thead><tr><th>Date</th><th>What it is</th><th>Weekday</th></tr></thead><tbody><tr><td>July 20, 1969</td><td>Moon landing (Apollo 11)</td><td>Sunday</td></tr><tr><td>January 1, 1970</td><td>Unix epoch</td><td>Thursday</td></tr><tr><td>January 1, 2000</td><td>Start of 2000</td><td>Saturday</td></tr><tr><td>February 29, 2024</td><td>Last leap day</td><td>Thursday</td></tr><tr><td>July 4, 2026</td><td>Independence Day 2026</td><td>Saturday</td></tr><tr><td>December 25, 2026</td><td>Christmas Day 2026</td><td>Friday</td></tr></tbody></table></div>
+      <h2>Why dates move one weekday each year</h2>
+      <p>A common year has 365 days, which is 52 weeks and 1 day, so each date falls one weekday later than the year before. A leap year has 366 days, 52 weeks and 2 days, so dates after February 29 move forward two weekdays. Here is how January 1 and December 25 move over the next few years.</p>
+      <div class="calc-table"><table><thead><tr><th>Year</th><th>January 1</th><th>December 25</th></tr></thead><tbody><tr><td>2024</td><td>Monday</td><td>Wednesday</td></tr><tr><td>2025</td><td>Wednesday</td><td>Thursday</td></tr><tr><td>2026</td><td>Thursday</td><td>Friday</td></tr><tr><td>2027</td><td>Friday</td><td>Saturday</td></tr><tr><td>2028</td><td>Saturday</td><td>Monday</td></tr><tr><td>2029</td><td>Monday</td><td>Tuesday</td></tr><tr><td>2030</td><td>Tuesday</td><td>Wednesday</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Weekday occurrences in a year: days of the year and how many times each weekday appears</title><desc id="cf2-d">A common year is 52 weeks and 1 day, so a date moves forward one weekday each year; a leap year is 52 weeks and 2 days, so it moves forward two.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Weekday occurrences in a year: days of the year and how many times each weekday appears</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">2025 (365 days)</text><rect class="bar" x="130" y="44" width="297.2" height="22" rx="4" fill="#2563eb"/><text x="435.2" y="60" font-size="13" font-weight="700" fill="#111827">52 weeks + 1 day</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">2024 (366 days)</text><rect class="bar" x="130" y="78" width="298.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">52 weeks + 2 days</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">52 weeks exactly</text><rect class="bar" x="130" y="112" width="296.4" height="22" rx="4" fill="#9ca3af"/><text x="434.4" y="128" font-size="13" font-weight="700" fill="#111827">364 days</text></svg><figcaption>The extra day or two is why the weekday shifts.</figcaption></figure>
+      <h2>Birthdays and anniversaries</h2>
+      <p>To plan ahead, enter the date with a future year. A birthday on March 15 falls on these weekdays:</p>
+      <div class="calc-table"><table><thead><tr><th>Year</th><th>March 15 falls on</th></tr></thead><tbody><tr><td>2026</td><td>Sunday</td></tr><tr><td>2027</td><td>Monday</td></tr><tr><td>2028</td><td>Wednesday</td></tr><tr><td>2029</td><td>Thursday</td></tr><tr><td>2030</td><td>Friday</td></tr><tr><td>2031</td><td>Saturday</td></tr><tr><td>2032</td><td>Monday</td></tr></tbody></table></div>
+      <h2>Leap years and dates that do not exist</h2>
+      <p>The leap year rules are built in: a year is a leap year if it divides by 4, except century years, which must divide by 400. So 2024 and 2000 are leap years, while 1900 and 2100 are not. A date that does not exist, such as February 29, 2025, rolls on to the next valid day, March 1, 2025, a <strong>Saturday</strong>, and the result says so. The same applies to February 29, 1900, which becomes March 1, 1900, a Thursday. February 29, 2000 is real and was a Tuesday.</p>
+      <h2>Friday the 13th</h2>
+      <p>Because the calendar repeats exactly every 400 years, you can count how often the 13th falls on each weekday. Over a full cycle of 4,800 months it is a Friday <strong>688</strong> times, more than any other weekday. In 2026 there are 3 Fridays the 13th: February 13, 2026, March 13, 2026, November 13, 2026.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 284" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">How often the 13th of a month falls on each weekday, per 400-year cycle (4,800 months)</title><desc id="cf1-d">Friday is the most common weekday for the 13th, with 688 of 4,800 months, because the Gregorian calendar repeats every 400 years and 146,097 days is exactly 20,871 weeks.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">How often the 13th of a month falls on each weekday, per 400-year cycle (4,800 months)</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">Friday</text><rect class="bar" x="100" y="44" width="328.0" height="22" rx="4" fill="#dc2626"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">688</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">Sunday</text><rect class="bar" x="100" y="78" width="327.5" height="22" rx="4" fill="#9ca3af"/><text x="435.5" y="94" font-size="13" font-weight="700" fill="#111827">687</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">Wednesday</text><rect class="bar" x="100" y="112" width="327.5" height="22" rx="4" fill="#9ca3af"/><text x="435.5" y="128" font-size="13" font-weight="700" fill="#111827">687</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">Monday</text><rect class="bar" x="100" y="146" width="326.6" height="22" rx="4" fill="#9ca3af"/><text x="434.6" y="162" font-size="13" font-weight="700" fill="#111827">685</text><text x="92" y="196" text-anchor="end" font-size="13" fill="#6b7280">Tuesday</text><rect class="bar" x="100" y="180" width="326.6" height="22" rx="4" fill="#9ca3af"/><text x="434.6" y="196" font-size="13" font-weight="700" fill="#111827">685</text><text x="92" y="230" text-anchor="end" font-size="13" fill="#6b7280">Thursday</text><rect class="bar" x="100" y="214" width="326.1" height="22" rx="4" fill="#9ca3af"/><text x="434.1" y="230" font-size="13" font-weight="700" fill="#111827">684</text><text x="92" y="264" text-anchor="end" font-size="13" fill="#6b7280">Saturday</text><rect class="bar" x="100" y="248" width="326.1" height="22" rx="4" fill="#9ca3af"/><text x="434.1" y="264" font-size="13" font-weight="700" fill="#111827">684</text></svg><figcaption>The 13th is a Friday slightly more often than any other day.</figcaption></figure>
+      <h2>Old dates and calendars</h2>
+      <p>The calculator uses the <strong>Gregorian calendar</strong> for every date. It was introduced in October 1582: the day after Thursday, October 4, 1582 was Friday, <strong>October 15, 1582</strong> (a Friday in the tool). Countries switched at different times, some centuries later, so a historical date written in the old Julian calendar can fall on a different weekday. Dates before 1582 here show the weekday in the Gregorian calendar extended backwards.</p>
+      <h2>Doing it in your head</h2>
+      <p>The <strong>doomsday rule</strong> gives a shortcut. In any year, April 4, June 6, August 8, October 10 and December 12 fall on the same weekday, called the doomsday. For 2026 that weekday is <strong>Saturday</strong>. From there you can count to any date in the year. The calculator saves the arithmetic and covers every year.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Using the wrong month number. The month box lists names, so pick the right one.</li><li>Forgetting the year. The same date falls on a different weekday most years.</li><li>Applying a modern weekday to an old Julian date. Check which calendar the source used.</li><li>Entering February 29 in a year that is not a leap year. The calculator moves it to March 1.</li><li>Reading the week count as a calendar week number. It counts occurrences of that weekday in the year.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large word is the weekday. Below it are the day of the year with the days that remain, and the position of that weekday in the year, such as the 40th Sunday of 52, with the number left. The calendar underneath marks the date and shades weekends.</p>
+      <div class="callout">The weekday follows the Gregorian calendar for every date. For historical research on dates before the calendar changed in your country, check which calendar the record used.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="day-counter.html">Day Counter</a> &ndash; days between dates and business days</li><li><a href="date-calculator.html">Date Calculator</a> &ndash; add or subtract time from a date</li><li><a href="age-calculator.html">Age Calculator</a> &ndash; age in years, months and days</li><li><a href="time-zone-calculator.html">Time Zone Calculator</a> &ndash; convert a time between zones</li><li><a href="time-card-calculator.html">Time Card Calculator</a> &ndash; hours worked in a week</li><li><a href="sleep-calculator.html">Sleep Calculator</a> &ndash; bedtimes and wake-up times</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do I find the day of the week for a date?</h3>
-        <p>Enter the month, day and year. The calculator counts the days since a known date and names the weekday for you.</p>
+        <p>Enter the month, day and year. The calculator counts the days since a known date, January 1, 1970, which was a Thursday, and names the weekday from the remainder after dividing by 7.</p>
       </div>
       <div class="faq-item">
         <h3>What day of the week was I born on?</h3>
@@ -163,16 +187,21 @@
       </div>
       <div class="faq-item">
         <h3>Does it handle leap years?</h3>
-        <p>Yes. A year is a leap year if it divides by 4, except century years, which must divide by 400. So 2000 and 2024 are leap years and 1900 and 2100 are not.</p>
+        <p>Yes. A year is a leap year if it divides by 4, except century years that do not divide by 400. So 2000 was a leap year, but 1900 and 2100 are not.</p>
       </div>
       <div class="faq-item">
-        <h3>What happens if I enter February 30?</h3>
-        <p>Dates that do not exist are moved on to the next valid date. February 30 in a leap year becomes March 1, and in other years it becomes March 2.</p>
+        <h3>What happens if I enter a date that does not exist?</h3>
+        <p>The date rolls on to the next valid day. For example, February 29, 2025 becomes March 1, 2025, and the result says so.</p>
       </div>
       <div class="faq-item">
-        <h3>Does it work for historical dates?</h3>
-        <p>It uses the Gregorian calendar for all dates, so for dates before it was adopted in 1582 it shows the weekday as if the calendar had always been in use.</p>
+        <h3>Why is the 13th more often a Friday?</h3>
+        <p>The Gregorian calendar repeats every 400 years, and over that cycle the 13th falls on a Friday 688 times, slightly more than any other weekday.</p>
       </div>
+      <div class="faq-item">
+        <h3>Does it work for dates before 1582?</h3>
+        <p>Yes, but it uses the Gregorian calendar extended backwards. A date recorded in the old Julian calendar can fall on a different weekday.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week" rel="noopener" target="_blank">Wikipedia: Determination of the day of the week</a>; <a href="https://en.wikipedia.org/wiki/Gregorian_calendar" rel="noopener" target="_blank">Wikipedia: Gregorian calendar</a>; <a href="https://en.wikipedia.org/wiki/Leap_year" rel="noopener" target="_blank">Wikipedia: Leap year</a></p>
     </div>
 
   </div>
