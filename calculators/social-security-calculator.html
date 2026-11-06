@@ -12,19 +12,19 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Social Security Claiming Age Comparison Calculator | CalcBundle</title>
+<title>Social Security Claiming Age Calculator &amp; Break-Even</title>
 <meta name="description" content="Compare U.S. Social Security retirement claiming ages, benefit estimates and break-even timing using your own assumptions.">
 <link rel="canonical" href="https://calcbundle.net/calculators/social-security-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Social Security Claiming Age Comparison Calculator | CalcBundle">
+<meta property="og:title" content="Social Security Claiming Age Calculator &amp; Break-Even">
 <meta property="og:description" content="Compare U.S. Social Security retirement claiming ages, benefit estimates and break-even timing using your own assumptions.">
 <meta property="og:url" content="https://calcbundle.net/calculators/social-security-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Social Security Claiming Age Comparison Calculator | CalcBundle">
+<meta name="twitter:title" content="Social Security Claiming Age Calculator &amp; Break-Even">
 <meta name="twitter:description" content="Compare U.S. Social Security retirement claiming ages, benefit estimates and break-even timing using your own assumptions.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
@@ -42,7 +42,7 @@
       "name": "What does relative value mean in the results?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For each claiming age, the calculator adds up the benefits you would collect through your life expectancy, adjusting for the yearly cost-of-living increase and discounting future payments at your investment return. It then scales the best age to 100%, so every other age shows how close it comes to the best choice."
+        "text": "For each claiming age the calculator adds up the benefits you would collect through your life expectancy, adjusting for the cost-of-living increase and discounting later payments at your investment return. It scales the best age to 100%, so every other age shows how close it comes."
       }
     },
     {
@@ -50,7 +50,7 @@
       "name": "Why does the best claiming age change with life expectancy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Waiting trades smaller checks now for larger checks later. If you expect a shorter life, the larger checks have less time to pay off, so claiming early wins. If you expect a long life, the higher monthly amount eventually more than makes up for the years you waited."
+        "text": "Waiting trades smaller checks now for larger checks later. If you expect a shorter life, the larger checks have less time to pay off, so claiming early wins. If you expect a long life, the higher monthly amount eventually makes up for the years you waited."
       }
     },
     {
@@ -58,7 +58,7 @@
       "name": "What is the break-even age?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is the life expectancy at which claiming later has collected the same total value as claiming earlier. If you expect to live past that age, the later claim comes out ahead. If not, the earlier claim does."
+        "text": "It is the life expectancy at which claiming later has collected the same total value as claiming earlier. If you expect to live past it, the later claim comes out ahead."
       }
     },
     {
@@ -66,7 +66,7 @@
       "name": "Does this show my actual Social Security benefit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. It compares claiming ages as a share of the benefit you would get at your full retirement age. You can enter that monthly amount to see dollar figures, and your personal estimate is on your statement from the Social Security Administration."
+        "text": "No. It compares claiming ages as a share of the benefit at your full retirement age. You can enter that monthly amount to see dollar figures, and your personal estimate is on your statement from the Social Security Administration."
       }
     },
     {
@@ -74,7 +74,15 @@
       "name": "Does the calculator include spouse or survivor benefits?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. It looks only at your own retirement benefit and ignores spousal and survivor benefits, taxes on benefits, and the earnings limit that applies if you claim early while still working. Those can change the best choice, especially for married couples."
+        "text": "No. It looks only at your own retirement benefit and ignores spousal and survivor benefits, taxes on benefits and the earnings limit for people who claim early while working."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there any reason to wait past 70?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Delayed retirement credits stop at age 70, so waiting longer does not raise your benefit."
       }
     }
   ]
@@ -200,48 +208,70 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How claiming age changes your benefit</h2>
-      <p>Your full retirement age depends on the year you were born: 66 for 1943 to 1954, rising by two months a year to 66 and 10 months for 1959, and 67 for anyone born in 1960 or later. You can start collecting as early as 62, but the check is permanently smaller. Claiming before full retirement age cuts it by 5/9 of 1% for each of the first 36 months early and 5/12 of 1% for every month after that, which is a 30% cut at 62 when full retirement age is 67.</p>
-
-      <h2>What waiting adds</h2>
-      <p>Each month you delay past full retirement age earns delayed retirement credits of 2/3 of 1%, or 8% a year, up to age 70. Waiting from 67 to 70 therefore raises the monthly check by 24%. There is no extra credit for waiting beyond 70, so there is no reason to delay past that point.</p>
-
-      <h2>How this calculator picks the best age</h2>
-      <p>For each age from 62 to 70, it adds up the benefits you would collect through your life expectancy. Each yearly payment grows with the cost-of-living adjustment, then is discounted back to age 62 at your investment return, so a dollar received later counts for less. The age with the highest total scores 100%, and the others show how close they come. A higher investment return favors claiming sooner, while a longer life expectancy or higher cost-of-living adjustment favors waiting.</p>
-      <div class="callout">This is an estimate for planning, not financial advice. It looks only at your own retirement benefit. Your health, other income, a spouse's benefits and your need for cash now can all change the right answer.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understand the numbers</h2>
-      <p>For a simplified comparison, $1,500 per month corresponds to $18,000 per year, while $1,800 per month corresponds to $21,600 per year. The annual difference is $3,600, but claiming-age decisions depend on when payments begin, how long they continue and actual benefit rules.</p>
-      <h2>Related retirement planning tools</h2>
-      <p>To plan your overall retirement funding needs, use the <a href="retirement-calculator.html">Retirement Calculator</a>. If you also receive workplace pension benefits, compare options with the <a href="pension-calculator.html">Pension Calculator</a>. Benefits and eligibility should be confirmed with the <a href="https://www.ssa.gov/">Social Security Administration</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="pension-calculator.html">Pension Calculator</a>, <a href="rmd-calculator.html">RMD Calculator</a>, <a href="roth-ira-calculator.html">Roth IRA Calculator</a>, <a href="annuity-payout-calculator.html">Annuity Payout Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-much-do-you-need-to-retire.html">How Much Do You Need to Retire?</a>.</p>
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Social Security pays less if you claim before full retirement age and more if you wait up to 70. For someone born in 1970 (full retirement age 67), age 62 pays 70% of the full benefit and age 70 pays 124%. With a life expectancy of 83, a 5% return and 3% COLA the best claiming age is 68.</div>
+      <h2>How claiming age changes the check</h2>
+      <p>Social Security retirement benefits can start as early as 62, but the monthly amount depends on when you start. Your <strong>full retirement age</strong> (FRA) is the age at which you get 100% of your calculated benefit, called the primary insurance amount (PIA). Claiming earlier shrinks the check for life; claiming later, up to 70, makes it larger for life.</p>
+      <h2>Full retirement age by birth year</h2>
+      <div class="calc-table"><table><thead><tr><th>Born in</th><th>Full retirement age</th></tr></thead><tbody><tr><td>1943&ndash;1954</td><td>66</td></tr><tr><td>1955</td><td>66 and 2 months</td></tr><tr><td>1956</td><td>66 and 4 months</td></tr><tr><td>1957</td><td>66 and 6 months</td></tr><tr><td>1958</td><td>66 and 8 months</td></tr><tr><td>1959</td><td>66 and 10 months</td></tr><tr><td>1960 or later</td><td>67</td></tr></tbody></table></div>
+      <p>For anyone born before 1943 the age is 65 or between 65 and 66. The calculator uses this schedule to place your birth year.</p>
+      <h2>The reduction and the bonus</h2>
+      <ul><li><strong>Early claiming:</strong> the benefit falls by 5/9 of 1% for each of the first 36 months before FRA and 5/12 of 1% for every month beyond that.</li><li><strong>Delayed claiming:</strong> each month after FRA adds delayed retirement credits of 2/3 of 1%, which is 8% a year, up to age 70.</li><li>There is no credit for waiting beyond 70.</li></ul>
+      <p>With an FRA of 67 that works out as follows (the FRA 66 column shows the same rules for people born 1943 to 1954):</p>
+      <div class="calc-table"><table><thead><tr><th>Claim at</th><th>Share of PIA, FRA 67</th><th>Share of PIA, FRA 66</th></tr></thead><tbody><tr><td>62</td><td>70.00%</td><td>75.00%</td></tr><tr><td>63</td><td>75.00%</td><td>80.00%</td></tr><tr><td>64</td><td>80.00%</td><td>86.67%</td></tr><tr><td>65</td><td>86.67%</td><td>93.33%</td></tr><tr><td>66</td><td>93.33%</td><td>100.00%</td></tr><tr><td>67</td><td>100.00%</td><td>108.00%</td></tr><tr><td>68</td><td>108.00%</td><td>116.00%</td></tr><tr><td>69</td><td>116.00%</td><td>124.00%</td></tr><tr><td>70</td><td>124.00%</td><td>132.00%</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 352" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Monthly benefit as a share of the full-retirement-age amount (full retirement age 67)</title><desc id="cf2-d">Claiming at 62 gives 70% of the full amount and claiming at 70 gives 124%, so the 70 check is 77% larger than the 62 check.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Monthly benefit as a share of the full-retirement-age amount (full retirement age 67)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">Age 62</text><rect class="bar" x="80" y="44" width="196.5" height="22" rx="4" fill="#f59e0b"/><text x="284.5" y="60" font-size="13" font-weight="700" fill="#111827">70.0%</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">Age 63</text><rect class="bar" x="80" y="78" width="210.5" height="22" rx="4" fill="#f59e0b"/><text x="298.5" y="94" font-size="13" font-weight="700" fill="#111827">75.0%</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">Age 64</text><rect class="bar" x="80" y="112" width="224.5" height="22" rx="4" fill="#f59e0b"/><text x="312.5" y="128" font-size="13" font-weight="700" fill="#111827">80.0%</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">Age 65</text><rect class="bar" x="80" y="146" width="243.2" height="22" rx="4" fill="#f59e0b"/><text x="331.2" y="162" font-size="13" font-weight="700" fill="#111827">86.7%</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">Age 66</text><rect class="bar" x="80" y="180" width="261.9" height="22" rx="4" fill="#f59e0b"/><text x="349.9" y="196" font-size="13" font-weight="700" fill="#111827">93.3%</text><text x="72" y="230" text-anchor="end" font-size="13" fill="#6b7280">Age 67</text><rect class="bar" x="80" y="214" width="280.6" height="22" rx="4" fill="#10b981"/><text x="368.6" y="230" font-size="13" font-weight="700" fill="#111827">100.0%</text><text x="72" y="264" text-anchor="end" font-size="13" fill="#6b7280">Age 68</text><rect class="bar" x="80" y="248" width="303.1" height="22" rx="4" fill="#10b981"/><text x="391.1" y="264" font-size="13" font-weight="700" fill="#111827">108.0%</text><text x="72" y="298" text-anchor="end" font-size="13" fill="#6b7280">Age 69</text><rect class="bar" x="80" y="282" width="325.5" height="22" rx="4" fill="#10b981"/><text x="413.5" y="298" font-size="13" font-weight="700" fill="#111827">116.0%</text><text x="72" y="332" text-anchor="end" font-size="13" fill="#6b7280">Age 70</text><rect class="bar" x="80" y="316" width="348.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="332" font-size="13" font-weight="700" fill="#111827">124.0%</text></svg><figcaption>The benefit rises about 6&ndash;8% for each year you wait, so the age-70 check is much larger than the age-62 check.</figcaption></figure>
+      <p>For a PIA of $2,000, the monthly benefit (for FRA 67) would be:</p>
+      <div class="calc-table"><table><thead><tr><th>Claim at</th><th>Monthly benefit</th></tr></thead><tbody><tr><td>62</td><td>$1,400</td></tr><tr><td>63</td><td>$1,500</td></tr><tr><td>64</td><td>$1,600</td></tr><tr><td>65</td><td>$1,733</td></tr><tr><td>66</td><td>$1,867</td></tr><tr><td>67</td><td>$2,000</td></tr><tr><td>68</td><td>$2,160</td></tr><tr><td>69</td><td>$2,320</td></tr><tr><td>70</td><td>$2,480</td></tr></tbody></table></div>
+      <h2>How the calculator finds the best age</h2>
+      <p>A bigger check later is not automatically better, because you collect it for fewer years and money received later is worth less. For each claiming age from 62 to 70, the calculator adds up the benefits you would collect until your life expectancy. Each year&rsquo;s amount grows with the cost-of-living adjustment (COLA) and is then discounted back to age 62 at your investment return. The age with the largest total scores 100%, and the others show how close they come.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>Born in 1970, so the full retirement age is 67. Life expectancy 83, investment return 5% and COLA 3%. The best age is <strong>68</strong>, where the benefit is 108.0% of the full amount. Age 62 scores 94.7% of the best and age 70 scores 98.5%.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 352" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Relative value of each claiming age (born 1970, live to 83, 5% return, 3% COLA)</title><desc id="cf1-d">The best age scores 100%. In this example age 68 wins and age 62 scores 94.7%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Relative value of each claiming age (born 1970, live to 83, 5% return, 3% COLA)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">Age 62</text><rect class="bar" x="80" y="44" width="329.7" height="22" rx="4" fill="#9ca3af"/><text x="417.7" y="60" font-size="13" font-weight="700" fill="#111827">94.7%</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">Age 63</text><rect class="bar" x="80" y="78" width="333.8" height="22" rx="4" fill="#9ca3af"/><text x="421.8" y="94" font-size="13" font-weight="700" fill="#111827">95.9%</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">Age 64</text><rect class="bar" x="80" y="112" width="335.6" height="22" rx="4" fill="#9ca3af"/><text x="423.6" y="128" font-size="13" font-weight="700" fill="#111827">96.4%</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">Age 65</text><rect class="bar" x="80" y="146" width="341.9" height="22" rx="4" fill="#9ca3af"/><text x="429.9" y="162" font-size="13" font-weight="700" fill="#111827">98.2%</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">Age 66</text><rect class="bar" x="80" y="180" width="345.3" height="22" rx="4" fill="#9ca3af"/><text x="433.3" y="196" font-size="13" font-weight="700" fill="#111827">99.2%</text><text x="72" y="230" text-anchor="end" font-size="13" fill="#6b7280">Age 67</text><rect class="bar" x="80" y="214" width="345.8" height="22" rx="4" fill="#9ca3af"/><text x="433.8" y="230" font-size="13" font-weight="700" fill="#111827">99.4%</text><text x="72" y="264" text-anchor="end" font-size="13" fill="#6b7280">Age 68</text><rect class="bar" x="80" y="248" width="348.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="264" font-size="13" font-weight="700" fill="#111827">100.0%</text><text x="72" y="298" text-anchor="end" font-size="13" fill="#6b7280">Age 69</text><rect class="bar" x="80" y="282" width="346.9" height="22" rx="4" fill="#9ca3af"/><text x="434.9" y="298" font-size="13" font-weight="700" fill="#111827">99.7%</text><text x="72" y="332" text-anchor="end" font-size="13" fill="#6b7280">Age 70</text><rect class="bar" x="80" y="316" width="342.6" height="22" rx="4" fill="#9ca3af"/><text x="430.6" y="332" font-size="13" font-weight="700" fill="#111827">98.5%</text></svg><figcaption>When the investment return is higher than the COLA, waiting pays less, so an earlier claim can come out ahead.</figcaption></figure>
+      <h2>What changes the answer</h2>
+      <p>Holding the other defaults the same, the best age moves like this:</p>
+      <div class="calc-table"><table><thead><tr><th>Life expectancy</th><th>Investment return</th><th>Best age</th></tr></thead><tbody><tr><td>75</td><td>5%</td><td>62</td></tr><tr><td>80</td><td>5%</td><td>65</td></tr><tr><td>83</td><td>5%</td><td>68</td></tr><tr><td>90</td><td>5%</td><td>70</td></tr><tr><td>95</td><td>5%</td><td>70</td></tr><tr><td>83</td><td>2%</td><td>70</td></tr><tr><td>83</td><td>8%</td><td>62</td></tr><tr><td>90</td><td>2%</td><td>70</td></tr></tbody></table></div>
+      <p>A longer life or a lower return favors waiting. A short life expectancy or a high return favors claiming sooner.</p>
+      <h2>Comparing two claiming ages</h2>
+      <p>The second mode compares two options directly. Enter the age and monthly payment for each, for example $1,600 at 62 against $2,810 at 70, plus a return and COLA. It finds the <strong>break-even age</strong>, the life expectancy at which the later claim has caught up. With the default numbers that is about <strong>age 82 and 11 months</strong>. If you expect to live past it, waiting wins; if not, the earlier claim does.</p>
+      <div class="calc-table"><table><thead><tr><th>Life expectancy</th><th>Claim at 62</th><th>Claim at 70</th><th>Better option</th></tr></thead><tbody><tr><td>75</td><td>$217,623</td><td>$135,814</td><td>Age 62</td></tr><tr><td>80</td><td>$287,865</td><td>$259,177</td><td>Age 62</td></tr><tr><td>85</td><td>$351,668</td><td>$371,231</td><td>Age 70</td></tr><tr><td>90</td><td>$409,621</td><td>$473,011</td><td>Age 70</td></tr><tr><td>95</td><td>$462,261</td><td>$565,461</td><td>Age 70</td></tr><tr><td>100</td><td>$510,075</td><td>$649,434</td><td>Age 70</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Equivalent value at age 62: claim at 62 ($1,600) vs 70 ($2,810)</title><desc id="cf3-d">The two lines cross at about age 82: living beyond that makes the age-70 claim worth more.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Equivalent value at age 62: claim at 62 ($1,600) vs 70 ($2,810)</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0k</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$170k</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$341k</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$511k</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$682k</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">63</text><text x="142.8" y="194" text-anchor="middle" font-size="11" fill="#6b7280">70</text><text x="263.8" y="194" text-anchor="middle" font-size="11" fill="#6b7280">80</text><text x="384.9" y="194" text-anchor="middle" font-size="11" fill="#6b7280">90</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">100</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Life expectancy (age)</text><polyline class="draw" style="--len:459" points="58.0,172.5 70.1,169.1 82.2,165.8 94.3,162.5 106.4,159.3 118.5,156.2 130.6,153.1 142.8,150.1 154.9,147.1 167.0,144.2 179.1,141.3 191.2,138.5 203.3,135.8 215.4,133.1 227.5,130.4 239.6,127.9 251.7,125.3 263.8,122.8 275.9,120.4 288.1,118.0 300.2,115.6 312.3,113.3 324.4,111.0 336.5,108.8 348.6,106.6 360.7,104.5 372.8,102.4 384.9,100.3 397.0,98.3 409.1,96.3 421.2,94.4 433.4,92.5 445.5,90.6 457.6,88.7 469.7,86.9 481.8,85.2 493.9,83.4 506.0,81.8" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Claim at 62</text><polyline class="draw" style="--len:469" points="58.0,176.0 70.1,176.0 82.2,176.0 94.3,176.0 106.4,176.0 118.5,176.0 130.6,176.0 142.8,176.0 154.9,170.8 167.0,165.7 179.1,160.7 191.2,155.7 203.3,150.9 215.4,146.2 227.5,141.5 239.6,137.0 251.7,132.5 263.8,128.1 275.9,123.8 288.1,119.6 300.2,115.4 312.3,111.4 324.4,107.4 336.5,103.5 348.6,99.7 360.7,95.9 372.8,92.2 384.9,88.6 397.0,85.0 409.1,81.6 421.2,78.2 433.4,74.8 445.5,71.5 457.6,68.3 469.7,65.1 481.8,62.0 493.9,59.0 506.0,56.0" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="246" y="40" font-size="11.5" fill="#374151">Claim at 70</text></svg><figcaption>Before the crossing the early claim is worth more; after it the larger check wins.</figcaption></figure>
+      <h2>What is not included</h2>
+      <ul><li>Spouse and survivor benefits, which can make waiting more valuable for the higher earner.</li><li>Taxes on benefits and the earnings limit if you claim early while still working.</li><li>Your own health, other income and need for cash now.</li><li>Changes to Social Security law.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using life expectancy from a table instead of what fits your health and family history.</li><li>Assuming a high investment return that you may not earn.</li><li>Ignoring a spouse who may depend on your benefit later.</li><li>Claiming at 62 because of fear about the program, without comparing the numbers.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Treat the best age as a starting point. Look at the table to see how close the neighboring ages are: if two ages are within a few percent, other factors such as health, spouse benefits and cash flow should decide. For your actual benefit amount, use your statement from the Social Security Administration.</p>
+      <div class="callout">This calculator gives estimates for planning. It is not financial advice and does not show your actual benefit. Confirm details with the Social Security Administration.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="retirement-calculator.html">Retirement Calculator</a> &ndash; plan how much you need</li><li><a href="pension-calculator.html">Pension Calculator</a> &ndash; compare pension payout options</li><li><a href="rmd-calculator.html">RMD Calculator</a> &ndash; required withdrawals from age 73 or later</li><li><a href="roth-ira-calculator.html">Roth IRA Calculator</a> &ndash; tax-free retirement growth</li><li><a href="annuity-payout-calculator.html">Annuity Payout Calculator</a> &ndash; turn savings into income</li><li><a href="inflation-calculator.html">Inflation Calculator</a> &ndash; what future income will buy</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-much-do-you-need-to-retire.html">How Much Do You Need to Retire?</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What does relative value mean in the results?</h3>
-        <p>For each claiming age, the calculator adds up the benefits you would collect through your life expectancy, adjusting for the yearly cost-of-living increase and discounting future payments at your investment return. It then scales the best age to 100%, so every other age shows how close it comes to the best choice.</p>
+        <p>For each claiming age the calculator adds up the benefits you would collect through your life expectancy, adjusting for the cost-of-living increase and discounting later payments at your investment return. It scales the best age to 100%, so every other age shows how close it comes.</p>
       </div>
       <div class="faq-item">
         <h3>Why does the best claiming age change with life expectancy?</h3>
-        <p>Waiting trades smaller checks now for larger checks later. If you expect a shorter life, the larger checks have less time to pay off, so claiming early wins. If you expect a long life, the higher monthly amount eventually more than makes up for the years you waited.</p>
+        <p>Waiting trades smaller checks now for larger checks later. If you expect a shorter life, the larger checks have less time to pay off, so claiming early wins. If you expect a long life, the higher monthly amount eventually makes up for the years you waited.</p>
       </div>
       <div class="faq-item">
         <h3>What is the break-even age?</h3>
-        <p>It is the life expectancy at which claiming later has collected the same total value as claiming earlier. If you expect to live past that age, the later claim comes out ahead. If not, the earlier claim does.</p>
+        <p>It is the life expectancy at which claiming later has collected the same total value as claiming earlier. If you expect to live past it, the later claim comes out ahead.</p>
       </div>
       <div class="faq-item">
         <h3>Does this show my actual Social Security benefit?</h3>
-        <p>No. It compares claiming ages as a share of the benefit you would get at your full retirement age. You can enter that monthly amount to see dollar figures, and your personal estimate is on your statement from the Social Security Administration.</p>
+        <p>No. It compares claiming ages as a share of the benefit at your full retirement age. You can enter that monthly amount to see dollar figures, and your personal estimate is on your statement from the Social Security Administration.</p>
       </div>
       <div class="faq-item">
         <h3>Does the calculator include spouse or survivor benefits?</h3>
-        <p>No. It looks only at your own retirement benefit and ignores spousal and survivor benefits, taxes on benefits, and the earnings limit that applies if you claim early while still working. Those can change the best choice, especially for married couples.</p>
+        <p>No. It looks only at your own retirement benefit and ignores spousal and survivor benefits, taxes on benefits and the earnings limit for people who claim early while working.</p>
       </div>
+      <div class="faq-item">
+        <h3>Is there any reason to wait past 70?</h3>
+        <p>No. Delayed retirement credits stop at age 70, so waiting longer does not raise your benefit.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.ssa.gov/benefits/retirement/planner/1960.html" rel="noopener" target="_blank">SSA: Benefits Planner, retirement ages</a>; <a href="https://www.ssa.gov/oact/quickcalc/early_late.html" rel="noopener" target="_blank">SSA: Early or late retirement</a></p>
     </div>
 
   </div>
