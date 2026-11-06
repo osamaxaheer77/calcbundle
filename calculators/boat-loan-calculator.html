@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Boat Loan Calculator: Monthly Payment & Financing | CalcBundle</title>
-<meta name="description" content="Estimate payments for boat financing with loan amount, rate and repayment term assumptions.">
+<title>Boat Loan Calculator: Monthly Payment &amp; Total Cost</title>
+<meta name="description" content="Estimate a boat loan payment, or the boat price a payment supports, with down payment, trade-in, sales tax, fees, loan term and a full repayment schedule.">
 <link rel="canonical" href="https://calcbundle.net/calculators/boat-loan-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Boat Loan Calculator: Monthly Payment & Financing | CalcBundle">
-<meta property="og:description" content="Estimate payments for boat financing with loan amount, rate and repayment term assumptions.">
+<meta property="og:title" content="Boat Loan Calculator: Monthly Payment &amp; Total Cost">
+<meta property="og:description" content="Estimate a boat loan payment, or the boat price a payment supports, with down payment, trade-in, sales tax, fees, loan term and a full repayment schedule.">
 <meta property="og:url" content="https://calcbundle.net/calculators/boat-loan-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Boat Loan Calculator: Monthly Payment & Financing | CalcBundle">
-<meta name="twitter:description" content="Estimate payments for boat financing with loan amount, rate and repayment term assumptions.">
+<meta name="twitter:title" content="Boat Loan Calculator: Monthly Payment &amp; Total Cost">
+<meta name="twitter:description" content="Estimate a boat loan payment, or the boat price a payment supports, with down payment, trade-in, sales tax, fees, loan term and a full repayment schedule.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -50,31 +50,39 @@
       "name": "What does including fees and tax in the loan do?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It adds the sales tax and fees to the amount you borrow, so you pay less up front but have a larger loan, a higher monthly payment and more interest over the term."
+        "text": "It adds the sales tax and fees to the amount borrowed, which raises the payment and the interest but lowers the cash you need up front."
       }
     },
     {
       "@type": "Question",
-      "name": "How much should I put down on a boat?",
+      "name": "How long are boat loan terms?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Lenders often ask for 10% to 20% down. A bigger down payment lowers the loan, the monthly payment and the total interest, and can help you qualify for a better rate."
+        "text": "Boat loans commonly run 10 to 20 years for larger boats, which is longer than most car loans. The calculator accepts terms from 1 month to 50 years."
       }
     },
     {
       "@type": "Question",
-      "name": "How does the monthly payment option find the boat price?",
+      "name": "How is the monthly payment calculated?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It first finds the loan amount your payment can repay over the term at your rate. It then adds the down payment and trade-in, and allows for tax and fees, to give the boat price that matches the loan."
+        "text": "The loan amount is multiplied by the payment factor i divided by 1 minus (1 + i) to the power of minus the number of months, where i is the annual rate divided by 12. For $28,000 at 7% over 10 years, that is $325.10."
       }
     },
     {
       "@type": "Question",
-      "name": "Does this include insurance and storage?",
+      "name": "Does the calculator include insurance and storage?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Boat insurance, storage, fuel, docking and maintenance are separate costs. Add them to your budget alongside the loan payment."
+        "text": "No. Insurance, storage, fuel and maintenance are extra costs of owning a boat that the calculator does not include."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I find the boat price from a payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Choose the second question, enter the monthly payment you can afford, and the calculator works out the loan and the boat price that go with it."
       }
     }
   ]
@@ -212,22 +220,45 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How a boat loan is worked out</h2>
-      <p>The amount you borrow is the boat price minus your down payment and any trade-in. If you choose to roll the sales tax and fees into the loan, they are added to that amount, which raises the payment. Otherwise you pay them up front along with the down payment. The monthly payment is the level amount that repays the loan with interest over the term, and the total cost adds the price, the interest, the tax and the fees.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A $35,000 boat with $7,000 down, 7% interest over 10 years has a payment of $325.10 on a $28,000 loan. Add $2,450 of tax and $2,000 of fees, and the total cost comes to $50,462.</div>
+      <h2>How a boat loan is worked out</h2>
+      <p>The amount you borrow is the boat price minus your down payment and any trade-in. If you choose to roll the sales tax and fees into the loan, they are added on top, which raises the payment. Otherwise you pay them up front along with the down payment. The monthly payment is the level amount that repays the loan with interest over the term, and the total cost is the price plus the interest, the tax and the fees.</p>
       <h2>Two ways to use it</h2>
-      <p>Start from a boat price to see the payment you would owe. Or start from the monthly payment you can afford, and the calculator works out the loan that payment supports and then the boat price that goes with it, after allowing for the down payment, trade-in, tax and fees. The second approach is a good way to set a budget before you go shopping.</p>
-
-      <h2>Boat loans and terms</h2>
-      <p>Boat loans often run longer than car loans, commonly ten to twenty years for larger boats, and rates are usually higher for older or used boats. A longer term lowers the payment but increases total interest. A larger down payment reduces the amount borrowed and the interest. Insurance, storage, fuel and maintenance are extra costs of owning a boat that this calculator does not include.</p>
+      <ul><li><strong>Monthly payment from a boat price.</strong> Enter the price and see the payment you would owe.</li><li><strong>Boat price from a monthly payment.</strong> Enter the payment you can afford, and the calculator works out the loan it supports and then the boat price that goes with it, after the down payment, trade-in, tax and fees. It is a good way to set a budget before you shop.</li></ul>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on a <strong>$35,000</strong> boat, a 10-year term at <strong>7%</strong>, a <strong>$7,000</strong> down payment, <strong>7%</strong> sales tax, <strong>$2,000</strong> of title and registration fees, no trade-in, and the box that rolls tax and fees into the loan unchecked. The loan is $35,000 &minus; $7,000 = <strong>$28,000</strong>. The monthly rate is 7% &divide; 12 = 0.58333%, so the payment over 120 months is <strong>$325.10</strong>. Sales tax is $35,000 &times; 7% = <strong>$2,450</strong>. Because the tax and fees are not in the loan, the upfront payment is $7,000 + $2,450 + $2,000 = <strong>$11,450</strong>.</p>
+      <p>Over 120 payments you pay $39,012.45 in total, of which <strong>$11,012.45</strong> is interest. Adding the price, interest, tax and fees gives a total cost of <strong>$50,462.45</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where the $50,462 of total cost goes (default boat loan)</title><desc id="cf1-d">On a $35,000 boat the total cost is $50,462, because $11,012 of interest, $2,450 of tax and $2,000 of fees are added to the price.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the $50,462 of total cost goes (default boat loan)</text><rect class="bar" x="14.0" y="42" width="341.2" height="30" fill="#2563eb"/><text x="184.6" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">69%</text><rect class="bar" x="355.2" y="42" width="107.4" height="30" fill="#10b981"/><text x="408.9" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">22%</text><rect class="bar" x="462.6" y="42" width="23.9" height="30" fill="#f59e0b"/><rect class="bar" x="486.5" y="42" width="19.5" height="30" fill="#a78bfa"/><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Boat price: <tspan font-weight="700">$35,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Loan interest: <tspan font-weight="700">$11,012</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#f59e0b"/><text x="32" y="120" font-size="12.5" fill="#374151">Sales tax: <tspan font-weight="700">$2,450</tspan></text><rect x="264" y="110" width="12" height="12" rx="2" fill="#a78bfa"/><text x="282" y="120" font-size="12.5" fill="#374151">Title and fees: <tspan font-weight="700">$2,000</tspan></text></svg><figcaption>The price is only part of what a boat loan costs.</figcaption></figure>
+      <h2>The yearly schedule</h2>
+      <div class="calc-table"><table><thead><tr><th>Year</th><th>Interest</th><th>Principal</th><th>Ending balance</th></tr></thead><tbody><tr><td>1</td><td>$1,896.49</td><td>$2,004.75</td><td>$25,995.25</td></tr><tr><td>2</td><td>$1,751.57</td><td>$2,149.68</td><td>$23,845.57</td></tr><tr><td>3</td><td>$1,596.17</td><td>$2,305.08</td><td>$21,540.49</td></tr><tr><td>4</td><td>$1,429.53</td><td>$2,471.71</td><td>$19,068.78</td></tr><tr><td>5</td><td>$1,250.85</td><td>$2,650.39</td><td>$16,418.39</td></tr><tr><td>6</td><td>$1,059.26</td><td>$2,841.99</td><td>$13,576.40</td></tr><tr><td>7</td><td>$853.81</td><td>$3,047.44</td><td>$10,528.96</td></tr><tr><td>8</td><td>$633.51</td><td>$3,267.74</td><td>$7,261.22</td></tr><tr><td>9</td><td>$397.28</td><td>$3,503.96</td><td>$3,757.26</td></tr><tr><td>10</td><td>$143.98</td><td>$3,757.26</td><td>$0.00</td></tr></tbody></table></div>
+      <p>In the first year most of each payment is interest. The balance falls slowly at first and faster later, which is how a level-payment loan works. You can switch the schedule to a monthly view on the page.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">Remaining balance by year on a $28,000 boat loan at 7%, 10 years vs 15 years</title><desc id="cf4-d">Both loans start at $28,000, but the 15-year loan pays down more slowly and still owes about $12,710 after 10 years.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Remaining balance by year on a $28,000 boat loan at 7%, 10 years vs 15 years</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0k</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$8k</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$15k</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$23k</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$30k</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="147.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">3</text><text x="237.2" y="194" text-anchor="middle" font-size="11" fill="#6b7280">6</text><text x="326.8" y="194" text-anchor="middle" font-size="11" fill="#6b7280">9</text><text x="416.4" y="194" text-anchor="middle" font-size="11" fill="#6b7280">12</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">15</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Year</text><polyline class="draw" style="--len:323" points="58.0,59.3 87.9,67.7 117.7,76.6 147.6,86.2 177.5,96.5 207.3,107.6 237.2,119.4 267.1,132.1 296.9,145.7 326.8,160.3 356.7,176.0" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">10 years</text><polyline class="draw" style="--len:466" points="58.0,59.3 87.9,63.9 117.7,68.8 147.6,74.0 177.5,79.7 207.3,85.7 237.2,92.2 267.1,99.1 296.9,106.5 326.8,114.5 356.7,123.0 386.5,132.2 416.4,142.0 446.3,152.6 476.1,163.9 506.0,176.0" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#f59e0b"/><text x="246" y="40" font-size="11.5" fill="#374151">15 years</text></svg><figcaption>A longer term keeps the balance high for longer.</figcaption></figure>
+      <h2>Rolling tax and fees into the loan</h2>
+      <p>Tick the box and the loan becomes $28,000 + $2,450 + $2,000 = <strong>$32,450.00</strong>. The monthly payment rises to <strong>$376.77</strong>, and the interest to $12,762.64, but the upfront payment falls to just the $7,000 down payment. It is easier on cash today but costs $1,750.19 more in interest over the loan.</p>
+      <h2>Finding the price from a payment</h2>
+      <p>Switch the question and enter a payment of $350 a month, the page&rsquo;s alternate default, with the same term, rate and costs. The payment supports a loan of <strong>$30,144.22</strong>, and with the $7,000 down payment the boat price is <strong>$37,144.22</strong> (tax and fees paid up front). If the tax and fees are rolled into the loan instead, the same $350 buys a price of $32,845.07.</p>
+      <h2>Changing the term</h2>
+      <div class="calc-table"><table><thead><tr><th>Term</th><th>Monthly payment</th><th>Total interest</th><th>Total paid</th></tr></thead><tbody><tr><td>5 years</td><td>$554.43</td><td>$5,266.01</td><td>$33,266.01</td></tr><tr><td>10 years</td><td>$325.10</td><td>$11,012.45</td><td>$39,012.45</td></tr><tr><td>15 years</td><td>$251.67</td><td>$17,300.94</td><td>$45,300.94</td></tr><tr><td>20 years</td><td>$217.08</td><td>$24,100.09</td><td>$52,100.09</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Monthly payment on a $28,000 loan at 7% by term</title><desc id="cf2-d">A longer term lowers the payment, from $554 over 5 years to $217 over 20, but the interest climbs from $5,266 to $24,100.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Monthly payment on a $28,000 loan at 7% by term</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">5 years</text><rect class="bar" x="90" y="44" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$554.43</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">10 years</text><rect class="bar" x="90" y="78" width="198.2" height="22" rx="4" fill="#2563eb"/><text x="296.2" y="94" font-size="13" font-weight="700" fill="#111827">$325.10</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">15 years</text><rect class="bar" x="90" y="112" width="153.4" height="22" rx="4" fill="#9ca3af"/><text x="251.4" y="128" font-size="13" font-weight="700" fill="#111827">$251.67</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">20 years</text><rect class="bar" x="90" y="146" width="132.3" height="22" rx="4" fill="#9ca3af"/><text x="230.3" y="162" font-size="13" font-weight="700" fill="#111827">$217.08</text></svg><figcaption>Longer terms lower the payment.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Total interest on a $28,000 loan at 7% by term</title><desc id="cf3-d">Doubling the term from 10 to 20 years does not double the interest, it multiplies it by about 2.2.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Total interest on a $28,000 loan at 7% by term</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">5 years</text><rect class="bar" x="90" y="44" width="73.9" height="22" rx="4" fill="#9ca3af"/><text x="171.9" y="60" font-size="13" font-weight="700" fill="#111827">$5,266</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">10 years</text><rect class="bar" x="90" y="78" width="154.4" height="22" rx="4" fill="#10b981"/><text x="252.4" y="94" font-size="13" font-weight="700" fill="#111827">$11,012</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">15 years</text><rect class="bar" x="90" y="112" width="242.6" height="22" rx="4" fill="#9ca3af"/><text x="340.6" y="128" font-size="13" font-weight="700" fill="#111827">$17,301</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">20 years</text><rect class="bar" x="90" y="146" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">$24,100</text></svg><figcaption>They also raise the interest.</figcaption></figure>
+      <p>Boat loans often run longer than car loans, commonly 10 to 20 years for larger boats, and rates are usually higher for older or used boats. A longer term eases the monthly budget but raises total interest.</p>
+      <h2>Changing the rate and the down payment</h2>
+      <div class="calc-table"><table><thead><tr><th>Interest rate</th><th>Monthly payment</th><th>Total interest</th></tr></thead><tbody><tr><td>5%</td><td>$296.98</td><td>$7,638.01</td></tr><tr><td>7%</td><td>$325.10</td><td>$11,012.45</td></tr><tr><td>9%</td><td>$354.69</td><td>$14,563.06</td></tr><tr><td>11%</td><td>$385.70</td><td>$18,284.00</td></tr></tbody></table></div>
+      <div class="calc-table"><table><thead><tr><th>Down payment</th><th>Loan amount</th><th>Monthly payment</th><th>Total interest</th></tr></thead><tbody><tr><td>$0</td><td>$35,000.00</td><td>$406.38</td><td>$13,765.56</td></tr><tr><td>$3,500</td><td>$31,500.00</td><td>$365.74</td><td>$12,389.01</td></tr><tr><td>$7,000</td><td>$28,000.00</td><td>$325.10</td><td>$11,012.45</td></tr><tr><td>$10,500</td><td>$24,500.00</td><td>$284.47</td><td>$9,635.89</td></tr></tbody></table></div>
+      <p>You can enter the down payment as a percentage instead: 20% of $35,000 is $7,000, the same as the default. A trade-in works like extra down payment. With a $5,000 trade-in the loan falls to $23,000.00 and the payment to $267.05. Sales tax is still worked out on the full boat price, which is the safer assumption, since some states tax only the price after the trade-in.</p>
+      <h2>Costs a loan calculator does not include</h2>
+      <ul><li>Insurance, which lenders usually require.</li><li>Storage or a slip, and winter storage in cold climates.</li><li>Fuel, maintenance and repairs, which often add up to a notable share of the purchase price each year.</li><li>A trailer, safety equipment and a survey for a used boat.</li><li>Depreciation. A boat may be worth less than the loan balance for several years.</li></ul>
+      <h2>A note on taxes</h2>
+      <p>A boat can count as a home for the mortgage interest deduction in the United States if it has sleeping, cooking and toilet facilities, as IRS Publication 936 explains. That depends on your own situation, so ask a tax adviser before you count on it.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Looking only at the monthly payment and ignoring the term and total interest.</li><li>Forgetting the tax and fees, which here add $4,450 to the price.</li><li>Rolling tax and fees into the loan without checking the extra interest.</li><li>Not budgeting for insurance, storage and fuel.</li><li>Borrowing for so long that you owe more than the boat is worth.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the monthly payment or the boat price, depending on your question. Below it are the loan amount, the sales tax, the upfront payment, the total of all loan payments, the interest and the total cost, followed by a chart and a schedule. Compare offers by the total cost, not the payment alone.</p>
       <div class="callout">This calculator gives estimates. Lenders may round differently, charge other fees or require a minimum down payment, so use your loan offer for exact figures.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: what the numbers mean</h2><p>A $30,000 financed balance at 0% interest over 60 months corresponds to $500 monthly before additional boating costs. Interest increases total financing cost.</p><h2>Related calculators</h2><p>For a general repayment comparison, see the <a href="loan-calculator.html">Loan Calculator</a>. To plan affordability alongside other debts, use the <a href="debt-ratio-calculator.html">Debt Ratio Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="business-loan-calculator.html">Business Loan Calculator</a>, <a href="auto-lease-calculator.html">Auto Lease Calculator</a>, <a href="payment-calculator.html">Payment Calculator</a>, <a href="lease-calculator.html">Lease Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <h2>What to do next</h2>
+      <ul><li><a href="auto-loan-calculator.html">Auto Loan Calculator</a> &ndash; a car loan payment</li><li><a href="loan-calculator.html">Loan Calculator</a> &ndash; any fixed-rate loan</li><li><a href="personal-loan-calculator.html">Personal Loan Calculator</a> &ndash; an unsecured loan</li><li><a href="debt-ratio-calculator.html">Debt-to-Income Ratio Calculator</a> &ndash; affordability beside other debts</li><li><a href="business-loan-calculator.html">Business Loan Calculator</a> &ndash; a business loan payment</li><li><a href="payment-calculator.html">Payment Calculator</a> &ndash; a payment from any loan</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Is sales tax charged on the price before or after the trade-in?</h3>
@@ -235,20 +266,25 @@
       </div>
       <div class="faq-item">
         <h3>What does including fees and tax in the loan do?</h3>
-        <p>It adds the sales tax and fees to the amount you borrow, so you pay less up front but have a larger loan, a higher monthly payment and more interest over the term.</p>
+        <p>It adds the sales tax and fees to the amount borrowed, which raises the payment and the interest but lowers the cash you need up front.</p>
       </div>
       <div class="faq-item">
-        <h3>How much should I put down on a boat?</h3>
-        <p>Lenders often ask for 10% to 20% down. A bigger down payment lowers the loan, the monthly payment and the total interest, and can help you qualify for a better rate.</p>
+        <h3>How long are boat loan terms?</h3>
+        <p>Boat loans commonly run 10 to 20 years for larger boats, which is longer than most car loans. The calculator accepts terms from 1 month to 50 years.</p>
       </div>
       <div class="faq-item">
-        <h3>How does the monthly payment option find the boat price?</h3>
-        <p>It first finds the loan amount your payment can repay over the term at your rate. It then adds the down payment and trade-in, and allows for tax and fees, to give the boat price that matches the loan.</p>
+        <h3>How is the monthly payment calculated?</h3>
+        <p>The loan amount is multiplied by the payment factor i divided by 1 minus (1 + i) to the power of minus the number of months, where i is the annual rate divided by 12. For $28,000 at 7% over 10 years, that is $325.10.</p>
       </div>
       <div class="faq-item">
-        <h3>Does this include insurance and storage?</h3>
-        <p>No. Boat insurance, storage, fuel, docking and maintenance are separate costs. Add them to your budget alongside the loan payment.</p>
+        <h3>Does the calculator include insurance and storage?</h3>
+        <p>No. Insurance, storage, fuel and maintenance are extra costs of owning a boat that the calculator does not include.</p>
       </div>
+      <div class="faq-item">
+        <h3>Can I find the boat price from a payment?</h3>
+        <p>Yes. Choose the second question, enter the monthly payment you can afford, and the calculator works out the loan and the boat price that go with it.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.irs.gov/publications/p936" rel="noopener" target="_blank">IRS: Publication 936, Home mortgage interest deduction (what counts as a home)</a>; <a href="https://en.wikipedia.org/wiki/Amortization_calculator" rel="noopener" target="_blank">Wikipedia: Amortization calculator</a></p>
     </div>
 
   </div>
