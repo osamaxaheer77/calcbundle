@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>College Cost Calculator: Tuition Growth & Savings Goal | CalcBundle</title>
-<meta name="description" content="Project future college expenses and estimate savings needed under tuition inflation and investment return assumptions.">
+<title>College Cost Calculator: Tuition Growth &amp; Savings</title>
+<meta name="description" content="Project future college costs under tuition inflation, then work out the monthly saving needed to cover all of it or a share, with taxes on returns.">
 <link rel="canonical" href="https://calcbundle.net/calculators/college-cost-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="College Cost Calculator: Tuition Growth & Savings Goal | CalcBundle">
-<meta property="og:description" content="Project future college expenses and estimate savings needed under tuition inflation and investment return assumptions.">
+<meta property="og:title" content="College Cost Calculator: Tuition Growth &amp; Savings">
+<meta property="og:description" content="Project future college costs under tuition inflation, then work out the monthly saving needed to cover all of it or a share, with taxes on returns.">
 <meta property="og:url" content="https://calcbundle.net/calculators/college-cost-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="College Cost Calculator: Tuition Growth & Savings Goal | CalcBundle">
-<meta name="twitter:description" content="Project future college expenses and estimate savings needed under tuition inflation and investment return assumptions.">
+<meta name="twitter:title" content="College Cost Calculator: Tuition Growth &amp; Savings">
+<meta name="twitter:description" content="Project future college costs under tuition inflation, then work out the monthly saving needed to cover all of it or a share, with taxes on returns.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,12 +42,12 @@
       "name": "How do I estimate college costs for the future?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Take today’s yearly cost, grow it by the expected yearly increase for each year until the student starts, and then keep growing it for each year of study. The calculator does this and adds up all the years."
+        "text": "Take today's yearly cost, grow it by the expected yearly increase for each year until the student starts, and then keep growing it for each year of study. The calculator does this and adds up all the years."
       }
     },
     {
       "@type": "Question",
-      "name": "What does total college cost in today’s money mean?",
+      "name": "What does total college cost in today's money mean?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "It is the value today of all the future bills, discounted by your after-tax investment return. It is the amount that, if saved now and invested, would grow to pay for college."
@@ -58,7 +58,7 @@
       "name": "How is the monthly saving calculated?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is the level monthly amount, from now until the last year begins, that together with its after-tax growth reaches the target in today’s money. A balance you already have is taken off the target first."
+        "text": "It is the level monthly amount, from now until the last year of college, that together with its after-tax growth reaches the target in today's money. A balance you already have is taken off the target first."
       }
     },
     {
@@ -74,7 +74,15 @@
       "name": "Why does it say my balance is enough already?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The savings you already have, valued today, are at least as large as the target in today’s money. With that balance invested at your return rate, it should cover the goal without further saving."
+        "text": "The savings you already have, valued today, are at least as large as the target in today's money. With that balance invested at your return rate, it should cover the goal without further saving."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do the average costs come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The presets are yearly budgets of the kind published in the College Board's Trends in College Pricing report. Check the latest report and each college's net price calculator for your own numbers."
       }
     }
   ]
@@ -176,34 +184,50 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How the cost is projected</h2>
-      <p>College prices tend to rise faster than most things, so the calculator grows today’s yearly cost by the rate you enter. If college starts in three years, the first year costs today’s figure grown for three years, the next year grows once more, and so on for each year of study. Adding those years gives the total cost you would pay at the time.</p>
-
-      <h2>Today’s money and monthly saving</h2>
-      <p>A dollar saved today can earn a return before it is spent. The calculator takes your return rate, removes the tax rate, and uses what is left to bring each year’s cost back to its value today, assuming each year’s bill is paid at the start of that year. The monthly saving is the amount you would put away each month, from now until the last year of college is paid, so that the savings plus their growth cover the target. Any savings you already have reduce the amount still to save.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> College prices rise each year, so the bill depends on when your student starts. At $30,990 a year today, 5% yearly increases and a start in 3 years, four years cost $154,625 in total, or about $1,773 a month to save for it in full.</div>
+      <h2>How the cost is projected</h2>
+      <p>College prices tend to rise faster than most things, so the calculator grows today&rsquo;s yearly cost by the rate you enter. If college starts in three years, the first year costs today&rsquo;s figure grown for three years, the next year grows once more, and so on for each year of study. Adding those years gives the total you would pay at the time.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>Today&rsquo;s annual cost is $30,990, the average of a four-year in-state public college. It rises 5% a year, college lasts 4 years and starts in 3 years. The first year costs <strong>$35,875</strong>, then $37,669, $39,552 and $41,530, for a <strong>total of $154,625</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Projected cost of each year of college (default: starts in 3 years, 5% a year)</title><desc id="cf1-d">Today&#x27;s $30,990 becomes $35,875 in the first year and $41,530 in the fourth, a total of $154,625.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Projected cost of each year of college (default: starts in 3 years, 5% a year)</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">Year 1</text><rect class="bar" x="70" y="44" width="309.3" height="22" rx="4" fill="#2563eb"/><text x="387.3" y="60" font-size="13" font-weight="700" fill="#111827">$35,875</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">Year 2</text><rect class="bar" x="70" y="78" width="324.7" height="22" rx="4" fill="#2563eb"/><text x="402.7" y="94" font-size="13" font-weight="700" fill="#111827">$37,669</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">Year 3</text><rect class="bar" x="70" y="112" width="341.0" height="22" rx="4" fill="#2563eb"/><text x="419.0" y="128" font-size="13" font-weight="700" fill="#111827">$39,552</text><text x="62" y="162" text-anchor="end" font-size="13" fill="#6b7280">Year 4</text><rect class="bar" x="70" y="146" width="358.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">$41,530</text></svg><figcaption>Each year of college costs more than the one before.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">Where the $154,625 total cost comes from (default, each year grown at 5%)</title><desc id="cf4-d">Rising prices add $30,665 on top of four years at today&#x27;s cost.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the $154,625 total cost comes from (default, each year grown at 5%)</text><rect class="bar" x="14.0" y="42" width="394.4" height="30" fill="#2563eb"/><text x="211.2" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">80%</text><rect class="bar" x="408.4" y="42" width="97.6" height="30" fill="#f59e0b"/><text x="457.2" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">20%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Today&#x27;s cost for 4 years: <tspan font-weight="700">$123,960</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#f59e0b"/><text x="282" y="98" font-size="12.5" fill="#374151">Growth from rising prices: <tspan font-weight="700">$30,665</tspan></text></svg><figcaption>Cost growth adds a substantial extra on top of today's price.</figcaption></figure>
+      <h2>Today&rsquo;s money and the monthly saving</h2>
+      <p>A dollar saved today can earn a return before it is spent. The calculator takes your return rate, removes the tax rate, and uses what is left (5% less 25% tax is a 3.75% after-tax return) to bring each year&rsquo;s cost back to today&rsquo;s value, assuming each bill is paid at the start of its year. For the full cost, that is <strong>$130,836 in today&rsquo;s money</strong>. The monthly saving is the level amount you would put away each month, from now until the last year of college is paid (84 months), so that your savings plus their growth cover the target: <strong>$1,773 a month</strong> for the full cost.</p>
       <h2>Paying for part of it</h2>
-      <p>Many families expect grants, scholarships, student loans or other aid to cover part of the bill. Enter the share you plan to pay from savings and the calculator works out the target for that share as well as the monthly amount. Use a tax rate of 0% if the money is in a 529 plan, where growth is tax-free when spent on qualified education costs.</p>
-      <div class="callout">This is a planning estimate with a steady rate of return and a steady rate of cost increase. Real returns vary, and each college has its own costs and aid, so use its net price calculator for specific schools.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: interpreting the calculation</h2><p>If annual college costs are $20,000 today and rise 3% for one year, the projected cost next year is $20,600. Several years of cost growth compound.</p><h2>Related financial calculators</h2><p>To project regular deposits, use the <a href="savings-calculator.html">Savings Calculator</a>. For changing purchasing power, see the <a href="inflation-calculator.html">Inflation Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="percentage-calculator.html">Percentage Calculator</a>, <a href="gpa-calculator.html">GPA Calculator</a>, <a href="grade-calculator.html">Grade Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p>Many families expect grants, scholarships, student loans or other aid to cover part of the bill. Enter the share you plan to pay from savings. With the default 35%, you will need to save <strong>$54,119</strong> in total, a target of $45,792 in today&rsquo;s money, or <strong>$621 a month</strong>. The freshman-year amount from savings is $12,556. Any balance you already have, valued today, comes off the target first; if it is large enough the calculator says your savings already cover it.</p>
+      <h2>Typical costs to start from</h2>
+      <p>The preset averages of a yearly budget (tuition, housing, food, books and other costs) are shown below with what each would cost in total and how much you would save each month to pay it in full under the default assumptions:</p>
+      <div class="calc-table"><table><thead><tr><th>Type of college</th><th>Yearly cost today</th><th>Projected total</th><th>Monthly saving (full cost)</th></tr></thead><tbody><tr><td>2-year public</td><td>$21,320</td><td>$106,376</td><td>$1,220</td></tr><tr><td>4-year in-state public</td><td>$30,990</td><td>$154,625</td><td>$1,773</td></tr><tr><td>4-year out-of-state public</td><td>$50,920</td><td>$254,066</td><td>$2,914</td></tr><tr><td>4-year private</td><td>$65,470</td><td>$326,663</td><td>$3,746</td></tr></tbody></table></div>
+      <p>These figures are averages and vary widely. Use a college&rsquo;s own net price calculator for a specific school, because aid changes what you actually pay.</p>
+      <h2>The effect of starting early</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Monthly saving to fund the full cost, by years until college starts</title><desc id="cf3-d">Starting 18 years before college needs $872 a month; starting 3 years before needs $1,773.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Monthly saving to fund the full cost, by years until college starts</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">Starting now</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$2,836</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">3 years away</text><rect class="bar" x="110" y="78" width="198.9" height="22" rx="4" fill="#2563eb"/><text x="316.9" y="94" font-size="13" font-weight="700" fill="#111827">$1,773</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">8 years away</text><rect class="bar" x="110" y="112" width="134.5" height="22" rx="4" fill="#9ca3af"/><text x="252.5" y="128" font-size="13" font-weight="700" fill="#111827">$1,199</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">13 years away</text><rect class="bar" x="110" y="146" width="109.8" height="22" rx="4" fill="#9ca3af"/><text x="227.8" y="162" font-size="13" font-weight="700" fill="#111827">$979</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">18 years away</text><rect class="bar" x="110" y="180" width="97.8" height="22" rx="4" fill="#9ca3af"/><text x="215.8" y="196" font-size="13" font-weight="700" fill="#111827">$872</text></svg><figcaption>Time lets your savings do part of the work, so the monthly amount falls.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Years until college</th><th>Projected total cost</th><th>Monthly saving (full cost)</th></tr></thead><tbody><tr><td>0</td><td>$133,571</td><td>$2,836</td></tr><tr><td>3</td><td>$154,625</td><td>$1,773</td></tr><tr><td>8</td><td>$197,345</td><td>$1,199</td></tr><tr><td>13</td><td>$251,868</td><td>$979</td></tr><tr><td>18</td><td>$321,454</td><td>$872</td></tr></tbody></table></div>
+      <h2>Cost growth and tax</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Total four-year cost by yearly cost increase</title><desc id="cf2-d">Between 0% and 7% a year the total ranges from $123,960 to $168,558, so the growth assumption matters a lot.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Total four-year cost by yearly cost increase</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">0% a year</text><rect class="bar" x="90" y="44" width="248.6" height="22" rx="4" fill="#9ca3af"/><text x="346.6" y="60" font-size="13" font-weight="700" fill="#111827">$123,960</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">3% a year</text><rect class="bar" x="90" y="78" width="284.1" height="22" rx="4" fill="#9ca3af"/><text x="382.1" y="94" font-size="13" font-weight="700" fill="#111827">$141,673</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">5% a year</text><rect class="bar" x="90" y="112" width="310.1" height="22" rx="4" fill="#2563eb"/><text x="408.1" y="128" font-size="13" font-weight="700" fill="#111827">$154,625</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">7% a year</text><rect class="bar" x="90" y="146" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">$168,558</text></svg><figcaption>A higher growth rate raises the target and the monthly amount.</figcaption></figure>
+      <p>Use a tax rate of 0% if the money is in a 529 plan, where growth is tax-free when spent on qualified education costs. The default tax of 25% requires $1,773 a month; with 0% tax it needs $1,752.</p>
+      <h2>What the calculator assumes</h2>
+      <ul><li>A steady return and a steady cost increase every year.</li><li>Each year's bill is paid at the start of the year.</li><li>Savings are made monthly through the end of college.</li><li>It does not include aid you may receive or loan interest on any share you borrow.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using today's price for a student who starts in many years.</li><li>Assuming a high return will always be earned.</li><li>Forgetting that tax on returns reduces growth in taxable accounts.</li><li>Ignoring the other costs of college besides tuition: housing, food, books and travel.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The first block is the cost if you pay in full, with the total cost, the cost in today&rsquo;s money and the monthly saving. The second block shows the same figures for the share you chose. Try a different start date or a different return to see which makes the largest difference to the monthly amount.</p>
+      <div class="callout">This is a planning estimate. Real returns, costs and aid vary. It is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="student-loan-calculator.html">Student Loan Calculator</a> &ndash; repayment and balance after school</li><li><a href="savings-calculator.html">Savings Calculator</a> &ndash; savings with yearly increases</li><li><a href="investment-calculator.html">Investment Calculator</a> &ndash; goals and growth over time</li><li><a href="inflation-calculator.html">Inflation Calculator</a> &ndash; prices over time</li><li><a href="budget-calculator.html">Budget Calculator</a> &ndash; find money to save</li><li><a href="percentage-calculator.html">Percentage Calculator</a> &ndash; percent change</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do I estimate college costs for the future?</h3>
-        <p>Take today’s yearly cost, grow it by the expected yearly increase for each year until the student starts, and then keep growing it for each year of study. The calculator does this and adds up all the years.</p>
+        <p>Take today's yearly cost, grow it by the expected yearly increase for each year until the student starts, and then keep growing it for each year of study. The calculator does this and adds up all the years.</p>
       </div>
       <div class="faq-item">
-        <h3>What does total college cost in today’s money mean?</h3>
+        <h3>What does total college cost in today's money mean?</h3>
         <p>It is the value today of all the future bills, discounted by your after-tax investment return. It is the amount that, if saved now and invested, would grow to pay for college.</p>
       </div>
       <div class="faq-item">
         <h3>How is the monthly saving calculated?</h3>
-        <p>It is the level monthly amount, from now until the last year begins, that together with its after-tax growth reaches the target in today’s money. A balance you already have is taken off the target first.</p>
+        <p>It is the level monthly amount, from now until the last year of college, that together with its after-tax growth reaches the target in today's money. A balance you already have is taken off the target first.</p>
       </div>
       <div class="faq-item">
         <h3>What tax rate should I use?</h3>
@@ -211,8 +235,13 @@
       </div>
       <div class="faq-item">
         <h3>Why does it say my balance is enough already?</h3>
-        <p>The savings you already have, valued today, are at least as large as the target in today’s money. With that balance invested at your return rate, it should cover the goal without further saving.</p>
+        <p>The savings you already have, valued today, are at least as large as the target in today's money. With that balance invested at your return rate, it should cover the goal without further saving.</p>
       </div>
+      <div class="faq-item">
+        <h3>Where do the average costs come from?</h3>
+        <p>The presets are yearly budgets of the kind published in the College Board's Trends in College Pricing report. Check the latest report and each college's net price calculator for your own numbers.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://research.collegeboard.org/trends/college-pricing/highlights" rel="noopener" target="_blank">College Board: Trends in College Pricing highlights</a>; <a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/529-plans" rel="noopener" target="_blank">Investor.gov: 529 plans</a></p>
     </div>
 
   </div>
