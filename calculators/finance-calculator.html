@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Finance Calculator: PV, FV, Interest Rate & Payment | CalcBundle</title>
-<meta name="description" content="Solve time value of money problems for present value, future value, interest rate, periods or regular payments.">
+<title>Finance Calculator: PV, FV, Rate, Term &amp; Payment</title>
+<meta name="description" content="Solve any one of present value, future value, interest rate, number of periods or payment from the other four, using the standard five-key method.">
 <link rel="canonical" href="https://calcbundle.net/calculators/finance-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Finance Calculator: PV, FV, Interest Rate & Payment | CalcBundle">
-<meta property="og:description" content="Solve time value of money problems for present value, future value, interest rate, periods or regular payments.">
+<meta property="og:title" content="Finance Calculator: PV, FV, Rate, Term &amp; Payment">
+<meta property="og:description" content="Solve any one of present value, future value, interest rate, number of periods or payment from the other four, using the standard five-key method.">
 <meta property="og:url" content="https://calcbundle.net/calculators/finance-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Finance Calculator: PV, FV, Interest Rate & Payment | CalcBundle">
-<meta name="twitter:description" content="Solve time value of money problems for present value, future value, interest rate, periods or regular payments.">
+<meta name="twitter:title" content="Finance Calculator: PV, FV, Rate, Term &amp; Payment">
+<meta name="twitter:description" content="Solve any one of present value, future value, interest rate, number of periods or payment from the other four, using the standard five-key method.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,15 +42,15 @@
       "name": "Why is my answer negative?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "That's the sign convention at work, not an error — a negative result usually just means that value flows in the opposite direction from the ones you entered as positive."
+        "text": "That is the sign convention at work, not an error. A negative result means that value flows in the opposite direction from the ones you entered as positive. A negative future value on a loan, for example, is the balance you still owe."
       }
     },
     {
       "@type": "Question",
-      "name": "What's the difference between \"beginning\" and \"end\" of period payments?",
+      "name": "What's the difference between beginning and end of period payments?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It changes how many periods each payment has to earn interest. A payment made at the start of a period earns interest for that whole period; one made at the end doesn't start earning until the next period begins — which is why annuities-due (beginning-of-period) always produce a slightly larger future value than ordinary annuities (end-of-period), all else equal."
+        "text": "It changes how many periods each payment has to earn interest. A payment at the start of a period earns interest for that whole period, so annuities due always produce a slightly larger future value than ordinary annuities, all else equal."
       }
     },
     {
@@ -58,7 +58,31 @@
       "name": "Why would I ever need to solve for N or I/Y?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Solving for N answers \"how long until I reach my goal?\" Solving for I/Y answers \"what rate of return am I actually getting?\" — both common questions once you already know your starting amount, contributions, and target."
+        "text": "Solving for N answers how long it will take to reach a goal. Solving for I/Y answers what rate of return you are actually getting. Both are common questions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do P/Y and C/Y mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "P/Y is the number of payments per year and C/Y is the number of compounding periods per year. Leave them the same unless the rate compounds on a different schedule from the payments."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use it to work out a loan payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choose PMT, enter the loan amount as PV, set FV to 0, and enter the term as N and the rate as I/Y. For $20,000 at 6% over 10 years, the annual payment is $2,717.36."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I see that there is no solution?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some combinations of signs and amounts cannot be solved, such as a positive PV and a positive FV with no payments. Check that money paid out is negative and money received is positive."
       }
     }
   ]
@@ -177,32 +201,68 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Five numbers, one equation</h2>
-      <p>Every compound-interest situation — a loan, a savings account, a bond, a retirement account — is really the same equation wearing a different outfit. It relates five quantities: how much you start with (PV), what you add or withdraw each period (PMT), how many periods pass (N), the interest rate (I/Y), and what you end up with (FV). Know any four, and the fifth is fully determined — that's the whole idea behind this calculator's five tabs.</p>
-
-      <h2>Why the sign convention matters</h2>
-      <p>Cash flowing toward you is positive; cash flowing away from you is negative. A savings deposit is a positive PV (money you have) with negative PMTs (money you keep adding) building toward a positive FV (money you'll have later). A loan flips this: positive PV (money the bank gives you) with positive PMTs you pay back, heading toward zero. Getting the signs right is the difference between a sensible answer and a confusing one.</p>
-      <div class="callout">P/Y and C/Y only need to differ when a rate compounds on a different schedule than payments are made — for example, a rate that compounds daily but is paid off monthly. When both happen on the same schedule (the overwhelming majority of real cases), leave both at the same value.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: interpreting the calculation</h2><p>At 0% interest, five end-of-year deposits of $1,000 accumulate to $5,000. Positive interest can increase future value, and timing changes results.</p><h2>Related financial calculators</h2><p>Compare one-time cash flow timing with the <a href="present-value-calculator.html">Present Value Calculator</a> and <a href="future-value-calculator.html">Future Value Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="loan-calculator.html">Loan Calculator</a>, <a href="auto-loan-calculator.html">Auto Loan Calculator</a>, <a href="lease-calculator.html">Lease Calculator</a>, <a href="personal-loan-calculator.html">Personal Loan Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Any four of PV, PMT, N, I/Y and FV fix the fifth. $20,000 at 6% with $2,000 paid a year leaves a balance of $9,455.36 after 10 years. Doubling money at 6% takes 11.90 years, and doubling in 10 years needs 7.18%.</div>
+      <h2>Five numbers, one equation</h2>
+      <p>Every compound-interest situation, whether a loan, a savings plan or a bond, relates five quantities: the <strong>present value</strong> (PV), the regular <strong>payment</strong> (PMT), the <strong>number of periods</strong> (N), the <strong>interest rate</strong> per year (I/Y) and the <strong>future value</strong> (FV). Know any four and the fifth is fixed. The calculator has five tabs, one for each unknown, and works like the time-value-of-money keys on a financial calculator such as the BA II Plus or HP 12C.</p>
+      <h2>The sign convention</h2>
+      <p>Money you receive is <strong>positive</strong> and money you pay out is <strong>negative</strong>. A loan is positive PV (the bank gives you money) with negative payments (you pay it back). Savings is the opposite: a negative payment into the account and a positive FV later. Getting the signs right is the difference between a sensible answer and a confusing one. A negative result just means that cash flows the opposite way to the numbers you entered as positive.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on the <strong>FV</strong> tab with N = 10, I/Y = 6%, PV = $20,000, PMT = &minus;$2,000, and payments at the end of each year. Read it as a $20,000 loan at 6% on which you pay $2,000 a year. The future value is PV &times; 1.06<sup>10</sup> + PMT &times; (1.06<sup>10</sup> &minus; 1) &divide; 0.06 = 35,816.95 &minus; 26,361.59, which gives <strong>-$9,455.36</strong>. The minus sign means you still owe $9,455.36 after ten payments. You paid $20,000 in all, so the total interest is <strong>$9,455.36</strong>.</p>
+      <div class="calc-table"><table><thead><tr><th>Year</th><th>Balance at start (PV)</th><th>Payment</th><th>Interest</th><th>Balance at end (FV)</th></tr></thead><tbody><tr><td>1</td><td>$20,000.00</td><td>-$2,000.00</td><td>$1,200.00</td><td>-$19,200.00</td></tr><tr><td>2</td><td>$19,200.00</td><td>-$2,000.00</td><td>$1,152.00</td><td>-$18,352.00</td></tr><tr><td>3</td><td>$18,352.00</td><td>-$2,000.00</td><td>$1,101.12</td><td>-$17,453.12</td></tr><tr><td>4</td><td>$17,453.12</td><td>-$2,000.00</td><td>$1,047.19</td><td>-$16,500.31</td></tr><tr><td>5</td><td>$16,500.31</td><td>-$2,000.00</td><td>$990.02</td><td>-$15,490.33</td></tr><tr><td>6</td><td>$15,490.33</td><td>-$2,000.00</td><td>$929.42</td><td>-$14,419.75</td></tr><tr><td>7</td><td>$14,419.75</td><td>-$2,000.00</td><td>$865.18</td><td>-$13,284.93</td></tr><tr><td>8</td><td>$13,284.93</td><td>-$2,000.00</td><td>$797.10</td><td>-$12,082.03</td></tr><tr><td>9</td><td>$12,082.03</td><td>-$2,000.00</td><td>$724.92</td><td>-$10,806.95</td></tr><tr><td>10</td><td>$10,806.95</td><td>-$2,000.00</td><td>$648.42</td><td>-$9,455.36</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Balance still owed on the $20,000 loan at 6%, by year (ten $2,000 payments)</title><desc id="cf1-d">The balance falls from $20,000 to $9,455.36 after ten $2,000 payments, because interest of $1,200 in year 1 eats more than half of the first payment.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Balance still owed on the $20,000 loan at 6%, by year (ten $2,000 payments)</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0k</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$5k</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$11k</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$16k</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$22k</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="147.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">2</text><text x="237.2" y="194" text-anchor="middle" font-size="11" fill="#6b7280">4</text><text x="326.8" y="194" text-anchor="middle" font-size="11" fill="#6b7280">6</text><text x="416.4" y="194" text-anchor="middle" font-size="11" fill="#6b7280">8</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">10</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Year</text><polyline class="draw" style="--len:454" points="58.0,59.3 102.8,64.0 147.6,68.9 192.4,74.2 237.2,79.7 282.0,85.6 326.8,91.9 371.6,98.5 416.4,105.5 461.2,113.0 506.0,120.8" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Balance owed</text></svg><figcaption>A level payment barely dents the balance in the early years.</figcaption></figure>
+      <h2>Solving for each variable</h2>
+      <h2>Payment (PMT)</h2>
+      <p>To repay $20,000 in 10 years at 6%, set FV to 0 and solve for PMT: <strong>-$2,717.36</strong> a year. That is the loan payment the 5-key method gives, and it is more than the $2,000 of the example above because that payment left $9,455 unpaid.</p>
+      <div class="calc-table"><table><thead><tr><th>Rate</th><th>Annual payment to repay $20,000 in 10 years</th></tr></thead><tbody><tr><td>0%</td><td>$2,000.00</td></tr><tr><td>3%</td><td>$2,344.61</td></tr><tr><td>6%</td><td>$2,717.36</td></tr><tr><td>9%</td><td>$3,116.40</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Payment needed to repay $20,000 in 10 years at different rates (per year)</title><desc id="cf2-d">At 0% the payment is just $20,000 &amp;divide; 10 = $2,000. At 6% it rises to $2,717.36, and at 9% to $3,116.40.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Payment needed to repay $20,000 in 10 years at different rates (per year)</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">0% a year</text><rect class="bar" x="100" y="44" width="210.5" height="22" rx="4" fill="#9ca3af"/><text x="318.5" y="60" font-size="13" font-weight="700" fill="#111827">$2,000.00</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">3% a year</text><rect class="bar" x="100" y="78" width="246.8" height="22" rx="4" fill="#9ca3af"/><text x="354.8" y="94" font-size="13" font-weight="700" fill="#111827">$2,344.61</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">6% a year</text><rect class="bar" x="100" y="112" width="286.0" height="22" rx="4" fill="#2563eb"/><text x="394.0" y="128" font-size="13" font-weight="700" fill="#111827">$2,717.36</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">9% a year</text><rect class="bar" x="100" y="146" width="328.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">$3,116.40</text></svg><figcaption>A higher rate raises the payment.</figcaption></figure>
+      <h2>Interest rate (I/Y)</h2>
+      <p>To find the rate you are earning, enter a negative PV (the money you put in), PMT = 0 and a positive FV. Turning $10,000 into $20,000 in 10 years needs an I/Y of <strong>7.1773%</strong>. The same method finds the APR on a loan: $20,000 repaid with 60 monthly payments of $400 (P/Y = 12, C/Y = 12) works out to <strong>7.4201%</strong>.</p>
+      <h2>Number of periods (N)</h2>
+      <p>To find how long a goal takes, solve for N. Doubling $10,000 at 6% takes <strong>11.8957 years</strong>. With regular saving, set PV to 0, PMT to &minus;$500, P/Y and C/Y to 12, I/Y to 6% and FV to $100,000: end-of-month payments take <strong>138.9757</strong> months (about 11.6 years), and payments at the start of each month take <strong>138.4763</strong> months. The tool uses the beginning or end setting when it solves for N.</p>
+      <h2>Present value (PV)</h2>
+      <p>To find what a future sum is worth today, enter FV and solve for PV. To have $50,000 in 10 years at 6%, you need to put in <strong>-$27,919.74</strong>. The minus sign shows it is money you pay out now.</p>
+      <h2>Payments at the beginning or end of the period</h2>
+      <p>The last box sets when each payment is made. A payment at the start of a period earns interest for that whole period, so the future value is higher. Saving $2,000 a year for 10 years at 6% gives <strong>$26,361.59</strong> with payments at the end of each year and <strong>$27,943.29</strong> with payments at the start.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Value after 10 years of saving $2,000 a year at 6%</title><desc id="cf3-d">Paying at the start earns one extra year of interest on every payment, which adds $1,581.70, exactly 6% more.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Value after 10 years of saving $2,000 a year at 6%</text><text x="222" y="60" text-anchor="end" font-size="13" fill="#6b7280">Payments at the end of each year</text><rect class="bar" x="230" y="44" width="186.8" height="22" rx="4" fill="#2563eb"/><text x="424.8" y="60" font-size="13" font-weight="700" fill="#111827">$26,361.59</text><text x="222" y="94" text-anchor="end" font-size="13" fill="#6b7280">Payments at the start of each year</text><rect class="bar" x="230" y="78" width="198.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">$27,943.29</text></svg><figcaption>Timing is worth one extra period of interest on every payment.</figcaption></figure>
+      <h2>P/Y and C/Y</h2>
+      <p><strong>P/Y</strong> is the number of payments a year and <strong>C/Y</strong> is the number of times the rate compounds a year. Leave them equal in nearly every case. They differ when the compounding and payment schedules differ. A 6% rate compounding daily (C/Y = 365) with $500 monthly payments (P/Y = 12) gives a periodic rate of 0.5012% instead of 0.5000%, so ten years of payments grow to $82,004.32 instead of $81,939.67.</p>
+      <h2>When there is no answer</h2>
+      <p>Some combinations have no solution. For example, a positive PV and a positive FV with no payments cannot grow into each other, since you cannot gain money without paying anything in or out. The calculator now says there is no solution and asks you to check the signs, instead of showing a meaningless figure.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Entering all payments and values as positive, which gives results with the wrong sign.</li><li>Mixing monthly payments with a yearly N. N counts periods, so ten years of monthly payments is 120.</li><li>Setting P/Y and C/Y to different numbers by accident.</li><li>Forgetting that the beginning-of-period setting raises the future value.</li><li>Treating the total interest line as the interest on the original amount only. It covers all payments.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the variable you solved for, in dollars, years or percent. Below it are the sum of all periodic payments and the total interest. The chart and the period table show the balance and the interest period by period, using the same signs you entered.</p>
+      <div class="callout">This is a standard time-value-of-money calculation. Real loans and accounts may add fees, rounding rules and other terms that change the exact figures.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="mortgage-calculator.html">Mortgage Calculator</a> &ndash; a monthly mortgage payment</li><li><a href="amortization-calculator.html">Amortization Calculator</a> &ndash; a loan repayment schedule</li><li><a href="interest-calculator.html">Interest Calculator</a> &ndash; simple and compound interest</li><li><a href="investment-calculator.html">Investment Calculator</a> &ndash; investment growth</li><li><a href="present-value-calculator.html">Present Value Calculator</a> &ndash; what a future sum is worth today</li><li><a href="future-value-calculator.html">Future Value Calculator</a> &ndash; what a sum grows to</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Why is my answer negative?</h3>
-        <p>That's the sign convention at work, not an error — a negative result usually just means that value flows in the opposite direction from the ones you entered as positive.</p>
+        <p>That is the sign convention at work, not an error. A negative result means that value flows in the opposite direction from the ones you entered as positive. A negative future value on a loan, for example, is the balance you still owe.</p>
       </div>
       <div class="faq-item">
-        <h3>What's the difference between "beginning" and "end" of period payments?</h3>
-        <p>It changes how many periods each payment has to earn interest. A payment made at the start of a period earns interest for that whole period; one made at the end doesn't start earning until the next period begins — which is why annuities-due (beginning-of-period) always produce a slightly larger future value than ordinary annuities (end-of-period), all else equal.</p>
+        <h3>What's the difference between beginning and end of period payments?</h3>
+        <p>It changes how many periods each payment has to earn interest. A payment at the start of a period earns interest for that whole period, so annuities due always produce a slightly larger future value than ordinary annuities, all else equal.</p>
       </div>
       <div class="faq-item">
         <h3>Why would I ever need to solve for N or I/Y?</h3>
-        <p>Solving for N answers "how long until I reach my goal?" Solving for I/Y answers "what rate of return am I actually getting?" — both common questions once you already know your starting amount, contributions, and target.</p>
+        <p>Solving for N answers how long it will take to reach a goal. Solving for I/Y answers what rate of return you are actually getting. Both are common questions.</p>
       </div>
+      <div class="faq-item">
+        <h3>What do P/Y and C/Y mean?</h3>
+        <p>P/Y is the number of payments per year and C/Y is the number of compounding periods per year. Leave them the same unless the rate compounds on a different schedule from the payments.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I use it to work out a loan payment?</h3>
+        <p>Choose PMT, enter the loan amount as PV, set FV to 0, and enter the term as N and the rate as I/Y. For $20,000 at 6% over 10 years, the annual payment is $2,717.36.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do I see that there is no solution?</h3>
+        <p>Some combinations of signs and amounts cannot be solved, such as a positive PV and a positive FV with no payments. Check that money paid out is negative and money received is positive.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/compound-interest" rel="noopener" target="_blank">Investor.gov: Compound interest</a>; <a href="https://en.wikipedia.org/wiki/Time_value_of_money" rel="noopener" target="_blank">Wikipedia: Time value of money</a>; <a href="https://en.wikipedia.org/wiki/Annuity" rel="noopener" target="_blank">Wikipedia: Annuity</a></p>
     </div>
 
   </div>

@@ -28,12 +28,13 @@ const TVM = {
     const af = this.annuityFactor(i, n, due);
     return -(fv + pv * Math.pow(1 + i, n)) / af;
   },
-  solveN(i, pv, pmt, fv) {
+  solveN(i, pv, pmt, fv, due) {
     if (i === 0) return -(fv + pv) / pmt;
     if (pmt === 0) return Math.log(-fv / pv) / Math.log(1 + i);
     // Iterative fallback for PMT != 0 with N unknown (bisection on N).
-    const f = (n) => this.solveFV(n, i, pv, pmt, false) - fv;
+    const f = (n) => this.solveFV(n, i, pv, pmt, due) - fv;
     let lo = 0.0001, hi = 1000;
+    if ((f(lo) > 0) === (f(hi) > 0)) return NaN; // no solution for these signs and amounts
     for (let k = 0; k < 200; k++) {
       const mid = (lo + hi) / 2;
       if (f(mid) > 0 === f(lo) > 0) lo = mid; else hi = mid;
@@ -46,6 +47,7 @@ const TVM = {
     }
     let lo = -0.99, hi = 10;
     const target = fv;
+    if ((fvAtPeriodic(lo) > target) === (fvAtPeriodic(hi) > target)) return NaN; // no rate solves these values
     for (let k = 0; k < 200; k++) {
       const mid = (lo + hi) / 2;
       const val = fvAtPeriodic(mid);
@@ -82,7 +84,7 @@ const TVM = {
   const form = el('fin-form');
   if (!form) return;
 
-  const currency = (v) => '$' + v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const currency = (v) => (v < -0.005 ? '-$' : '$') + Math.abs(v).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   function num(id, fallback = 0) {
     const field = el(id);
@@ -143,7 +145,7 @@ const TVM = {
       const iSolved = TVM.periodicRate(result, cy, py);
       rows = TVM.schedule(n, iSolved, pv, pmt, due);
     } else if (solveFor === 'N') {
-      result = TVM.solveN(i, pv, pmt, fvInput);
+      result = TVM.solveN(i, pv, pmt, fvInput, due);
       label = 'N';
       rows = TVM.schedule(result, i, pv, pmt, due);
     } else {
@@ -152,6 +154,11 @@ const TVM = {
       rows = TVM.schedule(n, i, result, pmt, due);
     }
 
+    if (!Number.isFinite(result)) {
+      el('fin-result').innerHTML = '<p class="tool-result is-error">There is no solution for these values. Check the signs: money you pay out is negative and money you receive is positive.</p>';
+      el('fin-results-section').hidden = true;
+      return;
+    }
     const sumPmt = pmt * (solveFor === 'N' ? result : n);
     const fvForInterest = solveFor === 'FV' ? result : fvInput;
     const pvForInterest = solveFor === 'PV' ? result : pv;
