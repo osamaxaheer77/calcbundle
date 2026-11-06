@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Annuity Growth Calculator With Regular Contributions | CalcBundle</title>
-<meta name="description" content="Calculate projected annuity accumulation from a starting principal, annual or monthly additions, timing and a chosen growth rate.">
+<title>Annuity Growth Calculator With Regular Additions</title>
+<meta name="description" content="Project an annuity&#x27;s accumulation from a starting principal, annual or monthly additions, timing and growth rate, with year-by-year balances and totals.">
 <link rel="canonical" href="https://calcbundle.net/calculators/annuity-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Annuity Growth Calculator With Regular Contributions | CalcBundle">
-<meta property="og:description" content="Calculate projected annuity accumulation from a starting principal, annual or monthly additions, timing and a chosen growth rate.">
+<meta property="og:title" content="Annuity Growth Calculator With Regular Additions">
+<meta property="og:description" content="Project an annuity&#x27;s accumulation from a starting principal, annual or monthly additions, timing and growth rate, with year-by-year balances and totals.">
 <meta property="og:url" content="https://calcbundle.net/calculators/annuity-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Annuity Growth Calculator With Regular Contributions | CalcBundle">
-<meta name="twitter:description" content="Calculate projected annuity accumulation from a starting principal, annual or monthly additions, timing and a chosen growth rate.">
+<meta name="twitter:title" content="Annuity Growth Calculator With Regular Additions">
+<meta name="twitter:description" content="Project an annuity&#x27;s accumulation from a starting principal, annual or monthly additions, timing and growth rate, with year-by-year balances and totals.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,7 +42,7 @@
       "name": "What is the accumulation phase of an annuity?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The accumulation phase is the period when you pay money into an annuity and it grows, before any income is paid out. This calculator covers that phase. The income phase, when the annuity starts paying you, is a separate calculation."
+        "text": "The accumulation phase is the period when you pay money into an annuity and it grows, before any income is paid out. This calculator covers that phase. The income phase is a separate calculation."
       }
     },
     {
@@ -50,7 +50,7 @@
       "name": "What is the difference between an annuity due and an ordinary annuity?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "An annuity due takes each addition at the beginning of its period, so it earns interest for the whole period. An ordinary annuity takes it at the end of the period, so it earns nothing until the next one. Adding at the beginning always gives a slightly larger balance."
+        "text": "An annuity due takes each addition at the beginning of its period, so it earns interest for the whole period. An ordinary annuity takes it at the end, so it earns nothing until the next one. Adding at the beginning always gives a slightly larger balance."
       }
     },
     {
@@ -58,15 +58,31 @@
       "name": "How is the growth rate applied?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The annual growth rate is converted to an equivalent monthly rate, so a 6% rate grows a balance by exactly 6% over twelve months. The calculator then adds interest to the balance every month, which also lets monthly additions earn their fair share of growth."
+        "text": "The annual growth rate is converted to an equivalent monthly rate, so a 6% rate grows a balance by exactly 6% over twelve months. Interest is added to the balance every month."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I use it for a fixed, variable or indexed annuity?",
+      "name": "Can I use it for a fixed or variable annuity?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, as an estimate. Enter the rate your contract credits, or the return you expect for a variable annuity. Remember that real annuities can charge fees, surrender charges and caps that this calculator does not include, and a variable annuity's actual return will vary."
+        "text": "Yes, as a projection. Enter the rate you expect, using a lower one for a fixed annuity and a cautious one for a variable annuity, which can lose value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it include fees and surrender charges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Real annuities often have fees, surrender charges and caps that lower the result, so subtract them from your growth rate to see their effect."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are annuity withdrawals taxed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Growth is generally tax-deferred, but withdrawals can be taxed. The calculator does not include tax. Ask a tax professional."
       }
     }
   ]
@@ -175,43 +191,63 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What this calculator shows</h2>
-      <p>An annuity is a contract, usually with an insurance company, that turns money you pay in into income later. It has two stages. During the accumulation phase you pay in and the balance grows. During the payout phase the contract pays you back. This calculator covers the first stage: how large the balance becomes after a number of years, given a starting principal, regular additions and a growth rate.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> An annuity's accumulation grows from your principal, additions and growth. With $20,000 to start, $10,000 added at the start of each year and 6% growth, the balance after 10 years is $175,533, of which $55,533 is growth.</div>
+      <h2>What this calculator shows</h2>
+      <p>An annuity is a contract, usually with an insurance company, that turns money you pay in into income later. It has two stages. During the <strong>accumulation phase</strong> you pay in and the balance grows. During the <strong>payout phase</strong> the contract pays you back. This calculator covers the first stage: how large the balance becomes after a number of years, given a starting principal, regular additions and a growth rate. For the income stage, use the Annuity Payout Calculator.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>A $20,000 starting principal, $10,000 added each year at the beginning of the year, and 6% growth for 10 years. The growth rate is turned into an equivalent monthly rate, so 6% a year grows the balance by exactly 6% over twelve months. The end balance is <strong>$175,533.38</strong>. You put in $100,000 of additions on top of the $20,000 principal, so <strong>$55,533.38</strong> is growth. As a simple check, with 0% growth the balance is just what you put in: $120,000.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where the $175,533 end balance comes from (default annuity, 10 years at 6%)</title><desc id="cf1-d">You put in $120,000 in total, and $55,533, 32% of the final balance, is growth.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the $175,533 end balance comes from (default annuity, 10 years at 6%)</text><rect class="bar" x="14.0" y="42" width="56.1" height="30" fill="#2563eb"/><text x="42.0" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">11%</text><rect class="bar" x="70.1" y="42" width="280.3" height="30" fill="#f59e0b"/><text x="210.2" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">57%</text><rect class="bar" x="350.3" y="42" width="155.7" height="30" fill="#10b981"/><text x="428.2" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">32%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Starting principal: <tspan font-weight="700">$20,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#f59e0b"/><text x="282" y="98" font-size="12.5" fill="#374151">Your additions: <tspan font-weight="700">$100,000</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#10b981"/><text x="32" y="120" font-size="12.5" fill="#374151">Growth: <tspan font-weight="700">$55,533</tspan></text></svg><figcaption>Most of the balance is money you paid in, but growth is a large part.</figcaption></figure>
+      <p>A quick sanity check from the page: $5,000 to start and $100 a month for one year at 0% growth gives $6,200.</p>
       <h2>Beginning or end of the period</h2>
-      <p>The timing of each addition matters. In an annuity due, money goes in at the start of the period and earns interest straight away. In an ordinary annuity it goes in at the end, so it sits idle until the next period. The difference grows with the length of the term and the size of the rate, which is why the beginning-of-period choice always ends a little higher.</p>
-
-      <h2>How the balance is built</h2>
-      <p>The growth rate you enter is a yearly rate, turned into an equivalent monthly rate. Every month the calculator adds any monthly addition, applies that month's growth, and records the result. Your annual addition lands in the first month of each year, or the twelfth if you chose the end of the period. The starting principal goes in on day one. The annual table adds the twelve months of each year, and the monthly table lets you see every step.</p>
-      <div class="callout">This is an estimate for planning, not a quote. Real annuities often have fees, surrender charges, caps on growth and tax rules on withdrawals that are not included here.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understand the numbers</h2>
-      <p>With $5,000 to start, $100 contributed monthly for one year, and a 0% growth rate, the accumulated balance is $6,200. Interest or investment growth can change the result; charges or surrender provisions may reduce what is ultimately available.</p>
-      <h2>Related retirement planning tools</h2>
-      <p>For estimating payments after accumulation, switch to the <a href="annuity-payout-calculator.html">Annuity Payout Calculator</a>. Compare the broader effects of ongoing contributions with the <a href="retirement-calculator.html">Retirement Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="mutual-fund-calculator.html">Mutual Fund Calculator</a>, <a href="savings-calculator.html">Savings Calculator</a>, <a href="bond-calculator.html">Bond Calculator</a>, <a href="interest-calculator.html">Interest Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p>In an <em>annuity due</em> money goes in at the start of the period and earns interest straight away. In an <em>ordinary annuity</em> it goes in at the end, so it sits idle until the next period. The beginning-of-period choice always ends a little higher, and the gap grows with the term and the rate. With the default inputs, adding at the beginning gives $175,533 and at the end $167,625, a difference of <strong>$7,908</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Beginning vs end of the period (default inputs)</title><desc id="cf2-d">Adding at the start of each year gives $7,908 more over 10 years, because each addition earns a full extra year.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Beginning vs end of the period (default inputs)</text><text x="162" y="60" text-anchor="end" font-size="13" fill="#6b7280">Beginning (annuity due)</text><rect class="bar" x="170" y="44" width="258.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$175,533</text><text x="162" y="94" text-anchor="end" font-size="13" fill="#6b7280">End (ordinary annuity)</text><rect class="bar" x="170" y="78" width="246.4" height="22" rx="4" fill="#2563eb"/><text x="424.4" y="94" font-size="13" font-weight="700" fill="#111827">$167,625</text></svg><figcaption>Timing alone adds a few thousand dollars over ten years.</figcaption></figure>
+      <h2>Annual or monthly additions</h2>
+      <p>You can add a yearly amount, a monthly amount or both. The annual addition lands in the first month of each year (or the twelfth, if you chose the end of the period), and a monthly addition goes in every month. Putting $10,000 a year as $833.33 a month instead gives $171,871 rather than $175,533, because the money starts earning sooner than an annual lump sum paid at the end of the year but later than one paid at the start.</p>
+      <h2>How growth rate and time change the result</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">End balance by number of years (default inputs)</title><desc id="cf3-d">Time does most of the work: $175,533 after 10 years, $952,887 after 30.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">End balance by number of years (default inputs)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">5 years</text><rect class="bar" x="80" y="44" width="31.6" height="22" rx="4" fill="#9ca3af"/><text x="119.6" y="60" font-size="13" font-weight="700" fill="#111827">$86,518</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">10 years</text><rect class="bar" x="80" y="78" width="64.1" height="22" rx="4" fill="#2563eb"/><text x="152.1" y="94" font-size="13" font-weight="700" fill="#111827">$175,533</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">20 years</text><rect class="bar" x="80" y="112" width="165.8" height="22" rx="4" fill="#9ca3af"/><text x="253.8" y="128" font-size="13" font-weight="700" fill="#111827">$454,070</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">30 years</text><rect class="bar" x="80" y="146" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">$952,887</text></svg><figcaption>The longer the money grows, the more growth contributes.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">End balance after 10 years by growth rate (default inputs)</title><desc id="cf4-d">At 0% you end with $120,000, just what you put in; at 8% you end with $199,633.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">End balance after 10 years by growth rate (default inputs)</text><text x="52" y="60" text-anchor="end" font-size="13" fill="#6b7280">0%</text><rect class="bar" x="60" y="44" width="221.2" height="22" rx="4" fill="#9ca3af"/><text x="289.2" y="60" font-size="13" font-weight="700" fill="#111827">$120,000</text><text x="52" y="94" text-anchor="end" font-size="13" fill="#6b7280">2%</text><rect class="bar" x="60" y="78" width="250.8" height="22" rx="4" fill="#9ca3af"/><text x="318.8" y="94" font-size="13" font-weight="700" fill="#111827">$136,067</text><text x="52" y="128" text-anchor="end" font-size="13" fill="#6b7280">4%</text><rect class="bar" x="60" y="112" width="284.7" height="22" rx="4" fill="#9ca3af"/><text x="352.7" y="128" font-size="13" font-weight="700" fill="#111827">$154,468</text><text x="52" y="162" text-anchor="end" font-size="13" fill="#6b7280">6%</text><rect class="bar" x="60" y="146" width="323.6" height="22" rx="4" fill="#2563eb"/><text x="391.6" y="162" font-size="13" font-weight="700" fill="#111827">$175,533</text><text x="52" y="196" text-anchor="end" font-size="13" fill="#6b7280">8%</text><rect class="bar" x="60" y="180" width="368.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">$199,633</text></svg><figcaption>Each extra percentage point compounds.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Years</th><th>End balance</th><th>Additions</th><th>Growth</th></tr></thead><tbody><tr><td>5</td><td>$86,518</td><td>$50,000</td><td>$16,518</td></tr><tr><td>10</td><td>$175,533</td><td>$100,000</td><td>$55,533</td></tr><tr><td>20</td><td>$454,070</td><td>$200,000</td><td>$234,070</td></tr><tr><td>30</td><td>$952,887</td><td>$300,000</td><td>$632,887</td></tr></tbody></table></div>
+      <h2>Fees and surrender charges</h2>
+      <p>Real annuities often carry fees, surrender charges, caps on growth and tax rules on withdrawals, none of which are included here. Even a yearly cost of 1 percentage point matters: if a 6% return becomes 5% after fees, the default plan ends at $164,646, which is $10,888 less; at 4% it ends at $154,468. Read the contract and compare costs before buying.</p>
+      <h2>Types of annuity</h2>
+      <ul><li><strong>Fixed:</strong> the insurer credits a stated rate.</li><li><strong>Variable:</strong> the balance depends on the investments you choose, and you can lose money.</li><li><strong>Indexed:</strong> growth is linked to a market index, usually with caps and limits.</li><li><strong>Immediate or deferred:</strong> payouts can start right away or after an accumulation period, which is what this calculator models.</li></ul>
+      <h2>What the calculator does not do</h2>
+      <ul><li>Taxes. Growth in an annuity is generally tax-deferred, but withdrawals can be taxed.</li><li>Fees, surrender charges, caps and guarantees.</li><li>Inflation: the balance is in future dollars.</li><li>The payout stage. Use the Annuity Payout Calculator for that.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Assuming a high growth rate for a fixed annuity.</li><li>Ignoring fees and surrender periods.</li><li>Putting the annual addition in the monthly box.</li><li>Treating the result as a quote from an insurer.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the end balance. Below it are the starting principal, total additions and total return, with a donut chart and a stacked bar chart for every year. The table can be shown by year or month. Compare the beginning and end settings to see the effect of timing.</p>
+      <div class="callout">This is an estimate for planning, not a quote. Annuities have fees, charges and tax rules that vary by contract. It is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="annuity-payout-calculator.html">Annuity Payout Calculator</a> &ndash; the income stage</li><li><a href="retirement-calculator.html">Retirement Calculator</a> &ndash; plan your retirement</li><li><a href="pension-calculator.html">Pension Calculator</a> &ndash; compare pension options</li><li><a href="savings-calculator.html">Savings Calculator</a> &ndash; savings with yearly increases</li><li><a href="mutual-fund-calculator.html">Mutual Fund Calculator</a> &ndash; fees and growth</li><li><a href="investment-calculator.html">Investment Calculator</a> &ndash; goals and growth over time</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What is the accumulation phase of an annuity?</h3>
-        <p>The accumulation phase is the period when you pay money into an annuity and it grows, before any income is paid out. This calculator covers that phase. The income phase, when the annuity starts paying you, is a separate calculation.</p>
+        <p>The accumulation phase is the period when you pay money into an annuity and it grows, before any income is paid out. This calculator covers that phase. The income phase is a separate calculation.</p>
       </div>
       <div class="faq-item">
         <h3>What is the difference between an annuity due and an ordinary annuity?</h3>
-        <p>An annuity due takes each addition at the beginning of its period, so it earns interest for the whole period. An ordinary annuity takes it at the end of the period, so it earns nothing until the next one. Adding at the beginning always gives a slightly larger balance.</p>
+        <p>An annuity due takes each addition at the beginning of its period, so it earns interest for the whole period. An ordinary annuity takes it at the end, so it earns nothing until the next one. Adding at the beginning always gives a slightly larger balance.</p>
       </div>
       <div class="faq-item">
         <h3>How is the growth rate applied?</h3>
-        <p>The annual growth rate is converted to an equivalent monthly rate, so a 6% rate grows a balance by exactly 6% over twelve months. The calculator then adds interest to the balance every month, which also lets monthly additions earn their fair share of growth.</p>
+        <p>The annual growth rate is converted to an equivalent monthly rate, so a 6% rate grows a balance by exactly 6% over twelve months. Interest is added to the balance every month.</p>
       </div>
       <div class="faq-item">
-        <h3>Can I use it for a fixed, variable or indexed annuity?</h3>
-        <p>Yes, as an estimate. Enter the rate your contract credits, or the return you expect for a variable annuity. Remember that real annuities can charge fees, surrender charges and caps that this calculator does not include, and a variable annuity's actual return will vary.</p>
+        <h3>Can I use it for a fixed or variable annuity?</h3>
+        <p>Yes, as a projection. Enter the rate you expect, using a lower one for a fixed annuity and a cautious one for a variable annuity, which can lose value.</p>
       </div>
+      <div class="faq-item">
+        <h3>Does it include fees and surrender charges?</h3>
+        <p>No. Real annuities often have fees, surrender charges and caps that lower the result, so subtract them from your growth rate to see their effect.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are annuity withdrawals taxed?</h3>
+        <p>Growth is generally tax-deferred, but withdrawals can be taxed. The calculator does not include tax. Ask a tax professional.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/annuities" rel="noopener" target="_blank">Investor.gov: Annuities</a>; <a href="https://www.finra.org/investors/investing/investment-products/annuities" rel="noopener" target="_blank">FINRA: Annuities</a></p>
     </div>
 
   </div>
