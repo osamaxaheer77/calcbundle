@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tip Calculator: Percent, Total &amp; Split Bill | CalcBundle</title>
-<meta name="description" content="Calculate a restaurant tip from the bill amount and split the final total between friends.">
+<meta name="description" content="Work out the tip on a restaurant bill from the bill amount and a percentage, then split the total between friends, with per-person tip and share.">
 <link rel="canonical" href="https://calcbundle.net/calculators/tip-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Tip Calculator: Percent, Total &amp; Split Bill | CalcBundle">
-<meta property="og:description" content="Calculate a restaurant tip from the bill amount and split the final total between friends.">
+<meta property="og:description" content="Work out the tip on a restaurant bill from the bill amount and a percentage, then split the total between friends, with per-person tip and share.">
 <meta property="og:url" content="https://calcbundle.net/calculators/tip-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Tip Calculator: Percent, Total &amp; Split Bill | CalcBundle">
-<meta name="twitter:description" content="Calculate a restaurant tip from the bill amount and split the final total between friends.">
+<meta name="twitter:description" content="Work out the tip on a restaurant bill from the bill amount and a percentage, then split the total between friends, with per-person tip and share.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Should everyone get an equal tip if orders differ a lot?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "That's a personal/group decision — equal splitting is simplest, but some groups prefer splitting proportionally to what each person ordered."
+        "text": "That is a personal or group decision. Equal splitting is simplest, but some groups prefer splitting in proportion to what each person ordered."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "Is there a standard tip percentage?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No fixed standard exists, but 15–20% is common in the US for good restaurant service, with 20%+ for exceptional service."
+        "text": "No fixed standard exists, but 15% to 20% is common in the US for good restaurant service, with more for exceptional service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I tip on the bill before or after tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Either is common. Enter whichever amount you tip on. The difference is small: on a $55 bill with 8% tax, a 15% tip changes by about 66 cents."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate a 20% tip quickly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Move the decimal point one place left to get 10%, then double it. For $55.00, 10% is $5.50 and 20% is $11.00."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator split the tip as well?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. When you enter more than one person, it shows the tip per person and the total per person, dividing both equally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are tips taxable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tips received by workers are taxable income and are subject to reporting rules. The IRS explains the details."
       }
     }
   ]
@@ -116,41 +148,63 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">A quick note on tipping norms</h2>
-      <p>Tipping customs vary widely by country and by service type. In the US, 15&ndash;20% is typical for sit-down restaurant service; other services (delivery, salons, bars) often follow different conventions. Check local norms if you're somewhere unfamiliar.</p>
-
-      <h2>Tipping on the pre-tax or post-tax total?</h2>
-      <p>There's no universal rule &mdash; some people tip on the subtotal before tax, others on the total after tax. Either way, enter whichever bill amount you're basing the percentage on.</p>
-      <div class="callout">When splitting a bill unevenly (like one person ordering more), it's often fairer to split by item cost rather than dividing the total equally &mdash; this calculator assumes an equal split.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: check the result</h2>
-      <p>For an $80 bill with a 20% tip, the tip is $16 and the total is $96. Split evenly four ways, each person pays $24.</p>
-      <h2>Related tools</h2>
-      <p>For discounts before tipping, see the <a href="discount-calculator.html">Discount Calculator</a>. For sales tax on purchases, see the <a href="sales-tax-calculator.html">Sales Tax Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>On a $55.00 bill with a 15% tip, the tip is $8.25 and the total is $63.25. Split between 4 people, each person pays $15.81. At 20% the tip is $11.00, and the total is $66.00. The calculator updates as you type, so you can try several percentages quickly.</p>
-
-      <h2>Tips for tipping</h2>
-      <p>Tipping is a custom, and it varies by country and by service. In the US, 15 to 20 percent is usual in restaurants, and a dollar or two per drink at a bar. In many countries a service charge is already included, so check your bill before adding more. Rounding the total to a whole number is an easy way to tip, and if service was poor, a lower tip sends a clearer message than none.</p>
-
-      <h2>Common uses</h2>
-      <p>Use it for restaurant bills, delivery drivers, taxis, hairdressers and group dinners where the bill is shared.</p>
-
-      <p><strong>You might also need:</strong> <a href="percentage-calculator.html">Percentage Calculator</a>, <a href="margin-calculator.html">Margin Calculator</a>, <a href="discount-calculator.html">Discount Calculator</a>, <a href="sales-tax-calculator.html">Sales Tax Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A tip is a percentage of the bill added to the total. On a $55.00 bill a 15% tip is $8.25, making the total $63.25, or $15.81 each when split four ways. At 20% the tip is $11.00.</div>
+      <h2>What the calculator does</h2>
+      <p>Enter the bill, the tip percentage and the number of people. The calculator multiplies the bill by the percentage to get the tip, adds it to the bill, and divides both the tip and the total by the number of people. It updates as you type, so you can try several percentages quickly. It splits everything equally.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>A $55.00 bill with a 15% tip: the tip is $55.00 &times; 0.15 = <strong>$8.25</strong> and the total is <strong>$63.25</strong>. At 20% the tip is $11.00 and the total is $66.00. Split four ways, each person pays $15.81 in total and $2.06 of the tip.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where the $63.25 you pay goes (default bill)</title><desc id="cf1-d">The tip is 13.0% of what you pay in total, because it is 15% of the bill, not of the total.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the $63.25 you pay goes (default bill)</text><rect class="bar" x="14.0" y="42" width="427.8" height="30" fill="#2563eb"/><text x="227.9" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">87%</text><rect class="bar" x="441.8" y="42" width="64.2" height="30" fill="#10b981"/><text x="473.9" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">13%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Food and drink: <tspan font-weight="700">$55.00</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Tip (15%): <tspan font-weight="700">$8.25</tspan></text></svg><figcaption>The tip is added on top of the bill.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Tip on a $55.00 bill by percentage</title><desc id="cf2-d">Each extra five points adds about $2.75 to a $55 bill.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Tip on a $55.00 bill by percentage</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">10%</text><rect class="bar" x="70" y="44" width="143.2" height="22" rx="4" fill="#9ca3af"/><text x="221.2" y="60" font-size="13" font-weight="700" fill="#111827">$5.50</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">15%</text><rect class="bar" x="70" y="78" width="214.8" height="22" rx="4" fill="#10b981"/><text x="292.8" y="94" font-size="13" font-weight="700" fill="#111827">$8.25</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">18%</text><rect class="bar" x="70" y="112" width="257.8" height="22" rx="4" fill="#9ca3af"/><text x="335.8" y="128" font-size="13" font-weight="700" fill="#111827">$9.90</text><text x="62" y="162" text-anchor="end" font-size="13" fill="#6b7280">20%</text><rect class="bar" x="70" y="146" width="286.4" height="22" rx="4" fill="#9ca3af"/><text x="364.4" y="162" font-size="13" font-weight="700" fill="#111827">$11.00</text><text x="62" y="196" text-anchor="end" font-size="13" fill="#6b7280">25%</text><rect class="bar" x="70" y="180" width="358.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">$13.75</text></svg><figcaption>A few percentage points make a small difference on a modest bill.</figcaption></figure>
+      <h2>Quick tipping tables</h2>
+      <div class="calc-table"><table><thead><tr><th>Bill</th><th>15%</th><th>18%</th><th>20%</th><th>25%</th></tr></thead><tbody><tr><td>$20.00</td><td>$3.00</td><td>$3.60</td><td>$4.00</td><td>$5.00</td></tr><tr><td>$40.00</td><td>$6.00</td><td>$7.20</td><td>$8.00</td><td>$10.00</td></tr><tr><td>$55.00</td><td>$8.25</td><td>$9.90</td><td>$11.00</td><td>$13.75</td></tr><tr><td>$80.00</td><td>$12.00</td><td>$14.40</td><td>$16.00</td><td>$20.00</td></tr><tr><td>$120.00</td><td>$18.00</td><td>$21.60</td><td>$24.00</td><td>$30.00</td></tr></tbody></table></div>
+      <h2>Mental shortcuts</h2>
+      <ul><li><strong>10%:</strong> move the decimal point one place left. $55.00 becomes $5.50.</li><li><strong>20%:</strong> double the 10% figure. $5.50 doubled is $11.00.</li><li><strong>15%:</strong> add half of the 10% figure to the 10% figure. $5.50 + $2.75 = $8.25.</li><li><strong>Rounding:</strong> round the total up to a whole dollar for an easy tip, as long as the extra is fair.</li></ul>
+      <h2>Before or after tax?</h2>
+      <p>There is no universal rule. Some people tip on the bill before tax, others on the total including tax. With an 8% sales tax on the $55 bill the tax is $4.40. A 15% tip on the pre-tax $55.00 is $8.25; on the post-tax $59.40 it is $8.91, a difference of only $0.66. Enter whichever amount you tip on. If the bill already includes a service charge or gratuity, check it before adding more.</p>
+      <h2>Splitting a bill</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Total per person for the default bill ($55 plus 15% tip, $63.25) by group size</title><desc id="cf3-d">Split four ways, each person pays $15.81, a little over the exact quarter because of rounding.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Total per person for the default bill ($55 plus 15% tip, $63.25) by group size</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 person</text><rect class="bar" x="100" y="44" width="328.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$63.25</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">2 persons</text><rect class="bar" x="100" y="78" width="164.0" height="22" rx="4" fill="#9ca3af"/><text x="272.0" y="94" font-size="13" font-weight="700" fill="#111827">$31.62</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">4 persons</text><rect class="bar" x="100" y="112" width="82.0" height="22" rx="4" fill="#9ca3af"/><text x="190.0" y="128" font-size="13" font-weight="700" fill="#111827">$15.81</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">6 persons</text><rect class="bar" x="100" y="146" width="54.7" height="22" rx="4" fill="#9ca3af"/><text x="162.7" y="162" font-size="13" font-weight="700" fill="#111827">$10.54</text></svg><figcaption>The more people, the smaller the share, but the tip should still be calculated on the whole bill.</figcaption></figure>
+      <p>Equal splits are simple but not always fair when orders differ a lot. In that case, split by item cost and tip on each share. Rounding can leave a few cents over or under: for four people the exact share of the default total is $15.8125, so the calculator shows $15.81, and rounding each share up to $16.00 leaves a small extra for the server.</p>
+      <h2>Tipping on a discounted bill</h2>
+      <p>If your bill is reduced by a coupon or a promotion, you can tip on the amount you actually pay or on the original price. Many diners tip on the original price, because the server did the same work. For a $55.00 meal with 20% off, you pay $44.00. A 15% tip on that is $6.60, while a 15% tip on the original $55.00 is $8.25, a difference of $1.65. Use the Discount Calculator first to find the reduced bill, then enter whichever amount you choose.</p>
+      <h2>Large groups and service charges</h2>
+      <p>Some restaurants add an automatic gratuity for large parties. If one is already on the bill, you do not need to add the full amount again, though you can add a little for exceptional service. When a group is splitting, decide the tip percentage first on the whole bill, then divide, so that nobody is working out a different percentage on their own share. Entering the number of people in the calculator does this for you.</p>
+      <h2>Tipping customs</h2>
+      <p>Customs vary by country and by type of service. In the United States, 15% to 20% is typical for sit-down restaurant service, with more for exceptional service. Delivery, bars, salons and taxis follow different conventions, and in many countries a service charge is already included. Check local norms if you are somewhere unfamiliar. If you are a worker who receives tips, they count as taxable income, and the IRS explains the reporting rules.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Tipping on a total that already includes a service charge.</li><li>Forgetting to enter the number of people when splitting.</li><li>Entering the tip as a dollar amount in the percentage box.</li><li>Splitting equally when one person ordered much more.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the tip. Below it are the total bill, and, if you entered more than one person, the tip and total per person. Compare two percentages by changing the box and watching the numbers update. For tax on a purchase use the Sales Tax Calculator, and for a discount before tipping use the Discount Calculator.</p>
+      <div class="callout">Tipping is a custom, not a rule. The suggested percentages are common figures, not requirements.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="percentage-calculator.html">Percentage Calculator</a> &ndash; percent of, change and difference</li><li><a href="sales-tax-calculator.html">Sales Tax Calculator</a> &ndash; add or remove sales tax</li><li><a href="discount-calculator.html">Discount Calculator</a> &ndash; the price after a discount</li><li><a href="margin-calculator.html">Margin Calculator</a> &ndash; price, cost and profit</li><li><a href="gpa-calculator.html">GPA Calculator</a> &ndash; grade point average</li><li><a href="grade-calculator.html">Grade Calculator</a> &ndash; your course grade</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Should everyone get an equal tip if orders differ a lot?</h3>
-        <p>That's a personal/group decision &mdash; equal splitting is simplest, but some groups prefer splitting proportionally to what each person ordered.</p>
+        <p>That is a personal or group decision. Equal splitting is simplest, but some groups prefer splitting in proportion to what each person ordered.</p>
       </div>
       <div class="faq-item">
         <h3>Is there a standard tip percentage?</h3>
-        <p>No fixed standard exists, but 15&ndash;20% is common in the US for good restaurant service, with 20%+ for exceptional service.</p>
+        <p>No fixed standard exists, but 15% to 20% is common in the US for good restaurant service, with more for exceptional service.</p>
       </div>
+      <div class="faq-item">
+        <h3>Should I tip on the bill before or after tax?</h3>
+        <p>Either is common. Enter whichever amount you tip on. The difference is small: on a $55 bill with 8% tax, a 15% tip changes by about 66 cents.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I calculate a 20% tip quickly?</h3>
+        <p>Move the decimal point one place left to get 10%, then double it. For $55.00, 10% is $5.50 and 20% is $11.00.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the calculator split the tip as well?</h3>
+        <p>Yes. When you enter more than one person, it shows the tip per person and the total per person, dividing both equally.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are tips taxable?</h3>
+        <p>Tips received by workers are taxable income and are subject to reporting rules. The IRS explains the details.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.irs.gov/taxtopics/tc761" rel="noopener" target="_blank">IRS: Topic no. 761, Tips - withholding and reporting</a></p>
     </div>
 
   </div>
