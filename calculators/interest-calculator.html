@@ -42,15 +42,47 @@
       "name": "Why does the calculator ask for a tax rate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Interest income from things like savings accounts, CDs, and taxable bonds is often taxed as ordinary income. Applying a tax rate here shows the real, after-tax growth of the balance rather than the gross figure."
+        "text": "Interest from savings accounts, CDs and taxable bonds is often taxed as ordinary income. Applying a tax rate shows the after-tax growth of the balance rather than the gross figure."
       }
     },
     {
       "@type": "Question",
-      "name": "What does the inflation-adjusted \"buying power\" figure mean?",
+      "name": "What does the inflation-adjusted buying power figure mean?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It discounts the ending balance by the assumed inflation rate, showing what that future balance would actually be worth in today's purchasing power — leave inflation at 0% to see the raw, unadjusted ending balance instead."
+        "text": "It discounts the ending balance by the assumed inflation rate, showing what that future balance would be worth in today's purchasing power. Leave inflation at 0% to see the unadjusted ending balance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does contributing at the beginning or end of the period matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A deposit made at the beginning earns one extra period of interest, so the ending balance is slightly higher. The difference grows with the number of deposits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between annual and monthly contributions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The annual box adds a lump sum once a year and the monthly box adds a smaller amount every month. Both can be used together. Use the schedule under the result to see the exact timing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does compounding frequency matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A little. More frequent compounding helps, but regular deposits and the length of time have a much bigger effect on the result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the result guaranteed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is a projection from the rate you enter. Real returns on investments vary, and savings rates can change."
       }
     }
   ]
@@ -178,35 +210,63 @@
       <div class="schedule-table-wrap" id="int-table-wrap"></div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Simple vs. compound interest</h2>
-      <p>Simple interest is charged only on the original principal, every period, in equal amounts. Compound interest is charged on the principal plus any interest already accumulated — meaning interest itself starts earning interest. Almost everything in the real world, from savings accounts to investment portfolios, uses compound interest.</p>
-
-      <h2>Why compounding frequency matters</h2>
-      <p>The more often interest compounds within a year — monthly instead of annually, say — the faster a balance grows, because each compounding period's interest starts earning its own interest sooner. The difference is small in year one but widens the longer the money stays invested.</p>
-      <div class="callout">Contributions made at the beginning of each period earn one extra period of interest compared to contributions made at the end — over many years, that difference compounds into a meaningfully larger ending balance.</div>
-
-      <!--seo-extra-->
-      <h2>A worked example</h2>
-      <p>Start with $20,000, add $5,000 at the start of each year and earn 5% compounded annually for 5 years. The ending balance is $54,535.20. Of that, $45,000 is what you put in ($20,000 plus five contributions of $5,000) and $9,535.20 is interest. After 3% inflation the buying power of the balance is about $47,042.54, which is why real returns matter.</p>
-
-      <h2>Tips for planning</h2>
-      <p>Compounding more often lifts the result a little, and adding money regularly lifts it a lot. Enter your tax rate to see the after-tax balance if the interest is taxable, and enter inflation to see what the money would be worth in today's terms. Try a few rates, since future returns are not guaranteed. Start early: the same deposits made ten years sooner can end up worth much more.</p>
-
-      <p><strong>You might also need:</strong> <a href="compound-interest-calculator.html">Compound Interest Calculator</a>, <a href="simple-interest-calculator.html">Simple Interest Calculator</a>, <a href="inflation-calculator.html">Inflation Calculator</a>, <a href="future-value-calculator.html">Future Value Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a>.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> With compound interest, your balance earns interest on its own interest. $20,000 plus $5,000 added at the start of each year at 5% compounded annually grows to $54,535.20 after 5 years: $9,535.20 of it is interest, and after 3% inflation it is worth about $47,043 in today's money.</div>
+      <h2>Simple and compound interest</h2>
+      <p><strong>Simple interest</strong> is charged only on the original amount. <strong>Compound interest</strong> is charged on the principal plus the interest already added, so interest starts earning interest. Most savings accounts, investments and loans compound. The calculator is built for compound growth, with regular deposits, taxes and inflation.</p>
+      <h2>How the calculator grows your money</h2>
+      <p>It steps forward one month at a time. Each month the balance earns interest at the effective monthly rate that matches your yearly rate and compounding choice (annually, monthly, daily, continuously and so on). If you enter a tax rate, tax is taken from each month&rsquo;s interest. Deposits are made either at the <strong>beginning</strong> of each period, which earns one extra period of interest, or at the <strong>end</strong>.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>Start with $20,000, add $5,000 at the beginning of each year, and earn 5% compounded annually for 5 years. The ending balance is <strong>$54,535.20</strong>. You paid in $45,000 ($20,000 plus five deposits of $5,000), so <strong>$9,535.20</strong> is interest. After 3% inflation the balance has the buying power of about <strong>$47,042.54</strong> in today&rsquo;s money.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Where the default ending balance comes from</title><desc id="cf2-d">Of the $54,535.20 ending balance, $45,000 is money you put in and $9,535.20 is interest.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the default ending balance comes from</text><rect class="bar" x="14.0" y="42" width="180.4" height="30" fill="#2563eb"/><text x="104.2" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">37%</text><rect class="bar" x="194.4" y="42" width="225.5" height="30" fill="#10b981"/><text x="307.2" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">46%</text><rect class="bar" x="420.0" y="42" width="86.0" height="30" fill="#f59e0b"/><text x="463.0" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">17%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Your initial deposit: <tspan font-weight="700">$20,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Your yearly deposits: <tspan font-weight="700">$25,000</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#f59e0b"/><text x="32" y="120" font-size="12.5" fill="#374151">Interest earned: <tspan font-weight="700">$9,535.20</tspan></text></svg><figcaption>Early on, most of the balance is your own money. Interest takes a larger share the longer you keep going.</figcaption></figure>
+      <h2>Tax and inflation</h2>
+      <p>Interest from savings accounts, CDs and taxable bonds is generally taxed as income. With a 22% tax rate entered, the default example ends at $52,259 instead of $54,535, because tax removes interest that would otherwise keep earning. The inflation setting shows the same balance in today&rsquo;s terms: dividing $54,535 by 1.03 five times gives $47,043. Real returns after tax and inflation are what matter for planning.</p>
+      <h2>Regular monthly deposits</h2>
+      <p>Regular deposits do most of the work over long periods. Saving $500 a month at 6% compounded monthly for 30 years gives <strong>$502,258</strong>. You paid in $180,000, so <strong>$322,258</strong> comes from interest. If the deposits are made at the beginning of each month instead of the end, the balance is $504,769, about $2,511 more, because each deposit earns one extra month of interest.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">$500 a month at 6%: total saved vs balance over 30 years</title><desc id="cf1-d">After 30 years you paid in $180,000 and the balance is $502,258, so interest supplied $322,258 of it.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">$500 a month at 6%: total saved vs balance over 30 years</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0k</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$132k</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$264k</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$396k</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$527k</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="132.7" y="194" text-anchor="middle" font-size="11" fill="#6b7280">5</text><text x="207.3" y="194" text-anchor="middle" font-size="11" fill="#6b7280">10</text><text x="282.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">15</text><text x="356.7" y="194" text-anchor="middle" font-size="11" fill="#6b7280">20</text><text x="431.3" y="194" text-anchor="middle" font-size="11" fill="#6b7280">25</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">30</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Years</text><polyline class="draw" style="--len:469" points="58.0,176.0 72.9,174.5 87.9,173.0 102.8,171.3 117.7,169.5 132.7,167.7 147.6,165.7 162.5,163.6 177.5,161.3 192.4,158.9 207.3,156.4 222.3,153.7 237.2,150.9 252.1,147.9 267.1,144.7 282.0,141.3 296.9,137.6 311.9,133.8 326.8,129.7 341.7,125.4 356.7,120.8 371.6,115.9 386.5,110.7 401.5,105.2 416.4,99.4 431.3,93.2 446.3,86.6 461.2,79.6 476.1,72.2 491.1,64.4 506.0,56.0" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="76" y="40" font-size="11.5" fill="#374151">Balance</text><polyline class="draw" style="--len:452" points="58.0,176.0 72.9,174.6 87.9,173.1 102.8,171.7 117.7,170.3 132.7,168.8 147.6,167.4 162.5,166.0 177.5,164.5 192.4,163.1 207.3,161.7 222.3,160.2 237.2,158.8 252.1,157.4 267.1,155.9 282.0,154.5 296.9,153.1 311.9,151.6 326.8,150.2 341.7,148.8 356.7,147.3 371.6,145.9 386.5,144.5 401.5,143.0 416.4,141.6 431.3,140.2 446.3,138.7 461.2,137.3 476.1,135.9 491.1,134.4 506.0,133.0" fill="none" stroke="#6b7280" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#6b7280"/><text x="246" y="40" font-size="11.5" fill="#374151">What you paid in</text></svg><figcaption>The gap between the lines is the interest. It grows slowly at first and quickly in the last decade.</figcaption></figure>
+      <h2>Why starting early matters</h2>
+      <p>Time is the strongest lever. The same $300 a month at 7% compounded monthly:</p>
+      <div class="calc-table"><table><thead><tr><th>Time saving</th><th>You paid in</th><th>Ending balance</th></tr></thead><tbody><tr><td>40 years (start at 25)</td><td>$144,000</td><td>$787,444</td></tr><tr><td>30 years (start at 35)</td><td>$108,000</td><td>$365,991</td></tr><tr><td>20 years (start at 45)</td><td>$72,000</td><td>$156,278</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Ending balance of $300 a month at 7% by length of saving</title><desc id="cf3-d">Saving for 40 years ends at about $787,444, against $365,991 for 30 years and $156,278 for 20 years. The extra ten years more than double the result.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Ending balance of $300 a month at 7% by length of saving</text><text x="182" y="60" text-anchor="end" font-size="13" fill="#6b7280">40 years (start at 25)</text><rect class="bar" x="190" y="44" width="238.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$787,444</text><text x="182" y="94" text-anchor="end" font-size="13" fill="#6b7280">30 years (start at 35)</text><rect class="bar" x="190" y="78" width="110.6" height="22" rx="4" fill="#9ca3af"/><text x="308.6" y="94" font-size="13" font-weight="700" fill="#111827">$365,991</text><text x="182" y="128" text-anchor="end" font-size="13" fill="#6b7280">20 years (start at 45)</text><rect class="bar" x="190" y="112" width="47.2" height="22" rx="4" fill="#9ca3af"/><text x="245.2" y="128" font-size="13" font-weight="700" fill="#111827">$156,278</text></svg><figcaption>Every extra year of compounding matters more than the same amount saved later.</figcaption></figure>
+      <h2>The rule of 72</h2>
+      <p>A quick mental check for how long compounding takes to double money is the <strong>rule of 72</strong>: divide 72 by the yearly rate. At 4% that is about 18 years, at 6% about 12 years, at 8% about 9 years and at 12% about 6 years. Exact doubling times are slightly different (at 6% annual compounding it is 11.9 years), but the rule is close enough for planning.</p>
+      <h2>Compounding frequency</h2>
+      <p>More frequent compounding raises the result a little: the same rate compounded monthly instead of annually adds a small amount in year one that grows with time. Deposits matter far more than frequency. If you want to compare frequencies for a single rate, the Compounding Frequency Converter shows the effective yearly rate for each.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing up the annual and monthly contribution boxes. Use one or both, but not the same money twice.</li><li>Assuming returns are guaranteed. A savings rate or a long-term investment return can differ from the rate entered.</li><li>Ignoring tax and inflation, which lower the real growth.</li><li>Forgetting that deposits at the beginning of the period earn one extra period of interest.</li><li>Entering 0.05 instead of 5 for the rate.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Compare the ending balance with what you paid in to see how much growth you get from interest. Try different rates, because future returns are uncertain. Then look at the inflation-adjusted balance to see what the money could buy. For goal-based planning, use the Investment Calculator.</p>
+      <div class="callout">This calculator gives estimates based on the assumptions you enter. It is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="compound-interest-calculator.html">Compounding Frequency Converter</a> &ndash; compare rates with different compounding</li><li><a href="savings-calculator.html">Savings Calculator</a> &ndash; savings with deposits, tax and inflation</li><li><a href="investment-calculator.html">Investment Calculator</a> &ndash; plan towards a goal</li><li><a href="simple-interest-calculator.html">Simple Interest Calculator</a> &ndash; interest without compounding</li><li><a href="inflation-calculator.html">Inflation Calculator</a> &ndash; real value of your balance</li><li><a href="future-value-calculator.html">Future Value Calculator</a> &ndash; the value of money at a future date</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Why does the calculator ask for a tax rate?</h3>
-        <p>Interest income from things like savings accounts, CDs, and taxable bonds is often taxed as ordinary income. Applying a tax rate here shows the real, after-tax growth of the balance rather than the gross figure.</p>
+        <p>Interest from savings accounts, CDs and taxable bonds is often taxed as ordinary income. Applying a tax rate shows the after-tax growth of the balance rather than the gross figure.</p>
       </div>
       <div class="faq-item">
-        <h3>What does the inflation-adjusted "buying power" figure mean?</h3>
-        <p>It discounts the ending balance by the assumed inflation rate, showing what that future balance would actually be worth in today's purchasing power — leave inflation at 0% to see the raw, unadjusted ending balance instead.</p>
+        <h3>What does the inflation-adjusted buying power figure mean?</h3>
+        <p>It discounts the ending balance by the assumed inflation rate, showing what that future balance would be worth in today's purchasing power. Leave inflation at 0% to see the unadjusted ending balance.</p>
       </div>
+      <div class="faq-item">
+        <h3>Does contributing at the beginning or end of the period matter?</h3>
+        <p>Yes. A deposit made at the beginning earns one extra period of interest, so the ending balance is slightly higher. The difference grows with the number of deposits.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between annual and monthly contributions?</h3>
+        <p>The annual box adds a lump sum once a year and the monthly box adds a smaller amount every month. Both can be used together. Use the schedule under the result to see the exact timing.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much does compounding frequency matter?</h3>
+        <p>A little. More frequent compounding helps, but regular deposits and the length of time have a much bigger effect on the result.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the result guaranteed?</h3>
+        <p>No. It is a projection from the rate you enter. Real returns on investments vary, and savings rates can change.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.investor.gov/introduction-investing/investing-basics/glossary/compound-interest" rel="noopener" target="_blank">Investor.gov: Compound interest</a>; <a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" rel="noopener" target="_blank">Investor.gov: Compound Interest Calculator</a></p>
     </div>
 
   </div>
