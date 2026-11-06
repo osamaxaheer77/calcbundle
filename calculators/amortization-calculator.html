@@ -41,7 +41,7 @@
       "name": "Does making an extra payment lower my required monthly payment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Usually not. This calculator keeps the scheduled payment the same, applies extra amounts to principal, and shows how a smaller balance can shorten the loan and reduce interest. Actual lender rules can differ."
+        "text": "Usually not. This calculator keeps the scheduled payment the same, applies extra amounts to principal and shows how a smaller balance can shorten the loan and reduce interest. Actual lender rules can differ."
       }
     },
     {
@@ -49,15 +49,15 @@
       "name": "Why is almost my entire early payment interest?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Because interest is calculated on the full remaining balance, and early on that balance is close to the full loan amount. As the balance falls, so does the interest charged against it, and the principal share grows to fill the gap."
+        "text": "Interest is calculated on the full remaining balance, and early on that balance is close to the whole loan. As the balance falls, so does the interest, and the principal share grows to fill the gap."
       }
     },
     {
       "@type": "Question",
-      "name": "What's the difference between the annual and monthly schedule?",
+      "name": "What is the difference between the annual and monthly schedule?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "They show the same underlying numbers at different resolutions — the annual view totals each year's interest and principal into one row, while the monthly view breaks every single payment out individually so you can see exactly how the balance moves month to month."
+        "text": "They show the same numbers at different detail. The annual view totals each year into one row, and the monthly view lists every payment so you can see how the balance moves month to month."
       }
     },
     {
@@ -65,7 +65,23 @@
       "name": "Can I schedule more than one lump-sum payment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — this calculator supports up to ten separate one-time extra payments, each on its own date, on top of an optional recurring monthly or yearly extra payment."
+        "text": "Yes. The calculator supports up to ten separate one-time extra payments, each on its own date, on top of an optional recurring monthly or yearly extra payment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the schedule include taxes, insurance or PMI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It covers principal and interest on a fixed-rate loan only. For a home payment with those costs, use the Mortgage Calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it for a loan with a changing rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not accurately. The schedule assumes a fixed rate and level payments, so an adjustable-rate loan can differ once the rate changes."
       }
     }
   ]
@@ -359,55 +375,67 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What amortization actually means</h2>
-      <p>Amortization is just the plan for erasing a debt through a series of equal, scheduled payments. Every payment is the same size, but the mix inside it isn't: part covers the interest the lender is owed for that period, and the rest chips away at the amount you originally borrowed. Because the amount you still owe keeps shrinking, the interest portion keeps shrinking with it — which means, even though the payment itself never changes, more of each check goes toward the balance as the loan matures.</p>
-
-      <h2>Why the split shifts over time</h2>
-      <p>Interest is charged only on the balance still outstanding, so it's largest in the loan's first year and smallest in its last. Picture two loans side by side, both $200,000 at 6% — one just starting, one with $20,000 left. The first accrues roughly $1,000 in interest that month; the second, only about $100. Same rate, wildly different interest bill, purely because of how much principal remains. That's the entire mechanism behind the curve you see in the schedule above: interest fading, principal rising, payment flat.</p>
-      <div class="callout">This is also why extra payments made early save so much more than the same extra payment made late — a dollar paid off in year one skips decades of interest that would otherwise accrue on it; a dollar paid off in year fourteen only skips one year's worth.</div>
-
-      <h2>What extra payments actually do</h2>
-      <p>In this calculator, extra payments are applied directly to principal after the scheduled payment. The smaller balance can reduce future interest and shorten the payoff period. In real loans, tell your lender to apply an extra payment to principal and check for prepayment restrictions; lenders may handle payments differently. The scheduled payment normally stays the same unless the loan is recast or otherwise changed.</p>
-
-      <h2>What kinds of loans this schedule applies to</h2>
-      <p>This calculator fits any fixed-rate, fixed-term loan that's paid down with level payments — mortgages, auto loans, student loans, personal loans. It doesn't fit revolving debt like credit cards, where the balance and minimum payment move independently, or interest-only and balloon loans, which don't spread principal evenly across the term in the first place.</p>
-
-      <!--seo-extra-->
-<h2>Worked example: a useful baseline</h2><p>At 0% interest, repaying a $12,000 balance in 12 equal monthly payments reduces principal by exactly $1,000 each month. With interest, more of early payments may cover interest rather than principal.</p>
-<h2>Related calculators</h2><p>Compare standard loan installments with the <a href="loan-calculator.html">Loan Calculator</a> or test accelerated repayments in the <a href="mortgage-payoff-calculator.html">Mortgage Payoff Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="home-equity-loan-calculator.html">Home Equity Loan Calculator</a>, <a href="heloc-calculator.html">HELOC Calculator</a>, <a href="rent-vs-buy-calculator.html">Rent vs. Buy Calculator</a>, <a href="rental-property-calculator.html">Rental Property Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-a-mortgage-payment-is-calculated.html">How a Mortgage Payment Is Calculated</a>.</p>
-
-      <h2>Example: first payment on a $200,000 loan</h2>
-      <p>For a $200,000 fixed-rate loan at 6% annual interest over 30 years, the scheduled monthly principal-and-interest payment is about <strong>$1,199.10</strong>. In the first month, about <strong>$1,000.00</strong> is interest and <strong>$199.10</strong> pays down principal. Later payments direct more money toward principal as the balance falls. This example assumes monthly compounding, no fees, and no additional payments.</p>
-      <p>Use the schedule above to check the balance after a specific payment or year. If you're estimating a home loan that includes taxes and insurance, start with the <a href="mortgage-calculator.html">Mortgage Calculator</a>. To see the impact of making extra payments on a home loan, compare scenarios with the <a href="mortgage-payoff-calculator.html">Mortgage Payoff Calculator</a>.</p>
-
-      <h2>Which calculator should you use next?</h2>
-      <p><strong>Buying a home?</strong> Check your possible budget with the <a href="house-affordability-calculator.html">House Affordability Calculator</a>, then estimate monthly costs with the <a href="mortgage-calculator.html">Mortgage Calculator</a>.</p>
-      <p><strong>Already have a loan?</strong> The <a href="mortgage-payoff-calculator.html">Mortgage Payoff Calculator</a> focuses on early payoff scenarios, while the <a href="refinance-calculator.html">Refinance Calculator</a> helps compare replacing your current loan with a different one.</p>
-      <p><strong>Want the math explained?</strong> Read <a href="../guides/how-a-mortgage-payment-is-calculated.html">How a Mortgage Payment Is Calculated</a> for the payment formula and an explanation of what the results include.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Amortization splits each equal loan payment into interest and principal. A $200,000 loan at 6% over 15 years has a payment of $1,687.71 and $103,788 of total interest; in the first month $1,000.00 of the payment is interest.</div>
+      <h2>What amortization means</h2>
+      <p>Amortization is a plan for paying off a loan with a series of equal scheduled payments. Every payment is the same size, but what is inside it changes: part covers the interest owed for the period and the rest reduces the amount you borrowed. Because the balance keeps shrinking, the interest part shrinks with it, so more of each payment goes to principal as the loan matures. An <strong>amortization schedule</strong> lists every payment with its interest, principal and remaining balance.</p>
+      <h2>The payment formula</h2>
+      <p>For a loan of <em>P</em> at monthly rate <em>r</em> (the yearly rate divided by 12) over <em>n</em> months, the payment is <strong>P &times; r &divide; (1 &minus; (1 + r)<sup>&minus;n</sup>)</strong>. Each month, interest is the balance times <em>r</em>, principal is the payment minus that interest, and the new balance is the old balance minus principal. At a 0% rate the payment is simply the loan divided by the number of months.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>Borrow $200,000 at 6% for 15 years (180 payments). The payment is <strong>$1,687.71</strong> a month, you pay back $303,788.46 in total and <strong>$103,788.46</strong> of that is interest. The first month&rsquo;s interest is $200,000 &times; 0.5% = $1,000.00, so only $687.71 of the first payment reduces the balance.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">Where the $303,788 paid on the default loan goes</title><desc id="cf4-d">On $200,000 at 6% over 15 years you pay back $303,788, of which $103,788 is interest.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the $303,788 paid on the default loan goes</text><rect class="bar" x="14.0" y="42" width="323.9" height="30" fill="#2563eb"/><text x="176.0" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">66%</text><rect class="bar" x="337.9" y="42" width="168.1" height="30" fill="#10b981"/><text x="422.0" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">34%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Principal: <tspan font-weight="700">$200,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Interest: <tspan font-weight="700">$103,788</tspan></text></svg><figcaption>Even at 6% over 15 years, interest is a large share of what you repay.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Year</th><th>Interest paid</th><th>Principal paid</th><th>Ending balance</th></tr></thead><tbody><tr><td>1</td><td>$11,769</td><td>$8,483</td><td>$191,517</td></tr><tr><td>2</td><td>$11,246</td><td>$9,007</td><td>$182,510</td></tr><tr><td>3</td><td>$10,690</td><td>$9,562</td><td>$172,948</td></tr><tr><td>5</td><td>$9,475</td><td>$10,778</td><td>$152,018</td></tr><tr><td>8</td><td>$7,355</td><td>$12,898</td><td>$115,529</td></tr><tr><td>10</td><td>$5,715</td><td>$14,538</td><td>$87,298</td></tr><tr><td>12</td><td>$3,866</td><td>$16,387</td><td>$55,477</td></tr><tr><td>15</td><td>$643</td><td>$19,609</td><td>$0</td></tr></tbody></table></div>
+      <h2>Why the split changes over time</h2>
+      <p>Interest is charged only on the balance still owed, so it is largest in the first year and smallest in the last. Two $200,000 loans at 6% show the effect: the first accrues $1,000 of interest in its first month; a loan with only $20,000 left accrues about $100. The payment is flat while the interest fades and the principal grows.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Share of the yearly payments that is interest (default 15-year loan)</title><desc id="cf2-d">In year 1 about 58% of what you pay is interest; by year 14 only 9% is.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Share of the yearly payments that is interest (default 15-year loan)</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">Year 1</text><rect class="bar" x="70" y="44" width="358.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">58%</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">Year 3</text><rect class="bar" x="70" y="78" width="325.2" height="22" rx="4" fill="#f59e0b"/><text x="403.2" y="94" font-size="13" font-weight="700" fill="#111827">53%</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">Year 5</text><rect class="bar" x="70" y="112" width="288.2" height="22" rx="4" fill="#10b981"/><text x="366.2" y="128" font-size="13" font-weight="700" fill="#111827">47%</text><text x="62" y="162" text-anchor="end" font-size="13" fill="#6b7280">Year 8</text><rect class="bar" x="70" y="146" width="223.7" height="22" rx="4" fill="#10b981"/><text x="301.7" y="162" font-size="13" font-weight="700" fill="#111827">36%</text><text x="62" y="196" text-anchor="end" font-size="13" fill="#6b7280">Year 11</text><rect class="bar" x="70" y="180" width="146.6" height="22" rx="4" fill="#10b981"/><text x="224.6" y="196" font-size="13" font-weight="700" fill="#111827">24%</text><text x="62" y="230" text-anchor="end" font-size="13" fill="#6b7280">Year 14</text><rect class="bar" x="70" y="214" width="54.2" height="22" rx="4" fill="#10b981"/><text x="132.2" y="230" font-size="13" font-weight="700" fill="#111827">9%</text></svg><figcaption>The payment stays the same; the part that is interest steadily falls.</figcaption></figure>
+      <h2>Comparing loan terms</h2>
+      <p>For a 30-year loan at 6% the payment on $200,000 is about <strong>$1,199.10</strong>. In the first month about $1,000.00 is interest and $199.10 is principal. The longer the term, the lower the payment and the more interest you pay overall:</p>
+      <div class="calc-table"><table><thead><tr><th>Term</th><th>Monthly payment</th><th>Total interest</th></tr></thead><tbody><tr><td>10 years</td><td>$2,220.41</td><td>$66,449.20</td></tr><tr><td>15 years</td><td>$1,687.71</td><td>$103,788.46</td></tr><tr><td>20 years</td><td>$1,432.86</td><td>$143,886.91</td></tr><tr><td>30 years</td><td>$1,199.10</td><td>$231,676.38</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Total interest on $200,000 at 6% by loan term</title><desc id="cf3-d">A 30-year term has the lowest payment ($1,199.10) but costs $231,676 in interest, nearly 2.2 times as much as the 15-year loan.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Total interest on $200,000 at 6% by loan term</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">10 years</text><rect class="bar" x="80" y="44" width="99.8" height="22" rx="4" fill="#9ca3af"/><text x="187.8" y="60" font-size="13" font-weight="700" fill="#111827">$66,449</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">15 years</text><rect class="bar" x="80" y="78" width="155.9" height="22" rx="4" fill="#2563eb"/><text x="243.9" y="94" font-size="13" font-weight="700" fill="#111827">$103,788</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">20 years</text><rect class="bar" x="80" y="112" width="216.1" height="22" rx="4" fill="#9ca3af"/><text x="304.1" y="128" font-size="13" font-weight="700" fill="#111827">$143,887</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">30 years</text><rect class="bar" x="80" y="146" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">$231,676</text></svg><figcaption>Cutting the term saves far more interest than the higher payment costs.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Remaining balance on $200,000 at 6%: 15-year vs 30-year term</title><desc id="cf1-d">After 15 years the 15-year loan is paid off while the 30-year loan still owes $142,098.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Remaining balance on $200,000 at 6%: 15-year vs 30-year term</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0k</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$54k</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$108k</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$162k</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$216k</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="132.7" y="194" text-anchor="middle" font-size="11" fill="#6b7280">5</text><text x="207.3" y="194" text-anchor="middle" font-size="11" fill="#6b7280">10</text><text x="282.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">15</text><text x="356.7" y="194" text-anchor="middle" font-size="11" fill="#6b7280">20</text><text x="431.3" y="194" text-anchor="middle" font-size="11" fill="#6b7280">25</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">30</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Years</text><polyline class="draw" style="--len:468" points="58.0,59.3 72.9,60.8 87.9,62.3 102.8,63.9 117.7,65.6 132.7,67.4 147.6,69.4 162.5,71.4 177.5,73.6 192.4,75.9 207.3,78.4 222.3,81.0 237.2,83.7 252.1,86.7 267.1,89.8 282.0,93.1 296.9,96.6 311.9,100.4 326.8,104.3 341.7,108.5 356.7,113.0 371.6,117.7 386.5,122.8 401.5,128.1 416.4,133.8 431.3,139.8 446.3,146.2 461.2,153.0 476.1,160.2 491.1,167.9 506.0,176.0" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">30-year term</text><polyline class="draw" style="--len:479" points="58.0,59.3 72.9,64.3 87.9,69.5 102.8,75.1 117.7,81.0 132.7,87.3 147.6,94.0 162.5,101.1 177.5,108.6 192.4,116.6 207.3,125.1 222.3,134.1 237.2,143.6 252.1,153.8 267.1,164.6 282.0,176.0 296.9,176.0 311.9,176.0 326.8,176.0 341.7,176.0 356.7,176.0 371.6,176.0 386.5,176.0 401.5,176.0 416.4,176.0 431.3,176.0 446.3,176.0 461.2,176.0 476.1,176.0 491.1,176.0 506.0,176.0" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="246" y="40" font-size="11.5" fill="#374151">15-year term</text></svg><figcaption>The 15-year balance falls faster from the start, because less of each payment is lost to interest.</figcaption></figure>
+      <h2>What extra payments do</h2>
+      <p>Tick <strong>Optional: make extra payments</strong> to add an extra monthly amount, an extra yearly amount, and up to ten one-time payments, each with its own date. In this calculator the extra goes straight to principal after the scheduled payment, so the scheduled payment stays the same and the loan ends sooner. For the default loan:</p>
+      <div class="calc-table"><table><thead><tr><th>Extra payment</th><th>Paid off in</th><th>Total interest</th><th>Interest saved</th></tr></thead><tbody><tr><td>None</td><td>15 years</td><td>$103,788</td><td>$0</td></tr><tr><td>$200 every month</td><td>12 years 8 months</td><td>$85,558</td><td>$18,230</td></tr><tr><td>$2,000 every year</td><td>12 years 11 months</td><td>$87,039</td><td>$16,749</td></tr><tr><td>$10,000 once, at the start</td><td>13 years 10 months</td><td>$90,154</td><td>$13,635</td></tr></tbody></table></div>
+      <p>Early extra payments save much more than late ones, because a dollar paid in year one avoids many years of interest, while a dollar paid in year fourteen avoids only one. In real life, ask your lender to apply extra money to principal and check for a prepayment penalty.</p>
+      <h2>Monthly or annual schedule?</h2>
+      <p>Both views contain the same numbers. The annual view adds each year&rsquo;s interest and principal into one row, and the monthly view lists every payment with its date, so you can find the balance after a particular payment.</p>
+      <h2>Which loans fit this calculator</h2>
+      <ul><li>Fixed-rate, fixed-term loans with level payments: mortgages, auto loans, student loans and personal loans.</li><li>It does not fit credit cards, where the balance and minimum payment move independently.</li><li>It does not fit interest-only or balloon loans, which do not spread principal evenly.</li><li>It excludes taxes, insurance and PMI. Use the Mortgage Calculator for the full home payment.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Expecting an extra payment to lower the required monthly payment. It usually shortens the loan instead, unless the lender recasts it.</li><li>Comparing loans by payment alone and ignoring total interest.</li><li>Forgetting to tell the lender that extra money should go to principal.</li><li>Using this schedule for a variable-rate loan, where the rate and payment can change.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Check the monthly payment, the total interest and the date the balance reaches zero. Then open the schedule to see how much interest you have paid at each point, which tells you what you would save by paying early or refinancing. If you are weighing a different loan, compare total interest, not only the payment.</p>
+      <div class="callout">This calculator gives estimates for planning. Lenders may round differently or charge fees, so use your loan documents for exact figures. It is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="mortgage-calculator.html">Mortgage Calculator</a> &ndash; the full monthly home payment</li><li><a href="mortgage-payoff-calculator.html">Mortgage Payoff Calculator</a> &ndash; pay a mortgage off early</li><li><a href="loan-calculator.html">Loan Calculator</a> &ndash; payment, balance, rate and term</li><li><a href="auto-loan-calculator.html">Auto Loan Calculator</a> &ndash; car loan payments and costs</li><li><a href="refinance-calculator.html">Refinance Calculator</a> &ndash; replace a loan with a new one</li><li><a href="interest-rate-calculator.html">Interest Rate Calculator</a> &ndash; find the rate behind a payment</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-a-mortgage-payment-is-calculated.html">How a Mortgage Payment Is Calculated</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Does making an extra payment lower my required monthly payment?</h3>
-        <p>Usually not. This calculator keeps the scheduled payment the same, applies extra amounts to principal, and shows how a smaller balance can shorten the loan and reduce interest. Actual lender rules can differ.</p>
+        <p>Usually not. This calculator keeps the scheduled payment the same, applies extra amounts to principal and shows how a smaller balance can shorten the loan and reduce interest. Actual lender rules can differ.</p>
       </div>
       <div class="faq-item">
         <h3>Why is almost my entire early payment interest?</h3>
-        <p>Because interest is calculated on the full remaining balance, and early on that balance is close to the full loan amount. As the balance falls, so does the interest charged against it, and the principal share grows to fill the gap.</p>
+        <p>Interest is calculated on the full remaining balance, and early on that balance is close to the whole loan. As the balance falls, so does the interest, and the principal share grows to fill the gap.</p>
       </div>
       <div class="faq-item">
-        <h3>What's the difference between the annual and monthly schedule?</h3>
-        <p>They show the same underlying numbers at different resolutions — the annual view totals each year's interest and principal into one row, while the monthly view breaks every single payment out individually so you can see exactly how the balance moves month to month.</p>
+        <h3>What is the difference between the annual and monthly schedule?</h3>
+        <p>They show the same numbers at different detail. The annual view totals each year into one row, and the monthly view lists every payment so you can see how the balance moves month to month.</p>
       </div>
       <div class="faq-item">
         <h3>Can I schedule more than one lump-sum payment?</h3>
-        <p>Yes — this calculator supports up to ten separate one-time extra payments, each on its own date, on top of an optional recurring monthly or yearly extra payment.</p>
+        <p>Yes. The calculator supports up to ten separate one-time extra payments, each on its own date, on top of an optional recurring monthly or yearly extra payment.</p>
       </div>
+      <div class="faq-item">
+        <h3>Does the schedule include taxes, insurance or PMI?</h3>
+        <p>No. It covers principal and interest on a fixed-rate loan only. For a home payment with those costs, use the Mortgage Calculator.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use it for a loan with a changing rate?</h3>
+        <p>Not accurately. The schedule assumes a fixed rate and level payments, so an adjustable-rate loan can differ once the rate changes.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-amortization-and-how-could-it-affect-my-auto-loan-en-771/" rel="noopener" target="_blank">CFPB: What is amortization?</a>; <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-prepayment-penalty-en-1957/" rel="noopener" target="_blank">CFPB: What is a prepayment penalty?</a></p>
     </div>
 
   </div>
