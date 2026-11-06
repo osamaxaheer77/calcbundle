@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Square Footage Calculator for Rooms &amp; Costs | CalcBundle</title>
-<meta name="description" content="Calculate room or project square footage from length and width and estimate material cost per square foot.">
+<meta name="description" content="Calculate the square footage of a room from length and width in any unit, total several rooms, and estimate the material cost per square foot.">
 <link rel="canonical" href="https://calcbundle.net/calculators/square-footage-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Square Footage Calculator for Rooms &amp; Costs | CalcBundle">
-<meta property="og:description" content="Calculate room or project square footage from length and width and estimate material cost per square foot.">
+<meta property="og:description" content="Calculate the square footage of a room from length and width in any unit, total several rooms, and estimate the material cost per square foot.">
 <meta property="og:url" content="https://calcbundle.net/calculators/square-footage-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Square Footage Calculator for Rooms &amp; Costs | CalcBundle">
-<meta name="twitter:description" content="Calculate room or project square footage from length and width and estimate material cost per square foot.">
+<meta name="twitter:description" content="Calculate the square footage of a room from length and width in any unit, total several rooms, and estimate the material cost per square foot.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Can I mix units for length and width?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — each dimension converts independently before the area is calculated, so entering length in feet and width in meters works correctly."
+        "text": "Yes. Each dimension converts independently before the area is calculated, so entering the length in feet and the width in metres works correctly."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "How do I calculate an irregular room?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Split it into rectangles (or other simple shapes), calculate each separately, and add the results together."
+        "text": "Split it into rectangles or other simple shapes, calculate each separately and add the results together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert square feet to square metres?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply by 0.092903. For 600 square feet that is 55.74 square metres. To go the other way, multiply square metres by 10.7639."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much extra material should I buy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually 5 to 10 percent for cuts and mistakes, and more for diagonal or patterned layouts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the listing say a different square footage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Real estate listings follow local rules and measurement standards, often measuring to the outside of the walls, so they can differ from the floor area you measure inside."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the quantity field do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It multiplies the area by the number of identical rooms or sections, so you can total them in one step."
       }
     }
   ]
@@ -138,41 +170,67 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">A simple length &times; width calculation</h2>
-      <p>For a rectangular space, square footage is just length &times; width. The quantity field lets you total up several identical rooms or sections at once &mdash; useful for flooring, tiling, or paint jobs that span more than one room.</p>
-
-      <h2>Estimating project cost</h2>
-      <p>Enter a price per square foot &mdash; for materials like flooring, turf, or paint coverage &mdash; and the calculator multiplies it by the total area to give a rough project cost. This is an estimate only; always check actual material coverage rates and add a margin for waste and cuts.</p>
-      <div class="callout">For triangular, circular, or other non-rectangular spaces, use our <a href="area-calculator.html">Area Calculator</a>, which supports more shapes.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understanding the calculation</h2>
-      <p>A 12-foot-by-15-foot rectangular room has 180 square feet. At $3 per square foot, material-only cost is $540 before taxes, labour or extra waste.</p>
-      <h2>Related tools</h2>
-      <p>For tile quantity estimates, try the <a href="tile-calculator.html">Tile Calculator</a>. For other shapes, see the <a href="area-calculator.html">Area Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>A room that is 30 feet long and 20 feet wide has 30 × 20 = 600 square feet, which is 66.67 square yards or 55.74 square meters. For flooring at $5 per square foot, that is $3,000 before waste. If you have 3 identical rooms, set the quantity to 3 for 1,800 square feet in total.</p>
-
-      <h2>Tips for measuring</h2>
-      <p>Measure each wall at its longest point and split L-shaped rooms into rectangles. Do not include closets unless they get the same flooring. Buy 5 to 10 percent extra for cuts and mistakes, and more for diagonal patterns. Square footage for real estate listings follows local rules, often measured to the outside of the walls, and can differ from your own measurement.</p>
-
-      <h2>Common uses</h2>
-      <p>Use it to price flooring, paint, carpet and tile, to compare apartments, to size heating and cooling, and to estimate land.</p>
-
-      <p><strong>You might also need:</strong> <a href="area-calculator.html">Area Calculator</a>, <a href="circle-calculator.html">Circle Calculator</a>, <a href="pythagorean-theorem-calculator.html">Pythagorean Theorem Calculator</a>, <a href="triangle-calculator.html">Triangle Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Square footage is length times width. A room 30 feet by 20 feet is 600 square feet, which is 66.67 square yards or 55.74 square metres. At $5 per square foot the materials cost $3,000 before waste.</div>
+      <h2>A simple length times width calculation</h2>
+      <p>For a rectangular space, square footage is <strong>length &times; width</strong>, with both measured in feet. The calculator converts other units for you (inches, yards, metres and centimetres) and lets you set a <em>quantity</em> to total several identical rooms or sections at once. It reports the total in square feet, square yards and square metres, and, if you enter a price, a rough material cost.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>A space 30 feet long and 20 feet wide has 30 &times; 20 = <strong>600 square feet</strong>. That is <strong>66.67 square yards</strong> (divide by 9) or <strong>55.74 square metres</strong> (multiply by 0.092903). For flooring at $5 per square foot the material costs $3,000 before waste, taxes and labour. With 3 identical rooms, set the quantity to 3 for 1,800 square feet in total.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">600 square feet in other units</title><desc id="cf2-d">One square yard is 9 square feet and one square metre is about 10.76 square feet.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">600 square feet in other units</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">Square feet</text><rect class="bar" x="100" y="44" width="328.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">600</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">Square yards</text><rect class="bar" x="100" y="78" width="36.4" height="22" rx="4" fill="#9ca3af"/><text x="144.4" y="94" font-size="13" font-weight="700" fill="#111827">66.67</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">Square metres</text><rect class="bar" x="100" y="112" width="30.5" height="22" rx="4" fill="#10b981"/><text x="138.5" y="128" font-size="13" font-weight="700" fill="#111827">55.74</text></svg><figcaption>The same area, three ways.</figcaption></figure>
+      <p>A smaller example: a 12-foot by 15-foot room is 180 square feet, and at $3 per square foot the material cost is $540 before taxes, labour or extra waste.</p>
+      <h2>Mixing units</h2>
+      <p>Each dimension is converted separately before the area is calculated, so you can enter the length in metres and the width in feet. A room 10 metres by 12 feet is 32.81 &times; 12 = 393.7 square feet.</p>
+      <h2>Common room sizes</h2>
+      <div class="calc-table"><table><thead><tr><th>Room size</th><th>Square feet</th><th>Square yards</th><th>Square metres</th></tr></thead><tbody><tr><td>10 x 10 ft</td><td>100</td><td>11.11</td><td>9.29</td></tr><tr><td>12 x 12 ft</td><td>144</td><td>16</td><td>13.38</td></tr><tr><td>12 x 15 ft</td><td>180</td><td>20</td><td>16.72</td></tr><tr><td>15 x 20 ft</td><td>300</td><td>33.33</td><td>27.87</td></tr><tr><td>20 x 30 ft</td><td>600</td><td>66.67</td><td>55.74</td></tr><tr><td>30 x 40 ft</td><td>1,200</td><td>133.33</td><td>111.48</td></tr></tbody></table></div>
+      <h2>Estimating cost</h2>
+      <p>Enter a price per square foot for flooring, turf, paint coverage or other material and the calculator multiplies it by the total area. It is an estimate only: always check the actual coverage rates and add a margin for waste and cuts, usually 5 to 10 percent, and more for diagonal patterns.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Cost of 600 square feet by price per square foot</title><desc id="cf1-d">At $5 a square foot the default room costs $3,000; with 10% extra material for waste it is $3,300.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Cost of 600 square feet by price per square foot</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">$2 per sq ft</text><rect class="bar" x="110" y="44" width="53.0" height="22" rx="4" fill="#9ca3af"/><text x="171.0" y="60" font-size="13" font-weight="700" fill="#111827">$1,200</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">$3 per sq ft</text><rect class="bar" x="110" y="78" width="79.5" height="22" rx="4" fill="#9ca3af"/><text x="197.5" y="94" font-size="13" font-weight="700" fill="#111827">$1,800</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">$5 per sq ft</text><rect class="bar" x="110" y="112" width="132.5" height="22" rx="4" fill="#2563eb"/><text x="250.5" y="128" font-size="13" font-weight="700" fill="#111827">$3,000</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">$8 per sq ft</text><rect class="bar" x="110" y="146" width="212.0" height="22" rx="4" fill="#9ca3af"/><text x="330.0" y="162" font-size="13" font-weight="700" fill="#111827">$4,800</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">$12 per sq ft</text><rect class="bar" x="110" y="180" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">$7,200</text></svg><figcaption>Price per square foot changes the bill in a straight line.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Price per sq ft</th><th>Cost for 600 sq ft</th><th>With 10% waste</th></tr></thead><tbody><tr><td>$2.00</td><td>$1,200</td><td>$1,320</td></tr><tr><td>$3.00</td><td>$1,800</td><td>$1,980</td></tr><tr><td>$5.00</td><td>$3,000</td><td>$3,300</td></tr><tr><td>$8.00</td><td>$4,800</td><td>$5,280</td></tr><tr><td>$12.00</td><td>$7,200</td><td>$7,920</td></tr></tbody></table></div>
+      <h2>Irregular rooms</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">An L-shaped room split into two rectangles (square feet)</title><desc id="cf3-d">Split any irregular space into rectangles, find each area and add them: 140 + 48 = 188 square feet.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">An L-shaped room split into two rectangles (square feet)</text><text x="132" y="60" text-anchor="end" font-size="13" fill="#6b7280">Rectangle A: 14 x 10</text><rect class="bar" x="140" y="44" width="214.5" height="22" rx="4" fill="#2563eb"/><text x="362.5" y="60" font-size="13" font-weight="700" fill="#111827">140</text><text x="132" y="94" text-anchor="end" font-size="13" fill="#6b7280">Rectangle B: 6 x 8</text><rect class="bar" x="140" y="78" width="73.5" height="22" rx="4" fill="#10b981"/><text x="221.5" y="94" font-size="13" font-weight="700" fill="#111827">48</text><text x="132" y="128" text-anchor="end" font-size="13" fill="#6b7280">Total area</text><rect class="bar" x="140" y="112" width="288.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">188</text></svg><figcaption>Split, calculate, add.</figcaption></figure>
+      <ul><li>Measure each wall at its longest point and split L-shaped rooms into rectangles.</li><li>For triangles, circles or other shapes use the Area Calculator, which supports more shapes.</li><li>Do not include closets unless they will get the same flooring.</li><li>Subtract a built-in feature, such as a kitchen island, only if it will not be covered.</li></ul>
+      <h2>Square footage in real estate</h2>
+      <p>Listings follow local rules and industry standards and can differ from your own measurement. The ANSI standard used by many appraisers for single-family homes measures finished above-grade area to the outside of the exterior walls and reports basement area separately, so a listing can show a larger figure than the floor area you would carpet. Always measure the actual floor you plan to cover.</p>
+      <h2>Larger areas and price per square foot</h2>
+      <p>For land, one acre is 43,560 square feet, so a quarter-acre lot is 10,890 square feet. To compare homes, divide the price by the area: a $360,000 house with 1,800 square feet costs $200 per square foot, and one with 2,400 square feet at the same price costs $150. Compare homes using the same measuring rule, since listings may include or leave out areas such as basements and garages.</p>
+      <h2>Measuring tips</h2>
+      <ul><li>Use a tape measure or laser measure along the floor, not the top of a baseboard, and round to the nearest half inch.</li><li>Measure twice, and measure the longest and shortest points of a room that is not perfectly square.</li><li>Write each dimension down in one unit before entering it, to avoid mixing feet and inches in one box.</li></ul>
+      <h2>Where square footage is used</h2>
+      <ul><li>Pricing flooring, paint, carpet and tile.</li><li>Comparing apartments and homes.</li><li>Sizing heating and cooling.</li><li>Estimating land and garden areas.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing square feet and linear feet.</li><li>Forgetting to multiply by the quantity of rooms.</li><li>Using the listing's square footage to buy flooring.</li><li>Not allowing for waste.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the total area in square feet, with square yards and square metres below it and the estimated cost if you entered a price. For tile quantities use the Tile Calculator, and for materials by volume see the Concrete, Gravel and Mulch calculators.</p>
+      <div class="callout">This calculator measures rectangles. Measure your actual space and check with your supplier before ordering.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="area-calculator.html">Area Calculator</a> &ndash; area of many shapes</li><li><a href="tile-calculator.html">Tile Calculator</a> &ndash; tiles for a floor or wall</li><li><a href="concrete-calculator.html">Concrete Calculator</a> &ndash; concrete volume</li><li><a href="roofing-calculator.html">Roofing Calculator</a> &ndash; roof materials</li><li><a href="mulch-calculator.html">Mulch Calculator</a> &ndash; mulch for garden beds</li><li><a href="conversion-calculator.html">Conversion Calculator</a> &ndash; convert units</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Can I mix units for length and width?</h3>
-        <p>Yes &mdash; each dimension converts independently before the area is calculated, so entering length in feet and width in meters works correctly.</p>
+        <p>Yes. Each dimension converts independently before the area is calculated, so entering the length in feet and the width in metres works correctly.</p>
       </div>
       <div class="faq-item">
         <h3>How do I calculate an irregular room?</h3>
-        <p>Split it into rectangles (or other simple shapes), calculate each separately, and add the results together.</p>
+        <p>Split it into rectangles or other simple shapes, calculate each separately and add the results together.</p>
       </div>
+      <div class="faq-item">
+        <h3>How do I convert square feet to square metres?</h3>
+        <p>Multiply by 0.092903. For 600 square feet that is 55.74 square metres. To go the other way, multiply square metres by 10.7639.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much extra material should I buy?</h3>
+        <p>Usually 5 to 10 percent for cuts and mistakes, and more for diagonal or patterned layouts.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the listing say a different square footage?</h3>
+        <p>Real estate listings follow local rules and measurement standards, often measuring to the outside of the walls, so they can differ from the floor area you measure inside.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does the quantity field do?</h3>
+        <p>It multiplies the area by the number of identical rooms or sections, so you can total them in one step.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.nist.gov/pml/special-publication-811" rel="noopener" target="_blank">NIST SP 811: Guide for the Use of the International System of Units</a>; <a href="https://www.homeinnovation.com/services/national_standards/square_footage_method_standard_faq" rel="noopener" target="_blank">Home Innovation Research Labs: ANSI square footage standard FAQ</a></p>
     </div>
 
   </div>
