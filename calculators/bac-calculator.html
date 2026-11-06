@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BAC Calculator: Alcohol Level Estimate & Time | CalcBundle</title>
-<meta name="description" content="Estimate possible blood alcohol concentration from reported drinks and elapsed time; never use it to decide whether driving is safe.">
+<title>BAC Calculator: Estimate Blood Alcohol Level</title>
+<meta name="description" content="Estimate blood alcohol concentration from standard drinks, body weight, sex and hours since the first drink, using the Widmark formula. Education only.">
 <link rel="canonical" href="https://calcbundle.net/calculators/bac-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="BAC Calculator: Alcohol Level Estimate & Time | CalcBundle">
-<meta property="og:description" content="Estimate possible blood alcohol concentration from reported drinks and elapsed time; never use it to decide whether driving is safe.">
+<meta property="og:title" content="BAC Calculator: Estimate Blood Alcohol Level">
+<meta property="og:description" content="Estimate blood alcohol concentration from standard drinks, body weight, sex and hours since the first drink, using the Widmark formula. Education only.">
 <meta property="og:url" content="https://calcbundle.net/calculators/bac-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-fitness.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BAC Calculator: Alcohol Level Estimate & Time | CalcBundle">
-<meta name="twitter:description" content="Estimate possible blood alcohol concentration from reported drinks and elapsed time; never use it to decide whether driving is safe.">
+<meta name="twitter:title" content="BAC Calculator: Estimate Blood Alcohol Level">
+<meta name="twitter:description" content="Estimate blood alcohol concentration from standard drinks, body weight, sex and hours since the first drink, using the Widmark formula. Education only.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-fitness.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What's the legal driving limit?",
+      "name": "What is a standard drink?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "In the US, 0.08% is the standard legal limit for drivers 21+, with stricter limits for commercial drivers and those under 21. Limits vary by country and jurisdiction — and impairment can begin well below any legal limit."
+        "text": "In the United States, a standard drink contains about 14 grams of pure alcohol. That is roughly a 12-ounce beer at 5 percent, a 5-ounce glass of wine at 12 percent, or a 1.5-ounce shot of 40 percent spirits."
       }
     },
     {
       "@type": "Question",
-      "name": "Does food or time slow down BAC increase?",
+      "name": "How does the Widmark formula work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — food slows alcohol absorption, and BAC only decreases once your liver has had time to metabolize the alcohol, at a fairly constant rate over time. Neither coffee nor a cold shower speeds this up."
+        "text": "It divides the grams of alcohol by body weight in grams times a distribution ratio of 0.68 for men and 0.55 for women, multiplies by 100, and subtracts 0.015 percentage points for each hour since the first drink."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is a BAC calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is rough. Food, drinking pattern, body composition, medication and health all change the real level, and even in good conditions the model can be about 20 percent off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this to decide whether I can drive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is not a test of fitness to drive. Impairment can begin well below the legal limit, and no calculator can say you are safe. If you have been drinking, do not drive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the result differ for men and women?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formula uses a lower distribution ratio for women, 0.55 against 0.68 for men, based on average differences in body water. That makes the estimate about 24 percent higher for the same weight and drinks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does coffee or a shower sober you up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Only time lowers blood alcohol, at a fairly steady rate."
       }
     }
   ]
@@ -131,34 +163,63 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What counts as a "standard drink"</h2>
-      <p>In the US, a standard drink contains about 14 grams of pure alcohol &mdash; roughly a 12 oz beer at 5% ABV, a 5 oz glass of wine at 12% ABV, or a 1.5 oz shot of 40%-ABV liquor. Stronger or larger pours count as more than one standard drink.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Blood alcohol is estimated with the Widmark formula from standard drinks of 14 g, body weight and time. For a 155 lb man with 2 drinks over 2 hours the estimate is 0.029%. It is rough and never a guide to driving.</div>
+      <div class="callout">This calculator gives a rough estimate for education. It cannot tell you whether you are safe to drive, and no calculator can. If you have been drinking, do not drive.</div>
+      <h2>What counts as a standard drink</h2>
+      <p>In the United States, one standard drink contains about <strong>14 grams</strong> of pure alcohol, which is 0.6 fluid ounces. The National Institute on Alcohol Abuse and Alcoholism lists these examples: a 12-ounce can of regular beer at 5% alcohol by volume, a 5-ounce glass of wine at 12%, and a 1.5-ounce shot of distilled spirits at 40%. Stronger or larger pours count as more than one standard drink. Craft beers, large wine glasses and mixed drinks often hold more than one.</p>
       <h2>The Widmark formula</h2>
-      <p>This uses the classic Widmark equation: BAC = (alcohol grams &divide; (body weight in grams &times; distribution ratio)) &times; 100, then subtracts an elimination rate of about 0.015% per hour to account for metabolism since your first drink. The distribution ratio (about 0.68 for men, 0.55 for women) reflects average differences in body water content, which affects how diluted the alcohol becomes.</p>
-      <div class="callout">Individual results vary widely based on metabolism, food intake, medications, and other factors the formula can't account for. Treat this as a rough estimate, never as a basis for deciding to drive.</div>
-
-      <!--seo-extra-->
-<h2>Worked example and interpretation</h2><p>A beverage containing 14 grams of pure ethanol is often treated as about one U.S. standard drink; serving sizes and strengths vary. Blood alcohol concentration cannot be reliably established from drink count alone.</p><h2>Related calculators and context</h2><p>This estimate is not a sobriety or fitness-to-drive test. For body measurement contexts, see the <a href="body-surface-area-calculator.html">Body Surface Area Calculator</a>; no body measurement can establish that driving is safe after alcohol.</p>
-      <h2>A worked example</h2>
-      <p>Using the starting values on the page, a person who weighs 155 pounds and has had 2 standard drinks over 2 hours has an estimated blood alcohol concentration of about 0.029%, and it would take around 1.9 hours to fall back to 0.00%. Change the number of drinks or the hours and watch how quickly the estimate moves: each extra drink adds roughly the same amount, while time removes about 0.015% an hour.</p>
-
-      <h2>Tips and limits</h2>
-      <p>This is a rough estimate based on the Widmark formula. Real blood alcohol depends on sex, body composition, food eaten, how fast the drinks were taken, medication and individual metabolism, so two people of the same weight can differ a great deal. Count drinks honestly: a restaurant pour or a craft beer can be two standard drinks. The only safe amount before driving is none, and the legal limit does not mean you are safe to drive.</p>
-
-      <p><strong>You might also need:</strong> <a href="gfr-calculator.html">GFR Calculator</a>, <a href="bmi-calculator.html">BMI Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p>The calculator uses the classic Widmark equation: <strong>BAC = alcohol in grams &divide; (body weight in grams &times; distribution ratio) &times; 100</strong>, then subtracts an elimination rate of 0.015 percentage points per hour for the time since the first drink. The distribution ratio, 0.68 for men and 0.55 for women, reflects average differences in body water, which changes how diluted the alcohol becomes. It is an average, not a measurement of you.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens with a man weighing <strong>155 lb</strong> (70.31 kg) who has had <strong>2 standard drinks</strong>, with <strong>2 hours</strong> since the first drink. The alcohol is 2 &times; 14 = 28 g. The raw estimate is 28 &divide; (70,306.7 &times; 0.68) &times; 100 = 0.0586%. Two hours of elimination take off 2 &times; 0.015 = 0.030, which leaves <strong>0.029%</strong>. The tool says &ldquo;Mild impairment possible.&rdquo; and that it would take about <strong>1.9 hours</strong> to reach 0.00%.</p>
+      <h2>Drinks, sex and weight</h2>
+      <p>Right after drinking, with no time for elimination, these are the estimates for a 155 lb person:</p>
+      <div class="calc-table"><table><thead><tr><th>Drinks</th><th>Man, BAC</th><th>Man, time to 0</th><th>Woman, BAC</th><th>Woman, time to 0</th></tr></thead><tbody><tr><td>1</td><td>0.029%</td><td>2.0 hours</td><td>0.036%</td><td>2.4 hours</td></tr><tr><td>2</td><td>0.059%</td><td>3.9 hours</td><td>0.072%</td><td>4.8 hours</td></tr><tr><td>3</td><td>0.088%</td><td>5.9 hours</td><td>0.109%</td><td>7.2 hours</td></tr><tr><td>4</td><td>0.117%</td><td>7.8 hours</td><td>0.145%</td><td>9.7 hours</td></tr><tr><td>5</td><td>0.146%</td><td>9.8 hours</td><td>0.181%</td><td>12.1 hours</td></tr><tr><td>6</td><td>0.176%</td><td>11.7 hours</td><td>0.217%</td><td>14.5 hours</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 318" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Estimated BAC right after drinking, for a 155 lb man and a 155 lb woman (percent)</title><desc id="cf1-d">For the same drinks and weight, the estimate is about 24% higher for a woman, because the Widmark ratio is 0.55 against 0.68.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Estimated BAC right after drinking, for a 155 lb man and a 155 lb woman (percent)</text><text x="142" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 drinks, man</text><rect class="bar" x="150" y="44" width="55.6" height="22" rx="4" fill="#2563eb"/><text x="213.6" y="60" font-size="13" font-weight="700" fill="#111827">0.029%</text><text x="142" y="94" text-anchor="end" font-size="13" fill="#6b7280">2 drinks, man</text><rect class="bar" x="150" y="78" width="113.1" height="22" rx="4" fill="#2563eb"/><text x="271.1" y="94" font-size="13" font-weight="700" fill="#111827">0.059%</text><text x="142" y="128" text-anchor="end" font-size="13" fill="#6b7280">3 drinks, man</text><rect class="bar" x="150" y="112" width="168.7" height="22" rx="4" fill="#2563eb"/><text x="326.7" y="128" font-size="13" font-weight="700" fill="#111827">0.088%</text><text x="142" y="162" text-anchor="end" font-size="13" fill="#6b7280">4 drinks, man</text><rect class="bar" x="150" y="146" width="224.3" height="22" rx="4" fill="#2563eb"/><text x="382.3" y="162" font-size="13" font-weight="700" fill="#111827">0.117%</text><text x="142" y="196" text-anchor="end" font-size="13" fill="#6b7280">1 drinks, woman</text><rect class="bar" x="150" y="180" width="69.0" height="22" rx="4" fill="#dc2626"/><text x="227.0" y="196" font-size="13" font-weight="700" fill="#111827">0.036%</text><text x="142" y="230" text-anchor="end" font-size="13" fill="#6b7280">2 drinks, woman</text><rect class="bar" x="150" y="214" width="138.0" height="22" rx="4" fill="#dc2626"/><text x="296.0" y="230" font-size="13" font-weight="700" fill="#111827">0.072%</text><text x="142" y="264" text-anchor="end" font-size="13" fill="#6b7280">3 drinks, woman</text><rect class="bar" x="150" y="248" width="209.0" height="22" rx="4" fill="#dc2626"/><text x="367.0" y="264" font-size="13" font-weight="700" fill="#111827">0.109%</text><text x="142" y="298" text-anchor="end" font-size="13" fill="#6b7280">4 drinks, woman</text><rect class="bar" x="150" y="282" width="278.0" height="22" rx="4" fill="#dc2626"/><text x="436.0" y="298" font-size="13" font-weight="700" fill="#111827">0.145%</text></svg><figcaption>The same drinks give a higher estimate for a lighter or smaller person.</figcaption></figure>
+      <p>Weight matters. For 2 drinks right after drinking, the estimate for a man is as follows:</p>
+      <div class="calc-table"><table><thead><tr><th>Weight</th><th>Man, 2 drinks</th><th>Woman, 2 drinks</th></tr></thead><tbody><tr><td>120 lb</td><td>0.076%</td><td>0.094%</td></tr><tr><td>155 lb</td><td>0.059%</td><td>0.072%</td></tr><tr><td>200 lb</td><td>0.045%</td><td>0.056%</td></tr></tbody></table></div>
+      <h2>Time since the first drink</h2>
+      <p>The formula removes 0.015 percentage points an hour, a steady rate that is an average. Real rates vary between people. For 4 drinks and a 155 lb man, the estimate falls like this:</p>
+      <div class="calc-table"><table><thead><tr><th>Hours since first drink</th><th>Estimated BAC</th><th>Hours to reach 0</th></tr></thead><tbody><tr><td>0</td><td>0.117%</td><td>7.8</td></tr><tr><td>1</td><td>0.102%</td><td>6.8</td></tr><tr><td>2</td><td>0.087%</td><td>5.8</td></tr><tr><td>3</td><td>0.072%</td><td>4.8</td></tr><tr><td>4</td><td>0.057%</td><td>3.8</td></tr><tr><td>5</td><td>0.042%</td><td>2.8</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">How the estimate falls with time: 4 drinks, 155 lb man (percent BAC)</title><desc id="cf2-d">The estimate falls by 0.015 percentage points an hour, so from 0.117% it takes about 7.8 hours to reach zero.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">How the estimate falls with time: 4 drinks, 155 lb man (percent BAC)</text><text x="182" y="60" text-anchor="end" font-size="13" fill="#6b7280">0 h after the first drink</text><rect class="bar" x="190" y="44" width="238.0" height="22" rx="4" fill="#dc2626"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">0.117%</text><text x="182" y="94" text-anchor="end" font-size="13" fill="#6b7280">1 h after the first drink</text><rect class="bar" x="190" y="78" width="207.5" height="22" rx="4" fill="#dc2626"/><text x="405.5" y="94" font-size="13" font-weight="700" fill="#111827">0.102%</text><text x="182" y="128" text-anchor="end" font-size="13" fill="#6b7280">2 h after the first drink</text><rect class="bar" x="190" y="112" width="177.0" height="22" rx="4" fill="#dc2626"/><text x="375.0" y="128" font-size="13" font-weight="700" fill="#111827">0.087%</text><text x="182" y="162" text-anchor="end" font-size="13" fill="#6b7280">3 h after the first drink</text><rect class="bar" x="190" y="146" width="146.6" height="22" rx="4" fill="#f59e0b"/><text x="344.6" y="162" font-size="13" font-weight="700" fill="#111827">0.072%</text><text x="182" y="196" text-anchor="end" font-size="13" fill="#6b7280">4 h after the first drink</text><rect class="bar" x="190" y="180" width="116.1" height="22" rx="4" fill="#f59e0b"/><text x="314.1" y="196" font-size="13" font-weight="700" fill="#111827">0.057%</text><text x="182" y="230" text-anchor="end" font-size="13" fill="#6b7280">5 h after the first drink</text><rect class="bar" x="190" y="214" width="85.6" height="22" rx="4" fill="#f59e0b"/><text x="283.6" y="230" font-size="13" font-weight="700" fill="#111827">0.042%</text></svg><figcaption>Time lowers the estimate, but slowly.</figcaption></figure>
+      <h2>What the messages mean</h2>
+      <div class="calc-table"><table><thead><tr><th>Estimated BAC</th><th>Message</th></tr></thead><tbody><tr><td>0.000%</td><td>No measurable impairment estimated.</td></tr><tr><td>Under 0.030%</td><td>Mild impairment possible.</td></tr><tr><td>0.030% to under 0.080%</td><td>Noticeable impairment likely.</td></tr><tr><td>0.080% to under 0.150%</td><td>Significant impairment, above the US legal driving limit.</td></tr><tr><td>0.150% and above</td><td>Severe impairment, risk of serious harm.</td></tr></tbody></table></div>
+      <p>A level of 0.08% is the legal limit for driving in most US states. Other countries and some US states set lower limits, and limits for drivers under 21, commercial drivers and some other groups can be much lower or zero. Impairment can begin well below any legal limit.</p>
+      <h2>Why this is only a rough estimate</h2>
+      <ul><li><strong>It is an average.</strong> The Widmark model works best a few hours after a single dose in a fasted state, and even then its error can be around 20%.</li><li><strong>Food and drinking pattern.</strong> Eating, drinking quickly and spacing drinks over hours all change the real peak.</li><li><strong>Body and health.</strong> Body fat, age, medications, health conditions and liver function all change how alcohol is handled.</li><li><strong>Drink strength.</strong> The tool counts standard drinks of 14 g. Your drinks may contain more.</li><li><strong>Rising BAC.</strong> BAC can keep rising for a while after you stop drinking, so an estimate taken at the last drink can be too low.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using the result to decide whether to drive. Do not.</li><li>Counting a large cocktail or a tall pour as one drink.</li><li>Leaving out the hours since the first drink, or counting from the last drink.</li><li>Assuming coffee, water or a shower lowers the BAC. Only time does.</li><li>Entering the weight in the wrong unit.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the estimated BAC as a percentage. Below it are the hours until the estimate reaches zero and a short message. Treat all three as a rough illustration of how drink count, weight, sex and time interact, and as a reminder that the only safe amount to drive on is none.</p>
+      <h2>What to do next</h2>
+      <ul><li><a href="body-surface-area-calculator.html">Body Surface Area Calculator</a> &ndash; surface area for dosing</li><li><a href="tdee-calculator.html">TDEE Calculator</a> &ndash; daily calorie needs</li><li><a href="macro-calculator.html">Macro Calculator</a> &ndash; protein, carbs and fat targets</li><li><a href="weight-calculator.html">Weight Calculator</a> &ndash; convert kg and pounds</li><li><a href="sleep-calculator.html">Sleep Calculator</a> &ndash; bedtimes and wake-up times</li><li><a href="bmi-calculator.html">BMI Calculator</a> &ndash; height and weight screening</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>What's the legal driving limit?</h3>
-        <p>In the US, 0.08% is the standard legal limit for drivers 21+, with stricter limits for commercial drivers and those under 21. Limits vary by country and jurisdiction &mdash; and impairment can begin well below any legal limit.</p>
+        <h3>What is a standard drink?</h3>
+        <p>In the United States, a standard drink contains about 14 grams of pure alcohol. That is roughly a 12-ounce beer at 5 percent, a 5-ounce glass of wine at 12 percent, or a 1.5-ounce shot of 40 percent spirits.</p>
       </div>
       <div class="faq-item">
-        <h3>Does food or time slow down BAC increase?</h3>
-        <p>Yes &mdash; food slows alcohol absorption, and BAC only decreases once your liver has had time to metabolize the alcohol, at a fairly constant rate over time. Neither coffee nor a cold shower speeds this up.</p>
+        <h3>How does the Widmark formula work?</h3>
+        <p>It divides the grams of alcohol by body weight in grams times a distribution ratio of 0.68 for men and 0.55 for women, multiplies by 100, and subtracts 0.015 percentage points for each hour since the first drink.</p>
       </div>
+      <div class="faq-item">
+        <h3>How accurate is a BAC calculator?</h3>
+        <p>It is rough. Food, drinking pattern, body composition, medication and health all change the real level, and even in good conditions the model can be about 20 percent off.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use this to decide whether I can drive?</h3>
+        <p>No. It is not a test of fitness to drive. Impairment can begin well below the legal limit, and no calculator can say you are safe. If you have been drinking, do not drive.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the result differ for men and women?</h3>
+        <p>The formula uses a lower distribution ratio for women, 0.55 against 0.68 for men, based on average differences in body water. That makes the estimate about 24 percent higher for the same weight and drinks.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does coffee or a shower sober you up?</h3>
+        <p>No. Only time lowers blood alcohol, at a fairly steady rate.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.niaaa.nih.gov/alcohols-effects-health/what-standard-drink" rel="noopener" target="_blank">NIAAA: What is a standard drink?</a>; <a href="https://en.wikipedia.org/wiki/Blood_alcohol_content" rel="noopener" target="_blank">Wikipedia: Blood alcohol content</a>; <a href="https://www.niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol" rel="noopener" target="_blank">NIAAA: Core resource on alcohol</a></p>
     </div>
 
   </div>
