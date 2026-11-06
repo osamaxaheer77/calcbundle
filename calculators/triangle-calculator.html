@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Triangle Calculator: Sides, Angles &amp; Area | CalcBundle</title>
-<meta name="description" content="Find a triangle's unknown sides, angles and area from known measurements, with explanations of triangle rules.">
+<title>Triangle Calculator: Sides, Angles, Area &amp; More</title>
+<meta name="description" content="Solve a triangle from three sides (SSS), two sides and the included angle (SAS) or two angles and the included side (ASA), with area, heights and medians.">
 <link rel="canonical" href="https://calcbundle.net/calculators/triangle-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Triangle Calculator: Sides, Angles &amp; Area | CalcBundle">
-<meta property="og:description" content="Find a triangle's unknown sides, angles and area from known measurements, with explanations of triangle rules.">
+<meta property="og:title" content="Triangle Calculator: Sides, Angles, Area &amp; More">
+<meta property="og:description" content="Solve a triangle from three sides (SSS), two sides and the included angle (SAS) or two angles and the included side (ASA), with area, heights and medians.">
 <meta property="og:url" content="https://calcbundle.net/calculators/triangle-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Triangle Calculator: Sides, Angles &amp; Area | CalcBundle">
-<meta name="twitter:description" content="Find a triangle's unknown sides, angles and area from known measurements, with explanations of triangle rules.">
+<meta name="twitter:title" content="Triangle Calculator: Sides, Angles, Area &amp; More">
+<meta name="twitter:description" content="Solve a triangle from three sides (SSS), two sides and the included angle (SAS) or two angles and the included side (ASA), with area, heights and medians.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What's the inradius and circumradius?",
+      "name": "How do I find the area of a triangle from its three sides?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The inradius is the radius of the largest circle that fits entirely inside the triangle, touching all three sides. The circumradius is the radius of the circle that passes through all three vertices. Every triangle has exactly one of each."
+        "text": "Use Heron's formula. Find the semiperimeter s, which is half the perimeter, then take the square root of s times (s minus a) times (s minus b) times (s minus c). For sides 3, 4 and 5 the area is 6."
       }
     },
     {
       "@type": "Question",
-      "name": "What if my three sides can't form a triangle?",
+      "name": "What do SSS, SAS and ASA mean?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The triangle inequality requires that the sum of any two sides be greater than the third — if that's violated (say, sides 2, 3, and 10), no triangle exists with those measurements."
+        "text": "They are the ways to define a triangle: three sides (SSS), two sides and the angle between them (SAS), or two angles and the side between them (ASA)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the calculator say my sides cannot form a triangle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The sum of any two sides must be greater than the third. Sides of 2, 3 and 6 fail because 2 plus 3 is less than 6."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I find a triangle from three angles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Three angles fix the shape but not the size, so you also need at least one side."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the inradius and circumradius?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The inradius is the radius of the largest circle inside the triangle, equal to the area divided by the semiperimeter. The circumradius is the radius of the circle through all three corners."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a median of a triangle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A median is a line from a corner to the midpoint of the opposite side. The calculator gives all three. The median to the hypotenuse of a right triangle is half the hypotenuse."
       }
     }
   ]
@@ -134,41 +166,65 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Three ways to define a triangle</h2>
-      <p>A triangle is fully determined by any three of its six measurements (three sides, three angles), as long as at least one side is included &mdash; three angles alone only fix the triangle's shape, not its size. SSS (three sides), SAS (two sides and the angle between them), and ASA (two angles and the side between them) are the three most common starting points.</p>
-
-      <h2>Law of cosines and law of sines</h2>
-      <p>The law of cosines (a&sup2;=b&sup2;+c&sup2;-2bc&middot;cos A) generalizes the Pythagorean theorem to any triangle, and is what makes solving SSS and SAS possible. The law of sines (a/sin A = b/sin B = c/sin C) relates sides to their opposite angles, and is what makes solving ASA possible.</p>
-      <div class="callout">Heron's formula computes a triangle's area from its three sides alone, with no need to know any angle: Area = &radic;[s(s-a)(s-b)(s-c)], where s is the semiperimeter (half the perimeter).</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understanding the calculation</h2>
-      <p>A right triangle with legs 3 and 4 units has hypotenuse 5 units and area ½ × 3 × 4 = 6 square units. Other triangles need different angle or side relationships.</p>
-      <h2>Related tools</h2>
-      <p>For right-triangle side lengths alone, try the <a href="pythagorean-theorem-calculator.html">Pythagorean Theorem Calculator</a>. For area-only problems, use the <a href="area-calculator.html">Area Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>Enter the sides 3, 4 and 5 and the calculator shows a right scalene triangle with an area of 6 and a perimeter of 12. The angles are 36.87°, 53.13° and 90°. The inradius is 1 and the circumradius is 2.5. The heights are 4, 3 and 2.4, and the medians are 4.272, 3.606 and 2.5.</p>
-
-      <h2>Tips for solving triangles</h2>
-      <p>You need three known values, and at least one must be a side. Two sides and the angle between them (SAS) or two angles and the side between them (ASA) work as well as three sides (SSS). The angles must add up to 180°, and in a valid triangle the longest side must be shorter than the other two combined. If you know two sides and an angle that is not between them, there may be two possible triangles.</p>
-
-      <p><strong>You might also need:</strong> <a href="pythagorean-theorem-calculator.html">Pythagorean Theorem Calculator</a>, <a href="square-footage-calculator.html">Square Footage Calculator</a>, <a href="circle-calculator.html">Circle Calculator</a>, <a href="area-calculator.html">Area Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <!--next-->
-      <p><strong>What next?</strong> If one of your angles is exactly 90°, the <a href="right-triangle-calculator.html">Right Triangle Calculator</a> needs only two values and also gives the height, inradius and circumradius. For the straight-line length between two points use the <a href="distance-calculator.html">Distance Calculator</a>, and to turn a rise and run into an angle use the <a href="slope-calculator.html">Slope Calculator</a>.</p>
-      <!--/next-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Sides 3, 4 and 5 make a right scalene triangle with area 6, perimeter 12, inradius 1 and circumradius 2.5. Sides 9 and 7 with a 30&deg; angle between them give a third side of 4.57.</div>
+      <h2>What the calculator does</h2>
+      <p>Pick what you know, enter the three values, and the calculator finds everything else about the triangle: all three sides, all three angles, the area, perimeter, semiperimeter, inradius, circumradius, the three heights and the three medians. It also labels the triangle as equilateral, isosceles or scalene, and as acute, right or obtuse.</p>
+      <h2>The three ways to start</h2>
+      <ul><li><strong>SSS</strong>, three sides. The angles come from the law of cosines. The sides must satisfy the triangle inequality: any two must add up to more than the third.</li><li><strong>SAS</strong>, two sides and the angle between them. The law of cosines gives the third side, then the other two angles.</li><li><strong>ASA</strong>, two angles and the side between them. The third angle is 180&deg; minus the other two, and the law of sines gives the other sides.</li></ul>
+      <p>The tool does not offer SSA (two sides and an angle that is not between them). That case can have two answers, one answer or none, so it needs extra care and is not covered here.</p>
+      <h2>Worked example with the default numbers (SSS)</h2>
+      <p>The page opens on sides 3, 4 and 5. Since 3&sup2; + 4&sup2; = 5&sup2;, it is a <strong>Scalene (Right)</strong> triangle. The semiperimeter is s = 12 &divide; 2 = 6, and Heron&rsquo;s formula gives the area as &radic;[6 &times; 3 &times; 2 &times; 1] = <strong>6</strong>. The angles are 36.8699&deg;, 53.1301&deg; and 90&deg;. The inradius is area &divide; s = 6 &divide; 6 = <strong>1</strong> and the circumradius is 5 &divide; (2 &times; sin 90&deg;) = <strong>2.5</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Heights and medians of the 3-4-5 triangle</title><desc id="cf3-d">Each height is 2 &amp;times; area &amp;divide; the side it stands on: 2 &amp;times; 6 &amp;divide; 5 = 2.4. The median to the hypotenuse equals half of it, 2.5.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Heights and medians of the 3-4-5 triangle</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">Height to side a</text><rect class="bar" x="130" y="44" width="279.0" height="22" rx="4" fill="#2563eb"/><text x="417.0" y="60" font-size="13" font-weight="700" fill="#111827">4</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">Height to side b</text><rect class="bar" x="130" y="78" width="209.3" height="22" rx="4" fill="#2563eb"/><text x="347.3" y="94" font-size="13" font-weight="700" fill="#111827">3</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">Height to side c</text><rect class="bar" x="130" y="112" width="167.4" height="22" rx="4" fill="#2563eb"/><text x="305.4" y="128" font-size="13" font-weight="700" fill="#111827">2.4</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">Median to side a</text><rect class="bar" x="130" y="146" width="298.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">4.272</text><text x="122" y="196" text-anchor="end" font-size="13" fill="#6b7280">Median to side b</text><rect class="bar" x="130" y="180" width="251.5" height="22" rx="4" fill="#10b981"/><text x="389.5" y="196" font-size="13" font-weight="700" fill="#111827">3.60555</text><text x="122" y="230" text-anchor="end" font-size="13" fill="#6b7280">Median to side c</text><rect class="bar" x="130" y="214" width="174.4" height="22" rx="4" fill="#10b981"/><text x="312.4" y="230" font-size="13" font-weight="700" fill="#111827">2.5</text></svg><figcaption>Heights and medians of the 3-4-5 triangle.</figcaption></figure>
+      <p>The heights are 4, 3 and 2.4, and the medians are 4.272, 3.60555 and 2.5.</p>
+      <h2>Worked example: two sides and the included angle (SAS)</h2>
+      <p>With sides 9 and 7 and an included angle of 30&deg;, the law of cosines gives c&sup2; = 81 + 49 &minus; 2 &times; 9 &times; 7 &times; cos 30&deg; = 20.8808, so <strong>c = 4.5696</strong>. The calculator then finds the other angles, 100.0094&deg; and 49.9906&deg;, and an area of <strong>15.75</strong>, which also equals &frac12; &times; 9 &times; 7 &times; sin 30&deg; = 15.75. It is a Scalene (Obtuse) triangle.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Third side of a triangle with sides 9 and 7, by the included angle</title><desc id="cf2-d">The wider the angle between the two sides, the longer the third side: 4.57 at 30&amp;deg; and 15.463 at 150&amp;deg;. At 180&amp;deg; it would be 16, the two sides laid end to end.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Third side of a triangle with sides 9 and 7, by the included angle</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">30&amp;deg;</text><rect class="bar" x="70" y="44" width="105.8" height="22" rx="4" fill="#2563eb"/><text x="183.8" y="60" font-size="13" font-weight="700" fill="#111827">4.57</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">60&amp;deg;</text><rect class="bar" x="70" y="78" width="189.5" height="22" rx="4" fill="#9ca3af"/><text x="267.5" y="94" font-size="13" font-weight="700" fill="#111827">8.185</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">90&amp;deg;</text><rect class="bar" x="70" y="112" width="264.0" height="22" rx="4" fill="#9ca3af"/><text x="342.0" y="128" font-size="13" font-weight="700" fill="#111827">11.402</text><text x="62" y="162" text-anchor="end" font-size="13" fill="#6b7280">120&amp;deg;</text><rect class="bar" x="70" y="146" width="321.6" height="22" rx="4" fill="#9ca3af"/><text x="399.6" y="162" font-size="13" font-weight="700" fill="#111827">13.892</text><text x="62" y="196" text-anchor="end" font-size="13" fill="#6b7280">150&amp;deg;</text><rect class="bar" x="70" y="180" width="358.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">15.463</text></svg><figcaption>A wider included angle stretches the third side.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Included angle</th><th>Third side c</th></tr></thead><tbody><tr><td>30&deg;</td><td>4.5696</td></tr><tr><td>60&deg;</td><td>8.1854</td></tr><tr><td>90&deg;</td><td>11.4018</td></tr><tr><td>120&deg;</td><td>13.8924</td></tr><tr><td>150&deg;</td><td>15.4635</td></tr></tbody></table></div>
+      <h2>Worked example: two angles and the included side (ASA)</h2>
+      <p>With angles of 60&deg; and 60&deg; and a side of 5 between them, the third angle is 60&deg;, and the law of sines gives both other sides as 5. The result is an <strong>Equilateral (Acute)</strong> triangle with area <strong>10.8253</strong>, or &radic;3 &divide; 4 &times; 25.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Area of the three default triangles on the page (square units)</title><desc id="cf1-d">The SAS triangle has an area of 15.75 and the ASA triangle, which is equilateral with sides of 5, an area of 10.825.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Area of the three default triangles on the page (square units)</text><text x="142" y="60" text-anchor="end" font-size="13" fill="#6b7280">SSS: 3, 4, 5</text><rect class="bar" x="150" y="44" width="105.9" height="22" rx="4" fill="#2563eb"/><text x="263.9" y="60" font-size="13" font-weight="700" fill="#111827">6</text><text x="142" y="94" text-anchor="end" font-size="13" fill="#6b7280">SAS: 9, 7, 30&amp;deg;</text><rect class="bar" x="150" y="78" width="278.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">15.75</text><text x="142" y="128" text-anchor="end" font-size="13" fill="#6b7280">ASA: 60&amp;deg;, 60&amp;deg;, 5</text><rect class="bar" x="150" y="112" width="191.1" height="22" rx="4" fill="#f59e0b"/><text x="349.1" y="128" font-size="13" font-weight="700" fill="#111827">10.825</text></svg><figcaption>The three default examples compared by area.</figcaption></figure>
+      <h2>The formulas behind the answers</h2>
+      <ul><li><strong>Law of cosines:</strong> a&sup2; = b&sup2; + c&sup2; &minus; 2bc cos A. It works for any triangle and is a form of the Pythagorean theorem with a correction term.</li><li><strong>Law of sines:</strong> a &divide; sin A = b &divide; sin B = c &divide; sin C. It links each side to the opposite angle.</li><li><strong>Heron&rsquo;s formula:</strong> Area = &radic;[s(s &minus; a)(s &minus; b)(s &minus; c)], with s the semiperimeter.</li><li><strong>Inradius</strong> = area &divide; s, and <strong>circumradius</strong> = a &divide; (2 sin A).</li><li><strong>Median to side a</strong> = &frac12; &radic;(2b&sup2; + 2c&sup2; &minus; a&sup2;), and <strong>height to side a</strong> = 2 &times; area &divide; a.</li></ul>
+      <h2>Types of triangle</h2>
+      <div class="calc-table"><table><thead><tr><th>Sides</th><th>Type</th><th>Area</th><th>Perimeter</th><th>Angles</th></tr></thead><tbody><tr><td>5, 5, 5</td><td>Equilateral (Acute)</td><td>10.82532</td><td>15</td><td>60&deg;, 60&deg;, 60&deg;</td></tr><tr><td>5, 5, 6</td><td>Isosceles (Acute)</td><td>12</td><td>16</td><td>53.13&deg;, 53.13&deg;, 73.74&deg;</td></tr><tr><td>3, 4, 5</td><td>Scalene (Right)</td><td>6</td><td>12</td><td>36.87&deg;, 53.13&deg;, 90&deg;</td></tr><tr><td>2, 3, 4</td><td>Scalene (Obtuse)</td><td>2.90474</td><td>9</td><td>28.96&deg;, 46.57&deg;, 104.48&deg;</td></tr></tbody></table></div>
+      <p>The type by sides depends on how many sides are equal: all three for equilateral, two for isosceles, none for scalene. The type by angles depends on the largest angle: less than 90&deg; is acute, exactly 90&deg; is right and more than 90&deg; is obtuse.</p>
+      <h2>When no triangle exists</h2>
+      <p>Sides of 2, 3 and 6 cannot form a triangle, because 2 + 3 is not more than 6. The calculator says so instead of giving an answer. In the SAS tool the included angle must be strictly between 0&deg; and 180&deg;. In the ASA tool the two angles must add up to less than 180&deg;, since a triangle&rsquo;s three angles add up to exactly 180&deg;.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Using an angle that is not between the two given sides in the SAS tool.</li><li>Entering the angles in radians. The tool expects degrees.</li><li>Mixing units, such as one side in feet and another in inches.</li><li>Thinking three angles are enough. They fix the shape but not the size, so a side is always needed.</li><li>Expecting the area units to match the side units. If the sides are in metres, the area is in square metres.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large line names the triangle and gives the area. Below it are the sides and angles labelled to match the letters, so side a is opposite angle A. The next group shows the perimeter, semiperimeter, inradius and circumradius, and the last two lines give the heights and the medians. Values are shown to up to five decimal places.</p>
+      <div class="callout">The answers use the standard formulas, so they are exact up to rounding. Check that the units of your sides match before using the area in a real project.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="right-triangle-calculator.html">Right Triangle Calculator</a> &ndash; sides and angles of a right triangle</li><li><a href="pythagorean-theorem-calculator.html">Pythagorean Theorem Calculator</a> &ndash; the missing side of a right triangle</li><li><a href="area-calculator.html">Area Calculator</a> &ndash; the area of common shapes</li><li><a href="circle-calculator.html">Circle Calculator</a> &ndash; radius, diameter and circumference</li><li><a href="surface-area-calculator.html">Surface Area Calculator</a> &ndash; the surface area of solids</li><li><a href="scientific-calculator.html">Scientific Calculator</a> &ndash; sine, cosine and more</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>What's the inradius and circumradius?</h3>
-        <p>The inradius is the radius of the largest circle that fits entirely inside the triangle, touching all three sides. The circumradius is the radius of the circle that passes through all three vertices. Every triangle has exactly one of each.</p>
+        <h3>How do I find the area of a triangle from its three sides?</h3>
+        <p>Use Heron's formula. Find the semiperimeter s, which is half the perimeter, then take the square root of s times (s minus a) times (s minus b) times (s minus c). For sides 3, 4 and 5 the area is 6.</p>
       </div>
       <div class="faq-item">
-        <h3>What if my three sides can't form a triangle?</h3>
-        <p>The triangle inequality requires that the sum of any two sides be greater than the third &mdash; if that's violated (say, sides 2, 3, and 10), no triangle exists with those measurements.</p>
+        <h3>What do SSS, SAS and ASA mean?</h3>
+        <p>They are the ways to define a triangle: three sides (SSS), two sides and the angle between them (SAS), or two angles and the side between them (ASA).</p>
       </div>
+      <div class="faq-item">
+        <h3>Why does the calculator say my sides cannot form a triangle?</h3>
+        <p>The sum of any two sides must be greater than the third. Sides of 2, 3 and 6 fail because 2 plus 3 is less than 6.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I find a triangle from three angles?</h3>
+        <p>No. Three angles fix the shape but not the size, so you also need at least one side.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What are the inradius and circumradius?</h3>
+        <p>The inradius is the radius of the largest circle inside the triangle, equal to the area divided by the semiperimeter. The circumradius is the radius of the circle through all three corners.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a median of a triangle?</h3>
+        <p>A median is a line from a corner to the midpoint of the opposite side. The calculator gives all three. The median to the hypotenuse of a right triangle is half the hypotenuse.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Triangle" rel="noopener" target="_blank">Wikipedia: Triangle</a>; <a href="https://en.wikipedia.org/wiki/Law_of_cosines" rel="noopener" target="_blank">Wikipedia: Law of cosines</a>; <a href="https://en.wikipedia.org/wiki/Heron%27s_formula" rel="noopener" target="_blank">Wikipedia: Heron's formula</a></p>
     </div>
 
   </div>
