@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Time Card Calculator: Weekly Hours &amp; Pay | CalcBundle</title>
-<meta name="description" content="Add daily clock times to calculate weekly hours, gross pay and possible overtime with a printable summary.">
+<meta name="description" content="Add daily start and end times and breaks to find weekly hours, gross pay and overtime, with rounding options and a printable time card report.">
 <link rel="canonical" href="https://calcbundle.net/calculators/time-card-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Time Card Calculator: Weekly Hours &amp; Pay | CalcBundle">
-<meta property="og:description" content="Add daily clock times to calculate weekly hours, gross pay and possible overtime with a printable summary.">
+<meta property="og:description" content="Add daily start and end times and breaks to find weekly hours, gross pay and overtime, with rounding options and a printable time card report.">
 <meta property="og:url" content="https://calcbundle.net/calculators/time-card-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Time Card Calculator: Weekly Hours &amp; Pay | CalcBundle">
-<meta name="twitter:description" content="Add daily clock times to calculate weekly hours, gross pay and possible overtime with a printable summary.">
+<meta name="twitter:description" content="Add daily start and end times and breaks to find weekly hours, gross pay and overtime, with rounding options and a printable time card report.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -71,10 +71,18 @@
     },
     {
       "@type": "Question",
-      "name": "Are my times saved anywhere?",
+      "name": "Is my time card saved or sent anywhere?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Only if you tick the save box, and then only in your own browser. Nothing is sent to a server."
+        "text": "No. If you tick the save box, values are stored only in this browser on your device. Nothing is sent to a server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is overtime the same everywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. In the US, federal law generally requires overtime after 40 hours in a workweek for covered employees, and some states add daily overtime. Check your local rules and contract."
       }
     }
   ]
@@ -207,26 +215,38 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How the hours are worked out</h2>
-      <p>For each day the calculator takes the time you finished and subtracts the time you started. A shift that ends earlier on the clock than it starts, such as 10:00 PM to 6:00 AM, counts as an overnight shift of eight hours. Your unpaid break is then taken off. The days are added up for the week. If a break is longer than the shift, the day counts as 0 hours.</p>
-
-      <h2>Rounding and overtime</h2>
-      <p>Some employers round the time. With rounding on, the calculator rounds to the nearest 5, 10, 15 or 30 minutes, or the nearest hour. For pay you can choose how overtime works: no overtime rate, overtime after a number of hours in a day, or after a number of hours in a week, or a cap on paid hours with no overtime. The overtime rate is a multiple of the base rate, commonly 1.5 times. Daily rules round each day, and weekly rules round the weekly total.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A time card totals the hours between clock-in and clock-out, less breaks. 8:30AM to 5:00PM with a 30 minute break is 8 hours, so five days make 40 hours, or $800.00 at $20 an hour. Overtime is usually paid at 1.5 times after 40 hours a week.</div>
+      <h2>How the hours are worked out</h2>
+      <p>For each day the calculator takes the time you finished and subtracts the time you started. A shift that ends earlier on the clock than it starts, such as 10:00 PM to 6:00 AM, counts as an overnight shift. Your unpaid break is then taken off, and if a break is longer than the shift the day counts as 0. The days are added up for the week. Times can be entered as 8:30AM, 8.30, 8:30 or 15:30; without AM or PM they are read as 24-hour time. A break is entered as 0:30 or just 30 (minutes).</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens with Monday filled in: 8:30AM to 5:00PM with a 0:30 break. That is 8 hours 30 minutes minus 30 minutes, or <strong>8 hours</strong>. Use the copy button to fill the other weekdays with the same shift and five 8-hour days make <strong>40 hours</strong>. At $20 an hour the gross pay is <strong>$800.00</strong> before deductions. An overnight shift of 10:00PM to 6:00AM with a 30 minute break is 7h 30m.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Hours per shift in the default pattern and the longer one</title><desc id="cf2-d">Subtract the break from the time between the clock times; an end time earlier than the start is treated as the next day.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Hours per shift in the default pattern and the longer one</text><text x="202" y="60" text-anchor="end" font-size="13" fill="#6b7280">8:30AM-5:00PM, 30 min break</text><rect class="bar" x="210" y="44" width="193.8" height="22" rx="4" fill="#2563eb"/><text x="411.8" y="60" font-size="13" font-weight="700" fill="#111827">8h</text><text x="202" y="94" text-anchor="end" font-size="13" fill="#6b7280">8:00AM-5:30PM, 30 min break</text><rect class="bar" x="210" y="78" width="218.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">9h</text><text x="202" y="128" text-anchor="end" font-size="13" fill="#6b7280">10:00PM-6:00AM, 30 min break</text><rect class="bar" x="210" y="112" width="181.7" height="22" rx="4" fill="#f59e0b"/><text x="399.7" y="128" font-size="13" font-weight="700" fill="#111827">7h 30m</text></svg><figcaption>Each shift is the time between the clocks, less the break.</figcaption></figure>
+      <h2>Overtime</h2>
+      <p>For pay you can choose how overtime works: no overtime rate, overtime after a number of hours in a day, overtime after a number of hours in a week, or a cap on paid hours with no overtime. The overtime rate is a multiple of the base rate, commonly 1.5 times. Under the US Fair Labor Standards Act, covered employees are generally owed overtime at not less than one and a half times their regular rate for hours over 40 in a workweek; some states add daily overtime rules.</p>
+      <p><strong>A 45-hour week.</strong> Five 9-hour days (8:00AM to 5:30PM, 30 minute break) at $20 with overtime after 40 hours a week at 1.5 times: 40 hours at $20 is $800.00 and 5 overtime hours at $30 is $150.00, a total of <strong>$950.00</strong>. Daily overtime after 8 hours gives the same $950.00 here, because each day has one extra hour.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">A 45-hour week at $20 an hour with overtime after 40 hours at 1.5 times</title><desc id="cf3-d">The five overtime hours add $150.00, 6% more than straight pay for 45 hours ($900.00).</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">A 45-hour week at $20 an hour with overtime after 40 hours at 1.5 times</text><rect class="bar" x="14.0" y="42" width="414.3" height="30" fill="#2563eb"/><text x="221.2" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">84%</text><rect class="bar" x="428.3" y="42" width="77.7" height="30" fill="#f59e0b"/><text x="467.2" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">16%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Regular pay: 40 h x $20: <tspan font-weight="700">$800.00</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#f59e0b"/><text x="282" y="98" font-size="12.5" fill="#374151">Overtime pay: 5 h x $30: <tspan font-weight="700">$150.00</tspan></text></svg><figcaption>Overtime hours are paid at a higher rate.</figcaption></figure>
+      <h2>Daily versus weekly overtime</h2>
+      <p>The two rules can give different answers. For an uneven week of 12, 6, 6, 6 and 6 hours (36 hours), a weekly rule pays no overtime ($720.00), but a rule that pays overtime after 8 hours a day counts 4 hours of overtime on the 12-hour day ($760.00). With no overtime rate at all, the week pays $720.00.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Pay for the same uneven week (12, 6, 6, 6, 6 hours) under three overtime rules, at $20 an hour</title><desc id="cf1-d">The week totals 36 hours, so a weekly rule pays no overtime, but a daily rule pays 4 overtime hours for the 12-hour day: $40.00 more.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Pay for the same uneven week (12, 6, 6, 6, 6 hours) under three overtime rules, at $20 an hour</text><text x="192" y="60" text-anchor="end" font-size="13" fill="#6b7280">No overtime</text><rect class="bar" x="200" y="44" width="216.0" height="22" rx="4" fill="#9ca3af"/><text x="424.0" y="60" font-size="13" font-weight="700" fill="#111827">$720.00</text><text x="192" y="94" text-anchor="end" font-size="13" fill="#6b7280">Overtime after 40 hours a week</text><rect class="bar" x="200" y="78" width="216.0" height="22" rx="4" fill="#2563eb"/><text x="424.0" y="94" font-size="13" font-weight="700" fill="#111827">$720.00</text><text x="192" y="128" text-anchor="end" font-size="13" fill="#6b7280">Overtime after 8 hours a day</text><rect class="bar" x="200" y="112" width="228.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">$760.00</text></svg><figcaption>Check which rule your employer or state uses.</figcaption></figure>
+      <h2>Rounding</h2>
+      <p>Some employers round the time. With rounding on, the calculator rounds to the nearest 5, 10, 15 or 30 minutes, or the nearest hour. Daily overtime rules round each day, and weekly rules round the weekly total. For a shift of 8:07AM to 4:52PM with a 30 minute break, the worked time is 8h 15m, and rounding changes it like this:</p>
+      <div class="calc-table"><table><thead><tr><th>Rounding</th><th>Hours counted</th></tr></thead><tbody><tr><td>No rounding</td><td>8h 15m</td></tr><tr><td>Nearest 5 minutes</td><td>8h 15m</td></tr><tr><td>Nearest 10 minutes</td><td>8h 20m</td></tr><tr><td>Nearest 15 minutes</td><td>8h 15m</td></tr><tr><td>Nearest 30 minutes</td><td>8h 30m</td></tr><tr><td>Nearest hour</td><td>8h</td></tr></tbody></table></div>
+      <p>Rounding rules are set by employers and must follow the law, so use the rounding your payroll actually applies.</p>
       <h2>Printing and saving</h2>
-      <p>Add a header and notes if you want them on the report, then use the print button to print it or save it as a PDF. If you tick the box to save your values, they are stored in this browser only, on your own device, so they are there the next time you come back. Nothing is sent anywhere. Overtime law differs by country and state, and by type of job, so check your own rules.</p>
-      <div class="callout">This calculator does simple arithmetic on the times you enter. Overtime and rounding rules vary by employer, state and country, so check your contract and local law for what applies to you.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: check the result</h2>
-      <p>Five eight-hour shifts produce 40 hours. At $20 per hour, gross regular pay is $800 before deductions; overtime is not included in this example.</p>
-      <h2>Related tools</h2>
-      <p>To compare two time stamps, use the <a href="hours-calculator.html">Hours Calculator</a>. For general salary conversions, see the <a href="salary-calculator.html">Salary Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="time-zone-calculator.html">Time Zone Calculator</a>, <a href="sleep-calculator.html">Sleep Calculator</a>, <a href="day-of-the-week-calculator.html">Day of the Week Calculator</a>, <a href="date-calculator.html">Date Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p>Add a header and notes to the report, then use the print button to print it or save it as a PDF. If you tick the box to save your values, they are stored in this browser only, on your own device, so they are there the next time you come back. Nothing is sent anywhere.</p>
+      <h2>Tips for an accurate time card</h2>
+      <ul><li>Record the real start and end times, not the scheduled ones.</li><li>Enter unpaid breaks only: paid breaks should stay in the working time.</li><li>Use AM and PM or 24-hour times consistently.</li><li>Check which days your employer counts as the workweek: it can start on any day.</li></ul>
+      <h2>What the calculator does not do</h2>
+      <ul><li>Taxes and deductions: the pay is gross.</li><li>Pay periods other than a week.</li><li>Special rules such as double time, holiday pay or on-call time.</li><li>Legal advice: overtime law differs by country, state and type of job.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Forgetting AM or PM, so 8:30 is read as 08:30 and 5:00 as 05:00.</li><li>Entering a break as 30:00 instead of 30 or 0:30.</li><li>Mixing daily and weekly overtime rules.</li><li>Counting a paid lunch as unpaid.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the total hours, with total pay underneath if payment information is on. The table lists each day with its times, break and hours, plus base pay and overtime when a daily rule is used. Check the total against your own records before relying on it.</p>
+      <div class="callout">This is a gross-pay estimate from the times you enter. Overtime and rounding rules vary by employer, state and country, so check your contract and local law.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="hours-calculator.html">Hours Calculator</a> &ndash; hours between two times</li><li><a href="time-duration-calculator.html">Time Duration Calculator</a> &ndash; the time between two clock times</li><li><a href="time-calculator.html">Time Calculator</a> &ndash; add and subtract times</li><li><a href="salary-calculator.html">Salary Calculator</a> &ndash; convert pay between periods</li><li><a href="take-home-pay-calculator.html">Take-Home Pay Calculator</a> &ndash; pay after taxes</li><li><a href="date-calculator.html">Date Calculator</a> &ndash; add days to a date</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do I calculate hours worked from a time card?</h3>
@@ -245,9 +265,14 @@
         <p>Type 0:30 or 30. A number on its own is read as minutes, and a time with a colon is read as hours and minutes.</p>
       </div>
       <div class="faq-item">
-        <h3>Are my times saved anywhere?</h3>
-        <p>Only if you tick the save box, and then only in your own browser. Nothing is sent to a server.</p>
+        <h3>Is my time card saved or sent anywhere?</h3>
+        <p>No. If you tick the save box, values are stored only in this browser on your device. Nothing is sent to a server.</p>
       </div>
+      <div class="faq-item">
+        <h3>Is overtime the same everywhere?</h3>
+        <p>No. In the US, federal law generally requires overtime after 40 hours in a workweek for covered employees, and some states add daily overtime. Check your local rules and contract.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.dol.gov/agencies/whd/overtime" rel="noopener" target="_blank">US Department of Labor: Overtime pay</a>; <a href="https://www.dol.gov/agencies/whd/flsa/faq" rel="noopener" target="_blank">US Department of Labor: FLSA questions and answers</a></p>
     </div>
 
   </div>
