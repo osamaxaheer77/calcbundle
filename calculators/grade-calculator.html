@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grade Calculator: Weighted Scores &amp; Final Exam | CalcBundle</title>
-<meta name="description" content="Compute course grades from weighted categories and estimate marks needed on an upcoming assessment.">
+<meta name="description" content="Work out a weighted course grade from scores and weights, or find the score you need on the final exam to reach the grade you want.">
 <link rel="canonical" href="https://calcbundle.net/calculators/grade-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Grade Calculator: Weighted Scores &amp; Final Exam | CalcBundle">
-<meta property="og:description" content="Compute course grades from weighted categories and estimate marks needed on an upcoming assessment.">
+<meta property="og:description" content="Work out a weighted course grade from scores and weights, or find the score you need on the final exam to reach the grade you want.">
 <meta property="og:url" content="https://calcbundle.net/calculators/grade-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Grade Calculator: Weighted Scores &amp; Final Exam | CalcBundle">
-<meta name="twitter:description" content="Compute course grades from weighted categories and estimate marks needed on an upcoming assessment.">
+<meta name="twitter:description" content="Work out a weighted course grade from scores and weights, or find the score you need on the final exam to reach the grade you want.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "What if my item weights don't add up to 100%?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The weighted calculator still works — it normalizes by whatever total weight you entered, so partial course grades (like just the first half of a semester) are fine."
+        "text": "The weighted calculator still works. It divides by whatever total weight you entered, so a partial course grade, such as the first half of a semester, is fine and shows your grade so far."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "Does this handle letter grades?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Enter scores as percentages. See our GPA Calculator if you're working with the 4.3 letter-grade scale instead."
+        "text": "Enter scores as percentages. For letter grades and the 4.3 scale, use the GPA Calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the required final score sometimes over 100%?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The target needs more points than the final can give. You would need extra credit, a curve, or a lower target."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a final score below my current grade still reach my target?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If your target is lower than your current grade, the final can be lower and still give the grade you want, as in the example where 80.5% is enough to move from 88% to 85%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I handle a dropped lowest score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Remove the lowest score from the category before entering it, because the calculator treats every row as a counting score."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the final-exam tool accurate for a category-based course?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It assumes everything except the final is already fixed and combines it with the final using the final's weight. It works well when you enter your current overall grade from the syllabus weights."
       }
     }
   ]
@@ -130,34 +162,61 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How a weighted grade is calculated</h2>
-      <p>Each item's score is multiplied by its weight, those are all summed, then divided by the total weight: Overall = &Sigma;(score &times; weight) / &Sigma;(weight). A 20%-weight exam affects your grade four times as much as a 5%-weight homework assignment.</p>
-
-      <h2>Solving for the final exam score</h2>
-      <p>Your overall grade is a mix of your current grade (over the non-final portion) and the final exam (over its weight): Desired = Current &times; (1 &minus; finalWeight) + Required &times; finalWeight. Rearranging that for Required gives the score you need on the final.</p>
-      <div class="callout">If the required final score comes out above 100%, hitting that exact target isn't mathematically possible &mdash; you'd need extra credit or a grade curve.</div>
-
-      <!--seo-extra-->
-<h2>Quick numerical check</h2><p>If homework counts for 40% and exams for 60%, scores of 90% and 80% yield 0.4 × 90 + 0.6 × 80 = 84% overall.</p><p>Related: <a href="gpa-calculator.html">GPA Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>A student has scores of 90% worth 5%, 83% worth 20% and 88% worth 20% of the course. The weighted average is (90 × 5 + 83 × 20 + 88 × 20) ÷ 45 = 86.00%. For the final exam, say the current grade is 88%, you want 85% overall and the final is worth 40%: you need 80.5% on the final, since (85 − 88 × 0.6) ÷ 0.4 = 80.5.</p>
-
-      <h2>Tips for grades</h2>
-      <p>Weights should total 100% of the course. If they do not, the calculator scales the result to the weights you entered. Make sure to use the weight of each assignment as in the syllabus, not the number of points. If the needed final score is above 100%, you cannot reach the target without extra credit. Ask your instructor whether the lowest score is dropped.</p>
-
-      <p><strong>You might also need:</strong> <a href="college-cost-calculator.html">College Cost Calculator</a>, <a href="percentage-calculator.html">Percentage Calculator</a>, <a href="gpa-calculator.html">GPA Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A weighted grade is the sum of score times weight divided by the total weight. Scores of 90% (worth 5%), 83% (20%) and 88% (20%) give 86.00%. To find the final exam score you need, use (desired &minus; current &times; (1 &minus; weight)) &divide; weight: a 88% grade, a target of 85% and a 40% final need 80.5%.</div>
+      <h2>How a weighted grade is calculated</h2>
+      <p>Most courses weight categories differently, so a simple average of scores is wrong. The weighted formula is <strong>overall = &Sigma;(score &times; weight) &divide; &Sigma;(weight)</strong>. Each score is multiplied by its weight, the results are added, and the total is divided by the sum of the weights. A 20%-weight exam therefore moves your grade four times as much as a 5%-weight assignment.</p>
+      <h2>Worked example with the starting rows</h2>
+      <p>The calculator starts with three scores: 90% worth 5%, 83% worth 20% and 88% worth 20%.</p>
+      <div class="calc-table"><table><thead><tr><th>Score</th><th>Weight</th><th>Score &times; weight</th></tr></thead><tbody><tr><td>90%</td><td>5%</td><td>450</td></tr><tr><td>83%</td><td>20%</td><td>1660</td></tr><tr><td>88%</td><td>20%</td><td>1760</td></tr><tr><td><strong>Total</strong></td><td><strong>45%</strong></td><td><strong>3870</strong></td></tr></tbody></table></div>
+      <p>Overall = 3870 &divide; 45 = <strong>86.00%</strong>. The weights add up to only 45%, so the calculator normalises the result to the weight entered. That is exactly what you want for a partial course: it shows your grade <em>so far</em> instead of treating missing work as zero.</p>
+      <h2>Another example: a complete course</h2>
+      <p>Homework 95% (30% of the grade), quizzes 88% (30%) and a midterm 79% (40%): overall = (95 &times; 30 + 88 &times; 30 + 79 &times; 40) &divide; 100 = <strong>86.5%</strong>. The weakest category carries the most weight, so improving the midterm score would help the most.</p>
+      <h2>What score do I need on the final?</h2>
+      <p>The second tool treats your grade as a mix of what you have now and the final: <strong>desired = current &times; (1 &minus; final weight) + required &times; final weight</strong>. Solving for the final gives <strong>required = (desired &minus; current &times; (1 &minus; weight)) &divide; weight</strong>.</p>
+      <p>With the starting values (current grade 88%, target 85%, final worth 40%): (85 &minus; 88 &times; 0.6) &divide; 0.4 = <strong>80.5%</strong>. You can score below your current average and still reach the target.</p>
+      <div class="calc-table"><table><thead><tr><th>Target grade</th><th>Score needed on the final</th><th>Result</th></tr></thead><tbody><tr><td>80</td><td>68.0%</td><td>possible</td></tr><tr><td>85</td><td>80.5%</td><td>possible</td></tr><tr><td>88</td><td>88.0%</td><td>possible</td></tr><tr><td>90</td><td>93.0%</td><td>possible</td></tr><tr><td>92</td><td>98.0%</td><td>possible</td></tr><tr><td>95</td><td>105.5%</td><td>not possible (over 100%)</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Final exam score needed for each target (current 88%, final worth 40%)</title><desc id="cf1-d">Raising a grade of 88% to 85% needs only 80.5% on the final, but a 95% target would need 105.5%, which is above 100%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Final exam score needed for each target (current 88%, final worth 40%)</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">Target 80%</text><rect class="bar" x="100" y="44" width="211.4" height="22" rx="4" fill="#10b981"/><text x="319.4" y="60" font-size="13" font-weight="700" fill="#111827">68.0%</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">Target 85%</text><rect class="bar" x="100" y="78" width="250.3" height="22" rx="4" fill="#10b981"/><text x="358.3" y="94" font-size="13" font-weight="700" fill="#111827">80.5%</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">Target 88%</text><rect class="bar" x="100" y="112" width="273.6" height="22" rx="4" fill="#10b981"/><text x="381.6" y="128" font-size="13" font-weight="700" fill="#111827">88.0%</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">Target 90%</text><rect class="bar" x="100" y="146" width="289.1" height="22" rx="4" fill="#10b981"/><text x="397.1" y="162" font-size="13" font-weight="700" fill="#111827">93.0%</text><text x="92" y="196" text-anchor="end" font-size="13" fill="#6b7280">Target 92%</text><rect class="bar" x="100" y="180" width="304.7" height="22" rx="4" fill="#10b981"/><text x="412.7" y="196" font-size="13" font-weight="700" fill="#111827">98.0%</text><text x="92" y="230" text-anchor="end" font-size="13" fill="#6b7280">Target 95%</text><rect class="bar" x="100" y="214" width="328.0" height="22" rx="4" fill="#f87171"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">105.5%</text></svg><figcaption>Each point of target above your current grade is multiplied by 1 &divide; weight on the final, so ambitious goals quickly become impossible.</figcaption></figure>
+      <h2>How the weight of the final changes things</h2>
+      <p>The weight of the final decides how much it can change your grade. Going from a current 80% to a target of 90%:</p>
+      <div class="calc-table"><table><thead><tr><th>Final worth</th><th>Score needed</th><th>Result</th></tr></thead><tbody><tr><td>10%</td><td>180.0%</td><td>not possible</td></tr><tr><td>20%</td><td>130.0%</td><td>not possible</td></tr><tr><td>30%</td><td>113.3%</td><td>not possible</td></tr><tr><td>40%</td><td>105.0%</td><td>not possible</td></tr><tr><td>50%</td><td>100.0%</td><td>possible</td></tr><tr><td>60%</td><td>96.7%</td><td>possible</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Final needed to go from 80% to 90%, by how much the final is worth</title><desc id="cf2-d">The more the final is worth, the more room it has to change your grade. At 10% weight the target is out of reach; at 50% weight it needs exactly 100%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Final needed to go from 80% to 90%, by how much the final is worth</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">Final worth 10%</text><rect class="bar" x="130" y="44" width="298.0" height="22" rx="4" fill="#f87171"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">180.0%</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">Final worth 20%</text><rect class="bar" x="130" y="78" width="287.0" height="22" rx="4" fill="#f87171"/><text x="425.0" y="94" font-size="13" font-weight="700" fill="#111827">130.0%</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">Final worth 30%</text><rect class="bar" x="130" y="112" width="250.2" height="22" rx="4" fill="#f87171"/><text x="388.2" y="128" font-size="13" font-weight="700" fill="#111827">113.3%</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">Final worth 40%</text><rect class="bar" x="130" y="146" width="231.8" height="22" rx="4" fill="#f87171"/><text x="369.8" y="162" font-size="13" font-weight="700" fill="#111827">105.0%</text><text x="122" y="196" text-anchor="end" font-size="13" fill="#6b7280">Final worth 50%</text><rect class="bar" x="130" y="180" width="220.7" height="22" rx="4" fill="#10b981"/><text x="358.7" y="196" font-size="13" font-weight="700" fill="#111827">100.0%</text><text x="122" y="230" text-anchor="end" font-size="13" fill="#6b7280">Final worth 60%</text><rect class="bar" x="130" y="214" width="213.4" height="22" rx="4" fill="#10b981"/><text x="351.4" y="230" font-size="13" font-weight="700" fill="#111827">96.7%</text></svg><figcaption>A final that is worth little cannot rescue a grade, while a heavily weighted final can.</figcaption></figure>
+      <h2>When the answer is over 100% or below 0%</h2>
+      <ul><li><strong>Above 100%:</strong> the target cannot be reached without extra credit or a curve. Lower the target or ask about extra credit.</li><li><strong>Below 0%:</strong> you have already secured that grade, even with a zero on the final.</li><li><strong>Between:</strong> the number is the score you need, assuming the final is graded on the same scale as the rest.</li></ul>
+      <h2>Details that change the result</h2>
+      <ul><li><strong>Dropped scores:</strong> if the lowest quiz is dropped, remove it before entering the scores.</li><li><strong>Extra credit:</strong> enter total points earned over total points possible for the category, or add the extra credit to the score.</li><li><strong>Points versus weights:</strong> use the weight of each category from the syllabus, not the number of points, unless your course is graded on total points.</li><li><strong>Rounding:</strong> some instructors round up at 89.5%. Check the syllabus.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Averaging scores without weights.</li><li>Using the number of points instead of the category weights.</li><li>Treating missing work as zero when you want the grade so far (the calculator already normalises).</li><li>Entering a grade as a letter. The calculator works with percentages; use the GPA Calculator for letter grades.</li><li>Forgetting that the final-exam tool assumes the rest of the grade is fixed.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Use the overall percentage to see where you stand and the required final score to plan your effort. If the number needed is over 100%, talk to your instructor early about options. If you want to translate a percentage into a grade point average, use the GPA Calculator with your school&rsquo;s scale.</p>
+      <div class="callout">This calculator gives estimates based on the weights you enter. Your instructor&rsquo;s syllabus and records decide the final grade.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="gpa-calculator.html">GPA Calculator</a> &ndash; turn grades into a grade point average</li><li><a href="percentage-calculator.html">Percentage Calculator</a> &ndash; convert scores to percentages</li><li><a href="mean-median-mode-range-calculator.html">Mean, Median, Mode Calculator</a> &ndash; average a list of scores</li><li><a href="college-cost-calculator.html">College Cost Calculator</a> &ndash; estimate the cost of a degree</li><li><a href="student-loan-calculator.html">Student Loan Calculator</a> &ndash; plan student loan payments</li><li><a href="time-calculator.html">Time Calculator</a> &ndash; plan study time</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What if my item weights don't add up to 100%?</h3>
-        <p>The weighted calculator still works &mdash; it normalizes by whatever total weight you entered, so partial course grades (like just the first half of a semester) are fine.</p>
+        <p>The weighted calculator still works. It divides by whatever total weight you entered, so a partial course grade, such as the first half of a semester, is fine and shows your grade so far.</p>
       </div>
       <div class="faq-item">
         <h3>Does this handle letter grades?</h3>
-        <p>Enter scores as percentages. See our <a href="gpa-calculator.html">GPA Calculator</a> if you're working with the 4.3 letter-grade scale instead.</p>
+        <p>Enter scores as percentages. For letter grades and the 4.3 scale, use the GPA Calculator.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is the required final score sometimes over 100%?</h3>
+        <p>The target needs more points than the final can give. You would need extra credit, a curve, or a lower target.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can a final score below my current grade still reach my target?</h3>
+        <p>Yes. If your target is lower than your current grade, the final can be lower and still give the grade you want, as in the example where 80.5% is enough to move from 88% to 85%.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I handle a dropped lowest score?</h3>
+        <p>Remove the lowest score from the category before entering it, because the calculator treats every row as a counting score.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the final-exam tool accurate for a category-based course?</h3>
+        <p>It assumes everything except the final is already fixed and combines it with the final using the final's weight. It works well when you enter your current overall grade from the syllabus weights.</p>
       </div>
     </div>
 
