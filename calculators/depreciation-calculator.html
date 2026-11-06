@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Depreciation Calculator: Straight Line & Accelerated Methods | CalcBundle</title>
-<meta name="description" content="Calculate asset depreciation schedules with straight-line, declining-balance or sum-of-years-digits methods.">
+<title>Depreciation Calculator: Straight-Line &amp; Accelerated</title>
+<meta name="description" content="Build a depreciation schedule with the straight line, declining balance or sum of the year&#x27;s digits method, with salvage value, rounding and partial years.">
 <link rel="canonical" href="https://calcbundle.net/calculators/depreciation-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Depreciation Calculator: Straight Line & Accelerated Methods | CalcBundle">
-<meta property="og:description" content="Calculate asset depreciation schedules with straight-line, declining-balance or sum-of-years-digits methods.">
+<meta property="og:title" content="Depreciation Calculator: Straight-Line &amp; Accelerated">
+<meta property="og:description" content="Build a depreciation schedule with the straight line, declining balance or sum of the year&#x27;s digits method, with salvage value, rounding and partial years.">
 <meta property="og:url" content="https://calcbundle.net/calculators/depreciation-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Depreciation Calculator: Straight Line & Accelerated Methods | CalcBundle">
-<meta name="twitter:description" content="Calculate asset depreciation schedules with straight-line, declining-balance or sum-of-years-digits methods.">
+<meta name="twitter:title" content="Depreciation Calculator: Straight-Line &amp; Accelerated">
+<meta name="twitter:description" content="Build a depreciation schedule with the straight line, declining balance or sum of the year&#x27;s digits method, with salvage value, rounding and partial years.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -50,31 +50,39 @@
       "name": "What is the double declining balance method?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is the declining balance method with a depreciation factor of 2. Each year it takes twice the straight line rate of the remaining book value, so the charge is large in the early years."
+        "text": "It is declining balance with a factor of 2. The yearly rate is 2 divided by the years, applied to the book value at the start of each year. For 5 years the rate is 40%."
       }
     },
     {
       "@type": "Question",
-      "name": "When is the declining balance method used?",
+      "name": "How is straight line depreciation calculated?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Companies use it for assets that lose value fastest when they are new, such as vehicles and technology. The final year is adjusted so the book value ends at the salvage value."
+        "text": "Subtract the salvage value from the cost and divide by the number of years. For $11,000, $1,000 salvage and 5 years, the depreciation is $2,000 a year."
       }
     },
     {
       "@type": "Question",
-      "name": "What does the half-month convention mean?",
+      "name": "How does the sum of the year's digits method work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It counts whole months from the start date to the end of the accounting year and treats any leftover part of a month as half a month. A full-month convention counts any leftover part as a whole month."
+        "text": "Add the digits 1 to n for an n-year asset. Year 1 takes n of that total, year 2 takes n minus 1, and so on. For 5 years the total is 15, so year 1 takes 5/15 of the depreciable amount."
       }
     },
     {
       "@type": "Question",
-      "name": "Why does the schedule have one more year with partial depreciation?",
+      "name": "Why does a partial year add an extra period?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The first accounting period is shortened, so the total life of the asset spills into one more period. The extra last period takes the depreciation not yet recorded."
+        "text": "If the asset starts partway through the accounting year, the first period is shortened and the remaining depreciation moves into one more period at the end."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this the same as tax depreciation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Tax rules, such as MACRS in the United States, use their own tables and conventions. Check with an accountant for tax filings."
       }
     }
   ]
@@ -208,22 +216,42 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What depreciation is</h2>
-      <p>Depreciation spreads the cost of an asset, such as a vehicle, machine or computer, over the years it is expected to be useful. Each year, part of the cost is recorded as an expense, and the asset’s book value falls. The depreciable amount is the cost minus the salvage value, the amount the asset is expected to be worth at the end of its useful life. The book value never drops below the salvage value.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> An $11,000 asset with $1,000 salvage over 5 years loses $2,000 a year on the straight line method. Double declining balance takes $4,400 in year 1 and the sum of the year's digits takes $3,333.</div>
+      <h2>What depreciation does</h2>
+      <p>Depreciation spreads the cost of an asset, such as a vehicle, a machine or a computer, over the years it is expected to be useful. Each year a part of the cost is recorded as an expense and the book value falls. The <strong>depreciable amount</strong> is the cost minus the <strong>salvage value</strong>, what the asset is expected to be worth at the end of its life. The book value never goes below the salvage value.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The calculator opens on an asset costing <strong>$11,000</strong> with a salvage value of <strong>$1,000</strong> over <strong>5 years</strong>, using the straight line method with rounding to whole dollars. The depreciable amount is $10,000, so each year takes $10,000 &divide; 5 = <strong>$2,000</strong>, and the book value falls from $11,000 to $1,000.</p>
+      <div class="calc-table"><table><thead><tr><th>Year</th><th>Beginning book value</th><th>Depreciation percent</th><th>Depreciation</th><th>Accumulated</th><th>Ending book value</th></tr></thead><tbody><tr><td>1</td><td>$11,000</td><td>20.00%</td><td>$2,000</td><td>$2,000</td><td>$9,000</td></tr><tr><td>2</td><td>$9,000</td><td>20.00%</td><td>$2,000</td><td>$4,000</td><td>$7,000</td></tr><tr><td>3</td><td>$7,000</td><td>20.00%</td><td>$2,000</td><td>$6,000</td><td>$5,000</td></tr><tr><td>4</td><td>$5,000</td><td>20.00%</td><td>$2,000</td><td>$8,000</td><td>$3,000</td></tr><tr><td>5</td><td>$3,000</td><td>20.00%</td><td>$2,000</td><td>$10,000</td><td>$1,000</td></tr></tbody></table></div>
       <h2>The three methods</h2>
-      <p>The straight line method takes the same amount every year, which is the depreciable amount divided by the number of years. The declining balance method takes a fixed percentage of the remaining book value each year, so the charge is largest at the start and shrinks over time. The percentage is the depreciation factor divided by the number of years, so a factor of 2 gives the double declining balance method. The sum of the year’s digits method also front-loads the charge, using a fraction that falls each year: for a five year asset the first year takes 5 of 15 parts, the second 4 of 15, and so on.</p>
-
-      <h2>Partial years and accounting years</h2>
-      <p>Assets are rarely put into service on the first day of the accounting year. Turn on partial year depreciation, enter the start date and the date your accounting year begins, and the first year is shortened to the part of the year the asset is in use. The convention decides how that part is counted: by exact days, by months, by quarters, or as half a year. The half conventions count any part of a month or quarter as a half. The schedule then runs over one more accounting period, with the last one making up the rest.</p>
-      <div class="callout">This calculator shows common accounting methods for planning. Tax depreciation rules, such as MACRS in the United States, use their own tables and conventions, so check with an accountant for tax filings.</div>
-
-      <!--seo-extra-->
-<figure style="max-width:640px;margin:18px 0"><svg viewBox="0 0 620 140" role="img" aria-label="Straight-line depreciation: asset value declines from ten thousand dollars to two thousand residual value over four years" style="width:100%;height:auto"><rect x="2" y="2" width="616" height="136" rx="14" fill="#eff6ff"/><path d="M60 28 L168 52 L276 74 L384 95 L492 116" fill="none" stroke="#2563eb" stroke-width="4"/><g fill="#2563eb"><circle cx="60" cy="28" r="6"/><circle cx="168" cy="52" r="6"/><circle cx="276" cy="74" r="6"/><circle cx="384" cy="95" r="6"/><circle cx="492" cy="116" r="6"/></g><g fill="#172554" font-family="Arial,sans-serif" font-size="14"><text x="75" y="27">$10,000 start</text><text x="505" y="114">$2,000</text><text x="508" y="131">residual</text></g></svg><figcaption style="color:#64748b;font-size:13px">Straight-line example: $2,000 depreciation each year for four years.</figcaption></figure><h2>Worked example: interpreting the calculation</h2><p>An asset costing $10,000 with $2,000 residual value over four years has $2,000 annual straight-line depreciation: ($10,000 − $2,000) ÷ 4.</p><h2>Related financial calculators</h2><p>For investment recovery time, see the <a href="payback-period-calculator.html">Payback Period Calculator</a>. For asset-related investment return estimates, use the <a href="roi-calculator.html">ROI Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="rental-property-calculator.html">Rental Property Calculator</a>, <a href="auto-lease-calculator.html">Auto Lease Calculator</a>, <a href="business-loan-calculator.html">Business Loan Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <ul><li><strong>Straight line:</strong> the same amount every year, (cost &minus; salvage) &divide; years.</li><li><strong>Declining balance:</strong> a fixed percentage of the <em>remaining book value</em> each year. The percentage is the factor divided by the years, so a factor of 2 over 5 years is 40%, the double declining balance method.</li><li><strong>Sum of the year&rsquo;s digits:</strong> a falling fraction of the depreciable amount. For 5 years the parts are 5, 4, 3, 2 and 1 out of 15.</li></ul>
+      <h2>Declining balance with a factor of 2</h2>
+      <p>Switch the method to declining balance and keep the factor of 2. The rate is 2 &divide; 5 = 40%, taken from the book value at the start of each year: 40% of $11,000 is $4,400, then 40% of $6,600 is $2,640, then $1,584 and $950. The last year takes whatever brings the book value down to the salvage value, here $426. The rate applies to the whole book value, salvage included, so the last year is capped to stop exactly at the $1,000 salvage value.</p>
+      <div class="calc-table"><table><thead><tr><th>Year</th><th>Beginning book value</th><th>Rate</th><th>Depreciation</th><th>Accumulated</th><th>Ending book value</th></tr></thead><tbody><tr><td>1</td><td>$11,000</td><td>40.00%</td><td>$4,400</td><td>$4,400</td><td>$6,600</td></tr><tr><td>2</td><td>$6,600</td><td>40.00%</td><td>$2,640</td><td>$7,040</td><td>$3,960</td></tr><tr><td>3</td><td>$3,960</td><td>40.00%</td><td>$1,584</td><td>$8,624</td><td>$2,376</td></tr><tr><td>4</td><td>$2,376</td><td>39.98%</td><td>$950</td><td>$9,574</td><td>$1,426</td></tr><tr><td>5</td><td>$1,426</td><td>29.87%</td><td>$426</td><td>$10,000</td><td>$1,000</td></tr></tbody></table></div>
+      <h2>Sum of the year&rsquo;s digits</h2>
+      <p>For a 5-year asset the digits add up to 5 + 4 + 3 + 2 + 1 = 15. Year 1 takes 5/15 of the $10,000 depreciable amount, which is $3,333, year 2 takes 4/15 ($2,667), year 3 takes 3/15 ($2,000), year 4 takes 2/15 ($1,333) and year 5 takes the rest, $667. The last figure is 1/15 of $10,000, or $666.67, rounded up to $667 so that the total is exactly $10,000.</p>
+      <div class="calc-table"><table><thead><tr><th>Year</th><th>Straight line</th><th>Declining balance (factor 2)</th><th>Sum of the year&rsquo;s digits</th></tr></thead><tbody><tr><td>1</td><td>$2,000</td><td>$4,400</td><td>$3,333</td></tr><tr><td>2</td><td>$2,000</td><td>$2,640</td><td>$2,667</td></tr><tr><td>3</td><td>$2,000</td><td>$1,584</td><td>$2,000</td></tr><tr><td>4</td><td>$2,000</td><td>$950</td><td>$1,333</td></tr><tr><td>5</td><td>$2,000</td><td>$426</td><td>$667</td></tr><tr><td>Total</td><td>$10,000</td><td>$10,000</td><td>$10,000</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Book value of the $11,000 asset by year, for each method</title><desc id="cf1-d">Every method ends at the $1,000 salvage value, but the declining balance method writes off $4,400 in year 1 against $2,000 for straight line.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Book value of the $11,000 asset by year, for each method</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$3k</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$6k</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$9k</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$12k</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="147.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">1</text><text x="237.2" y="194" text-anchor="middle" font-size="11" fill="#6b7280">2</text><text x="326.8" y="194" text-anchor="middle" font-size="11" fill="#6b7280">3</text><text x="416.4" y="194" text-anchor="middle" font-size="11" fill="#6b7280">4</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">5</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Year</text><polyline class="draw" style="--len:462" points="58.0,59.3 147.6,80.5 237.2,101.8 326.8,123.0 416.4,144.2 506.0,165.4" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Straight line</text><polyline class="draw" style="--len:467" points="58.0,59.3 147.6,106.0 237.2,134.0 326.8,150.8 416.4,160.9 506.0,165.4" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#f59e0b"/><text x="246" y="40" font-size="11.5" fill="#374151">Declining (factor 2)</text><polyline class="draw" style="--len:464" points="58.0,59.3 147.6,94.7 237.2,123.0 326.8,144.2 416.4,158.3 506.0,165.4" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="398" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="416" y="40" font-size="11.5" fill="#374151">Sum of digits</text></svg><figcaption>All three reach the same salvage value, by different routes.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">First-year depreciation on the default asset</title><desc id="cf2-d">The faster methods take more in year 1: $4,400 at factor 2 versus $2,000 with the straight line method.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">First-year depreciation on the default asset</text><text x="152" y="60" text-anchor="end" font-size="13" fill="#6b7280">Straight line</text><rect class="bar" x="160" y="44" width="121.8" height="22" rx="4" fill="#2563eb"/><text x="289.8" y="60" font-size="13" font-weight="700" fill="#111827">$2,000</text><text x="152" y="94" text-anchor="end" font-size="13" fill="#6b7280">Sum of the year&#x27;s digits</text><rect class="bar" x="160" y="78" width="203.0" height="22" rx="4" fill="#10b981"/><text x="371.0" y="94" font-size="13" font-weight="700" fill="#111827">$3,333</text><text x="152" y="128" text-anchor="end" font-size="13" fill="#6b7280">Declining, factor 1.5</text><rect class="bar" x="160" y="112" width="201.0" height="22" rx="4" fill="#a78bfa"/><text x="369.0" y="128" font-size="13" font-weight="700" fill="#111827">$3,300</text><text x="152" y="162" text-anchor="end" font-size="13" fill="#6b7280">Declining, factor 2</text><rect class="bar" x="160" y="146" width="268.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">$4,400</text></svg><figcaption>A larger factor front-loads the expense.</figcaption></figure>
+      <h2>Partial years</h2>
+      <p>Assets are rarely put into service on the first day of the accounting year. Turn on partial-year depreciation, enter the service start date and the date your accounting year begins, and the first period is shortened. As an example, suppose the asset starts on March 17, 2026 and the accounting year starts on January 1. There are 9 months and 15 days (290 days) until January 1, 2027. The convention decides how that is counted.</p>
+      <div class="calc-table"><table><thead><tr><th>Convention</th><th>How it counts</th><th>Fraction of a year</th><th>First-period depreciation</th><th>Periods</th></tr></thead><tbody><tr><td>Count every day</td><td>290 days &divide; 365</td><td>0.7945</td><td>$1,589</td><td>6</td></tr><tr><td>Half-month</td><td>9.5 months &divide; 12</td><td>0.7917</td><td>$1,583</td><td>6</td></tr><tr><td>Full-month</td><td>10 months &divide; 12</td><td>0.8333</td><td>$1,667</td><td>6</td></tr><tr><td>Half-quarter</td><td>3.5 quarters &divide; 4</td><td>0.8750</td><td>$1,750</td><td>6</td></tr><tr><td>Full-quarter</td><td>4 quarters, so a full year</td><td>1.0000</td><td>$2,000</td><td>5</td></tr><tr><td>Half-year</td><td>half a year</td><td>0.5000</td><td>$1,000</td><td>6</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">First-period fraction of a year by convention (service starts March 17, accounting year starts January 1)</title><desc id="cf3-d">The same asset can lose 50% to 100% of a year&amp;rsquo;s depreciation in the first period, depending on the convention you choose.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">First-period fraction of a year by convention (service starts March 17, accounting year starts January 1)</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">Count every day</text><rect class="bar" x="130" y="44" width="236.8" height="22" rx="4" fill="#9ca3af"/><text x="374.8" y="60" font-size="13" font-weight="700" fill="#111827">0.795</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">Half-month</text><rect class="bar" x="130" y="78" width="235.9" height="22" rx="4" fill="#2563eb"/><text x="373.9" y="94" font-size="13" font-weight="700" fill="#111827">0.792</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">Full-month</text><rect class="bar" x="130" y="112" width="248.3" height="22" rx="4" fill="#9ca3af"/><text x="386.3" y="128" font-size="13" font-weight="700" fill="#111827">0.833</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">Half-quarter</text><rect class="bar" x="130" y="146" width="260.8" height="22" rx="4" fill="#9ca3af"/><text x="398.8" y="162" font-size="13" font-weight="700" fill="#111827">0.875</text><text x="122" y="196" text-anchor="end" font-size="13" fill="#6b7280">Full-quarter</text><rect class="bar" x="130" y="180" width="298.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">1.000</text><text x="122" y="230" text-anchor="end" font-size="13" fill="#6b7280">Half-year</text><rect class="bar" x="130" y="214" width="149.0" height="22" rx="4" fill="#9ca3af"/><text x="287.0" y="230" font-size="13" font-weight="700" fill="#111827">0.500</text></svg><figcaption>Each convention gives a different first period.</figcaption></figure>
+      <p>With the half-month convention the fraction is 9.5 &divide; 12 = 0.7917, so the first period takes 0.7917 &times; $2,000 = $1,583. The schedule then runs for one more accounting period, 6 in all, and the last one makes up the remainder.</p>
+      <div class="calc-table"><table><thead><tr><th>Period</th><th>Depreciation</th><th>Accumulated</th><th>Ending book value</th></tr></thead><tbody><tr><td>2026</td><td>$1,583</td><td>$1,583</td><td>$9,417</td></tr><tr><td>2027</td><td>$2,000</td><td>$3,583</td><td>$7,417</td></tr><tr><td>2028</td><td>$2,000</td><td>$5,583</td><td>$5,417</td></tr><tr><td>2029</td><td>$2,000</td><td>$7,583</td><td>$3,417</td></tr><tr><td>2030</td><td>$2,000</td><td>$9,583</td><td>$1,417</td></tr><tr><td>2031</td><td>$417</td><td>$10,000</td><td>$1,000</td></tr></tbody></table></div>
+      <p>Full-quarter shows a full year here because the 9.5 months round up to 4 quarters, and the tool then treats the first period as a whole year, so the schedule runs for 5 periods.</p>
+      <h2>Rounding</h2>
+      <p>The default setting rounds each year to whole dollars. The final year is then set to bring the book value exactly to the salvage value, which can make it slightly different from the pattern, like $667 in the sum of the digits example. Choose No to see cents.</p>
+      <h2>Book depreciation versus tax depreciation</h2>
+      <p>This tool shows the common accounting methods for planning and for management reports. Tax depreciation follows its own rules. In the United States, for example, business property is generally depreciated under MACRS, with set recovery periods and conventions that are laid out in IRS Publication 946. For a tax return, check the current rules or ask an accountant.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Applying the declining balance rate to the depreciable amount. The tool applies it to the remaining book value, salvage included, and caps the last year at the salvage value.</li><li>Entering a salvage value equal to or above the cost. The tool needs salvage to be lower than cost.</li><li>Using a factor above the number of years, which the tool does not accept.</li><li>Expecting book depreciation to match the figure on a tax return.</li><li>Forgetting that a partial first year adds an extra period at the end.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the total depreciation over the schedule, which equals the cost minus the salvage value. Under it are the cost, the salvage value and a sentence about the method. The table gives, for each year or accounting period, the beginning book value, the percentage, the depreciation, the accumulated total and the ending book value.</p>
+      <div class="callout">This calculator is for planning and illustration. Tax depreciation and accounting policy have their own rules, so check them with an accountant before you file.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="payback-period-calculator.html">Payback Period Calculator</a> &ndash; how long an investment takes to repay</li><li><a href="roi-calculator.html">ROI Calculator</a> &ndash; return on investment</li><li><a href="margin-calculator.html">Margin Calculator</a> &ndash; price, cost and profit</li><li><a href="rental-property-calculator.html">Rental Property Calculator</a> &ndash; returns on a rental</li><li><a href="auto-lease-calculator.html">Auto Lease Calculator</a> &ndash; a car lease payment</li><li><a href="business-loan-calculator.html">Business Loan Calculator</a> &ndash; loan payments for a business</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What is salvage value?</h3>
@@ -231,20 +259,25 @@
       </div>
       <div class="faq-item">
         <h3>What is the double declining balance method?</h3>
-        <p>It is the declining balance method with a depreciation factor of 2. Each year it takes twice the straight line rate of the remaining book value, so the charge is large in the early years.</p>
+        <p>It is declining balance with a factor of 2. The yearly rate is 2 divided by the years, applied to the book value at the start of each year. For 5 years the rate is 40%.</p>
       </div>
       <div class="faq-item">
-        <h3>When is the declining balance method used?</h3>
-        <p>Companies use it for assets that lose value fastest when they are new, such as vehicles and technology. The final year is adjusted so the book value ends at the salvage value.</p>
+        <h3>How is straight line depreciation calculated?</h3>
+        <p>Subtract the salvage value from the cost and divide by the number of years. For $11,000, $1,000 salvage and 5 years, the depreciation is $2,000 a year.</p>
       </div>
       <div class="faq-item">
-        <h3>What does the half-month convention mean?</h3>
-        <p>It counts whole months from the start date to the end of the accounting year and treats any leftover part of a month as half a month. A full-month convention counts any leftover part as a whole month.</p>
+        <h3>How does the sum of the year's digits method work?</h3>
+        <p>Add the digits 1 to n for an n-year asset. Year 1 takes n of that total, year 2 takes n minus 1, and so on. For 5 years the total is 15, so year 1 takes 5/15 of the depreciable amount.</p>
       </div>
       <div class="faq-item">
-        <h3>Why does the schedule have one more year with partial depreciation?</h3>
-        <p>The first accounting period is shortened, so the total life of the asset spills into one more period. The extra last period takes the depreciation not yet recorded.</p>
+        <h3>Why does a partial year add an extra period?</h3>
+        <p>If the asset starts partway through the accounting year, the first period is shortened and the remaining depreciation moves into one more period at the end.</p>
       </div>
+      <div class="faq-item">
+        <h3>Is this the same as tax depreciation?</h3>
+        <p>Not necessarily. Tax rules, such as MACRS in the United States, use their own tables and conventions. Check with an accountant for tax filings.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.irs.gov/publications/p946" rel="noopener" target="_blank">IRS: Publication 946, How to depreciate property</a>; <a href="https://en.wikipedia.org/wiki/Depreciation" rel="noopener" target="_blank">Wikipedia: Depreciation</a></p>
     </div>
 
   </div>
