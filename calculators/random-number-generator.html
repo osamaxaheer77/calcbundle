@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Random Number Generator: Pick From a Range - CalcBundle</title>
-<meta name="description" content="Generate random integers or decimals within a range, one at a time or many at once, with or without repeats.">
+<meta name="description" content="Generate random integers or decimals within a range of your choice, one at a time or in bulk, with or without repeats, sorted or unsorted.">
 <link rel="canonical" href="https://calcbundle.net/calculators/random-number-generator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Random Number Generator: Pick From a Range - CalcBundle">
-<meta property="og:description" content="Generate random integers or decimals within a range, one at a time or many at once, with or without repeats.">
+<meta property="og:description" content="Generate random integers or decimals within a range of your choice, one at a time or in bulk, with or without repeats, sorted or unsorted.">
 <meta property="og:url" content="https://calcbundle.net/calculators/random-number-generator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Random Number Generator: Pick From a Range - CalcBundle">
-<meta name="twitter:description" content="Generate random integers or decimals within a range, one at a time or many at once, with or without repeats.">
+<meta name="twitter:description" content="Generate random integers or decimals within a range of your choice, one at a time or in bulk, with or without repeats, sorted or unsorted.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Why would I disallow duplicates?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Useful whenever each result needs to be unique — assigning raffle numbers, shuffling a deck, or picking several different winners from a pool without repeats."
+        "text": "Whenever each result must be unique: assigning raffle numbers, shuffling a deck, or picking several different winners from a pool without repeats."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "Does refreshing give a different result?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — every time you click Generate, a fresh set of random numbers is produced. Nothing is cached or remembered between runs."
+        "text": "Yes. Every time you click Generate, a fresh set of random numbers is produced. Nothing is cached or remembered between runs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this truly random?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It uses your browser's pseudo-random generator, which is statistically fair for everyday uses. It is not suitable for cryptography; use the Password Generator for secure random values."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the lower and upper limits included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. With limits 1 and 100, both 1 and 100 can appear."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did I get the same number twice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each draw is independent, so repeats are normal when duplicates are allowed. The chance of a repeat among 10 draws from 1 to 100 is about 37%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many numbers can I generate at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Up to 10,000. Without repeats, you cannot ask for more unique integers than the range contains."
       }
     }
   ]
@@ -143,33 +175,62 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How random is this?</h2>
-      <p>This generator uses your browser's built-in pseudo-random number generator, which produces numbers that are statistically indistinguishable from true randomness for everyday purposes &mdash; picking a raffle winner, rolling for a game, shuffling a list. It's not suitable for cryptography or security-sensitive uses, which require specialized random sources.</p>
-
-      <h2>Integers vs. decimals</h2>
-      <p>Integer mode returns whole numbers only, evenly spread across your range. Decimal mode returns numbers with a fractional part, rounded to however many digits of precision you choose &mdash; useful for things like simulating measurements or generating test data.</p>
-      <div class="callout">With duplicates disallowed, the number of unique integers you can request is capped by the size of your range &mdash; you can't generate 50 unique numbers from a range of only 20 possible values.</div>
-
-      <!--seo-extra-->
-      <h2>A worked example</h2>
-      <p>Set the lower limit to 1 and the upper limit to 100, and the generator returns a whole number from 1 to 100, with each number equally likely. Ask for 10 numbers with repeats turned off and you get 10 different values, like drawing numbers from a hat. Turn on decimal precision to get numbers such as 42.37.</p>
-
-      <h2>Tips for fair draws</h2>
-      <p>For a raffle or a classroom pick, give each person a number and generate within that range. Use the no-repeat option when the same number must not come up twice. Each click is independent, so seeing the same number twice in a row is normal. The generator is not suitable for cryptography or for gambling, where regulated sources apply.</p>
-
-      <p><strong>You might also need:</strong> <a href="percent-error-calculator.html">Percent Error Calculator</a>, <a href="mean-median-mode-range-calculator.html">Mean, Median, Mode, Range Calculator</a>, <a href="sample-size-calculator.html">Sample Size Calculator</a>, <a href="standard-deviation-calculator.html">Standard Deviation Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A random number generator picks values at random between a lower and upper limit. With the default range of 1 to 100, every whole number has a 1% chance. Drawing 10 numbers with repeats allowed gives a 37% chance that at least one repeats.</div>
+      <h2>How random is this?</h2>
+      <p>The generator uses your browser&rsquo;s built-in pseudo-random number generator, <code>Math.random()</code>. It produces numbers that are statistically indistinguishable from true randomness for everyday purposes: picking a raffle winner, rolling for a game, choosing a sample or shuffling a list. It is <strong>not suitable for cryptography or security</strong>, such as passwords or keys. For those, use the Password Generator, which uses the browser&rsquo;s cryptographically secure source.</p>
+      <h2>The options</h2>
+      <ul><li><strong>Lower and upper limit:</strong> both ends are included. The default is 1 to 100.</li><li><strong>How many numbers:</strong> from 1 to 10,000 at a time.</li><li><strong>Integer or decimal:</strong> integers are whole numbers spread evenly across the range; decimals are rounded to 0 to 20 digits of precision, such as 42.37.</li><li><strong>Allow duplicates:</strong> turn it off for results that must all be different, like drawing numbers from a hat.</li><li><strong>Sort result:</strong> none, ascending or descending.</li></ul>
+      <h2>Worked example with the default numbers</h2>
+      <p>With a lower limit of 1 and an upper limit of 100, the generator returns a whole number from 1 to 100 and each number has the same 1% chance. Across many draws the average settles near (1 + 100) &divide; 2 = <strong>50.5</strong>, and the typical spread (standard deviation) of a single draw is about <strong>28.9</strong>. Seeing the same number twice in a row has a 1% chance on any given pair of draws, so it happens now and then and is no sign that the generator is broken.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 386" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">10,000 simulated draws from 1 to 100, counted in tens (fixed-seed illustration)</title><desc id="cf1-d">Each ten should get about 1,000. Ours range from 908 to 1,061, which is normal chance variation, and the average is 50.0 against an expected 50.5.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">10,000 simulated draws from 1 to 100, counted in tens (fixed-seed illustration)</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">1-10</text><rect class="bar" x="70" y="44" width="334.0" height="22" rx="4" fill="#2563eb"/><text x="412.0" y="60" font-size="13" font-weight="700" fill="#111827">990</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">11-20</text><rect class="bar" x="70" y="78" width="356.7" height="22" rx="4" fill="#2563eb"/><text x="434.7" y="94" font-size="13" font-weight="700" fill="#111827">1,057</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">21-30</text><rect class="bar" x="70" y="112" width="335.1" height="22" rx="4" fill="#2563eb"/><text x="413.1" y="128" font-size="13" font-weight="700" fill="#111827">993</text><text x="62" y="162" text-anchor="end" font-size="13" fill="#6b7280">31-40</text><rect class="bar" x="70" y="146" width="342.8" height="22" rx="4" fill="#2563eb"/><text x="420.8" y="162" font-size="13" font-weight="700" fill="#111827">1,016</text><text x="62" y="196" text-anchor="end" font-size="13" fill="#6b7280">41-50</text><rect class="bar" x="70" y="180" width="358.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">1,061</text><text x="62" y="230" text-anchor="end" font-size="13" fill="#6b7280">51-60</text><rect class="bar" x="70" y="214" width="333.4" height="22" rx="4" fill="#2563eb"/><text x="411.4" y="230" font-size="13" font-weight="700" fill="#111827">988</text><text x="62" y="264" text-anchor="end" font-size="13" fill="#6b7280">61-70</text><rect class="bar" x="70" y="248" width="339.1" height="22" rx="4" fill="#2563eb"/><text x="417.1" y="264" font-size="13" font-weight="700" fill="#111827">1,005</text><text x="62" y="298" text-anchor="end" font-size="13" fill="#6b7280">71-80</text><rect class="bar" x="70" y="282" width="306.4" height="22" rx="4" fill="#2563eb"/><text x="384.4" y="298" font-size="13" font-weight="700" fill="#111827">908</text><text x="62" y="332" text-anchor="end" font-size="13" fill="#6b7280">81-90</text><rect class="bar" x="70" y="316" width="336.1" height="22" rx="4" fill="#2563eb"/><text x="414.1" y="332" font-size="13" font-weight="700" fill="#111827">996</text><text x="62" y="366" text-anchor="end" font-size="13" fill="#6b7280">91-100</text><rect class="bar" x="70" y="350" width="332.7" height="22" rx="4" fill="#2563eb"/><text x="410.7" y="366" font-size="13" font-weight="700" fill="#111827">986</text></svg><figcaption>Draws spread evenly across the range, with small random differences between groups.</figcaption></figure>
+      <h2>Drawing without repeats</h2>
+      <p>Ask for 10 numbers with repeats turned off and you get 10 different values, as if drawn from a hat without putting them back. The generator builds the list of all possible values, shuffles it fairly and takes the first ones, so there are 17,310,309,456,440 possible sets of 10 numbers from 1 to 100 (order ignored), all equally likely. You cannot ask for more unique numbers than the range holds: 50 unique integers from 1 to 20 is impossible, and the page tells you so. For huge ranges with few picks, the generator draws and rejects repeats instead.</p>
+      <div class="calc-table"><table><thead><tr><th>Pick</th><th>From</th><th>Possible sets</th></tr></thead><tbody><tr><td>5</td><td>20</td><td>15,504</td></tr><tr><td>5</td><td>50</td><td>2,118,760</td></tr><tr><td>5</td><td>100</td><td>75,287,520</td></tr><tr><td>10</td><td>100</td><td>17,310,309,456,440</td></tr></tbody></table></div>
+      <h2>Why repeats happen more than you expect</h2>
+      <p>When repeats are allowed, duplicates appear sooner than most people guess. This is the birthday paradox. The chance of at least one repeat among k draws from 100 values is 1 &minus; (100 &times; 99 &times; &hellip; &divide; 100<sup>k</sup>):</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Chance of at least one repeat when drawing from 1 to 100 with repeats allowed</title><desc id="cf2-d">With 10 draws the chance of a repeat is already 37%, and at 20 draws it is 87%. This is the birthday paradox.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Chance of at least one repeat when drawing from 1 to 100 with repeats allowed</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">5 numbers</text><rect class="bar" x="90" y="44" width="32.9" height="22" rx="4" fill="#10b981"/><text x="130.9" y="60" font-size="13" font-weight="700" fill="#111827">9.7%</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">10 numbers</text><rect class="bar" x="90" y="78" width="126.7" height="22" rx="4" fill="#f59e0b"/><text x="224.7" y="94" font-size="13" font-weight="700" fill="#111827">37.2%</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">12 numbers</text><rect class="bar" x="90" y="112" width="169.3" height="22" rx="4" fill="#f59e0b"/><text x="267.3" y="128" font-size="13" font-weight="700" fill="#111827">49.7%</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">15 numbers</text><rect class="bar" x="90" y="146" width="227.8" height="22" rx="4" fill="#f59e0b"/><text x="325.8" y="162" font-size="13" font-weight="700" fill="#111827">66.9%</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">20 numbers</text><rect class="bar" x="90" y="180" width="296.2" height="22" rx="4" fill="#f59e0b"/><text x="394.2" y="196" font-size="13" font-weight="700" fill="#111827">87.0%</text><text x="82" y="230" text-anchor="end" font-size="13" fill="#6b7280">30 numbers</text><rect class="bar" x="90" y="214" width="338.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">99.2%</text></svg><figcaption>If every result must be different, turn off duplicates instead of hoping for luck.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Numbers drawn</th><th>Chance of a repeat</th></tr></thead><tbody><tr><td>5</td><td>9.7%</td></tr><tr><td>10</td><td>37.2%</td></tr><tr><td>12</td><td>49.7%</td></tr><tr><td>15</td><td>66.9%</td></tr><tr><td>20</td><td>87.0%</td></tr><tr><td>30</td><td>99.2%</td></tr></tbody></table></div>
+      <h2>Decimals</h2>
+      <p>In decimal mode the number is picked uniformly between the limits and rounded to the precision you choose. With a precision of 2, the range 0 to 1 has 101 possible values. If you turn duplicates off, any exact repeat is re-drawn, which matters only at very low precision.</p>
+      <h2>Sorting and reading long lists</h2>
+      <p>When you generate many numbers, use the sort option to see them in order, which makes it easier to spot gaps or to read off the smallest and largest values. Large results are shown on one line separated by commas, so you can copy them straight into a spreadsheet and split them by comma. Numbers of a thousand or more are displayed with thousands separators.</p>
+      <h2>Fair draws and common uses</h2>
+      <ul><li>Raffles and classroom picks: give each person a number and generate within that range, without repeats for several winners.</li><li>Games: simulate dice or a spinner by setting the limits to the faces.</li><li>Sampling: pick random rows or IDs from a list.</li><li>Test data: generate decimals to simulate measurements.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using this for passwords, keys or anything security-related.</li><li>Assuming a number is &ldquo;due&rdquo; after a streak. Each click is independent.</li><li>Forgetting that both limits are included.</li><li>Allowing duplicates in a draw that needs unique winners.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large box shows one number, or a list for several. If you asked for sorted output, it is in order. Refreshing or clicking Generate again produces a fresh set; nothing is saved between runs. For analysis of the numbers you generated, use the Mean, Median, Mode, Range Calculator or the Standard Deviation Calculator.</p>
+      <div class="callout">This generator is not suitable for cryptography or for regulated gambling and lotteries, which require certified sources.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="dice-roller.html">Dice Roller</a> &ndash; roll virtual dice</li><li><a href="password-generator.html">Password Generator</a> &ndash; secure random passwords</li><li><a href="probability-calculator.html">Probability Calculator</a> &ndash; chances of events</li><li><a href="permutation-and-combination-calculator.html">Permutation and Combination Calculator</a> &ndash; count possible sets</li><li><a href="mean-median-mode-range-calculator.html">Mean, Median, Mode, Range Calculator</a> &ndash; summarize your numbers</li><li><a href="standard-deviation-calculator.html">Standard Deviation Calculator</a> &ndash; spread of your numbers</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Why would I disallow duplicates?</h3>
-        <p>Useful whenever each result needs to be unique &mdash; assigning raffle numbers, shuffling a deck, or picking several different winners from a pool without repeats.</p>
+        <p>Whenever each result must be unique: assigning raffle numbers, shuffling a deck, or picking several different winners from a pool without repeats.</p>
       </div>
       <div class="faq-item">
         <h3>Does refreshing give a different result?</h3>
-        <p>Yes &mdash; every time you click Generate, a fresh set of random numbers is produced. Nothing is cached or remembered between runs.</p>
+        <p>Yes. Every time you click Generate, a fresh set of random numbers is produced. Nothing is cached or remembered between runs.</p>
       </div>
+      <div class="faq-item">
+        <h3>Is this truly random?</h3>
+        <p>It uses your browser's pseudo-random generator, which is statistically fair for everyday uses. It is not suitable for cryptography; use the Password Generator for secure random values.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are the lower and upper limits included?</h3>
+        <p>Yes. With limits 1 and 100, both 1 and 100 can appear.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why did I get the same number twice?</h3>
+        <p>Each draw is independent, so repeats are normal when duplicates are allowed. The chance of a repeat among 10 draws from 1 to 100 is about 37%.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many numbers can I generate at once?</h3>
+        <p>Up to 10,000. Without repeats, you cannot ask for more unique integers than the range contains.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" rel="noopener" target="_blank">MDN: Math.random()</a>; <a href="https://csrc.nist.gov/projects/random-bit-generation" rel="noopener" target="_blank">NIST: Random Bit Generation</a></p>
     </div>
 
   </div>

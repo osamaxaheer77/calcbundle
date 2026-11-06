@@ -49,13 +49,21 @@
       if (allowDup) {
         for (let i = 0; i < count; i++) results.push(randomInt(lo, hi));
       } else {
-        const pool = [];
-        for (let v = lo; v <= hi; v++) pool.push(v);
-        for (let i = pool.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          [pool[i], pool[j]] = [pool[j], pool[i]];
+        const span = hi - lo + 1;
+        if (span > 1000000 && count * 4 < span) {
+          // Huge range, few picks: draw and reject repeats instead of building a giant list.
+          const seen = new Set();
+          while (seen.size < count) seen.add(randomInt(lo, hi));
+          results = [...seen];
+        } else {
+          const pool = [];
+          for (let v = lo; v <= hi; v++) pool.push(v);
+          for (let i = pool.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [pool[i], pool[j]] = [pool[j], pool[i]];
+          }
+          results = pool.slice(0, count);
         }
-        results = pool.slice(0, count);
       }
     } else {
       for (let i = 0; i < count; i++) results.push(randomDecimal(lower, upper, precision));
