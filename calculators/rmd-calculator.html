@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RMD Calculator: Required Minimum Distribution Estimate | CalcBundle</title>
-<meta name="description" content="Estimate required minimum distributions from retirement account balances using age and beneficiary details, with optional balance projections.">
+<title>RMD Calculator: Required Minimum Distribution</title>
+<meta name="description" content="Estimate your required minimum distribution from an IRA or 401(k) using the IRS tables, with the start age by birth year and a projection to age 120.">
 <link rel="canonical" href="https://calcbundle.net/calculators/rmd-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="RMD Calculator: Required Minimum Distribution Estimate | CalcBundle">
-<meta property="og:description" content="Estimate required minimum distributions from retirement account balances using age and beneficiary details, with optional balance projections.">
+<meta property="og:title" content="RMD Calculator: Required Minimum Distribution">
+<meta property="og:description" content="Estimate your required minimum distribution from an IRA or 401(k) using the IRS tables, with the start age by birth year and a projection to age 120.">
 <meta property="og:url" content="https://calcbundle.net/calculators/rmd-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="RMD Calculator: Required Minimum Distribution Estimate | CalcBundle">
-<meta name="twitter:description" content="Estimate required minimum distributions from retirement account balances using age and beneficiary details, with optional balance projections.">
+<meta name="twitter:title" content="RMD Calculator: Required Minimum Distribution">
+<meta name="twitter:description" content="Estimate your required minimum distribution from an IRA or 401(k) using the IRS tables, with the start age by birth year and a projection to age 120.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -39,42 +39,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is a required minimum distribution?",
+      "name": "When do I have to start taking RMDs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A required minimum distribution, or RMD, is the smallest amount the IRS makes you withdraw each year from most tax-deferred retirement accounts once you reach a certain age. It is your account balance at the end of the previous year divided by a distribution period from an IRS table."
+        "text": "At 73 if you were born from 1951 through 1959, and at 75 if you were born in 1960 or later. Your first RMD is due by April 1 of the year after you reach that age."
       }
     },
     {
       "@type": "Question",
-      "name": "At what age do RMDs start?",
+      "name": "What balance do I use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Under the current rules, RMDs start at age 73 if you were born from 1951 through 1959, and at age 75 if you were born in 1960 or later. Your first RMD can be delayed until April 1 of the year after you reach that age, but then you must take two distributions in that year."
+        "text": "The account balance on December 31 of the previous year. Divide it by the distribution period for your age."
       }
     },
     {
       "@type": "Question",
-      "name": "Which IRS table does the calculator use?",
+      "name": "What if my spouse is much younger?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most people use the Uniform Lifetime Table. If your spouse is your only beneficiary and is more than 10 years younger than you, the Joint Life and Last Survivor Expectancy Table applies instead, which gives a longer distribution period and a smaller required withdrawal."
+        "text": "If your spouse is your only beneficiary and is more than 10 years younger, the Joint Life and Last Survivor table applies. It gives a longer period and so a smaller RMD."
       }
     },
     {
       "@type": "Question",
-      "name": "Which accounts have RMDs?",
+      "name": "Do Roth IRAs have RMDs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Traditional, SEP and SIMPLE IRAs and most workplace plans such as 401(k), 403(b) and 457(b) plans have RMDs. Roth IRAs do not require withdrawals during the owner's lifetime. If you have several accounts, calculate each one separately."
+        "text": "Not during the owner's lifetime. Traditional IRAs and most workplace plans do."
       }
     },
     {
       "@type": "Question",
-      "name": "What happens if I miss an RMD?",
+      "name": "Can I take more than the RMD?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The IRS charges an excise tax on the amount you failed to withdraw. The rate is 25%, and it can fall to 10% if you correct the shortfall promptly. The penalty can sometimes be waived for a reasonable error."
+        "text": "Yes. The RMD is a minimum. Anything you take above it is taxed as income too."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this cover inherited IRAs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Inherited accounts follow different rules, which depend on the owner and the beneficiary."
       }
     }
   ]
@@ -172,52 +180,63 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What a required minimum distribution is</h2>
-      <p>Money in a traditional IRA or a workplace plan such as a 401(k) has not yet been taxed. The IRS does not let it sit there forever, so once you reach a set age it requires you to withdraw a minimum amount each year, and you pay income tax on what you take. That amount is your required minimum distribution, or RMD. You can always withdraw more, but never less.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> An RMD is the minimum you must withdraw each year from a traditional IRA or 401(k): last December's balance divided by an IRS distribution period. For a person aged 75 with $300,000, the period is 24.6 and the RMD is $12,195.</div>
+      <h2>What a required minimum distribution is</h2>
+      <p>Money in a traditional IRA or a workplace plan such as a 401(k) has not been taxed yet. The IRS does not let it sit forever: once you reach a set age you must withdraw a minimum amount each year and pay income tax on it. That amount is the <strong>required minimum distribution</strong> (RMD). You can always withdraw more, never less.</p>
       <h2>How the amount is worked out</h2>
-      <p>Take your account balance on December 31 of the previous year, then divide it by a distribution period from an IRS table that depends on your age. The older you are, the smaller the period and the larger the share of the account you must take. Most people use the Uniform Lifetime Table. If your spouse is your only beneficiary and is more than 10 years younger, the Joint Life and Last Survivor table applies, which gives a longer period and a smaller RMD. Both tables come from IRS Publication 590-B.</p>
-
+      <p>Take your account balance on December 31 of the previous year and divide it by a <strong>distribution period</strong> from an IRS table based on your age. Most people use the Uniform Lifetime Table. If your only beneficiary is a spouse who is more than 10 years younger, the Joint Life and Last Survivor table applies and gives a longer period and a smaller RMD. Both tables are in IRS Publication 590-B.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>Born in 1951, with a $300,000 balance on December 31, 2025, and a spouse born in 1953 (not more than 10 years younger, so the Uniform table applies). For 2026 you are 75, the distribution period is <strong>24.6</strong>, and the RMD is $300,000 &divide; 24.6 = <strong>$12,195.12</strong>. That is 4.07% of the balance. The page opens with the current year; for 2025 (age 74, period 25.5) the RMD would be $11,764.71, and for 2027 (age 76, period 23.7) it would be $12,658.23.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 284" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Share of the account you must withdraw by age (Uniform Lifetime Table)</title><desc id="cf1-d">At 75 you must take 4.07% of the balance; at 90 it is 8.20% and at 100 it is 15.62%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Share of the account you must withdraw by age (Uniform Lifetime Table)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">Age 73</text><rect class="bar" x="80" y="44" width="84.0" height="22" rx="4" fill="#9ca3af"/><text x="172.0" y="60" font-size="13" font-weight="700" fill="#111827">3.77%</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">Age 75</text><rect class="bar" x="80" y="78" width="90.5" height="22" rx="4" fill="#2563eb"/><text x="178.5" y="94" font-size="13" font-weight="700" fill="#111827">4.07%</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">Age 80</text><rect class="bar" x="80" y="112" width="110.3" height="22" rx="4" fill="#9ca3af"/><text x="198.3" y="128" font-size="13" font-weight="700" fill="#111827">4.95%</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">Age 85</text><rect class="bar" x="80" y="146" width="139.2" height="22" rx="4" fill="#9ca3af"/><text x="227.2" y="162" font-size="13" font-weight="700" fill="#111827">6.25%</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">Age 90</text><rect class="bar" x="80" y="180" width="182.6" height="22" rx="4" fill="#9ca3af"/><text x="270.6" y="196" font-size="13" font-weight="700" fill="#111827">8.20%</text><text x="72" y="230" text-anchor="end" font-size="13" fill="#6b7280">Age 95</text><rect class="bar" x="80" y="214" width="250.2" height="22" rx="4" fill="#9ca3af"/><text x="338.2" y="230" font-size="13" font-weight="700" fill="#111827">11.24%</text><text x="72" y="264" text-anchor="end" font-size="13" fill="#6b7280">Age 100</text><rect class="bar" x="80" y="248" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="264" font-size="13" font-weight="700" fill="#111827">15.62%</text></svg><figcaption>The older you are, the bigger the share you must take.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Age</th><th>Distribution period</th><th>RMD on $300,000</th><th>Share of balance</th></tr></thead><tbody><tr><td>73</td><td>26.5</td><td>$11,321</td><td>3.77%</td></tr><tr><td>75</td><td>24.6</td><td>$12,195</td><td>4.07%</td></tr><tr><td>80</td><td>20.2</td><td>$14,851</td><td>4.95%</td></tr><tr><td>85</td><td>16</td><td>$18,750</td><td>6.25%</td></tr><tr><td>90</td><td>12.2</td><td>$24,590</td><td>8.20%</td></tr><tr><td>95</td><td>8.9</td><td>$33,708</td><td>11.24%</td></tr><tr><td>100</td><td>6.4</td><td>$46,875</td><td>15.62%</td></tr></tbody></table></div>
       <h2>When RMDs begin</h2>
-      <p>The starting age is 73 for people born from 1951 through 1959, and 75 for those born in 1960 or later. Your first RMD is for the year you reach that age, but you may wait until April 1 of the following year to take it. If you do, you must also take that second year's RMD by December 31, which means two taxable withdrawals in one year. After that, each year's RMD is due by December 31.</p>
-
+      <div class="calc-table"><table><thead><tr><th>Born</th><th>RMDs start at age</th></tr></thead><tbody><tr><td>before 1951</td><td>72</td></tr><tr><td>1951 to 1959</td><td>73</td></tr><tr><td>1960 or later</td><td>75</td></tr></tbody></table></div>
+      <p>Your first RMD is for the year you reach that age, but you may delay it until April 1 of the following year. If you do, you must also take that second year&rsquo;s RMD by December 31, so two taxable withdrawals land in the same year. After that, each RMD is due by December 31. Start ages come from the SECURE 2.0 Act and could change again, so check the current rules.</p>
       <h2>The projection</h2>
-      <p>If you enter an expected return, the calculator assumes you take only the RMD each year, at year end, and that the rest of the balance grows at that rate. It runs from your current age up to 120 and shows the distribution period, withdrawal and remaining balance for every year. Leave the return blank to see just this year's RMD.</p>
-      <div class="callout">This is an estimate based on the standard IRS tables, not tax advice. It does not cover inherited accounts, which follow different rules, or special cases such as still working for the employer that sponsors your plan. Check your own account statements, and your plan or custodian, for the official figures.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understand the numbers</h2>
-      <p>As a purely mathematical illustration, a $120,000 balance divided by a distribution factor of 24 produces a $5,000 withdrawal. The factor of 24 is illustrative only and must not be assumed to apply to your age or tax year.</p>
-      <h2>Related retirement planning tools</h2>
-      <p>For a broader view of retirement withdrawals, try the <a href="retirement-calculator.html">Retirement Calculator</a>. For IRA account comparisons, see the <a href="ira-calculator.html">IRA Calculator</a>. Verify current distribution rules with the <a href="https://www.irs.gov/retirement-plans/required-minimum-distributions-for-ira-beneficiaries">IRS RMD guidance</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="annuity-payout-calculator.html">Annuity Payout Calculator</a>, <a href="retirement-calculator.html">Retirement Calculator</a>, <a href="pension-calculator.html">Pension Calculator</a>, <a href="401k-calculator.html">401K Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/roth-ira-vs-traditional-ira-vs-401k.html">Roth IRA vs Traditional IRA vs 401(k)</a>.</p>
-
+      <p>If you enter an expected return, the calculator assumes you take only the RMD each year at year end and that the rest grows at that rate, running up to age 120. With 5% growth on $300,000 from age 75, the first RMD is $12,195, the biggest is $24,705 at age 95, and the account balance is $309,454 at 80, $299,027 at 85, $265,423 at 90 and $130,353 at 100. Leave the return blank to see just this year&rsquo;s RMD.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Year-end balance and RMD for a $300,000 account growing 5% a year, from age 75</title><desc id="cf2-d">The balance peaks around age 80 and then shrinks, while the yearly RMD peaks around age 95 at $24,705.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Year-end balance and RMD for a $300,000 account growing 5% a year, from age 75</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0k</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$84k</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$167k</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$251k</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$334k</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">75</text><text x="107.8" y="194" text-anchor="middle" font-size="11" fill="#6b7280">80</text><text x="157.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">85</text><text x="207.3" y="194" text-anchor="middle" font-size="11" fill="#6b7280">90</text><text x="257.1" y="194" text-anchor="middle" font-size="11" fill="#6b7280">95</text><text x="306.9" y="194" text-anchor="middle" font-size="11" fill="#6b7280">100</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Age</text><polyline class="draw" style="--len:473" points="58.0,61.8 68.0,60.9 77.9,60.2 87.9,59.7 97.8,59.4 107.8,59.3 117.7,59.5 127.7,60.0 137.6,60.7 147.6,61.8 157.6,63.3 167.5,65.0 177.5,67.2 187.4,69.7 197.4,72.6 207.3,75.9 217.3,79.6 227.2,83.7 237.2,88.3 247.2,93.1 257.1,98.3 267.1,103.6 277.0,109.3 287.0,115.1 296.9,121.0 306.9,126.9 316.8,132.6 326.8,138.2 336.8,143.6 346.7,148.6 356.7,153.1 366.6,157.3 376.6,160.9 386.5,164.0 396.5,166.7 406.4,168.9 416.4,170.6 426.4,172.0 436.3,173.1 446.3,173.9 456.2,174.5 466.2,175.0 476.1,175.3 486.1,175.5 496.0,175.7 506.0,175.8" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Year-end balance</text><polyline class="draw" style="--len:450" points="58.0,171.4 68.0,171.2 77.9,171.0 87.9,170.7 97.8,170.5 107.8,170.2 117.7,170.0 127.7,169.7 137.6,169.4 147.6,169.1 157.6,168.9 167.5,168.6 177.5,168.3 187.4,168.1 197.4,167.8 207.3,167.5 217.3,167.3 227.2,167.1 237.2,166.9 247.2,166.8 257.1,166.7 267.1,166.7 277.0,166.7 287.0,166.9 296.9,167.0 306.9,167.4 316.8,167.8 326.8,168.2 336.8,168.7 346.7,169.4 356.7,170.0 366.6,170.7 376.6,171.4 386.5,172.1 396.5,172.8 406.4,173.3 416.4,173.9 426.4,174.4 436.3,174.7 446.3,175.0 456.2,175.3 466.2,175.5 476.1,175.6 486.1,175.7 496.0,175.8 506.0,175.9" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="246" y="40" font-size="11.5" fill="#374151">Required distribution</text></svg><figcaption>Taking only the RMD lets a growing account last, but the yearly withdrawal rises with age.</figcaption></figure>
+      <h2>A younger spouse</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">RMD at 75 on $300,000: Uniform table vs the spouse-more-than-10-years-younger table</title><desc id="cf3-d">If your sole beneficiary is a spouse more than 10 years younger, the longer period lowers the RMD by $2,936.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">RMD at 75 on $300,000: Uniform table vs the spouse-more-than-10-years-younger table</text><text x="202" y="60" text-anchor="end" font-size="13" fill="#6b7280">Uniform (period 24.6)</text><rect class="bar" x="210" y="44" width="218.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$12,195</text><text x="202" y="94" text-anchor="end" font-size="13" fill="#6b7280">Joint, spouse aged 55 (period 32.4)</text><rect class="bar" x="210" y="78" width="165.5" height="22" rx="4" fill="#10b981"/><text x="383.5" y="94" font-size="13" font-weight="700" fill="#111827">$9,259</text></svg><figcaption>The joint table can cut the RMD noticeably.</figcaption></figure>
+      <p>For an owner aged 75 whose sole-beneficiary spouse is 55, the joint period is 32.4 instead of 24.6, so the RMD on $300,000 is $9,259 instead of $12,195. The calculator uses the joint table only when you say a spouse is your sole beneficiary and is more than 10 years younger.</p>
+      <h2>Planning points</h2>
+      <ul><li>RMDs are taxed as ordinary income, so they can push you into a higher bracket or affect other things that depend on income.</li><li>If you have several IRAs, calculate each, but you can take the total from any of them. For 401(k)s each plan is separate.</li><li>Roth IRAs have no RMDs during the owner&rsquo;s lifetime.</li><li>Missing an RMD can bring a penalty. Check with your custodian or a tax professional.</li></ul>
+      <h2>What the calculator does not cover</h2>
+      <ul><li>Inherited accounts, which follow different rules.</li><li>Still working for the employer that sponsors your plan, which can delay RMDs from that plan.</li><li>Qualified charitable distributions and other special cases.</li><li>Taxes on the withdrawals.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using this year&rsquo;s balance instead of the balance on December 31 of last year.</li><li>Forgetting that delaying the first RMD means two in one year.</li><li>Using the Uniform table when the joint table applies, or the reverse.</li><li>Entering age instead of the year of birth.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the RMD for the year you picked, with your age and the distribution period beside it. If you gave an expected return, the chart and table show every year to age 120. Treat it as an estimate and check the official figure with your plan or custodian.</p>
+      <div class="callout">This is an estimate based on IRS tables, not tax advice. Rules change, so check the current IRS guidance.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="retirement-calculator.html">Retirement Calculator</a> &ndash; plan your retirement</li><li><a href="401k-calculator.html">401(k) Calculator</a> &ndash; workplace retirement savings</li><li><a href="roth-ira-calculator.html">Roth IRA Calculator</a> &ndash; tax-free growth</li><li><a href="social-security-calculator.html">Social Security Calculator</a> &ndash; pick the best claiming age</li><li><a href="income-tax-calculator.html">Income Tax Calculator</a> &ndash; tax on withdrawals</li><li><a href="estate-tax-calculator.html">Estate Tax Calculator</a> &ndash; federal estate tax</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>What is a required minimum distribution?</h3>
-        <p>A required minimum distribution, or RMD, is the smallest amount the IRS makes you withdraw each year from most tax-deferred retirement accounts once you reach a certain age. It is your account balance at the end of the previous year divided by a distribution period from an IRS table.</p>
+        <h3>When do I have to start taking RMDs?</h3>
+        <p>At 73 if you were born from 1951 through 1959, and at 75 if you were born in 1960 or later. Your first RMD is due by April 1 of the year after you reach that age.</p>
       </div>
       <div class="faq-item">
-        <h3>At what age do RMDs start?</h3>
-        <p>Under the current rules, RMDs start at age 73 if you were born from 1951 through 1959, and at age 75 if you were born in 1960 or later. Your first RMD can be delayed until April 1 of the year after you reach that age, but then you must take two distributions in that year.</p>
+        <h3>What balance do I use?</h3>
+        <p>The account balance on December 31 of the previous year. Divide it by the distribution period for your age.</p>
       </div>
       <div class="faq-item">
-        <h3>Which IRS table does the calculator use?</h3>
-        <p>Most people use the Uniform Lifetime Table. If your spouse is your only beneficiary and is more than 10 years younger than you, the Joint Life and Last Survivor Expectancy Table applies instead, which gives a longer distribution period and a smaller required withdrawal.</p>
+        <h3>What if my spouse is much younger?</h3>
+        <p>If your spouse is your only beneficiary and is more than 10 years younger, the Joint Life and Last Survivor table applies. It gives a longer period and so a smaller RMD.</p>
       </div>
       <div class="faq-item">
-        <h3>Which accounts have RMDs?</h3>
-        <p>Traditional, SEP and SIMPLE IRAs and most workplace plans such as 401(k), 403(b) and 457(b) plans have RMDs. Roth IRAs do not require withdrawals during the owner's lifetime. If you have several accounts, calculate each one separately.</p>
+        <h3>Do Roth IRAs have RMDs?</h3>
+        <p>Not during the owner's lifetime. Traditional IRAs and most workplace plans do.</p>
       </div>
       <div class="faq-item">
-        <h3>What happens if I miss an RMD?</h3>
-        <p>The IRS charges an excise tax on the amount you failed to withdraw. The rate is 25%, and it can fall to 10% if you correct the shortfall promptly. The penalty can sometimes be waived for a reasonable error.</p>
+        <h3>Can I take more than the RMD?</h3>
+        <p>Yes. The RMD is a minimum. Anything you take above it is taxed as income too.</p>
       </div>
+      <div class="faq-item">
+        <h3>Does this cover inherited IRAs?</h3>
+        <p>No. Inherited accounts follow different rules, which depend on the owner and the beneficiary.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.irs.gov/retirement-plans/retirement-plan-and-ira-required-minimum-distributions-faqs" rel="noopener" target="_blank">IRS: Required minimum distributions FAQs</a>; <a href="https://www.irs.gov/publications/p590b" rel="noopener" target="_blank">IRS: Publication 590-B (Uniform Lifetime Table)</a></p>
     </div>
 
   </div>
