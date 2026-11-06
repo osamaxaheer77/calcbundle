@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Commission Calculator: Sales Earnings & Tiered Rates | CalcBundle</title>
-<meta name="description" content="Find sales commissions, implied commission rates or sales totals, including tiered commission plans.">
+<title>Commission Calculator: Sales Earnings &amp; Tiered Rates</title>
+<meta name="description" content="Find a sales commission, a commission rate or a sales total, or work out tiered commission with a base amount and rates that change as sales grow.">
 <link rel="canonical" href="https://calcbundle.net/calculators/commission-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Commission Calculator: Sales Earnings & Tiered Rates | CalcBundle">
-<meta property="og:description" content="Find sales commissions, implied commission rates or sales totals, including tiered commission plans.">
+<meta property="og:title" content="Commission Calculator: Sales Earnings &amp; Tiered Rates">
+<meta property="og:description" content="Find a sales commission, a commission rate or a sales total, or work out tiered commission with a base amount and rates that change as sales grow.">
 <meta property="og:url" content="https://calcbundle.net/calculators/commission-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Commission Calculator: Sales Earnings & Tiered Rates | CalcBundle">
-<meta name="twitter:description" content="Find sales commissions, implied commission rates or sales totals, including tiered commission plans.">
+<meta name="twitter:title" content="Commission Calculator: Sales Earnings &amp; Tiered Rates">
+<meta name="twitter:description" content="Find a sales commission, a commission rate or a sales total, or work out tiered commission with a base amount and rates that change as sales grow.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,7 +42,7 @@
       "name": "How do I calculate a commission?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Multiply the sales price by the commission rate as a decimal. A 3% commission on a 200,000 sale is 200,000 times 0.03, which is 6,000."
+        "text": "Multiply the sales price by the commission rate as a decimal. A 3% commission on a $200,000 sale is 200,000 times 0.03, which is $6,000."
       }
     },
     {
@@ -50,7 +50,7 @@
       "name": "How does a tiered commission work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The sales are split into ranges, and each range has its own rate. The commission is the sum of what each range earns. Only the part of the sale inside a range is paid at that range rate."
+        "text": "The sales are split into ranges, and each range has its own rate. The commission is the sum of what each range earns. Only the part of the sale inside a range is paid at that range's rate."
       }
     },
     {
@@ -75,6 +75,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Divide the commission by the sales price and multiply by 100. Enter the sales price and the commission and leave the rate empty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is commission taxed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Commission is income. Employers often withhold on it as supplemental wages, and the IRS covers commissions in its withholding guidance."
       }
     }
   ]
@@ -195,30 +203,47 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Simple commission</h2>
-      <p>A basic sales commission is a percentage of the sale. Multiply the sales price by the commission rate to get the commission. If you know the commission and the rate, divide the commission by the rate to find the sales price. If you know the commission and the sales price, divide the commission by the sales price to find the rate. Fill in any two values in the first calculator and it shows the answer with the working.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Commission is a percentage of the sale. 3% of a $200,000 sale is $6,000. In a tiered plan paying 3% on the first $20,000 and 5% above that, the same sale earns $9,600.</div>
+      <h2>Simple commission</h2>
+      <p>A basic sales commission is a percentage of the sale. <strong>Commission = sales price &times; commission rate.</strong> If you know the commission and the rate, divide the commission by the rate to find the sales price; if you know the commission and the sales price, divide to find the rate. Fill in any two of the three boxes and the calculator finds the third and shows the working.</p>
+      <p>With the defaults, a $200,000 sale at 3% pays <strong>$6,000</strong>. Going the other way, a $6,000 commission at 3% means a sales price of $200,000, and $6,000 on a $200,000 sale is a rate of 3%. Another example: a flat 5% on $20,000 of sales is $1,000.</p>
       <h2>Tiered commission</h2>
-      <p>Many pay plans use tiers, so the rate changes as sales grow. In a tiered plan each rate applies only to the part of the sales inside its range. With 3% on the first 20,000 and 5% above that, a 200,000 sale earns 3% of 20,000 plus 5% of the remaining 180,000. A tier can also be a flat dollar amount, which is paid once when sales reach that tier. Enter the upper limit of each tier and its commission, and leave the last upper limit empty for no cap.</p>
-
-      <h2>Base commission</h2>
-      <p>Some plans add a base commission on top, either a fixed amount or a percentage of the whole sale. Turn on the base commission option and enter the amount. It is added to whatever the tiers earn. If the commission does not change with the sale price, choose No for the varying option and enter a single rate or amount. The result lists each part of the commission and the total.</p>
-      <div class="callout">This calculator shows simple commission arithmetic. Real pay plans may have caps, clawbacks, splits or other rules, so check your own plan for exact terms.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: a simple check</h2><p>At a flat 5% commission rate, $20,000 in qualifying sales generates $1,000 in commission before taxes or adjustments. Tiered structures calculate differently.</p><h2>Related calculators</h2><p>To convert earnings to hourly or annual amounts, use the <a href="salary-calculator.html">Salary Calculator</a>. To understand after-tax pay, see the <a href="take-home-pay-calculator.html">Take-Home Pay Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="budget-calculator.html">Budget Calculator</a>, <a href="income-tax-calculator.html">Income Tax Calculator</a>, <a href="estate-tax-calculator.html">Estate Tax Calculator</a>, <a href="take-home-pay-calculator.html">Take-Home-Paycheck Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p>Many pay plans use tiers, so the rate changes as sales grow. In a tiered plan each rate applies only to the part of the sales inside its range. With the default plan, 3% on the first $20,000 and 5% above that, a $200,000 sale earns 3% of $20,000 (<strong>$600</strong>) plus 5% of the remaining $180,000 (<strong>$9,000</strong>), a total of <strong>$9,600</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">The tiered commission of $9,600 on a $200,000 sale</title><desc id="cf1-d">Only the part of the sale inside each range earns that range&#x27;s rate, so the 5% tier supplies 94% of the commission.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The tiered commission of $9,600 on a $200,000 sale</text><rect class="bar" x="14.0" y="42" width="30.8" height="30" fill="#2563eb"/><rect class="bar" x="44.8" y="42" width="461.2" height="30" fill="#10b981"/><text x="275.4" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">94%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">First $20,000 at 3%: <tspan font-weight="700">$600</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Remaining $180,000 at 5%: <tspan font-weight="700">$9,000</tspan></text></svg><figcaption>The higher rate applies only to the sales above the first tier.</figcaption></figure>
+      <p>Enter the upper limit of each tier and its commission, and leave the last upper limit empty for no cap. You can set up to eight tiers, and each can be a percentage or a flat dollar amount.</p>
+      <h2>Flat-dollar tiers and base commission</h2>
+      <ul><li><strong>Flat-dollar tier:</strong> a tier set in dollars pays that amount once when sales reach into the tier. If the first tier paid $500 flat instead of 3%, the same $200,000 sale would pay $9,500 ($500 plus $9,000).</li><li><strong>Base commission:</strong> some plans add a fixed amount or a percentage of the whole sale on top. A $1,000 base added to the default plan makes $10,600.</li><li><strong>No tiers:</strong> if the commission does not change with the price, choose No for the varying option and enter a single rate or amount.</li></ul>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Commission on a $200,000 sale under different plans</title><desc id="cf2-d">The default tiered plan pays $9,600, between a flat 4% ($8,000) and a flat 5% ($10,000), because only the part above $20,000 earns 5%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Commission on a $200,000 sale under different plans</text><text x="192" y="60" text-anchor="end" font-size="13" fill="#6b7280">Flat 3%</text><rect class="bar" x="200" y="44" width="129.1" height="22" rx="4" fill="#9ca3af"/><text x="337.1" y="60" font-size="13" font-weight="700" fill="#111827">$6,000</text><text x="192" y="94" text-anchor="end" font-size="13" fill="#6b7280">Flat 4%</text><rect class="bar" x="200" y="78" width="172.1" height="22" rx="4" fill="#9ca3af"/><text x="380.1" y="94" font-size="13" font-weight="700" fill="#111827">$8,000</text><text x="192" y="128" text-anchor="end" font-size="13" fill="#6b7280">Tiered 3% then 5% (default)</text><rect class="bar" x="200" y="112" width="206.5" height="22" rx="4" fill="#10b981"/><text x="414.5" y="128" font-size="13" font-weight="700" fill="#111827">$9,600</text><text x="192" y="162" text-anchor="end" font-size="13" fill="#6b7280">Tiered plus $1,000 base</text><rect class="bar" x="200" y="146" width="228.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">$10,600</text><text x="192" y="196" text-anchor="end" font-size="13" fill="#6b7280">Flat 5%</text><rect class="bar" x="200" y="180" width="215.1" height="22" rx="4" fill="#9ca3af"/><text x="423.1" y="196" font-size="13" font-weight="700" fill="#111827">$10,000</text></svg><figcaption>Tiers reward larger sales, and a base adds a floor.</figcaption></figure>
+      <h2>Effective rate of a tiered plan</h2>
+      <p>Because only the part above each limit earns the higher rate, the overall rate you earn, commission divided by sales, rises gradually. For the default plan:</p>
+      <div class="calc-table"><table><thead><tr><th>Sale size</th><th>Commission</th><th>Effective rate</th></tr></thead><tbody><tr><td>$20,000</td><td>$600</td><td>3.00%</td></tr><tr><td>$50,000</td><td>$2,100</td><td>4.20%</td></tr><tr><td>$100,000</td><td>$4,600</td><td>4.60%</td></tr><tr><td>$200,000</td><td>$9,600</td><td>4.80%</td></tr><tr><td>$500,000</td><td>$24,600</td><td>4.92%</td></tr><tr><td>$1,000,000</td><td>$49,600</td><td>4.96%</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Effective commission rate of the default tiered plan by sale size</title><desc id="cf3-d">The effective rate climbs towards 5% as the sale grows: 3.00% at $20,000 and 4.96% at $1,000,000.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Effective commission rate of the default tiered plan by sale size</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">$20,000</text><rect class="bar" x="100" y="44" width="198.4" height="22" rx="4" fill="#9ca3af"/><text x="306.4" y="60" font-size="13" font-weight="700" fill="#111827">3.00%</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">$50,000</text><rect class="bar" x="100" y="78" width="277.7" height="22" rx="4" fill="#9ca3af"/><text x="385.7" y="94" font-size="13" font-weight="700" fill="#111827">4.20%</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">$100,000</text><rect class="bar" x="100" y="112" width="304.2" height="22" rx="4" fill="#9ca3af"/><text x="412.2" y="128" font-size="13" font-weight="700" fill="#111827">4.60%</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">$200,000</text><rect class="bar" x="100" y="146" width="317.4" height="22" rx="4" fill="#2563eb"/><text x="425.4" y="162" font-size="13" font-weight="700" fill="#111827">4.80%</text><text x="92" y="196" text-anchor="end" font-size="13" fill="#6b7280">$500,000</text><rect class="bar" x="100" y="180" width="325.4" height="22" rx="4" fill="#9ca3af"/><text x="433.4" y="196" font-size="13" font-weight="700" fill="#111827">4.92%</text><text x="92" y="230" text-anchor="end" font-size="13" fill="#6b7280">$1,000,000</text><rect class="bar" x="100" y="214" width="328.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">4.96%</text></svg><figcaption>The marginal rate is 5% above $20,000, but the average takes time to catch up.</figcaption></figure>
+      <h2>Which plan is better?</h2>
+      <p>To compare a tiered plan with a flat rate, find the sale size where they pay the same. The default plan beats a flat 4% as soon as the sale is above $40,000, because 600 + 5% of the amount above $20,000 overtakes 4% of the whole sale. For smaller sales the flat 4% pays more. Use the first calculator for the flat rate and the second for the tiers, with the same sales price.</p>
+      <h2>A three-tier example</h2>
+      <p>Suppose a plan pays 3% on the first $20,000, 4% from $20,000 to $100,000 and 6% above $100,000. A $200,000 sale earns $600 + $3,200 + $6,000 = <strong>$9,800</strong>.</p>
+      <h2>Commission and tax</h2>
+      <p>Commissions are pay, and are generally taxed as income. Employers often withhold on them as supplemental wages, and the IRS lists commissions among the payments covered by its withholding rules in Publication 15. Use the Take-Home Pay or Income Tax calculators to see what you keep.</p>
+      <h2>What real plans add</h2>
+      <ul><li>Caps on the total commission.</li><li>Clawbacks if a sale is cancelled.</li><li>Splits between several people.</li><li>Draws against future commission.</li></ul>
+      <p>This calculator shows the arithmetic only, so check your own plan for the exact terms.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Applying the top tier rate to the whole sale instead of only the part above the limit.</li><li>Mixing up the rate in percent and as a decimal.</li><li>Forgetting a base commission in the total.</li><li>Entering the last tier&rsquo;s upper limit when the plan has no cap. Leave it empty.</li></ul>
+      <h2>How to read your result</h2>
+      <p>For simple commission, the large number is the missing value with the steps below it. For a tiered plan, the large number is the total commission, followed by a line for each tier or base amount and a total. Compare it with a flat rate to see what the tiers are worth to you.</p>
+      <div class="callout">This calculator shows simple commission arithmetic. Real pay plans may have other rules, so check your own plan for exact terms.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="salary-calculator.html">Salary Calculator</a> &ndash; convert pay between periods</li><li><a href="take-home-pay-calculator.html">Take-Home Pay Calculator</a> &ndash; pay after taxes</li><li><a href="income-tax-calculator.html">Income Tax Calculator</a> &ndash; federal and state income tax</li><li><a href="margin-calculator.html">Margin Calculator</a> &ndash; price, cost and profit</li><li><a href="discount-calculator.html">Discount Calculator</a> &ndash; the price after a discount</li><li><a href="budget-calculator.html">Budget Calculator</a> &ndash; plan your income and spending</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do I calculate a commission?</h3>
-        <p>Multiply the sales price by the commission rate as a decimal. A 3% commission on a 200,000 sale is 200,000 times 0.03, which is 6,000.</p>
+        <p>Multiply the sales price by the commission rate as a decimal. A 3% commission on a $200,000 sale is 200,000 times 0.03, which is $6,000.</p>
       </div>
       <div class="faq-item">
         <h3>How does a tiered commission work?</h3>
-        <p>The sales are split into ranges, and each range has its own rate. The commission is the sum of what each range earns. Only the part of the sale inside a range is paid at that range rate.</p>
+        <p>The sales are split into ranges, and each range has its own rate. The commission is the sum of what each range earns. Only the part of the sale inside a range is paid at that range's rate.</p>
       </div>
       <div class="faq-item">
         <h3>What is a base commission?</h3>
@@ -232,6 +257,11 @@
         <h3>How do I find a commission rate?</h3>
         <p>Divide the commission by the sales price and multiply by 100. Enter the sales price and the commission and leave the rate empty.</p>
       </div>
+      <div class="faq-item">
+        <h3>Is commission taxed?</h3>
+        <p>Yes. Commission is income. Employers often withhold on it as supplemental wages, and the IRS covers commissions in its withholding guidance.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.irs.gov/publications/p15" rel="noopener" target="_blank">IRS: Publication 15, Employer's Tax Guide (commissions and supplemental wages)</a></p>
     </div>
 
   </div>
