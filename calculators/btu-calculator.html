@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BTU Calculator: Room Cooling &amp; Heating Estimate | CalcBundle</title>
-<meta name="description" content="Estimate heating or cooling capacity in BTU per hour from room dimensions and other comfort assumptions.">
+<title>BTU Calculator: Room &amp; House Cooling and Heating</title>
+<meta name="description" content="Estimate the BTU per hour a room or whole house needs for cooling or heating, from area, ceiling height, insulation, sun, climate and temperature difference.">
 <link rel="canonical" href="https://calcbundle.net/calculators/btu-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="BTU Calculator: Room Cooling &amp; Heating Estimate | CalcBundle">
-<meta property="og:description" content="Estimate heating or cooling capacity in BTU per hour from room dimensions and other comfort assumptions.">
+<meta property="og:title" content="BTU Calculator: Room &amp; House Cooling and Heating">
+<meta property="og:description" content="Estimate the BTU per hour a room or whole house needs for cooling or heating, from area, ceiling height, insulation, sun, climate and temperature difference.">
 <meta property="og:url" content="https://calcbundle.net/calculators/btu-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BTU Calculator: Room Cooling &amp; Heating Estimate | CalcBundle">
-<meta name="twitter:description" content="Estimate heating or cooling capacity in BTU per hour from room dimensions and other comfort assumptions.">
+<meta name="twitter:title" content="BTU Calculator: Room &amp; House Cooling and Heating">
+<meta name="twitter:description" content="Estimate the BTU per hour a room or whole house needs for cooling or heating, from area, ceiling height, insulation, sun, climate and temperature difference.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,39 +42,47 @@
       "name": "How many BTU do I need per square foot?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A common rule of thumb is about 20 BTU per hour for each square foot of floor space, and this calculator adds a base amount and adjustments for the ceiling, insulation, sun, climate, people and room type."
+        "text": "A common rule of thumb is about 20 BTU per hour for each square foot of floor space. This calculator adds a base of 2,500 and adjustments for the ceiling, insulation, sun, climate, people and the type of room."
       }
     },
     {
       "@type": "Question",
-      "name": "How many BTU is a 1-ton air conditioner?",
+      "name": "How many BTU is one ton?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "One ton of cooling is 12,000 BTU per hour."
+        "text": "One ton of cooling is 12,000 BTU per hour, which is about 3,517 watts."
       }
     },
     {
       "@type": "Question",
-      "name": "Should I round up or down?",
+      "name": "What happens if the unit is too big?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Round up to the next common size. Slightly oversizing is fine, but a unit that is much too large will cycle on and off and handle humidity poorly."
+        "text": "It cools the room quickly and switches off before it has removed much moisture, so the room can feel cool but damp. It also cycles on and off, which wastes power."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I convert BTU per hour to watts?",
+      "name": "How is the whole-house estimate worked out?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Multiply by 0.293. A 10,000 BTU per hour unit is about 2,930 watts of heat moved."
+        "text": "It adds up the wall and ceiling surface, then multiplies by the temperature difference and a factor for insulation: 0.24 for good, 0.40 for average and 0.84 for poor. A 20 by 15 foot house with 8 foot ceilings and a 45 degree difference comes to 15,480 BTU per hour."
       }
     },
     {
       "@type": "Question",
-      "name": "Does it work for heating too?",
+      "name": "Do I use the room or the house method?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The whole house method works for heating or cooling, since it is based on the temperature difference. The room method is aimed at cooling but is also a reasonable guide for heating."
+        "text": "Use the room method for one room, such as a bedroom or kitchen. Use the house method for a whole house, and ask an installer for a full load calculation before buying central equipment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a kitchen add?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator adds 4,000 BTU per hour for a kitchen because cooking produces a lot of heat. A living room adds 1,000."
       }
     }
   ]
@@ -170,50 +178,71 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What a BTU is</h2>
-      <p>A BTU, or British thermal unit, is a measure of heat. One BTU is about the heat needed to warm one pound of water by one degree Fahrenheit. Air conditioners and heaters are rated in BTU per hour, which tells you how much heat they can move in an hour. One BTU per hour is about 0.293 watt, and 12,000 BTU per hour is called one ton of cooling.</p>
-
-      <h2>How the room estimate works</h2>
-      <p>The calculator starts with a base of 20 BTU per hour for every square foot, plus 2,500 BTU per hour. Ceilings taller than 8 feet add more, and larger rooms add more still. The result is then multiplied for poor or good insulation, for a very sunny or shaded room and for a hot or cold climate. Each person beyond the first two adds 600 BTU per hour, a kitchen adds 4,000, a living room adds 1,000, and a second floor adds 10 percent because heat rises.</p>
-
-      <h2>How the house estimate works</h2>
-      <p>This method adds up the surface area of the walls and the ceiling, which is the floor area plus the area of the four walls. It multiplies by the temperature difference you want to hold and by a number for how well the house keeps heat in: 0.24 for good insulation, 0.40 for average and 0.84 for poor. Use the difference between the hottest or coldest day and the temperature you want inside.</p>
-
-      <h2>Picking a unit</h2>
-      <p>A unit that is too small will run all day and never catch up. A unit that is too large will switch on and off too often, which wastes power and does a poor job of removing moisture. Round up to the nearest size sold, and have a professional check the load for a whole house, since windows, doors, and air leaks matter a great deal.</p>
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A 200 sq ft bedroom with an 8 ft ceiling needs about 6,500 BTU per hour (1,905 watts): 20 BTU per square foot plus a 2,500 base. A 20 by 15 ft house with a 45&deg;F difference needs 15,480 BTU per hour on average insulation.</div>
+      <h2>What a BTU is</h2>
+      <p>A BTU, or British thermal unit, is a measure of heat. One BTU is about the heat needed to warm one pound of water by one degree Fahrenheit. Air conditioners and heaters are rated in <strong>BTU per hour</strong>, which says how much heat they can move in an hour. One BTU per hour is about 0.293 watt, and 12,000 BTU per hour is called one <strong>ton</strong> of cooling.</p>
+      <h2>What the calculator does</h2>
+      <p>The page has two estimators. The <strong>room</strong> estimate works from the floor area, ceiling height, number of people, type of room, insulation, sun and climate. The <strong>whole-house</strong> estimate adds up the wall and ceiling surface and multiplies by the temperature difference and an insulation factor. Each shows the answer in BTU per hour, in watts and in tons.</p>
+      <h2>Worked example: the room estimate</h2>
+      <p>The room tool opens on a <strong>200 square foot</strong> bedroom with an <strong>8 foot</strong> ceiling, 2 people, and average insulation, sun and climate. The estimate is 20 BTU per hour for every square foot plus a base of 2,500: 20 &times; 200 + 2,500 = <strong>6,500 BTU per hour</strong>. That is 1,905 watts, or 0.54 tons. Ceilings of 8 feet or less add nothing, two people add nothing, and the average settings multiply by 1.</p>
+      <h2>The adjustments</h2>
+      <div class="calc-table"><table><thead><tr><th>Factor</th><th>Setting</th><th>Effect</th></tr></thead><tbody><tr><td>Insulation</td><td>Good / Average / Poor</td><td>&times; 0.8 / 1 / 1.2</td></tr><tr><td>Sun exposure</td><td>Heavily shaded / Average / Very sunny</td><td>&times; 0.9 / 1 / 1.1</td></tr><tr><td>Climate</td><td>Cold / Average / Hot</td><td>&times; 0.85 / 1 / 1.2</td></tr><tr><td>People</td><td>Each person beyond the first two</td><td>+ 600 BTU per hour</td></tr><tr><td>Kitchen</td><td>Type of room</td><td>+ 4,000 BTU per hour</td></tr><tr><td>Living room</td><td>Type of room</td><td>+ 1,000 BTU per hour</td></tr><tr><td>Second floor or above</td><td>Type of room</td><td>&times; 1.1, because heat rises</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Room estimate for a 200 sq ft room under different conditions (BTU per hour)</title><desc id="cf1-d">The same 200 square foot bedroom needs from 3,978 to 10,296 BTU per hour depending on sun, insulation and climate.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Room estimate for a 200 sq ft room under different conditions (BTU per hour)</text><text x="202" y="60" text-anchor="end" font-size="13" fill="#6b7280">Shaded, good insulation, cold</text><rect class="bar" x="210" y="44" width="84.2" height="22" rx="4" fill="#10b981"/><text x="302.2" y="60" font-size="13" font-weight="700" fill="#111827">3,978</text><text x="202" y="94" text-anchor="end" font-size="13" fill="#6b7280">All average (default)</text><rect class="bar" x="210" y="78" width="137.6" height="22" rx="4" fill="#2563eb"/><text x="355.6" y="94" font-size="13" font-weight="700" fill="#111827">6,500</text><text x="202" y="128" text-anchor="end" font-size="13" fill="#6b7280">Second floor</text><rect class="bar" x="210" y="112" width="151.4" height="22" rx="4" fill="#9ca3af"/><text x="369.4" y="128" font-size="13" font-weight="700" fill="#111827">7,150</text><text x="202" y="162" text-anchor="end" font-size="13" fill="#6b7280">Sunny, poor insulation, hot</text><rect class="bar" x="210" y="146" width="218.0" height="22" rx="4" fill="#dc2626"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">10,296</text></svg><figcaption>The same room, very different answers.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Insulation</th><th>BTU per hour for the 200 sq ft bedroom</th></tr></thead><tbody><tr><td>Good</td><td>5,200</td></tr><tr><td>Average</td><td>6,500</td></tr><tr><td>Poor</td><td>7,800</td></tr></tbody></table></div>
+      <h2>A fuller example</h2>
+      <p>A 300 square foot living room with a 9 foot ceiling and 4 people, very sunny and in a hot climate. The base is 20 &times; 300 + 2,500 = 8,500, and the taller ceiling adds 1,000, making 9,500. The sun (&times; 1.1) and the hot climate (&times; 1.2) take it to 12,540. The two extra people add 1,200 and the living room adds 1,000, for <strong>14,740 BTU per hour</strong>, about 4,320 watts. A 150 square foot kitchen with an 8 foot ceiling, in contrast, comes to (3,000 + 2,500) + 4,000 = <strong>9,500</strong>.</p>
+      <h2>Ceiling height</h2>
+      <p>Ceilings above 8 feet add extra load. Up to 10 feet it adds 1,000 BTU per hour for each extra foot. Above 10 feet the add-on is steeper, and in larger rooms it is scaled up as well (by up to 3 times at very large areas). The table shows the add-on in BTU per hour.</p>
+      <div class="calc-table"><table><thead><tr><th>Room size (sq ft)</th><th>9 ft ceiling</th><th>10 ft ceiling</th><th>12 ft ceiling</th></tr></thead><tbody><tr><td>200</td><td>1,000</td><td>2,000</td><td>3,467</td></tr><tr><td>500</td><td>1,000</td><td>2,000</td><td>3,467</td></tr><tr><td>1,000</td><td>2,000</td><td>4,000</td><td>6,933</td></tr><tr><td>2,000</td><td>2,500</td><td>5,000</td><td>8,667</td></tr></tbody></table></div>
+      <h2>Metric units</h2>
+      <p>You can enter the room in square metres and the ceiling in metres. A 20 square metre room with a 2.5 metre ceiling is 215.3 square feet with an 8.2 foot ceiling, which gives <strong>7,008 BTU per hour</strong>.</p>
+      <h2>Comparing with a published size chart</h2>
+      <p>ENERGY STAR&rsquo;s room air conditioner guide gives capacity by room area, and applies the same kind of adjustments for shade, sun, people and a kitchen. The calculator&rsquo;s base is a little higher, so its answer sits above the chart, as the table shows. Round up to the nearest size sold.</p>
+      <div class="calc-table"><table><thead><tr><th>Room area (sq ft)</th><th>Calculator (8 ft ceiling)</th><th>ENERGY STAR chart</th><th>Calculator vs chart</th></tr></thead><tbody><tr><td>300</td><td>8,500</td><td>7,000</td><td>+21%</td></tr><tr><td>400</td><td>10,500</td><td>9,000</td><td>+17%</td></tr><tr><td>500</td><td>12,500</td><td>12,000</td><td>+4%</td></tr><tr><td>600</td><td>14,500</td><td>14,000</td><td>+4%</td></tr><tr><td>1,000</td><td>22,500</td><td>18,000</td><td>+25%</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Calculator estimate against the ENERGY STAR size chart (BTU per hour)</title><desc id="cf2-d">For 300 to 500 square feet the calculator is 4% to 21% above the chart value, a built-in cushion for the fixed 2,500 BTU base.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Calculator estimate against the ENERGY STAR size chart (BTU per hour)</text><text x="162" y="60" text-anchor="end" font-size="13" fill="#6b7280">300 sq ft, calculator</text><rect class="bar" x="170" y="44" width="175.4" height="22" rx="4" fill="#2563eb"/><text x="353.4" y="60" font-size="13" font-weight="700" fill="#111827">8,500</text><text x="162" y="94" text-anchor="end" font-size="13" fill="#6b7280">400 sq ft, calculator</text><rect class="bar" x="170" y="78" width="216.7" height="22" rx="4" fill="#2563eb"/><text x="394.7" y="94" font-size="13" font-weight="700" fill="#111827">10,500</text><text x="162" y="128" text-anchor="end" font-size="13" fill="#6b7280">500 sq ft, calculator</text><rect class="bar" x="170" y="112" width="258.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">12,500</text><text x="162" y="162" text-anchor="end" font-size="13" fill="#6b7280">300 sq ft, chart</text><rect class="bar" x="170" y="146" width="144.5" height="22" rx="4" fill="#9ca3af"/><text x="322.5" y="162" font-size="13" font-weight="700" fill="#111827">7,000</text><text x="162" y="196" text-anchor="end" font-size="13" fill="#6b7280">400 sq ft, chart</text><rect class="bar" x="170" y="180" width="185.8" height="22" rx="4" fill="#9ca3af"/><text x="363.8" y="196" font-size="13" font-weight="700" fill="#111827">9,000</text><text x="162" y="230" text-anchor="end" font-size="13" fill="#6b7280">500 sq ft, chart</text><rect class="bar" x="170" y="214" width="247.7" height="22" rx="4" fill="#9ca3af"/><text x="425.7" y="230" font-size="13" font-weight="700" fill="#111827">12,000</text></svg><figcaption>The calculator builds in a modest cushion.</figcaption></figure>
+      <h2>Worked example: the whole-house estimate</h2>
+      <p>The house tool opens on a house <strong>20 feet wide and 15 feet long</strong> with an <strong>8 foot</strong> ceiling, a <strong>45&deg;F</strong> temperature difference and average insulation. The surface is the floor or ceiling area (20 &times; 15 = 300) plus the four walls (2 &times; (20 + 15) &times; 8 = 560), which is <strong>860 square feet</strong>. The load is the temperature difference times the insulation factor times the surface: 45 &times; 0.40 &times; 860 = <strong>15,480 BTU per hour</strong>, which is 4,537 watts or 1.29 tons. Use the difference between the hottest or coldest day and the temperature you want inside. If you enter the difference in &deg;C, the tool multiplies it by 1.8.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">House method: BTU per hour for the 20 by 15 ft house by insulation (45&amp;deg;F difference)</title><desc id="cf3-d">Poor insulation more than triples the load of good insulation: 0.84 against 0.24 gives 32,508 against 9,288 BTU per hour.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">House method: BTU per hour for the 20 by 15 ft house by insulation (45&amp;deg;F difference)</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">Good (0.24)</text><rect class="bar" x="130" y="44" width="85.1" height="22" rx="4" fill="#9ca3af"/><text x="223.1" y="60" font-size="13" font-weight="700" fill="#111827">9,288</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">Average (0.40)</text><rect class="bar" x="130" y="78" width="141.9" height="22" rx="4" fill="#2563eb"/><text x="279.9" y="94" font-size="13" font-weight="700" fill="#111827">15,480</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">Poor (0.84)</text><rect class="bar" x="130" y="112" width="298.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">32,508</text></svg><figcaption>Insulation changes the house load more than anything else.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Temperature difference (&deg;F)</th><th>Good (0.24)</th><th>Average (0.40)</th><th>Poor (0.84)</th></tr></thead><tbody><tr><td>30</td><td>6,192</td><td>10,320</td><td>21,672</td></tr><tr><td>45</td><td>9,288</td><td>15,480</td><td>32,508</td></tr><tr><td>60</td><td>12,384</td><td>20,640</td><td>43,344</td></tr></tbody></table></div>
+      <h2>Choosing a unit</h2>
+      <p>A unit that is too small runs all day and never catches up. A unit that is too large switches on and off too often, which wastes power and removes less moisture, leaving the room cool but damp. Round the estimate up to the nearest size sold, and for a whole house have an installer carry out a full load calculation, since windows, doors and air leaks matter a great deal.</p>
+      <h2>What it costs to run</h2>
+      <p>An air conditioner&rsquo;s efficiency is given as EER, the BTU per hour divided by the watts it draws. The default 6,500 BTU per hour unit at an EER of 10 draws about 650 W, which is 5.2 kWh over an 8-hour day of continuous running. At an EER of 12 it draws about 542 W. Use the Electricity Calculator with your own rate to turn that into a cost.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Using floor area alone. Ceilings, sun, people and insulation all change the load.</li><li>Sizing for the coldest or hottest day of the century instead of a typical peak.</li><li>Rounding down to a smaller unit to save money. It will run constantly and still fall short.</li><li>Using the room method for an open-plan floor or whole house. Use the house method, or ask an installer.</li><li>Forgetting that a kitchen adds a lot of heat from cooking.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the capacity in BTU per hour, with the same figure in watts and, for the house method, in tons. Treat it as a starting point, then round up to a size that is sold.</p>
       <div class="callout">These are rough estimates for planning. For a whole house, ask an installer for a full load calculation.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understanding the calculation</h2>
-      <p>A 10-by-20-foot room has 200 square feet of floor area. Capacity estimates should use both this area and other factors; floor area alone does not determine exact BTU needs.</p>
-      <h2>Related tools</h2>
-      <p>To measure the room, try the <a href="square-footage-calculator.html">Square Footage Calculator</a>. To estimate electrical running expense, see the <a href="electricity-calculator.html">Electricity Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="concrete-calculator.html">Concrete Calculator</a>, <a href="mulch-calculator.html">Mulch Calculator</a>, <a href="stair-calculator.html">Stair Calculator</a>, <a href="gravel-calculator.html">Gravel Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <h2>What to do next</h2>
+      <ul><li><a href="square-footage-calculator.html">Square Footage Calculator</a> &ndash; measure a room</li><li><a href="area-calculator.html">Area Calculator</a> &ndash; the area of common shapes</li><li><a href="electricity-calculator.html">Electricity Calculator</a> &ndash; running cost of an appliance</li><li><a href="roofing-calculator.html">Roofing Calculator</a> &ndash; roof area and materials</li><li><a href="stair-calculator.html">Stair Calculator</a> &ndash; stair rise and run</li><li><a href="concrete-calculator.html">Concrete Calculator</a> &ndash; concrete volume</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How many BTU do I need per square foot?</h3>
-        <p>A common rule of thumb is about 20 BTU per hour for each square foot of floor space, and this calculator adds a base amount and adjustments for the ceiling, insulation, sun, climate, people and room type.</p>
+        <p>A common rule of thumb is about 20 BTU per hour for each square foot of floor space. This calculator adds a base of 2,500 and adjustments for the ceiling, insulation, sun, climate, people and the type of room.</p>
       </div>
       <div class="faq-item">
-        <h3>How many BTU is a 1-ton air conditioner?</h3>
-        <p>One ton of cooling is 12,000 BTU per hour.</p>
+        <h3>How many BTU is one ton?</h3>
+        <p>One ton of cooling is 12,000 BTU per hour, which is about 3,517 watts.</p>
       </div>
       <div class="faq-item">
-        <h3>Should I round up or down?</h3>
-        <p>Round up to the next common size. Slightly oversizing is fine, but a unit that is much too large will cycle on and off and handle humidity poorly.</p>
+        <h3>What happens if the unit is too big?</h3>
+        <p>It cools the room quickly and switches off before it has removed much moisture, so the room can feel cool but damp. It also cycles on and off, which wastes power.</p>
       </div>
       <div class="faq-item">
-        <h3>How do I convert BTU per hour to watts?</h3>
-        <p>Multiply by 0.293. A 10,000 BTU per hour unit is about 2,930 watts of heat moved.</p>
+        <h3>How is the whole-house estimate worked out?</h3>
+        <p>It adds up the wall and ceiling surface, then multiplies by the temperature difference and a factor for insulation: 0.24 for good, 0.40 for average and 0.84 for poor. A 20 by 15 foot house with 8 foot ceilings and a 45 degree difference comes to 15,480 BTU per hour.</p>
       </div>
       <div class="faq-item">
-        <h3>Does it work for heating too?</h3>
-        <p>The whole house method works for heating or cooling, since it is based on the temperature difference. The room method is aimed at cooling but is also a reasonable guide for heating.</p>
+        <h3>Do I use the room or the house method?</h3>
+        <p>Use the room method for one room, such as a bedroom or kitchen. Use the house method for a whole house, and ask an installer for a full load calculation before buying central equipment.</p>
       </div>
+      <div class="faq-item">
+        <h3>What does a kitchen add?</h3>
+        <p>The calculator adds 4,000 BTU per hour for a kitchen because cooking produces a lot of heat. A living room adds 1,000.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://webarchive.library.unt.edu/web/20170101011358/http://www.energystar.gov/products/heating_cooling/air_conditioning_room" rel="noopener" target="_blank">ENERGY STAR (archived): Room air conditioner sizing</a>; <a href="https://en.wikipedia.org/wiki/British_thermal_unit" rel="noopener" target="_blank">Wikipedia: British thermal unit</a>; <a href="https://en.wikipedia.org/wiki/Ton_of_refrigeration" rel="noopener" target="_blank">Wikipedia: Ton of refrigeration</a></p>
     </div>
 
   </div>
