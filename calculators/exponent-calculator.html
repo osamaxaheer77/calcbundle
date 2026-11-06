@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exponent Calculator: Powers, Roots & Missing Exponents | CalcBundle</title>
-<meta name="description" content="Calculate powers or solve for the base or exponent using supported numerical cases.">
+<title>Exponent Calculator: Powers, Roots &amp; Missing Exponents</title>
+<meta name="description" content="Find a power, solve for the missing base or exponent, and work with negative, fractional and e exponents, with clear steps and the rules of exponents.">
 <link rel="canonical" href="https://calcbundle.net/calculators/exponent-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Exponent Calculator: Powers, Roots & Missing Exponents | CalcBundle">
-<meta property="og:description" content="Calculate powers or solve for the base or exponent using supported numerical cases.">
+<meta property="og:title" content="Exponent Calculator: Powers, Roots &amp; Missing Exponents">
+<meta property="og:description" content="Find a power, solve for the missing base or exponent, and work with negative, fractional and e exponents, with clear steps and the rules of exponents.">
 <meta property="og:url" content="https://calcbundle.net/calculators/exponent-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Exponent Calculator: Powers, Roots & Missing Exponents | CalcBundle">
-<meta name="twitter:description" content="Calculate powers or solve for the base or exponent using supported numerical cases.">
+<meta name="twitter:title" content="Exponent Calculator: Powers, Roots &amp; Missing Exponents">
+<meta name="twitter:description" content="Find a power, solve for the missing base or exponent, and work with negative, fractional and e exponents, with clear steps and the rules of exponents.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,15 +41,47 @@
       "name": "Can I enter a fractional exponent?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — enter it in decimal form (0.5 instead of 1/2). A fractional exponent with numerator 1 is equivalent to taking a root: raising to the power 0.5 is the same as a square root."
+        "text": "Yes. Enter it in decimal form, such as 0.5 instead of 1/2. A fractional exponent works as a root, so 9 to the power 0.5 is the square root of 9, which is 3."
       }
     },
     {
       "@type": "Question",
-      "name": "Why can't I solve for the exponent with a negative base?",
+      "name": "How do I solve for the exponent?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Logarithms are only defined for positive bases, so solving basex=result for x requires a positive base (and a positive result) — if you know the exponent and result already, solving for the base handles negative and fractional cases more flexibly instead."
+        "text": "Leave the exponent blank and enter the base and the result. The calculator divides the logarithm of the result by the logarithm of the base. For 2 and 32, the exponent is 5."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the base?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leave the base blank and enter the exponent and the result. The base is the result raised to the power of one over the exponent. For an exponent of 5 and a result of 32, the base is 2."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a negative exponent mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means take the reciprocal. Two to the power of minus 3 is 1 divided by 2 cubed, which is 1 divided by 8, or 0.125."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I see NAN?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NAN means there is no real-number answer, for example an even root of a negative number, or a negative base with a fractional exponent. Those need imaginary numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the e box do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It uses e, about 2.71828, as the base. This is common in growth and decay problems. With an exponent of 1 the result is 2.7182818285."
       }
     }
   ]
@@ -119,37 +151,65 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What exponentiation means</h2>
-      <p>a<sup>n</sup> means multiplying the base a by itself n times. This calculator generalizes that to solve for whichever of the three values &mdash; base, exponent, or result &mdash; you don't already know, using logarithms and roots as needed.</p>
-
-      <h2>Key exponent rules</h2>
-      <p>Same-base multiplication adds exponents (a<sup>n</sup>&times;a<sup>m</sup>=a<sup>n+m</sup>), same-base division subtracts them, and raising a power to another power multiplies them ((a<sup>m</sup>)<sup>n</sup>=a<sup>mn</sup>). A negative exponent means "take the reciprocal": a<sup>-n</sup> = 1/a<sup>n</sup>. Any nonzero base raised to the power 0 equals 1.</p>
-      <div class="callout">This calculator works with real numbers only. Taking an even root of a negative number (like solving x&sup2;=-4 for x) requires an imaginary number, which isn't supported &mdash; you'll see "NAN" in that case.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: check the result</h2><p>Two to the fifth power is 2 × 2 × 2 × 2 × 2 = 32. A fractional exponent such as 16^(1/2) equals the square root, 4.</p><h2>Related math calculators</h2><p>For nth roots, use the <a href="root-calculator.html">Root Calculator</a>. For logarithmic inverse calculations, try the <a href="log-calculator.html">Log Calculator</a>.</p>
-      <h2>A worked example</h2>
-      <p>With a base of 2 and an exponent of 5, the result is 32, because 2 × 2 × 2 × 2 × 2 = 32. You can solve the other way too: leave the exponent blank with a base of 2 and a result of 32, and the exponent comes out at 5. Leave the base blank to find the root: the 5th root of 32 is 2.</p>
-
-      <h2>Tips for exponents</h2>
-      <p>A negative exponent means a reciprocal, so 2⁻³ = 1/8 = 0.125, and a fractional exponent means a root, so 9^0.5 = 3. Any number to the power zero is 1. Be careful with negative bases and fractional exponents, which have no real answer. Very large results are shown in scientific notation, and the Scientific Calculator can handle longer expressions.</p>
-
-      <p><strong>You might also need:</strong> <a href="log-calculator.html">Log Calculator</a>, <a href="root-calculator.html">Root Calculator</a>, <a href="gcf-calculator.html">Greatest Common Factor Calculator</a>, <a href="quadratic-formula-calculator.html">Quadratic Formula Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <!--next-->
-      <p><strong>What next?</strong> If the answer is too long to read, convert it with the <a href="scientific-notation-calculator.html">Scientific Notation Calculator</a>, and if you need every digit of a huge power, the <a href="big-number-calculator.html">Big Number Calculator</a> keeps them all. To round the result to a sensible number of places, use the <a href="rounding-calculator.html">Rounding Calculator</a>.</p>
-      <!--/next-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Enter any two of base, exponent and result. 2 to the power 5 is 32, 2 to the power of &minus;3 is 0.125 and 9 to the power 0.5 is 3. Solving 2<sup>x</sup> = 10 gives x = 3.3219280949.</div>
+      <h2>What the calculator does</h2>
+      <p>Enter any two of the base, the exponent and the result, and the calculator finds the third. With a base and an exponent it works out the <strong>power</strong>. With a base and a result it solves for the <strong>exponent</strong> using logarithms. With an exponent and a result it finds the <strong>base</strong> using roots. A tick box lets you use <em>e</em>, about 2.71828, as the base.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens with a base of 2 and an exponent of 5. Two to the fifth power is 2 &times; 2 &times; 2 &times; 2 &times; 2 = <strong>32</strong>. Now clear the exponent and type 32 as the result: the exponent is log 32 &divide; log 2 = <strong>5</strong>. Clear the base instead and the base is the 5th root of 32, which is <strong>2</strong>. A fractional exponent works as a root: 16<sup>0.5</sup> is the square root of 16, which is 4.</p>
+      <h2>The three directions</h2>
+      <div class="calc-table"><table><thead><tr><th>You know</th><th>You find</th><th>How</th><th>Example</th></tr></thead><tbody><tr><td>Base and exponent</td><td>Result</td><td>a<sup>n</sup></td><td>2<sup>5</sup> = 32</td></tr><tr><td>Base and result</td><td>Exponent</td><td>log(result) &divide; log(base)</td><td>2<sup>x</sup> = 10 gives x = 3.3219280949</td></tr><tr><td>Exponent and result</td><td>Base</td><td>result<sup>1/exponent</sup></td><td>x<sup>2</sup> = 50 gives x = 7.0710678119</td></tr></tbody></table></div>
+      <h2>Negative and fractional exponents</h2>
+      <p>A negative exponent takes the reciprocal, so 2<sup>&minus;3</sup> = 1 &divide; 8 = <strong>0.125</strong>. A fractional exponent takes a root: 9<sup>0.5</sup> = <strong>3</strong>. Any non-zero number to the power 0 is 1. The table below shows powers of 2, copied from the way the calculator displays them.</p>
+      <div class="calc-table"><table><thead><tr><th>Exponent</th><th>2 to that power</th></tr></thead><tbody><tr><td>-3</td><td>0.125</td></tr><tr><td>-2</td><td>0.25</td></tr><tr><td>-1</td><td>0.5</td></tr><tr><td>0</td><td>1</td></tr><tr><td>1</td><td>2</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>8</td></tr><tr><td>4</td><td>16</td></tr><tr><td>5</td><td>32</td></tr><tr><td>8</td><td>256</td></tr><tr><td>10</td><td>1,024</td></tr><tr><td>20</td><td>1,048,576</td></tr><tr><td>30</td><td>1,073,741,824</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">The curve y = 2^x for whole x from &amp;minus;3 to 6</title><desc id="cf1-d">The value shrinks towards 0 on the left and then doubles with every step to the right: 0.125 at x = &amp;minus;3, 1 at x = 0 and 64 at x = 6.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">The curve y = 2^x for whole x from &amp;minus;3 to 6</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">0</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">17.3</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">34.6</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">51.8</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">69.1</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">-3</text><text x="207.3" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="306.9" y="194" text-anchor="middle" font-size="11" fill="#6b7280">2</text><text x="406.4" y="194" text-anchor="middle" font-size="11" fill="#6b7280">4</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">6</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Exponent x</text><polyline class="draw" style="--len:487" points="58.0,175.8 107.8,175.5 157.6,175.1 207.3,174.2 257.1,172.4 306.9,168.7 356.7,161.4 406.4,146.8 456.2,117.7 506.0,59.3" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">2^x</text></svg><figcaption>Powers of 2 shrink to zero on the left and double on the right.</figcaption></figure>
+      <h2>The rules of exponents</h2>
+      <div class="calc-table"><table><thead><tr><th>Rule</th><th>Check with numbers</th></tr></thead><tbody><tr><td>a<sup>m</sup> &times; a<sup>n</sup> = a<sup>m+n</sup></td><td>2<sup>3</sup> &times; 2<sup>4</sup> = 8 &times; 16 = 128 = 2<sup>7</sup></td></tr><tr><td>a<sup>m</sup> &divide; a<sup>n</sup> = a<sup>m&minus;n</sup></td><td>2<sup>7</sup> &divide; 2<sup>4</sup> = 128 &divide; 16 = 8 = 2<sup>3</sup></td></tr><tr><td>(a<sup>m</sup>)<sup>n</sup> = a<sup>mn</sup></td><td>(2<sup>3</sup>)<sup>2</sup> = 8<sup>2</sup> = 64 = 2<sup>6</sup></td></tr><tr><td>a<sup>&minus;n</sup> = 1 &divide; a<sup>n</sup></td><td>2<sup>&minus;3</sup> = 1 &divide; 8 = 0.125</td></tr><tr><td>a<sup>1/n</sup> = the nth root of a</td><td>9<sup>0.5</sup> = &radic;9 = 3 and 1000<sup>1/3</sup> = 10</td></tr><tr><td>a<sup>0</sup> = 1 (a &ne; 0)</td><td>7<sup>0</sup> = 1</td></tr></tbody></table></div>
+      <h2>Using e as the base</h2>
+      <p>Tick the box and the base becomes <em>e</em>, which is used for continuous growth and decay. With an exponent of 1 the result is <strong>2.7182818285</strong>, and with an exponent of 2 it is <strong>7.3890560989</strong>. Money growing continuously at 5% for 10 years is multiplied by e<sup>0.5</sup> = 1.6487212707. When you tick the box, the base field is cleared and disabled, so enter an exponent or a result, but not both.</p>
+      <h2>Where the calculator is used</h2>
+      <p>Exponents describe anything that grows or shrinks by a constant factor. At 7% a year, $1 grows to <strong>$1.97</strong> after 10 years, $3.87 after 20 and $7.61 after 30 (1.07 raised to those powers). To find how long that growth takes, solve for the exponent: the years to double at 7% satisfy 1.07<sup>x</sup> = 2, so x = <strong>10.2447683511</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">What $1 becomes at 7% a year (1.07 to the power of the years)</title><desc id="cf3-d">Each extra decade multiplies the pot by about 1.97: $1.97 after 10 years, $3.87 after 20 and $7.61 after 30.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">What $1 becomes at 7% a year (1.07 to the power of the years)</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">10 years</text><rect class="bar" x="90" y="44" width="87.3" height="22" rx="4" fill="#2563eb"/><text x="185.3" y="60" font-size="13" font-weight="700" fill="#111827">$1.97</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">20 years</text><rect class="bar" x="90" y="78" width="171.8" height="22" rx="4" fill="#2563eb"/><text x="269.8" y="94" font-size="13" font-weight="700" fill="#111827">$3.87</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">30 years</text><rect class="bar" x="90" y="112" width="338.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">$7.61</text></svg><figcaption>Compound growth is an exponent at work.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Years for money to double (solving 1 + rate to the power x = 2)</title><desc id="cf2-d">At 7% the exponent solves to 10.2447683511, so money doubles in a little over 10 years; at 2% it takes about 35.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Years for money to double (solving 1 + rate to the power x = 2)</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">2% a year</text><rect class="bar" x="100" y="44" width="328.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">35 years.00</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">4% a year</text><rect class="bar" x="100" y="78" width="165.6" height="22" rx="4" fill="#9ca3af"/><text x="273.6" y="94" font-size="13" font-weight="700" fill="#111827">17 years.67</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">7% a year</text><rect class="bar" x="100" y="112" width="96.0" height="22" rx="4" fill="#2563eb"/><text x="204.0" y="128" font-size="13" font-weight="700" fill="#111827">10 years.24</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">10% a year</text><rect class="bar" x="100" y="146" width="68.1" height="22" rx="4" fill="#9ca3af"/><text x="176.1" y="162" font-size="13" font-weight="700" fill="#111827">7 years.27</text></svg><figcaption>A higher rate shortens the doubling time.</figcaption></figure>
+      <h2>Large and small results</h2>
+      <p>Results between 0.0000000001 and 1,000,000,000,000,000 are shown in full, with up to 10 decimal places. Anything outside that range switches to scientific notation with six decimals. So 2<sup>49</sup> is 562,949,953,421,312, but 2<sup>50</sup> is <strong>1.125900e+15</strong> and 2<sup>100</sup> is <strong>1.267651e+30</strong>. A tiny result such as 2<sup>&minus;40</sup> appears as <strong>9.094947e-13</strong>.</p>
+      <h2>When there is no real answer</h2>
+      <ul><li>Solving for the exponent needs a positive base that is not 1, and a positive result. Base 1 has the same value for every exponent.</li><li>An even root of a negative number, such as the base in x<sup>2</sup> = &minus;4, is not a real number. The calculator reports NAN.</li><li>A negative result with a fractional exponent has no real base. A negative result needs an odd whole-number exponent, like x<sup>3</sup> = &minus;8, which gives &minus;2.</li><li>An exponent of 0 gives 1 for every base, so you cannot solve for the base from it.</li><li>A negative base with a fractional exponent, such as (&minus;2)<sup>0.5</sup>, also needs an imaginary number and shows NAN.</li></ul>
+      <p>Two special cases: (&minus;2)<sup>3</sup> is -8 and (&minus;2)<sup>2</sup> is 4, because a negative base keeps its sign for odd whole exponents only. The calculator shows 0<sup>0</sup> as 1.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing up &minus;2<sup>2</sup>, which is &minus;4, with (&minus;2)<sup>2</sup>, which is 4. Enter &minus;2 as the base to get 4.</li><li>Entering a fraction like 1/3 in the exponent box. Use the decimal form, 0.3333333333.</li><li>Filling in all three boxes. Only two should be filled, and the third is left blank.</li><li>Adding exponents when bases differ. The rule a<sup>m</sup> &times; a<sup>n</sup> = a<sup>m+n</sup> needs the same base.</li><li>Mixing up the result and the exponent when solving for the exponent.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the answer. The line under it repeats the problem with the answer in bold, for example 2<sup>5</sup> = 32, 2<sup>x</sup> = 32 &rarr; x = 5, or x<sup>5</sup> = 32 &rarr; x = 2. For very big results, use the Scientific Notation Calculator to read the exponent form, and the Big Number Calculator if you need every digit.</p>
+      <div class="callout">Results use ordinary floating-point arithmetic, so very long answers are rounded, and tiny rounding differences can appear in the last digits.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="scientific-calculator.html">Scientific Calculator</a> &ndash; longer expressions</li><li><a href="log-calculator.html">Log Calculator</a> &ndash; logarithms of any base</li><li><a href="root-calculator.html">Root Calculator</a> &ndash; square, cube and nth roots</li><li><a href="scientific-notation-calculator.html">Scientific Notation Calculator</a> &ndash; write big and small numbers</li><li><a href="big-number-calculator.html">Big Number Calculator</a> &ndash; every digit of huge powers</li><li><a href="quadratic-formula-calculator.html">Quadratic Formula Calculator</a> &ndash; solve a quadratic equation</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Can I enter a fractional exponent?</h3>
-        <p>Yes &mdash; enter it in decimal form (0.5 instead of 1/2). A fractional exponent with numerator 1 is equivalent to taking a root: raising to the power 0.5 is the same as a square root.</p>
+        <p>Yes. Enter it in decimal form, such as 0.5 instead of 1/2. A fractional exponent works as a root, so 9 to the power 0.5 is the square root of 9, which is 3.</p>
       </div>
       <div class="faq-item">
-        <h3>Why can't I solve for the exponent with a negative base?</h3>
-        <p>Logarithms are only defined for positive bases, so solving base<sup>x</sup>=result for x requires a positive base (and a positive result) &mdash; if you know the exponent and result already, solving for the base handles negative and fractional cases more flexibly instead.</p>
+        <h3>How do I solve for the exponent?</h3>
+        <p>Leave the exponent blank and enter the base and the result. The calculator divides the logarithm of the result by the logarithm of the base. For 2 and 32, the exponent is 5.</p>
       </div>
+      <div class="faq-item">
+        <h3>How do I find the base?</h3>
+        <p>Leave the base blank and enter the exponent and the result. The base is the result raised to the power of one over the exponent. For an exponent of 5 and a result of 32, the base is 2.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does a negative exponent mean?</h3>
+        <p>It means take the reciprocal. Two to the power of minus 3 is 1 divided by 2 cubed, which is 1 divided by 8, or 0.125.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do I see NAN?</h3>
+        <p>NAN means there is no real-number answer, for example an even root of a negative number, or a negative base with a fractional exponent. Those need imaginary numbers.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does the e box do?</h3>
+        <p>It uses e, about 2.71828, as the base. This is common in growth and decay problems. With an exponent of 1 the result is 2.7182818285.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Exponentiation" rel="noopener" target="_blank">Wikipedia: Exponentiation</a>; <a href="https://en.wikipedia.org/wiki/E_(mathematical_constant)" rel="noopener" target="_blank">Wikipedia: e (mathematical constant)</a>; <a href="https://en.wikipedia.org/wiki/Logarithm" rel="noopener" target="_blank">Wikipedia: Logarithm</a></p>
     </div>
 
   </div>

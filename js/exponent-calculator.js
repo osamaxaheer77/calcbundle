@@ -51,11 +51,15 @@
         el('exp-result-box').innerHTML = '<p class="tool-result is-error">Uncheck "use e as base" or clear the base field, since only two of the three values should be filled.</p>';
         return;
       }
-      answer = Math.sign(result) * Math.pow(Math.abs(result), 1 / exponent);
-      if (result < 0 && Number.isInteger(exponent) && exponent % 2 === 0) {
-        el('exp-result-box').innerHTML = '<p class="tool-result is-error">NAN &mdash; no real base solves this (would require an imaginary number).</p>';
+      if (exponent === 0) {
+        el('exp-result-box').innerHTML = '<p class="tool-result is-error">An exponent of 0 gives 1 for every base, so the base cannot be found.</p>';
         return;
       }
+      if (result < 0 && !(Number.isInteger(exponent) && Math.abs(exponent) % 2 === 1)) {
+        el('exp-result-box').innerHTML = '<p class="tool-result is-error">NAN &mdash; no real base solves this (a negative result needs an odd whole-number exponent).</p>';
+        return;
+      }
+      answer = Math.sign(result) * Math.pow(Math.abs(result), 1 / exponent);
       label = `x<sup>${fmt(exponent)}</sup> = ${fmt(result)} &rarr; x = <strong>${fmt(answer)}</strong>`;
     }
 
