@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lean Body Mass Calculator: Weight Without Fat Estimate | CalcBundle</title>
-<meta name="description" content="Compare reference formulas for estimating lean body mass from height, weight and sex.">
+<title>Lean Body Mass Calculator: Boer, James &amp; Hume</title>
+<meta name="description" content="Estimate your lean body mass and leftover body fat from height, weight and sex using the Boer, James, Hume and, for children, Peters formulas side by side.">
 <link rel="canonical" href="https://calcbundle.net/calculators/lean-body-mass-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Lean Body Mass Calculator: Weight Without Fat Estimate | CalcBundle">
-<meta property="og:description" content="Compare reference formulas for estimating lean body mass from height, weight and sex.">
+<meta property="og:title" content="Lean Body Mass Calculator: Boer, James &amp; Hume">
+<meta property="og:description" content="Estimate your lean body mass and leftover body fat from height, weight and sex using the Boer, James, Hume and, for children, Peters formulas side by side.">
 <meta property="og:url" content="https://calcbundle.net/calculators/lean-body-mass-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-fitness.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lean Body Mass Calculator: Weight Without Fat Estimate | CalcBundle">
-<meta name="twitter:description" content="Compare reference formulas for estimating lean body mass from height, weight and sex.">
+<meta name="twitter:title" content="Lean Body Mass Calculator: Boer, James &amp; Hume">
+<meta name="twitter:description" content="Estimate your lean body mass and leftover body fat from height, weight and sex using the Boer, James, Hume and, for children, Peters formulas side by side.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-fitness.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -50,31 +50,39 @@
       "name": "Which lean body mass formula is the most accurate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "None is best for everyone. Boer is often used in medical settings, James and Hume are older formulas. Looking at all three together gives you a range instead of a single number."
+        "text": "None is best for everyone. Boer is often used in medical settings, and James and Hume are older formulas. Looking at all three together gives you a range instead of a single number."
       }
     },
     {
       "@type": "Question",
-      "name": "Why do the formulas give different answers?",
+      "name": "Why does the calculator show several formulas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Each one was fitted to a different group of people and uses height and weight in a different way, so the results differ by a few kilograms."
+        "text": "There is no single agreed way to estimate lean body mass without a scan. Showing the formulas side by side shows how much the estimates differ."
       }
     },
     {
       "@type": "Question",
-      "name": "Why is the result odd for very small or very large bodies?",
+      "name": "Why is there a separate option for children?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The formulas are straight-line or simple curve fits to typical adults. Outside the range they were built for, they can give a lean mass above your body weight or below zero."
+        "text": "The Peters formula was developed for children aged 14 or younger. The adult formulas were not built for growing bodies."
       }
     },
     {
       "@type": "Question",
-      "name": "What is the Peters formula?",
+      "name": "Can lean body mass show muscle gain?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is a formula for children, which estimates lean body mass from an estimate of the volume of fluid outside the cells, based on weight and height. It is meant for children about 13 to 14 years old or younger."
+        "text": "Only roughly. The formulas use height and weight alone, so they cannot separate muscle from fat. A body scan or skinfold measurement tracks changes better."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I see odd values for very large or very small bodies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formulas are averages built from typical people. At extreme heights or weights a formula can give a result that does not make sense, so treat those results with caution."
       }
     }
   ]
@@ -173,24 +181,45 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What lean body mass is</h2>
-      <p>Lean body mass is everything in your body except fat: bones, muscle, organs, blood, skin and water. It is your total weight minus your body fat weight. For most adults it falls between 60% and 90% of body weight, and men usually have a higher share than women. Doctors use lean body mass to set doses of some drugs, and people who train use it to follow muscle gain separately from fat loss.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Lean body mass is your weight minus fat. For a 180 cm, 60 kg man the formulas give 53.3 kg (Boer), 51.8 kg (James) and 51.2 kg (Hume), roughly 85% to 89% of body weight.</div>
+      <h2>What lean body mass is</h2>
+      <p>Lean body mass is everything in your body except fat: bones, muscle, organs, blood, skin and water. It equals your total weight minus your body fat weight. For most adults it is between about 60% and 90% of body weight, and men usually have a higher share than women. Doctors use it to set doses of some drugs, and people who train use it to follow muscle gain separately from fat loss.</p>
+      <h2>What the calculator does</h2>
+      <p>Enter your sex, whether you are 14 or younger, your height and your weight in metric or US units. The calculator shows the lean body mass from three reference formulas, <strong>Boer</strong>, <strong>James</strong> and <strong>Hume</strong>, and adds the <strong>Peters</strong> formula for children aged 14 or younger. For each it gives the lean mass, its share of your weight and the body fat percentage that is left over.</p>
       <h2>The formulas</h2>
-      <p>There is no single agreed way to estimate lean body mass without a scan, so several formulas exist. The Boer and Hume formulas add up weight and height with different weights for men and women. The James formula starts from weight and takes off an amount that grows with the square of the ratio of weight to height. The calculator shows all three side by side so you can see the range. For children aged 14 or younger it adds the Peters formula, which was developed for them.</p>
-
-      <h2>Reading the results</h2>
-      <p>For each formula the calculator shows your lean body mass, what percentage of your weight it is, and the body fat percentage that is left over. The formulas are population averages built from height and weight alone, so they cannot tell a muscular person from a heavy one. Treat the result as an estimate, and expect it to drift for very small, very large or very muscular bodies, where a formula can give values that do not make sense.</p>
-      <div class="callout">These are estimates from height and weight only. They do not measure body composition, and they are not medical advice. For dosing or health decisions use measurements and guidance from a medical professional.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: how to interpret an estimate</h2><p>If total body weight is 80 kg and measured or estimated body fat is 25%, lean body mass would be approximately 60 kg. Formula-only estimates can differ from direct measurements.</p><h2>Related calculators</h2><p>For an alternate body composition estimate, use the <a href="body-fat-calculator.html">Body Fat Calculator</a>. For height/weight screening, see the <a href="bmi-calculator.html">BMI Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="body-surface-area-calculator.html">Body Surface Area Calculator</a>, <a href="army-body-fat-calculator.html">Army Body Fat Calculator</a>, <a href="healthy-weight-calculator.html">Healthy Weight Calculator</a>, <a href="body-type-calculator.html">Body Type Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/bmi-vs-body-fat.html">BMI vs Body Fat Percentage</a>.</p>
-
+      <p>Here <em>W</em> is weight in kilograms and <em>H</em> is height in centimetres.</p>
+      <div class="calc-table"><table><thead><tr><th>Formula</th><th>Men</th><th>Women</th></tr></thead><tbody><tr><td>Boer</td><td>0.407 &times; W + 0.267 &times; H &minus; 19.2</td><td>0.252 &times; W + 0.473 &times; H &minus; 48.3</td></tr><tr><td>James</td><td>1.1 &times; W &minus; 128 &times; (W &divide; H)&sup2;</td><td>1.07 &times; W &minus; 148 &times; (W &divide; H)&sup2;</td></tr><tr><td>Hume</td><td>0.3281 &times; W + 0.33929 &times; H &minus; 29.5336</td><td>0.29569 &times; W + 0.41813 &times; H &minus; 43.2933</td></tr><tr><td>Peters (children, 14 or younger)</td><td>3.8 &times; 0.0215 &times; W<sup>0.6469</sup> &times; H<sup>0.7236</sup></td><td>Same formula for both sexes</td></tr></tbody></table></div>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens with a man, 180 cm tall, weighing 60 kg. The Boer formula gives 0.407 &times; 60 + 0.267 &times; 180 &minus; 19.2 = <strong>53.3 kg</strong>, which is 89% of his weight and leaves 11% body fat. James gives 1.1 &times; 60 &minus; 128 &times; (60 &divide; 180)&sup2; = <strong>51.8 kg</strong> (86%, 14% fat). Hume gives <strong>51.2 kg</strong> (85%, 15% fat). The first result shown is the large number, the others are in the table.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Lean body mass of a 180 cm, 60 kg man by formula (kg)</title><desc id="cf1-d">The three formulas range from 51.2 kg to 53.3 kg, a gap of 2.1 kg, which is why the tool shows them side by side.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Lean body mass of a 180 cm, 60 kg man by formula (kg)</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">Boer</text><rect class="bar" x="70" y="44" width="358.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">53.3 kg</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">James</text><rect class="bar" x="70" y="78" width="347.9" height="22" rx="4" fill="#10b981"/><text x="425.9" y="94" font-size="13" font-weight="700" fill="#111827">51.8 kg</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">Hume</text><rect class="bar" x="70" y="112" width="344.2" height="22" rx="4" fill="#f59e0b"/><text x="422.2" y="128" font-size="13" font-weight="700" fill="#111827">51.2 kg</text></svg><figcaption>Three formulas, three slightly different answers.</figcaption></figure>
+      <h2>The US units example</h2>
+      <p>Switch to US units and the page uses 5 feet 10 inches and 160 pounds, which is 177.8 cm and 72.57 kg. The three formulas give 127.5 lb (Boer), 129.0 lb (James) and 120.4 lb (Hume), shown in pounds because you chose US units.</p>
+      <h2>A woman&rsquo;s example</h2>
+      <p>For a woman 165 cm tall and weighing 60 kg, the formulas give <strong>44.9 kg</strong> (Boer), <strong>44.6 kg</strong> (James) and <strong>43.4 kg</strong> (Hume), between 72% and 75% of her weight. Women have a higher share of essential body fat, so for the same weight the lean mass is lower than for a man of the same size.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Lean body mass of a 165 cm, 60 kg woman by formula (kg)</title><desc id="cf2-d">At the same 60 kg, the woman&amp;rsquo;s estimates are about 43.4 to 44.9 kg, which is 72% to 75% of her weight.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Lean body mass of a 165 cm, 60 kg woman by formula (kg)</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">Boer</text><rect class="bar" x="70" y="44" width="358.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">44.9 kg</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">James</text><rect class="bar" x="70" y="78" width="356.1" height="22" rx="4" fill="#10b981"/><text x="434.1" y="94" font-size="13" font-weight="700" fill="#111827">44.6 kg</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">Hume</text><rect class="bar" x="70" y="112" width="346.6" height="22" rx="4" fill="#f59e0b"/><text x="424.6" y="128" font-size="13" font-weight="700" fill="#111827">43.4 kg</text></svg><figcaption>The same weight, a different build.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Formula</th><th>Lean body mass</th><th>Share of weight</th><th>Body fat left</th></tr></thead><tbody><tr><td>Boer</td><td>44.9 kg</td><td>75%</td><td>25%</td></tr><tr><td>James</td><td>44.6 kg</td><td>74%</td><td>26%</td></tr><tr><td>Hume</td><td>43.4 kg</td><td>72%</td><td>28%</td></tr></tbody></table></div>
+      <h2>Children aged 14 or younger</h2>
+      <p>Tick &ldquo;Age 14 or younger?&rdquo; and the Peters formula appears first. For a child of 140 cm and 35 kg it gives <strong>29.1 kg</strong> (83% of weight), against 32.4 kg from Boer, 30.5 kg from James and 29.5 kg from Hume. The adult formulas were not built for children, so rely on the Peters line for this age group.</p>
+      <h2>How the formulas react to weight</h2>
+      <p>Each formula treats extra weight differently. For a 180 cm man, Boer adds 0.407 kg of lean mass for every kilogram of weight, Hume adds 0.328 kg, and James starts at 1.1 kg and subtracts more as weight rises.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Lean body mass for a 180 cm man at different body weights (kg)</title><desc id="cf3-d">The formulas agree near 60 kg, but James flattens as weight rises because it subtracts a term that grows with the square of weight over height.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Lean body mass for a 180 cm man at different body weights (kg)</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">0</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">19</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">38</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">57</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">76</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">50</text><text x="147.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">60</text><text x="237.2" y="194" text-anchor="middle" font-size="11" fill="#6b7280">70</text><text x="326.8" y="194" text-anchor="middle" font-size="11" fill="#6b7280">80</text><text x="416.4" y="194" text-anchor="middle" font-size="11" fill="#6b7280">90</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">100</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Body weight (kg)</text><polyline class="draw" style="--len:451" points="58.0,94.6 147.6,87.8 237.2,81.1 326.8,74.4 416.4,67.6 506.0,60.9" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Boer</text><polyline class="draw" style="--len:452" points="58.0,101.3 147.6,90.3 237.2,80.6 326.8,72.2 416.4,65.1 506.0,59.3" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="246" y="40" font-size="11.5" fill="#374151">James</text><polyline class="draw" style="--len:450" points="58.0,96.7 147.6,91.2 237.2,85.8 326.8,80.4 416.4,74.9 506.0,69.5" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="398" y="34" width="12" height="4" rx="2" fill="#f59e0b"/><text x="416" y="40" font-size="11.5" fill="#374151">Hume</text></svg><figcaption>Lean mass rises with weight, but at different rates.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Weight (kg)</th><th>Boer</th><th>James</th><th>Hume</th></tr></thead><tbody><tr><td>50</td><td>49.2</td><td>45.1</td><td>47.9</td></tr><tr><td>60</td><td>53.3</td><td>51.8</td><td>51.2</td></tr><tr><td>70</td><td>57.4</td><td>57.6</td><td>54.5</td></tr><tr><td>80</td><td>61.4</td><td>62.7</td><td>57.8</td></tr><tr><td>90</td><td>65.5</td><td>67.0</td><td>61.1</td></tr><tr><td>100</td><td>69.6</td><td>70.5</td><td>64.3</td></tr></tbody></table></div>
+      <h2>When the formulas break down</h2>
+      <p>The formulas use height and weight only, so they cannot tell a muscular person from a heavy one, and they drift for very large or very small bodies. For a man 160 cm tall weighing 200 kg, Boer gives 104.9 kg (52%), Hume gives 90.4 kg (45%), but James gives only <strong>20.0 kg</strong> (10%), a value that does not make sense. When the three disagree widely, treat the result with caution.</p>
+      <h2>Lean body mass and fat-free mass</h2>
+      <p>The two terms are close but not identical. Lean body mass includes a small amount of essential fat inside organs and the nervous system, while fat-free mass excludes all fat. The gap is about 2% to 3% of body weight in men and 5% to 12% in women.</p>
+      <h2>Working backwards from body fat</h2>
+      <p>If you know your body fat percentage from a scan or a measurement, the sum is simple. An 80 kg person with 25% body fat has <strong>60 kg</strong> of fat-free tissue (80 &times; 0.75). That is more reliable than any formula based on height and weight alone. The Body Fat Calculator estimates the percentage from body measurements.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Entering pounds in the kilogram box, or the other way round. Check the units box.</li><li>Treating one formula as the truth. Use the range from all three.</li><li>Using adult formulas for a child, or forgetting to tick the child box.</li><li>Reading the body-fat column as a measurement. It is only what is left after the formula.</li><li>Using the result for drug dosing without professional advice.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the lean body mass from the first formula in the list, with its share of your weight underneath. The table lists every formula with the lean mass and the body fat that remains. Look for the range, not a single number, and compare it with a direct measurement if you can get one.</p>
+      <div class="callout">These are estimates from height and weight only. They do not measure body composition and are not medical advice. For dosing or health decisions, use measurements and guidance from a medical professional.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="body-fat-calculator.html">Body Fat Calculator</a> &ndash; body fat from measurements</li><li><a href="army-body-fat-calculator.html">Army Body Fat Calculator</a> &ndash; the military body fat estimate</li><li><a href="bmi-calculator.html">BMI Calculator</a> &ndash; height and weight screening</li><li><a href="body-surface-area-calculator.html">Body Surface Area Calculator</a> &ndash; surface area for dosing</li><li><a href="healthy-weight-calculator.html">Healthy Weight Calculator</a> &ndash; a healthy weight range</li><li><a href="body-type-calculator.html">Body Type Calculator</a> &ndash; your body shape</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/bmi-vs-body-fat.html">BMI vs Body Fat Percentage</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What is the difference between lean body mass and fat free mass?</h3>
@@ -198,20 +227,25 @@
       </div>
       <div class="faq-item">
         <h3>Which lean body mass formula is the most accurate?</h3>
-        <p>None is best for everyone. Boer is often used in medical settings, James and Hume are older formulas. Looking at all three together gives you a range instead of a single number.</p>
+        <p>None is best for everyone. Boer is often used in medical settings, and James and Hume are older formulas. Looking at all three together gives you a range instead of a single number.</p>
       </div>
       <div class="faq-item">
-        <h3>Why do the formulas give different answers?</h3>
-        <p>Each one was fitted to a different group of people and uses height and weight in a different way, so the results differ by a few kilograms.</p>
+        <h3>Why does the calculator show several formulas?</h3>
+        <p>There is no single agreed way to estimate lean body mass without a scan. Showing the formulas side by side shows how much the estimates differ.</p>
       </div>
       <div class="faq-item">
-        <h3>Why is the result odd for very small or very large bodies?</h3>
-        <p>The formulas are straight-line or simple curve fits to typical adults. Outside the range they were built for, they can give a lean mass above your body weight or below zero.</p>
+        <h3>Why is there a separate option for children?</h3>
+        <p>The Peters formula was developed for children aged 14 or younger. The adult formulas were not built for growing bodies.</p>
       </div>
       <div class="faq-item">
-        <h3>What is the Peters formula?</h3>
-        <p>It is a formula for children, which estimates lean body mass from an estimate of the volume of fluid outside the cells, based on weight and height. It is meant for children about 13 to 14 years old or younger.</p>
+        <h3>Can lean body mass show muscle gain?</h3>
+        <p>Only roughly. The formulas use height and weight alone, so they cannot separate muscle from fat. A body scan or skinfold measurement tracks changes better.</p>
       </div>
+      <div class="faq-item">
+        <h3>Why do I see odd values for very large or very small bodies?</h3>
+        <p>The formulas are averages built from typical people. At extreme heights or weights a formula can give a result that does not make sense, so treat those results with caution.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Lean_body_mass" rel="noopener" target="_blank">Wikipedia: Lean body mass</a>; <a href="https://en.wikipedia.org/wiki/Body_fat_percentage" rel="noopener" target="_blank">Wikipedia: Body fat percentage</a>; <a href="https://en.wikipedia.org/wiki/Body_composition" rel="noopener" target="_blank">Wikipedia: Body composition</a></p>
     </div>
 
   </div>
