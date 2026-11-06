@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tile Calculator: Tile Count, Boxes &amp; Waste | CalcBundle</title>
-<meta name="description" content="Estimate how many floor or wall tiles and boxes a project needs using area and tile size.">
+<title>Tile Calculator: Tile Count, Boxes, Waste &amp; Cost</title>
+<meta name="description" content="Work out how many floor or wall tiles and boxes you need from the area, tile size and grout gap, with a 5 to 10 percent waste range and an optional cost.">
 <link rel="canonical" href="https://calcbundle.net/calculators/tile-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Tile Calculator: Tile Count, Boxes &amp; Waste | CalcBundle">
-<meta property="og:description" content="Estimate how many floor or wall tiles and boxes a project needs using area and tile size.">
+<meta property="og:title" content="Tile Calculator: Tile Count, Boxes, Waste &amp; Cost">
+<meta property="og:description" content="Work out how many floor or wall tiles and boxes you need from the area, tile size and grout gap, with a 5 to 10 percent waste range and an optional cost.">
 <meta property="og:url" content="https://calcbundle.net/calculators/tile-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tile Calculator: Tile Count, Boxes &amp; Waste | CalcBundle">
-<meta name="twitter:description" content="Estimate how many floor or wall tiles and boxes a project needs using area and tile size.">
+<meta name="twitter:title" content="Tile Calculator: Tile Count, Boxes, Waste &amp; Cost">
+<meta name="twitter:description" content="Work out how many floor or wall tiles and boxes you need from the area, tile size and grout gap, with a 5 to 10 percent waste range and an optional cost.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -39,42 +39,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How many tiles do I need for a floor?",
+      "name": "How do I calculate how many tiles I need?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Divide the area of the floor by the area of one tile, including its gap, and round up. Then add 5 to 10 percent for cuts and breakage."
+        "text": "Divide the area by the area of one tile plus its grout gap, and round up. For 300 square feet of 12 inch tiles with a 0.25 inch gap, that is 288 tiles."
       }
     },
     {
       "@type": "Question",
-      "name": "How much extra tile should I buy?",
+      "name": "How much extra should I buy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Plan on 5 to 10 percent extra. Use more, around 15 percent, for diagonal patterns or rooms with many corners."
+        "text": "Most installers buy 5 to 10 percent more than the count to allow for cuts and breakage. Diagonal and herringbone layouts need more."
       }
     },
     {
       "@type": "Question",
-      "name": "Should I include the grout gap?",
+      "name": "Does the grout gap matter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The gap adds to the size each tile takes up. It makes a small difference for large tiles and a bigger one for small tiles."
+        "text": "Yes. Each tile takes up its size plus the gap. A 0.25 inch gap on 12 inch tiles reduces the count by about 4 percent compared with no gap."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I find the area of a room?",
+      "name": "How do boxes work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Multiply the length by the width. For a room of 20 by 15 feet, the area is 300 square feet."
+        "text": "Enter the number of tiles per box and the calculator rounds the tile count up to a whole number of boxes, with a range for waste."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I find tiles per box?",
+      "name": "Can I use metric units?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is printed on the box, along with the area the box covers. Enter the tiles per box here to see how many boxes to buy."
+        "text": "Yes. Every length and area has its own unit box, so you can mix inches, feet, centimetres, millimetres and metres."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a negative gap mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means the tiles overlap. Each tile then takes up its size less the overlap, as with shingle-style tiles."
       }
     }
   ]
@@ -161,47 +169,64 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How the tiles are counted</h2>
-      <p>Each tile takes up its own size plus the gap, which is the grout line, so a 12 inch tile with a 0.25 inch gap covers a 12.25 inch square. The calculator divides the area by the area of one tile with its gap and rounds up to a whole tile. If you also give the number of tiles in a box, it rounds up to a whole number of boxes.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Divide the area by the area of one tile plus its grout gap, and round up. 300 sq ft of 12 inch tiles with a 0.25 inch gap needs 288 tiles, or 303 to 317 with 5% to 10% waste.</div>
+      <h2>How the tiles are counted</h2>
+      <p>Each tile takes up its own size plus the gap, which is the grout line. A 12 inch tile with a 0.25 inch gap covers a 12.25 inch square. The calculator divides the area by the area of one tile with its gap and rounds up to a whole tile. If you also give the number of tiles in a box, it rounds up to a whole number of boxes. You can enter the area directly or give its length and width, in any mix of units.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on an area of <strong>300 sq ft</strong>, tiles of <strong>12 &times; 12 inches</strong> and a gap of <strong>0.25 inch</strong>. Each tile with its gap covers 12.25 &times; 12.25 = 150.0625 sq in, which is 1.042 sq ft. The area is 300 &times; 144 = 43,200 sq in, and 43,200 &divide; 150.0625 = 287.88, rounded up to <strong>288 tiles</strong>. The tool also shows the area as 300 square feet, or 27.87 square metres. Allowing 5% to 10% for waste gives <strong>303 to 317 tiles</strong>.</p>
       <h2>Allow for waste</h2>
-      <p>Tiles get cut around edges and corners, and some break or have flaws. Most installers buy 5 to 10 percent more than the count. The result shows that range in tiles and boxes, and in cost if you enter a price. Buy extra tiles from the same batch, since the shade can change a little from one batch to the next.</p>
-
+      <p>Tiles are cut around edges and corners, and some break or have flaws. Most installers buy 5% to 10% more than the count. Diagonal and herringbone layouts use more tile, so add more in those cases. Buy the extra from the same batch, since the shade can change a little from one batch to the next, and keep a few spare tiles for future repairs.</p>
+      <h2>Boxes</h2>
+      <p>Enter the number of tiles in a box and the result also shows boxes. With 10 tiles to a box, the 288 tiles are <strong>29 boxes</strong>, and the 5% to 10% waste range is <strong>31 to 32 boxes</strong>. Boxes always round up, so you may end up with more tiles than the minimum.</p>
+      <h2>The effect of the grout gap</h2>
+      <p>A wider gap means each tile covers a bigger square, so fewer tiles are needed. For 300 sq ft of 12 inch tiles:</p>
+      <div class="calc-table"><table><thead><tr><th>Gap</th><th>Tile plus gap</th><th>Tiles needed</th><th>With 5% to 10% waste</th></tr></thead><tbody><tr><td>0 in</td><td>12 in</td><td>300</td><td>315 to 330</td></tr><tr><td>0.125 in</td><td>12.125 in</td><td>294</td><td>309 to 324</td></tr><tr><td>0.25 in</td><td>12.25 in</td><td>288</td><td>303 to 317</td></tr><tr><td>0.5 in</td><td>12.5 in</td><td>277</td><td>291 to 305</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Tiles needed for 300 sq ft of 12 in tiles by grout gap</title><desc id="cf2-d">A wider grout line means fewer tiles: 300 with no gap, 288 with the default 0.25 in, and 277 with 0.5 in.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Tiles needed for 300 sq ft of 12 in tiles by grout gap</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">0 in gap</text><rect class="bar" x="100" y="44" width="328.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">300</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">0.125 in gap</text><rect class="bar" x="100" y="78" width="321.4" height="22" rx="4" fill="#9ca3af"/><text x="429.4" y="94" font-size="13" font-weight="700" fill="#111827">294</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">0.25 in gap</text><rect class="bar" x="100" y="112" width="314.9" height="22" rx="4" fill="#2563eb"/><text x="422.9" y="128" font-size="13" font-weight="700" fill="#111827">288</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">0.5 in gap</text><rect class="bar" x="100" y="146" width="302.9" height="22" rx="4" fill="#9ca3af"/><text x="410.9" y="162" font-size="13" font-weight="700" fill="#111827">277</text></svg><figcaption>A wider grout line saves tiles.</figcaption></figure>
+      <h2>The effect of tile size</h2>
+      <div class="calc-table"><table><thead><tr><th>Tile size</th><th>Tiles needed</th><th>With 5% to 10% waste</th></tr></thead><tbody><tr><td>6 &times; 6 in</td><td>1,152</td><td>1,210 to 1,267</td></tr><tr><td>12 &times; 12 in</td><td>294</td><td>309 to 324</td></tr><tr><td>12 &times; 24 in</td><td>148</td><td>156 to 163</td></tr><tr><td>24 &times; 24 in</td><td>75</td><td>78 to 82</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Tiles needed for 300 sq ft by tile size (0.125 in gap)</title><desc id="cf1-d">Tile count falls quickly as tiles get bigger: 1,152 tiles of 6 inches against 75 of 24 inches for the same floor.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Tiles needed for 300 sq ft by tile size (0.125 in gap)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">6 &amp;times; 6 in</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">1,152</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">12 &amp;times; 12 in</text><rect class="bar" x="110" y="78" width="81.2" height="22" rx="4" fill="#2563eb"/><text x="199.2" y="94" font-size="13" font-weight="700" fill="#111827">294</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">12 &amp;times; 24 in</text><rect class="bar" x="110" y="112" width="40.9" height="22" rx="4" fill="#9ca3af"/><text x="158.9" y="128" font-size="13" font-weight="700" fill="#111827">148</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">24 &amp;times; 24 in</text><rect class="bar" x="110" y="146" width="20.7" height="22" rx="4" fill="#9ca3af"/><text x="138.7" y="162" font-size="13" font-weight="700" fill="#111827">75</text></svg><figcaption>Bigger tiles, far fewer pieces.</figcaption></figure>
+      <h2>Length and width, and metric units</h2>
+      <p>Choose &ldquo;Length and width&rdquo; and the area becomes length times width: 20 ft by 15 ft is 300 sq ft, the same as the default. In metric, a 25 m&sup2; floor with 30 &times; 30 cm tiles and a 3 mm gap needs <strong>273 tiles</strong> (25 &divide; 0.303&sup2; = 272.3).</p>
+      <h2>Overlap</h2>
+      <p>The gap box accepts a negative number, for tiles that overlap, such as shingle-style tiles. With 12 inch tiles overlapping by 0.5 inch, each tile takes up 11.5 &times; 11.5 inches, and the same 300 sq ft needs <strong>327 tiles</strong>.</p>
       <h2>Pricing</h2>
-      <p>You can price tiles by the tile, by the box, or by area in square feet, inches, yards, meters or centimeters. Pricing by the box uses the number of boxes rounded up, and pricing by the tile uses the rounded up number of tiles. Pricing by area uses the exact area to cover, with no waste.</p>
-      <div class="callout">Layout patterns such as diagonal or herringbone use more tile. Add more for waste in those cases.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understanding the calculation</h2>
-      <p>A 100-square-foot floor with tiles that each cover one square foot needs at least 100 tiles before waste. A 10% allowance increases that estimate to 110 tiles.</p>
-      <h2>Related tools</h2>
-      <p>If you need to measure the room first, use the <a href="square-footage-calculator.html">Square Footage Calculator</a>. For other shapes, try the <a href="area-calculator.html">Area Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="square-footage-calculator.html">Square Footage Calculator</a>, <a href="stair-calculator.html">Stair Calculator</a>, <a href="roofing-calculator.html">Roofing Calculator</a>, <a href="btu-calculator.html">BTU Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p>You can price by the tile, by the box, or by area in square feet, inches, yards, metres or centimetres. Pricing by the tile uses the rounded-up number of tiles and by the box uses the rounded-up boxes, with the cost for the 5% to 10% waste range shown too. Pricing by area uses the exact area with no waste. At $3.50 per tile the default job costs $1,008. At $35 per box of 10 the 29 boxes cost $1,015, and at $3.50 per square foot the area costs $1,050. With waste, the box price runs from $1,085 to $1,120.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Cost of the default job by how the price is quoted</title><desc id="cf3-d">Pricing by area uses the exact area with no waste, so it is the lowest figure and is not what you will actually pay once you buy whole tiles or boxes.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Cost of the default job by how the price is quoted</text><text x="192" y="60" text-anchor="end" font-size="13" fill="#6b7280">$3.50 per tile (288 tiles)</text><rect class="bar" x="200" y="44" width="218.9" height="22" rx="4" fill="#2563eb"/><text x="426.9" y="60" font-size="13" font-weight="700" fill="#111827">$1,008</text><text x="192" y="94" text-anchor="end" font-size="13" fill="#6b7280">$35 per box of 10 (29 boxes)</text><rect class="bar" x="200" y="78" width="220.4" height="22" rx="4" fill="#10b981"/><text x="428.4" y="94" font-size="13" font-weight="700" fill="#111827">$1,015</text><text x="192" y="128" text-anchor="end" font-size="13" fill="#6b7280">$3.50 per sq ft (exact area)</text><rect class="bar" x="200" y="112" width="228.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">$1,050</text></svg><figcaption>The same floor, three ways to price it.</figcaption></figure>
+      <h2>Common mistakes</h2>
+      <ul><li>Forgetting the grout gap. It reduces the tile count by about 4% on 12 inch tiles.</li><li>Mixing units, such as tile in inches and area in square metres, without setting the unit boxes.</li><li>Buying exactly the count with no waste.</li><li>Pricing by area and treating it as the final cost.</li><li>Using the room area without subtracting fixed items like a bathtub or cabinet, if you will not tile under them.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the tiles needed with no waste, followed by the boxes if you gave a box size, and the area covered. The next line gives the count with 5% to 10% extra. If you entered a price, the cost lines follow, and a note at the bottom explains how the gap was used.</p>
+      <div class="callout">This is an estimate. Complex layouts, patterned tiles and very uneven rooms can need more, so ask your supplier before you buy.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="square-footage-calculator.html">Square Footage Calculator</a> &ndash; measure a room</li><li><a href="area-calculator.html">Area Calculator</a> &ndash; the area of common shapes</li><li><a href="concrete-calculator.html">Concrete Calculator</a> &ndash; concrete volume and bags</li><li><a href="gravel-calculator.html">Gravel Calculator</a> &ndash; gravel volume, tons and cost</li><li><a href="roofing-calculator.html">Roofing Calculator</a> &ndash; roof area and materials</li><li><a href="surface-area-calculator.html">Surface Area Calculator</a> &ndash; the surface of solids</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>How many tiles do I need for a floor?</h3>
-        <p>Divide the area of the floor by the area of one tile, including its gap, and round up. Then add 5 to 10 percent for cuts and breakage.</p>
+        <h3>How do I calculate how many tiles I need?</h3>
+        <p>Divide the area by the area of one tile plus its grout gap, and round up. For 300 square feet of 12 inch tiles with a 0.25 inch gap, that is 288 tiles.</p>
       </div>
       <div class="faq-item">
-        <h3>How much extra tile should I buy?</h3>
-        <p>Plan on 5 to 10 percent extra. Use more, around 15 percent, for diagonal patterns or rooms with many corners.</p>
+        <h3>How much extra should I buy?</h3>
+        <p>Most installers buy 5 to 10 percent more than the count to allow for cuts and breakage. Diagonal and herringbone layouts need more.</p>
       </div>
       <div class="faq-item">
-        <h3>Should I include the grout gap?</h3>
-        <p>Yes. The gap adds to the size each tile takes up. It makes a small difference for large tiles and a bigger one for small tiles.</p>
+        <h3>Does the grout gap matter?</h3>
+        <p>Yes. Each tile takes up its size plus the gap. A 0.25 inch gap on 12 inch tiles reduces the count by about 4 percent compared with no gap.</p>
       </div>
       <div class="faq-item">
-        <h3>How do I find the area of a room?</h3>
-        <p>Multiply the length by the width. For a room of 20 by 15 feet, the area is 300 square feet.</p>
+        <h3>How do boxes work?</h3>
+        <p>Enter the number of tiles per box and the calculator rounds the tile count up to a whole number of boxes, with a range for waste.</p>
       </div>
       <div class="faq-item">
-        <h3>How do I find tiles per box?</h3>
-        <p>It is printed on the box, along with the area the box covers. Enter the tiles per box here to see how many boxes to buy.</p>
+        <h3>Can I use metric units?</h3>
+        <p>Yes. Every length and area has its own unit box, so you can mix inches, feet, centimetres, millimetres and metres.</p>
       </div>
+      <div class="faq-item">
+        <h3>What does a negative gap mean?</h3>
+        <p>It means the tiles overlap. Each tile then takes up its size less the overlap, as with shingle-style tiles.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Tile" rel="noopener" target="_blank">Wikipedia: Tile</a>; <a href="https://en.wikipedia.org/wiki/Grout" rel="noopener" target="_blank">Wikipedia: Grout</a></p>
     </div>
 
   </div>
