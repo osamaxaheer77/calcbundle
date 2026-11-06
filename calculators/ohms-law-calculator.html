@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ohm's Law Calculator: Voltage, Current &amp; Resistance | CalcBundle</title>
-<meta name="description" content="Solve electrical voltage, current, resistance or power from known circuit measurements.">
+<title>Ohm's Law Calculator: Volts, Amps, Ohms &amp; Watts</title>
+<meta name="description" content="Enter any two of voltage, current, resistance and power to find the other two with Ohm&#x27;s law, with unit choices from milli to kilo and worked examples.">
 <link rel="canonical" href="https://calcbundle.net/calculators/ohms-law-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Ohm's Law Calculator: Voltage, Current &amp; Resistance | CalcBundle">
-<meta property="og:description" content="Solve electrical voltage, current, resistance or power from known circuit measurements.">
+<meta property="og:title" content="Ohm&#x27;s Law Calculator: Volts, Amps, Ohms &amp; Watts">
+<meta property="og:description" content="Enter any two of voltage, current, resistance and power to find the other two with Ohm&#x27;s law, with unit choices from milli to kilo and worked examples.">
 <meta property="og:url" content="https://calcbundle.net/calculators/ohms-law-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ohm's Law Calculator: Voltage, Current &amp; Resistance | CalcBundle">
-<meta name="twitter:description" content="Solve electrical voltage, current, resistance or power from known circuit measurements.">
+<meta name="twitter:title" content="Ohm&#x27;s Law Calculator: Volts, Amps, Ohms &amp; Watts">
+<meta name="twitter:description" content="Enter any two of voltage, current, resistance and power to find the other two with Ohm&#x27;s law, with unit choices from milli to kilo and worked examples.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Which two values should I provide?",
+      "name": "What is Ohm's law?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Whichever two you actually know. Fill in any two fields (in any combination) and leave the other two blank."
+        "text": "Ohm's law says voltage equals current times resistance, V = I x R. With the power equation P = V x I, any two of voltage, current, resistance and power give the other two."
       }
     },
     {
       "@type": "Question",
-      "name": "Is this the same as the resistor calculator?",
+      "name": "How many values do I need to enter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No — our Resistor Calculator reads a resistor's color bands to find its resistance value, rather than working from voltage, current, and power."
+        "text": "Exactly two of the four. If you fill in one, three or four, the calculator cannot tell which equations to use and asks for exactly two."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find power from current and resistance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use P = I squared times R. A current of 0.02 amps through 220 ohms gives 0.088 watts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Ohm's law work for AC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for resistive loads such as heaters and incandescent bulbs. Circuits with capacitors or inductors need impedance, which this calculator does not handle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does doubling the voltage quadruple the power?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Current doubles with the voltage, and power is voltage times current, so power rises four times. In symbols P = V squared divided by R."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use milliamps and kilohms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Choose the unit next to each box, and the calculator converts to base units first."
       }
     }
   ]
@@ -147,38 +179,67 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">The equations behind the result</h2>
-      <p>Ohm's Law relates voltage, current, and resistance: V = I &times; R. Combined with the power equation P = V &times; I, any two of the four quantities are enough to solve for the other two &mdash; the calculator picks whichever pair of equations fits the two values you provided.</p>
-
-      <h2>Only for resistive circuits</h2>
-      <p>These equations hold exactly for simple resistive circuits (no capacitors or inductors), under both DC and AC conditions. Reactive components introduce phase differences between voltage and current that this calculator doesn't account for.</p>
-      <div class="callout">Leave exactly two of the four fields filled in &mdash; if you fill in three or four, or only one, the calculator can't tell which equation to use.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: verify the calculation</h2><p>A 12-volt supply across a 6-ohm resistor produces 2 amperes: I = 12 ÷ 6. The power dissipated is 24 watts.</p><h2>Related calculators</h2><p>For further calculations, see <a href="resistor-calculator.html">Resistor Calculator</a> and <a href="voltage-drop-calculator.html">Voltage Drop Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>A device is connected to a 110-volt supply and draws 0.2 amps. Its resistance is V ÷ I = 110 ÷ 0.2 = 550 ohms, and its power is V × I = 110 × 0.2 = 22 watts. Enter any two of voltage, current, resistance and power, and the other two are worked out for you.</p>
-
-      <h2>Tips for circuits</h2>
-      <p>Ohm's law works for resistive loads such as heaters and incandescent bulbs. Motors, transformers and many electronics are not simply resistive, and AC circuits with reactance need impedance instead. Use consistent units: volts, amps, ohms and watts, or convert milliamps and kilohms first. When choosing a resistor, make sure its power rating is comfortably above the watts it will dissipate.</p>
-
-      <h2>Common uses</h2>
-      <p>Students use it for homework, hobbyists use it to size resistors for LEDs, and electricians use it to check currents and loads.</p>
-
-      <p><strong>You might also need:</strong> <a href="resistor-calculator.html">Resistor Calculator</a>, <a href="voltage-drop-calculator.html">Voltage Drop Calculator</a>, <a href="electricity-calculator.html">Electricity Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Ohm's law is V = I &times; R and power is P = V &times; I. Enter any two values. 110 V at 0.2 A is 550 &Omega; and 22 W, and 12 V across 6 &Omega; is 2 A and 24 W.</div>
+      <h2>The equations behind the result</h2>
+      <p>Ohm&rsquo;s law relates voltage, current and resistance: <strong>V = I &times; R</strong>. Combined with the power equation <strong>P = V &times; I</strong>, any two of the four quantities are enough to find the other two. Substituting one equation into the other gives three forms of each: P = V &times; I = I&sup2; &times; R = V&sup2; &divide; R. Enter exactly two of voltage, current, resistance and power, and the calculator works out the other two.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on <strong>110 V</strong> and <strong>0.2 A</strong>. The resistance is V &divide; I = 110 &divide; 0.2 = <strong>550 &Omega;</strong> and the power is V &times; I = 110 &times; 0.2 = <strong>22 W</strong>. That is a small heater or a bulb on a 110-volt supply. The result shows all four values, with the voltage as the large number.</p>
+      <h2>All six pairs of inputs</h2>
+      <p>Whichever two you know, the tool picks the matching equations:</p>
+      <div class="calc-table"><table><thead><tr><th>You enter</th><th>Example</th><th>Voltage</th><th>Current</th><th>Resistance</th><th>Power</th></tr></thead><tbody><tr><td>Voltage and current</td><td>V = 110 V, I = 0.2 A</td><td>110 V</td><td>0.2 A</td><td>550 &Omega;</td><td>22 W</td></tr><tr><td>Voltage and resistance</td><td>V = 12 V, R = 6 &Omega;</td><td>12 V</td><td>2 A</td><td>6 &Omega;</td><td>24 W</td></tr><tr><td>Voltage and power</td><td>V = 120 V, P = 1,500 W</td><td>120 V</td><td>12.5 A</td><td>9.6 &Omega;</td><td>1,500 W</td></tr><tr><td>Current and resistance</td><td>I = 0.02 A, R = 220 &Omega;</td><td>4.4 V</td><td>0.02 A</td><td>220 &Omega;</td><td>0.088 W</td></tr><tr><td>Current and power</td><td>I = 5 A, P = 1,200 W</td><td>240 V</td><td>5 A</td><td>48 &Omega;</td><td>1,200 W</td></tr><tr><td>Resistance and power</td><td>R = 100 &Omega;, P = 0.25 W</td><td>5 V</td><td>0.05 A</td><td>100 &Omega;</td><td>0.25 W</td></tr></tbody></table></div>
+      <p>A few of these have practical meaning. A 1,500 W heater on 120 V draws 12.5 A and has a resistance of 9.6 &Omega;. A 100 &Omega; resistor rated for 0.25 W can take at most 5 V and 50 mA before it exceeds its rating. A 2,000 W kettle on 230 V draws about 8.696 A.</p>
+      <h2>Units and prefixes</h2>
+      <p>Voltage can be entered in kV, V or mV, current in A or mA, resistance in &Omega;, k&Omega; or M&Omega;, and power in W, kW or mW. The tool converts everything to base units first. For example, 5 V across 2 k&Omega; gives a current of <strong>0.0025 A</strong> (2.5 mA) and a power of <strong>0.0125 W</strong> (12.5 mW). Results above a billion or below a millionth appear in exponent form.</p>
+      <h2>Choosing an LED resistor</h2>
+      <p>To run a 2 V LED at 20 mA from a 5 V supply, the resistor must drop the other 3 V. Enter 3 V and 20 mA: the resistance is <strong>150 &Omega;</strong> and it dissipates <strong>0.06 W</strong>, so a standard 0.25 W resistor is fine. Round the resistance to the nearest standard value above it.</p>
+      <h2>How voltage and resistance change power</h2>
+      <p>At a fixed resistance, doubling the voltage doubles the current and <strong>quadruples</strong> the power: the 550 &Omega; load at 220 V draws 0.4 A and 88 W, against 0.2 A and 22 W at 110 V. At a fixed voltage, a smaller resistance draws more current and more power.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Power across the default 550 &amp;Omega; load at two voltages (watts)</title><desc id="cf2-d">Doubling the voltage doubles the current (0.2 A to 0.4 A) but quadruples the power, from 22 W to 88 W.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Power across the default 550 &amp;Omega; load at two voltages (watts)</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">At 110 V</text><rect class="bar" x="90" y="44" width="84.5" height="22" rx="4" fill="#9ca3af"/><text x="182.5" y="60" font-size="13" font-weight="700" fill="#111827">22 W</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">At 220 V</text><rect class="bar" x="90" y="78" width="338.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">88 W</text></svg><figcaption>Power grows with the square of the voltage.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Power drawn at 110 V by resistances of different sizes (watts)</title><desc id="cf1-d">Power at a fixed voltage is V&amp;sup2; &amp;divide; R, so halving the resistance doubles the power: 44 W at 275 &amp;Omega;, 22 W at 550 &amp;Omega;, 11 W at 1,100 &amp;Omega;.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Power drawn at 110 V by resistances of different sizes (watts)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">275 &amp;Omega;</text><rect class="bar" x="80" y="44" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">44 W</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">550 &amp;Omega;</text><rect class="bar" x="80" y="78" width="174.0" height="22" rx="4" fill="#2563eb"/><text x="262.0" y="94" font-size="13" font-weight="700" fill="#111827">22 W</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">1100 &amp;Omega;</text><rect class="bar" x="80" y="112" width="87.0" height="22" rx="4" fill="#9ca3af"/><text x="175.0" y="128" font-size="13" font-weight="700" fill="#111827">11 W</text></svg><figcaption>Lower resistance, higher power.</figcaption></figure>
+      <h2>Current drawn by appliances</h2>
+      <div class="calc-table"><table><thead><tr><th>Appliance (at 120 V)</th><th>Power</th><th>Current</th><th>Resistance</th></tr></thead><tbody><tr><td>60 W bulb</td><td>60 W</td><td>0.5 A</td><td>240 &Omega;</td></tr><tr><td>10 W LED bulb</td><td>10 W</td><td>0.083 A</td><td>1,440 &Omega;</td></tr><tr><td>1,000 W microwave</td><td>1,000 W</td><td>8.333 A</td><td>14.4 &Omega;</td></tr><tr><td>1,500 W heater</td><td>1,500 W</td><td>12.5 A</td><td>9.6 &Omega;</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Current drawn by common appliances at 120 V (amps)</title><desc id="cf3-d">The 1,500 W heater draws 12.5 A, about 150 times the current of a 10 W LED bulb, which is why heaters need heavier wiring.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Current drawn by common appliances at 120 V (amps)</text><text x="162" y="60" text-anchor="end" font-size="13" fill="#6b7280">60 W bulb</text><rect class="bar" x="170" y="44" width="10.3" height="22" rx="4" fill="#9ca3af"/><text x="188.3" y="60" font-size="13" font-weight="700" fill="#111827">0.5 A</text><text x="162" y="94" text-anchor="end" font-size="13" fill="#6b7280">10 W LED bulb</text><rect class="bar" x="170" y="78" width="2.0" height="22" rx="4" fill="#9ca3af"/><text x="180.0" y="94" font-size="13" font-weight="700" fill="#111827">0.08 A</text><text x="162" y="128" text-anchor="end" font-size="13" fill="#6b7280">1,000 W microwave</text><rect class="bar" x="170" y="112" width="172.0" height="22" rx="4" fill="#9ca3af"/><text x="350.0" y="128" font-size="13" font-weight="700" fill="#111827">8.33 A</text><text x="162" y="162" text-anchor="end" font-size="13" fill="#6b7280">1,500 W heater</text><rect class="bar" x="170" y="146" width="258.0" height="22" rx="4" fill="#dc2626"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">12.5 A</text></svg><figcaption>Current is power divided by voltage.</figcaption></figure>
+      <h2>Three ways to write the power</h2>
+      <p>Because V = I &times; R, power can be found from any two of the other quantities. For 12 V across 6 &Omega; (2 A): P = V &times; I = 12 &times; 2 = <strong>24 W</strong>, P = I&sup2; &times; R = 4 &times; 6 = <strong>24 W</strong>, and P = V&sup2; &divide; R = 144 &divide; 6 = <strong>24 W</strong>. All three agree, and the calculator uses the one that fits the two values you gave it. This also shows why a resistor&rsquo;s power rating matters: it must be at least the power it dissipates, and a safe choice is about twice that.</p>
+      <h2>Reading Ohm&rsquo;s law backwards</h2>
+      <p>Rearranged, the law gives <strong>I = V &divide; R</strong> and <strong>R = V &divide; I</strong>. If a 12 V supply drives 2 A, the load is 6 &Omega;. If a device marked 230 V and 2,000 W is plugged in, its running resistance is about 26.45 &Omega; and it draws about 8.7 A. A measured current that is much higher or lower than expected is a clue that something in the circuit has changed.</p>
+      <h2>Where the law applies</h2>
+      <p>The equations hold exactly for simple resistive circuits with no capacitors or inductors, under both DC and AC. Heaters and incandescent bulbs behave this way. Motors, transformers and many electronics are not simply resistive, and AC circuits with reactance need impedance instead. Resistance can also change with temperature, as in a light-bulb filament, so the resistance measured cold is lower than the working value.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Filling in three or four boxes. Enter exactly two.</li><li>Mixing units, such as mA with &Omega;, without choosing the unit in the box.</li><li>Using the law for a circuit with large reactance.</li><li>Confusing power with energy. Power is a rate in watts, energy is watts over time.</li><li>Entering zero or a negative number. The calculator needs values greater than 0.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the voltage, with current, resistance and power listed below it. The two you entered are repeated, so you can check they match your inputs. If the screen says to enter exactly two values, clear the extra box.</p>
+      <div class="callout">This is a basic calculation for resistive circuits. For real wiring, follow your local electrical code and have installation work checked by a qualified electrician.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="resistor-calculator.html">Resistor Calculator</a> &ndash; colour bands, series and parallel</li><li><a href="voltage-drop-calculator.html">Voltage Drop Calculator</a> &ndash; loss along a wire</li><li><a href="electricity-calculator.html">Electricity Calculator</a> &ndash; power and energy cost</li><li><a href="horsepower-calculator.html">Horsepower Calculator</a> &ndash; power in watts and horsepower</li><li><a href="scientific-notation-calculator.html">Scientific Notation Calculator</a> &ndash; very small and large values</li><li><a href="scientific-calculator.html">Scientific Calculator</a> &ndash; general maths</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Which two values should I provide?</h3>
-        <p>Whichever two you actually know. Fill in any two fields (in any combination) and leave the other two blank.</p>
+        <h3>What is Ohm's law?</h3>
+        <p>Ohm's law says voltage equals current times resistance, V = I x R. With the power equation P = V x I, any two of voltage, current, resistance and power give the other two.</p>
       </div>
       <div class="faq-item">
-        <h3>Is this the same as the resistor calculator?</h3>
-        <p>No &mdash; our <a href="resistor-calculator.html">Resistor Calculator</a> reads a resistor's color bands to find its resistance value, rather than working from voltage, current, and power.</p>
+        <h3>How many values do I need to enter?</h3>
+        <p>Exactly two of the four. If you fill in one, three or four, the calculator cannot tell which equations to use and asks for exactly two.</p>
       </div>
+      <div class="faq-item">
+        <h3>How do I find power from current and resistance?</h3>
+        <p>Use P = I squared times R. A current of 0.02 amps through 220 ohms gives 0.088 watts.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does Ohm's law work for AC?</h3>
+        <p>Yes, for resistive loads such as heaters and incandescent bulbs. Circuits with capacitors or inductors need impedance, which this calculator does not handle.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does doubling the voltage quadruple the power?</h3>
+        <p>Current doubles with the voltage, and power is voltage times current, so power rises four times. In symbols P = V squared divided by R.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use milliamps and kilohms?</h3>
+        <p>Yes. Choose the unit next to each box, and the calculator converts to base units first.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Ohm%27s_law" rel="noopener" target="_blank">Wikipedia: Ohm's law</a>; <a href="https://en.wikipedia.org/wiki/Electric_power" rel="noopener" target="_blank">Wikipedia: Electric power</a>; <a href="https://www.nist.gov/pml/owm/metric-si/si-units" rel="noopener" target="_blank">NIST: SI units</a></p>
     </div>
 
   </div>

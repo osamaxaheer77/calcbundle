@@ -32,6 +32,10 @@
       resultEl.innerHTML = '<p class="tool-result is-error">Enter exactly 2 of the 4 values.</p>';
       return;
     }
+    if ([v, i, r, p].some((x) => x !== null && !(x > 0))) {
+      resultEl.innerHTML = '<p class="tool-result is-error">Enter values greater than 0.</p>';
+      return;
+    }
 
     let V = v, I = i, R = r, P = p;
     if (V !== null && I !== null) { R = V / I; P = V * I; }
