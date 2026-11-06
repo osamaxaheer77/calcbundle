@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scientific Calculator: Trig, Logs, Powers & History | CalcBundle</title>
-<meta name="description" content="Use a free online scientific calculator for arithmetic, trig functions, logarithms, powers and calculation history.">
+<title>Scientific Calculator: Trig, Logs, Powers &amp; History</title>
+<meta name="description" content="Free online scientific calculator with trig functions in degrees or radians, logarithms, powers, roots, factorials, memory keys and a calculation history.">
 <link rel="canonical" href="https://calcbundle.net/calculators/scientific-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Scientific Calculator: Trig, Logs, Powers & History | CalcBundle">
-<meta property="og:description" content="Use a free online scientific calculator for arithmetic, trig functions, logarithms, powers and calculation history.">
+<meta property="og:title" content="Scientific Calculator: Trig, Logs, Powers &amp; History">
+<meta property="og:description" content="Free online scientific calculator with trig functions in degrees or radians, logarithms, powers, roots, factorials, memory keys and a calculation history.">
 <meta property="og:url" content="https://calcbundle.net/calculators/scientific-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Scientific Calculator: Trig, Logs, Powers & History | CalcBundle">
-<meta name="twitter:description" content="Use a free online scientific calculator for arithmetic, trig functions, logarithms, powers and calculation history.">
+<meta name="twitter:title" content="Scientific Calculator: Trig, Logs, Powers &amp; History">
+<meta name="twitter:description" content="Free online scientific calculator with trig functions in degrees or radians, logarithms, powers, roots, factorials, memory keys and a calculation history.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "How do I find a cube root or another root?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Raise the number to a fractional power. The cube root of 27 is 27^(1/3) = 3, and the fourth root of 81 is 81^(1/4) = 3. For square roots, use the √ key."
+        "text": "Raise the number to a fractional power. The cube root of 27 is 27^(1/3) = 3, and the fourth root of 81 is 81^(1/4) = 3. You can also use the rt key, as in 3 rt 27, or the cube root key."
       }
     },
     {
@@ -49,7 +49,7 @@
       "name": "How do I switch between degrees and radians?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use the Deg/Rad switch on the calculator. Degree mode is the default. Make sure the mode matches the angles you are entering before you use sin, cos or tan."
+        "text": "Use the Deg/Rad switch on the calculator. Degree mode is the default. Make sure the mode matches the angles you enter before using sin, cos or tan."
       }
     },
     {
@@ -57,7 +57,7 @@
       "name": "Why is the answer shown with at most 10 decimal places?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Results are rounded to 10 decimal places so that floating-point noise, such as 0.30000000000000004, does not appear in your answer."
+        "text": "Results are rounded to 10 decimal places so floating-point noise, such as 0.30000000000000004, does not appear in your answer."
       }
     },
     {
@@ -65,7 +65,23 @@
       "name": "Does it follow the order of operations?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Parentheses come first, then exponents, then multiplication and division, then addition and subtraction, so 2 + 3 × 4 gives 14."
+        "text": "Yes. Parentheses come first, then exponents, then multiplication and division, then addition and subtraction, so 2 + 3 x 4 gives 14."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does tan(90) show Error?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tangent of 90 degrees is undefined. The calculator reports Error instead of showing a huge number caused by rounding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the largest factorial it can do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "170! is the largest. 171! is too large for the calculator and shows Error."
       }
     }
   ]
@@ -212,44 +228,62 @@
 <!--seo-special-->
 <section class="calculator-section">
   <div class="container" style="max-width:700px;">
-    <div class="fraction-guide" style="margin-top:0;">
-      <h2 style="margin-top:0;">What this scientific calculator can do</h2>
-      <p>Besides the basic four operations, it handles powers (x² and xʸ), square roots, reciprocals (1/x), percentages, factorials (n!), the natural logarithm (ln) and the base-10 logarithm (log). It has the constants π and e, the trigonometric functions sin, cos and tan with their inverses, and an EXP key for entering numbers in scientific notation, such as 3.2 × 10⁵. Parentheses let you build long expressions in a single line.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A scientific calculator adds trig, logarithms, powers, roots and factorials to the basic operations. It follows the order of operations, so 2 + 3 &times; 4 is 14 and (2 + 3) &times; 4 is 20. It starts in degree mode, where sin(30) is 0.5.</div>
+      <h2>What this scientific calculator can do</h2>
+      <p>Besides the four basic operations it handles powers (x&sup2;, x&sup3; and x<sup>y</sup>), square and cube roots and any root with the <strong>rt</strong> key, reciprocals (x<sup>&minus;1</sup>), percentages, factorials, the natural logarithm (ln) and the base-10 logarithm (log). It has the constants &pi; and e, the trigonometric functions sin, cos and tan with their inverses, and an EXP key for scientific notation such as 3.2 &times; 10<sup>5</sup>. Parentheses let you build long expressions on one line.</p>
       <h2>Degrees and radians</h2>
-      <p>The calculator starts in degree mode. Use the Deg/Rad switch to change the angle unit for the trigonometric keys. In degree mode sin(30) is 0.5, and in radian mode you would enter sin(π/6) to get the same 0.5. If a trig answer looks wrong, the angle mode is the first thing to check.</p>
-
+      <p>The calculator starts in degree mode. Use the Deg/Rad switch to change the angle unit for the trigonometric keys. In degree mode sin(30) is <strong>0.5</strong>; in radian mode you would enter sin(&pi; &divide; 6) to get the same 0.5, and sin(30) would instead give -0.9880. If a trig answer looks wrong, the angle mode is the first thing to check. Tangent of an odd multiple of 90&deg; (or &pi;/2 radians) is undefined, and the calculator shows Error rather than a huge number.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">sin(1) in degree mode vs radian mode</title><desc id="cf1-d">The same keystrokes give 0.0175 in degrees and 0.8415 in radians, so check the angle mode first when a trig answer looks wrong.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">sin(1) in degree mode vs radian mode</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">Degree mode</text><rect class="bar" x="110" y="44" width="6.6" height="22" rx="4" fill="#10b981"/><text x="124.6" y="60" font-size="13" font-weight="700" fill="#111827">0.0175</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Radian mode</text><rect class="bar" x="110" y="78" width="318.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">0.8415</text></svg><figcaption>The angle unit changes the answer completely.</figcaption></figure>
       <h2>Order of operations</h2>
-      <p>Expressions are worked out in the standard order: parentheses first, then exponents, then multiplication and division from left to right, then addition and subtraction. So 2 + 3 × 4 is 14, while (2 + 3) × 4 is 20. Use parentheses to make your intent clear, particularly with division and negative numbers, as in 1 ÷ (2 + 3).</p>
-
+      <p>Expressions are worked out in the standard order: parentheses first, then exponents, then multiplication and division from left to right, then addition and subtraction. So 2 + 3 &times; 4 is 14, while (2 + 3) &times; 4 is 20. Use parentheses to make your intent clear, especially with division and negative numbers, as in 1 &divide; (2 + 3). Powers group from the right, so 2 ^ 3 ^ 2 is 2<sup>9</sup> = 512.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Order of operations: the same digits, different grouping</title><desc id="cf2-d">Multiplication is done before addition unless parentheses say otherwise, a six-point difference here.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Order of operations: the same digits, different grouping</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">2 + 3 x 4</text><rect class="bar" x="110" y="44" width="222.6" height="22" rx="4" fill="#2563eb"/><text x="340.6" y="60" font-size="13" font-weight="700" fill="#111827">14</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">(2 + 3) x 4</text><rect class="bar" x="110" y="78" width="318.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">20</text></svg><figcaption>Parentheses change the answer, so use them when in doubt.</figcaption></figure>
+      <h2>Worked examples you can check</h2>
+      <p>These are the results the calculator gives for the keystrokes shown:</p>
+      <div class="calc-table"><table><thead><tr><th>Enter</th><th>Result</th><th>Note</th></tr></thead><tbody><tr><td>2 + 3 &times; 4</td><td>14</td><td>Multiplication before addition</td></tr><tr><td>(2 + 3) &times; 4</td><td>20</td><td>Parentheses first</td></tr><tr><td>1 &divide; (2 + 3)</td><td>0.2</td><td>Parentheses with division</td></tr><tr><td>&minus;2 ^ 2</td><td>&minus;4</td><td>The power is taken before the minus sign</td></tr><tr><td>2 ^ 3 ^ 2</td><td>512</td><td>Powers group from the right: 2<sup>(3<sup>2</sup>)</sup></td></tr><tr><td>5 !</td><td>120</td><td>Factorial</td></tr><tr><td>48 &times; 7.5 %</td><td>3.6</td><td>The % key divides by 100</td></tr><tr><td>27 ^ (1 &divide; 3)</td><td>3</td><td>Cube root as a fractional power</td></tr><tr><td>3 rt 27</td><td>3</td><td>The rt key: the 3rd root of 27</td></tr><tr><td>1.05 ^ 10</td><td>1.6288946268</td><td>Five percent growth for ten years</td></tr><tr><td>ln(e)</td><td>1</td><td>Natural logarithm of e</td></tr><tr><td>log(1000)</td><td>3</td><td>Base-10 logarithm</td></tr><tr><td>sin(30) in degrees</td><td>0.5</td><td>Degree mode (the default)</td></tr><tr><td>sin&#8315;&sup1;(0.5) in degrees</td><td>30</td><td>Inverse sine</td></tr></tbody></table></div>
+      <h2>A growth example</h2>
+      <p>A growth of 5% a year for 10 years multiplies a balance by 1.05<sup>10</sup> = <strong>1.62889</strong>, so $1,000 becomes about $1,629. Enter <code>1.05 ^ 10</code> and press equals. The same keystrokes with 20 in place of 10 give 2.6533.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Growth multiplier 1.05^n for 5% a year</title><desc id="cf3-d">After 10 years the balance is multiplied by 1.62889; after 20 years by 2.6533.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Growth multiplier 1.05^n for 5% a year</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">0.0</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">0.7</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">1.4</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">2.1</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">2.9</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="170.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">5</text><text x="282.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">10</text><text x="394.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">15</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">20</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Years</text><polyline class="draw" style="--len:456" points="58.0,132.0 80.4,129.8 102.8,127.5 125.2,125.1 147.6,122.6 170.0,119.9 192.4,117.1 214.8,114.1 237.2,111.0 259.6,107.8 282.0,104.4 304.4,100.8 326.8,97.0 349.2,93.1 371.6,88.9 394.0,84.6 416.4,80.0 438.8,75.2 461.2,70.2 483.6,64.9 506.0,59.3" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Multiplier</text></svg><figcaption>Compound growth bends upwards, which a scientific calculator makes easy to check.</figcaption></figure>
+      <h2>Scientific notation and very large numbers</h2>
+      <p>Use the EXP key to enter a number such as 3.2E5, which means 3.2 &times; 10<sup>5</sup> = 320,000. Very large and very small results are shown in plain digits as long as the browser can display them; for step-by-step conversions between standard and scientific notation, use the Scientific Notation Calculator.</p>
       <h2>Memory, Ans and history</h2>
-      <p>M+ adds the last result to the memory, M− subtracts it, and MR puts the stored value back into the expression. Ans inserts the previous answer so you can continue a calculation. Every calculation is also listed in the history panel, and you can clear the list with one click. You can type on your keyboard as well: digits and operators, Enter to calculate, Backspace to delete and Escape to clear. Results are rounded to 10 decimal places, so tiny floating-point errors do not show.</p>
-
-      <h2>Useful examples</h2>
-      <p>The cube root of 27 is 27^(1/3) = 3. Five factorial, 5!, is 120. The sine of 90 degrees is 1, and ln(e) is 1. A 7.5% sales tax on $48.00 is 48 × 7.5%, which is $3.60. A growth of 5% a year for 10 years multiplies a balance by 1.05^10 = 1.62889.</p>
-
-      <!--seo-extra-->
-<h2>Worked example: check the result</h2><p>For a right triangle, sin(30°) = 0.5 in degree mode, while sin(π/6) = 0.5 in radian mode. Check the angle setting before evaluating trig expressions.</p><h2>Related math calculators</h2><p>For explicit logarithm values, use the <a href="log-calculator.html">Log Calculator</a>. For powers and roots, see the <a href="exponent-calculator.html">Exponent Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="factor-calculator.html">Factor Calculator</a>, <a href="fraction-calculator.html">Fraction Calculator</a>, <a href="quadratic-formula-calculator.html">Quadratic Formula Calculator</a>, <a href="ratio-calculator.html">Ratio Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p>M+ adds the last result to the memory, M&minus; subtracts it and MR puts the stored value back into the expression. Ans inserts the previous answer so you can continue a calculation. Every calculation is also listed in the history panel (the last 50 are kept), and you can click an entry to reuse its result. You can type on your keyboard as well: digits and operators, Enter to calculate, Backspace to delete and Escape to clear.</p>
+      <h2>Precision and limits</h2>
+      <ul><li>Results are rounded to 10 decimal places so that floating-point noise, such as 0.30000000000000004 for 0.1 + 0.2, does not show.</li><li>Factorials work up to 170! = 7.257e+306. Larger values overflow and show Error.</li><li>Division by zero shows Error.</li><li>Computers store most decimals approximately, so tiny differences can appear in very long calculations.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Forgetting to check Deg or Rad before using sin, cos or tan.</li><li>Leaving out parentheses in a fraction, such as 1 &divide; 2 + 3 instead of 1 &divide; (2 + 3).</li><li>Expecting &minus;2 ^ 2 to equal 4. The power comes first, so it is &minus;4; use (&minus;2) ^ 2 for 4.</li><li>Using % as a unit of the whole bill. The % key divides the number before it by 100.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The expression appears on the upper line and the result below it, with a live preview as you type. After you press equals, the answer becomes the start of the next expression. For explicit logarithms in any base, use the Log Calculator, and for powers and roots, the Exponent Calculator.</p>
+      <div class="callout">Check important results a second way. This calculator is for everyday and school use.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="exponent-calculator.html">Exponent Calculator</a> &ndash; powers and roots</li><li><a href="log-calculator.html">Log Calculator</a> &ndash; logarithms in any base</li><li><a href="fraction-calculator.html">Fraction Calculator</a> &ndash; add, subtract and simplify</li><li><a href="percentage-calculator.html">Percentage Calculator</a> &ndash; percent of, change and difference</li><li><a href="triangle-calculator.html">Triangle Calculator</a> &ndash; sides and angles</li><li><a href="quadratic-formula-calculator.html">Quadratic Formula Calculator</a> &ndash; solve quadratic equations</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do I find a cube root or another root?</h3>
-        <p>Raise the number to a fractional power. The cube root of 27 is 27^(1/3) = 3, and the fourth root of 81 is 81^(1/4) = 3. For square roots, use the √ key.</p>
+        <p>Raise the number to a fractional power. The cube root of 27 is 27^(1/3) = 3, and the fourth root of 81 is 81^(1/4) = 3. You can also use the rt key, as in 3 rt 27, or the cube root key.</p>
       </div>
       <div class="faq-item">
         <h3>How do I switch between degrees and radians?</h3>
-        <p>Use the Deg/Rad switch on the calculator. Degree mode is the default. Make sure the mode matches the angles you are entering before you use sin, cos or tan.</p>
+        <p>Use the Deg/Rad switch on the calculator. Degree mode is the default. Make sure the mode matches the angles you enter before using sin, cos or tan.</p>
       </div>
       <div class="faq-item">
         <h3>Why is the answer shown with at most 10 decimal places?</h3>
-        <p>Results are rounded to 10 decimal places so that floating-point noise, such as 0.30000000000000004, does not appear in your answer.</p>
+        <p>Results are rounded to 10 decimal places so floating-point noise, such as 0.30000000000000004, does not appear in your answer.</p>
       </div>
       <div class="faq-item">
         <h3>Does it follow the order of operations?</h3>
-        <p>Yes. Parentheses come first, then exponents, then multiplication and division, then addition and subtraction, so 2 + 3 × 4 gives 14.</p>
+        <p>Yes. Parentheses come first, then exponents, then multiplication and division, then addition and subtraction, so 2 + 3 x 4 gives 14.</p>
       </div>
+      <div class="faq-item">
+        <h3>Why does tan(90) show Error?</h3>
+        <p>The tangent of 90 degrees is undefined. The calculator reports Error instead of showing a huge number caused by rounding.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the largest factorial it can do?</h3>
+        <p>170! is the largest. 171! is too large for the calculator and shows Error.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://dlmf.nist.gov/4" rel="noopener" target="_blank">NIST Digital Library of Mathematical Functions: Elementary Functions</a>; <a href="https://docs.python.org/3/tutorial/floatingpoint.html" rel="noopener" target="_blank">Python documentation: Floating-point arithmetic</a></p>
     </div>
   </div>
 </section>

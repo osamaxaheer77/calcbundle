@@ -159,7 +159,12 @@ class CalcEngine {
     switch (name) {
       case 'sin': return Math.sin(toRad(a));
       case 'cos': return Math.cos(toRad(a));
-      case 'tan': return Math.tan(toRad(a));
+      case 'tan': {
+        const x = toRad(a);
+        // tan is undefined at odd multiples of 90 degrees; without this check floating-point noise gives a huge number.
+        if (Math.abs(Math.cos(x)) < 1e-12) return NaN;
+        return Math.tan(x);
+      }
       case 'sin⁻¹': return fromRad(Math.asin(a));
       case 'cos⁻¹': return fromRad(Math.acos(a));
       case 'tan⁻¹': return fromRad(Math.atan(a));
