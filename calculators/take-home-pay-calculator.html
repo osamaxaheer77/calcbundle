@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Take-Home Pay Calculator: Net Pay After Deductions | CalcBundle</title>
-<meta name="description" content="Estimate U.S. paycheck take-home pay after federal taxes, payroll taxes, state taxes and elected deductions.">
+<title>Take-Home Pay Calculator: Net Pay After Deductions</title>
+<meta name="description" content="Estimate your U.S. paycheck after federal, Social Security, Medicare, state and city tax and pre-tax deductions, plus W-4 step 3 and 4 values.">
 <link rel="canonical" href="https://calcbundle.net/calculators/take-home-pay-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Take-Home Pay Calculator: Net Pay After Deductions | CalcBundle">
-<meta property="og:description" content="Estimate U.S. paycheck take-home pay after federal taxes, payroll taxes, state taxes and elected deductions.">
+<meta property="og:title" content="Take-Home Pay Calculator: Net Pay After Deductions">
+<meta property="og:description" content="Estimate your U.S. paycheck after federal, Social Security, Medicare, state and city tax and pre-tax deductions, plus W-4 step 3 and 4 values.">
 <meta property="og:url" content="https://calcbundle.net/calculators/take-home-pay-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Take-Home Pay Calculator: Net Pay After Deductions | CalcBundle">
-<meta name="twitter:description" content="Estimate U.S. paycheck take-home pay after federal taxes, payroll taxes, state taxes and elected deductions.">
+<meta name="twitter:title" content="Take-Home Pay Calculator: Net Pay After Deductions">
+<meta name="twitter:description" content="Estimate your U.S. paycheck after federal, Social Security, Medicare, state and city tax and pre-tax deductions, plus W-4 step 3 and 4 values.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -50,7 +50,7 @@
       "name": "Why does take-home pay depend on how often I am paid?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The yearly total is the same, but it is split into a different number of paychecks. Bi-weekly pay has 26 checks a year and semi-monthly pay has 24, so each bi-weekly check is smaller. Some years a bi-weekly schedule gives you a 27th check."
+        "text": "The yearly total is the same, but it is split into a different number of paychecks. Bi-weekly pay has 26 cheques a year and semi-monthly pay has 24, so each bi-weekly cheque is smaller. Some years a bi-weekly schedule gives you a 27th cheque."
       }
     },
     {
@@ -58,23 +58,31 @@
       "name": "What counts as a pre-tax deduction?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Common ones are 401(k) contributions, health insurance premiums and health savings account deposits. They are taken out before income tax, so they lower your federal tax. This calculator still charges Social Security and Medicare on your full pay, which is the safe assumption."
+        "text": "Common ones are traditional 401(k) contributions, health insurance premiums and health savings account deposits. They are taken out before income tax, so they lower your tax bill, although 401(k) contributions do not reduce Social Security and Medicare tax."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I use the W-4 numbers?",
+      "name": "Why is my payslip different from the estimate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On the W-4 for your highest-paying job, enter the dependents amount in step 3 and the other income, deductions and extra withholding in step 4. If you have a second job or a working spouse, the extra withholding figure shows how much more to have withheld each paycheck to avoid owing at tax time."
+        "text": "Employers use withholding tables, not a yearly calculation, and your payslip may include dues, garnishments, or benefits not covered here. Treat the result as a close estimate."
       }
     },
     {
       "@type": "Question",
-      "name": "Are state and city taxes exact?",
+      "name": "Does the calculator include state tax?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. They are flat percentages of your gross pay. Many states use brackets, deductions or credits, so use your effective state rate for a better estimate. Check your state's tax agency for the exact rules."
+        "text": "Yes, as a flat percentage you enter, plus an optional city percentage. States with no income tax can be entered as 0."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use the W-4 values?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Step 3 is the dependent credit amount, Step 4(a) other income, Step 4(b) extra deductions and Step 4(c) extra withholding per paycheck. They are suggestions for the form; the IRS withholding estimator can double-check them."
       }
     }
   ]
@@ -255,24 +263,39 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How your paycheck is worked out</h2>
-      <p>Your yearly job income is split into paychecks based on how often you are paid. From each one, the calculator takes federal income tax, Social Security tax at 6.2% up to the yearly wage limit, Medicare tax at 1.45%, any state and city tax, and your pre-tax deductions. Federal income tax is estimated for the whole year from your filing status, dependents, deductions and credits, then spread evenly over your paychecks. Payroll taxes are charged on your gross pay and are not deducted before income tax.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Take-home pay is gross pay minus federal income tax, Social Security (6.2%), Medicare (1.45%), state and city tax and pre-tax deductions. On $80,000 in 2026 with $6,000 of pre-tax deductions, a single employee takes home about $60,430 a year, or $2,324.23 per bi-weekly paycheck.</div>
+      <h2>How your paycheck is worked out</h2>
+      <p>Your yearly pay is split into paychecks by how often you are paid. From each one the calculator takes out federal income tax, Social Security tax, Medicare tax, any state and city tax, and the pre-tax deductions you choose. What is left is your take-home (net) pay.</p>
+      <ul><li><strong>Federal income tax</strong> is estimated for the whole year from your filing status, dependents, deductions and credits, then spread evenly over your paychecks.</li><li><strong>Social Security tax</strong> is 6.2% of pay up to a yearly wage limit ($184,500 in 2026).</li><li><strong>Medicare tax</strong> is 1.45% of all pay, with an additional 0.9% on high earners.</li><li><strong>State and city tax</strong> are flat percentages that you enter, because rules vary widely.</li><li><strong>Pre-tax deductions</strong> such as 401(k) contributions, health insurance premiums and HSA deposits come out before income tax.</li></ul>
+      <p>Payroll taxes (Social Security and Medicare) apply to your gross pay and are not lowered by 401(k) contributions, which is why a retirement contribution reduces income tax but not those two taxes.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>A single employee in 2026 earning $80,000 a year, paid bi-weekly, with $6,000 a year in pre-tax deductions:</p>
+      <div class="calc-table"><table><thead><tr><th>Item</th><th>Per year</th><th>Per bi-weekly paycheck</th></tr></thead><tbody><tr><td>Gross pay</td><td>$80,000</td><td>$3,076.92</td></tr><tr><td>Federal income tax</td><td>$7,450</td><td>$286.54</td></tr><tr><td>Social Security tax (6.2%)</td><td>$4,960</td><td>$190.77</td></tr><tr><td>Medicare tax (1.45%)</td><td>$1,160</td><td>$44.62</td></tr><tr><td>State and city tax</td><td>$0</td><td>$0.00</td></tr><tr><td>Pre-tax deductions</td><td>$6,000</td><td>$230.77</td></tr><tr><td><strong>Take-home pay</strong></td><td><strong>$60,430</strong></td><td><strong>$2,324.23</strong></td></tr></tbody></table></div>
+      <p>Taxable income is 80,000 &minus; 6,000 &minus; the standard deduction of $16,100 = $57,900, which puts the top of the income in the 22% bracket. The federal tax of $7,450 is an effective 9.3% of gross pay.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 158" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where $80,000 of pay goes each year (single, 2026)</title><desc id="cf1-d">Take-home pay is 75.5% of gross pay. The rest goes to federal tax, Social Security, Medicare and the $6,000 of pre-tax deductions you chose.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where $80,000 of pay goes each year (single, 2026)</text><rect class="bar" x="14.0" y="42" width="371.6" height="30" fill="#10b981"/><text x="199.8" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">76%</text><rect class="bar" x="385.6" y="42" width="45.8" height="30" fill="#2563eb"/><rect class="bar" x="431.5" y="42" width="30.5" height="30" fill="#f59e0b"/><rect class="bar" x="462.0" y="42" width="7.1" height="30" fill="#a855f7"/><rect class="bar" x="469.1" y="42" width="36.9" height="30" fill="#9ca3af"/><rect x="14" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="32" y="98" font-size="12.5" fill="#374151">Take-home pay: <tspan font-weight="700">$60,430</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="282" y="98" font-size="12.5" fill="#374151">Federal income tax: <tspan font-weight="700">$7,450</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#f59e0b"/><text x="32" y="120" font-size="12.5" fill="#374151">Social Security: <tspan font-weight="700">$4,960</tspan></text><rect x="264" y="110" width="12" height="12" rx="2" fill="#a855f7"/><text x="282" y="120" font-size="12.5" fill="#374151">Medicare: <tspan font-weight="700">$1,160</tspan></text><rect x="14" y="132" width="12" height="12" rx="2" fill="#9ca3af"/><text x="32" y="142" font-size="12.5" fill="#374151">Pre-tax deductions: <tspan font-weight="700">$6,000</tspan></text></svg><figcaption>Payroll taxes (Social Security and Medicare) take about 7.65% of pay; income tax depends on your situation.</figcaption></figure>
+      <h2>Pay frequency changes the cheque, not the year</h2>
+      <p>The same $60,430 of yearly take-home pay arrives in different sized paychecks:</p>
+      <div class="calc-table"><table><thead><tr><th>How often you are paid</th><th>Take-home pay per paycheck</th></tr></thead><tbody><tr><td>Weekly (52)</td><td>$1,162.12</td></tr><tr><td>Bi-weekly (26)</td><td>$2,324.23</td></tr><tr><td>Semi-monthly (24)</td><td>$2,517.92</td></tr><tr><td>Monthly (12)</td><td>$5,035.83</td></tr></tbody></table></div>
+      <p>Bi-weekly pay has 26 cheques a year, so in two months of each year you receive three. Semi-monthly pay has 24 cheques, always two a month.</p>
+      <h2>Pre-tax contributions cost less than they look</h2>
+      <p>Money that goes into a traditional 401(k) or similar plan is taken out before income tax. On the default example, a $6,000 contribution cuts federal tax by about $1,320 and a $12,000 contribution cuts it by about $2,640, so your cheque shrinks by far less than the contribution.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Take-home pay each bi-weekly cheque by pre-tax contribution</title><desc id="cf2-d">Putting $12,000 a year before tax lowers each cheque by only $360.00 compared with $0, because the contribution cuts your income tax.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Take-home pay each bi-weekly cheque by pre-tax contribution</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">No pre-tax</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$2,504.23</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">$6,000 a year</text><rect class="bar" x="110" y="78" width="295.1" height="22" rx="4" fill="#2563eb"/><text x="413.1" y="94" font-size="13" font-weight="700" fill="#111827">$2,324.23</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">$12,000 a year</text><rect class="bar" x="110" y="112" width="272.3" height="22" rx="4" fill="#10b981"/><text x="390.3" y="128" font-size="13" font-weight="700" fill="#111827">$2,144.23</text></svg><figcaption>Each extra $6,000 saved reduces take-home pay by about $180 per cheque, not $231 (which is $6,000 spread over 26 cheques), because of the tax saved at the 22% bracket.</figcaption></figure>
+      <h2>Example: a family</h2>
+      <p>A married couple filing jointly in 2026, one earner at $90,000 with $6,000 of pre-tax deductions, two children under 17 and a 4% state tax. Federal tax is only <strong>$1,320</strong> after the child tax credit, Social Security is $5,580, Medicare $1,305 and state tax $3,600. Take-home pay is <strong>$72,195 a year</strong>, or <strong>$2,776.73 per bi-weekly paycheck</strong>.</p>
       <h2>Filling in your W-4</h2>
-      <p>The W-4 tells your employer how much federal tax to withhold. Step 3 is where you claim the child tax credit and the credit for other dependents. Step 4 adjusts for other income, extra deductions and any additional amount you want withheld, which matters most if you have a second job or a working spouse. The figures here are a starting point: your employer's withholding tables work differently from a yearly estimate, so check your first paychecks and adjust if needed.</p>
-      <div class="callout">This is an estimate, not payroll or tax advice. Real paychecks may also include union dues, garnishments, or benefits not covered here, and state and city taxes are simple flat percentages.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: interpreting the result</h2>
-      <p>If a $2,000 gross paycheck has $350 in combined deductions and withholding, estimated net pay is $1,650. The calculator helps estimate the components rather than requiring one combined deduction value.</p>
-      <h2>Related calculators</h2>
-      <p>Use the <a href="salary-calculator.html">Salary Calculator</a> to convert between pay frequencies, and the <a href="income-tax-calculator.html">Income Tax Calculator</a> to examine annual federal tax estimates.</p>
-
-      <p><strong>You might also need:</strong> <a href="salary-calculator.html">Salary Calculator</a>, <a href="marriage-tax-calculator.html">Marriage Tax Calculator</a>, <a href="income-tax-calculator.html">Income Tax Calculator</a>, <a href="estate-tax-calculator.html">Estate Tax Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/marginal-vs-effective-tax-rate.html">Marginal vs Effective Tax Rate</a>.</p>
+      <p>The W-4 tells your employer how much federal tax to withhold. Step 3 is where you claim the child tax credit and credit for other dependents. Step 4 adjusts for other income, extra deductions and any extra withholding you want, which matters most when you have a second job or a working spouse. The calculator shows suggested values for Steps 3 and 4, and the IRS Tax Withholding Estimator is the official tool for checking them.</p>
+      <h2>What the estimate leaves out</h2>
+      <ul><li>Union dues, wage garnishments, and benefits not covered by the options above.</li><li>Differences between your employer's withholding tables and a yearly estimate, so check your first paychecks.</li><li>State and local taxes beyond a flat percentage, and state disability or family leave contributions.</li><li>Bonuses, which are often withheld at a flat rate.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Entering take-home pay instead of gross pay.</li><li>Forgetting that 401(k) contributions do not reduce Social Security and Medicare tax.</li><li>Using the wrong pay frequency, which changes the per-cheque amount.</li><li>Leaving out a spouse's income or a second job and then being under-withheld.</li><li>Expecting the estimate to match a payslip to the dollar.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large figure is your net pay for one paycheck, and the table shows where the rest goes. Compare it with your first real payslip. If your withholding is too low or too high, adjust your W-4 and rerun the numbers. For the full-year tax picture, use the Income Tax Calculator.</p>
+      <div class="callout">This calculator gives estimates for U.S. employees and is not payroll or tax advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="income-tax-calculator.html">Income Tax Calculator</a> &ndash; estimate federal income tax for the year</li><li><a href="salary-calculator.html">Salary Calculator</a> &ndash; convert hourly, monthly and yearly pay</li><li><a href="marriage-tax-calculator.html">Marriage Tax Calculator</a> &ndash; compare filing separately and jointly</li><li><a href="401k-calculator.html">401(k) Calculator</a> &ndash; see what your contributions grow to</li><li><a href="sales-tax-calculator.html">Sales Tax Calculator</a> &ndash; add or remove sales tax</li><li><a href="budget-calculator.html">Budget Calculator</a> &ndash; plan spending from your net pay</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/marginal-vs-effective-tax-rate.html">Marginal vs Effective Tax Rate</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How is federal income tax estimated per paycheck?</h3>
@@ -280,20 +303,25 @@
       </div>
       <div class="faq-item">
         <h3>Why does take-home pay depend on how often I am paid?</h3>
-        <p>The yearly total is the same, but it is split into a different number of paychecks. Bi-weekly pay has 26 checks a year and semi-monthly pay has 24, so each bi-weekly check is smaller. Some years a bi-weekly schedule gives you a 27th check.</p>
+        <p>The yearly total is the same, but it is split into a different number of paychecks. Bi-weekly pay has 26 cheques a year and semi-monthly pay has 24, so each bi-weekly cheque is smaller. Some years a bi-weekly schedule gives you a 27th cheque.</p>
       </div>
       <div class="faq-item">
         <h3>What counts as a pre-tax deduction?</h3>
-        <p>Common ones are 401(k) contributions, health insurance premiums and health savings account deposits. They are taken out before income tax, so they lower your federal tax. This calculator still charges Social Security and Medicare on your full pay, which is the safe assumption.</p>
+        <p>Common ones are traditional 401(k) contributions, health insurance premiums and health savings account deposits. They are taken out before income tax, so they lower your tax bill, although 401(k) contributions do not reduce Social Security and Medicare tax.</p>
       </div>
       <div class="faq-item">
-        <h3>How do I use the W-4 numbers?</h3>
-        <p>On the W-4 for your highest-paying job, enter the dependents amount in step 3 and the other income, deductions and extra withholding in step 4. If you have a second job or a working spouse, the extra withholding figure shows how much more to have withheld each paycheck to avoid owing at tax time.</p>
+        <h3>Why is my payslip different from the estimate?</h3>
+        <p>Employers use withholding tables, not a yearly calculation, and your payslip may include dues, garnishments, or benefits not covered here. Treat the result as a close estimate.</p>
       </div>
       <div class="faq-item">
-        <h3>Are state and city taxes exact?</h3>
-        <p>No. They are flat percentages of your gross pay. Many states use brackets, deductions or credits, so use your effective state rate for a better estimate. Check your state's tax agency for the exact rules.</p>
+        <h3>Does the calculator include state tax?</h3>
+        <p>Yes, as a flat percentage you enter, plus an optional city percentage. States with no income tax can be entered as 0.</p>
       </div>
+      <div class="faq-item">
+        <h3>How do I use the W-4 values?</h3>
+        <p>Step 3 is the dependent credit amount, Step 4(a) other income, Step 4(b) extra deductions and Step 4(c) extra withholding per paycheck. They are suggestions for the form; the IRS withholding estimator can double-check them.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.irs.gov/taxtopics/tc751" rel="noopener" target="_blank">IRS: Topic no. 751, Social Security and Medicare withholding rates</a>; <a href="https://www.irs.gov/individuals/tax-withholding-estimator" rel="noopener" target="_blank">IRS: Tax Withholding Estimator</a></p>
     </div>
 
   </div>
