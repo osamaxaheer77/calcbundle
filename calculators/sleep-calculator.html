@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sleep Calculator - CalcBundle</title>
-<meta name="description" content="Find the best bedtime or wake-up time based on 90-minute sleep cycles, or calculate a wake/bed time from a target sleep duration.">
+<title>Sleep Calculator: Bedtime &amp; Wake-Up Times by Cycles</title>
+<meta name="description" content="Find the best bedtime or wake-up time using 90-minute sleep cycles and time to fall asleep, or add a set number of hours of sleep to any time.">
 <link rel="canonical" href="https://calcbundle.net/calculators/sleep-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Sleep Calculator - CalcBundle">
-<meta property="og:description" content="Find the best bedtime or wake-up time based on 90-minute sleep cycles, or calculate a wake/bed time from a target sleep duration.">
+<meta property="og:title" content="Sleep Calculator: Bedtime &amp; Wake-Up Times by Cycles">
+<meta property="og:description" content="Find the best bedtime or wake-up time using 90-minute sleep cycles and time to fall asleep, or add a set number of hours of sleep to any time.">
 <meta property="og:url" content="https://calcbundle.net/calculators/sleep-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sleep Calculator - CalcBundle">
-<meta name="twitter:description" content="Find the best bedtime or wake-up time based on 90-minute sleep cycles, or calculate a wake/bed time from a target sleep duration.">
+<meta name="twitter:title" content="Sleep Calculator: Bedtime &amp; Wake-Up Times by Cycles">
+<meta name="twitter:description" content="Find the best bedtime or wake-up time using 90-minute sleep cycles and time to fall asleep, or add a set number of hours of sleep to any time.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What's the difference between the two calculators?",
+      "name": "What's the difference between the two tools?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Sleep Cycle Calculator gives several options timed to whole 90-minute cycles. The Sleep Length Calculator is simpler — it just adds or subtracts a specific duration you choose, without cycle alignment."
+        "text": "The first uses sleep cycles of a length you choose, usually 90 minutes, plus the time it takes you to fall asleep, and lists times for one to six cycles. The second simply adds or subtracts the number of hours and minutes you enter."
       }
     },
     {
       "@type": "Question",
-      "name": "Why change \"Time to Fall Asleep\"?",
+      "name": "Why 90-minute cycles?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If you know it typically takes you longer (or shorter) than 15 minutes to fall asleep, adjusting this gives a more accurate bedtime recommendation."
+        "text": "Sleep alternates between non-REM and REM sleep in cycles that average about 90 minutes. Waking between cycles usually feels better than waking in deep sleep."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many cycles do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Five or six complete cycles, which is 7.5 to 9 hours, fit the usual adult range of 7 to 9 hours. Your own need may differ."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I include the time it takes to fall asleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The calculator adds it to every cycle time. The default is 15 minutes, and you can change it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change the cycle length?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Cycles can run from about 80 to 110 minutes. If you often wake groggy, try a different length."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I see a doctor about sleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you sleep badly for weeks, feel very tired despite enough hours, snore loudly or stop breathing in your sleep, talk to a doctor."
       }
     }
   ]
@@ -159,33 +191,64 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Why 90-minute cycles</h2>
-      <p>Sleep moves through repeating cycles of roughly 90 minutes, alternating between non-REM and REM sleep. Waking up in the middle of a cycle (during deep sleep) tends to feel groggier than waking up between cycles, so timing bedtime or wake-up around whole cycles &mdash; plus a buffer for the time it takes to actually fall asleep &mdash; can help you wake up feeling more rested.</p>
-
-      <h2>Why 5&ndash;6 cycles are recommended</h2>
-      <p>5 to 6 complete 90-minute cycles works out to roughly 7.5&ndash;9 hours, in line with typical adult sleep recommendations. Individual needs vary, and actual cycle length isn't perfectly fixed at 90 minutes for everyone.</p>
-      <div class="callout">This is a planning estimate, not a precise biological measurement &mdash; actual cycle timing varies by person and by night.</div>
-
-      <!--seo-extra-->
-      <h2>A worked example</h2>
-      <p>To wake up at 6:00 AM with 90-minute sleep cycles and 15 minutes to fall asleep, the best times to go to bed are 10:15 PM for 5 cycles (7.5 hours) or 8:45 PM for 6 cycles (9 hours). Going to bed at 11:45 PM gives 4 cycles, which is 6 hours. The second tool works the other way around: for 8 hours of sleep and a 6:00 AM alarm, go to bed at 10:00 PM.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Sleep runs in cycles of about 90 minutes. To wake at 6:00 AM with 15 minutes to fall asleep, go to bed at 10:15 PM for 5 cycles (7.5 hours) or 8:45 PM for 6 cycles (9 hours). Bedtime at 11:45 PM gives 4 cycles.</div>
+      <h2>What the calculator does</h2>
+      <p>The page has two tools. The <strong>sleep-cycle tool</strong> gives you six bedtimes if you know when you must wake, or six wake-up times if you know when you are going to bed, each timed to the end of a whole sleep cycle. The <strong>sleep-length tool</strong> simply adds or subtracts a number of hours and minutes you choose. You can change the cycle length and the time it takes you to fall asleep.</p>
+      <h2>Why 90-minute cycles</h2>
+      <p>Sleep moves through repeating cycles that alternate between non-REM and REM sleep, with an average length of about 90 minutes and four to six cycles in a good night. Waking in the middle of a cycle, during deep sleep, tends to feel groggier than waking between cycles, so timing bedtime or wake-up around whole cycles, plus the time it takes to fall asleep, can help you wake up feeling more rested. The cycle length is an average. Yours can be shorter or longer, and it varies from night to night.</p>
+      <h2>Worked example: waking at 6:00 AM</h2>
+      <p>The page opens with &ldquo;Wake up at&rdquo; <strong>6:00 AM</strong>, a cycle of <strong>90 minutes</strong> and <strong>15 minutes</strong> to fall asleep. Each bedtime is the wake time minus the cycles and the 15 minutes. Six cycles is 540 + 15 = 555 minutes before 6:00, which is <strong>8:45 PM</strong>. Five cycles is 450 + 15 = 465 minutes, which is <strong>10:15 PM</strong>. The tool marks these two with a star as the recommended ones.</p>
+      <div class="calc-table"><table><thead><tr><th>Cycles</th><th>Sleep</th><th>Minutes before wake time</th><th>Go to bed at</th></tr></thead><tbody><tr><td>6</td><td>9.0 hours</td><td>555</td><td>8:45 PM &#9733;</td></tr><tr><td>5</td><td>7.5 hours</td><td>465</td><td>10:15 PM &#9733;</td></tr><tr><td>4</td><td>6.0 hours</td><td>375</td><td>11:45 PM</td></tr><tr><td>3</td><td>4.5 hours</td><td>285</td><td>1:15 AM</td></tr><tr><td>2</td><td>3.0 hours</td><td>195</td><td>2:45 AM</td></tr><tr><td>1</td><td>1.5 hours</td><td>105</td><td>4:15 AM</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Hours of sleep for 1 to 6 cycles of 90 minutes</title><desc id="cf1-d">Five or six cycles give 7.5 or 9 hours, which fits the usual adult range of 7 to 9 hours, and these two are the ones marked with a star.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Hours of sleep for 1 to 6 cycles of 90 minutes</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 cycle</text><rect class="bar" x="90" y="44" width="56.3" height="22" rx="4" fill="#9ca3af"/><text x="154.3" y="60" font-size="13" font-weight="700" fill="#111827">1.5 h</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">2 cycles</text><rect class="bar" x="90" y="78" width="112.7" height="22" rx="4" fill="#9ca3af"/><text x="210.7" y="94" font-size="13" font-weight="700" fill="#111827">3.0 h</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">3 cycles</text><rect class="bar" x="90" y="112" width="169.0" height="22" rx="4" fill="#9ca3af"/><text x="267.0" y="128" font-size="13" font-weight="700" fill="#111827">4.5 h</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">4 cycles</text><rect class="bar" x="90" y="146" width="225.3" height="22" rx="4" fill="#9ca3af"/><text x="323.3" y="162" font-size="13" font-weight="700" fill="#111827">6.0 h</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">5 cycles</text><rect class="bar" x="90" y="180" width="281.7" height="22" rx="4" fill="#10b981"/><text x="379.7" y="196" font-size="13" font-weight="700" fill="#111827">7.5 h</text><text x="82" y="230" text-anchor="end" font-size="13" fill="#6b7280">6 cycles</text><rect class="bar" x="90" y="214" width="338.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">9.0 h</text></svg><figcaption>Five or six cycles fit the usual adult range.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">How many minutes before a 6:00 AM alarm to be in bed (cycles plus 15 minutes to fall asleep)</title><desc id="cf2-d">With 15 minutes to fall asleep, going to bed 8 hours 15 minutes before the alarm gives 5 cycles, and 9 hours 15 minutes gives 6.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">How many minutes before a 6:00 AM alarm to be in bed (cycles plus 15 minutes to fall asleep)</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 cycle</text><rect class="bar" x="90" y="44" width="63.9" height="22" rx="4" fill="#9ca3af"/><text x="161.9" y="60" font-size="13" font-weight="700" fill="#111827">105 min</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">2 cycles</text><rect class="bar" x="90" y="78" width="118.8" height="22" rx="4" fill="#9ca3af"/><text x="216.8" y="94" font-size="13" font-weight="700" fill="#111827">195 min</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">3 cycles</text><rect class="bar" x="90" y="112" width="173.6" height="22" rx="4" fill="#9ca3af"/><text x="271.6" y="128" font-size="13" font-weight="700" fill="#111827">285 min</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">4 cycles</text><rect class="bar" x="90" y="146" width="228.4" height="22" rx="4" fill="#9ca3af"/><text x="326.4" y="162" font-size="13" font-weight="700" fill="#111827">375 min</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">5 cycles</text><rect class="bar" x="90" y="180" width="283.2" height="22" rx="4" fill="#10b981"/><text x="381.2" y="196" font-size="13" font-weight="700" fill="#111827">465 min</text><text x="82" y="230" text-anchor="end" font-size="13" fill="#6b7280">6 cycles</text><rect class="bar" x="90" y="214" width="338.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">555 min</text></svg><figcaption>Bedtime is the alarm time minus the cycles and the time to fall asleep.</figcaption></figure>
+      <p>Going to bed at 11:45 PM gives 4 cycles, which is 6 hours, and earlier times than 8:45 PM would give more than six cycles, which is rarely needed.</p>
+      <h2>Going to bed now: when should I wake?</h2>
+      <p>Switch the first box to &ldquo;Go to bed at&rdquo; and the tool adds the 15 minutes and then whole cycles. If you go to bed at <strong>11:00 PM</strong>, the wake-up times are:</p>
+      <div class="calc-table"><table><thead><tr><th>Cycles</th><th>Sleep</th><th>Wake up at</th></tr></thead><tbody><tr><td>1</td><td>1.5 hours</td><td>12:45 AM</td></tr><tr><td>2</td><td>3.0 hours</td><td>2:15 AM</td></tr><tr><td>3</td><td>4.5 hours</td><td>3:45 AM</td></tr><tr><td>4</td><td>6.0 hours</td><td>5:15 AM</td></tr><tr><td>5</td><td>7.5 hours</td><td>6:45 AM &#9733;</td></tr><tr><td>6</td><td>9.0 hours</td><td>8:15 AM &#9733;</td></tr></tbody></table></div>
+      <p>The recommended times are 6:45 AM (five cycles) and 8:15 AM (six cycles).</p>
+      <h2>Change the cycle length and the time to fall asleep</h2>
+      <p>If you are often groggy, try a different cycle length, from about 80 to 110 minutes. With a 100-minute cycle and 20 minutes to fall asleep, waking at 7:00 AM means going to bed at <strong>10:20 PM</strong> for five cycles. With an 80-minute cycle and 15 minutes to fall asleep, waking at 6:00 AM gives five cycles from <strong>11:05 PM</strong>. A time to fall asleep of 0 shifts every bedtime later by 15 minutes: for 6:00 AM, five cycles become <strong>10:30 PM</strong>.</p>
+      <h2>Second tool: a set number of hours</h2>
+      <p>If you prefer to choose the hours yourself, set &ldquo;Wake up at&rdquo; or &ldquo;Go to bed at&rdquo;, a time, and the hours and minutes of sleep you want. The page opens on a wake time of 6:00 AM and 8 hours, which gives a bedtime of <strong>10:00 PM</strong>. For a bedtime of 11:30 PM and 7 hours 30 minutes, the wake-up time is <strong>7:00 AM</strong>. This tool does not include time to fall asleep, so add it yourself.</p>
+      <h2>How much sleep do you need?</h2>
+      <p>Typical guidance is 7 to 9 hours for adults aged 18 to 64, 7 to 8 hours for older adults and 8 to 10 hours for teenagers. Individual needs vary. Pick the number of cycles that gives you the hours you need and not a number from a table. If you sleep badly for weeks, or feel very tired in spite of enough hours, talk to a doctor.</p>
       <h2>Tips for better sleep</h2>
-      <p>Most adults need 7 to 9 hours. The 90-minute cycle is an average, and yours can run from 80 to 110 minutes, so adjust the cycle length if you are often groggy. Keep a regular schedule, even on weekends, avoid caffeine in the afternoon, and keep the room dark and cool. If you sleep badly for weeks, talk to a doctor.</p>
-
-      <p><strong>You might also need:</strong> <a href="date-calculator.html">Date Calculator</a>, <a href="age-calculator.html">Age Calculator</a>, <a href="time-zone-calculator.html">Time Zone Calculator</a>, <a href="time-calculator.html">Time Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <ul><li>Keep a regular schedule, even on weekends.</li><li>Avoid caffeine in the afternoon and large meals close to bedtime.</li><li>Keep the room dark and cool, and turn screens off before bed.</li><li>Get daylight in the morning to help set your body clock.</li><li>Do not rely on the calculator to fix a long-running sleep problem.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Forgetting to include the time it takes to fall asleep, which makes every cycle end 15 minutes early.</li><li>Treating 90 minutes as exact. It is an average.</li><li>Going to bed at the calculated time but lying awake for much longer.</li><li>Choosing the earliest alarm time with only one or two cycles.</li><li>Using the second tool and expecting it to include the time to fall asleep.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The sleep-cycle tool lists the times for six cycles down to one, with the number of hours beside each, and a star for five or six cycles. The sleep-length tool shows one time. Times are shown in 12-hour format and wrap past midnight, so a result of 1:15 AM means the next morning.</p>
+      <div class="callout">This is a planning estimate, not a medical tool. Real sleep cycles vary by person and by night, and the calculator cannot diagnose sleep problems.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="date-calculator.html">Date Calculator</a> &ndash; add or subtract time from a date</li><li><a href="age-calculator.html">Age Calculator</a> &ndash; age in years, months and days</li><li><a href="time-zone-calculator.html">Time Zone Calculator</a> &ndash; convert a time between zones</li><li><a href="time-calculator.html">Time Calculator</a> &ndash; add and subtract times</li><li><a href="time-duration-calculator.html">Time Duration Calculator</a> &ndash; the time between two moments</li><li><a href="day-counter.html">Day Counter</a> &ndash; days between dates and business days</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>What's the difference between the two calculators?</h3>
-        <p>The Sleep Cycle Calculator gives several options timed to whole 90-minute cycles. The Sleep Length Calculator is simpler &mdash; it just adds or subtracts a specific duration you choose, without cycle alignment.</p>
+        <h3>What's the difference between the two tools?</h3>
+        <p>The first uses sleep cycles of a length you choose, usually 90 minutes, plus the time it takes you to fall asleep, and lists times for one to six cycles. The second simply adds or subtracts the number of hours and minutes you enter.</p>
       </div>
       <div class="faq-item">
-        <h3>Why change "Time to Fall Asleep"?</h3>
-        <p>If you know it typically takes you longer (or shorter) than 15 minutes to fall asleep, adjusting this gives a more accurate bedtime recommendation.</p>
+        <h3>Why 90-minute cycles?</h3>
+        <p>Sleep alternates between non-REM and REM sleep in cycles that average about 90 minutes. Waking between cycles usually feels better than waking in deep sleep.</p>
       </div>
+      <div class="faq-item">
+        <h3>How many cycles do I need?</h3>
+        <p>Five or six complete cycles, which is 7.5 to 9 hours, fit the usual adult range of 7 to 9 hours. Your own need may differ.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I include the time it takes to fall asleep?</h3>
+        <p>Yes. The calculator adds it to every cycle time. The default is 15 minutes, and you can change it.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I change the cycle length?</h3>
+        <p>Yes. Cycles can run from about 80 to 110 minutes. If you often wake groggy, try a different length.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When should I see a doctor about sleep?</h3>
+        <p>If you sleep badly for weeks, feel very tired despite enough hours, snore loudly or stop breathing in your sleep, talk to a doctor.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Sleep" rel="noopener" target="_blank">Wikipedia: Sleep</a>; <a href="https://en.wikipedia.org/wiki/Sleep_cycle" rel="noopener" target="_blank">Wikipedia: Sleep cycle</a>; <a href="https://sleepeducation.org/how-much-sleep-do-i-really-need/" rel="noopener" target="_blank">American Academy of Sleep Medicine: How much sleep do I really need?</a></p>
     </div>
 
   </div>
