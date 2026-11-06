@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fuel Cost Calculator for Trips: Mileage &amp; Price | CalcBundle</title>
-<meta name="description" content="Estimate fuel needed and trip fuel spending from distance, fuel economy and per-unit fuel price.">
+<meta name="description" content="Estimate the fuel needed and the cost of a trip from distance, fuel economy in mpg or L/100km, and the price per gallon or litre, in any unit mix.">
 <link rel="canonical" href="https://calcbundle.net/calculators/fuel-cost-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Fuel Cost Calculator for Trips: Mileage &amp; Price | CalcBundle">
-<meta property="og:description" content="Estimate fuel needed and trip fuel spending from distance, fuel economy and per-unit fuel price.">
+<meta property="og:description" content="Estimate the fuel needed and the cost of a trip from distance, fuel economy in mpg or L/100km, and the price per gallon or litre, in any unit mix.">
 <meta property="og:url" content="https://calcbundle.net/calculators/fuel-cost-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fuel Cost Calculator for Trips: Mileage &amp; Price | CalcBundle">
-<meta name="twitter:description" content="Estimate fuel needed and trip fuel spending from distance, fuel economy and per-unit fuel price.">
+<meta name="twitter:description" content="Estimate the fuel needed and the cost of a trip from distance, fuel economy in mpg or L/100km, and the price per gallon or litre, in any unit mix.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Can I mix units, like distance in km with mpg?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — distance, efficiency, and price units are each converted independently, so any combination works."
+        "text": "Yes. Distance, efficiency and price units are each converted independently, so any combination works."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "Does this account for round trips?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No — enter the one-way distance, or double it yourself if you want a round-trip estimate."
+        "text": "No. Enter the one-way distance, or double it yourself if you want a round-trip estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert mpg to L/100km?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide 235.215 by the mpg. For example, 25 mpg is 235.215 / 25 = 9.41 L/100km. To go the other way, divide 235.215 by the L/100km figure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my real fuel cost higher than the calculator says?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Real consumption is usually worse than the rated figure because of speed, load, weather, traffic and driving style. Use your actual average mpg for a better estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I split the cost between passengers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the fuel cost by the number of people. The calculator gives the total for the vehicle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which gallon does the calculator use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The US gallon, 3.785 litres. An imperial gallon is about 4.546 litres, so an imperial mpg figure needs converting."
       }
     }
   ]
@@ -134,42 +166,66 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">The math behind the estimate</h2>
-      <p>For mpg, gallons needed = trip distance (miles) &divide; mpg. For L/100km, liters needed = (trip distance in km &divide; 100) &times; the L/100km rating. Either way, multiplying the fuel needed by the price per unit gives the total cost.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Fuel cost is distance divided by fuel economy, times the price of fuel. A 500 mile trip at 25 mpg and $3.00 a gallon needs 20 gallons and costs $60.00, which is $0.12 a mile.</div>
+      <h2>The math behind the estimate</h2>
+      <p>For mpg, <strong>gallons needed = distance in miles &divide; mpg</strong>. For litres per 100 km, <strong>litres needed = (distance in km &divide; 100) &times; the L/100km rating</strong>. Either way, multiplying the fuel needed by the price per unit gives the total cost. The calculator converts each setting separately, so you can mix units, for example a distance in km with an efficiency in mpg and a price per gallon.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>A 500 mile trip in a car that gets 25 miles per gallon needs 500 &divide; 25 = <strong>20 gallons</strong>, which is about 75.71 litres. With gas at $3.00 a gallon the fuel costs <strong>$60.00</strong>. That is $0.12 a mile, or about $0.07 a kilometre. If the price rises to $3.50 the cost becomes $70.00. Change the efficiency to 32 mpg and the same trip needs 15.62 gallons and costs $46.88.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Fuel cost of a 500 mile trip at $3.00 a gallon, by fuel economy</title><desc id="cf1-d">Going from 15 mpg to 50 mpg cuts the same trip from $100.00 to $30.00, so fuel economy matters as much as the price of fuel.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Fuel cost of a 500 mile trip at $3.00 a gallon, by fuel economy</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">15 mpg</text><rect class="bar" x="80" y="44" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$100.00</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">20 mpg</text><rect class="bar" x="80" y="78" width="261.0" height="22" rx="4" fill="#9ca3af"/><text x="349.0" y="94" font-size="13" font-weight="700" fill="#111827">$75.00</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">25 mpg</text><rect class="bar" x="80" y="112" width="208.8" height="22" rx="4" fill="#2563eb"/><text x="296.8" y="128" font-size="13" font-weight="700" fill="#111827">$60.00</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">30 mpg</text><rect class="bar" x="80" y="146" width="174.0" height="22" rx="4" fill="#9ca3af"/><text x="262.0" y="162" font-size="13" font-weight="700" fill="#111827">$50.00</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">40 mpg</text><rect class="bar" x="80" y="180" width="130.5" height="22" rx="4" fill="#9ca3af"/><text x="218.5" y="196" font-size="13" font-weight="700" fill="#111827">$37.50</text><text x="72" y="230" text-anchor="end" font-size="13" fill="#6b7280">50 mpg</text><rect class="bar" x="80" y="214" width="104.4" height="22" rx="4" fill="#9ca3af"/><text x="192.4" y="230" font-size="13" font-weight="700" fill="#111827">$30.00</text></svg><figcaption>A more efficient vehicle saves more than a small drop in fuel price.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Fuel cost of the same trip at 25 mpg, by price per gallon</title><desc id="cf2-d">Each extra dollar on a gallon adds $20.00 to this trip.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Fuel cost of the same trip at 25 mpg, by price per gallon</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">$2.50</text><rect class="bar" x="80" y="44" width="174.0" height="22" rx="4" fill="#9ca3af"/><text x="262.0" y="60" font-size="13" font-weight="700" fill="#111827">$50.00</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">$3.00</text><rect class="bar" x="80" y="78" width="208.8" height="22" rx="4" fill="#2563eb"/><text x="296.8" y="94" font-size="13" font-weight="700" fill="#111827">$60.00</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">$3.50</text><rect class="bar" x="80" y="112" width="243.6" height="22" rx="4" fill="#9ca3af"/><text x="331.6" y="128" font-size="13" font-weight="700" fill="#111827">$70.00</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">$4.00</text><rect class="bar" x="80" y="146" width="278.4" height="22" rx="4" fill="#9ca3af"/><text x="366.4" y="162" font-size="13" font-weight="700" fill="#111827">$80.00</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">$5.00</text><rect class="bar" x="80" y="180" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">$100.00</text></svg><figcaption>Fuel price changes the bill in a straight line.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Fuel economy</th><th>Gallons for 500 miles</th><th>Cost at $3.00 a gallon</th></tr></thead><tbody><tr><td>15 mpg</td><td>33.33</td><td>$100.00</td></tr><tr><td>20 mpg</td><td>25</td><td>$75.00</td></tr><tr><td>25 mpg</td><td>20</td><td>$60.00</td></tr><tr><td>30 mpg</td><td>16.67</td><td>$50.00</td></tr><tr><td>40 mpg</td><td>12.5</td><td>$37.50</td></tr><tr><td>50 mpg</td><td>10</td><td>$30.00</td></tr></tbody></table></div>
+      <h2>A second example</h2>
+      <p>A 300 mile trip in a vehicle that averages 30 mpg uses 10 gallons. At $3.50 a gallon the fuel costs <strong>$35.00</strong>.</p>
+      <h2>Metric units</h2>
+      <p>Many countries rate fuel economy in litres per 100 km, where a lower number is better. An 800 km trip in a car that uses 8 L/100km needs 800 &divide; 100 &times; 8 = <strong>64 litres</strong>. At 1.80 per litre that is <strong>115.20</strong> of fuel. To convert, mpg = 235.215 &divide; (L/100km) and L/100km = 235.215 &divide; mpg.</p>
+      <div class="calc-table"><table><thead><tr><th>mpg (US)</th><th>L/100 km</th></tr></thead><tbody><tr><td>15</td><td>15.68</td></tr><tr><td>20</td><td>11.76</td></tr><tr><td>25</td><td>9.41</td></tr><tr><td>30</td><td>7.84</td></tr><tr><td>35</td><td>6.72</td></tr><tr><td>40</td><td>5.88</td></tr><tr><td>50</td><td>4.70</td></tr></tbody></table></div>
+      <div class="calc-table"><table><thead><tr><th>L/100 km</th><th>mpg (US)</th></tr></thead><tbody><tr><td>4</td><td>58.8</td></tr><tr><td>5</td><td>47.0</td></tr><tr><td>6</td><td>39.2</td></tr><tr><td>8</td><td>29.4</td></tr><tr><td>10</td><td>23.5</td></tr><tr><td>12</td><td>19.6</td></tr></tbody></table></div>
+      <h2>Commuting costs</h2>
+      <p>The same arithmetic prices a commute. A 30 mile each-way commute is 60 miles a day, which at 25 mpg and $3.00 a gallon costs $7.20 a day. Over 22 working days that is <strong>$158.40 a month</strong>, or about $1,900.80 a year. Enter the daily distance for one day, or the monthly distance for a month.</p>
+      <h2>Comparing two cars</h2>
+      <p>Running costs help when choosing a vehicle. Driving 12,000 miles a year at $3.00 a gallon, a 25 mpg car uses 480 gallons ($1,440.00) and a 40 mpg car uses 300 gallons ($900.00), so the more efficient car saves <strong>$540.00 a year</strong> in fuel. Over five years that is $2,700.00, before taking account of the purchase price and other costs.</p>
+      <h2>Different fuels and the price you enter</h2>
+      <p>Enter the price of the fuel your vehicle actually uses. Premium petrol, diesel and regular petrol all have different prices per gallon or litre, and the efficiency rating belongs to the fuel the car was tested on. If you pay a different price along the route, use an average, or work out each leg of the trip separately and add the results. The tool does not include tolls, parking or wear and tear.</p>
+      <div class="calc-table"><table><thead><tr><th>Fuel economy</th><th>Cost per mile at $3.00</th><th>Cost per mile at $4.00</th></tr></thead><tbody><tr><td>20 mpg</td><td>$0.15</td><td>$0.20</td></tr><tr><td>25 mpg</td><td>$0.12</td><td>$0.16</td></tr><tr><td>30 mpg</td><td>$0.10</td><td>$0.13</td></tr><tr><td>40 mpg</td><td>$0.07</td><td>$0.10</td></tr></tbody></table></div>
       <h2>Why real trips often cost more</h2>
-      <p>Highway driving is usually more efficient than city driving, and factors like AC use, cargo weight, and terrain all affect real-world fuel consumption compared to a vehicle's rated efficiency. Treat this as a planning estimate rather than an exact figure.</p>
-      <div class="callout">Don't know your vehicle's fuel efficiency? Use our <a href="gas-mileage-calculator.html">Gas Mileage Calculator</a> to measure it from your own fill-ups.</div>
-
-      <!--seo-extra-->
-      <figure style="margin:20px 0;max-width:550px"><svg viewBox="0 0 540 142" role="img" aria-label="Illustration: 300 miles divided by 30 miles per gallon equals 10 gallons; multiplied by three dollars fifty per gallon equals thirty-five dollars" style="width:100%;height:auto"><rect x="2" y="3" width="536" height="136" rx="13" fill="#eff6ff"/><g font-family="Arial,sans-serif" text-anchor="middle" fill="#172554" font-size="16"><text x="110" y="46">300 miles</text><text x="268" y="46">÷ 30 MPG</text><text x="433" y="46">= 10 gallons</text><text x="268" y="90">10 gallons × $3.50 = $35</text></g><text x="270" y="121" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#475569">A simplified fuel-only trip cost</text></svg><figcaption style="font-size:13px;color:#64748b">Distance ÷ fuel economy × fuel price = estimated trip fuel cost.</figcaption></figure>
-      <h2>Worked example: check the result</h2>
-      <p>A 300-mile trip in a vehicle averaging 30 miles per gallon consumes 10 gallons. At $3.50 per gallon, the estimated fuel cost is $35.</p>
-      <h2>Related tools</h2>
-      <p>To estimate your actual vehicle efficiency, try the <a href="gas-mileage-calculator.html">Gas Mileage Calculator</a>. For unit changes, use the <a href="conversion-calculator.html">Unit Conversion Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>A trip of 500 miles in a car that gets 25 miles per gallon needs 20 gallons, which is about 75.7 liters. With gas at $3.00 a gallon, the fuel costs $60.00. If the price rises to $3.50, the cost becomes $70.00. Change the efficiency to 32 mpg and the same trip needs only 15.6 gallons.</p>
-
-      <h2>Tips for planning a trip</h2>
-      <p>Use the efficiency you actually get, which you can find with the Gas Mileage Calculator, because the sticker figure is often higher than real driving. Highway speeds above 65 mph, a roof box, heavy loads, cold weather and short stops all reduce it. Add a margin of 10 percent for detours and traffic. For a shared trip, divide the result by the number of passengers.</p>
-
-      <h2>Common uses</h2>
-      <p>Typical uses include road trips, commuting costs, deciding between driving and flying, splitting costs with passengers, and comparing the running costs of two cars.</p>
-
-      <p><strong>You might also need:</strong> <a href="gas-mileage-calculator.html">Gas Mileage Calculator</a>, <a href="mileage-calculator.html">Mileage Calculator</a>, <a href="speed-calculator.html">Speed Calculator</a>, <a href="tire-size-calculator.html">Tire Size Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p>The rated figure is measured under standard conditions. Highway driving is usually more efficient than city driving, and factors such as high speed, air conditioning, cargo weight, a roof box, cold weather, tyre pressure and terrain all reduce it. The US government&rsquo;s fuel economy site lists driving habits that make a difference. Use the efficiency you actually get, which you can find with the Gas Mileage Calculator, rather than the sticker number.</p>
+      <h2>Planning a trip</h2>
+      <ul><li><strong>Round trip:</strong> the calculator takes the one-way distance, so double it yourself for a return journey. The default round trip is $120.00.</li><li><strong>Margin:</strong> add about 10% for detours and traffic: $66.00 for the default trip.</li><li><strong>Sharing:</strong> divide by the number of passengers. Four people share the default trip at $15.00 each.</li><li><strong>Drive or fly?</strong> compare the fuel cost with fares, and remember tolls, parking and wear.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing up US and imperial gallons when using an imperial-gallon mpg figure.</li><li>Using the sticker mpg instead of your real average.</li><li>Forgetting that L/100km works the opposite way: lower is better.</li><li>Leaving out the return journey.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the estimated fuel cost. Below it are the fuel needed in the unit of your price, and in both gallons and litres. For a planning figure, add a margin and compare with a second estimate using a lower mpg.</p>
+      <div class="callout">This is a planning estimate. Actual fuel use varies with speed, load, weather, traffic and road conditions.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="gas-mileage-calculator.html">Gas Mileage Calculator</a> &ndash; measure your real mpg</li><li><a href="mileage-calculator.html">Mileage Calculator</a> &ndash; trip distance and costs</li><li><a href="speed-calculator.html">Speed Calculator</a> &ndash; speed, distance and time</li><li><a href="conversion-calculator.html">Conversion Calculator</a> &ndash; convert units</li><li><a href="tire-size-calculator.html">Tire Size Calculator</a> &ndash; tyre dimensions</li><li><a href="auto-loan-calculator.html">Auto Loan Calculator</a> &ndash; car loan payments</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Can I mix units, like distance in km with mpg?</h3>
-        <p>Yes &mdash; distance, efficiency, and price units are each converted independently, so any combination works.</p>
+        <p>Yes. Distance, efficiency and price units are each converted independently, so any combination works.</p>
       </div>
       <div class="faq-item">
         <h3>Does this account for round trips?</h3>
-        <p>No &mdash; enter the one-way distance, or double it yourself if you want a round-trip estimate.</p>
+        <p>No. Enter the one-way distance, or double it yourself if you want a round-trip estimate.</p>
       </div>
+      <div class="faq-item">
+        <h3>How do I convert mpg to L/100km?</h3>
+        <p>Divide 235.215 by the mpg. For example, 25 mpg is 235.215 / 25 = 9.41 L/100km. To go the other way, divide 235.215 by the L/100km figure.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is my real fuel cost higher than the calculator says?</h3>
+        <p>Real consumption is usually worse than the rated figure because of speed, load, weather, traffic and driving style. Use your actual average mpg for a better estimate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I split the cost between passengers?</h3>
+        <p>Divide the fuel cost by the number of people. The calculator gives the total for the vehicle.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Which gallon does the calculator use?</h3>
+        <p>The US gallon, 3.785 litres. An imperial gallon is about 4.546 litres, so an imperial mpg figure needs converting.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.fueleconomy.gov/feg/driveHabits.jsp" rel="noopener" target="_blank">FuelEconomy.gov: Gas mileage tips, driving more efficiently</a></p>
     </div>
 
   </div>
