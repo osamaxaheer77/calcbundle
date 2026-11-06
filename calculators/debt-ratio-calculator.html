@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Debt-to-Income Ratio Calculator: DTI Percentage | CalcBundle</title>
-<meta name="description" content="Calculate debt-to-income ratio using monthly debt payments and gross income to evaluate borrowing capacity.">
+<title>Debt-to-Income Ratio Calculator: Front-End &amp; Back-End</title>
+<meta name="description" content="Calculate your front-end and back-end debt-to-income ratios from your income and monthly debts, see which tier you fall in and how much house you could afford.">
 <link rel="canonical" href="https://calcbundle.net/calculators/debt-ratio-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Debt-to-Income Ratio Calculator: DTI Percentage | CalcBundle">
-<meta property="og:description" content="Calculate debt-to-income ratio using monthly debt payments and gross income to evaluate borrowing capacity.">
+<meta property="og:title" content="Debt-to-Income Ratio Calculator: Front-End &amp; Back-End">
+<meta property="og:description" content="Calculate your front-end and back-end debt-to-income ratios from your income and monthly debts, see which tier you fall in and how much house you could afford.">
 <meta property="og:url" content="https://calcbundle.net/calculators/debt-ratio-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Debt-to-Income Ratio Calculator: DTI Percentage | CalcBundle">
-<meta name="twitter:description" content="Calculate debt-to-income ratio using monthly debt payments and gross income to evaluate borrowing capacity.">
+<meta name="twitter:title" content="Debt-to-Income Ratio Calculator: Front-End &amp; Back-End">
+<meta name="twitter:description" content="Calculate your front-end and back-end debt-to-income ratios from your income and monthly debts, see which tier you fall in and how much house you could afford.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -57,7 +57,7 @@
       "name": "What's a good DTI ratio to aim for?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Generally, under 36% back-end is considered healthy by conventional lending standards. Between 36% and 50% is workable but leaves less room to qualify for the best rates; above 50% starts to meaningfully limit borrowing options."
+        "text": "Generally, under 36% back-end is considered healthy by conventional lending standards. Between 36% and 50% is workable but leaves less room to qualify for the best rates, and 50% or more starts to limit borrowing options."
       }
     },
     {
@@ -65,23 +65,39 @@
       "name": "Does DTI affect my credit score?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not directly — DTI isn't a factor in credit scoring models. It's a separate metric lenders calculate themselves when deciding whether to approve a loan and on what terms."
+        "text": "Not directly. DTI is not a factor in credit scoring models. It is a separate figure that lenders calculate themselves when deciding whether to approve a loan and on what terms."
       }
     },
     {
       "@type": "Question",
-      "name": "How is this different from credit utilization?",
+      "name": "What is the difference between front-end and back-end DTI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Credit utilization compares your credit card balances to your credit limits and does affect your credit score. DTI compares your actual monthly debt payments to your income and doesn't — they're related but separate measures of financial health."
+        "text": "The front-end ratio counts only housing costs: rent or mortgage, property tax, HOA fees and homeowner insurance. The back-end ratio adds all other recurring debts such as cards, student loans and car loans."
       }
     },
     {
       "@type": "Question",
-      "name": "What's the fastest way to lower my DTI?",
+      "name": "Do I use gross or net income?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Either increase income or pay down/eliminate recurring debt payments — paying off a car loan or a credit card balance removes that monthly obligation entirely rather than just reducing it."
+        "text": "Gross, which is income before tax. Lenders measure DTI against gross income."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What debts are not included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Everyday costs such as groceries, utilities, phone and health insurance are not debts, so they are left out."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I lower my DTI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pay off loans, reduce card balances, increase your income and avoid new debt. Each $100 of monthly debt removed lowers the ratio by 100 divided by your monthly income, for example 2 points on $5,000."
       }
     }
   ]
@@ -233,40 +249,65 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Front-end vs. back-end: two different questions</h2>
-      <p>The front-end ratio asks a narrow question — can you afford the roof over your head? It only counts housing: rent or mortgage, property tax, HOA fees, and homeowner's insurance, divided by gross income. The back-end ratio asks the bigger question a lender actually cares about: once every recurring obligation is added in — credit cards, student loans, car payments — how much of your income is already spoken for? A healthy front-end ratio with a bloated back-end ratio usually means non-housing debt, not the house itself, is the real constraint.</p>
-
-      <h2>Why "before tax" matters</h2>
-      <p>DTI is always measured against gross income, not what actually lands in your bank account after taxes and withholdings. That can feel misleading — your real spending power is lower than the number lenders use — but it's the standard every lender applies consistently, so it's the number worth tracking even if it overstates how much room your budget truly has.</p>
-      <div class="callout">A "good" DTI isn't a hard rule — it's a risk signal. Two people with identical ratios can have very different financial stability depending on income size, job security, and savings, which is why lenders weigh DTI alongside credit score and cash reserves rather than in isolation.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: a useful baseline</h2><p>Monthly debt payments of $900 divided by $4,500 gross monthly income produce a 20% debt-to-income ratio. This is a ratio, not an estimate of available cash after expenses.</p>
-<h2>Related calculators</h2><p>Estimate housing costs with the <a href="house-affordability-calculator.html">House Affordability Calculator</a>. For loan repayment amounts, use the <a href="loan-calculator.html">Loan Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="mortgage-calculator.html">Mortgage Calculator</a>, <a href="mortgage-payoff-calculator.html">Mortgage Payoff Calculator</a>, <a href="rent-calculator.html">Rent Calculator</a>, <a href="house-affordability-calculator.html">House Affordability Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-much-house-can-you-afford.html">How Much House Can You Afford?</a>.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> DTI is monthly debt divided by gross monthly income. On $60,000 a year with $1,200 rent, $200 of cards and a $250 car loan, the back-end ratio is 33% and the front-end ratio is 24%, which is under 36%.</div>
+      <h2>What debt-to-income means</h2>
+      <p>Your debt-to-income ratio, or DTI, compares what you owe each month with what you earn before tax. <strong>DTI = monthly debt payments &divide; gross monthly income.</strong> Lenders use it to judge whether you can take on a new loan. The calculator gives two versions: the <strong>front-end</strong> ratio, which counts housing only, and the <strong>back-end</strong> ratio, which adds every other recurring debt.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens with a salary of <strong>$60,000 a year</strong>, which is $5,000 a month. The debts are rent of $1,200, credit cards of $200 and an auto loan of $250 a month. Housing is $1,200, so the front-end ratio is 1,200 &divide; 5,000 = <strong>24%</strong>. Other debts are $450, so total debts are $1,650 and the back-end ratio is 1,650 &divide; 5,000 = <strong>33%</strong>. That is under 36%, so the page says &ldquo;Your DTI ratio is good.&rdquo; A simple baseline: $900 of debt on $4,500 of income is 20%.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where the default $5,000 a month of income goes (percent of gross)</title><desc id="cf1-d">Housing takes 24% of gross income and other debts 9%, which makes a back-end ratio of 33% and leaves 67% for taxes, food, saving and everything else.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the default $5,000 a month of income goes (percent of gross)</text><rect class="bar" x="14.0" y="42" width="118.1" height="30" fill="#2563eb"/><text x="73.0" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">24%</text><rect class="bar" x="132.1" y="42" width="44.3" height="30" fill="#f59e0b"/><rect class="bar" x="176.4" y="42" width="329.6" height="30" fill="#e5e7eb"/><text x="341.2" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">67%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Housing (rent): <tspan font-weight="700">24%</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#f59e0b"/><text x="282" y="98" font-size="12.5" fill="#374151">Other debts (cards, car loan): <tspan font-weight="700">9%</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#e5e7eb"/><text x="32" y="120" font-size="12.5" fill="#374151">Remaining: <tspan font-weight="700">67%</tspan></text></svg><figcaption>A third of gross income is committed to debt.</figcaption></figure>
+      <h2>What counts as income and as debt</h2>
+      <div class="calc-table"><table><thead><tr><th>Counted as income</th><th>Counted as housing debt</th><th>Counted as other debt</th></tr></thead><tbody><tr><td>Salary and earned income</td><td>Rent</td><td>Credit cards (minimum payments)</td></tr><tr><td>Pension and Social Security</td><td>Mortgage payment</td><td>Student loans</td></tr><tr><td>Investment and savings income</td><td>Property tax</td><td>Auto loans</td></tr><tr><td>Other income</td><td>HOA fees</td><td>Other loans and liabilities</td></tr><tr><td></td><td>Homeowner insurance</td><td></td></tr></tbody></table></div>
+      <p>Enter each amount per month or per year, and the tool converts it to a monthly figure. Costs that are not debts, such as groceries, utilities, phone and health insurance, are not included. Always use income <em>before</em> tax, because lenders do.</p>
+      <h2>The three tiers</h2>
+      <p>The result is placed in one of three bands. <strong>Below 36%</strong> is good. <strong>36% to just under 50%</strong> is the mid-range: workable, but with less room to qualify for the best rates. <strong>50% or more</strong> is high and may limit what you can borrow. The percentages are rounded to a whole number on screen, so 35.6% is shown as 36% but is still treated as under 36%.</p>
+      <h2>Changing the picture</h2>
+      <p>Each $100 a month of debt you remove lowers the ratio by 0 points on a $5,000 income. Paying off the $250 car loan moves the default from 33% to <strong>28%</strong>. Adding a $300 card payment pushes it up to 39%. Raising the salary to $75,000 with the same debts gives 26%.</p>
+      <div class="calc-table"><table><thead><tr><th>Scenario</th><th>Front-end</th><th>Back-end</th><th>Tier</th></tr></thead><tbody><tr><td>Default: rent, cards and car loan</td><td>24%</td><td>33%</td><td>Good</td></tr><tr><td>Car loan paid off</td><td>24%</td><td>28%</td><td>Good</td></tr><tr><td>Extra $300 card payment</td><td>24%</td><td>39%</td><td>Mid-range</td></tr><tr><td>Salary raised to $75,000</td><td>19%</td><td>26%</td><td>Good</td></tr><tr><td>Owner with mortgage, tax, insurance, HOA and three loans on $84,000</td><td>31%</td><td>48%</td><td>Mid-range</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Back-end DTI ratio in five scenarios (percent of gross monthly income)</title><desc id="cf2-d">Green is under 36%, amber is 36% to 49%, and red is 50% or more. Paying off the car loan drops the default from 33% to 28%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Back-end DTI ratio in five scenarios (percent of gross monthly income)</text><text x="212" y="60" text-anchor="end" font-size="13" fill="#6b7280">Default: rent, cards and car loan</text><rect class="bar" x="220" y="44" width="143.4" height="22" rx="4" fill="#10b981"/><text x="371.4" y="60" font-size="13" font-weight="700" fill="#111827">33%</text><text x="212" y="94" text-anchor="end" font-size="13" fill="#6b7280">Car loan paid off</text><rect class="bar" x="220" y="78" width="121.7" height="22" rx="4" fill="#10b981"/><text x="349.7" y="94" font-size="13" font-weight="700" fill="#111827">28%</text><text x="212" y="128" text-anchor="end" font-size="13" fill="#6b7280">Extra $300 card payment</text><rect class="bar" x="220" y="112" width="169.5" height="22" rx="4" fill="#f59e0b"/><text x="397.5" y="128" font-size="13" font-weight="700" fill="#111827">39%</text><text x="212" y="162" text-anchor="end" font-size="13" fill="#6b7280">Salary raised to $75,000</text><rect class="bar" x="220" y="146" width="114.7" height="22" rx="4" fill="#10b981"/><text x="342.7" y="162" font-size="13" font-weight="700" fill="#111827">26%</text><text x="212" y="196" text-anchor="end" font-size="13" fill="#6b7280">Owner, $84,000, three loans</text><rect class="bar" x="220" y="180" width="208.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">48%</text></svg><figcaption>Ratios move with debt and with income.</figcaption></figure>
+      <h2>An owner with several debts</h2>
+      <p>Take someone earning <strong>$84,000</strong> a year ($7,000 a month). Their housing costs are a $1,800 mortgage payment, $250 a month of property tax, $100 of insurance and $50 of HOA fees, a total of $2,200. They also pay $300 on credit cards, $400 on student loans and $450 on a car, which is $1,150. Total debt is $3,350 a month, so the back-end ratio is <strong>48%</strong> and the front-end ratio is <strong>31%</strong>. That is in the mid-range, and the tool says they would likely not qualify for a conventional mortgage, which usually caps the back-end ratio at 36%.</p>
+      <h2>How much house the default income supports</h2>
+      <p>When the back-end ratio is 36% or lower, the tool also estimates how much you could spend on a new home. It takes 36% of income, here $1,800, and subtracts other debts of $450, leaving <strong>$1,350 a month</strong> for housing. Assuming a 30-year loan at 7.047%, 20% down and about 2% of the price a year for property tax and insurance, that supports a house of about <strong>$192,462</strong>. The assumptions are fixed, so treat it as a rough guide.</p>
+      <h2>Reading the lender guides</h2>
+      <p>A common rule of thumb is that housing should be no more than about 28% of gross income and total debt no more than 36%. The Consumer Financial Protection Bureau&rsquo;s tools suggest keeping the ratio for all debts at 36% or less, and some lenders accept higher figures. Different loan types set their own limits, and lenders also look at your credit score, savings and the size of the down payment.</p>
+      <h2>Ways to lower your DTI</h2>
+      <ul><li>Pay off a loan completely, which removes its whole monthly payment, as with the car loan above.</li><li>Pay down credit card balances so the minimum payment falls.</li><li>Raise your income, or add income that a lender will count.</li><li>Avoid new debt in the months before you apply for a mortgage.</li><li>Refinance or extend a loan to lower the payment, though that can raise the total interest.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using take-home pay instead of gross pay.</li><li>Leaving out minimum card payments or a car loan.</li><li>Counting utilities or groceries, which are not debt payments.</li><li>Mixing monthly and yearly amounts. Check the drop-down beside each box.</li><li>Treating a low DTI as a promise of approval. Lenders look at much more.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the back-end ratio. The rows below give the front-end ratio, total monthly income and total monthly debt. The bar shows how your income is split between housing, other debts and what remains. The note underneath either estimates a home budget or explains why a conventional loan may be out of reach.</p>
+      <div class="callout">DTI is a ratio, not a measure of the cash left after expenses. This tool is for planning. A lender&rsquo;s own rules decide what counts.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="house-affordability-calculator.html">House Affordability Calculator</a> &ndash; what you can afford to buy</li><li><a href="loan-calculator.html">Loan Calculator</a> &ndash; any fixed-rate loan</li><li><a href="mortgage-calculator.html">Mortgage Calculator</a> &ndash; a monthly mortgage payment</li><li><a href="mortgage-payoff-calculator.html">Mortgage Payoff Calculator</a> &ndash; pay a mortgage off sooner</li><li><a href="rent-calculator.html">Rent Calculator</a> &ndash; how much rent you can afford</li><li><a href="budget-calculator.html">Budget Calculator</a> &ndash; plan your income and spending</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-much-house-can-you-afford.html">How Much House Can You Afford?</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What's a good DTI ratio to aim for?</h3>
-        <p>Generally, under 36% back-end is considered healthy by conventional lending standards. Between 36% and 50% is workable but leaves less room to qualify for the best rates; above 50% starts to meaningfully limit borrowing options.</p>
+        <p>Generally, under 36% back-end is considered healthy by conventional lending standards. Between 36% and 50% is workable but leaves less room to qualify for the best rates, and 50% or more starts to limit borrowing options.</p>
       </div>
       <div class="faq-item">
         <h3>Does DTI affect my credit score?</h3>
-        <p>Not directly — DTI isn't a factor in credit scoring models. It's a separate metric lenders calculate themselves when deciding whether to approve a loan and on what terms.</p>
+        <p>Not directly. DTI is not a factor in credit scoring models. It is a separate figure that lenders calculate themselves when deciding whether to approve a loan and on what terms.</p>
       </div>
       <div class="faq-item">
-        <h3>How is this different from credit utilization?</h3>
-        <p>Credit utilization compares your credit card balances to your credit limits and does affect your credit score. DTI compares your actual monthly debt payments to your income and doesn't — they're related but separate measures of financial health.</p>
+        <h3>What is the difference between front-end and back-end DTI?</h3>
+        <p>The front-end ratio counts only housing costs: rent or mortgage, property tax, HOA fees and homeowner insurance. The back-end ratio adds all other recurring debts such as cards, student loans and car loans.</p>
       </div>
       <div class="faq-item">
-        <h3>What's the fastest way to lower my DTI?</h3>
-        <p>Either increase income or pay down/eliminate recurring debt payments — paying off a car loan or a credit card balance removes that monthly obligation entirely rather than just reducing it.</p>
+        <h3>Do I use gross or net income?</h3>
+        <p>Gross, which is income before tax. Lenders measure DTI against gross income.</p>
       </div>
+      <div class="faq-item">
+        <h3>What debts are not included?</h3>
+        <p>Everyday costs such as groceries, utilities, phone and health insurance are not debts, so they are left out.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I lower my DTI?</h3>
+        <p>Pay off loans, reduce card balances, increase your income and avoid new debt. Each $100 of monthly debt removed lowers the ratio by 100 divided by your monthly income, for example 2 points on $5,000.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://files.consumerfinance.gov/f/documents/cfpb_your-money-your-goals_debt_income_calc_tool_2018-11_ADA.pdf" rel="noopener" target="_blank">CFPB: Your money, your goals, debt-to-income tool (36 percent guideline)</a>; <a href="https://en.wikipedia.org/wiki/Debt-to-income_ratio" rel="noopener" target="_blank">Wikipedia: Debt-to-income ratio</a></p>
     </div>
 
   </div>
