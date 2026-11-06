@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Heat Index Calculator - CalcBundle</title>
-<meta name="description" content="Calculate the heat index — how hot it actually feels — from air temperature and relative humidity.">
+<title>Heat Index Calculator: How Hot It Really Feels</title>
+<meta name="description" content="Find the heat index, or feels-like temperature, from air temperature and relative humidity in F, C or K, with the National Weather Service risk bands.">
 <link rel="canonical" href="https://calcbundle.net/calculators/heat-index-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Heat Index Calculator - CalcBundle">
-<meta property="og:description" content="Calculate the heat index — how hot it actually feels — from air temperature and relative humidity.">
+<meta property="og:title" content="Heat Index Calculator: How Hot It Really Feels">
+<meta property="og:description" content="Find the heat index, or feels-like temperature, from air temperature and relative humidity in F, C or K, with the National Weather Service risk bands.">
 <meta property="og:url" content="https://calcbundle.net/calculators/heat-index-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Heat Index Calculator - CalcBundle">
-<meta name="twitter:description" content="Calculate the heat index — how hot it actually feels — from air temperature and relative humidity.">
+<meta name="twitter:title" content="Heat Index Calculator: How Hot It Really Feels">
+<meta name="twitter:description" content="Find the heat index, or feels-like temperature, from air temperature and relative humidity in F, C or K, with the National Weather Service risk bands.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,15 +41,47 @@
       "name": "What counts as dangerous heat index?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "90–103°F is \"extreme caution\" territory (heat cramps/exhaustion possible), and above 103°F moves into \"danger,\" where heat stroke becomes a real risk with continued exposure."
+        "text": "The National Weather Service calls 90 to 102 degrees Fahrenheit extreme caution, 103 to 124 danger and 125 or more extreme danger. Heat cramps and heat exhaustion become likely in the danger band."
       }
     },
     {
       "@type": "Question",
-      "name": "How is this different from wind chill?",
+      "name": "Why does humidity make it feel hotter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Heat index is the warm-weather counterpart to our Wind Chill Calculator — both estimate \"feels like\" temperature, but heat index factors in humidity while wind chill factors in wind speed."
+        "text": "Sweat cools you by evaporating. High humidity slows evaporation, so your body cannot shed heat as well and the same air temperature feels hotter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the heat index include sunshine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It assumes shade and light wind. Direct sunlight can add up to 15 degrees Fahrenheit to the perceived temperature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the heat index equal to a simple number at low temperatures?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Below about 80 degrees Fahrenheit the full regression is not used. The calculator uses a simpler estimate, as the National Weather Service does."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I enter Celsius?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Choose degrees Celsius or kelvin in the drop-down, and the tool converts to Fahrenheit before applying the formula, then shows the result in all three units."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is most at risk from heat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Children, older adults, pets and people with health conditions. Outdoor workers and athletes are also at higher risk when the heat index is high."
       }
     }
   ]
@@ -119,36 +151,66 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">The NWS heat index formula</h2>
-      <p>This uses the Rothfusz regression, the formula behind the US National Weather Service's heat index tables, with the standard low- and high-humidity adjustments applied at the edges of its valid range. For combinations where the simplified heat-index estimate stays below 80&deg;F, that simpler estimate is used instead, matching NWS practice.</p>
-
-      <h2>Why humidity makes heat feel worse</h2>
-      <p>Sweat cools your body by evaporating. High humidity slows evaporation, so your body can't shed heat as effectively &mdash; the same air temperature feels hotter as humidity rises.</p>
-      <div class="callout">The heat index assumes shade and light wind. Direct sunlight can add up to 15&deg;F to the perceived temperature.</div>
-
-      <!--seo-extra-->
-      <h2>A worked example</h2>
-      <p>At an air temperature of 85°F and a relative humidity of 70%, the heat index is 92.7°F, or 33.7°C. That is how hot it feels to the body, and it falls in the National Weather Service's extreme caution band, where heat cramps and heat exhaustion are possible with prolonged exposure or activity. The same 85°F at 40% humidity would feel close to 85°F.</p>
-
-      <h2>Tips for staying safe</h2>
-      <p>The heat index assumes shade and light wind, and standing in direct sun can add up to 15°F. Drink water before you feel thirsty, take breaks in the shade or air conditioning, and wear light clothing. Children, older adults, pets and people with health conditions are at higher risk. Plan hard outdoor work for the early morning, and never leave a person or pet in a parked car.</p>
-
-      <h2>Common uses</h2>
-      <p>Athletic coaches use it to decide whether to hold practice outdoors, employers use it to manage outdoor work, and event planners and gardeners use it to plan around the hottest part of the day.</p>
-
-      <p><strong>You might also need:</strong> <a href="wind-chill-calculator.html">Wind Chill Calculator</a>, <a href="dew-point-calculator.html">Dew Point Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> The heat index combines temperature and humidity into a feels-like temperature. At 85&deg;F and 70% humidity it is 92.7&deg;F (33.7&deg;C), in the extreme caution band. At 40% humidity the same air feels like 84.3&deg;F.</div>
+      <h2>What the heat index is</h2>
+      <p>The heat index, sometimes called the &ldquo;feels like&rdquo; temperature, combines air temperature and relative humidity to estimate how hot it feels to the body. Sweat cools you by evaporating, and high humidity slows evaporation, so the same air temperature feels hotter as humidity rises. The calculator accepts the temperature in &deg;F, &deg;C or kelvin and a humidity from 0 to 100%.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on <strong>85&deg;F</strong> and <strong>70%</strong> relative humidity. The result is <strong>92.7&deg;F</strong>, which is <strong>33.7&deg;C</strong> or 306.9 K. That falls in the National Weather Service&rsquo;s <strong>extreme caution</strong> band (90&deg;F to 102&deg;F), where heat cramps and heat exhaustion are possible with prolonged exposure or activity. The same 85&deg;F air at 40% humidity gives 84.3&deg;F, which feels close to the real temperature.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">The five risk bands of the heat index (&amp;deg;F, lower limit)</title><desc id="cf3-d">The default of 92.7&amp;deg;F falls in extreme caution, between 90 and 103.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The five risk bands of the heat index (&amp;deg;F, lower limit)</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">Caution</text><rect class="bar" x="130" y="44" width="190.7" height="22" rx="4" fill="#fde047"/><text x="328.7" y="60" font-size="13" font-weight="700" fill="#111827">80</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">Extreme caution</text><rect class="bar" x="130" y="78" width="214.6" height="22" rx="4" fill="#f59e0b"/><text x="352.6" y="94" font-size="13" font-weight="700" fill="#111827">90</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">Danger</text><rect class="bar" x="130" y="112" width="245.6" height="22" rx="4" fill="#f97316"/><text x="383.6" y="128" font-size="13" font-weight="700" fill="#111827">103</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">Extreme danger</text><rect class="bar" x="130" y="146" width="298.0" height="22" rx="4" fill="#dc2626"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">125</text></svg><figcaption>The default sits in the extreme caution band.</figcaption></figure>
+      <h2>How it is calculated</h2>
+      <p>The tool uses the Rothfusz regression, the equation behind the National Weather Service heat index tables. First it computes a simple estimate, 0.5 &times; (T + 61 + (T &minus; 68) &times; 1.2 + RH &times; 0.094). If the average of that estimate and the air temperature is below 80&deg;F, the simple value is the answer, as in NWS practice. Otherwise it uses the full regression, with two adjustments at the edges of its range: a reduction when humidity is below 13% and the temperature is 80&deg;F to 112&deg;F, and an increase when humidity is above 85% and the temperature is 80&deg;F to 87&deg;F. Temperatures given in &deg;C or K are converted to &deg;F first.</p>
+      <h2>Heat index by temperature and humidity</h2>
+      <div class="calc-table"><table><thead><tr><th>Air temp (&deg;F)</th><th>40%</th><th>50%</th><th>60%</th><th>70%</th></tr></thead><tbody><tr><td>80</td><td>79.6</td><td>80.8</td><td>81.8</td><td>83.0</td></tr><tr><td>85</td><td>84.3</td><td>86.5</td><td>89.3</td><td>92.7</td></tr><tr><td>90</td><td>90.7</td><td>94.6</td><td>99.7</td><td>105.9</td></tr><tr><td>95</td><td>99.0</td><td>105.2</td><td>113.1</td><td>122.6</td></tr><tr><td>100</td><td>109.3</td><td>118.3</td><td>129.5</td><td>142.8</td></tr><tr><td>105</td><td>121.5</td><td>133.9</td><td>148.9</td><td>166.4</td></tr><tr><td>110</td><td>135.7</td><td>152.0</td><td>171.2</td><td>193.5</td></tr></tbody></table></div>
+      <p>Read across a row to see the effect of humidity, and down a column to see the effect of temperature. At 95&deg;F and 60% humidity it feels like 113.1&deg;F, in the danger band, and at 100&deg;F with 40% humidity it feels like 109.3&deg;F (danger).</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Heat index at 90&amp;deg;F air temperature by relative humidity (&amp;deg;F)</title><desc id="cf1-d">At 90&amp;deg;F, going from 40% to 90% humidity raises the heat index from 90.7&amp;deg;F to 121.9&amp;deg;F, which moves the risk from extreme caution to danger.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Heat index at 90&amp;deg;F air temperature by relative humidity (&amp;deg;F)</text><text x="112" y="60" text-anchor="end" font-size="13" fill="#6b7280">40% humidity</text><rect class="bar" x="120" y="44" width="229.1" height="22" rx="4" fill="#f59e0b"/><text x="357.1" y="60" font-size="13" font-weight="700" fill="#111827">90.7&amp;deg;F</text><text x="112" y="94" text-anchor="end" font-size="13" fill="#6b7280">50% humidity</text><rect class="bar" x="120" y="78" width="239.0" height="22" rx="4" fill="#f59e0b"/><text x="367.0" y="94" font-size="13" font-weight="700" fill="#111827">94.6&amp;deg;F</text><text x="112" y="128" text-anchor="end" font-size="13" fill="#6b7280">60% humidity</text><rect class="bar" x="120" y="112" width="251.8" height="22" rx="4" fill="#f59e0b"/><text x="379.8" y="128" font-size="13" font-weight="700" fill="#111827">99.7&amp;deg;F</text><text x="112" y="162" text-anchor="end" font-size="13" fill="#6b7280">70% humidity</text><rect class="bar" x="120" y="146" width="267.6" height="22" rx="4" fill="#dc2626"/><text x="395.6" y="162" font-size="13" font-weight="700" fill="#111827">105.9&amp;deg;F</text><text x="112" y="196" text-anchor="end" font-size="13" fill="#6b7280">80% humidity</text><rect class="bar" x="120" y="180" width="286.3" height="22" rx="4" fill="#dc2626"/><text x="414.3" y="196" font-size="13" font-weight="700" fill="#111827">113.3&amp;deg;F</text><text x="112" y="230" text-anchor="end" font-size="13" fill="#6b7280">90% humidity</text><rect class="bar" x="120" y="214" width="308.0" height="22" rx="4" fill="#dc2626"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">121.9&amp;deg;F</text></svg><figcaption>Humidity raises the heat index at a fixed temperature.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Heat index by air temperature at 40% and 70% humidity (F)</title><desc id="cf2-d">At 70% humidity the heat index reaches 103F (the danger band) at an air temperature of about 89F; at 40% humidity the air needs to be about 97F.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Heat index by air temperature at 40% and 70% humidity (F)</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">0</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">52</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">104</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">157</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">209</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">80</text><text x="132.7" y="194" text-anchor="middle" font-size="11" fill="#6b7280">85</text><text x="207.3" y="194" text-anchor="middle" font-size="11" fill="#6b7280">90</text><text x="282.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">95</text><text x="356.7" y="194" text-anchor="middle" font-size="11" fill="#6b7280">100</text><text x="431.3" y="194" text-anchor="middle" font-size="11" fill="#6b7280">105</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">110</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Air temperature (F)</text><polyline class="draw" style="--len:451" points="58.0,128.0 132.7,125.2 207.3,121.3 282.0,116.3 356.7,110.1 431.3,102.8 506.0,94.2" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="76" y="40" font-size="11.5" fill="#374151">40% humidity</text><polyline class="draw" style="--len:455" points="58.0,126.0 132.7,120.1 207.3,112.1 282.0,102.1 356.7,89.9 431.3,75.7 506.0,59.3" fill="none" stroke="#dc2626" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#dc2626"/><text x="246" y="40" font-size="11.5" fill="#374151">70% humidity</text></svg><figcaption>The curves rise faster as it gets hotter and more humid.</figcaption></figure>
+      <h2>Celsius and kelvin</h2>
+      <p>Enter 30&deg;C with 60% humidity and the tool converts to 86&deg;F, giving a heat index of <strong>91.1&deg;F</strong> (32.8&deg;C). Entering 303.15 K gives the same result, since 303.15 K is 30&deg;C.</p>
+      <h2>The risk bands</h2>
+      <div class="calc-table"><table><thead><tr><th>Heat index</th><th>Band</th><th>What it means</th></tr></thead><tbody><tr><td>Below 80&deg;F</td><td>No significant risk</td><td>No significant risk from heat alone</td></tr><tr><td>80&deg;F to 89&deg;F</td><td>Caution</td><td>Fatigue is possible with prolonged exposure or activity</td></tr><tr><td>90&deg;F to 102&deg;F</td><td>Extreme caution</td><td>Heat cramps and heat exhaustion are possible</td></tr><tr><td>103&deg;F to 124&deg;F</td><td>Danger</td><td>Heat cramps and heat exhaustion are likely, and heat stroke is possible</td></tr><tr><td>125&deg;F and above</td><td>Extreme danger</td><td>Heat stroke is highly likely with continued exposure</td></tr></tbody></table></div>
+      <h2>Shade, sun and wind</h2>
+      <p>The heat index assumes shade and light wind. Standing in direct sunshine can add up to 15&deg;F to the perceived temperature, so the default 92.7&deg;F could feel like 107.7&deg;F in full sun, which is in the danger band.</p>
+      <h2>Dry heat and very humid warmth</h2>
+      <p>Dry air changes the picture. At 100&deg;F with only 10% humidity the tool gives 94.1&deg;F, a little less than the air temperature, because the humidity adjustment applies. Very humid warm air at 82&deg;F and 95% humidity gives 94.0&deg;F. Mild weather uses the simple estimate: 70&deg;F at 50% humidity gives 69.0&deg;F.</p>
+      <h2>Staying safe</h2>
+      <ul><li>Drink water before you feel thirsty, and take breaks in the shade or air conditioning.</li><li>Wear light clothing, and plan hard outdoor work for the early morning.</li><li>Children, older adults, pets and people with health conditions are at higher risk.</li><li>Never leave a person or pet in a parked car.</li><li>Treat the heat index as a guide. Your own tolerance, fitness and acclimatisation matter.</li></ul>
+      <h2>Who uses it</h2>
+      <p>Coaches use the heat index to decide whether to hold practice outdoors, employers use it to manage outdoor work, and event planners and gardeners use it to plan around the hottest part of the day.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Entering the humidity as a decimal such as 0.7. Use a percentage from 0 to 100.</li><li>Mixing up the heat index with the temperature shown by a thermometer in the sun.</li><li>Using it for cold weather. Below about 80&deg;F the figure is a simple estimate and the heat index is not meaningful for safety.</li><li>Forgetting that sun adds to the felt temperature.</li><li>Choosing the wrong unit in the drop-down.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the &ldquo;feels like&rdquo; temperature in &deg;F, with the same value in &deg;C and kelvin and a line that names the risk band. Compare it with the table above, and add up to 15&deg;F if you will be in direct sun.</p>
+      <div class="callout">This is an estimate based on the National Weather Service formula, assuming shade and light wind. It is not medical advice. If someone shows signs of heat illness, get help.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="wind-chill-calculator.html">Wind Chill Calculator</a> &ndash; how cold it feels</li><li><a href="dew-point-calculator.html">Dew Point Calculator</a> &ndash; humidity and dew point</li><li><a href="conversion-calculator.html">Conversion Calculator</a> &ndash; convert temperatures</li><li><a href="sleep-calculator.html">Sleep Calculator</a> &ndash; bedtimes and wake-up times</li><li><a href="calorie-calculator.html">Calorie Calculator</a> &ndash; daily calorie needs</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What counts as dangerous heat index?</h3>
-        <p>90&ndash;103&deg;F is "extreme caution" territory (heat cramps/exhaustion possible), and above 103&deg;F moves into "danger," where heat stroke becomes a real risk with continued exposure.</p>
+        <p>The National Weather Service calls 90 to 102 degrees Fahrenheit extreme caution, 103 to 124 danger and 125 or more extreme danger. Heat cramps and heat exhaustion become likely in the danger band.</p>
       </div>
       <div class="faq-item">
-        <h3>How is this different from wind chill?</h3>
-        <p>Heat index is the warm-weather counterpart to our <a href="wind-chill-calculator.html">Wind Chill Calculator</a> &mdash; both estimate "feels like" temperature, but heat index factors in humidity while wind chill factors in wind speed.</p>
+        <h3>Why does humidity make it feel hotter?</h3>
+        <p>Sweat cools you by evaporating. High humidity slows evaporation, so your body cannot shed heat as well and the same air temperature feels hotter.</p>
       </div>
+      <div class="faq-item">
+        <h3>Does the heat index include sunshine?</h3>
+        <p>No. It assumes shade and light wind. Direct sunlight can add up to 15 degrees Fahrenheit to the perceived temperature.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is the heat index equal to a simple number at low temperatures?</h3>
+        <p>Below about 80 degrees Fahrenheit the full regression is not used. The calculator uses a simpler estimate, as the National Weather Service does.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I enter Celsius?</h3>
+        <p>Yes. Choose degrees Celsius or kelvin in the drop-down, and the tool converts to Fahrenheit before applying the formula, then shows the result in all three units.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Who is most at risk from heat?</h3>
+        <p>Children, older adults, pets and people with health conditions. Outdoor workers and athletes are also at higher risk when the heat index is high.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.weather.gov/safety/heat-index" rel="noopener" target="_blank">National Weather Service: Heat index</a>; <a href="https://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml" rel="noopener" target="_blank">NWS Weather Prediction Center: The heat index equation</a>; <a href="https://en.wikipedia.org/wiki/Heat_index" rel="noopener" target="_blank">Wikipedia: Heat index</a></p>
     </div>
 
   </div>
