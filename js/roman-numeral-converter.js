@@ -43,7 +43,7 @@
     function calcToRoman() {
       const input = el('roman-number-input').value.trim();
       const resultEl = el('roman-to-roman-result');
-      const num = parseInt(input, 10);
+      const num = /^\d+$/.test(input) ? parseInt(input, 10) : NaN;
 
       if (input === '' || isNaN(num)) {
         resultEl.innerHTML = '<p class="tool-result is-error">Enter a whole number.</p>';

@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roman Numeral Converter - CalcBundle</title>
-<meta name="description" content="Convert numbers from 1 to 3,999 into Roman numerals and Roman numerals back into numbers, with a short guide to how the numerals work.">
+<title>Roman Numeral Converter: Numbers 1 to 3,999</title>
+<meta name="description" content="Convert numbers from 1 to 3,999 into Roman numerals and Roman numerals back into numbers, with value tables, valid and invalid forms and worked examples.">
 <link rel="canonical" href="https://calcbundle.net/calculators/roman-numeral-converter.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Roman Numeral Converter - CalcBundle">
-<meta property="og:description" content="Convert numbers from 1 to 3,999 into Roman numerals and Roman numerals back into numbers, with a short guide to how the numerals work.">
+<meta property="og:title" content="Roman Numeral Converter: Numbers 1 to 3,999">
+<meta property="og:description" content="Convert numbers from 1 to 3,999 into Roman numerals and Roman numerals back into numbers, with value tables, valid and invalid forms and worked examples.">
 <meta property="og:url" content="https://calcbundle.net/calculators/roman-numeral-converter.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Roman Numeral Converter - CalcBundle">
-<meta name="twitter:description" content="Convert numbers from 1 to 3,999 into Roman numerals and Roman numerals back into numbers, with a short guide to how the numerals work.">
+<meta name="twitter:title" content="Roman Numeral Converter: Numbers 1 to 3,999">
+<meta name="twitter:description" content="Convert numbers from 1 to 3,999 into Roman numerals and Roman numerals back into numbers, with value tables, valid and invalid forms and worked examples.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Is \"IIII\" ever correct for 4?",
+      "name": "What is the largest number in Roman numerals?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not in the standard system used here (which uses \"IV\") — though \"IIII\" does appear traditionally on some clock faces for visual symmetry."
+        "text": "Without extra notation it is 3,999, written MMMCMXCIX. Larger numbers historically used a bar over a numeral to multiply it by 1,000, which this converter does not support."
       }
     },
     {
       "@type": "Question",
-      "name": "Can Roman numerals represent zero or negative numbers?",
+      "name": "How do you write 2026 in Roman numerals?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No — the classical system has no symbol for zero and no notation for negative values."
+        "text": "MMXXVI, which is MM (2,000), XX (20) and VI (6)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is IL not a valid way to write 49?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only I, X and C can be subtracted, and only from the next two larger numerals. 49 is written XLIX, which is XL (40) plus IX (9)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is IIII valid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in the standard form. The converter requires IV for 4. IIII is sometimes seen on clock faces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I type Roman numerals in lower case?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The converter changes the letters to capitals before it checks them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a zero in Roman numerals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Roman numerals have no zero and cover only whole numbers from 1 up."
       }
     }
   ]
@@ -125,33 +157,66 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How Roman numerals work</h2>
-      <p>Seven letters represent fixed values: I=1, V=5, X=10, L=50, C=100, D=500, M=1000. Numerals are normally written largest to smallest, added together (VI = 5+1 = 6). When a smaller value appears immediately before a larger one, it's subtracted instead (IV = 5&minus;1 = 4), which keeps no symbol repeated more than three times in a row.</p>
-
-      <h2>Why the 3,999 limit</h2>
-      <p>Standard Roman numerals repeat symbols to build up values, and M (1,000) is the largest single letter &mdash; so 3,999 (MMMCMXCIX) is the largest number expressible without inventing extra notation. Numbers above that historically used a bar (vinculum) over a numeral to multiply it by 1,000, which isn't supported here.</p>
-      <div class="callout">Only one valid Roman numeral spelling exists for each number in the standard system &mdash; this converter checks that a numeral round-trips correctly before accepting it, catching invalid forms like "IIII" or "VX".</div>
-
-      <!--seo-extra-->
-      <h2>A worked example</h2>
-      <p>The year 2026 is written MMXXVI: MM is 2,000, XX is 20 and VI is 6. Another example is 1994, which is MCMXCIV, made from M (1,000), CM (900), XC (90) and IV (4). To go the other way, type MMXXVI in the second box and you get 2,026.</p>
-
-      <h2>Tips for reading Roman numerals</h2>
-      <p>Read from left to right and add the values, unless a smaller numeral comes before a larger one, in which case subtract it. Only I, X and C can be subtracted, and only from the next two larger numerals, so IL is not a valid way to write 49, which is XLIX. Roman numerals still appear on clocks, in book chapters, on monuments, in movie copyright dates and in event names such as Super Bowl LX.</p>
-
-      <p><strong>You might also need:</strong> <a href="base64-encoder.html">Base64 Encode / Decode</a>, <a href="url-encoder.html">URL Encode / Decode</a>, <a href="hex-calculator.html">Hex Calculator</a>, <a href="ip-subnet-calculator.html">IP Subnet Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Roman numerals use I, V, X, L, C, D and M. 2026 is MMXXVI and 1994 is MCMXCIV. The largest standard numeral is MMMCMXCIX, which is 3,999. Only I, X and C can be subtracted.</div>
+      <h2>How Roman numerals work</h2>
+      <p>Seven letters stand for fixed values. Numerals are normally written from largest to smallest and added together, so VI = 5 + 1 = 6. When a smaller value comes immediately before a larger one, it is subtracted instead, so IV = 5 &minus; 1 = 4. That keeps any letter from being repeated more than three times in a row.</p>
+      <div class="calc-table"><table><thead><tr><th>Letter</th><th>Value</th></tr></thead><tbody><tr><td>I</td><td>1</td></tr><tr><td>V</td><td>5</td></tr><tr><td>X</td><td>10</td></tr><tr><td>L</td><td>50</td></tr><tr><td>C</td><td>100</td></tr><tr><td>D</td><td>500</td></tr><tr><td>M</td><td>1000</td></tr></tbody></table></div>
+      <h2>The two tools</h2>
+      <p>The first box turns a whole number from 1 to 3,999 into a Roman numeral. The second does the reverse: type a numeral, in capitals or lower case, and it gives the number. The second box checks that the numeral you typed is written in the standard way before it accepts it.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on <strong>2026</strong> and <strong>MMXXVI</strong>. The year 2026 is MM (2,000), XX (20) and VI (6), which makes <strong>MMXXVI</strong>. To go the other way, MMXXVI is M + M + X + X + V + I = 1,000 + 1,000 + 10 + 10 + 5 + 1 = <strong>2,026</strong>. Another example is <strong>1994 = MCMXCIV</strong>, made from M (1,000), CM (900), XC (90) and IV (4).</p>
+      <h2>How the converter builds a numeral</h2>
+      <p>The tool works down a table of thirteen values, taking the largest that still fits and subtracting it. The table includes the six subtractive pairs, which is how it avoids IIII and VIIII.</p>
+      <div class="calc-table"><table><thead><tr><th>Value</th><th>Numeral</th></tr></thead><tbody><tr><td>1000</td><td>M</td></tr><tr><td>900</td><td>CM</td></tr><tr><td>500</td><td>D</td></tr><tr><td>400</td><td>CD</td></tr><tr><td>100</td><td>C</td></tr><tr><td>90</td><td>XC</td></tr><tr><td>50</td><td>L</td></tr><tr><td>40</td><td>XL</td></tr><tr><td>10</td><td>X</td></tr><tr><td>9</td><td>IX</td></tr><tr><td>5</td><td>V</td></tr><tr><td>4</td><td>IV</td></tr><tr><td>1</td><td>I</td></tr></tbody></table></div>
+      <p>For 1994 the steps are: 1000 (M), then 900 (CM), then 90 (XC), then 4 (IV). Joined together, they spell MCMXCIV.</p>
+      <h2>Years and dates</h2>
+      <div class="calc-table"><table><thead><tr><th>Year</th><th>Roman numeral</th><th>Note</th></tr></thead><tbody><tr><td>1066</td><td>MLXVI</td><td>Battle of Hastings</td></tr><tr><td>1492</td><td>MCDXCII</td><td>Columbus sails</td></tr><tr><td>1776</td><td>MDCCLXXVI</td><td>US Declaration of Independence</td></tr><tr><td>1994</td><td>MCMXCIV</td><td>Example in the converter</td></tr><tr><td>1999</td><td>MCMXCIX</td><td>Last year of the 1900s</td></tr><tr><td>2000</td><td>MM</td><td>Start of the 2000s</td></tr><tr><td>2024</td><td>MMXXIV</td><td>A leap year</td></tr><tr><td>2026</td><td>MMXXVI</td><td>This year's example</td></tr></tbody></table></div>
+      <h2>Why the limit is 3,999</h2>
+      <p>M (1,000) is the largest single letter, and standard Roman numerals build up large values by repeating letters, with no more than three in a row. So 3,999, <strong>MMMCMXCIX</strong>, is the largest number that can be written without extra notation. Historically, a bar (vinculum) over a numeral multiplied it by 1,000, which this tool does not support.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Letters needed to write some numbers in Roman numerals</title><desc id="cf1-d">The longest numeral under 4,000 is 3,888, MMMDCCCLXXXVIII, with 15 letters. Subtractive forms such as IV and XLIX keep the others short.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Letters needed to write some numbers in Roman numerals</text><text x="162" y="60" text-anchor="end" font-size="13" fill="#6b7280">4 IV</text><rect class="bar" x="170" y="44" width="34.4" height="22" rx="4" fill="#9ca3af"/><text x="212.4" y="60" font-size="13" font-weight="700" fill="#111827">2 letters</text><text x="162" y="94" text-anchor="end" font-size="13" fill="#6b7280">49 XLIX</text><rect class="bar" x="170" y="78" width="68.8" height="22" rx="4" fill="#9ca3af"/><text x="246.8" y="94" font-size="13" font-weight="700" fill="#111827">4 letters</text><text x="162" y="128" text-anchor="end" font-size="13" fill="#6b7280">1994 MCMXCIV</text><rect class="bar" x="170" y="112" width="120.4" height="22" rx="4" fill="#9ca3af"/><text x="298.4" y="128" font-size="13" font-weight="700" fill="#111827">7 letters</text><text x="162" y="162" text-anchor="end" font-size="13" fill="#6b7280">2026 MMXXVI</text><rect class="bar" x="170" y="146" width="103.2" height="22" rx="4" fill="#2563eb"/><text x="281.2" y="162" font-size="13" font-weight="700" fill="#111827">6 letters</text><text x="162" y="196" text-anchor="end" font-size="13" fill="#6b7280">3999 MMMCMXCIX</text><rect class="bar" x="170" y="180" width="154.8" height="22" rx="4" fill="#9ca3af"/><text x="332.8" y="196" font-size="13" font-weight="700" fill="#111827">9 letters</text><text x="162" y="230" text-anchor="end" font-size="13" fill="#6b7280">3888 MMMDCCCLXXXVIII</text><rect class="bar" x="170" y="214" width="258.0" height="22" rx="4" fill="#dc2626"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">15 letters</text></svg><figcaption>Some numbers need only a few letters, others many.</figcaption></figure>
+      <h2>Valid and invalid forms</h2>
+      <p>For each number there is one standard spelling. The converter accepts a numeral only if it turns back into the same text. Only <strong>I, X and C</strong> can be subtracted, and only from the next two larger letters: I from V and X, X from L and C, C from D and M. So 49 is XLIX, not IL.</p>
+      <div class="calc-table"><table><thead><tr><th>You type</th><th>Read as</th><th>Standard spelling of that number</th><th>Result</th></tr></thead><tbody><tr><td>IIII</td><td>4</td><td>IV</td><td>Not accepted</td></tr><tr><td>VX</td><td>5</td><td>V</td><td>Not accepted</td></tr><tr><td>IL</td><td>49</td><td>XLIX</td><td>Not accepted</td></tr><tr><td>IC</td><td>99</td><td>XCIX</td><td>Not accepted</td></tr><tr><td>XM</td><td>990</td><td>CMXC</td><td>Not accepted</td></tr><tr><td>VV</td><td>10</td><td>X</td><td>Not accepted</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 284" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">How often each letter is used across all numerals from 1 to 3,999</title><desc id="cf2-d">M is the most used letter across the range, with 6,400 uses, because every number from 1,000 up has at least one M. I follows with 5,600 uses, and V, L and D are each used 2,000 times.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">How often each letter is used across all numerals from 1 to 3,999</text><text x="52" y="60" text-anchor="end" font-size="13" fill="#6b7280">I</text><rect class="bar" x="60" y="44" width="322.0" height="22" rx="4" fill="#9ca3af"/><text x="390.0" y="60" font-size="13" font-weight="700" fill="#111827">5,600</text><text x="52" y="94" text-anchor="end" font-size="13" fill="#6b7280">V</text><rect class="bar" x="60" y="78" width="115.0" height="22" rx="4" fill="#9ca3af"/><text x="183.0" y="94" font-size="13" font-weight="700" fill="#111827">2,000</text><text x="52" y="128" text-anchor="end" font-size="13" fill="#6b7280">X</text><rect class="bar" x="60" y="112" width="345.0" height="22" rx="4" fill="#9ca3af"/><text x="413.0" y="128" font-size="13" font-weight="700" fill="#111827">6,000</text><text x="52" y="162" text-anchor="end" font-size="13" fill="#6b7280">L</text><rect class="bar" x="60" y="146" width="115.0" height="22" rx="4" fill="#9ca3af"/><text x="183.0" y="162" font-size="13" font-weight="700" fill="#111827">2,000</text><text x="52" y="196" text-anchor="end" font-size="13" fill="#6b7280">C</text><rect class="bar" x="60" y="180" width="345.0" height="22" rx="4" fill="#9ca3af"/><text x="413.0" y="196" font-size="13" font-weight="700" fill="#111827">6,000</text><text x="52" y="230" text-anchor="end" font-size="13" fill="#6b7280">D</text><rect class="bar" x="60" y="214" width="115.0" height="22" rx="4" fill="#9ca3af"/><text x="183.0" y="230" font-size="13" font-weight="700" fill="#111827">2,000</text><text x="52" y="264" text-anchor="end" font-size="13" fill="#6b7280">M</text><rect class="bar" x="60" y="248" width="368.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="264" font-size="13" font-weight="700" fill="#111827">6,400</text></svg><figcaption>M is the most used letter.</figcaption></figure>
+      <h2>Tips for reading numerals</h2>
+      <ul><li>Read from left to right and add the values, unless a smaller letter comes before a larger one, in which case subtract it.</li><li>Split the numeral into thousands, hundreds, tens and ones: MCMXCIV is M, CM, XC, IV.</li><li>Roman numerals have no zero and no decimals, so they cover whole numbers only.</li><li>Lower case works in the second box. Spaces between letters do not.</li></ul>
+      <h2>Where Roman numerals are still used</h2>
+      <ul><li>Clock faces, where 4 is often written IIII.</li><li>Chapter numbers, outlines and book prefaces.</li><li>Copyright years on films and buildings.</li><li>Monarchs and popes, like Elizabeth II, and sporting events such as the Super Bowl.</li><li>Names of events in a series, and some formal documents.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Writing IIII, VIIII or XXXX. The standard forms are IV, IX and XL.</li><li>Subtracting more than one letter, as in IIX for 8. The standard form is VIII.</li><li>Subtracting V, L or D. Only I, X and C can be subtracted.</li><li>Entering a decimal, 0 or a number above 3,999 in the first box.</li><li>Typing letters other than I, V, X, L, C, D and M in the second box.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large line shows the numeral for your number, or the number for your numeral. If the tool says the numeral is not valid, compare it with the standard form in the tables above. A message that only 1 to 3,999 are covered means your number is outside the standard range.</p>
+      <div class="callout">The converter uses the modern standard form. Ancient inscriptions sometimes used other forms, such as IIII, so a numeral that is rejected here may still appear in old sources.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="conversion-calculator.html">Conversion Calculator</a> &ndash; convert between units</li><li><a href="hex-calculator.html">Hex Calculator</a> &ndash; base 16 arithmetic</li><li><a href="binary-calculator.html">Binary Calculator</a> &ndash; base 2 arithmetic</li><li><a href="day-of-the-week-calculator.html">Day of the Week Calculator</a> &ndash; the weekday of any date</li><li><a href="scientific-notation-calculator.html">Scientific Notation Calculator</a> &ndash; very large and small numbers</li><li><a href="big-number-calculator.html">Big Number Calculator</a> &ndash; very large numbers</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Is "IIII" ever correct for 4?</h3>
-        <p>Not in the standard system used here (which uses "IV") &mdash; though "IIII" does appear traditionally on some clock faces for visual symmetry.</p>
+        <h3>What is the largest number in Roman numerals?</h3>
+        <p>Without extra notation it is 3,999, written MMMCMXCIX. Larger numbers historically used a bar over a numeral to multiply it by 1,000, which this converter does not support.</p>
       </div>
       <div class="faq-item">
-        <h3>Can Roman numerals represent zero or negative numbers?</h3>
-        <p>No &mdash; the classical system has no symbol for zero and no notation for negative values.</p>
+        <h3>How do you write 2026 in Roman numerals?</h3>
+        <p>MMXXVI, which is MM (2,000), XX (20) and VI (6).</p>
       </div>
+      <div class="faq-item">
+        <h3>Why is IL not a valid way to write 49?</h3>
+        <p>Only I, X and C can be subtracted, and only from the next two larger numerals. 49 is written XLIX, which is XL (40) plus IX (9).</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is IIII valid?</h3>
+        <p>Not in the standard form. The converter requires IV for 4. IIII is sometimes seen on clock faces.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I type Roman numerals in lower case?</h3>
+        <p>Yes. The converter changes the letters to capitals before it checks them.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is there a zero in Roman numerals?</h3>
+        <p>No. Roman numerals have no zero and cover only whole numbers from 1 up.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Roman_numerals" rel="noopener" target="_blank">Wikipedia: Roman numerals</a></p>
     </div>
 
   </div>
