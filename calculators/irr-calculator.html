@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IRR Calculator: Internal Rate of Return on Cash Flows | CalcBundle</title>
-<meta name="description" content="Calculate the internal rate of return for an initial investment and a series of project cash flows.">
+<title>IRR Calculator: Internal Rate of Return on Cash Flows</title>
+<meta name="description" content="Calculate the internal rate of return for a starting investment and regular or uneven cash flows, with gross return, total return and further investments.">
 <link rel="canonical" href="https://calcbundle.net/calculators/irr-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="IRR Calculator: Internal Rate of Return on Cash Flows | CalcBundle">
-<meta property="og:description" content="Calculate the internal rate of return for an initial investment and a series of project cash flows.">
+<meta property="og:title" content="IRR Calculator: Internal Rate of Return on Cash Flows">
+<meta property="og:description" content="Calculate the internal rate of return for a starting investment and regular or uneven cash flows, with gross return, total return and further investments.">
 <meta property="og:url" content="https://calcbundle.net/calculators/irr-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="IRR Calculator: Internal Rate of Return on Cash Flows | CalcBundle">
-<meta name="twitter:description" content="Calculate the internal rate of return for an initial investment and a series of project cash flows.">
+<meta name="twitter:title" content="IRR Calculator: Internal Rate of Return on Cash Flows">
+<meta name="twitter:description" content="Calculate the internal rate of return for a starting investment and regular or uneven cash flows, with gross return, total return and further investments.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,7 +42,7 @@
       "name": "Which calculator should I use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Use the first if your cash flows are a regular deposit or withdrawal at a fixed frequency (like a monthly distribution). Use the second if your cash flows vary year to year, as with a lumpy annual payout or an uneven series of returns."
+        "text": "Use the first if your cash flows are a regular deposit or withdrawal at a fixed frequency, like a monthly distribution. Use the second if your cash flows vary year to year, as with a lumpy payout or an uneven series of returns."
       }
     },
     {
@@ -50,7 +50,7 @@
       "name": "Can IRR be negative?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — a negative IRR simply means the investment returned less than what was put in, once time value of money is accounted for."
+        "text": "Yes. A negative IRR means the investment returned less than what was put in, once the time value of money is taken into account."
       }
     },
     {
@@ -58,7 +58,31 @@
       "name": "Is a higher IRR always a better investment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Generally, but IRR alone doesn't capture risk, scale (a huge IRR on a tiny investment may be less valuable in absolute dollars than a modest IRR on a large one), or how realistic the assumed cash flows actually are."
+        "text": "Generally, but IRR alone does not capture risk, scale or how realistic the assumed cash flows are. A huge IRR on a tiny investment may be worth less in dollars than a modest IRR on a large one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the calculator say no single IRR was found?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When cash flows change sign more than once there can be no IRR or more than one. In those cases the calculator does not show a misleading number. Use NPV at a chosen discount rate instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between IRR and gross return?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gross return is total profit divided by total invested and ignores timing. IRR is a yearly rate that accounts for when each cash flow happened."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the rate for monthly cash flows turned into a yearly IRR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tool 1 finds the rate for each period and converts it to an effective yearly rate: (1 + periodic rate) raised to the number of periods a year, minus 1."
       }
     }
   ]
@@ -192,32 +216,58 @@
       </form>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What IRR is actually answering</h2>
-      <p>IRR is the single, constant discount rate that makes an investment's entire stream of cash flows — money going out, money coming back — net to exactly zero in present-value terms. It's the same conceptual question every investment ultimately asks: what rate of return am I actually earning, given what I put in and what I got back, and when each of those happened?</p>
-
-      <h2>Why negative cash flows can appear mid-investment</h2>
-      <p>Real investments don't always follow a simple "money in once, money out once" pattern. A rental property might need a mid-life capital repair; a business might require a follow-on investment round. Each of these later outflows counts against the investment just like the initial one — IRR treats every dollar the same regardless of when it left your pocket.</p>
-      <div class="callout">IRR and "gross return" (total profit divided by total invested) answer different questions. Gross return ignores timing entirely — a 20% gain over 1 year and a 20% gain over 10 years look identical. IRR annualizes the result, so the same 20% gain earned faster always shows a higher IRR.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: interpreting the calculation</h2><p>An initial outlay of $1,000 followed by a single $1,100 inflow one year later has a 10% return over that year, assuming no intermediate cash flows. IRR becomes more nuanced with multiple periods.</p><h2>Related financial calculators</h2><p>For a simple investment-profit ratio use the <a href="roi-calculator.html">ROI Calculator</a>. For recovery timing, compare the <a href="payback-period-calculator.html">Payback Period Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="average-return-calculator.html">Average Return Calculator</a>, <a href="inflation-calculator.html">Inflation Calculator</a>, <a href="roi-calculator.html">ROI Calculator</a>, <a href="interest-calculator.html">Interest Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> IRR is the yearly rate that makes the present value of an investment's cash flows zero. $1,000 out and $1,100 back a year later is a 10% IRR. For the default uneven flows (-$10,000, -$10,000, +$30,000, +$50,000) the IRR is 92.0%.</div>
+      <h2>What IRR is actually answering</h2>
+      <p>The internal rate of return is the single, constant yearly rate that makes an investment&rsquo;s cash flows net to exactly zero in present-value terms: money going out and money coming back, weighted by when each moved. It answers the question every investment asks: what rate of return am I actually earning, given what I put in, what I got back, and when? Its equation is <strong>0 = CF<sub>0</sub> + CF<sub>1</sub>/(1 + r) + CF<sub>2</sub>/(1 + r)<sup>2</sup> + &hellip;</strong>, which has to be solved by trial, so the calculator searches for the r that works.</p>
+      <h2>Tool 1: a regular deposit or withdrawal</h2>
+      <p>Use this when money moves at a fixed frequency, such as a monthly withdrawal from an account. Enter the starting amount, the holding period, the ending balance, the recurring amount, whether it is a deposit or withdrawal, the frequency and whether it happens at the beginning or end of each period. With the defaults, $10,000 held for 2 years 6 months, $100 withdrawn at the end of each month and an ending balance of $15,000, the IRR is <strong>29.768% per year</strong>. Cumulative withdrawals are $3,000, so the account must have earned $8,000 on the way to $15,000 after paying out $3,000.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Tool 1 with different activities (same $10,000, 30 months, $15,000 ending balance)</title><desc id="cf2-d">Taking money out while still reaching $15,000 means the investment grew faster (29.8%); adding money means it grew more slowly (6.7%).</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Tool 1 with different activities (same $10,000, 30 months, $15,000 ending balance)</text><text x="142" y="60" text-anchor="end" font-size="13" fill="#6b7280">Withdraw $100 a month</text><rect class="bar" x="150" y="44" width="278.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">29.77%</text><text x="142" y="94" text-anchor="end" font-size="13" fill="#6b7280">No withdrawals</text><rect class="bar" x="150" y="78" width="164.4" height="22" rx="4" fill="#9ca3af"/><text x="322.4" y="94" font-size="13" font-weight="700" fill="#111827">17.61%</text><text x="142" y="128" text-anchor="end" font-size="13" fill="#6b7280">Deposit $100 a month</text><rect class="bar" x="150" y="112" width="62.3" height="22" rx="4" fill="#f59e0b"/><text x="220.3" y="128" font-size="13" font-weight="700" fill="#111827">6.67%</text></svg><figcaption>The same start and finish give different returns depending on the money moved in between.</figcaption></figure>
+      <h2>Tool 2: uneven yearly cash flows</h2>
+      <p>Use this when cash flows differ from year to year, with up to ten years of entries. Cash flows may be negative, such as a repair bill or a follow-on investment. With the defaults, an initial $10,000, then &minus;$10,000 in year 1, $30,000 in year 2 and $50,000 in year 3, the IRR is <strong>91.964% per year</strong>. Further investments total $10,000, the investment lasts 3 years, the total return is $60,000 and the gross return is <strong>300%</strong> (return divided by money invested).</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Where the $80,000 comes back from in tool 2: money in vs money out</title><desc id="cf3-d">You put in $20,000 across two years and get back $80,000, a total return of $60,000, but the IRR depends on when each amount moved.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the $80,000 comes back from in tool 2: money in vs money out</text><rect class="bar" x="14.0" y="42" width="61.5" height="30" fill="#2563eb"/><text x="44.8" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">12%</text><rect class="bar" x="75.5" y="42" width="61.5" height="30" fill="#f59e0b"/><text x="106.2" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">12%</text><rect class="bar" x="137.0" y="42" width="369.0" height="30" fill="#10b981"/><text x="321.5" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">75%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Initial investment: <tspan font-weight="700">$10,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#f59e0b"/><text x="282" y="98" font-size="12.5" fill="#374151">Further investment in year 1: <tspan font-weight="700">$10,000</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#10b981"/><text x="32" y="120" font-size="12.5" fill="#374151">Total return: <tspan font-weight="700">$60,000</tspan></text></svg><figcaption>Total return ignores timing; IRR does not.</figcaption></figure>
+      <h2>IRR and gross return</h2>
+      <p>Gross return (profit divided by total invested) ignores timing completely: a 20% gain over one year and a 20% gain over ten years look identical. IRR annualizes the result, so the same gain earned faster always has a higher IRR.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">The same $1,000 turning into $1,500, by how long it takes (IRR)</title><desc id="cf1-d">A 50% gross gain is a 50% IRR in 1 year but only 4.1% in 10 years. IRR rewards speed.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The same $1,000 turning into $1,500, by how long it takes (IRR)</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 year</text><rect class="bar" x="90" y="44" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">50.0%</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">2 years</text><rect class="bar" x="90" y="78" width="151.9" height="22" rx="4" fill="#9ca3af"/><text x="249.9" y="94" font-size="13" font-weight="700" fill="#111827">22.5%</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">3 years</text><rect class="bar" x="90" y="112" width="97.8" height="22" rx="4" fill="#2563eb"/><text x="195.8" y="128" font-size="13" font-weight="700" fill="#111827">14.5%</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">5 years</text><rect class="bar" x="90" y="146" width="57.1" height="22" rx="4" fill="#9ca3af"/><text x="155.1" y="162" font-size="13" font-weight="700" fill="#111827">8.4%</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">10 years</text><rect class="bar" x="90" y="180" width="28.0" height="22" rx="4" fill="#9ca3af"/><text x="126.0" y="196" font-size="13" font-weight="700" fill="#111827">4.1%</text></svg><figcaption>Speed is built into IRR.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Time to turn $1,000 into $1,500</th><th>Gross return</th><th>IRR</th></tr></thead><tbody><tr><td>1 year</td><td>50%</td><td>50.00%</td></tr><tr><td>2 years</td><td>50%</td><td>22.47%</td></tr><tr><td>3 years</td><td>50%</td><td>14.47%</td></tr><tr><td>5 years</td><td>50%</td><td>8.45%</td></tr><tr><td>10 years</td><td>50%</td><td>4.14%</td></tr></tbody></table></div>
+      <h2>Simple checks</h2>
+      <ul><li>$1,000 out and $1,100 back after one year is a 10% IRR.</li><li>$1,000 out and $500 back each year for three years is a 23.38% IRR.</li><li>Negative IRR means you got back less than you put in, after allowing for timing.</li></ul>
+      <h2>When IRR can mislead</h2>
+      <p>IRR assumes every inflow can be reinvested at the same rate, which may be unrealistic. It ignores the size of the investment: a huge IRR on a tiny amount may be worth less in dollars than a modest IRR on a large one. And when cash flows change sign more than once, there can be no single IRR or several. For example, &minus;100, then +230, then &minus;132 has IRRs of both 10% and 20%. In such cases this calculator says that no single IRR could be found, instead of showing a misleading number. Compare projects with NPV as well as IRR.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Entering the initial investment as a negative number. Enter it as a positive amount.</li><li>Mixing up deposits and withdrawals in Tool 1.</li><li>Comparing IRRs of projects of very different size or length.</li><li>Forgetting that IRR is a yearly rate. Tool 1 converts its periodic rate to a yearly one.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the IRR per year. Below it are the supporting figures: cumulative deposits or withdrawals and the ending balance for Tool 1, or further investments, investment length, total return and gross return for Tool 2. To compare with a hurdle rate, such as your cost of borrowing, an IRR above it suggests the investment adds value. For simple profit, use the ROI Calculator.</p>
+      <div class="callout">IRR is a model of cash flows you enter. It does not predict returns and is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="roi-calculator.html">ROI Calculator</a> &ndash; total and annualized return</li><li><a href="payback-period-calculator.html">Payback Period Calculator</a> &ndash; how long to recover an investment</li><li><a href="average-return-calculator.html">Average Return Calculator</a> &ndash; returns across periods</li><li><a href="rental-property-calculator.html">Rental Property Calculator</a> &ndash; cash flow and return on property</li><li><a href="present-value-calculator.html">Present Value Calculator</a> &ndash; discount future cash flows</li><li><a href="investment-calculator.html">Investment Calculator</a> &ndash; growth with deposits</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Which calculator should I use?</h3>
-        <p>Use the first if your cash flows are a regular deposit or withdrawal at a fixed frequency (like a monthly distribution). Use the second if your cash flows vary year to year, as with a lumpy annual payout or an uneven series of returns.</p>
+        <p>Use the first if your cash flows are a regular deposit or withdrawal at a fixed frequency, like a monthly distribution. Use the second if your cash flows vary year to year, as with a lumpy payout or an uneven series of returns.</p>
       </div>
       <div class="faq-item">
         <h3>Can IRR be negative?</h3>
-        <p>Yes — a negative IRR simply means the investment returned less than what was put in, once time value of money is accounted for.</p>
+        <p>Yes. A negative IRR means the investment returned less than what was put in, once the time value of money is taken into account.</p>
       </div>
       <div class="faq-item">
         <h3>Is a higher IRR always a better investment?</h3>
-        <p>Generally, but IRR alone doesn't capture risk, scale (a huge IRR on a tiny investment may be less valuable in absolute dollars than a modest IRR on a large one), or how realistic the assumed cash flows actually are.</p>
+        <p>Generally, but IRR alone does not capture risk, scale or how realistic the assumed cash flows are. A huge IRR on a tiny investment may be worth less in dollars than a modest IRR on a large one.</p>
       </div>
+      <div class="faq-item">
+        <h3>Why does the calculator say no single IRR was found?</h3>
+        <p>When cash flows change sign more than once there can be no IRR or more than one. In those cases the calculator does not show a misleading number. Use NPV at a chosen discount rate instead.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between IRR and gross return?</h3>
+        <p>Gross return is total profit divided by total invested and ignores timing. IRR is a yearly rate that accounts for when each cash flow happened.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is the rate for monthly cash flows turned into a yearly IRR?</h3>
+        <p>Tool 1 finds the rate for each period and converts it to an effective yearly rate: (1 + periodic rate) raised to the number of periods a year, minus 1.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://openstax.org/books/principles-finance/pages/16-3-internal-rate-of-return-irr-method" rel="noopener" target="_blank">OpenStax Principles of Finance: Internal rate of return method</a>; <a href="https://openstax.org/books/principles-finance/pages/16-2-net-present-value-npv-method" rel="noopener" target="_blank">OpenStax Principles of Finance: Net present value method</a></p>
     </div>
 
   </div>

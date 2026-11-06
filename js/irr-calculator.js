@@ -48,6 +48,10 @@
         return initial * Math.pow(1 + r, n) + periodicFlow * annuityFactor(r, n, due) + fvSigned;
       }
       let lo = -0.5, hi = 1;
+      if ((eq(lo) > 0) === (eq(hi) > 0)) {
+        el('irr1-result').innerHTML = '<p class="tool-result is-error">No single rate fits these numbers. Check the amounts, the holding period and whether the activity is a deposit or a withdrawal.</p>';
+        return;
+      }
       const decreasing = eq(lo) > eq(hi);
       for (let i = 0; i < 200; i++) {
         const mid = (lo + hi) / 2;
@@ -83,6 +87,8 @@
         return flows.reduce((s, cf, i) => s + cf / Math.pow(1 + r, i), 0);
       }
       let lo = -0.99, hi = 10;
+      // No sign change between the bounds means there is no rate in range, or several that cancel out.
+      if ((npv(lo) > 0) === (npv(hi) > 0)) return null;
       const decreasing = npv(lo) > npv(hi);
       for (let i = 0; i < 200; i++) {
         const mid = (lo + hi) / 2;
@@ -111,7 +117,12 @@
         return;
       }
 
-      const rate = irr(flows) * 100;
+      const irrValue = irr(flows);
+      if (irrValue === null) {
+        el('irr2-result').innerHTML = '<p class="tool-result is-error">No single internal rate of return could be found for these cash flows. This can happen when the cash flows change sign more than once, so there may be no rate or more than one.</p>';
+        return;
+      }
+      const rate = irrValue * 100;
 
       let furtherInvestments = 0, totalInflows = 0;
       for (let i = 1; i < flows.length; i++) {
