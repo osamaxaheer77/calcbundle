@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gas Mileage Calculator: MPG From Odometer &amp; Fuel | CalcBundle</title>
-<meta name="description" content="Find actual gas mileage from distance driven and fuel added, and estimate driving fuel costs.">
+<title>Gas Mileage Calculator: MPG from Odometer &amp; Fuel</title>
+<meta name="description" content="Work out your real miles per gallon from odometer readings and the gas you added, with L/100km, km/L, the cost of the fill-up and the cost per mile.">
 <link rel="canonical" href="https://calcbundle.net/calculators/gas-mileage-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Gas Mileage Calculator: MPG From Odometer &amp; Fuel | CalcBundle">
-<meta property="og:description" content="Find actual gas mileage from distance driven and fuel added, and estimate driving fuel costs.">
+<meta property="og:title" content="Gas Mileage Calculator: MPG from Odometer &amp; Fuel">
+<meta property="og:description" content="Work out your real miles per gallon from odometer readings and the gas you added, with L/100km, km/L, the cost of the fill-up and the cost per mile.">
 <meta property="og:url" content="https://calcbundle.net/calculators/gas-mileage-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Gas Mileage Calculator: MPG From Odometer &amp; Fuel | CalcBundle">
-<meta name="twitter:description" content="Find actual gas mileage from distance driven and fuel added, and estimate driving fuel costs.">
+<meta name="twitter:title" content="Gas Mileage Calculator: MPG from Odometer &amp; Fuel">
+<meta name="twitter:description" content="Work out your real miles per gallon from odometer readings and the gas you added, with L/100km, km/L, the cost of the fill-up and the cost per mile.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Does this account for partial fill-ups?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This method assumes you filled the tank completely both times — a partial fill-up will throw off the gallons-per-mile calculation."
+        "text": "No. The method assumes you filled the tank completely both times. A partial fill-up throws off the gallons-per-mile calculation."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "What's a good MPG?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It varies enormously by vehicle type — compact cars often reach 30+ MPG while trucks and SUVs may be in the teens. Compare against your specific vehicle's EPA rating for context."
+        "text": "It varies enormously by vehicle type. Compact cars often reach 30 mpg or more, while large trucks and SUVs are often well below that. Compare your result with the rating for your own vehicle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert mpg to L/100km?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide 235.215 by the mpg. 24 mpg is 9.8 litres per 100 kilometres. A lower L/100km figure means better fuel economy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my mileage different from the sticker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Driving style, speed, terrain, weather, tyre pressure and load all change it. Aggressive driving alone can lower mileage by roughly 15% to 30% at highway speeds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many tanks should I average?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Several. A single tank can differ by a few mpg. Add up the miles and the gallons over all the tanks and divide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the cost per mile calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the gas price by the mpg. At $3.00 a gallon and 24 mpg, it is 12.5 cents a mile."
       }
     }
   ]
@@ -120,38 +152,61 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How to measure your own gas mileage</h2>
-      <p>Record your odometer reading when you fill up, then fill up again next time and record both the new reading and how many gallons it took to fill the tank. The difference in odometer readings divided by the gallons added gives your gas mileage &mdash; this works because that fill-up's gallons are what it took to drive the miles since the previous fill-up.</p>
-
-      <h2>Why gas mileage varies</h2>
-      <p>Driving style, terrain, tire pressure, vehicle load, and even weather all affect fuel efficiency. A single fill-up's MPG is a snapshot &mdash; averaging several fill-ups gives a more representative figure for your typical driving.</p>
-      <div class="callout">For a project's total fuel budget rather than a single measurement, see our <a href="fuel-cost-calculator.html">Fuel Cost Calculator</a>.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: check the result</h2>
-      <p>If you drive 360 miles on 12 gallons, fuel economy is 30 miles per gallon. At 30 MPG, a 150-mile trip would use approximately 5 gallons under similar conditions.</p>
-      <h2>Related tools</h2>
-      <p>For trip spending based on your measured efficiency, use the <a href="fuel-cost-calculator.html">Fuel Cost Calculator</a>. For converting miles and kilometers, see the <a href="conversion-calculator.html">Unit Conversion Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>You fill the tank at an odometer reading of 12,000 miles, drive, and fill up again at 12,360 miles, adding 15 gallons. You drove 360 miles, so the mileage is 360 ÷ 15 = 24 miles per gallon, or 9.8 liters per 100 km. With gas at $3.00 a gallon, the fill-up cost $45.00 and each mile cost $0.13.</p>
-
-      <h2>Tips for measuring mpg</h2>
-      <p>Fill the tank to the click of the pump each time, using the same pump and the same car position, since this keeps the readings comparable. Measure over several tanks and average them, because a single tank can vary by a few miles per gallon. Track mileage in different seasons: cold weather, winter fuel blends and tire pressure change the result.</p>
-
-      <p><strong>You might also need:</strong> <a href="mileage-calculator.html">Mileage Calculator</a>, <a href="tire-size-calculator.html">Tire Size Calculator</a>, <a href="fuel-cost-calculator.html">Fuel Cost Calculator</a>, <a href="horsepower-calculator.html">Horsepower Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Gas mileage is the miles driven divided by the gallons used. 360 miles on 15 gallons is 24 mpg, or 9.8 L/100km. At $3.00 a gallon, that fill-up cost $45.00 and each mile cost about 13 cents.</div>
+      <h2>How to measure your own gas mileage</h2>
+      <p>Record the odometer reading when you fill the tank. At the next fill-up, record the new reading and how many gallons it took to fill the tank again. The miles driven divided by the gallons added is your gas mileage, because those gallons are what the car used for those miles. Enter the current and previous odometer readings and the gallons, and add a gas price if you want the cost.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens with odometer readings of <strong>12,360</strong> and <strong>12,000</strong> miles, <strong>15 gallons</strong> added, and gas at <strong>$3.00</strong> a gallon. The distance is 12,360 &minus; 12,000 = <strong>360 miles</strong>, so the mileage is 360 &divide; 15 = <strong>24 mpg</strong>. The tool also shows it as <strong>9.8 L/100km</strong> (235.215 &divide; 24) and <strong>10.2 km/L</strong>. The fill-up cost is 15 &times; $3.00 = <strong>$45.00</strong> and each mile cost <strong>$0.13</strong> ($3.00 &divide; 24 = 12.5 cents, shown rounded to the cent).</p>
+      <h2>Reading the other units</h2>
+      <p>Miles per gallon is the US measure. Outside the US, fuel use is often given as litres per 100 km, where a <em>lower</em> number is better, or as km per litre. The calculator uses the US gallon of 3.785412 litres. The imperial (UK) gallon is bigger, 4.54609 litres, so the same car reads about 20% higher in imperial mpg: 24 US mpg is about 28.8 imperial mpg.</p>
+      <div class="calc-table"><table><thead><tr><th>US mpg</th><th>L/100km</th><th>km/L</th><th>Cost per mile at $3.00</th><th>Gallons for 12,000 miles</th><th>Cost for 12,000 miles</th></tr></thead><tbody><tr><td>15</td><td>15.68</td><td>6.38</td><td>$0.2</td><td>800</td><td>$2,400</td></tr><tr><td>20</td><td>11.76</td><td>8.5</td><td>$0.15</td><td>600</td><td>$1,800</td></tr><tr><td>24</td><td>9.8</td><td>10.2</td><td>$0.125</td><td>500</td><td>$1,500</td></tr><tr><td>30</td><td>7.84</td><td>12.75</td><td>$0.1</td><td>400</td><td>$1,200</td></tr><tr><td>40</td><td>5.88</td><td>17.01</td><td>$0.075</td><td>300</td><td>$900</td></tr><tr><td>50</td><td>4.7</td><td>21.26</td><td>$0.06</td><td>240</td><td>$720</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Fuel for 12,000 miles a year at $3.00 a gallon, by mpg</title><desc id="cf1-d">A 24 mpg car burns 500 gallons for 12,000 miles ($1,500); a 30 mpg car burns 400 ($1,200), saving 100 gallons and $300 a year.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Fuel for 12,000 miles a year at $3.00 a gallon, by mpg</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">15 mpg</text><rect class="bar" x="80" y="44" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$2,400</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">20 mpg</text><rect class="bar" x="80" y="78" width="261.0" height="22" rx="4" fill="#9ca3af"/><text x="349.0" y="94" font-size="13" font-weight="700" fill="#111827">$1,800</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">24 mpg</text><rect class="bar" x="80" y="112" width="217.5" height="22" rx="4" fill="#2563eb"/><text x="305.5" y="128" font-size="13" font-weight="700" fill="#111827">$1,500</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">30 mpg</text><rect class="bar" x="80" y="146" width="174.0" height="22" rx="4" fill="#9ca3af"/><text x="262.0" y="162" font-size="13" font-weight="700" fill="#111827">$1,200</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">40 mpg</text><rect class="bar" x="80" y="180" width="130.5" height="22" rx="4" fill="#9ca3af"/><text x="218.5" y="196" font-size="13" font-weight="700" fill="#111827">$900</text><text x="72" y="230" text-anchor="end" font-size="13" fill="#6b7280">50 mpg</text><rect class="bar" x="80" y="214" width="104.4" height="22" rx="4" fill="#9ca3af"/><text x="192.4" y="230" font-size="13" font-weight="700" fill="#111827">$720</text></svg><figcaption>A higher mpg pays back every year.</figcaption></figure>
+      <h2>What gas price does to the cost of a mile</h2>
+      <p>Cost per mile is the gas price divided by the mpg. At 24 mpg, a gallon at $2.50 means 10.4 cents a mile and at $4.00 it means 16.7 cents.</p>
+      <div class="calc-table"><table><thead><tr><th>Gas price</th><th>Cost per mile at 24 mpg</th></tr></thead><tbody><tr><td>$2.5</td><td>10.4 cents</td></tr><tr><td>$3</td><td>12.5 cents</td></tr><tr><td>$3.5</td><td>14.6 cents</td></tr><tr><td>$4</td><td>16.7 cents</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Cost per mile at 24 mpg for different gas prices (cents)</title><desc id="cf2-d">At 24 mpg each dollar of gas price adds about 4.2 cents to every mile driven; $3.00 a gallon is 12.5 cents a mile.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Cost per mile at 24 mpg for different gas prices (cents)</text><text x="112" y="60" text-anchor="end" font-size="13" fill="#6b7280">$2.5 a gallon</text><rect class="bar" x="120" y="44" width="192.5" height="22" rx="4" fill="#9ca3af"/><text x="320.5" y="60" font-size="13" font-weight="700" fill="#111827">10.4 cents</text><text x="112" y="94" text-anchor="end" font-size="13" fill="#6b7280">$3 a gallon</text><rect class="bar" x="120" y="78" width="231.0" height="22" rx="4" fill="#2563eb"/><text x="359.0" y="94" font-size="13" font-weight="700" fill="#111827">12.5 cents</text><text x="112" y="128" text-anchor="end" font-size="13" fill="#6b7280">$3.5 a gallon</text><rect class="bar" x="120" y="112" width="269.5" height="22" rx="4" fill="#9ca3af"/><text x="397.5" y="128" font-size="13" font-weight="700" fill="#111827">14.6 cents</text><text x="112" y="162" text-anchor="end" font-size="13" fill="#6b7280">$4 a gallon</text><rect class="bar" x="120" y="146" width="308.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">16.7 cents</text></svg><figcaption>The price of gas moves every mile.</figcaption></figure>
+      <h2>Average several tanks, not one</h2>
+      <p>One tank is a snapshot. Weather, traffic, a heavy load or a different pump can move a single result by several mpg. Suppose a second fill-up shows 340 miles on 13.6 gallons (25.0 mpg) and a third shows 320 miles on 14.5 gallons (22.07 mpg). The right average is the total miles over the total gallons: 1020 &divide; 43.1 = <strong>23.67 mpg</strong>. Averaging the three mpg figures gives 23.69, which is close, but the first method is the correct one when the tanks differ in size.</p>
+      <h2>Why mileage changes</h2>
+      <ul><li><strong>Driving style.</strong> The Department of Energy says speeding, rapid acceleration and hard braking can lower gas mileage by roughly 15% to 30% at highway speeds and 10% to 40% in stop-and-go traffic.</li><li><strong>Speed.</strong> Mileage usually falls quickly above about 50 mph.</li><li><strong>Tyres.</strong> Keep them at the pressure on the sticker in the door jamb or in the owner&rsquo;s manual, not the maximum printed on the sidewall.</li><li><strong>Load and weather.</strong> Extra weight, roof racks, cold weather and winter fuel blends all cost mileage.</li><li><strong>Trip length.</strong> Short trips with a cold engine use more fuel per mile.</li></ul>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">A 24 mpg car driven aggressively at highway speeds (miles per gallon)</title><desc id="cf3-d">The Department of Energy puts the loss from speeding, hard acceleration and heavy braking at roughly 15% to 30% on the highway.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">A 24 mpg car driven aggressively at highway speeds (miles per gallon)</text><text x="162" y="60" text-anchor="end" font-size="13" fill="#6b7280">Smooth driving</text><rect class="bar" x="170" y="44" width="258.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">24.0 mpg</text><text x="162" y="94" text-anchor="end" font-size="13" fill="#6b7280">Aggressive, 15% lower</text><rect class="bar" x="170" y="78" width="219.3" height="22" rx="4" fill="#f59e0b"/><text x="397.3" y="94" font-size="13" font-weight="700" fill="#111827">20.4 mpg</text><text x="162" y="128" text-anchor="end" font-size="13" fill="#6b7280">Aggressive, 30% lower</text><rect class="bar" x="170" y="112" width="180.6" height="22" rx="4" fill="#dc2626"/><text x="358.6" y="128" font-size="13" font-weight="700" fill="#111827">16.8 mpg</text></svg><figcaption>Aggressive driving can cost a quarter of your mileage.</figcaption></figure>
+      <h2>Getting an accurate reading</h2>
+      <ul><li>Fill the tank to the first click of the pump each time, using the same pump if you can and parking the car in the same position.</li><li>Record the odometer at each fill, not just the gallons.</li><li>A partial fill-up throws the figure off, since the method assumes you filled the tank completely both times.</li><li>Measure over several tanks and across seasons.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Entering the previous reading as the current reading, which stops the calculation because the current reading must be larger.</li><li>Using litres in the gallons box. The tool expects US gallons.</li><li>Comparing a single tank with the number on the window sticker.</li><li>Forgetting that L/100km goes the other way: a lower number means better economy.</li><li>Leaving the gas price empty and expecting a cost. The cost lines appear only when you enter a price.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the gas mileage in miles per gallon, followed by the same figure in L/100km and km/L, and the distance driven. If you entered a price, the cost of the fill-up and the cost per mile appear as well. Use the Fuel Cost Calculator to turn your mpg into the cost of a trip.</p>
+      <div class="callout">The odometer and the pump can both be off by a little, so treat a single result as an estimate and average several tanks.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="fuel-cost-calculator.html">Fuel Cost Calculator</a> &ndash; the cost of a trip</li><li><a href="mileage-calculator.html">Mileage Calculator</a> &ndash; reimbursement and trip miles</li><li><a href="tire-size-calculator.html">Tire Size Calculator</a> &ndash; compare tyre sizes</li><li><a href="horsepower-calculator.html">Horsepower Calculator</a> &ndash; engine power</li><li><a href="speed-calculator.html">Speed Calculator</a> &ndash; speed, distance and time</li><li><a href="conversion-calculator.html">Conversion Calculator</a> &ndash; convert between units</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Does this account for partial fill-ups?</h3>
-        <p>This method assumes you filled the tank completely both times &mdash; a partial fill-up will throw off the gallons-per-mile calculation.</p>
+        <p>No. The method assumes you filled the tank completely both times. A partial fill-up throws off the gallons-per-mile calculation.</p>
       </div>
       <div class="faq-item">
         <h3>What's a good MPG?</h3>
-        <p>It varies enormously by vehicle type &mdash; compact cars often reach 30+ MPG while trucks and SUVs may be in the teens. Compare against your specific vehicle's EPA rating for context.</p>
+        <p>It varies enormously by vehicle type. Compact cars often reach 30 mpg or more, while large trucks and SUVs are often well below that. Compare your result with the rating for your own vehicle.</p>
       </div>
+      <div class="faq-item">
+        <h3>How do I convert mpg to L/100km?</h3>
+        <p>Divide 235.215 by the mpg. 24 mpg is 9.8 litres per 100 kilometres. A lower L/100km figure means better fuel economy.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why is my mileage different from the sticker?</h3>
+        <p>Driving style, speed, terrain, weather, tyre pressure and load all change it. Aggressive driving alone can lower mileage by roughly 15% to 30% at highway speeds.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many tanks should I average?</h3>
+        <p>Several. A single tank can differ by a few mpg. Add up the miles and the gallons over all the tanks and divide.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is the cost per mile calculated?</h3>
+        <p>Divide the gas price by the mpg. At $3.00 a gallon and 24 mpg, it is 12.5 cents a mile.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.fueleconomy.gov/feg/driveHabits.jsp" rel="noopener" target="_blank">FuelEconomy.gov: Driving more efficiently</a>; <a href="https://www.fueleconomy.gov/feg/maintain.jsp" rel="noopener" target="_blank">FuelEconomy.gov: Keeping your car in shape</a>; <a href="https://en.wikipedia.org/wiki/Fuel_economy_in_automobiles" rel="noopener" target="_blank">Wikipedia: Fuel economy in automobiles</a></p>
     </div>
 
   </div>
