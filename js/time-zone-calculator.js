@@ -39,8 +39,15 @@
     const [h, mi] = timeVal.split(':').map(Number);
 
     const guess = new Date(Date.UTC(y, mo - 1, d, h, mi, 0));
-    const fromOffset = tzOffsetMinutes(guess, fromZone);
-    const utc = new Date(guess.getTime() - fromOffset * 60000);
+    // The offset must be looked up at the real instant, not at the typed clock time read as UTC,
+    // or times close to a daylight saving change come out an hour wrong.
+    let fromOffset = tzOffsetMinutes(guess, fromZone);
+    let utc = new Date(guess.getTime() - fromOffset * 60000);
+    const checkedOffset = tzOffsetMinutes(utc, fromZone);
+    if (checkedOffset !== fromOffset) {
+      fromOffset = checkedOffset;
+      utc = new Date(guess.getTime() - fromOffset * 60000);
+    }
 
     const dateFmt = new Intl.DateTimeFormat('en-US', { timeZone: toZone, month: 'long', day: 'numeric', year: 'numeric' }).format(utc);
     const timeFmt = new Intl.DateTimeFormat('en-US', { timeZone: toZone, hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true }).format(utc);

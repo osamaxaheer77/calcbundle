@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Time Zone Converter With Date &amp; DST | CalcBundle</title>
-<meta name="description" content="Convert scheduled dates and times between time zones with daylight saving transitions taken into account.">
+<title>Time Zone Converter: Date, Time &amp; Daylight Saving</title>
+<meta name="description" content="Convert a date and time between 22 time zones, with the correct daylight saving offset for that exact date, the weekday and the difference in hours.">
 <link rel="canonical" href="https://calcbundle.net/calculators/time-zone-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Time Zone Converter With Date &amp; DST | CalcBundle">
-<meta property="og:description" content="Convert scheduled dates and times between time zones with daylight saving transitions taken into account.">
+<meta property="og:title" content="Time Zone Converter: Date, Time &amp; Daylight Saving">
+<meta property="og:description" content="Convert a date and time between 22 time zones, with the correct daylight saving offset for that exact date, the weekday and the difference in hours.">
 <meta property="og:url" content="https://calcbundle.net/calculators/time-zone-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Time Zone Converter With Date &amp; DST | CalcBundle">
-<meta name="twitter:description" content="Convert scheduled dates and times between time zones with daylight saving transitions taken into account.">
+<meta name="twitter:title" content="Time Zone Converter: Date, Time &amp; Daylight Saving">
+<meta name="twitter:description" content="Convert a date and time between 22 time zones, with the correct daylight saving offset for that exact date, the weekday and the difference in hours.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,15 +41,47 @@
       "name": "Which time zone is my browser using?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This tool doesn't rely on your device's time zone at all — you pick both the origin and destination explicitly, so the result is the same no matter where you're browsing from."
+        "text": "This tool does not use your device's time zone. You pick both the origin and the destination, so the result is the same wherever you are."
       }
     },
     {
       "@type": "Question",
-      "name": "Does this list every time zone in the world?",
+      "name": "Why does the same pair of cities have a different gap in summer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It covers major regions and population centers rather than every offset variant. For a precise city not listed, pick the nearest major city that shares its time zone rules."
+        "text": "Some places change their clocks for daylight saving and some do not. New York is 14 hours behind Tokyo in January but 13 hours behind in July."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the New York to London gap sometimes 4 hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The US and Europe start and end daylight saving on different dates. For about four weeks a year, the gap is 4 hours instead of the usual 5."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the date change in the result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When the destination is ahead or behind by many hours, a late or early time can fall on the next or previous calendar day. Check the date shown in the result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to times that are skipped or repeated at a clock change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A time in the skipped hour does not exist, and a time in the repeated hour happens twice. The calculator picks one reading, so avoid those hours when scheduling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it handle half-hour zones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. India is UTC+5:30, so the difference from New York in January is +10.5 hours."
       }
     }
   ]
@@ -168,32 +200,66 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Why this handles daylight saving automatically</h2>
-      <p>Rather than using a fixed UTC offset per region, this calculator looks up each location's real time zone rules for the exact date you enter &mdash; so a conversion in July (daylight saving time) and one in January (standard time) for the same two cities correctly come out an hour apart where that applies.</p>
-
-      <h2>Reading the result</h2>
-      <p>The "Difference from origin" line shows how many hours ahead or behind the destination is compared to your starting time zone, for that specific date. This gap can change across the year in places that observe daylight saving.</p>
-      <div class="callout">Some regions shift dates as well as hours &mdash; converting a late-evening time can land on the next (or previous) calendar day in the destination zone. Check the date shown in the result, not just the time.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: check the result</h2>
-      <p>If two zones differ by five hours on a particular date, 3:00 PM in the earlier zone corresponds to 8:00 PM in the later zone. Always select the actual date to account for seasonal offset changes.</p>
-      <h2>Related tools</h2>
-      <p>To calculate duration rather than convert the same instant, use the <a href="time-duration-calculator.html">Time Duration Calculator</a>. For calendar day changes, see the <a href="date-calculator.html">Date Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="sleep-calculator.html">Sleep Calculator</a>, <a href="date-calculator.html">Date Calculator</a>, <a href="time-card-calculator.html">Time Card Calculator</a>, <a href="age-calculator.html">Age Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Time zone gaps change with daylight saving. 2:00 PM in New York on January 15, 2026 is 4:00 AM on January 16 in Tokyo (+14 hours), but on July 15 the gap is +13 hours and the result is 3:00 AM.</div>
+      <h2>What the calculator does</h2>
+      <p>Choose a date, a time, the zone you are converting <strong>from</strong> and the zone you are converting <strong>to</strong>. The calculator shows the date and time in the destination zone, the day of the week and the difference from the origin in hours. It covers 22 zones, from Hawaii to New Zealand, including UTC.</p>
+      <h2>How daylight saving is handled</h2>
+      <p>The tool does not use one fixed offset per region. It looks up each zone&rsquo;s real rules for the exact date you enter, taken from the standard time zone database built into your browser. That is why the same pair of cities can be an hour apart from their usual gap at some times of year. You pick both zones yourself, so the result does not depend on the time zone of the device you are using.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on <strong>January 15, 2026 at 2:00 PM</strong> in Eastern Time, converted to Japan. New York is on standard time (EST, UTC&minus;5) and Tokyo is on UTC+9, so Tokyo is 14 hours ahead. The result is <strong>January 16, 2026, 04:00:00 AM</strong>, a Friday, with a difference of <strong>+14 hours</strong>. The destination label reads GMT+9, which is how the browser names Japan&rsquo;s zone in English.</p>
+      <h2>The same conversion in July</h2>
+      <p>Change the date to July 15, 2026 and the answer changes. New York is now on daylight time (EDT, UTC&minus;4) while Japan stays on UTC+9, so the gap is only <strong>+13 hours</strong>. 2:00 PM in New York becomes <strong>July 16, 2026, 03:00:00 AM</strong>, a Thursday. A fixed &ldquo;14 hours ahead&rdquo; rule would be an hour wrong for roughly eight months of the year.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">New York to Tokyo: the gap in hours in January and in July</title><desc id="cf2-d">Japan does not change its clocks, but New York does, so the gap shrinks by an hour when the US is on daylight saving time.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">New York to Tokyo: the gap in hours in January and in July</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">January 15</text><rect class="bar" x="100" y="44" width="328.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">14 hours</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">July 15</text><rect class="bar" x="100" y="78" width="304.6" height="22" rx="4" fill="#f59e0b"/><text x="412.6" y="94" font-size="13" font-weight="700" fill="#111827">13 hours</text></svg><figcaption>One pair of cities, two different gaps.</figcaption></figure>
+      <h2>Hours ahead of New York in January and July</h2>
+      <p>This table shows the difference the tool reports from Eastern Time in each season. Places that do not change their clocks, like Japan, India, Dubai and Moscow, shift by an hour relative to New York. Sydney and Auckland are in the southern hemisphere, so their daylight saving runs in the opposite season and their gap moves the other way.</p>
+      <div class="calc-table"><table><thead><tr><th>Destination</th><th>January 15 (hours)</th><th>July 15 (hours)</th></tr></thead><tbody><tr><td>Hawaii</td><td>-5</td><td>-6</td></tr><tr><td>Alaska</td><td>-4</td><td>-4</td></tr><tr><td>Pacific Time</td><td>-3</td><td>-3</td></tr><tr><td>Mountain Time</td><td>-2</td><td>-2</td></tr><tr><td>Central Time</td><td>-1</td><td>-1</td></tr><tr><td>Brasilia</td><td>+2</td><td>+1</td></tr><tr><td>Buenos Aires</td><td>+2</td><td>+1</td></tr><tr><td>UTC</td><td>+5</td><td>+4</td></tr><tr><td>London</td><td>+5</td><td>+5</td></tr><tr><td>Paris, Berlin, Madrid</td><td>+6</td><td>+6</td></tr><tr><td>Athens, Cairo</td><td>+7</td><td>+7</td></tr><tr><td>Moscow</td><td>+8</td><td>+7</td></tr><tr><td>Dubai</td><td>+9</td><td>+8</td></tr><tr><td>Karachi</td><td>+10</td><td>+9</td></tr><tr><td>India</td><td>+10.5</td><td>+9.5</td></tr><tr><td>Dhaka</td><td>+11</td><td>+10</td></tr><tr><td>Bangkok, Jakarta</td><td>+12</td><td>+11</td></tr><tr><td>China, Singapore</td><td>+13</td><td>+12</td></tr><tr><td>Japan, Korea</td><td>+14</td><td>+13</td></tr><tr><td>Sydney, Melbourne</td><td>+16</td><td>+14</td></tr><tr><td>New Zealand</td><td>+18</td><td>+16</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 284" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Hours ahead of New York on January 15, 2026 (standard time in the US)</title><desc id="cf1-d">Tokyo is 14 hours ahead of New York in January, so 2:00 PM on January 15 in New York is 4:00 AM on January 16 in Tokyo.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Hours ahead of New York on January 15, 2026 (standard time in the US)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">London</text><rect class="bar" x="110" y="44" width="88.3" height="22" rx="4" fill="#9ca3af"/><text x="206.3" y="60" font-size="13" font-weight="700" fill="#111827">+5</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Paris, Berlin</text><rect class="bar" x="110" y="78" width="106.0" height="22" rx="4" fill="#9ca3af"/><text x="224.0" y="94" font-size="13" font-weight="700" fill="#111827">+6</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">Dubai</text><rect class="bar" x="110" y="112" width="159.0" height="22" rx="4" fill="#9ca3af"/><text x="277.0" y="128" font-size="13" font-weight="700" fill="#111827">+9</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">India</text><rect class="bar" x="110" y="146" width="185.5" height="22" rx="4" fill="#9ca3af"/><text x="303.5" y="162" font-size="13" font-weight="700" fill="#111827">+10.5</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">Japan, Korea</text><rect class="bar" x="110" y="180" width="247.3" height="22" rx="4" fill="#2563eb"/><text x="365.3" y="196" font-size="13" font-weight="700" fill="#111827">+14</text><text x="102" y="230" text-anchor="end" font-size="13" fill="#6b7280">Sydney</text><rect class="bar" x="110" y="214" width="282.7" height="22" rx="4" fill="#9ca3af"/><text x="400.7" y="230" font-size="13" font-weight="700" fill="#111827">+16</text><text x="102" y="264" text-anchor="end" font-size="13" fill="#6b7280">New Zealand</text><rect class="bar" x="110" y="248" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="264" font-size="13" font-weight="700" fill="#111827">+18</text></svg><figcaption>January gaps from New York.</figcaption></figure>
+      <h2>When the US and Europe are out of step</h2>
+      <p>The US and Europe change their clocks on different dates, so the New York to London gap is not always 5 hours. On Sunday, March 15, 2026, New York is already on daylight time but London is still on GMT. A call at 2:00 PM in New York is <strong>6:00 PM in London</strong>, a gap of <strong>+4 hours</strong>, compared with 7:00 PM and +5 hours on January 15. The gap is 4 hours for about 28 days a year.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Days in 2026 with each New York to London gap</title><desc id="cf3-d">The US moves its clocks on March 8 and November 1, 2026 and the UK on March 29 and October 25, so for about four weeks the gap is 4 hours instead of 5.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Days in 2026 with each New York to London gap</text><text x="182" y="60" text-anchor="end" font-size="13" fill="#6b7280">5 hours (usual)</text><rect class="bar" x="190" y="44" width="238.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">337 days</text><text x="182" y="94" text-anchor="end" font-size="13" fill="#6b7280">4 hours (US and UK out of step)</text><rect class="bar" x="190" y="78" width="19.8" height="22" rx="4" fill="#f59e0b"/><text x="217.8" y="94" font-size="13" font-weight="700" fill="#111827">28 days</text></svg><figcaption>A short window each spring and autumn.</figcaption></figure>
+      <h2>Crossing midnight and the date</h2>
+      <p>Converting a late-evening time can land on a different calendar day. Take 8:00 PM on December 31, 2026 in New York. In Tokyo it is already <strong>January 1, 2027, 10:00:00 AM</strong>, a Friday, and the result says +14 hours. Sydney to Los Angeles at 9:00 AM on January 15 goes the other way: it is <strong>2:00 PM on Wednesday, January 14</strong> in Los Angeles, a difference of &minus;19 hours. Always read the date line of the result, not only the time.</p>
+      <h2>Half-hour zones</h2>
+      <p>Not every zone is a whole number of hours from UTC. India is UTC+5:30, so 2:00 PM in New York on January 15 is <strong>12:30 AM on Friday, January 16</strong> in India, with a difference of +10.5 hours. The result label for these zones appears as GMT+5:30.</p>
+      <h2>Times near a clock change</h2>
+      <p>On the day the clocks change, some times are special. In New York on March 8, 2026, the clock jumps from 2:00 AM to 3:00 AM, so 2:30 AM does not exist. On November 1, 2026 the clock goes back from 2:00 AM to 1:00 AM, so 1:30 AM happens twice. The calculator picks one reading in these cases: 1:30 AM on November 1 is taken as the first one (EDT, 5:30 AM UTC). A time just after the spring change, like <strong>3:30 AM on March 8</strong>, is read correctly as EDT, which is 7:30 AM UTC and 4:30 PM in Tokyo. For scheduling on these two days, choose a time outside the 2:00 AM hour.</p>
+      <h2>What the result shows</h2>
+      <ul><li><strong>Large line:</strong> the destination time zone name, the date and the time, including seconds.</li><li><strong>Day of week:</strong> the weekday in the destination zone, which can differ from the weekday where you start.</li><li><strong>Difference from origin:</strong> hours ahead (+) or behind (&minus;), for that specific date. It says &ldquo;Same time&rdquo; when the two zones match.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using the same hour gap all year. Check the actual date.</li><li>Forgetting that the US and Europe change their clocks on different days.</li><li>Reading the time without checking the date in the result.</li><li>Booking an event in the skipped or repeated hour on a clock-change night.</li><li>Assuming the zone name matches a country. A name like Pacific Time covers a region, and the same country can have several zones.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Read the date first, then the time. If the difference is a whole number, add it to the starting time. If it is negative, subtract it. When you plan a meeting across more than two zones, convert each from the same date and starting time so you can compare the results side by side.</p>
+      <div class="callout">Time zone rules change when governments change them. The tool uses your browser&rsquo;s zone data, so very new rule changes may not be included on an old device or browser.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="date-calculator.html">Date Calculator</a> &ndash; add or subtract time from a date</li><li><a href="time-duration-calculator.html">Time Duration Calculator</a> &ndash; the time between two moments</li><li><a href="time-calculator.html">Time Calculator</a> &ndash; add and subtract times</li><li><a href="day-counter.html">Day Counter</a> &ndash; days between dates and business days</li><li><a href="sleep-calculator.html">Sleep Calculator</a> &ndash; bedtimes and wake-up times</li><li><a href="age-calculator.html">Age Calculator</a> &ndash; age in years, months and days</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Which time zone is my browser using?</h3>
-        <p>This tool doesn't rely on your device's time zone at all &mdash; you pick both the origin and destination explicitly, so the result is the same no matter where you're browsing from.</p>
+        <p>This tool does not use your device's time zone. You pick both the origin and the destination, so the result is the same wherever you are.</p>
       </div>
       <div class="faq-item">
-        <h3>Does this list every time zone in the world?</h3>
-        <p>It covers major regions and population centers rather than every offset variant. For a precise city not listed, pick the nearest major city that shares its time zone rules.</p>
+        <h3>Why does the same pair of cities have a different gap in summer?</h3>
+        <p>Some places change their clocks for daylight saving and some do not. New York is 14 hours behind Tokyo in January but 13 hours behind in July.</p>
       </div>
+      <div class="faq-item">
+        <h3>Why is the New York to London gap sometimes 4 hours?</h3>
+        <p>The US and Europe start and end daylight saving on different dates. For about four weeks a year, the gap is 4 hours instead of the usual 5.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the date change in the result?</h3>
+        <p>When the destination is ahead or behind by many hours, a late or early time can fall on the next or previous calendar day. Check the date shown in the result.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens to times that are skipped or repeated at a clock change?</h3>
+        <p>A time in the skipped hour does not exist, and a time in the repeated hour happens twice. The calculator picks one reading, so avoid those hours when scheduling.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it handle half-hour zones?</h3>
+        <p>Yes. India is UTC+5:30, so the difference from New York in January is +10.5 hours.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.iana.org/time-zones" rel="noopener" target="_blank">IANA: Time Zone Database</a>; <a href="https://en.wikipedia.org/wiki/Daylight_saving_time" rel="noopener" target="_blank">Wikipedia: Daylight saving time</a>; <a href="https://en.wikipedia.org/wiki/Time_zone" rel="noopener" target="_blank">Wikipedia: Time zone</a></p>
     </div>
 
   </div>
