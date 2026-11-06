@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tire Size Calculator: Compare &amp; Speedometer - CalcBundle</title>
-<meta name="description" content="Find a tire's diameter, circumference, and revolutions per mile from its size code, or compare two tire sizes and speedometer difference.">
+<meta name="description" content="Find a tire&#x27;s diameter, sidewall, circumference and revolutions per mile from its size code, or compare two sizes and see the speedometer error.">
 <link rel="canonical" href="https://calcbundle.net/calculators/tire-size-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Tire Size Calculator: Compare &amp; Speedometer - CalcBundle">
-<meta property="og:description" content="Find a tire's diameter, circumference, and revolutions per mile from its size code, or compare two tire sizes and speedometer difference.">
+<meta property="og:description" content="Find a tire&#x27;s diameter, sidewall, circumference and revolutions per mile from its size code, or compare two sizes and see the speedometer error.">
 <meta property="og:url" content="https://calcbundle.net/calculators/tire-size-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Tire Size Calculator: Compare &amp; Speedometer - CalcBundle">
-<meta name="twitter:description" content="Find a tire's diameter, circumference, and revolutions per mile from its size code, or compare two tire sizes and speedometer difference.">
+<meta name="twitter:description" content="Find a tire&#x27;s diameter, sidewall, circumference and revolutions per mile from its size code, or compare two sizes and see the speedometer error.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Does a wider tire always mean a bigger diameter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not necessarily — a wider tire with a lower aspect ratio (shorter sidewall) can end up with a similar or even smaller overall diameter than a narrower tire with a taller sidewall."
+        "text": "Not necessarily. A wider tire with a lower aspect ratio (shorter sidewall) can end up with a similar or even smaller overall diameter than a narrower tire with a taller sidewall."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "Can I put a different wheel size on my car?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Often yes, as long as the resulting tire's overall diameter stays close to the original — this is called \"plus sizing.\" Always check clearance and load rating too."
+        "text": "Often yes, as long as the resulting tire's overall diameter stays close to the original. This is called plus sizing. Always check clearance and load rating too."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much can I change the tire diameter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A common rule of thumb is within about 3% of the original, to keep the speedometer, odometer and gearing close to correct."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my speedometer read wrong with different tires?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is calibrated to the original tire's wheel rotations. A taller tire travels farther per rotation, so it reads low; a shorter tire makes it read high."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the R in 265/70R17 mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It means radial construction, the standard type for modern passenger tires."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is revolutions per mile calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is 63,360 inches in a mile divided by the tire's circumference in inches."
       }
     }
   ]
@@ -161,33 +193,64 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Reading a tire size code</h2>
-      <p>A code like 265/70R17 breaks down as: 265 = section width in mm, 70 = aspect ratio (sidewall height as a percentage of width), R = radial construction, 17 = wheel diameter in inches. Overall tire diameter = wheel diameter + 2 &times; sidewall height, where sidewall height = width &times; aspect ratio.</p>
-
-      <h2>Why speedometer accuracy changes with tire size</h2>
-      <p>A speedometer is calibrated for a specific tire diameter (via wheel rotation count). Fitting a different-diameter tire changes how far the car actually travels per wheel rotation, so the speedometer &mdash; and odometer &mdash; read slightly off from the true speed and distance.</p>
-      <div class="callout">Tire professionals generally recommend keeping overall diameter within about &plusmn;3% of the original spec to avoid speedometer error and clearance or handling issues.</div>
-
-      <!--seo-extra-->
-      <h2>A worked example</h2>
-      <p>A 265/70R17 tire is 31.6 inches tall (802.8 mm), with a sidewall of 7.3 inches, a circumference of 99.3 inches, and 638.1 revolutions per mile. Compare it with a 265/40R23, which is 31.3 inches tall: the diameter differs by −0.8%, so when your speedometer shows 60 mph you are actually going 59.5 mph. The tool works out the speedometer error at several speeds.</p>
-
-      <h2>Tips for changing tire sizes</h2>
-      <p>Keep the overall diameter within about 3% of the original so that the speedometer, odometer and gearing stay close to correct. If you install larger wheels, choose a tire with a lower profile to keep the same diameter. Check the load rating and the clearance in the wheel well and the suspension. A tire size reads width in millimeters, aspect ratio as a percentage of the width, then the wheel diameter in inches.</p>
-
-      <p><strong>You might also need:</strong> <a href="horsepower-calculator.html">Horsepower Calculator</a>, <a href="engine-horsepower-calculator.html">Engine Horsepower Calculator</a>, <a href="mileage-calculator.html">Mileage Calculator</a>, <a href="speed-calculator.html">Speed Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A tire size such as 265/70R17 gives its diameter: wheel diameter plus twice the sidewall. That tire is 31.6 inches (802.8 mm) tall with 638.1 revolutions per mile. Swapping to 265/40R23 changes the diameter by -0.8%, so a 60 mph reading is really 59.5 mph.</div>
+      <h2>Reading a tire size code</h2>
+      <p>A code like <strong>265/70R17</strong> breaks down as: 265 is the section width in millimetres, 70 is the aspect ratio (the sidewall height as a percentage of the width), R means radial construction, and 17 is the wheel diameter in inches. A letter in front, such as P for passenger, shows the tire type. The sizes are moulded into the sidewall and also appear on the vehicle&rsquo;s tire placard.</p>
+      <h2>The formulas</h2>
+      <ul><li><strong>Sidewall height</strong> = width &times; aspect ratio &divide; 100.</li><li><strong>Overall diameter</strong> = wheel diameter + 2 &times; sidewall height.</li><li><strong>Circumference</strong> = &pi; &times; diameter.</li><li><strong>Revolutions per mile</strong> = 63,360 inches &divide; circumference in inches (per kilometre: 1,000,000 mm &divide; circumference in mm).</li></ul>
+      <h2>Worked example with the default numbers</h2>
+      <p>A 265/70R17 tire has a sidewall of 265 &times; 0.70 = 185.5 mm (7.3 in). The overall diameter is 17 &times; 25.4 + 2 &times; 185.5 = <strong>802.8 mm (31.6 in)</strong>. The circumference is 99.3 in (2,522.1 mm), which is <strong>638.1 revolutions per mile</strong> or 396.5 per kilometre.</p>
+      <div class="calc-table"><table><thead><tr><th>Size</th><th>Sidewall (in)</th><th>Diameter (in)</th><th>Diameter (mm)</th><th>Revs per mile</th></tr></thead><tbody><tr><td>225/65R17</td><td>5.8</td><td>28.5</td><td>724.3</td><td>707.3</td></tr><tr><td>235/60R18</td><td>5.6</td><td>29.1</td><td>739.2</td><td>693.0</td></tr><tr><td>245/45R18</td><td>4.3</td><td>26.7</td><td>677.7</td><td>755.9</td></tr><tr><td>265/70R17</td><td>7.3</td><td>31.6</td><td>802.8</td><td>638.1</td></tr><tr><td>265/40R23</td><td>4.2</td><td>31.3</td><td>796.2</td><td>643.4</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Overall diameter of five tire sizes (inches)</title><desc id="cf1-d">A tire with a lower profile on a bigger wheel can have almost the same diameter: 265/70R17 is 31.6 in and 265/40R23 is 31.3 in.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Overall diameter of five tire sizes (inches)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">225/65R17</text><rect class="bar" x="110" y="44" width="286.9" height="22" rx="4" fill="#9ca3af"/><text x="404.9" y="60" font-size="13" font-weight="700" fill="#111827">28.5</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">235/60R18</text><rect class="bar" x="110" y="78" width="292.8" height="22" rx="4" fill="#9ca3af"/><text x="410.8" y="94" font-size="13" font-weight="700" fill="#111827">29.1</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">245/45R18</text><rect class="bar" x="110" y="112" width="268.4" height="22" rx="4" fill="#9ca3af"/><text x="386.4" y="128" font-size="13" font-weight="700" fill="#111827">26.7</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">265/70R17</text><rect class="bar" x="110" y="146" width="318.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">31.6</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">265/40R23</text><rect class="bar" x="110" y="180" width="315.4" height="22" rx="4" fill="#9ca3af"/><text x="433.4" y="196" font-size="13" font-weight="700" fill="#111827">31.3</text></svg><figcaption>Wheel size alone does not decide the overall diameter.</figcaption></figure>
+      <h2>Comparing two tire sizes</h2>
+      <p>The compare tool takes two sizes and shows the diameter difference and the speedometer effect. With the defaults, replacing 265/70R17 with 265/40R23 (31.6 in against 31.3 in) changes the diameter by <strong>-0.8%</strong>. Because your speedometer is calibrated to the original tire, when it shows 60 mph you are really going <strong>59.5 mph</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Actual speed when the speedometer shows each speed (tire 2 vs tire 1 default)</title><desc id="cf2-d">With a 0.8% smaller diameter, a speedometer reading of 60 means an actual speed of 59.5.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Actual speed when the speedometer shows each speed (tire 2 vs tire 1 default)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">Shows 20 mph</text><rect class="bar" x="110" y="44" width="53.0" height="22" rx="4" fill="#9ca3af"/><text x="171.0" y="60" font-size="13" font-weight="700" fill="#111827">19.8</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Shows 40 mph</text><rect class="bar" x="110" y="78" width="106.0" height="22" rx="4" fill="#9ca3af"/><text x="224.0" y="94" font-size="13" font-weight="700" fill="#111827">39.7</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">Shows 60 mph</text><rect class="bar" x="110" y="112" width="159.0" height="22" rx="4" fill="#2563eb"/><text x="277.0" y="128" font-size="13" font-weight="700" fill="#111827">59.5</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">Shows 80 mph</text><rect class="bar" x="110" y="146" width="212.0" height="22" rx="4" fill="#9ca3af"/><text x="330.0" y="162" font-size="13" font-weight="700" fill="#111827">79.3</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">Shows 100 mph</text><rect class="bar" x="110" y="180" width="265.0" height="22" rx="4" fill="#9ca3af"/><text x="383.0" y="196" font-size="13" font-weight="700" fill="#111827">99.2</text><text x="102" y="230" text-anchor="end" font-size="13" fill="#6b7280">Shows 120 mph</text><rect class="bar" x="110" y="214" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">119.0</text></svg><figcaption>A slightly smaller tire makes the speedometer read a little high.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Speedometer shows (mph)</th><th>Actual speed (mph)</th></tr></thead><tbody><tr><td>20</td><td>19.8</td></tr><tr><td>40</td><td>39.7</td></tr><tr><td>60</td><td>59.5</td></tr><tr><td>80</td><td>79.3</td></tr><tr><td>100</td><td>99.2</td></tr><tr><td>120</td><td>119.0</td></tr></tbody></table></div>
+      <h2>Why speedometer accuracy changes</h2>
+      <p>A speedometer counts wheel rotations and assumes a fixed distance per rotation. A taller tire covers more ground per rotation, so the speedometer and odometer read low; a shorter tire makes them read high. For example, 285/70R17 is 3.5% taller than 265/70R17, so a 60 mph reading really means about 62.1 mph and the odometer shows only about 9,663.0 miles for every 10,000 true miles.</p>
+      <h2>How much change is acceptable?</h2>
+      <p>A common rule of thumb is to keep the overall diameter within about 3% of the original, which for the default tire is 0.9 inches either way. Beyond that, the speedometer, odometer, gearing, traction control and clearance can all be affected. Check the load rating and the fit in the wheel well and suspension as well.</p>
+      <h2>Revolutions per mile and gearing</h2>
+      <p>At 60 mph a car covers one mile a minute, so the default tire turns about 638.1 times a minute. A taller tire turns fewer times for the same speed, which acts like a slightly taller gear: the engine runs at lower revolutions at a given speed, which can help fuel economy on the highway but cost some acceleration. The 285/70R17 above turns 616.6 times per mile, 3.4% fewer than the default.</p>
+      <h2>Before you buy new tires</h2>
+      <ul><li>Find the size on the sidewall of the tire you have, on the tire placard (usually inside the driver&rsquo;s door) and in the owner&rsquo;s manual.</li><li>Use the compare tool to check the new size against the old one, and aim to stay close to zero difference.</li><li>Check the load index and speed rating are at least what the vehicle requires.</li><li>If you replace only two tires, ask the tire shop which axle to put them on and keep the diameters matched.</li></ul>
+      <h2>Plus sizing: bigger wheels, lower profile</h2>
+      <p>If you fit larger wheels, choose a tire with a shorter sidewall to keep the diameter. For example, 275/55R20 has a diameter of 31.9 in, 1.0% different from the default. A wider tire with a lower aspect ratio can have a similar or even smaller diameter than a narrower tire with a taller sidewall.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Entering the wheel size in millimetres. It is in inches.</li><li>Using the aspect ratio as a number of millimetres. It is a percentage of the width.</li><li>Assuming a wider tire is always taller.</li><li>Ignoring load rating and clearance.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the overall diameter in inches and millimetres, then the sidewall, circumference and revolutions per mile and per kilometre. In the compare tool the headline is the percentage difference, and the list below shows actual speed for each speedometer reading. For gas mileage and speed calculations, see the related tools.</p>
+      <div class="callout">Check your vehicle's placard and manual for approved tire sizes. Tire advice here is general.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="gas-mileage-calculator.html">Gas Mileage Calculator</a> &ndash; measure your real mpg</li><li><a href="fuel-cost-calculator.html">Fuel Cost Calculator</a> &ndash; trip fuel costs</li><li><a href="speed-calculator.html">Speed Calculator</a> &ndash; speed, distance and time</li><li><a href="mileage-calculator.html">Mileage Calculator</a> &ndash; trip distance and costs</li><li><a href="engine-horsepower-calculator.html">Engine Horsepower Calculator</a> &ndash; estimate power</li><li><a href="conversion-calculator.html">Conversion Calculator</a> &ndash; convert units</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Does a wider tire always mean a bigger diameter?</h3>
-        <p>Not necessarily &mdash; a wider tire with a lower aspect ratio (shorter sidewall) can end up with a similar or even smaller overall diameter than a narrower tire with a taller sidewall.</p>
+        <p>Not necessarily. A wider tire with a lower aspect ratio (shorter sidewall) can end up with a similar or even smaller overall diameter than a narrower tire with a taller sidewall.</p>
       </div>
       <div class="faq-item">
         <h3>Can I put a different wheel size on my car?</h3>
-        <p>Often yes, as long as the resulting tire's overall diameter stays close to the original &mdash; this is called "plus sizing." Always check clearance and load rating too.</p>
+        <p>Often yes, as long as the resulting tire's overall diameter stays close to the original. This is called plus sizing. Always check clearance and load rating too.</p>
       </div>
+      <div class="faq-item">
+        <h3>How much can I change the tire diameter?</h3>
+        <p>A common rule of thumb is within about 3% of the original, to keep the speedometer, odometer and gearing close to correct.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does my speedometer read wrong with different tires?</h3>
+        <p>It is calibrated to the original tire's wheel rotations. A taller tire travels farther per rotation, so it reads low; a shorter tire makes it read high.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does the R in 265/70R17 mean?</h3>
+        <p>It means radial construction, the standard type for modern passenger tires.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How is revolutions per mile calculated?</h3>
+        <p>It is 63,360 inches in a mile divided by the tire's circumference in inches.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.nhtsa.gov/sites/nhtsa.gov/files/brochure.pdf" rel="noopener" target="_blank">NHTSA: Tire safety brochure (how to read the size on the sidewall)</a></p>
     </div>
 
   </div>
