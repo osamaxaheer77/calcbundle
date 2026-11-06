@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IRA Calculator: Traditional vs Roth After-Tax | CalcBundle</title>
-<meta name="description" content="Compare projected Traditional, SEP or SIMPLE IRA outcomes with a Roth IRA and taxable savings under different tax and return assumptions.">
+<title>IRA Calculator: Traditional vs Roth After Tax</title>
+<meta name="description" content="Compare a Traditional IRA with a Roth IRA and taxable savings after tax, from your balance, contributions, return, tax rates now and in retirement.">
 <link rel="canonical" href="https://calcbundle.net/calculators/ira-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="IRA Calculator: Traditional vs Roth After-Tax | CalcBundle">
-<meta property="og:description" content="Compare projected Traditional, SEP or SIMPLE IRA outcomes with a Roth IRA and taxable savings under different tax and return assumptions.">
+<meta property="og:title" content="IRA Calculator: Traditional vs Roth After Tax">
+<meta property="og:description" content="Compare a Traditional IRA with a Roth IRA and taxable savings after tax, from your balance, contributions, return, tax rates now and in retirement.">
 <meta property="og:url" content="https://calcbundle.net/calculators/ira-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="IRA Calculator: Traditional vs Roth After-Tax | CalcBundle">
-<meta name="twitter:description" content="Compare projected Traditional, SEP or SIMPLE IRA outcomes with a Roth IRA and taxable savings under different tax and return assumptions.">
+<meta name="twitter:title" content="IRA Calculator: Traditional vs Roth After Tax">
+<meta name="twitter:description" content="Compare a Traditional IRA with a Roth IRA and taxable savings after tax, from your balance, contributions, return, tax rates now and in retirement.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -39,42 +39,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the difference between a Traditional IRA and a Roth IRA?",
+      "name": "Should I choose a Traditional or a Roth IRA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A Traditional IRA is funded with before-tax money, so you save tax when you contribute, and you pay income tax on withdrawals in retirement. A Roth IRA is funded with after-tax money, so there is no tax saving now, but qualified withdrawals in retirement are tax-free."
+        "text": "It depends mainly on tax rates. If you expect a lower tax rate in retirement than you pay now, the Traditional IRA usually comes out ahead. If you expect a higher rate, the Roth does. If they are equal, the two finish the same."
       }
     },
     {
       "@type": "Question",
-      "name": "Which is better, a Traditional IRA or a Roth IRA?",
+      "name": "How does the calculator compare the accounts?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It comes down to your tax rate now compared with your tax rate in retirement. If you expect a lower rate in retirement, the Traditional IRA usually wins. If you expect a higher rate, the Roth IRA usually wins. If the two rates are the same, they end up equal."
+        "text": "It assumes you start from the same before-tax amount each year. The Traditional IRA invests all of it, the Roth and taxable account invest what is left after your current tax, and the Traditional balance is reduced by your retirement tax rate at the end so the three are compared after tax."
       }
     },
     {
       "@type": "Question",
-      "name": "Why are the Roth IRA and taxable balances smaller than the Traditional balance?",
+      "name": "Why do taxable savings do worse?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "To compare fairly, the calculator assumes you start from the same before-tax amount. After paying your current tax, less is left to put into a Roth IRA or a taxable account, so those balances start smaller. The Traditional balance is shown both before tax and after the tax due on withdrawal."
+        "text": "The growth in a taxable account is taxed every year, which slows compounding. In an IRA the money grows without a yearly tax."
       }
     },
     {
       "@type": "Question",
-      "name": "Does this calculator apply IRA contribution limits?",
+      "name": "Does the calculator apply contribution limits?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. It uses whatever contribution you enter, so it can also model SEP and SIMPLE IRAs, which allow larger contributions. Check the current IRS limit for your account type and age. For a regular IRA in 2026 it is $7,500, or $8,600 if you are 50 or older."
+        "text": "No. It does not apply contribution limits, income limits or deduction rules, so check the current IRS rules for your own situation."
       }
     },
     {
       "@type": "Question",
-      "name": "How is regular taxable savings taxed in the comparison?",
+      "name": "What tax rate should I enter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The growth in the taxable account is taxed every year at your current marginal rate, so only the after-tax return compounds. This is why taxable savings finish behind both kinds of IRA."
+        "text": "Use your marginal rate, the rate on your next dollar of income, for the current rate, and your best estimate of your marginal rate in retirement for the later rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it include early withdrawals or required distributions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It assumes you leave the money alone until retirement and ignores penalties and required minimum distributions."
       }
     }
   ]
@@ -175,49 +183,62 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Traditional or Roth: the tax question</h2>
-      <p>A Traditional IRA, and its employer cousins the SEP and SIMPLE IRA, takes before-tax money. You save tax when you contribute, the money grows untaxed, and you pay ordinary income tax on what you withdraw. A Roth IRA is the mirror image: you pay tax first, then the money grows and comes out tax-free. Because both let the money grow untaxed, the real contest is between the tax rate you pay now and the one you expect to pay in retirement.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Traditional wins if your retirement tax rate is lower than today's, and Roth wins if it is higher. On $30,000 plus $7,500 a year for 35 years at 6%, with 25% tax now and 15% later, the Traditional IRA ends at $906,392 after tax and the Roth at $799,758.</div>
+      <h2>Traditional or Roth: the tax question</h2>
+      <p>A <strong>Traditional IRA</strong> (and its employer cousins, the SEP and SIMPLE IRA) takes before-tax money. You save tax when you contribute, the money grows untaxed, and you pay ordinary income tax on what you withdraw. A <strong>Roth IRA</strong> is the mirror image: you pay tax first, then the money grows and comes out tax-free. Both let the money grow untaxed, so the real contest is between the tax rate you pay now and the one you expect to pay in retirement.</p>
       <h2>How the comparison is set up</h2>
-      <p>The calculator imagines you start from the same before-tax amount each year. Put it in a Traditional IRA and all of it goes to work. Put it in a Roth IRA or a taxable account and your current tax comes off first, so a smaller amount is invested. At retirement the Traditional balance is reduced by your expected retirement tax rate so the three accounts can be compared on an after-tax basis. Regular taxable savings are taxed on their growth every year at your current rate, which slows their compounding.</p>
-
-      <h2>Reading the result</h2>
-      <p>If your expected retirement tax rate is lower than your current rate, the Traditional IRA usually comes out ahead. If it is higher, the Roth IRA does. If the two rates match, the accounts finish equal and both beat taxable savings. The calculator does not apply contribution limits, income limits or deduction rules, so check those for your own situation.</p>
-      <div class="callout">This is an estimate for planning, not tax or investment advice. It assumes a steady return, fixed tax rates and no early withdrawals, and it adds each year's contribution at the end of the year.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understand the numbers</h2>
-      <p>Suppose $5,000 grows to $10,000 before withdrawal. If all $10,000 were taxable at a flat 20% rate, the after-tax amount would be $8,000. Actual IRA distributions may be taxed differently, so this is only an illustration of why gross and after-tax balances differ.</p>
-      <h2>Related retirement planning tools</h2>
-      <p>Use the <a href="roth-ira-calculator.html">Roth IRA Calculator</a> to model Roth accumulation specifically. To see how salary and employer matching affect workplace plans, try the <a href="401k-calculator.html">401(k) Calculator</a>. For required withdrawals later in retirement, see the <a href="rmd-calculator.html">RMD Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="roth-ira-calculator.html">Roth IRA Calculator</a>, <a href="social-security-calculator.html">Social Security Calculator</a>, <a href="401k-calculator.html">401K Calculator</a>, <a href="pension-calculator.html">Pension Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/roth-ira-vs-traditional-ira-vs-401k.html">Roth IRA vs Traditional IRA vs 401(k)</a>.</p>
-
+      <p>The calculator imagines you start from the same <em>before-tax</em> amount each year. Put it in a Traditional IRA and all of it goes to work. Put it in a Roth IRA or a taxable account and your current tax comes off first, so a smaller amount is invested. At retirement the Traditional balance is reduced by your expected retirement tax rate, so all three accounts are compared on an after-tax basis. Taxable savings are also taxed on their growth every year at your current rate, which slows their compounding. Each year&rsquo;s contribution is added at the end of the year.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens with a balance of <strong>$30,000</strong>, <strong>$7,500</strong> a year of before-tax contributions, a <strong>6%</strong> return, age <strong>30</strong> to <strong>65</strong>, a current tax rate of <strong>25%</strong> and a retirement tax rate of <strong>15%</strong>. The Traditional IRA grows to <strong>$1,066,343</strong> before tax, which is <strong>$906,392</strong> after 15% tax. The Roth IRA starts with $30,000 &times; 0.75 = $22,500 and adds $5,625 a year, reaching <strong>$799,758</strong>. Taxable savings grow only at 6% &times; 0.75 = 4.5% a year and reach <strong>$563,434</strong>. The winner is the Traditional IRA, ahead of the Roth by <strong>$106,634</strong>. You contributed $292,500 before tax in total.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">After-tax value at age 65 on the default numbers</title><desc id="cf2-d">The Traditional IRA ends $106,634 ahead of the Roth, and both are far ahead of taxable savings, which lose growth to tax every year.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">After-tax value at age 65 on the default numbers</text><text x="202" y="60" text-anchor="end" font-size="13" fill="#6b7280">Traditional IRA, after tax</text><rect class="bar" x="210" y="44" width="218.0" height="22" rx="4" fill="#8b5cf6"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$906,392</text><text x="202" y="94" text-anchor="end" font-size="13" fill="#6b7280">Roth IRA</text><rect class="bar" x="210" y="78" width="192.4" height="22" rx="4" fill="#10b981"/><text x="410.4" y="94" font-size="13" font-weight="700" fill="#111827">$799,758</text><text x="202" y="128" text-anchor="end" font-size="13" fill="#6b7280">Taxable savings</text><rect class="bar" x="210" y="112" width="135.5" height="22" rx="4" fill="#dc2626"/><text x="353.5" y="128" font-size="13" font-weight="700" fill="#111827">$563,434</text><text x="202" y="162" text-anchor="end" font-size="13" fill="#6b7280">Total contributions (before tax)</text><rect class="bar" x="210" y="146" width="70.4" height="22" rx="4" fill="#9ca3af"/><text x="288.4" y="162" font-size="13" font-weight="700" fill="#111827">$292,500</text></svg><figcaption>The Traditional IRA wins when the retirement tax rate is the lower one.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Balances by age on the default numbers: Traditional after tax, Roth, taxable and contributions</title><desc id="cf1-d">At 65 the Traditional IRA after tax is worth $906,392, the Roth $799,758 and regular taxable savings $563,434, because the later tax rate (15%) is below the current one (25%).</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Balances by age on the default numbers: Traditional after tax, Roth, taxable and contributions</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0k</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$245k</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$489k</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$734k</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$979k</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">30</text><text x="122.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">35</text><text x="186.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">40</text><text x="250.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">45</text><text x="314.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">50</text><text x="378.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">55</text><text x="442.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">60</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">65</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Age</text><polyline class="draw" style="--len:468" points="58.0,172.7 70.8,171.7 83.6,170.6 96.4,169.5 109.2,168.3 122.0,167.0 134.8,165.6 147.6,164.2 160.4,162.6 173.2,161.0 186.0,159.3 198.8,157.5 211.6,155.6 224.4,153.5 237.2,151.3 250.0,149.0 262.8,146.6 275.6,144.0 288.4,141.3 301.2,138.4 314.0,135.3 326.8,132.0 339.6,128.6 352.4,124.9 365.2,121.0 378.0,116.9 390.8,112.5 403.6,107.9 416.4,103.0 429.2,97.8 442.0,92.3 454.8,86.4 467.6,80.2 480.4,73.7 493.2,66.7 506.0,59.3" fill="none" stroke="#8b5cf6" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#8b5cf6"/><text x="76" y="40" font-size="11.5" fill="#374151">Traditional (after tax)</text><polyline class="draw" style="--len:464" points="58.0,173.1 70.8,172.2 83.6,171.3 96.4,170.2 109.2,169.2 122.0,168.0 134.8,166.8 147.6,165.6 160.4,164.2 173.2,162.8 186.0,161.3 198.8,159.7 211.6,158.0 224.4,156.2 237.2,154.2 250.0,152.2 262.8,150.1 275.6,147.8 288.4,145.4 301.2,142.8 314.0,140.1 326.8,137.2 339.6,134.1 352.4,130.9 365.2,127.5 378.0,123.8 390.8,120.0 403.6,115.9 416.4,111.6 429.2,107.0 442.0,102.1 454.8,97.0 467.6,91.5 480.4,85.7 493.2,79.6 506.0,73.1" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="246" y="40" font-size="11.5" fill="#374151">Roth IRA</text><polyline class="draw" style="--len:456" points="58.0,173.1 70.8,172.2 83.6,171.4 96.4,170.4 109.2,169.4 122.0,168.4 134.8,167.4 147.6,166.3 160.4,165.1 173.2,163.9 186.0,162.6 198.8,161.3 211.6,159.9 224.4,158.4 237.2,156.9 250.0,155.3 262.8,153.7 275.6,152.0 288.4,150.2 301.2,148.3 314.0,146.3 326.8,144.2 339.6,142.1 352.4,139.8 365.2,137.5 378.0,135.0 390.8,132.5 403.6,129.8 416.4,127.0 429.2,124.0 442.0,121.0 454.8,117.8 467.6,114.4 480.4,110.9 493.2,107.3 506.0,103.5" fill="none" stroke="#dc2626" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="398" y="34" width="12" height="4" rx="2" fill="#dc2626"/><text x="416" y="40" font-size="11.5" fill="#374151">Taxable</text></svg><figcaption>The tax-sheltered accounts pull far ahead of taxable savings.</figcaption></figure>
+      <h2>The deciding rule: current rate against retirement rate</h2>
+      <p>If the tax rate you expect in retirement is <strong>lower</strong> than your current rate, the Traditional IRA usually comes out ahead. If it is <strong>higher</strong>, the Roth wins. If the two rates are the same, they finish equal. With 25% now and 25% later the Traditional IRA is worth $799,758 after tax and the Roth is worth $799,758, a tie. Raise the retirement rate to 35% and the Traditional falls to $693,123, below the Roth&rsquo;s $799,758.</p>
+      <div class="calc-table"><table><thead><tr><th>Tax rate in retirement</th><th>Traditional after tax</th><th>Roth IRA</th><th>Taxable savings</th><th>Better choice</th></tr></thead><tbody><tr><td>5%</td><td>$1,013,026</td><td>$799,758</td><td>$563,434</td><td>Traditional</td></tr><tr><td>15%</td><td>$906,392</td><td>$799,758</td><td>$563,434</td><td>Traditional</td></tr><tr><td>25%</td><td>$799,758</td><td>$799,758</td><td>$563,434</td><td>Tie</td></tr><tr><td>35%</td><td>$693,123</td><td>$799,758</td><td>$563,434</td><td>Roth</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Traditional IRA after tax at 65 by expected retirement tax rate (Roth stays at $799,758)</title><desc id="cf3-d">The Traditional IRA beats the Roth below a 25% retirement rate, ties at 25%, and falls behind above it. The Roth value does not depend on the retirement rate.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Traditional IRA after tax at 65 by expected retirement tax rate (Roth stays at $799,758)</text><text x="182" y="60" text-anchor="end" font-size="13" fill="#6b7280">5% tax in retirement</text><rect class="bar" x="190" y="44" width="238.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$1,013,026</text><text x="182" y="94" text-anchor="end" font-size="13" fill="#6b7280">15% tax in retirement</text><rect class="bar" x="190" y="78" width="212.9" height="22" rx="4" fill="#10b981"/><text x="410.9" y="94" font-size="13" font-weight="700" fill="#111827">$906,392</text><text x="182" y="128" text-anchor="end" font-size="13" fill="#6b7280">25% tax in retirement</text><rect class="bar" x="190" y="112" width="187.9" height="22" rx="4" fill="#9ca3af"/><text x="385.9" y="128" font-size="13" font-weight="700" fill="#111827">$799,758</text><text x="182" y="162" text-anchor="end" font-size="13" fill="#6b7280">35% tax in retirement</text><rect class="bar" x="190" y="146" width="162.8" height="22" rx="4" fill="#dc2626"/><text x="360.8" y="162" font-size="13" font-weight="700" fill="#111827">$693,123</text></svg><figcaption>Only the Traditional IRA depends on the retirement tax rate.</figcaption></figure>
+      <h2>The effect of time and return</h2>
+      <p>Time does most of the work. With the same other inputs, retiring at 55, 65 and 75 gives the following after-tax balances. The three accounts keep their order, but the gap between them widens the longer the money grows.</p>
+      <div class="calc-table"><table><thead><tr><th>Retire at</th><th>Traditional after tax</th><th>Roth IRA</th><th>Taxable savings</th></tr></thead><tbody><tr><td>55</td><td>$459,204</td><td>$405,180</td><td>$318,302</td></tr><tr><td>65</td><td>$906,392</td><td>$799,758</td><td>$563,434</td></tr><tr><td>75</td><td>$1,707,237</td><td>$1,506,386</td><td>$944,117</td></tr></tbody></table></div>
+      <div class="calc-table"><table><thead><tr><th>Return</th><th>Traditional after tax</th><th>Roth IRA</th><th>Taxable savings</th></tr></thead><tbody><tr><td>4%</td><td>$570,158</td><td>$503,081</td><td>$403,411</td></tr><tr><td>6%</td><td>$906,392</td><td>$799,758</td><td>$563,434</td></tr><tr><td>8%</td><td>$1,475,546</td><td>$1,301,952</td><td>$799,758</td></tr></tbody></table></div>
+      <h2>Why taxable savings fall behind</h2>
+      <p>A regular account is funded with after-tax money, and the growth is taxed every year. At a 25% tax rate the 6% return becomes 4.5% a year. Over 35 years that is the difference between $799,758 and $563,434. Retirement accounts avoid that annual tax drag, which is why both IRAs beat taxable savings even before counting any deduction.</p>
+      <h2>What the calculator does not include</h2>
+      <ul><li><strong>Contribution limits.</strong> The IRS sets a yearly limit on IRA contributions. For 2026 the IRS announced $7,500, with a higher catch-up limit for people 50 and over. The default of $7,500 matches it, and the tool does not stop you entering more.</li><li><strong>Income limits and deductions.</strong> Whether a Traditional contribution is deductible, and whether you can contribute to a Roth directly, depends on your income and on workplace plan coverage.</li><li><strong>Early withdrawals.</strong> Taking money out before age 59&frac12; can bring a penalty and tax. The tool assumes none.</li><li><strong>Required minimum distributions.</strong> Traditional IRAs must pay out minimum amounts once you reach a certain age, while the original owner of a Roth IRA has none. The RMD Calculator covers that.</li><li><strong>Changing rates.</strong> The calculator uses one steady return and fixed tax rates. Real markets and tax rules change.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Entering the same tax rate for now and retirement and expecting a winner.</li><li>Using your average tax rate. Use your <em>marginal</em> rate, the rate on the next dollar.</li><li>Putting the take-home amount in the contribution box. The box is for the before-tax amount.</li><li>Forgetting that this tool ignores contribution limits and income limits.</li><li>Treating the result as a prediction. It is a comparison under steady assumptions.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large line names the account with the best after-tax result. Below it are the Traditional IRA after tax, the Roth IRA and taxable savings, then a short table with the balance at retirement before and after tax. The chart and the age-by-age table show how each account grows.</p>
+      <div class="callout">This is an estimate for planning, not tax or investment advice. Rules for IRAs change, so check the current IRS rules or ask a tax professional before you decide.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="roth-ira-calculator.html">Roth IRA Calculator</a> &ndash; grow a Roth IRA</li><li><a href="401k-calculator.html">401(k) Calculator</a> &ndash; grow a 401(k)</li><li><a href="retirement-calculator.html">Retirement Calculator</a> &ndash; plan your retirement savings</li><li><a href="rmd-calculator.html">RMD Calculator</a> &ndash; required minimum distributions</li><li><a href="income-tax-calculator.html">Income Tax Calculator</a> &ndash; federal and state income tax</li><li><a href="compound-interest-calculator.html">Compound Interest Calculator</a> &ndash; how savings compound</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>What is the difference between a Traditional IRA and a Roth IRA?</h3>
-        <p>A Traditional IRA is funded with before-tax money, so you save tax when you contribute, and you pay income tax on withdrawals in retirement. A Roth IRA is funded with after-tax money, so there is no tax saving now, but qualified withdrawals in retirement are tax-free.</p>
+        <h3>Should I choose a Traditional or a Roth IRA?</h3>
+        <p>It depends mainly on tax rates. If you expect a lower tax rate in retirement than you pay now, the Traditional IRA usually comes out ahead. If you expect a higher rate, the Roth does. If they are equal, the two finish the same.</p>
       </div>
       <div class="faq-item">
-        <h3>Which is better, a Traditional IRA or a Roth IRA?</h3>
-        <p>It comes down to your tax rate now compared with your tax rate in retirement. If you expect a lower rate in retirement, the Traditional IRA usually wins. If you expect a higher rate, the Roth IRA usually wins. If the two rates are the same, they end up equal.</p>
+        <h3>How does the calculator compare the accounts?</h3>
+        <p>It assumes you start from the same before-tax amount each year. The Traditional IRA invests all of it, the Roth and taxable account invest what is left after your current tax, and the Traditional balance is reduced by your retirement tax rate at the end so the three are compared after tax.</p>
       </div>
       <div class="faq-item">
-        <h3>Why are the Roth IRA and taxable balances smaller than the Traditional balance?</h3>
-        <p>To compare fairly, the calculator assumes you start from the same before-tax amount. After paying your current tax, less is left to put into a Roth IRA or a taxable account, so those balances start smaller. The Traditional balance is shown both before tax and after the tax due on withdrawal.</p>
+        <h3>Why do taxable savings do worse?</h3>
+        <p>The growth in a taxable account is taxed every year, which slows compounding. In an IRA the money grows without a yearly tax.</p>
       </div>
       <div class="faq-item">
-        <h3>Does this calculator apply IRA contribution limits?</h3>
-        <p>No. It uses whatever contribution you enter, so it can also model SEP and SIMPLE IRAs, which allow larger contributions. Check the current IRS limit for your account type and age. For a regular IRA in 2026 it is $7,500, or $8,600 if you are 50 or older.</p>
+        <h3>Does the calculator apply contribution limits?</h3>
+        <p>No. It does not apply contribution limits, income limits or deduction rules, so check the current IRS rules for your own situation.</p>
       </div>
       <div class="faq-item">
-        <h3>How is regular taxable savings taxed in the comparison?</h3>
-        <p>The growth in the taxable account is taxed every year at your current marginal rate, so only the after-tax return compounds. This is why taxable savings finish behind both kinds of IRA.</p>
+        <h3>What tax rate should I enter?</h3>
+        <p>Use your marginal rate, the rate on your next dollar of income, for the current rate, and your best estimate of your marginal rate in retirement for the later rate.</p>
       </div>
+      <div class="faq-item">
+        <h3>Does it include early withdrawals or required distributions?</h3>
+        <p>No. It assumes you leave the money alone until retirement and ignores penalties and required minimum distributions.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.irs.gov/retirement-plans/individual-retirement-arrangements-iras" rel="noopener" target="_blank">IRS: Individual retirement arrangements (IRAs)</a>; <a href="https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-increases-to-7500" rel="noopener" target="_blank">IRS: 401(k) limit increases to $24,500 for 2026, IRA limit increases to $7,500</a>; <a href="https://www.irs.gov/retirement-plans/traditional-iras" rel="noopener" target="_blank">IRS: Traditional IRAs</a>; <a href="https://www.irs.gov/retirement-plans/roth-iras" rel="noopener" target="_blank">IRS: Roth IRAs</a></p>
     </div>
 
   </div>
