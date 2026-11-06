@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roofing Calculator - CalcBundle</title>
-<meta name="description" content="Estimate roof area from a house's footprint and roof pitch, plus roof squares needed and an optional cost estimate.">
+<title>Roofing Calculator: Roof Area, Squares &amp; Cost</title>
+<meta name="description" content="Estimate roof area from a house footprint and pitch, with the roofing squares needed including a 10% buffer, and an optional cost per square foot.">
 <link rel="canonical" href="https://calcbundle.net/calculators/roofing-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Roofing Calculator - CalcBundle">
-<meta property="og:description" content="Estimate roof area from a house's footprint and roof pitch, plus roof squares needed and an optional cost estimate.">
+<meta property="og:title" content="Roofing Calculator: Roof Area, Squares &amp; Cost">
+<meta property="og:description" content="Estimate roof area from a house footprint and pitch, with the roofing squares needed including a 10% buffer, and an optional cost per square foot.">
 <meta property="og:url" content="https://calcbundle.net/calculators/roofing-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Roofing Calculator - CalcBundle">
-<meta name="twitter:description" content="Estimate roof area from a house's footprint and roof pitch, plus roof squares needed and an optional cost estimate.">
+<meta name="twitter:title" content="Roofing Calculator: Roof Area, Squares &amp; Cost">
+<meta name="twitter:description" content="Estimate roof area from a house footprint and pitch, with the roofing squares needed including a 10% buffer, and an optional cost per square foot.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What if I only know the roof angle in degrees, not the pitch?",
+      "name": "What is roof pitch?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Convert with rise = 12 × tan(angle). For example, a 25° angle is roughly a 5.6/12 pitch."
+        "text": "It is the rise over a 12-inch run. A 6/12 pitch rises 6 inches for every 12 inches of horizontal distance."
       }
     },
     {
       "@type": "Question",
-      "name": "Is this exact enough to order materials?",
+      "name": "How is roof area worked out from the footprint?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Treat it as a planning estimate. Always confirm quantities with an on-site measurement or a roofing contractor before ordering."
+        "text": "Multiply the footprint by the slope factor, the square root of (rise over 12) squared plus 1. For 6/12 the factor is 1.118, so 2,000 square feet becomes 2,236 square feet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a roofing square?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A roofing square is 100 square feet. The default 2,236 square foot roof is 22.4 squares, or 25 squares with a 10 percent buffer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why add 10 percent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The buffer allows for waste from cuts and overlaps. Complex roofs with hips, valleys and dormers waste more, so add 15 percent or more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the footprint include the eaves?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It should. Measure the outside of the walls and add the overhangs, since they add to the roof area."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many bundles of shingles do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many shingles take three bundles per square, though some take more. Check the coverage on the pack and ask your supplier."
       }
     }
   ]
@@ -141,36 +173,63 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What roof pitch does to the area</h2>
-      <p>Roof pitch is the rise over a 12-inch run &mdash; a 6/12 pitch rises 6 inches for every 12 inches horizontally. Because a pitched roof's actual surface is longer than its flat footprint, the base area is multiplied by a slope factor: &radic;((rise/12)&sup2; + 1). A steeper pitch means more roofing material for the same footprint.</p>
-
-      <h2>What's not included</h2>
-      <p>This estimate uses the house's footprint area and pitch only &mdash; it doesn't account for eave overhang or the exact number of material bundles/rolls, both of which depend on the roof's specific shape and layout. For a more precise material list, measure each roof section individually (our <a href="../calculators/area-calculator.html">Area Calculator</a> can help) and consult your roofing supplier.</p>
-      <div class="callout">"Roof squares" is a roofing-trade unit equal to 100 square feet. The 10% buffer accounts for waste from cuts, overlaps, and complex roof shapes.</div>
-
-      <!--seo-extra-->
-      <h2>A worked example</h2>
-      <p>A house with a 2,000 square foot footprint and a 6/12 roof pitch has a roof area of about 2,236 square feet, because the 6/12 pitch multiplies the footprint by √(1 + 0.5²) = 1.118. In roofing, one square covers 100 square feet, so that is 22.4 squares, and 25 squares with a 10% buffer for waste, cuts and overlaps. Add a price per square foot to estimate the cost.</p>
-
-      <h2>Tips for roof estimates</h2>
-      <p>The footprint should include the eaves and overhangs, which add to the roof area. Complex roofs with hips, valleys and dormers waste more material, so add 15% or more. Steeper roofs cost more to install, since they need more safety equipment. Get at least three quotes from licensed roofers, and ask whether tear-off and disposal of the old roof are included.</p>
-
-      <p><strong>You might also need:</strong> <a href="tile-calculator.html">Tile Calculator</a>, <a href="square-footage-calculator.html">Square Footage Calculator</a>, <a href="gravel-calculator.html">Gravel Calculator</a>, <a href="stair-calculator.html">Stair Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <!--next-->
-      <p><strong>What next?</strong> A roof pitch such as 6/12 is just a rise of 6 over a run of 12. Enter those as two points in the <a href="slope-calculator.html">Slope Calculator</a> to see the angle (26.57°) and the percent grade, or use the <a href="right-triangle-calculator.html">Right Triangle Calculator</a> to find the rafter length from the rise and run.</p>
-      <!--/next-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Roof area is the footprint times the slope factor &radic;((rise &divide; 12)&sup2; + 1). A 2,000 sq ft footprint at 6/12 gives 2,236.1 sq ft, which is 22.4 squares, or 25 squares with a 10% buffer.</div>
+      <h2>What roof pitch does to the area</h2>
+      <p>Roof pitch is the rise over a 12-inch run. A 6/12 pitch rises 6 inches for every 12 inches horizontally. Because a pitched roof is longer than its flat footprint, the footprint is multiplied by a slope factor: <strong>&radic;((rise &divide; 12)&sup2; + 1)</strong>. A steeper pitch means more roofing material for the same footprint. The calculator takes the house&rsquo;s base area, the pitch and an optional price per square foot, and gives the roof area, the roofing squares and the cost.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on a footprint of <strong>2,000 sq ft</strong> and a pitch of <strong>6/12</strong>. The slope factor is &radic;(0.5&sup2; + 1) = &radic;1.25 = <strong>1.1180</strong>. So the roof area is 2,000 &times; 1.1180 = <strong>2,236.1 sq ft</strong>, which is 207.7 square metres or 248.5 square yards. In roofing, one <strong>square</strong> covers 100 sq ft, so that is 22.4 squares. With a 10% buffer for waste, cuts and overlaps it is 24.6, rounded up to <strong>25 squares</strong>. Add a price per square foot and the tool also shows the estimated price.</p>
+      <h2>Slope factor by pitch</h2>
+      <p>Here is the same 2,000 sq ft footprint at each pitch the tool offers. The angle is the roof slope in degrees.</p>
+      <div class="calc-table"><table><thead><tr><th>Pitch</th><th>Angle</th><th>Slope factor</th><th>Roof area (sq ft)</th><th>Squares with 10% buffer</th></tr></thead><tbody><tr><td>1/12</td><td>4.8&deg;</td><td>1.0035</td><td>2,006.9</td><td>23</td></tr><tr><td>2/12</td><td>9.5&deg;</td><td>1.0138</td><td>2,027.6</td><td>23</td></tr><tr><td>3/12</td><td>14.0&deg;</td><td>1.0308</td><td>2,061.6</td><td>23</td></tr><tr><td>4/12</td><td>18.4&deg;</td><td>1.0541</td><td>2,108.2</td><td>24</td></tr><tr><td>5/12</td><td>22.6&deg;</td><td>1.0833</td><td>2,166.7</td><td>24</td></tr><tr><td>6/12</td><td>26.6&deg;</td><td>1.1180</td><td>2,236.1</td><td>25</td></tr><tr><td>7/12</td><td>30.3&deg;</td><td>1.1577</td><td>2,315.4</td><td>26</td></tr><tr><td>8/12</td><td>33.7&deg;</td><td>1.2019</td><td>2,403.7</td><td>27</td></tr><tr><td>9/12</td><td>36.9&deg;</td><td>1.2500</td><td>2,500</td><td>28</td></tr><tr><td>10/12</td><td>39.8&deg;</td><td>1.3017</td><td>2,603.4</td><td>29</td></tr><tr><td>11/12</td><td>42.5&deg;</td><td>1.3566</td><td>2,713.1</td><td>30</td></tr><tr><td>12/12</td><td>45.0&deg;</td><td>1.4142</td><td>2,828.4</td><td>32</td></tr><tr><td>14/12</td><td>49.4&deg;</td><td>1.5366</td><td>3,073.2</td><td>34</td></tr><tr><td>16/12</td><td>53.1&deg;</td><td>1.6667</td><td>3,333.3</td><td>37</td></tr><tr><td>18/12</td><td>56.3&deg;</td><td>1.8028</td><td>3,605.6</td><td>40</td></tr><tr><td>20/12</td><td>59.0&deg;</td><td>1.9437</td><td>3,887.3</td><td>43</td></tr><tr><td>24/12</td><td>63.4&deg;</td><td>2.2361</td><td>4,472.1</td><td>50</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Extra roof area above the footprint, by pitch (percent)</title><desc id="cf1-d">A 6/12 roof has 11.8% more surface than its footprint, a 12/12 roof 41.4% more and a 24/12 roof more than double the footprint.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Extra roof area above the footprint, by pitch (percent)</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">4/12</text><rect class="bar" x="70" y="44" width="15.7" height="22" rx="4" fill="#9ca3af"/><text x="93.7" y="60" font-size="13" font-weight="700" fill="#111827">5.4%</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">6/12</text><rect class="bar" x="70" y="78" width="34.2" height="22" rx="4" fill="#2563eb"/><text x="112.2" y="94" font-size="13" font-weight="700" fill="#111827">11.8%</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">9/12</text><rect class="bar" x="70" y="112" width="72.4" height="22" rx="4" fill="#9ca3af"/><text x="150.4" y="128" font-size="13" font-weight="700" fill="#111827">25.0%</text><text x="62" y="162" text-anchor="end" font-size="13" fill="#6b7280">12/12</text><rect class="bar" x="70" y="146" width="120.0" height="22" rx="4" fill="#9ca3af"/><text x="198.0" y="162" font-size="13" font-weight="700" fill="#111827">41.4%</text><text x="62" y="196" text-anchor="end" font-size="13" fill="#6b7280">18/12</text><rect class="bar" x="70" y="180" width="232.5" height="22" rx="4" fill="#9ca3af"/><text x="310.5" y="196" font-size="13" font-weight="700" fill="#111827">80.3%</text><text x="62" y="230" text-anchor="end" font-size="13" fill="#6b7280">24/12</text><rect class="bar" x="70" y="214" width="358.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">123.6%</text></svg><figcaption>A steeper roof has much more surface.</figcaption></figure>
+      <h2>Roofing squares and bundles</h2>
+      <p>A <strong>roofing square</strong> is 100 square feet. Asphalt shingles are usually sold in bundles, and many types take three bundles to cover a square, though some take four or more, so check the pack. For the default 25 squares, three bundles per square would be 75 bundles. Ask your supplier for the coverage of the exact product.</p>
+      <h2>Footprint size</h2>
+      <div class="calc-table"><table><thead><tr><th>Footprint (sq ft)</th><th>Roof area at 6/12 (sq ft)</th><th>Squares with 10% buffer</th></tr></thead><tbody><tr><td>1,200</td><td>1,341.6</td><td>15</td></tr><tr><td>2,000</td><td>2,236.1</td><td>25</td></tr><tr><td>3,000</td><td>3,354.1</td><td>37</td></tr><tr><td>4,000</td><td>4,472.1</td><td>50</td></tr></tbody></table></div>
+      <h2>Other units</h2>
+      <p>You can enter the footprint in square feet, square metres or square yards. A footprint of 200 m&sup2; is 2,152.8 sq ft, which gives a 6/12 roof of 2,406.9 sq ft and 27 squares. A footprint of 222 square yards is 1,998 sq ft.</p>
+      <h2>Estimating the cost</h2>
+      <p>Enter a price per square foot of roof area to get an estimate. At $5 per square foot the default roof costs $11,180.34, and at $8 it costs $17,888.54. Real prices depend on the material, your area, the pitch and access, and often include removal of the old roof, underlayment, flashing and labour, so ask for quotes.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Estimated cost of the default roof at three prices per square foot</title><desc id="cf2-d">The price is multiplied by the roof area 2,236.1 sq ft, not the footprint, and the 10% buffer is not included in the cost.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Estimated cost of the default roof at three prices per square foot</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">$3 per sq ft</text><rect class="bar" x="100" y="44" width="123.0" height="22" rx="4" fill="#9ca3af"/><text x="231.0" y="60" font-size="13" font-weight="700" fill="#111827">$6,708.20</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">$5 per sq ft</text><rect class="bar" x="100" y="78" width="205.0" height="22" rx="4" fill="#2563eb"/><text x="313.0" y="94" font-size="13" font-weight="700" fill="#111827">$11,180.34</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">$8 per sq ft</text><rect class="bar" x="100" y="112" width="328.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">$17,888.54</text></svg><figcaption>The price per square foot drives the total.</figcaption></figure>
+      <h2>What the calculator leaves out</h2>
+      <ul><li><strong>Overhangs.</strong> The footprint should include the eaves, which add to the roof area.</li><li><strong>Complex shapes.</strong> Hips, valleys and dormers waste more material, so add 15% or more. For the default roof, a 15% allowance means 26 squares.</li><li><strong>Exact bundles and rolls.</strong> These depend on the roof layout and the product.</li><li><strong>Steepness and access.</strong> Steep roofs cost more to install because they need more safety equipment and time.</li></ul>
+      <h2>Measuring your footprint</h2>
+      <p>Use the outside measurement of the walls and add the overhangs. For an L-shaped house, split it into rectangles and add their areas, and the Square Footage Calculator and Area Calculator can help. If you only know the roof dimensions, measure each section along the slope instead.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Using the living area of the house instead of the footprint with overhangs.</li><li>Entering the pitch as an angle. The tool takes the rise per 12 inches.</li><li>Forgetting that the cost uses the roof area, not the number of squares.</li><li>Ignoring waste on complex roofs.</li><li>Treating the estimate as a quote.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the estimated roof area in square feet, followed by the same area in square metres and square yards, and the number of roofing squares with a 10% buffer. If you entered a price, the last line gives the estimated cost.</p>
+      <div class="callout">This is a planning estimate based on the footprint and pitch only. For an exact material list, measure each roof section and ask a roofing supplier or contractor.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="concrete-calculator.html">Concrete Calculator</a> &ndash; concrete volume and bags</li><li><a href="square-footage-calculator.html">Square Footage Calculator</a> &ndash; measure an area</li><li><a href="area-calculator.html">Area Calculator</a> &ndash; the area of common shapes</li><li><a href="mulch-calculator.html">Mulch Calculator</a> &ndash; mulch for beds</li><li><a href="gravel-calculator.html">Gravel Calculator</a> &ndash; gravel volume, tons and cost</li><li><a href="btu-calculator.html">BTU Calculator</a> &ndash; heating and cooling for a room</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>What if I only know the roof angle in degrees, not the pitch?</h3>
-        <p>Convert with rise = 12 &times; tan(angle). For example, a 25&deg; angle is roughly a 5.6/12 pitch.</p>
+        <h3>What is roof pitch?</h3>
+        <p>It is the rise over a 12-inch run. A 6/12 pitch rises 6 inches for every 12 inches of horizontal distance.</p>
       </div>
       <div class="faq-item">
-        <h3>Is this exact enough to order materials?</h3>
-        <p>Treat it as a planning estimate. Always confirm quantities with an on-site measurement or a roofing contractor before ordering.</p>
+        <h3>How is roof area worked out from the footprint?</h3>
+        <p>Multiply the footprint by the slope factor, the square root of (rise over 12) squared plus 1. For 6/12 the factor is 1.118, so 2,000 square feet becomes 2,236 square feet.</p>
       </div>
+      <div class="faq-item">
+        <h3>What is a roofing square?</h3>
+        <p>A roofing square is 100 square feet. The default 2,236 square foot roof is 22.4 squares, or 25 squares with a 10 percent buffer.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why add 10 percent?</h3>
+        <p>The buffer allows for waste from cuts and overlaps. Complex roofs with hips, valleys and dormers waste more, so add 15 percent or more.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the footprint include the eaves?</h3>
+        <p>It should. Measure the outside of the walls and add the overhangs, since they add to the roof area.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many bundles of shingles do I need?</h3>
+        <p>Many shingles take three bundles per square, though some take more. Check the coverage on the pack and ask your supplier.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Roof_pitch" rel="noopener" target="_blank">Wikipedia: Roof pitch</a>; <a href="https://en.wikipedia.org/wiki/Roof" rel="noopener" target="_blank">Wikipedia: Roof</a>; <a href="https://en.wikipedia.org/wiki/Shingle" rel="noopener" target="_blank">Wikipedia: Shingle</a></p>
     </div>
 
   </div>
