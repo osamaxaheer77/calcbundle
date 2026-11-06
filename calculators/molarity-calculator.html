@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Molarity Calculator: Moles, Volume &amp; Concentration | CalcBundle</title>
-<meta name="description" content="Calculate solution molarity from moles and volume or use solute mass and molecular weight.">
+<title>Molarity Calculator: Moles, Volume &amp; Mass</title>
+<meta name="description" content="Find molarity, mass, volume or molecular weight from the other three values, with molar and mass concentration units, ppm and steps shown for every answer.">
 <link rel="canonical" href="https://calcbundle.net/calculators/molarity-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Molarity Calculator: Moles, Volume &amp; Concentration | CalcBundle">
-<meta property="og:description" content="Calculate solution molarity from moles and volume or use solute mass and molecular weight.">
+<meta property="og:title" content="Molarity Calculator: Moles, Volume &amp; Mass">
+<meta property="og:description" content="Find molarity, mass, volume or molecular weight from the other three values, with molar and mass concentration units, ppm and steps shown for every answer.">
 <meta property="og:url" content="https://calcbundle.net/calculators/molarity-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Molarity Calculator: Moles, Volume &amp; Concentration | CalcBundle">
-<meta name="twitter:description" content="Calculate solution molarity from moles and volume or use solute mass and molecular weight.">
+<meta name="twitter:title" content="Molarity Calculator: Moles, Volume &amp; Mass">
+<meta name="twitter:description" content="Find molarity, mass, volume or molecular weight from the other three values, with molar and mass concentration units, ppm and steps shown for every answer.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,15 +42,7 @@
       "name": "How do you calculate molarity?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Divide the moles of solute by the volume of the solution in liters. If you know the mass, first divide it by the molecular weight to get the moles."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the molarity of 58.44 g of NaCl in 1 liter?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The molecular weight of NaCl is 58.44 g/mol, so 58.44 g is 1 mole, and 1 mole in 1 liter is a 1 M solution."
+        "text": "Divide the moles of solute by the volume of the solution in litres. If you know the mass, divide it by the molecular weight to get the moles. For 100 g of NaCl in 2 L, the molarity is about 0.856 M."
       }
     },
     {
@@ -58,23 +50,39 @@
       "name": "What is the difference between molarity and molality?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Molarity is moles per liter of solution. Molality is moles per kilogram of solvent. Molarity changes with temperature because the volume does, and molality does not."
+        "text": "Molarity is moles per litre of solution, so it changes a little with temperature. Molality is moles per kilogram of solvent, which does not change with temperature."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I convert ppm to molarity?",
+      "name": "How do I make a solution of a given molarity?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For a dilute water solution, 1 ppm is 1 mg per liter. Divide the milligrams per liter by 1,000 to get grams per liter, then divide by the molecular weight to get molarity."
+        "text": "Multiply the molarity by the volume in litres and by the molecular weight to get the grams needed. Dissolve that in some solvent, then add solvent until the final volume is reached."
       }
     },
     {
       "@type": "Question",
-      "name": "Why can the molecular weight not be calculated from g/L?",
+      "name": "Why can I not find the molecular weight from g/L?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A concentration in g/L is already mass over volume, so it carries no information about how many moles the mass contains. You need a molar concentration to find the molecular weight."
+        "text": "Mass divided by volume already is the concentration in g/L, so it carries no information about the mass of a mole. Use a molar concentration to find the molecular weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do ppm and ppb mean here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator treats ppm as mg/L and ppb as micrograms per litre, which holds for dilute solutions in water."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is M1V1 = M2V2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the dilution equation. The moles of solute stay the same when you add solvent, so the initial molarity times the initial volume equals the final molarity times the final volume."
       }
     }
   ]
@@ -145,47 +153,65 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What molarity is</h2>
-      <p>Molarity, also called molar concentration, is the number of moles of a dissolved substance in each liter of solution. It is written as M, so a 2 M solution has 2 moles per liter. It is the usual way to describe the strength of a solution in a laboratory, in pharmacy and in industry. The formula is M = n ÷ V, where n is the amount of solute in moles and V is the volume of the solution in liters.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Molarity is moles of solute per litre of solution. 100 g of NaCl (58.44 g/mol) in 2 L is 1.711156742 mol, a molarity of 0.855578371 M. To make 500 mL of 0.1 M NaCl, weigh 2.922 g.</div>
+      <h2>What molarity is</h2>
+      <p>Molarity, or molar concentration, is the number of moles of a dissolved substance in each litre of solution. It is written <strong>M</strong>, so a 2 M solution has 2 moles per litre. The formula is <strong>M = n &divide; V</strong>, where n is the amount of solute in moles and V is the volume of the <em>solution</em> in litres, not the volume of the solvent alone.</p>
       <h2>Using mass and molecular weight</h2>
-      <p>You often know the mass of the solute and not the number of moles. Divide the mass by the molecular weight, which is the mass of one mole in grams per mole, to get the moles. So molarity = mass ÷ (molecular weight × volume). For 100 g of sodium chloride, which has a molecular weight of 58.44 g/mol, in 2 liters of solution, there are 1.711 moles, and the molarity is 0.8556 M. The calculator uses the term molecular weight as it is used for molar mass in g/mol.</p>
-
-      <h2>Finding the other values</h2>
-      <p>Rearrange the same equation to find any of the four values. The mass is volume × molarity × molecular weight. The volume is mass ÷ (molecular weight × molarity). The molecular weight is mass ÷ (volume × molarity). If you give the concentration as a mass concentration, such as g/L, the mass and volume can be found without the molecular weight, but the molecular weight itself cannot, because mass divided by volume already is the concentration.</p>
-
+      <p>You often know the mass of the solute rather than the moles. Divide the mass by the molecular weight, the mass of one mole in grams per mole, to get the moles. So <strong>molarity = mass &divide; (molecular weight &times; volume)</strong>. The calculator uses &ldquo;molecular weight&rdquo; to mean molar mass in g/mol. The Molecular Weight Calculator finds it from a formula.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on <strong>100 g</strong> of solute with a molecular weight of <strong>58.44 g/mol</strong>, which is sodium chloride, in <strong>2 L</strong> of solution, with the concentration left blank. The moles are 100 &divide; 58.44 = <strong>1.711156742 mol</strong>. The molarity is 1.711156742 &divide; 2 = <strong>0.855578371 M</strong>. The tool also shows the mass concentration, 100 &divide; 2 = <strong>50 g/L</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">The default 100 g of NaCl in different volumes of solution (molarity, M)</title><desc id="cf2-d">Molarity falls in proportion as the volume grows: the same 1.711 moles in 4 litres is half the concentration of 2 litres.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The default 100 g of NaCl in different volumes of solution (molarity, M)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 L</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">1.711156742 M</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">2 L (default)</text><rect class="bar" x="110" y="78" width="159.0" height="22" rx="4" fill="#2563eb"/><text x="277.0" y="94" font-size="13" font-weight="700" fill="#111827">0.855578371 M</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">4 L</text><rect class="bar" x="110" y="112" width="79.5" height="22" rx="4" fill="#9ca3af"/><text x="197.5" y="128" font-size="13" font-weight="700" fill="#111827">0.4277891855 M</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">10 L</text><rect class="bar" x="110" y="146" width="31.8" height="22" rx="4" fill="#9ca3af"/><text x="149.8" y="162" font-size="13" font-weight="700" fill="#111827">0.1711156742 M</text></svg><figcaption>More solution, lower molarity.</figcaption></figure>
+      <h2>Finding any of the four values</h2>
+      <p>Fill in three boxes and leave the one you want blank. The same equation rearranges to find each value.</p>
+      <div class="calc-table"><table><thead><tr><th>To find</th><th>Formula</th><th>Example</th></tr></thead><tbody><tr><td>Molarity</td><td>mass &divide; (molecular weight &times; volume)</td><td>100 g &divide; (58.44 &times; 2 L) = 0.855578371 M</td></tr><tr><td>Mass</td><td>volume &times; molarity &times; molecular weight</td><td>0.5 L &times; 0.1 M &times; 58.44 = 2.922 g</td></tr><tr><td>Volume</td><td>mass &divide; (molecular weight &times; molarity)</td><td>5.844 g &divide; (58.44 &times; 0.5 M) = 0.2 L</td></tr><tr><td>Molecular weight</td><td>mass &divide; (volume &times; molarity)</td><td>4 g &divide; (0.1 L &times; 1 M) = 40 g/mol</td></tr></tbody></table></div>
+      <p>The last example, 4 g in 100 mL giving a 1 M solution, points to a molecular weight of 40 g/mol, which is sodium hydroxide. To make 500 mL of 0.1 M salt solution you weigh out 2.922 g.</p>
+      <h2>Molecular weights of common solutes</h2>
+      <div class="calc-table"><table><thead><tr><th>Substance</th><th>Molecular weight (g/mol)</th><th>Grams per litre in a 1 M solution</th></tr></thead><tbody><tr><td>Water (H&#8322;O)</td><td>18.015</td><td>18.02</td></tr><tr><td>Hydrochloric acid (HCl)</td><td>36.46</td><td>36.46</td></tr><tr><td>Sodium hydroxide (NaOH)</td><td>40</td><td>40</td></tr><tr><td>Sodium chloride (NaCl)</td><td>58.44</td><td>58.44</td></tr><tr><td>Sulfuric acid (H&#8322;SO&#8324;)</td><td>98.08</td><td>98.08</td></tr><tr><td>Glucose (C&#8326;H&#8321;&#8322;O&#8326;)</td><td>180.16</td><td>180.16</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Grams of solute in one litre of a 1 M solution (equal to the molecular weight)</title><desc id="cf1-d">A 1 M solution of NaCl holds 58.44 g of salt per litre, while 1 M glucose holds 180.16 g, because a mole of each has a different mass.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Grams of solute in one litre of a 1 M solution (equal to the molecular weight)</text><text x="202" y="60" text-anchor="end" font-size="13" fill="#6b7280">Water (H2O)</text><rect class="bar" x="210" y="44" width="21.8" height="22" rx="4" fill="#9ca3af"/><text x="239.8" y="60" font-size="13" font-weight="700" fill="#111827">18.02 g</text><text x="202" y="94" text-anchor="end" font-size="13" fill="#6b7280">Hydrochloric acid (HCl)</text><rect class="bar" x="210" y="78" width="44.1" height="22" rx="4" fill="#9ca3af"/><text x="262.1" y="94" font-size="13" font-weight="700" fill="#111827">36.46 g</text><text x="202" y="128" text-anchor="end" font-size="13" fill="#6b7280">Sodium hydroxide (NaOH)</text><rect class="bar" x="210" y="112" width="48.4" height="22" rx="4" fill="#9ca3af"/><text x="266.4" y="128" font-size="13" font-weight="700" fill="#111827">40 g</text><text x="202" y="162" text-anchor="end" font-size="13" fill="#6b7280">Sodium chloride (NaCl)</text><rect class="bar" x="210" y="146" width="70.7" height="22" rx="4" fill="#2563eb"/><text x="288.7" y="162" font-size="13" font-weight="700" fill="#111827">58.44 g</text><text x="202" y="196" text-anchor="end" font-size="13" fill="#6b7280">Sulfuric acid (H2SO4)</text><rect class="bar" x="210" y="180" width="118.7" height="22" rx="4" fill="#9ca3af"/><text x="336.7" y="196" font-size="13" font-weight="700" fill="#111827">98.08 g</text><text x="202" y="230" text-anchor="end" font-size="13" fill="#6b7280">Glucose (C6H12O6)</text><rect class="bar" x="210" y="214" width="218.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">180.16 g</text></svg><figcaption>One mole of each substance has a different mass.</figcaption></figure>
       <h2>Concentration units</h2>
-      <p>Molar units are M, mM, μM, nM and mol/m³. Mass units are kg/L, g/L, mg/L, kg/m³ and g/m³. The units ppm and ppb are treated as mg/L and μg/L, which holds for dilute solutions in water, where one liter has a mass of about one kilogram. Volume units include liters, milliliters, US gallons, quarts, pints, cups and fluid ounces, and mass units reach from micrograms to metric tons, pounds, ounces and atomic mass units.</p>
-      <div class="callout">A molar concentration uses the volume of the final solution, not the volume of the solvent you started with.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: verify the calculation</h2><p>Dissolving 0.5 mol of solute to make 2.0 litres of solution gives 0.25 mol/L, or 0.25 M.</p><h2>Related calculators</h2><p>For further calculations, see <a href="molecular-weight-calculator.html">Molecular Weight Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="molecular-weight-calculator.html">Molecular Weight Calculator</a>, <a href="half-life-calculator.html">Half-Life Calculator</a>, <a href="weight-calculator.html">Weight Calculator</a>, <a href="speed-calculator.html">Speed Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p><strong>Molar units</strong> are M, mM, &micro;M, nM and mol/m&sup3;. <strong>Mass units</strong> are kg/L, g/L, mg/L, kg/m&sup3; and g/m&sup3;. The units ppm and ppb are treated as mg/L and &micro;g/L, which holds for dilute solutions in water, where one litre has a mass of about one kilogram.</p>
+      <div class="calc-table"><table><thead><tr><th>Unit</th><th>Equals</th></tr></thead><tbody><tr><td>1 M</td><td>1 mol/L</td></tr><tr><td>1 mM</td><td>0.001 mol/L</td></tr><tr><td>1 &micro;M</td><td>0.000001 mol/L</td></tr><tr><td>1 nM</td><td>0.000000001 mol/L</td></tr><tr><td>1 mol/m&sup3;</td><td>0.001 mol/L</td></tr><tr><td>1 ppm</td><td>1 mg/L</td></tr><tr><td>1 ppb</td><td>1 &micro;g/L</td></tr></tbody></table></div>
+      <p>If you give the concentration as a mass concentration such as g/L, the mass and volume can be found without the molecular weight. For 25 g/L and a volume of 2 L the mass is <strong>50 g</strong>. The molecular weight cannot be found from a mass concentration, because mass divided by volume already is the concentration. Enter the concentration in a molar unit, such as M, to find it.</p>
+      <h2>Diluting a solution</h2>
+      <p>Molarity also helps you dilute. The amount of solute does not change when you add water, so <strong>M<sub>1</sub>V<sub>1</sub> = M<sub>2</sub>V<sub>2</sub></strong>. To make 250 mL of 0.1 M from a 1 M stock you need 0.1 &times; 250 &divide; 1 = <strong>25 mL</strong> of stock, topped up with water to 250 mL in a volumetric flask.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Diluting 1 M to 0.1 M: volume of stock needed per 250 mL of final solution (mL)</title><desc id="cf3-d">Use M1 &amp;times; V1 = M2 &amp;times; V2: 1 M &amp;times; V1 = 0.1 M &amp;times; 250 mL, so V1 = 25 mL, topped up with water to 250 mL.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Diluting 1 M to 0.1 M: volume of stock needed per 250 mL of final solution (mL)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">Stock 1 M</text><rect class="bar" x="110" y="44" width="35.3" height="22" rx="4" fill="#2563eb"/><text x="153.3" y="60" font-size="13" font-weight="700" fill="#111827">25 mL</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Water added</text><rect class="bar" x="110" y="78" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">225 mL</text></svg><figcaption>A tenfold dilution takes 25 mL of stock.</figcaption></figure>
+      <h2>Mass, volume and weight units</h2>
+      <p>Volume units run from cubic millimetres and millilitres to litres, cubic metres, US gallons, quarts, pints, cups and fluid ounces. Mass units run from micrograms to metric tons, pounds and atomic mass units. The tool converts everything to grams and litres before it calculates, and shows the steps.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Using the volume of the solvent instead of the final solution.</li><li>Mixing mL and L. One litre is 1,000 mL.</li><li>Using a molecular weight for the wrong form of the compound, such as an anhydrous salt when yours is a hydrate.</li><li>Filling in all four boxes. The tool then recalculates the concentration and ignores the one you typed.</li><li>Treating ppm as exact for solutions that are not dilute water.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the value you left blank, in the unit you chose. Below it are related values such as the moles of solute and the mass concentration, and a Steps box that shows the formula with your numbers.</p>
+      <div class="callout">Real solutions are not always ideal, and temperature changes volume slightly. For precise lab work follow your method and use calibrated glassware.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="molecular-weight-calculator.html">Molecular Weight Calculator</a> &ndash; the mass of a compound</li><li><a href="percentage-calculator.html">Percentage Calculator</a> &ndash; percent change and difference</li><li><a href="mass-calculator.html">Mass Calculator</a> &ndash; mass from density and volume</li><li><a href="density-calculator.html">Density Calculator</a> &ndash; density, mass or volume</li><li><a href="conversion-calculator.html">Conversion Calculator</a> &ndash; convert between units</li><li><a href="half-life-calculator.html">Half Life Calculator</a> &ndash; decay and remaining amount</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do you calculate molarity?</h3>
-        <p>Divide the moles of solute by the volume of the solution in liters. If you know the mass, first divide it by the molecular weight to get the moles.</p>
-      </div>
-      <div class="faq-item">
-        <h3>What is the molarity of 58.44 g of NaCl in 1 liter?</h3>
-        <p>The molecular weight of NaCl is 58.44 g/mol, so 58.44 g is 1 mole, and 1 mole in 1 liter is a 1 M solution.</p>
+        <p>Divide the moles of solute by the volume of the solution in litres. If you know the mass, divide it by the molecular weight to get the moles. For 100 g of NaCl in 2 L, the molarity is about 0.856 M.</p>
       </div>
       <div class="faq-item">
         <h3>What is the difference between molarity and molality?</h3>
-        <p>Molarity is moles per liter of solution. Molality is moles per kilogram of solvent. Molarity changes with temperature because the volume does, and molality does not.</p>
+        <p>Molarity is moles per litre of solution, so it changes a little with temperature. Molality is moles per kilogram of solvent, which does not change with temperature.</p>
       </div>
       <div class="faq-item">
-        <h3>How do I convert ppm to molarity?</h3>
-        <p>For a dilute water solution, 1 ppm is 1 mg per liter. Divide the milligrams per liter by 1,000 to get grams per liter, then divide by the molecular weight to get molarity.</p>
+        <h3>How do I make a solution of a given molarity?</h3>
+        <p>Multiply the molarity by the volume in litres and by the molecular weight to get the grams needed. Dissolve that in some solvent, then add solvent until the final volume is reached.</p>
       </div>
       <div class="faq-item">
-        <h3>Why can the molecular weight not be calculated from g/L?</h3>
-        <p>A concentration in g/L is already mass over volume, so it carries no information about how many moles the mass contains. You need a molar concentration to find the molecular weight.</p>
+        <h3>Why can I not find the molecular weight from g/L?</h3>
+        <p>Mass divided by volume already is the concentration in g/L, so it carries no information about the mass of a mole. Use a molar concentration to find the molecular weight.</p>
       </div>
+      <div class="faq-item">
+        <h3>What do ppm and ppb mean here?</h3>
+        <p>The calculator treats ppm as mg/L and ppb as micrograms per litre, which holds for dilute solutions in water.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is M1V1 = M2V2?</h3>
+        <p>It is the dilution equation. The moles of solute stay the same when you add solvent, so the initial molarity times the initial volume equals the final molarity times the final volume.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Molar_concentration" rel="noopener" target="_blank">Wikipedia: Molar concentration</a>; <a href="https://en.wikipedia.org/wiki/Molar_mass" rel="noopener" target="_blank">Wikipedia: Molar mass</a>; <a href="https://en.wikipedia.org/wiki/Parts-per_notation" rel="noopener" target="_blank">Wikipedia: Parts-per notation</a></p>
     </div>
 
   </div>
