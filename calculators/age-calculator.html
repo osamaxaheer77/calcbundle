@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Age Calculator: Age on Any Date &amp; Days Between | CalcBundle</title>
-<meta name="description" content="Calculate age on a specific date in years, months and days, or compare two dates for elapsed weeks, hours and more.">
+<meta name="description" content="Calculate age on a specific date in years, months and days, or compare any two dates for the elapsed months, weeks, days, hours, minutes and seconds.">
 <link rel="canonical" href="https://calcbundle.net/calculators/age-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Age Calculator: Age on Any Date &amp; Days Between | CalcBundle">
-<meta property="og:description" content="Calculate age on a specific date in years, months and days, or compare two dates for elapsed weeks, hours and more.">
+<meta property="og:description" content="Calculate age on a specific date in years, months and days, or compare any two dates for the elapsed months, weeks, days, hours, minutes and seconds.">
 <meta property="og:url" content="https://calcbundle.net/calculators/age-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Age Calculator: Age on Any Date &amp; Days Between | CalcBundle">
-<meta name="twitter:description" content="Calculate age on a specific date in years, months and days, or compare two dates for elapsed weeks, hours and more.">
+<meta name="twitter:description" content="Calculate age on a specific date in years, months and days, or compare any two dates for the elapsed months, weeks, days, hours, minutes and seconds.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,15 +41,47 @@
       "name": "Can I use this to find the days between any two dates, not just an age?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — \"Date of Birth\" and \"Age at the Date of\" are just labels; enter any two dates to see the full interval broken down every way."
+        "text": "Yes. Date of Birth and Age at the Date of are just labels. Enter any two dates to see the full interval broken down every way."
       }
     },
     {
       "@type": "Question",
-      "name": "Why does the total in months differ from years×12 + months?",
+      "name": "Why is the total in months different from years x 12?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It doesn't — \"total months\" is exactly years×12 plus the leftover months, paired with the same leftover days as the main year/month/day result."
+        "text": "It is not. Total months is exactly years x 12 plus the leftover months, paired with the same leftover days as the main year, month and day result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are leap years handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Leap days are counted in the total number of days, so a person born on February 29 still gets a correct result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the month and day result depend on the dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Months have different lengths, so the same number of months can cover different numbers of days. The calculator counts full calendar months first and then the leftover days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does age ever count differently?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Some traditional systems count a baby as age 1 at birth and add a year at New Year rather than on the birthday. This calculator uses the common convention of adding a year on each birthday."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I find my age on a future date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Change the second date to any date, past or future, such as a retirement date."
       }
     }
   ]
@@ -112,41 +144,58 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How age is counted here</h2>
-      <p>This calculator uses the most common Western convention: age increases by one on each birthday. Someone who has lived 3 years and 11 months is "3 years old" until their next birthday, one month later.</p>
-
-      <h2>Why month/day results can look surprising</h2>
-      <p>Months have different lengths, so counting "how many months and days" between two dates isn't always intuitive. From Feb 28 to Mar 31, for example, this calculator counts Feb 28 to Mar 28 as one full month, leaving 3 remaining days &mdash; a different (but equally reasonable) convention than treating both as "end of month" and calling it exactly one month.</p>
-      <div class="callout">Other cultures count age differently &mdash; in one traditional Chinese system, a baby is considered age 1 at birth and gains a year at the Lunar New Year rather than their birthday, regardless of how many days old they actually are.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understand the result</h2>
-      <p>Someone born on January 1, 2000 is 25 years old on January 1, 2025. The interval spans 25 calendar years, including leap days, so multiplying 25 by 365 would not give the exact day count.</p>
-      <h2>Related calculators</h2>
-      <p>For adding or subtracting a duration from a calendar date, try the <a href="date-calculator.html">Date Calculator</a>. For measuring working hours, see the <a href="hours-calculator.html">Hours Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>Suppose someone was born on January 15, 1990. On September 24, 2026 they are 36 years, 8 months and 9 days old. The same span is 440 months and 9 days, 1,914 weeks and 3 days, or 13,401 days, which is 321,624 hours. Each figure is the same interval written in a different unit, so use the one that suits your purpose.</p>
-
-      <h2>Tips for exact ages</h2>
-      <p>Change the second date to find an age at any point in the past or the future, for example the age someone will be on a retirement date or the age a child was on the first day of school. Leap days are counted, so a person born on February 29 still gets a correct result. If you only need the gap between two dates, the Date Calculator gives days, weeks and months directly.</p>
-
-      <h2>Common uses</h2>
-      <p>People use an age calculator for school and sports eligibility cut-offs, insurance and benefit age limits, filling in forms that ask for age in months, planning milestones such as 10,000 days old, and checking family history dates.</p>
-
-      <p><strong>You might also need:</strong> <a href="time-calculator.html">Time Calculator</a>, <a href="hours-calculator.html">Hours Calculator</a>, <a href="date-calculator.html">Date Calculator</a>, <a href="time-duration-calculator.html">Time Duration Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Age is the calendar interval between a birth date and another date. Someone born on January 15, 1990 is 36 years, 8 months and 9 days old on September 24, 2026, which is 13,401 days in total.</div>
+      <h2>How age is counted here</h2>
+      <p>The calculator uses the most common Western convention: a person&rsquo;s age goes up by one on each birthday. Someone who has lived 3 years and 11 months is &ldquo;3 years old&rdquo; until their next birthday one month later. Enter a date of birth and the date you want to measure to, and you get the age in years, months and days, plus the same span as total months, weeks, days, hours, minutes and seconds.</p>
+      <h2>Worked example with the default dates</h2>
+      <p>Born on January 15, 1990 and measured on September 24, 2026, the person is <strong>36 years, 8 months and 9 days</strong> old. The same span is 440 months and 9 days, 1,914 weeks and 3 days, <strong>13,401 days</strong>, 321,624 hours, 19,297,440 minutes or 1,157,846,400 seconds. They were born on a Monday, and the interval includes 9 leap days. Their next birthday is 113 days away, and their 10,000th day was June 2, 2017.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Age in years at each 5,000-day milestone</title><desc id="cf1-d">The 10,000th day for this person falls on June 2, 2017, at 27.4 years old; the 20,000th falls on October 18, 2044.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Age in years at each 5,000-day milestone</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">5,000 days</text><rect class="bar" x="100" y="44" width="82.0" height="22" rx="4" fill="#2563eb"/><text x="190.0" y="60" font-size="13" font-weight="700" fill="#111827">13.7 years</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">10,000 days</text><rect class="bar" x="100" y="78" width="164.0" height="22" rx="4" fill="#2563eb"/><text x="272.0" y="94" font-size="13" font-weight="700" fill="#111827">27.4 years</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">15,000 days</text><rect class="bar" x="100" y="112" width="246.0" height="22" rx="4" fill="#2563eb"/><text x="354.0" y="128" font-size="13" font-weight="700" fill="#111827">41.1 years</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">20,000 days</text><rect class="bar" x="100" y="146" width="328.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">54.8 years</text></svg><figcaption>Day-count milestones are a fun way to mark time between birthdays.</figcaption></figure>
+      <h2>How the years, months and days are worked out</h2>
+      <ul><li>Start with the difference in years, months and days between the two dates.</li><li>If the day difference is negative, borrow a month and add the number of days in the month before the end date.</li><li>If the month difference is negative, borrow a year and add 12 months.</li><li>Total days is the exact count of calendar days between the dates, so leap days are included.</li></ul>
+      <h2>Why month and day results can look surprising</h2>
+      <p>Months have different lengths, so counting how many months and days lie between two dates is not always intuitive. From February 28 to March 31, the calculator counts February 28 to March 28 as one full month, leaving 3 remaining days: 1 month and 3 days. Treating both as &ldquo;end of month&rdquo; and calling it exactly one month is another reasonable convention. Neither is wrong; the tool uses the first and says so.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 454" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Days in each month of 2026 (why month and day results look uneven)</title><desc id="cf2-d">Months run from 28 to 31 days, so the same number of months can cover different numbers of days.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Days in each month of 2026 (why month and day results look uneven)</text><text x="42" y="60" text-anchor="end" font-size="13" fill="#6b7280">Jan</text><rect class="bar" x="50" y="44" width="378.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">31</text><text x="42" y="94" text-anchor="end" font-size="13" fill="#6b7280">Feb</text><rect class="bar" x="50" y="78" width="341.4" height="22" rx="4" fill="#f59e0b"/><text x="399.4" y="94" font-size="13" font-weight="700" fill="#111827">28</text><text x="42" y="128" text-anchor="end" font-size="13" fill="#6b7280">Mar</text><rect class="bar" x="50" y="112" width="378.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">31</text><text x="42" y="162" text-anchor="end" font-size="13" fill="#6b7280">Apr</text><rect class="bar" x="50" y="146" width="365.8" height="22" rx="4" fill="#10b981"/><text x="423.8" y="162" font-size="13" font-weight="700" fill="#111827">30</text><text x="42" y="196" text-anchor="end" font-size="13" fill="#6b7280">May</text><rect class="bar" x="50" y="180" width="378.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">31</text><text x="42" y="230" text-anchor="end" font-size="13" fill="#6b7280">Jun</text><rect class="bar" x="50" y="214" width="365.8" height="22" rx="4" fill="#10b981"/><text x="423.8" y="230" font-size="13" font-weight="700" fill="#111827">30</text><text x="42" y="264" text-anchor="end" font-size="13" fill="#6b7280">Jul</text><rect class="bar" x="50" y="248" width="378.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="264" font-size="13" font-weight="700" fill="#111827">31</text><text x="42" y="298" text-anchor="end" font-size="13" fill="#6b7280">Aug</text><rect class="bar" x="50" y="282" width="378.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="298" font-size="13" font-weight="700" fill="#111827">31</text><text x="42" y="332" text-anchor="end" font-size="13" fill="#6b7280">Sep</text><rect class="bar" x="50" y="316" width="365.8" height="22" rx="4" fill="#10b981"/><text x="423.8" y="332" font-size="13" font-weight="700" fill="#111827">30</text><text x="42" y="366" text-anchor="end" font-size="13" fill="#6b7280">Oct</text><rect class="bar" x="50" y="350" width="378.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="366" font-size="13" font-weight="700" fill="#111827">31</text><text x="42" y="400" text-anchor="end" font-size="13" fill="#6b7280">Nov</text><rect class="bar" x="50" y="384" width="365.8" height="22" rx="4" fill="#10b981"/><text x="423.8" y="400" font-size="13" font-weight="700" fill="#111827">30</text><text x="42" y="434" text-anchor="end" font-size="13" fill="#6b7280">Dec</text><rect class="bar" x="50" y="418" width="378.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="434" font-size="13" font-weight="700" fill="#111827">31</text></svg><figcaption>Uneven month lengths are the reason month-and-day answers depend on the convention.</figcaption></figure>
+      <h2>Leap-day birthdays</h2>
+      <p>A person born on February 29 still gets a correct result. For someone born on February 29, 2000, the tool shows 0 years 11 months 30 days on February 28, 2001, and 1 year 0 months 0 days on March 1, 2001, so the birthday year ticks over on March 1 in non-leap years. Leap years are every year divisible by 4, except century years that are not divisible by 400, so 2000 was a leap year and 1900 was not.</p>
+      <h2>Other ways to count age</h2>
+      <p>Other cultures count differently. In one traditional East Asian system, a baby is age 1 at birth and gains a year at the Lunar New Year, regardless of how many days old they are. Always check which convention a form or law uses.</p>
+      <h2>Uses beyond birthdays</h2>
+      <ul><li>School and sports cut-off dates.</li><li>Insurance and benefit age limits.</li><li>Forms that ask for age in months.</li><li>Planning milestones, such as a 10,000-day birthday.</li><li>Any gap between two dates: enter them as the first and second dates.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Multiplying years by 365. That ignores leap days and gives an inexact count of days.</li><li>Entering the dates in the wrong order. The birth date must come first.</li><li>Expecting months to equal exactly 30 days.</li><li>Using the age for a legal purpose without checking the local rule.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the age in years, months and days. The lines below give the same interval in other units, and each is the same span, so choose the one that suits your purpose. To add a time span to a date, use the Date Calculator; for working hours see the Hours Calculator.</p>
+      <div class="callout">The result is a calendar interval. For legal or medical age rules, follow the convention that applies in your country.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="date-calculator.html">Date Calculator</a> &ndash; add or subtract time from a date</li><li><a href="day-counter.html">Day Counter</a> &ndash; count days between dates</li><li><a href="time-duration-calculator.html">Time Duration Calculator</a> &ndash; the time between two clock times</li><li><a href="hours-calculator.html">Hours Calculator</a> &ndash; working hours</li><li><a href="time-calculator.html">Time Calculator</a> &ndash; add and subtract times</li><li><a href="time-zone-calculator.html">Time Zone Calculator</a> &ndash; convert times across zones</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Can I use this to find the days between any two dates, not just an age?</h3>
-        <p>Yes &mdash; "Date of Birth" and "Age at the Date of" are just labels; enter any two dates to see the full interval broken down every way.</p>
+        <p>Yes. Date of Birth and Age at the Date of are just labels. Enter any two dates to see the full interval broken down every way.</p>
       </div>
       <div class="faq-item">
-        <h3>Why does the total in months differ from years&times;12 + months?</h3>
-        <p>It doesn't &mdash; "total months" is exactly years&times;12 plus the leftover months, paired with the same leftover days as the main year/month/day result.</p>
+        <h3>Why is the total in months different from years x 12?</h3>
+        <p>It is not. Total months is exactly years x 12 plus the leftover months, paired with the same leftover days as the main year, month and day result.</p>
       </div>
+      <div class="faq-item">
+        <h3>How are leap years handled?</h3>
+        <p>Leap days are counted in the total number of days, so a person born on February 29 still gets a correct result.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the month and day result depend on the dates?</h3>
+        <p>Months have different lengths, so the same number of months can cover different numbers of days. The calculator counts full calendar months first and then the leftover days.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does age ever count differently?</h3>
+        <p>Yes. Some traditional systems count a baby as age 1 at birth and add a year at New Year rather than on the birthday. This calculator uses the common convention of adding a year on each birthday.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I find my age on a future date?</h3>
+        <p>Yes. Change the second date to any date, past or future, such as a retirement date.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://aa.usno.navy.mil/faq/docs/leap_years.php" rel="noopener" target="_blank">U.S. Naval Observatory: Leap Years</a></p>
     </div>
 
   </div>
