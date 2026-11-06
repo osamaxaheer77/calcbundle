@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Body Surface Area Calculator: BSA Formula Comparison | CalcBundle</title>
-<meta name="description" content="Estimate body surface area from height and weight using commonly applied reference equations.">
+<title>Body Surface Area Calculator: 5 BSA Formulas</title>
+<meta name="description" content="Estimate body surface area from height and weight with five formulas, Du Bois, Mosteller, Haycock, Gehan and George and Boyd, plus the average and BMI.">
 <link rel="canonical" href="https://calcbundle.net/calculators/body-surface-area-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Body Surface Area Calculator: BSA Formula Comparison | CalcBundle">
-<meta property="og:description" content="Estimate body surface area from height and weight using commonly applied reference equations.">
+<meta property="og:title" content="Body Surface Area Calculator: 5 BSA Formulas">
+<meta property="og:description" content="Estimate body surface area from height and weight with five formulas, Du Bois, Mosteller, Haycock, Gehan and George and Boyd, plus the average and BMI.">
 <meta property="og:url" content="https://calcbundle.net/calculators/body-surface-area-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-fitness.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Body Surface Area Calculator: BSA Formula Comparison | CalcBundle">
-<meta name="twitter:description" content="Estimate body surface area from height and weight using commonly applied reference equations.">
+<meta name="twitter:title" content="Body Surface Area Calculator: 5 BSA Formulas">
+<meta name="twitter:description" content="Estimate body surface area from height and weight with five formulas, Du Bois, Mosteller, Haycock, Gehan and George and Boyd, plus the average and BMI.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-fitness.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Which formula should I use?",
+      "name": "Which BSA formula should I use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mosteller is the most commonly cited in modern clinical practice for its simplicity, though DuBois remains widely referenced historically. For any medical decision, follow your healthcare provider's preferred formula."
+        "text": "Mosteller is the most commonly cited in modern clinical practice for its simplicity, though Du Bois remains widely referenced historically. For any medical purpose, use the formula your provider or protocol names."
       }
     },
     {
       "@type": "Question",
-      "name": "Why do the results differ slightly between formulas?",
+      "name": "Why does the calculator show five formulas?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Each formula was derived from a different set of measured subjects using different regression techniques, so small systematic differences between them are expected and normal."
+        "text": "Researchers have published several equations fitted to different study populations. They agree closely for average adults but differ for children and for very large or small bodies."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Mosteller formula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BSA in square metres is the square root of height in centimetres times weight in kilograms divided by 3600. For 170 cm and 70 kg, that is 1.82 square metres."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is body surface area used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is used to dose some drugs, especially chemotherapy, to work out the cardiac index, to describe the extent of burns and to express kidney function."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this for a baby?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator accepts weight in grams for infants. The formulas are still estimates, and medical dosing must follow the protocol used by the clinic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the average the right number to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a reasonable general estimate. Clinical use follows the single formula named in the local protocol, not the average."
       }
     }
   ]
@@ -140,34 +172,66 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Why body surface area matters clinically</h2>
-      <p>BSA correlates more closely with metabolic mass than body weight alone, since it accounts for both height and weight together. It's used to determine drug dosages (especially chemotherapy), calculate cardiac index, and reference burn treatment extent, among other clinical applications.</p>
-
-      <h2>Why five different formulas</h2>
-      <p>Direct BSA measurement is impractical, so researchers have published several regression formulas derived from different study populations over the decades. Mosteller's formula is simplest and widely used for its ease of calculation; Du Bois is one of the oldest and most historically referenced; the others were developed to improve accuracy for specific populations (like children, for Haycock). They typically agree within a few percent of each other.</p>
-      <div class="callout">This tool is for reference and educational purposes. Actual clinical dosing decisions should always be made by a qualified healthcare provider using validated clinical protocols.</div>
-
-      <!--seo-extra-->
-<h2>Worked example and interpretation</h2><p>Using the Mosteller equation, a person 170 cm tall and weighing 70 kg has BSA ≈ √(170 × 70 ÷ 3600) ≈ 1.82 m². Different formulas can vary.</p><h2>Related calculators and context</h2><p>For weight relative to height, try the <a href="bmi-calculator.html">BMI Calculator</a>. For lean-mass reference estimates, see the <a href="lean-body-mass-calculator.html">Lean Body Mass Calculator</a>.</p>
-      <h2>A worked example</h2>
-      <p>For a person who is 5 feet 9 inches tall and weighs 155 pounds, the five formulas give nearly the same answer: Du Bois 1.85 m², Mosteller 1.85 m², Haycock 1.85 m², Gehan and George 1.86 m² and Boyd 1.86 m². The average of 1.85 m² is a sensible figure to use. The BMI of 22.9 kg/m² is shown alongside for context.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> For 5 ft 9 in and 155 lb, the five BSA formulas all give about 1.85 m&sup2; (19.96 ft&sup2;), with a BMI of 22.9. Mosteller is &radic;(height in cm &times; weight in kg &divide; 3600).</div>
+      <h2>What body surface area is</h2>
+      <p>Body surface area, or BSA, is an estimate of the total skin area of the body, in square metres. It is worked out from height and weight, because measuring skin area directly is not practical. Because it takes both height and weight into account, it tracks metabolic mass more closely than weight alone, and doctors use it for some drug doses, for the cardiac index and for burns.</p>
+      <h2>What the calculator does</h2>
+      <p>Enter your height in feet and inches or in centimetres, and your weight in pounds, kilograms or grams. The calculator gives the BSA from <strong>five formulas</strong>, each in square metres and square feet, the <strong>average</strong> of the five, and the BMI for reference. The gram option is there for infants.</p>
+      <h2>The five formulas</h2>
+      <p>Here <em>H</em> is height in centimetres and <em>W</em> is weight in kilograms (for Boyd, <em>W<sub>g</sub></em> is weight in grams).</p>
+      <div class="calc-table"><table><thead><tr><th>Formula</th><th>Equation (m&sup2;)</th></tr></thead><tbody><tr><td>Du Bois</td><td>0.007184 &times; H<sup>0.725</sup> &times; W<sup>0.425</sup></td></tr><tr><td>Mosteller</td><td>&radic;(H &times; W &divide; 3600)</td></tr><tr><td>Haycock</td><td>0.024265 &times; H<sup>0.3964</sup> &times; W<sup>0.5378</sup></td></tr><tr><td>Gehan &amp; George</td><td>0.0235 &times; H<sup>0.42246</sup> &times; W<sup>0.51456</sup></td></tr><tr><td>Boyd</td><td>0.0003207 &times; H<sup>0.3</sup> &times; W<sub>g</sub><sup>(0.7285 &minus; 0.0188 &times; log<sub>10</sub> W<sub>g</sub>)</sup></td></tr></tbody></table></div>
+      <p>Researchers published several equations over the decades, each fitted to a different group of people. Mosteller is the simplest to calculate by hand, Du Bois is the oldest and most cited, and Haycock and Gehan and George were fitted with children in mind.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on a person <strong>5 feet 9 inches</strong> tall (175.26 cm) weighing <strong>155 pounds</strong> (70.31 kg). The five formulas give Du Bois 1.85, Mosteller 1.85, Haycock 1.85, Gehan and George 1.86 and Boyd 1.86 m&sup2;. The average is <strong>1.85 m&sup2;</strong>, or about 19.96 square feet, and the BMI shown alongside is <strong>22.9 kg/m&sup2;</strong>. As a check by hand, Mosteller for 170 cm and 70 kg is &radic;(170 &times; 70 &divide; 3600) = &radic;3.3056 = <strong>1.82 m&sup2;</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">The five formulas for 5 ft 9 in and 155 lb (square metres)</title><desc id="cf1-d">The formulas agree to within 0.01 m&amp;sup2; for this average adult, and the average is 1.85 m&amp;sup2; (19.96 ft&amp;sup2;).</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The five formulas for 5 ft 9 in and 155 lb (square metres)</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">Du Bois</text><rect class="bar" x="130" y="44" width="297.1" height="22" rx="4" fill="#2563eb"/><text x="435.1" y="60" font-size="13" font-weight="700" fill="#111827">1.85 m&amp;sup2;</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">Mosteller</text><rect class="bar" x="130" y="78" width="296.5" height="22" rx="4" fill="#2563eb"/><text x="434.5" y="94" font-size="13" font-weight="700" fill="#111827">1.85 m&amp;sup2;</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">Haycock</text><rect class="bar" x="130" y="112" width="296.9" height="22" rx="4" fill="#2563eb"/><text x="434.9" y="128" font-size="13" font-weight="700" fill="#111827">1.85 m&amp;sup2;</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">Gehan &amp; George</text><rect class="bar" x="130" y="146" width="298.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">1.86 m&amp;sup2;</text><text x="122" y="196" text-anchor="end" font-size="13" fill="#6b7280">Boyd</text><rect class="bar" x="130" y="180" width="297.5" height="22" rx="4" fill="#2563eb"/><text x="435.5" y="196" font-size="13" font-weight="700" fill="#111827">1.86 m&amp;sup2;</text></svg><figcaption>Five formulas, almost the same answer for an average adult.</figcaption></figure>
+      <h2>How the formulas compare for different bodies</h2>
+      <p>For an average adult the five equations agree closely. They drift apart for very small children, very tall people and people with obesity, which is why the tool lists each one.</p>
+      <div class="calc-table"><table><thead><tr><th>Body</th><th>Du Bois</th><th>Mosteller</th><th>Haycock</th><th>Gehan &amp; George</th><th>Boyd</th><th>Average</th><th>Spread</th></tr></thead><tbody><tr><td>Newborn, 50 cm, 3.5 kg (entered as 3,500 g)</td><td>0.21</td><td>0.22</td><td>0.22</td><td>0.23</td><td>0.23</td><td>0.22</td><td>11.3%</td></tr><tr><td>Child, 110 cm, 18 kg</td><td>0.74</td><td>0.74</td><td>0.74</td><td>0.76</td><td>0.76</td><td>0.75</td><td>2.3%</td></tr><tr><td>Small adult, 150 cm, 45 kg</td><td>1.37</td><td>1.37</td><td>1.37</td><td>1.38</td><td>1.39</td><td>1.38</td><td>1.2%</td></tr><tr><td>Default, 5 ft 9 in, 155 lb</td><td>1.85</td><td>1.85</td><td>1.85</td><td>1.86</td><td>1.86</td><td>1.85</td><td>0.5%</td></tr><tr><td>Tall adult, 190 cm, 140 kg</td><td>2.63</td><td>2.72</td><td>2.77</td><td>2.74</td><td>2.76</td><td>2.72</td><td>5.0%</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Average body surface area for different bodies (square metres)</title><desc id="cf2-d">Surface area ranges from about 0.2 m&amp;sup2; for a newborn to about 2.7 m&amp;sup2; for a tall, heavy adult.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Average body surface area for different bodies (square metres)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">Newborn</text><rect class="bar" x="110" y="44" width="25.7" height="22" rx="4" fill="#9ca3af"/><text x="143.7" y="60" font-size="13" font-weight="700" fill="#111827">0.22 m&amp;sup2;</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Child</text><rect class="bar" x="110" y="78" width="87.7" height="22" rx="4" fill="#9ca3af"/><text x="205.7" y="94" font-size="13" font-weight="700" fill="#111827">0.75 m&amp;sup2;</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">Small adult</text><rect class="bar" x="110" y="112" width="161.3" height="22" rx="4" fill="#9ca3af"/><text x="279.3" y="128" font-size="13" font-weight="700" fill="#111827">1.38 m&amp;sup2;</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">Default</text><rect class="bar" x="110" y="146" width="216.3" height="22" rx="4" fill="#2563eb"/><text x="334.3" y="162" font-size="13" font-weight="700" fill="#111827">1.85 m&amp;sup2;</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">Tall adult</text><rect class="bar" x="110" y="180" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">2.72 m&amp;sup2;</text></svg><figcaption>Body surface area spans a large range.</figcaption></figure>
+      <p>Spread is the gap between the highest and lowest formula as a share of the average. It is about 0.5% for the default adult but 11.3% for the newborn, so the choice of formula matters most for the smallest and largest patients.</p>
+      <h2>Why surface area grows more slowly than weight</h2>
+      <p>Skin area rises with the square root of weight, roughly, because a larger body has more volume for its surface. The figure shows Mosteller for a 175 cm person: going from 60 kg to 120 kg doubles the weight but raises the area by only about 41%.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Mosteller body surface area for a 175 cm person at different weights (m2)</title><desc id="cf3-d">Doubling weight from 60 kg to 120 kg raises the area from 1.71 to 2.42 m&amp;sup2;, a rise of only 41%, because area grows with the square root of weight.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Mosteller body surface area for a 175 cm person at different weights (m2)</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">0.0</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">0.7</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">1.4</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">2.1</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">2.8</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">40</text><text x="147.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">60</text><text x="237.2" y="194" text-anchor="middle" font-size="11" fill="#6b7280">80</text><text x="326.8" y="194" text-anchor="middle" font-size="11" fill="#6b7280">100</text><text x="416.4" y="194" text-anchor="middle" font-size="11" fill="#6b7280">120</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">140</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Weight (kg)</text><polyline class="draw" style="--len:453" points="58.0,113.6 147.6,99.6 237.2,87.8 326.8,77.4 416.4,68.0 506.0,59.3" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Mosteller</text></svg><figcaption>Area rises with the square root of weight.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Weight</th><th>BSA at 175 cm (Mosteller)</th></tr></thead><tbody><tr><td>40 kg</td><td>1.39 m&sup2;</td></tr><tr><td>60 kg</td><td>1.71 m&sup2;</td></tr><tr><td>80 kg</td><td>1.97 m&sup2;</td></tr><tr><td>100 kg</td><td>2.20 m&sup2;</td></tr><tr><td>120 kg</td><td>2.42 m&sup2;</td></tr><tr><td>140 kg</td><td>2.61 m&sup2;</td></tr></tbody></table></div>
       <h2>Where BSA is used</h2>
-      <p>Doctors use body surface area to dose chemotherapy and other drugs, to size the output of the heart as a cardiac index, and to assess burns and kidney function. The formulas agree closely for average adults and drift apart for very small children, very tall people and people with obesity. Clinical use follows the formula named in the local protocol, so use the figure for that formula and not the average.</p>
-
-      <p><strong>You might also need:</strong> <a href="army-body-fat-calculator.html">Army Body Fat Calculator</a>, <a href="body-type-calculator.html">Body Type Calculator</a>, <a href="lean-body-mass-calculator.html">Lean Body Mass Calculator</a>, <a href="bmi-calculator.html">BMI Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <ul><li><strong>Drug dosing.</strong> Some medicines, especially chemotherapy, are dosed in milligrams per square metre. As arithmetic only, a drug dosed at 75 mg/m&sup2; for a BSA of 1.85 m&sup2; comes to 138.8 mg. Real doses are set by the prescriber using the local protocol, which names the formula and any cap to use.</li><li><strong>Cardiac index.</strong> Cardiac output divided by BSA. A cardiac output of 5.5 litres a minute with a BSA of 1.85 m&sup2; gives a cardiac index of <strong>2.97 L/min/m&sup2;</strong>, in the range of about 2.5 to 4.0 that is usually described as normal.</li><li><strong>Burns.</strong> The extent of a burn is given as a percentage of body surface area.</li><li><strong>Kidney function.</strong> Glomerular filtration rate is often reported per 1.73 m&sup2; of BSA, so results are comparable between people of different sizes.</li></ul>
+      <h2>Average or one formula?</h2>
+      <p>The tool shows the average of the five formulas as the headline figure, which is a sensible general estimate. For clinical use, follow the formula named in the local protocol and use that line, not the average. Mosteller is the most common in modern practice because it is simple, and Du Bois is the most cited historically.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing up pounds and kilograms. Check the weight unit.</li><li>Entering height in centimetres while the ft/in option is selected.</li><li>Using the average where a protocol calls for a specific formula.</li><li>Using an adult formula result for an infant dose. Use the gram option and the formula your clinic uses.</li><li>Treating the estimate as a measurement of skin area.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the average BSA. The rows below list each formula in square metres and square feet, and the BMI in kg/m&sup2;. If the formulas differ by more than a few percent, the person is likely outside the group the equations were built on, so use the formula your doctor names.</p>
+      <div class="callout">This tool is for reference and education. Clinical dosing decisions must be made by a qualified healthcare provider using validated protocols.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="bmi-calculator.html">BMI Calculator</a> &ndash; height and weight screening</li><li><a href="lean-body-mass-calculator.html">Lean Body Mass Calculator</a> &ndash; weight without fat</li><li><a href="body-fat-calculator.html">Body Fat Calculator</a> &ndash; body fat from measurements</li><li><a href="tdee-calculator.html">TDEE Calculator</a> &ndash; daily calorie needs</li><li><a href="body-type-calculator.html">Body Type Calculator</a> &ndash; your body shape</li><li><a href="army-body-fat-calculator.html">Army Body Fat Calculator</a> &ndash; the military body fat estimate</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Which formula should I use?</h3>
-        <p>Mosteller is the most commonly cited in modern clinical practice for its simplicity, though DuBois remains widely referenced historically. For any medical decision, follow your healthcare provider's preferred formula.</p>
+        <h3>Which BSA formula should I use?</h3>
+        <p>Mosteller is the most commonly cited in modern clinical practice for its simplicity, though Du Bois remains widely referenced historically. For any medical purpose, use the formula your provider or protocol names.</p>
       </div>
       <div class="faq-item">
-        <h3>Why do the results differ slightly between formulas?</h3>
-        <p>Each formula was derived from a different set of measured subjects using different regression techniques, so small systematic differences between them are expected and normal.</p>
+        <h3>Why does the calculator show five formulas?</h3>
+        <p>Researchers have published several equations fitted to different study populations. They agree closely for average adults but differ for children and for very large or small bodies.</p>
       </div>
+      <div class="faq-item">
+        <h3>What is the Mosteller formula?</h3>
+        <p>BSA in square metres is the square root of height in centimetres times weight in kilograms divided by 3600. For 170 cm and 70 kg, that is 1.82 square metres.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is body surface area used for?</h3>
+        <p>It is used to dose some drugs, especially chemotherapy, to work out the cardiac index, to describe the extent of burns and to express kidney function.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use this for a baby?</h3>
+        <p>The calculator accepts weight in grams for infants. The formulas are still estimates, and medical dosing must follow the protocol used by the clinic.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the average the right number to use?</h3>
+        <p>It is a reasonable general estimate. Clinical use follows the single formula named in the local protocol, not the average.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Body_surface_area" rel="noopener" target="_blank">Wikipedia: Body surface area</a>; <a href="https://en.wikipedia.org/wiki/Cardiac_index" rel="noopener" target="_blank">Wikipedia: Cardiac index</a></p>
     </div>
 
   </div>
