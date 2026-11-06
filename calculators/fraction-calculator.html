@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fraction Calculator: Add, Subtract & Simplify | CalcBundle</title>
-<meta name="description" content="Add, subtract, multiply and divide fractions or mixed numbers with simplified results and clear steps.">
+<title>Fraction Calculator: Add, Subtract &amp; Simplify | CalcBundle</title>
+<meta name="description" content="Add, subtract, multiply and divide fractions or mixed numbers with simplified results, decimals and a clear step-by-step explanation.">
 <link rel="canonical" href="https://calcbundle.net/calculators/fraction-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Fraction Calculator: Add, Subtract & Simplify | CalcBundle">
-<meta property="og:description" content="Add, subtract, multiply and divide fractions or mixed numbers with simplified results and clear steps.">
+<meta property="og:title" content="Fraction Calculator: Add, Subtract &amp; Simplify | CalcBundle">
+<meta property="og:description" content="Add, subtract, multiply and divide fractions or mixed numbers with simplified results, decimals and a clear step-by-step explanation.">
 <meta property="og:url" content="https://calcbundle.net/calculators/fraction-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Fraction Calculator: Add, Subtract & Simplify | CalcBundle">
-<meta name="twitter:description" content="Add, subtract, multiply and divide fractions or mixed numbers with simplified results and clear steps.">
+<meta name="twitter:title" content="Fraction Calculator: Add, Subtract &amp; Simplify | CalcBundle">
+<meta name="twitter:description" content="Add, subtract, multiply and divide fractions or mixed numbers with simplified results, decimals and a clear step-by-step explanation.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -37,34 +37,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Can a denominator be zero?",
+      "name": "How do I add fractions with different denominators?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. A denominator of zero would mean splitting something into zero pieces, which is undefined — there's no such quantity. Our calculator will flag this rather than guess at an answer."
+        "text": "Find a common denominator, rescale both fractions, then add the numerators. For 2/7 + 3/8 the common denominator is 56, giving 16/56 + 21/56 = 37/56."
       }
     },
     {
       "@type": "Question",
-      "name": "How do negative fractions work?",
+      "name": "How do I divide fractions?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Exactly like positive ones, except one part of the fraction carries a minus sign. You can put the sign on the whole number, the numerator, or think of it as applying to the fraction as a whole — the calculator normalizes it either way and always returns the denominator as positive."
+        "text": "Multiply by the reciprocal of the second fraction. For 5/6 divided by 1/3, multiply 5/6 by 3/1 to get 15/6, which simplifies to 5/2."
       }
     },
     {
       "@type": "Question",
-      "name": "Is the decimal version always exact?",
+      "name": "How do I turn a mixed number into an improper fraction?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Only when the denominator's prime factors are limited to 2s and 5s (like 4, 8, 20, 25). Otherwise the decimal repeats forever — 1/3 becomes 0.333..., which we round to a fixed number of places for display rather than showing an infinite string of digits."
+        "text": "Multiply the whole number by the denominator and add the numerator. For 2 3/4 that is 2 x 4 + 3 = 11, so the fraction is 11/4."
       }
     },
     {
       "@type": "Question",
-      "name": "Does simplifying ever change what a fraction means?",
+      "name": "Why simplify a fraction?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Never. Simplifying only rewrites the fraction in smaller numbers — the amount it represents is identical before and after, the same way \"one dozen\" and \"twelve\" refer to the same quantity."
+        "text": "Simplifying divides the numerator and denominator by their greatest common divisor. The value does not change, but the result is easier to read and compare."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert a decimal to a fraction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Write the digits over a power of 10 and simplify. For 1.375 that is 1375/1000, which simplifies to 11/8."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I enter negative fractions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Enter a negative numerator or a negative whole number, and the calculator carries the sign through the steps."
       }
     }
   ]
@@ -176,22 +192,63 @@
       </div>
     </div>
 
-    <div class="fraction-guide">
-      <h2>What a fraction is actually measuring</h2>
-      <p>Picture a chocolate bar scored into 8 equal squares. If you break off 3 of those squares, you've taken <strong>3/8</strong> of the bar — the bottom number (the denominator) records how many equal pieces the whole bar was cut into, and the top number (the numerator) records how many of those pieces you're talking about. Nothing about a fraction is about "3" or "8" on their own; it's the relationship between them that means something.</p>
-      <div class="callout">A fraction never changes value if you scale the numerator and denominator by the same amount — 3/8 and 6/16 are the same size piece of chocolate, just cut into finer crumbs.</div>
-
-      <h2>Whole numbers, mixed numbers, and improper fractions</h2>
-      <p>A mixed number like 2&nbsp;3/4 means "two whole bars, plus three quarters of another." An improper fraction says the same thing differently: 11/4, where the numerator is allowed to be bigger than the denominator. Both describe the identical amount — our calculator above lets you type the whole-number part directly instead of forcing you to convert it yourself first, or use a separate tool just for mixed numbers.</p>
-
-      <h2>Adding and subtracting: why the denominators have to match first</h2>
-      <p>Think of denominators as different currencies. You can't add 3 euros and 2 dollars and get a meaningful total until you convert one into the other. Fractions work the same way: 1/3 and 1/4 are sliced differently, so before you can combine them you rescale both to a shared "currency" — the smallest denominator they both divide into evenly. Only once the pieces are the same size can the numerators simply be added or subtracted.</p>
-
-      <h2>Multiplying and dividing: no matching required</h2>
-      <p>Multiplication skips that step entirely — multiply the numerators, multiply the denominators, done. Division is really multiplication in disguise: dividing by 1/2 asks "how many halves fit into this?", and it turns out that's the same question as multiplying by the flipped fraction, 2/1. That's the entire reason the "flip and multiply" rule works — it isn't an arbitrary trick.</p>
-
-      <h2>Why we simplify the answer</h2>
-      <p>10/20 and 1/2 point to the exact same quantity, but 1/2 is the version everyone recognizes at a glance. Reducing a fraction means dividing the numerator and denominator by the largest number that divides evenly into both, until nothing but 1 divides them both. It doesn't change the value — it just states it in the plainest possible terms.</p>
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> To add fractions, give them a common denominator and add the numerators. 2/7 + 3/8 = 16/56 + 21/56 = 37/56 (about 0.66071429). Multiply straight across, and divide by multiplying by the flipped fraction.</div>
+      <h2>What a fraction measures</h2>
+      <p>A fraction compares a part with a whole. The bottom number (denominator) says how many equal pieces the whole is cut into and the top number (numerator) says how many pieces you have. A chocolate bar with 8 squares, of which you break off 3, is 3/8 of the bar. Multiplying or dividing both numbers by the same amount does not change the value, so 3/8, 6/16 and 12/32 are the same size.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Same-size pieces: 3/8, 6/16 and 12/32 are equal</title><desc id="cf1-d">Scaling the numerator and denominator together never changes the value, while 1/3 is a different amount.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Same-size pieces: 3/8, 6/16 and 12/32 are equal</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">3/8</text><rect class="bar" x="70" y="44" width="358.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">0.375</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">6/16</text><rect class="bar" x="70" y="78" width="358.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">0.375</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">12/32</text><rect class="bar" x="70" y="112" width="358.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">0.375</text><text x="62" y="162" text-anchor="end" font-size="13" fill="#6b7280">1/3</text><rect class="bar" x="70" y="146" width="318.2" height="22" rx="4" fill="#9ca3af"/><text x="396.2" y="162" font-size="13" font-weight="700" fill="#111827">0.333</text></svg><figcaption>Equivalent fractions have the same value even though the numbers look different.</figcaption></figure>
+      <h2>Mixed numbers and improper fractions</h2>
+      <p>A mixed number such as 2 3/4 means two wholes plus three quarters. The same amount as an improper fraction is 11/4 (2 &times; 4 + 3 = 11). The calculator lets you type the whole part directly, so you do not have to convert first. Results larger than one are also shown as a mixed number and as a decimal.</p>
+      <h2>Adding and subtracting</h2>
+      <p>Pieces must be the same size before they can be combined, so both fractions are rescaled to a common denominator, the smallest number both denominators divide into. Take the page&rsquo;s example inputs 2/7 + 3/8. The smallest common denominator is 56. Then 2/7 = 16/56 and 3/8 = 21/56, so the sum is 16/56 + 21/56 = <strong>37/56</strong>, which is 0.66071429 as a decimal. Subtracting works the same way: 3/8 &minus; 2/7 = 5/56.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">2/7 + 3/8 on a common denominator of 56</title><desc id="cf2-d">Sixteen fifty-sixths plus twenty-one fifty-sixths is 37/56, about 66.1% of the whole.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">2/7 + 3/8 on a common denominator of 56</text><rect class="bar" x="14.0" y="42" width="140.6" height="30" fill="#2563eb"/><text x="84.3" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">29%</text><rect class="bar" x="154.6" y="42" width="184.5" height="30" fill="#10b981"/><text x="246.8" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">38%</text><rect class="bar" x="339.1" y="42" width="166.9" height="30" fill="#e5e7eb"/><text x="422.5" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">34%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">2/7 = 16/56: <tspan font-weight="700">16/56</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">3/8 = 21/56: <tspan font-weight="700">21/56</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#e5e7eb"/><text x="32" y="120" font-size="12.5" fill="#374151">Left over: <tspan font-weight="700">19/56</tspan></text></svg><figcaption>Once the pieces are the same size, only the numerators are added.</figcaption></figure>
+      <p>The step-by-step panel shows every stage: finding the common denominator, rescaling each fraction, combining the numerators and simplifying. If both fractions already share a denominator, such as 1/5 + 2/5, the panel says so and moves straight to adding.</p>
+      <h2>Multiplying and dividing</h2>
+      <p>Multiplication needs no common denominator: multiply the numerators, multiply the denominators, then simplify. For 1 3/4 &times; 2/3, first write 1 3/4 as 7/4. Then 7/4 &times; 2/3 = 14/12, which simplifies to <strong>7/6</strong> or 1 1/6. Division is multiplication by the reciprocal (the flipped fraction): 5/6 &divide; 1/3 = 5/6 &times; 3/1 = 15/6 = <strong>5/2</strong>, or 2 1/2. This works because dividing by 1/3 asks how many thirds fit into the amount, which is the same as multiplying by 3.</p>
+      <div class="calc-table"><table><thead><tr><th>Operation</th><th>Example</th><th>Result</th></tr></thead><tbody><tr><td>Add</td><td>2/7 + 3/8</td><td>37/56</td></tr><tr><td>Subtract</td><td>3/8 &minus; 2/7</td><td>5/56</td></tr><tr><td>Multiply</td><td>1 3/4 &times; 2/3</td><td>7/6</td></tr><tr><td>Divide</td><td>5/6 &divide; 1/3</td><td>5/2 (2 1/2)</td></tr></tbody></table></div>
+      <h2>Simplifying</h2>
+      <p>To simplify, divide the numerator and denominator by their greatest common divisor until only 1 divides both. The simplify tool does this for you: 2/98 simplifies to <strong>1/49</strong> because 2 divides both. The value is unchanged; it is just written in its plainest form, which makes comparisons easier.</p>
+      <h2>Converting decimals and fractions</h2>
+      <p>To turn a decimal into a fraction, write the digits over a power of 10 and simplify. The calculator does this exactly: 1.375 = 1375/1000 = <strong>11/8</strong>. Going the other way, divide: 11/4 = 2.75. Fractions with denominators such as 3 or 7 give repeating decimals, so the tool rounds the decimal to 8 places. The decimal-to-fraction tool expects plain decimals like 1.375 and the fraction-to-decimal tool expects simple fractions like 11/4, not mixed numbers.</p>
+      <div class="calc-table"><table><thead><tr><th>Fraction</th><th>Decimal</th><th>Percent</th></tr></thead><tbody><tr><td>1/2</td><td>0.5</td><td>50%</td></tr><tr><td>1/4</td><td>0.25</td><td>25%</td></tr><tr><td>3/8</td><td>0.375</td><td>37.5%</td></tr><tr><td>2/3</td><td>0.666667</td><td>66.67%</td></tr><tr><td>7/8</td><td>0.875</td><td>87.5%</td></tr></tbody></table></div>
+      <h2>Where fractions show up</h2>
+      <ul><li>Recipes: halving 3/4 cup gives 3/8 cup.</li><li>Measurements: inches are split into halves, quarters and eighths.</li><li>Probability and ratios: 3 favourable outcomes out of 8 is 3/8.</li><li>Discounts and shares: one third of a bill, or 5/6 of a task done.</li></ul>
+      <h2>Comparing fractions</h2>
+      <p>To see which of two fractions is larger, rewrite both over the same denominator or convert them to decimals. For example 3/8 is 0.375 and 2/7 is about 0.2857, so 3/8 is larger. Cross-multiplying gives the same answer: 3 &times; 7 = 21 is greater than 2 &times; 8 = 16. A larger denominator means smaller pieces, so 1/8 is smaller than 1/3. When the numerators are equal, the fraction with the smaller denominator is always the larger one, and a fraction whose numerator is bigger than its denominator is always greater than one whole.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Adding the denominators as well as the numerators: 1/2 + 1/3 is not 2/5.</li><li>Forgetting to flip the second fraction when dividing.</li><li>Leaving the answer unsimplified, such as 14/12 instead of 7/6.</li><li>Dividing by a fraction equal to zero, which is undefined, or using a denominator of 0.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the simplified fraction, followed by the mixed number and the decimal. The bar under the result shades the fractional part so you can see how much of a whole it is. If the answer is not what you expected, open the steps and check each stage. For percentages use the Percentage Calculator, and for the least common multiple behind common denominators use the LCM Calculator.</p>
+      <div class="callout">The calculator uses exact whole-number arithmetic, so fraction results are exact. Only the decimal preview is rounded.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="percentage-calculator.html">Percentage Calculator</a> &ndash; percent of, change and difference</li><li><a href="lcm-calculator.html">LCM Calculator</a> &ndash; the common denominator</li><li><a href="factor-calculator.html">Factor Calculator</a> &ndash; factors and the greatest common divisor</li><li><a href="ratio-calculator.html">Ratio Calculator</a> &ndash; solve and simplify ratios</li><li><a href="scientific-calculator.html">Scientific Calculator</a> &ndash; general maths</li><li><a href="standard-deviation-calculator.html">Standard Deviation Calculator</a> &ndash; spread of data</li></ul>
+      <h2>Common questions</h2>
+      <div class="faq-item">
+        <h3>How do I add fractions with different denominators?</h3>
+        <p>Find a common denominator, rescale both fractions, then add the numerators. For 2/7 + 3/8 the common denominator is 56, giving 16/56 + 21/56 = 37/56.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I divide fractions?</h3>
+        <p>Multiply by the reciprocal of the second fraction. For 5/6 divided by 1/3, multiply 5/6 by 3/1 to get 15/6, which simplifies to 5/2.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I turn a mixed number into an improper fraction?</h3>
+        <p>Multiply the whole number by the denominator and add the numerator. For 2 3/4 that is 2 x 4 + 3 = 11, so the fraction is 11/4.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why simplify a fraction?</h3>
+        <p>Simplifying divides the numerator and denominator by their greatest common divisor. The value does not change, but the result is easier to read and compare.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I convert a decimal to a fraction?</h3>
+        <p>Write the digits over a power of 10 and simplify. For 1.375 that is 1375/1000, which simplifies to 11/8.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I enter negative fractions?</h3>
+        <p>Yes. Enter a negative numerator or a negative whole number, and the calculator carries the sign through the steps.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.thecorestandards.org/Math/Content/5/NF/" rel="noopener" target="_blank">Common Core State Standards: Grade 5 fractions</a></p>
     </div>
 
     <div class="fraction-guide">
