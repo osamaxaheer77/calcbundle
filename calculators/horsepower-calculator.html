@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Horsepower Calculator: Power &amp; Torque | CalcBundle</title>
-<meta name="description" content="Estimate horsepower and related power measurements from torque, speed or other provided values.">
+<title>Horsepower Calculator: Power from Force &amp; Units</title>
+<meta name="description" content="Work out power in watts and horsepower from force, distance and time, or convert between watts, kilowatts, mechanical, metric, electrical and boiler horsepower.">
 <link rel="canonical" href="https://calcbundle.net/calculators/horsepower-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Horsepower Calculator: Power &amp; Torque | CalcBundle">
-<meta property="og:description" content="Estimate horsepower and related power measurements from torque, speed or other provided values.">
+<meta property="og:title" content="Horsepower Calculator: Power from Force &amp; Units">
+<meta property="og:description" content="Work out power in watts and horsepower from force, distance and time, or convert between watts, kilowatts, mechanical, metric, electrical and boiler horsepower.">
 <meta property="og:url" content="https://calcbundle.net/calculators/horsepower-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Horsepower Calculator: Power &amp; Torque | CalcBundle">
-<meta name="twitter:description" content="Estimate horsepower and related power measurements from torque, speed or other provided values.">
+<meta name="twitter:title" content="Horsepower Calculator: Power from Force &amp; Units">
+<meta name="twitter:description" content="Work out power in watts and horsepower from force, distance and time, or convert between watts, kilowatts, mechanical, metric, electrical and boiler horsepower.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Which horsepower type do car manufacturers use?",
+      "name": "How is power calculated?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It varies by region — US manufacturers typically use mechanical horsepower, while many European manufacturers rate engines in metric horsepower (PS)."
+        "text": "Power is force times distance divided by time. A force of 10 newtons moving an object 3 metres in 2 seconds does 30 joules of work in 2 seconds, which is 15 watts."
       }
     },
     {
       "@type": "Question",
-      "name": "What's BTU/h used for?",
+      "name": "How many watts is one horsepower?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "BTU per hour is common for rating heating and cooling equipment (like air conditioners and furnaces) rather than mechanical engines."
+        "text": "One mechanical horsepower is 745.7 watts. Metric horsepower is about 735.5 watts, electrical horsepower is 746 watts and boiler horsepower is 9,809.5 watts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between hp and PS?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PS is metric horsepower, about 735.5 watts, while hp is usually mechanical horsepower at 745.7 watts. 100 PS is about 98.6 hp."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get horsepower from torque?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply torque in pound-feet by rpm and divide by 5,252. That formula is for engines, and the Engine Horsepower Calculator does it for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do different car sites show different horsepower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They may use different units, such as metric PS or kilowatts, or measure at the engine or at the wheels."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is boiler horsepower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a unit for the heat output of boilers, equal to 9,809.5 watts, which is about 33,470 BTU per hour."
       }
     }
   ]
@@ -181,35 +213,63 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">The definition of power</h2>
-      <p>Power = Force &times; Distance / Time &mdash; how much work is done per unit of time. This calculator converts the result into watts first, then into common horsepower and kilowatt equivalents.</p>
-
-      <h2>Why there are several kinds of "horsepower"</h2>
-      <p>Mechanical (imperial) horsepower, metric horsepower (PS/CV), electrical horsepower, and boiler horsepower are all slightly different historical definitions &mdash; they're close but not identical (745.7 W vs. 735.5 W vs. 746 W respectively), which matters when comparing engine ratings across regions or industries.</p>
-      <div class="callout">For a vehicle engine's horsepower from RPM and torque, or from a quarter-mile trap speed, see calculator.net's Engine Horsepower Calculator &mdash; this tool covers the general physics definition and unit conversion only.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: verify the calculation</h2><p>At 5,252 rpm and 100 lb-ft of torque, power is approximately 100 mechanical horsepower using hp = torque × rpm ÷ 5,252.</p><h2>Related calculators</h2><p>For further calculations, see <a href="engine-horsepower-calculator.html">Engine Horsepower Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>A force of 10 newtons moves an object 3 meters in 2 seconds. The work is 30 joules, so the power is 30 ÷ 2 = 15 watts. That equals 0.020115 mechanical horsepower, 0.020394 metric horsepower, or 0.015 kilowatts. In the converter, 1 mechanical horsepower is 745.7 watts.</p>
-
-      <h2>Tips for power units</h2>
-      <p>There are several kinds of horsepower: mechanical (745.7 W), metric (735.5 W), electrical (746 W) and boiler horsepower, so check which one a figure refers to. Car makers often quote metric horsepower or PS in Europe. Power is the rate of doing work, so a smaller force over a longer time can have the same power as a larger force over a shorter time. For engines, see the Engine Horsepower Calculator.</p>
-
-      <p><strong>You might also need:</strong> <a href="engine-horsepower-calculator.html">Engine Horsepower Calculator</a>, <a href="speed-calculator.html">Speed Calculator</a>, <a href="tire-size-calculator.html">Tire Size Calculator</a>, <a href="fuel-cost-calculator.html">Fuel Cost Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Power is force times distance divided by time. 10 N over 3 m in 2 s is 15 W, or 0.020115 mechanical horsepower. One mechanical horsepower is 745.7 W, and 150 hp is about 111.9 kW.</div>
+      <h2>What the calculator does</h2>
+      <p>The page has two tools. The <strong>power from force, distance and time</strong> tool works out the rate of doing work and shows it in watts, mechanical horsepower, metric horsepower and kilowatts. The <strong>power converter</strong> changes an amount between watts, kilowatts, four kinds of horsepower and BTU per hour. Power is the rate of doing work: <strong>power = force &times; distance &divide; time</strong>.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The first tool opens on a force of <strong>10 newtons</strong> moving an object <strong>3 metres</strong> in <strong>2 seconds</strong>. The work is 10 &times; 3 = 30 joules, and the power is 30 &divide; 2 = <strong>15 watts</strong>. In other units that is <strong>0.020115</strong> mechanical horsepower, <strong>0.020394</strong> metric horsepower and <strong>0.015</strong> kilowatts. The converter opens on 1 mechanical horsepower converted to watts, which is <strong>745.7 W</strong>.</p>
+      <h2>Several kinds of horsepower</h2>
+      <p>The word horsepower has several definitions that are close but not identical. The tool uses these values.</p>
+      <div class="calc-table"><table><thead><tr><th>Unit</th><th>Watts</th></tr></thead><tbody><tr><td>Watt</td><td>1</td></tr><tr><td>Kilowatt</td><td>1,000</td></tr><tr><td>Mechanical horsepower</td><td>745.7</td></tr><tr><td>Metric horsepower (PS)</td><td>735.499</td></tr><tr><td>Electrical horsepower</td><td>746</td></tr><tr><td>Boiler horsepower</td><td>9,809.5</td></tr><tr><td>BTU/h</td><td>0.2930711</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">One horsepower of each kind in watts</title><desc id="cf1-d">Mechanical, metric and electrical horsepower differ by less than 2%, but a boiler horsepower is about 13.2 times larger.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">One horsepower of each kind in watts</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">Metric (PS)</text><rect class="bar" x="100" y="44" width="24.6" height="22" rx="4" fill="#9ca3af"/><text x="132.6" y="60" font-size="13" font-weight="700" fill="#111827">735.5 W</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">Mechanical</text><rect class="bar" x="100" y="78" width="24.9" height="22" rx="4" fill="#2563eb"/><text x="132.9" y="94" font-size="13" font-weight="700" fill="#111827">745.7 W</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">Electrical</text><rect class="bar" x="100" y="112" width="24.9" height="22" rx="4" fill="#9ca3af"/><text x="132.9" y="128" font-size="13" font-weight="700" fill="#111827">746 W</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">Boiler</text><rect class="bar" x="100" y="146" width="328.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">9,809.5 W</text></svg><figcaption>Four horsepower units, three of them nearly equal.</figcaption></figure>
+      <p><strong>Mechanical (imperial) horsepower</strong> is the common US and UK unit. <strong>Metric horsepower</strong>, written PS or CV, is used by many car makers in Europe. <strong>Electrical horsepower</strong> is exactly 746 W and is used for motors, and <strong>boiler horsepower</strong> measures the heat output of a boiler. Check which one a figure refers to, especially when comparing engine ratings between regions.</p>
+      <h2>One mechanical horsepower in other units</h2>
+      <div class="calc-table"><table><thead><tr><th>Unit</th><th>1 mechanical horsepower equals</th></tr></thead><tbody><tr><td>Watt</td><td>745.7</td></tr><tr><td>Kilowatt</td><td>0.7457</td></tr><tr><td>Mechanical horsepower</td><td>1</td></tr><tr><td>Metric horsepower (PS)</td><td>1.013869</td></tr><tr><td>Electrical horsepower</td><td>0.999598</td></tr><tr><td>Boiler horsepower</td><td>0.076018</td></tr><tr><td>BTU/h</td><td>2,544.434017</td></tr></tbody></table></div>
+      <h2>Converting a car rating</h2>
+      <p>A car rated at <strong>150 mechanical horsepower</strong> has 111,855 watts of power, which is <strong>111.9 kW</strong>, or <strong>152.1 PS</strong>. Going the other way, 100 PS is 98.6 mechanical horsepower. The difference is about 1.4%, small but worth knowing when two catalogues use different units.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">150 mechanical horsepower expressed in other power units (kilowatts, or horsepower)</title><desc id="cf3-d">A car rated at 150 horsepower in the US is about 152 PS and 111.9 kW, so the quoted figure depends on the unit.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">150 mechanical horsepower expressed in other power units (kilowatts, or horsepower)</text><text x="142" y="60" text-anchor="end" font-size="13" fill="#6b7280">Kilowatts</text><rect class="bar" x="150" y="44" width="204.5" height="22" rx="4" fill="#2563eb"/><text x="362.5" y="60" font-size="13" font-weight="700" fill="#111827">111.9 kW</text><text x="142" y="94" text-anchor="end" font-size="13" fill="#6b7280">Metric horsepower</text><rect class="bar" x="150" y="78" width="278.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">152.1 PS</text><text x="142" y="128" text-anchor="end" font-size="13" fill="#6b7280">Electrical horsepower</text><rect class="bar" x="150" y="112" width="274.1" height="22" rx="4" fill="#9ca3af"/><text x="432.1" y="128" font-size="13" font-weight="700" fill="#111827">149.9 hp</text></svg><figcaption>The same engine, three numbers.</figcaption></figure>
+      <h2>Lifting a load</h2>
+      <p>Raising a 70 kg-force load (the weight of a 70 kg person) by 3 metres in 5 seconds needs a force of 70 &times; 9.80665 = 686.5 N, so the power is 686.5 &times; 3 &divide; 5 = <strong>411.9 W</strong>, about <strong>0.552</strong> mechanical horsepower. Moving a 500 lbf load 10 yards in a minute takes 339 W. Choose the force unit, newton, kilonewton, pound-force or kilogram-force, and the tool does the conversion.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Power in three of the examples (watts)</title><desc id="cf2-d">The power depends on how fast the work is done as well as how much: lifting the same load twice as fast needs twice the power.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Power in three of the examples (watts)</text><text x="202" y="60" text-anchor="end" font-size="13" fill="#6b7280">Default: 10 N over 3 m in 2 s</text><rect class="bar" x="210" y="44" width="2.0" height="22" rx="4" fill="#2563eb"/><text x="220.0" y="60" font-size="13" font-weight="700" fill="#111827">15 W</text><text x="202" y="94" text-anchor="end" font-size="13" fill="#6b7280">Lifting 70 kgf by 3 m in 5 s</text><rect class="bar" x="210" y="78" width="24.1" height="22" rx="4" fill="#10b981"/><text x="242.1" y="94" font-size="13" font-weight="700" fill="#111827">411.9 W</text><text x="202" y="128" text-anchor="end" font-size="13" fill="#6b7280">5 hp electric motor, output</text><rect class="bar" x="210" y="112" width="218.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">3,728 W</text></svg><figcaption>More force or less time means more power.</figcaption></figure>
+      <h2>Motors and boilers</h2>
+      <p>A 5 horsepower electric motor delivers 3,728 W at the shaft. If it is 90% efficient it draws 4,143 W, or 4.14 kW, from the supply. Running for an hour at $0.16 per kWh costs about <strong>$0.66</strong>. Use the Electricity Calculator with your own rate. A boiler horsepower is 9,809.5 W, which the converter shows as about 33,471 BTU/h.</p>
+      <h2>Horsepower from torque and speed</h2>
+      <p>This calculator starts from force, distance and time. For an engine you often know torque and rotational speed. In US units, <strong>horsepower = torque (lb-ft) &times; rpm &divide; 5,252</strong>, where 5,252 is 33,000 &divide; 2&pi;. An engine making 300 lb-ft at 4,000 rpm produces 228.5 horsepower. At 5,252 rpm, torque in lb-ft and horsepower are equal. The Engine Horsepower Calculator handles torque and rpm.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Treating all horsepower units as equal. Metric and mechanical differ by about 1.4%.</li><li>Mixing units, such as a force in pounds-force with a distance in metres, without choosing the unit in the box.</li><li>Confusing power with energy. Power is a rate, so 15 W for 2 seconds is 30 joules.</li><li>Using torque alone. Horsepower also needs speed.</li><li>Forgetting that motor input is higher than output because of losses.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the power in watts, with the same value in mechanical horsepower, metric horsepower and kilowatts underneath. In the converter, the large number is your amount in the unit you chose. Values are shown to up to six decimal places.</p>
+      <div class="callout">These are unit conversions and a basic physics formula. Real engines and motors lose some power to friction, heat and other losses.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="engine-horsepower-calculator.html">Engine Horsepower Calculator</a> &ndash; horsepower from torque and rpm</li><li><a href="gas-mileage-calculator.html">Gas Mileage Calculator</a> &ndash; miles per gallon</li><li><a href="fuel-cost-calculator.html">Fuel Cost Calculator</a> &ndash; the cost of a trip</li><li><a href="tire-size-calculator.html">Tire Size Calculator</a> &ndash; compare tyre sizes</li><li><a href="electricity-calculator.html">Electricity Calculator</a> &ndash; running cost of an appliance</li><li><a href="speed-calculator.html">Speed Calculator</a> &ndash; speed, distance and time</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Which horsepower type do car manufacturers use?</h3>
-        <p>It varies by region &mdash; US manufacturers typically use mechanical horsepower, while many European manufacturers rate engines in metric horsepower (PS).</p>
+        <h3>How is power calculated?</h3>
+        <p>Power is force times distance divided by time. A force of 10 newtons moving an object 3 metres in 2 seconds does 30 joules of work in 2 seconds, which is 15 watts.</p>
       </div>
       <div class="faq-item">
-        <h3>What's BTU/h used for?</h3>
-        <p>BTU per hour is common for rating heating and cooling equipment (like air conditioners and furnaces) rather than mechanical engines.</p>
+        <h3>How many watts is one horsepower?</h3>
+        <p>One mechanical horsepower is 745.7 watts. Metric horsepower is about 735.5 watts, electrical horsepower is 746 watts and boiler horsepower is 9,809.5 watts.</p>
       </div>
+      <div class="faq-item">
+        <h3>What is the difference between hp and PS?</h3>
+        <p>PS is metric horsepower, about 735.5 watts, while hp is usually mechanical horsepower at 745.7 watts. 100 PS is about 98.6 hp.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I get horsepower from torque?</h3>
+        <p>Multiply torque in pound-feet by rpm and divide by 5,252. That formula is for engines, and the Engine Horsepower Calculator does it for you.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do different car sites show different horsepower?</h3>
+        <p>They may use different units, such as metric PS or kilowatts, or measure at the engine or at the wheels.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is boiler horsepower?</h3>
+        <p>It is a unit for the heat output of boilers, equal to 9,809.5 watts, which is about 33,470 BTU per hour.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Horsepower" rel="noopener" target="_blank">Wikipedia: Horsepower</a>; <a href="https://en.wikipedia.org/wiki/Watt" rel="noopener" target="_blank">Wikipedia: Watt</a>; <a href="https://www.nist.gov/pml/owm/metric-si/si-units" rel="noopener" target="_blank">NIST: SI units, power</a></p>
     </div>
 
   </div>
