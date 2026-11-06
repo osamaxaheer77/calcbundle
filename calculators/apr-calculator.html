@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>APR Calculator: Loan Interest Rate & Fees | CalcBundle</title>
-<meta name="description" content="Estimate annual percentage rate from loan terms and financing costs to compare borrowing offers.">
+<title>APR Calculator: Loan Interest Rate &amp; Fees | CalcBundle</title>
+<meta name="description" content="Estimate the true APR of a loan or mortgage from its rate, fees, points and PMI, so you can compare borrowing offers on real cost.">
 <link rel="canonical" href="https://calcbundle.net/calculators/apr-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="APR Calculator: Loan Interest Rate & Fees | CalcBundle">
-<meta property="og:description" content="Estimate annual percentage rate from loan terms and financing costs to compare borrowing offers.">
+<meta property="og:title" content="APR Calculator: Loan Interest Rate &amp; Fees | CalcBundle">
+<meta property="og:description" content="Estimate the true APR of a loan or mortgage from its rate, fees, points and PMI, so you can compare borrowing offers on real cost.">
 <meta property="og:url" content="https://calcbundle.net/calculators/apr-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="APR Calculator: Loan Interest Rate & Fees | CalcBundle">
-<meta name="twitter:description" content="Estimate annual percentage rate from loan terms and financing costs to compare borrowing offers.">
+<meta name="twitter:title" content="APR Calculator: Loan Interest Rate &amp; Fees | CalcBundle">
+<meta name="twitter:description" content="Estimate the true APR of a loan or mortgage from its rate, fees, points and PMI, so you can compare borrowing offers on real cost.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,15 +42,15 @@
       "name": "Should I compare loans by interest rate or APR?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "APR, whenever fees are involved. Two loans with identical interest rates can have very different true costs if one carries higher upfront fees — APR is built specifically to make that comparison fair."
+        "text": "APR, whenever fees are involved. Two loans with identical interest rates can have very different true costs if one carries higher upfront fees. APR is built to make that comparison fair."
       }
     },
     {
       "@type": "Question",
-      "name": "Why does financing fees into the loan change the payment, but paying them upfront doesn't?",
+      "name": "Why does financing fees into the loan change the payment, but paying them upfront does not?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Loaned (financed) fees increase the balance you're actually borrowing, so they raise your payment along with it. Upfront fees are paid separately in cash — they don't touch the loan balance or payment, but they still reduce what you effectively \"got\" for your money, which is why they still push the APR up."
+        "text": "Financed fees increase the balance you borrow, so they raise your payment. Upfront fees are paid separately in cash, so they do not touch the loan balance or payment, but they reduce what you effectively received, which still pushes the APR up."
       }
     },
     {
@@ -58,7 +58,31 @@
       "name": "Is a lower APR always the better deal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Usually, but not always — a loan with a higher APR and lower upfront cost can still be cheaper overall if you plan to pay it off quickly, since you'd never stick around long enough for the fee difference to matter. APR assumes you hold the loan for its full term."
+        "text": "Usually, but not always. A loan with a higher APR and lower upfront cost can be cheaper overall if you pay it off quickly, because APR assumes you hold the loan for its full term."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the APR always above the interest rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fees and points only add cost. The APR spreads them over the loan, so it is at or above the interest rate and equals it only when there are no fees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does PMI drop out of the mortgage APR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only while your down payment is below 20%. In the calculator it is included until the balance reaches 80% of the home value and then removed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this the same APR my lender discloses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a close estimate. Lenders follow federal disclosure rules that treat some charges in specific ways, so the figure on your documents may differ slightly."
       }
     }
   ]
@@ -218,36 +242,66 @@
       </form>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Why APR is always slightly higher than the note rate</h2>
-      <p>A lender's advertised interest rate only prices the cost of borrowing the money itself. It says nothing about the origination fees, points, or other upfront charges bundled into getting the loan in the first place. APR folds those costs in, answering a more useful question: given everything you're actually paying to get this loan, what single rate would produce the same total cost with zero fees? Because fees only ever add cost, APR is always at or above the note rate — never below it.</p>
-
-      <h2>Why compounding and payment frequency can differ</h2>
-      <p>Interest can accrue on a different schedule than you pay it — a loan might compound daily internally while only billing you monthly. When that happens, the nominal rate has to be converted to an equivalent rate at your actual payment frequency before a payment amount can be calculated, which is exactly what the "Compound" and "Pay Back" settings do here. Most everyday loans compound and pay on the same schedule, in which case the distinction disappears entirely.</p>
-      <div class="callout">PMI only applies to the mortgage calculator here while your equity stays below 20% of the home's value — once your loan balance amortizes down past that threshold, PMI drops out of both the payment and the APR calculation, the same way it would with a real lender.</div>
-
-      <h2>Why points don't show up in "All Payments and Fees"</h2>
-      <p>Points and other upfront charges affect the APR because they change how much you're truly borrowing relative to what you pay back — but points specifically are treated here as a cost of acquiring the rate itself, not an ongoing cash outlay tracked alongside your payment total. They still pull the APR above the note rate; they just aren't double-counted in the running total of payments and fees.</p>
-
-      <!--seo-extra-->
-<h2>Worked example: understanding the numbers</h2><p>A $1,000 financing fee on a $20,000 loan is 5% of principal, but that 5% is not the APR. APR depends on interest, payment timing and fees.</p><h2>Related calculators</h2><p>See repayment estimates using the <a href="loan-calculator.html">Loan Calculator</a> and loan-fee scenarios using the <a href="personal-loan-calculator.html">Personal Loan Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="repayment-calculator.html">Repayment Calculator</a>, <a href="payment-calculator.html">Payment Calculator</a>, <a href="interest-rate-calculator.html">Interest Rate Calculator</a>, <a href="boat-loan-calculator.html">Boat Loan Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-credit-card-interest-works.html">How Credit Card Interest Works</a>.</p>
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> APR turns a loan's interest rate and fees into one yearly rate. A $100,000 loan at 6% over 10 years with $2,500 of upfront fees has an APR of 6.563%. A $280,000 mortgage at 6.2% with $3,500 in fees and 0.5% points has an APR of 6.367%.</div>
+      <h2>Interest rate versus APR</h2>
+      <p>The interest rate is the price of borrowing the money. The <strong>annual percentage rate</strong> (APR) also counts the costs of getting the loan, such as origination fees and points, and expresses everything as one yearly rate. Because fees only add cost, the APR is never below the interest rate. When two loans have similar rates, the APR shows which one is really cheaper.</p>
+      <h2>How the calculator finds the APR</h2>
+      <p>It first works out your payment from the amount borrowed, the rate and the payment schedule. It then finds the yearly rate at which those same payments would repay only the cash you actually received, which is the amount financed minus the upfront fees and points. That rate is the APR. With no fees, the APR equals the interest rate.</p>
+      <h2>Tool 1: any loan</h2>
+      <p>The default is a $100,000 loan at 6% over 10 years, compounded and paid monthly, with $2,500 of upfront fees paid out of pocket. The payment is <strong>$1,110.21</strong> a month, total interest is $33,225, and the APR is <strong>6.563%</strong>, which is 0.563 points above the 6% rate. Without fees the APR would be 6.000%.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where the money goes on the default loan ($100,000 over 10 years at 6%)</title><desc id="cf1-d">You repay $133,225 on a loan of $100,000 and also pay $2,500 in fees at closing.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the money goes on the default loan ($100,000 over 10 years at 6%)</text><rect class="bar" x="14.0" y="42" width="362.5" height="30" fill="#2563eb"/><text x="195.2" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">74%</text><rect class="bar" x="376.5" y="42" width="120.4" height="30" fill="#10b981"/><text x="436.7" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">24%</text><rect class="bar" x="496.9" y="42" width="9.1" height="30" fill="#f59e0b"/><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Principal: <tspan font-weight="700">$100,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Interest: <tspan font-weight="700">$33,225</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#f59e0b"/><text x="32" y="120" font-size="12.5" fill="#374151">Upfront fees: <tspan font-weight="700">$2,500</tspan></text></svg><figcaption>Fees are small next to the interest, but they raise the real rate.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">APR by upfront fee on a $100,000 loan at 6% over 10 years</title><desc id="cf2-d">The 6% note rate does not change, but a $10,000 fee lifts the APR to 8.382%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">APR by upfront fee on a $100,000 loan at 6% over 10 years</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">$0 fee</text><rect class="bar" x="90" y="44" width="241.9" height="22" rx="4" fill="#10b981"/><text x="339.9" y="60" font-size="13" font-weight="700" fill="#111827">6.000%</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">$1,000 fee</text><rect class="bar" x="90" y="78" width="250.9" height="22" rx="4" fill="#f59e0b"/><text x="348.9" y="94" font-size="13" font-weight="700" fill="#111827">6.223%</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">$2,500 fee</text><rect class="bar" x="90" y="112" width="264.6" height="22" rx="4" fill="#f59e0b"/><text x="362.6" y="128" font-size="13" font-weight="700" fill="#111827">6.563%</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">$5,000 fee</text><rect class="bar" x="90" y="146" width="288.2" height="22" rx="4" fill="#f59e0b"/><text x="386.2" y="162" font-size="13" font-weight="700" fill="#111827">7.146%</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">$10,000 fee</text><rect class="bar" x="90" y="180" width="338.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">8.382%</text></svg><figcaption>Every extra dollar of upfront fees raises the APR.</figcaption></figure>
+      <h2>Loaned fees versus upfront fees</h2>
+      <p>The calculator separates two kinds of fees. <strong>Loaned fees</strong> are added to the balance, so you pay interest on them and your payment rises. With $2,500 of loaned fees instead of upfront fees, the amount financed is $102,500 and the payment is $1,137.96. <strong>Upfront fees</strong> are paid separately in cash: the loan balance and payment do not change, but you effectively receive less than you borrow, so the APR still rises.</p>
+      <h2>Why term matters</h2>
+      <p>A fee is spread over the life of the loan, so on a short loan it weighs more per year. The same $2,500 fee on a $100,000 loan at 6%:</p>
+      <div class="calc-table"><table><thead><tr><th>Term</th><th>APR with $2,500 fee</th></tr></thead><tbody><tr><td>1 year</td><td>10.768%</td></tr><tr><td>2 years</td><td>8.503%</td></tr><tr><td>3 years</td><td>7.708%</td></tr><tr><td>5 years</td><td>7.058%</td></tr><tr><td>7 years</td><td>6.775%</td></tr><tr><td>10 years</td><td>6.563%</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">The same $2,500 fee costs more per year on a short loan (APR by term)</title><desc id="cf3-d">On a 1-year loan the $2,500 fee lifts the APR to 10.77%; on a 10-year loan it is 6.56%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The same $2,500 fee costs more per year on a short loan (APR by term)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 year</text><rect class="bar" x="80" y="44" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">10.77%</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">2 years</text><rect class="bar" x="80" y="78" width="274.8" height="22" rx="4" fill="#9ca3af"/><text x="362.8" y="94" font-size="13" font-weight="700" fill="#111827">8.50%</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">3 years</text><rect class="bar" x="80" y="112" width="249.1" height="22" rx="4" fill="#9ca3af"/><text x="337.1" y="128" font-size="13" font-weight="700" fill="#111827">7.71%</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">5 years</text><rect class="bar" x="80" y="146" width="228.1" height="22" rx="4" fill="#9ca3af"/><text x="316.1" y="162" font-size="13" font-weight="700" fill="#111827">7.06%</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">7 years</text><rect class="bar" x="80" y="180" width="219.0" height="22" rx="4" fill="#9ca3af"/><text x="307.0" y="196" font-size="13" font-weight="700" fill="#111827">6.78%</text><text x="72" y="230" text-anchor="end" font-size="13" fill="#6b7280">10 years</text><rect class="bar" x="80" y="214" width="212.1" height="22" rx="4" fill="#2563eb"/><text x="300.1" y="230" font-size="13" font-weight="700" fill="#111827">6.56%</text></svg><figcaption>APR assumes you keep the loan for its whole term, so it overstates the cost of a short loan if you borrow for much longer than you stay.</figcaption></figure>
+      <h2>Compounding and payback frequency</h2>
+      <p>Interest can compound on a different schedule than you pay. The &ldquo;Compound&rdquo; and &ldquo;Pay Back&rdquo; settings convert the nominal rate into an equivalent rate for your payment schedule, so the payment is calculated correctly. Most loans compound and are paid at the same frequency, and then the distinction does not matter.</p>
+      <h2>Tool 2: mortgage APR</h2>
+      <p>The mortgage tool starts from a house value, a down payment and the loan terms. The defaults are a $350,000 house, 20% down (a loan of $280,000), 30 years at 6.2%, $3,500 of loan fees and 0.5% points ($1,400). The monthly principal-and-interest payment is <strong>$1,714.91</strong>, total interest is $337,369, and the APR is <strong>6.367%</strong>. With no fees or points it would be 6.200%.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">Mortgage APR by points ($280,000 loan, 6.2%, 30 years, $3,500 fees)</title><desc id="cf4-d">Each point of cost raises the APR. With 0.5% points and $3,500 in fees the APR is 6.367% against a 6.2% rate.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Mortgage APR by points ($280,000 loan, 6.2%, 30 years, $3,500 fees)</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">0% points</text><rect class="bar" x="100" y="44" width="318.1" height="22" rx="4" fill="#9ca3af"/><text x="426.1" y="60" font-size="13" font-weight="700" fill="#111827">6.319%</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">0.5% points</text><rect class="bar" x="100" y="78" width="320.6" height="22" rx="4" fill="#2563eb"/><text x="428.6" y="94" font-size="13" font-weight="700" fill="#111827">6.367%</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">1% points</text><rect class="bar" x="100" y="112" width="323.0" height="22" rx="4" fill="#9ca3af"/><text x="431.0" y="128" font-size="13" font-weight="700" fill="#111827">6.416%</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">2% points</text><rect class="bar" x="100" y="146" width="328.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">6.515%</text></svg><figcaption>Points are a cost of acquiring the rate. They raise the APR even though they do not change the payment.</figcaption></figure>
+      <h2>PMI and the 20% rule</h2>
+      <p>Private mortgage insurance applies only while your down payment is below 20%. In the calculator, PMI is included in the payment and the APR until the loan balance falls to 80% of the home value, then it drops out, the way it would with a lender. With 20% down, as in the default, PMI is not charged.</p>
+      <h2>Comparing two offers</h2>
+      <p>Offer X is a $280,000 30-year loan at 5.5% with $4,000 of fees: payment $1,589.81, APR <strong>5.631%</strong>. Offer Y is the same loan at 5.75% with $500 of fees: payment $1,634.00, APR <strong>5.766%</strong>. If you keep the loan for all 30 years, Offer X has the lower APR. If you sell or refinance after five years, the payments plus fees come to $99,389 for X and $98,540 for Y, so Offer Y is cheaper in that case. APR assumes you hold the loan for its full term, so consider how long you will keep it.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Comparing interest rates when the fees differ.</li><li>Comparing a loan&rsquo;s APR with another loan&rsquo;s interest rate.</li><li>Forgetting that APR assumes you keep the loan for its full term.</li><li>Leaving out points or loan fees, which understates the APR.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the APR. Compare it with the interest rate to see what the fees cost in rate terms. Then compare the total of payments and fees across offers, and think about how long you will keep the loan. Your lender&rsquo;s own disclosures show the legal APR, which can differ slightly because of how it treats certain charges.</p>
+      <div class="callout">This calculator gives estimates. Lenders must follow federal rules for the APR they disclose, so use the figure on your loan documents for decisions. It is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="loan-calculator.html">Loan Calculator</a> &ndash; payment, balance, rate and term</li><li><a href="mortgage-calculator.html">Mortgage Calculator</a> &ndash; the full home payment</li><li><a href="personal-loan-calculator.html">Personal Loan Calculator</a> &ndash; fees, insurance and APR</li><li><a href="interest-rate-calculator.html">Interest Rate Calculator</a> &ndash; find the rate behind a payment</li><li><a href="payment-calculator.html">Payment Calculator</a> &ndash; monthly payment for any loan</li><li><a href="refinance-calculator.html">Refinance Calculator</a> &ndash; compare replacing a loan</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-credit-card-interest-works.html">How Credit Card Interest Works</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Should I compare loans by interest rate or APR?</h3>
-        <p>APR, whenever fees are involved. Two loans with identical interest rates can have very different true costs if one carries higher upfront fees — APR is built specifically to make that comparison fair.</p>
+        <p>APR, whenever fees are involved. Two loans with identical interest rates can have very different true costs if one carries higher upfront fees. APR is built to make that comparison fair.</p>
       </div>
       <div class="faq-item">
-        <h3>Why does financing fees into the loan change the payment, but paying them upfront doesn't?</h3>
-        <p>Loaned (financed) fees increase the balance you're actually borrowing, so they raise your payment along with it. Upfront fees are paid separately in cash — they don't touch the loan balance or payment, but they still reduce what you effectively "got" for your money, which is why they still push the APR up.</p>
+        <h3>Why does financing fees into the loan change the payment, but paying them upfront does not?</h3>
+        <p>Financed fees increase the balance you borrow, so they raise your payment. Upfront fees are paid separately in cash, so they do not touch the loan balance or payment, but they reduce what you effectively received, which still pushes the APR up.</p>
       </div>
       <div class="faq-item">
         <h3>Is a lower APR always the better deal?</h3>
-        <p>Usually, but not always — a loan with a higher APR and lower upfront cost can still be cheaper overall if you plan to pay it off quickly, since you'd never stick around long enough for the fee difference to matter. APR assumes you hold the loan for its full term.</p>
+        <p>Usually, but not always. A loan with a higher APR and lower upfront cost can be cheaper overall if you pay it off quickly, because APR assumes you hold the loan for its full term.</p>
       </div>
+      <div class="faq-item">
+        <h3>Why is the APR always above the interest rate?</h3>
+        <p>Fees and points only add cost. The APR spreads them over the loan, so it is at or above the interest rate and equals it only when there are no fees.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When does PMI drop out of the mortgage APR?</h3>
+        <p>Only while your down payment is below 20%. In the calculator it is included until the balance reaches 80% of the home value and then removed.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is this the same APR my lender discloses?</h3>
+        <p>It is a close estimate. Lenders follow federal disclosure rules that treat some charges in specific ways, so the figure on your documents may differ slightly.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-loan-interest-rate-and-the-apr-en-733/" rel="noopener" target="_blank">CFPB: Interest rate vs APR</a>; <a href="https://www.consumerfinance.gov/owning-a-home/loan-estimate/" rel="noopener" target="_blank">CFPB: Loan Estimate explainer</a></p>
     </div>
 
   </div>
