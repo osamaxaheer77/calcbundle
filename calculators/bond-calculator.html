@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bond Calculator: Price, Yield & Maturity | CalcBundle</title>
-<meta name="description" content="Estimate bond price, yield, coupon or time to maturity from fixed-rate coupon bond assumptions.">
+<title>Bond Calculator: Price, Yield &amp; Maturity | CalcBundle</title>
+<meta name="description" content="Price a fixed-rate coupon bond, or solve for yield, time to maturity, face value or coupon, and see how its price moves when market yields change.">
 <link rel="canonical" href="https://calcbundle.net/calculators/bond-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Bond Calculator: Price, Yield & Maturity | CalcBundle">
-<meta property="og:description" content="Estimate bond price, yield, coupon or time to maturity from fixed-rate coupon bond assumptions.">
+<meta property="og:title" content="Bond Calculator: Price, Yield &amp; Maturity | CalcBundle">
+<meta property="og:description" content="Price a fixed-rate coupon bond, or solve for yield, time to maturity, face value or coupon, and see how its price moves when market yields change.">
 <meta property="og:url" content="https://calcbundle.net/calculators/bond-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bond Calculator: Price, Yield & Maturity | CalcBundle">
-<meta name="twitter:description" content="Estimate bond price, yield, coupon or time to maturity from fixed-rate coupon bond assumptions.">
+<meta name="twitter:title" content="Bond Calculator: Price, Yield &amp; Maturity | CalcBundle">
+<meta name="twitter:description" content="Price a fixed-rate coupon bond, or solve for yield, time to maturity, face value or coupon, and see how its price moves when market yields change.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,7 +42,7 @@
       "name": "Why does coupon frequency matter?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "More frequent coupon payments mean your money gets reinvested (compounds) more often, which slightly changes both the bond's fair price and its effective yield compared to the same nominal rate paid less frequently."
+        "text": "More frequent coupon payments mean your money is reinvested more often, which slightly changes both the bond's fair price and its effective yield compared with the same nominal rate paid less frequently."
       }
     },
     {
@@ -50,7 +50,7 @@
       "name": "What does \"yield\" mean here specifically?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This is the bond's yield to maturity (YTM) — the total return you'd earn if you bought the bond today and held it until it matures, accounting for both coupon payments and any difference between the purchase price and face value."
+        "text": "It is the yield to maturity: the total annual return if you buy the bond today and hold it to maturity, counting both the coupon payments and any difference between the purchase price and the face value."
       }
     },
     {
@@ -58,7 +58,31 @@
       "name": "Is a higher coupon rate always better for an investor?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not by itself — what matters is the yield relative to the price paid, not the coupon rate in isolation. A high-coupon bond bought at a steep premium can yield less than a low-coupon bond bought at a discount."
+        "text": "Not by itself. What matters is the yield relative to the price paid. A high-coupon bond bought at a steep premium can yield less than a low-coupon bond bought at a discount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do bond prices fall when interest rates rise?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Existing coupons are fixed. When new bonds pay more, investors will pay less for the old ones, so the price falls until the old bond's yield matches the market."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between coupon rate and yield?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The coupon rate is the fixed interest the bond pays on its face value. The yield is the return implied by the price you pay, so it changes as the price changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it include accrued interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The calculator prices the bond on a coupon date. Between coupon dates the buyer also pays accrued interest, which this tool does not cover."
       }
     }
   ]
@@ -157,32 +181,65 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Why a bond's price moves opposite to yield</h2>
-      <p>A bond's coupon payments are fixed the moment it's issued — they never change. When market yields rise above the bond's coupon rate, investors won't pay full face value for a stream of below-market payments, so the price has to drop until the bond's effective return matches the market. When yields fall below the coupon rate, the opposite happens: the bond's fixed payments look attractive, and investors bid the price up above face value. This inverse relationship is one of the most fundamental facts in fixed-income investing.</p>
-
-      <h2>Par, premium, and discount</h2>
-      <p>A bond priced exactly at its face value is trading "at par" — this happens precisely when the yield equals the coupon rate. Trade above face value and it's at a "premium" (yield below coupon); trade below and it's at a "discount" (yield above coupon). All three are just different snapshots of the same price-yield relationship.</p>
-      <div class="callout">This calculator prices a bond as of a coupon payment date. Bonds bought or sold between coupon dates also carry "accrued interest" — the buyer compensates the seller for the coupon time already elapsed — which is a separate, more specialized calculation this tool doesn't cover.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: interpreting the calculation</h2><p>A $1,000-face-value bond with a 5% annual coupon pays $50 in annual coupons before tax, regardless of its market price. Yield may differ from coupon rate.</p><h2>Related financial calculators</h2><p>To compare discount rates and cash-flow values, use the <a href="present-value-calculator.html">Present Value Calculator</a>. For annualized investment returns, see the <a href="average-return-calculator.html">Average Return Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="annuity-calculator.html">Annuity Calculator</a>, <a href="mutual-fund-calculator.html">Mutual Fund Calculator</a>, <a href="cd-calculator.html">CD Calculator</a>, <a href="savings-calculator.html">Savings Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A bond is worth the present value of its coupons plus its face value at the market yield. A 5% coupon bond with 3 years left and a 6% yield is worth $97.33 per 100, a discount to face value. When yields rise, prices fall.</div>
+      <h2>Why a bond price moves opposite to yield</h2>
+      <p>A bond&rsquo;s coupon payments are fixed the moment it is issued. When market yields rise above the bond&rsquo;s coupon rate, investors will not pay full face value for a stream of below-market payments, so the price must fall until the bond&rsquo;s effective return matches the market. When yields fall below the coupon rate, the fixed payments look attractive and the price rises above face value. This inverse relationship is one of the most fundamental facts in fixed-income investing: when interest rates rise, bond prices tend to fall, and vice versa.</p>
+      <h2>The pricing formula</h2>
+      <p><strong>Price = coupon &times; [1 &minus; (1 + r)<sup>&minus;n</sup>] &divide; r + face value &divide; (1 + r)<sup>n</sup></strong>, where r is the yield per coupon period (the annual yield divided by payments per year) and n is the total number of coupon periods to maturity. The calculator prices the bond on a coupon date, and it can solve for any one of price, face value, yield, time to maturity or coupon, given the other four.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>A bond with a face value of 100, a 5% annual coupon (so $5 a year), three years to maturity and a 6% yield. The coupons are worth 5 &times; 2.6730 = $13.37 today and the face value is worth 100 &divide; 1.06<sup>3</sup> = $83.96, so the <strong>price is $97.3270</strong>. Because the yield (6%) is above the coupon rate (5%), the bond trades at a discount to face value. Going the other way, if you enter a price of 97.327 and ask for the yield, you get 6.0000%.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where the default bond price of $97.33 per $100 comes from (6% yield)</title><desc id="cf1-d">A bond is worth the present value of its coupons plus the present value of the face value, both discounted at the market yield.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the default bond price of $97.33 per $100 comes from (6% yield)</text><rect class="bar" x="14.0" y="42" width="67.6" height="30" fill="#2563eb"/><text x="47.8" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">14%</text><rect class="bar" x="81.6" y="42" width="424.4" height="30" fill="#10b981"/><text x="293.8" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">86%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Present value of three $5 coupons: <tspan font-weight="700">$13.37</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Present value of the $100 at maturity: <tspan font-weight="700">$83.96</tspan></text></svg><figcaption>Coupons and principal are each discounted at the market yield.</figcaption></figure>
+      <h2>Par, premium and discount</h2>
+      <p>A bond priced at its face value trades at <strong>par</strong>, which happens when the yield equals the coupon rate: at a 5% yield the default bond is worth $100.00. If the yield is below the coupon it trades at a <strong>premium</strong> (at a 4% yield it is worth $102.78), and if the yield is above the coupon it trades at a <strong>discount</strong>. All three are snapshots of the same price-yield relationship.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Price of a 3-year, 5% coupon bond at different yields (per $100)</title><desc id="cf2-d">The price is $100 at a 5% yield (par), above it when the yield is lower, and below it when the yield is higher. At 6% it is $97.33.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Price of a 3-year, 5% coupon bond at different yields (per $100)</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">$0</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">$31</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">$62</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">$93</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">$124</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0%</text><text x="147.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">2%</text><text x="237.2" y="194" text-anchor="middle" font-size="11" fill="#6b7280">4%</text><text x="326.8" y="194" text-anchor="middle" font-size="11" fill="#6b7280">6%</text><text x="416.4" y="194" text-anchor="middle" font-size="11" fill="#6b7280">8%</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">10%</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Yield to maturity</text><polyline class="draw" style="--len:450" points="58.0,59.3 80.4,61.0 102.8,62.6 125.2,64.2 147.6,65.8 170.0,67.3 192.4,68.8 214.8,70.3 237.2,71.7 259.6,73.2 282.0,74.6 304.4,75.9 326.8,77.3 349.2,78.6 371.6,79.9 394.0,81.1 416.4,82.4 438.8,83.6 461.2,84.8 483.6,86.0 506.0,87.2" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Price</text></svg><figcaption>Price falls as the yield rises, in a gentle curve.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Yield to maturity</th><th>Price per $100</th><th>Trading at</th></tr></thead><tbody><tr><td>3%</td><td>$105.66</td><td>premium</td></tr><tr><td>4%</td><td>$102.78</td><td>premium</td></tr><tr><td>5%</td><td>$100.00</td><td>par</td></tr><tr><td>6%</td><td>$97.33</td><td>discount</td></tr><tr><td>7%</td><td>$94.75</td><td>discount</td></tr><tr><td>8%</td><td>$92.27</td><td>discount</td></tr></tbody></table></div>
+      <h2>Longer bonds react more</h2>
+      <p>The same change in yield moves long bonds much more than short ones. For a 5% coupon bond priced at par:</p>
+      <div class="calc-table"><table><thead><tr><th>Years to maturity</th><th>Price at 5% yield</th><th>Price change if yield rises to 6%</th><th>Price change if yield falls to 4%</th></tr></thead><tbody><tr><td>3</td><td>$100.00</td><td>-2.7%</td><td>+2.8%</td></tr><tr><td>10</td><td>$100.00</td><td>-7.4%</td><td>+8.1%</td></tr><tr><td>30</td><td>$100.00</td><td>-13.8%</td><td>+17.3%</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Price change if the yield rises from 5% to 6% (5% coupon bond)</title><desc id="cf3-d">The same 1-point rise cuts a 3-year bond by 2.7% but a 30-year bond by 13.8%. Longer bonds are more sensitive to yield changes.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Price change if the yield rises from 5% to 6% (5% coupon bond)</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">3-year bond</text><rect class="bar" x="90" y="44" width="65.6" height="22" rx="4" fill="#2563eb"/><text x="163.6" y="60" font-size="13" font-weight="700" fill="#111827">-2.7%</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">10-year bond</text><rect class="bar" x="90" y="78" width="180.7" height="22" rx="4" fill="#9ca3af"/><text x="278.7" y="94" font-size="13" font-weight="700" fill="#111827">-7.4%</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">30-year bond</text><rect class="bar" x="90" y="112" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">-13.8%</text></svg><figcaption>Interest-rate risk grows with the time to maturity.</figcaption></figure>
+      <h2>Pull to par</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">Pull to par: price of the default bond as maturity approaches (6% yield, per $100)</title><desc id="cf4-d">A discount bond rises toward $100 as it nears maturity; at maturity it pays its face value.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Pull to par: price of the default bond as maturity approaches (6% yield, per $100)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">0 years left</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$100.00</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">1 years left</text><rect class="bar" x="110" y="78" width="315.0" height="22" rx="4" fill="#2563eb"/><text x="433.0" y="94" font-size="13" font-weight="700" fill="#111827">$99.06</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">3 years left</text><rect class="bar" x="110" y="112" width="309.5" height="22" rx="4" fill="#2563eb"/><text x="427.5" y="128" font-size="13" font-weight="700" fill="#111827">$97.33</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">10 years left</text><rect class="bar" x="110" y="146" width="294.6" height="22" rx="4" fill="#2563eb"/><text x="412.6" y="162" font-size="13" font-weight="700" fill="#111827">$92.64</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">30 years left</text><rect class="bar" x="110" y="180" width="274.2" height="22" rx="4" fill="#2563eb"/><text x="392.2" y="196" font-size="13" font-weight="700" fill="#111827">$86.24</text></svg><figcaption>If the yield does not change, a discount bond drifts up to its face value.</figcaption></figure>
+      <h2>Coupon frequency</h2>
+      <p>Bonds can pay coupons annually, semiannually, quarterly or monthly. More frequent payments are reinvested sooner, so the price at the same nominal yield changes slightly: annually $97.3270, semiannually $97.2914, quarterly $97.2731, monthly $97.2607 per $100 for the default bond.</p>
+      <h2>What yield means here</h2>
+      <p>The yield is the <strong>yield to maturity</strong>: the total annual return if you buy at the price shown and hold to maturity, counting both the coupons and the difference between the price and the face value. The current yield (annual coupon divided by price) is a simpler figure: for the default bond it is 5 &divide; $97.33 = 5.14%, which ignores the gain as the price pulls up to $100.</p>
+      <h2>What this calculator does not cover</h2>
+      <ul><li>Accrued interest for bonds bought or sold between coupon dates.</li><li>Taxes, fees and commissions.</li><li>Credit risk: the issuer may not pay, which is why riskier bonds offer higher yields.</li><li>Callable bonds, floating-rate bonds and inflation-linked bonds.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Confusing the coupon rate with the yield.</li><li>Entering the price as a percentage of face value in the wrong units. Use the same units for face value and price.</li><li>Assuming a high coupon always means a good investment.</li><li>Ignoring that long bonds can lose a lot of value if yields rise.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the one you solved for, and the sentence below repeats it in words. Change the yield to see how the price reacts, or enter the price you are offered and solve for the yield to compare it with other investments. For discounting other cash flows, see the Present Value Calculator.</p>
+      <div class="callout">This calculator gives estimates for planning. Bond prices change with the market, and you can lose money. It is not investment advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="present-value-calculator.html">Present Value Calculator</a> &ndash; discount future cash flows</li><li><a href="annuity-calculator.html">Annuity Calculator</a> &ndash; equal payments over time</li><li><a href="cd-calculator.html">CD Calculator</a> &ndash; fixed-rate certificates of deposit</li><li><a href="savings-calculator.html">Savings Calculator</a> &ndash; savings growth</li><li><a href="mutual-fund-calculator.html">Mutual Fund Calculator</a> &ndash; fund growth and fees</li><li><a href="finance-calculator.html">Finance Calculator</a> &ndash; general finance maths</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Why does coupon frequency matter?</h3>
-        <p>More frequent coupon payments mean your money gets reinvested (compounds) more often, which slightly changes both the bond's fair price and its effective yield compared to the same nominal rate paid less frequently.</p>
+        <p>More frequent coupon payments mean your money is reinvested more often, which slightly changes both the bond's fair price and its effective yield compared with the same nominal rate paid less frequently.</p>
       </div>
       <div class="faq-item">
         <h3>What does "yield" mean here specifically?</h3>
-        <p>This is the bond's yield to maturity (YTM) — the total return you'd earn if you bought the bond today and held it until it matures, accounting for both coupon payments and any difference between the purchase price and face value.</p>
+        <p>It is the yield to maturity: the total annual return if you buy the bond today and hold it to maturity, counting both the coupon payments and any difference between the purchase price and the face value.</p>
       </div>
       <div class="faq-item">
         <h3>Is a higher coupon rate always better for an investor?</h3>
-        <p>Not by itself — what matters is the yield relative to the price paid, not the coupon rate in isolation. A high-coupon bond bought at a steep premium can yield less than a low-coupon bond bought at a discount.</p>
+        <p>Not by itself. What matters is the yield relative to the price paid. A high-coupon bond bought at a steep premium can yield less than a low-coupon bond bought at a discount.</p>
       </div>
+      <div class="faq-item">
+        <h3>Why do bond prices fall when interest rates rise?</h3>
+        <p>Existing coupons are fixed. When new bonds pay more, investors will pay less for the old ones, so the price falls until the old bond's yield matches the market.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between coupon rate and yield?</h3>
+        <p>The coupon rate is the fixed interest the bond pays on its face value. The yield is the return implied by the price you pay, so it changes as the price changes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it include accrued interest?</h3>
+        <p>No. The calculator prices the bond on a coupon date. Between coupon dates the buyer also pays accrued interest, which this tool does not cover.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds" rel="noopener" target="_blank">Investor.gov: Bonds</a>; <a href="https://www.finra.org/investors/investing/investment-products/bonds" rel="noopener" target="_blank">FINRA: Bonds</a></p>
     </div>
 
   </div>
