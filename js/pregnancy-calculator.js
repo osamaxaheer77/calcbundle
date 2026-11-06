@@ -14,8 +14,11 @@
     return isNaN(d) ? null : d;
   }
 
+  // Move by calendar days, not by 24 hours, so a daylight saving change never shifts the date.
   function addDays(date, days) {
-    return new Date(date.getTime() + days * DAY);
+    const d = new Date(date.getTime());
+    d.setDate(d.getDate() + days);
+    return d;
   }
 
   function fmtDate(d) {
