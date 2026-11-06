@@ -13,8 +13,10 @@
   const BRACKETS = /[<>()[\]{}]/;
 
   function secureRandomInt(max) {
+    // Rejection sampling avoids the small bias that a plain modulo would add.
+    const limit = Math.floor(4294967296 / max) * max;
     const arr = new Uint32Array(1);
-    crypto.getRandomValues(arr);
+    do { crypto.getRandomValues(arr); } while (arr[0] >= limit);
     return arr[0] % max;
   }
 
@@ -79,7 +81,7 @@
     resultEl.innerHTML = `
       <div class="summary-payment-box">
         <div class="label">Generated Password</div>
-        <div class="value" id="pwgen-password" style="font-family:monospace; word-break:break-all;">${password}</div>
+        <div class="value" id="pwgen-password" style="font-family:monospace; word-break:break-all;">${password.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')}</div>
       </div>
       <div class="stat-row"><span>Password Entropy</span><strong>${bits.toFixed(1)} bits</strong></div>
       <div class="stat-row"><span>Strength</span><strong>${strengthLabel(bits)}</strong></div>
