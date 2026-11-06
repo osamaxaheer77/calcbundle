@@ -12,19 +12,19 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sales Tax Calculator: Add Tax or Find Pre-Tax Price | CalcBundle</title>
+<title>Sales Tax Calculator: Add Tax or Find Pre-Tax Price</title>
 <meta name="description" content="Calculate sales tax, the before-tax price or the total price from any two known amounts, with a U.S. state rate reference.">
 <link rel="canonical" href="https://calcbundle.net/calculators/sales-tax-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Sales Tax Calculator: Add Tax or Find Pre-Tax Price | CalcBundle">
+<meta property="og:title" content="Sales Tax Calculator: Add Tax or Find Pre-Tax Price">
 <meta property="og:description" content="Calculate sales tax, the before-tax price or the total price from any two known amounts, with a U.S. state rate reference.">
 <meta property="og:url" content="https://calcbundle.net/calculators/sales-tax-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sales Tax Calculator: Add Tax or Find Pre-Tax Price | CalcBundle">
+<meta name="twitter:title" content="Sales Tax Calculator: Add Tax or Find Pre-Tax Price">
 <meta name="twitter:description" content="Calculate sales tax, the before-tax price or the total price from any two known amounts, with a U.S. state rate reference.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
@@ -42,7 +42,7 @@
       "name": "How do I add sales tax to a price?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Multiply the before-tax price by one plus the tax rate as a decimal. For a 6.5% rate that means multiplying by 1.065, so a $100 item costs $106.50. The calculator does this when you enter the before-tax price and the rate."
+        "text": "Multiply the before-tax price by one plus the tax rate as a decimal. For a 6.5% rate that means multiplying by 1.065, so a $100 item costs $106.50."
       }
     },
     {
@@ -50,7 +50,7 @@
       "name": "How do I take sales tax out of a total?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Divide the after-tax total by one plus the tax rate as a decimal. If a receipt shows $106.50 and the rate is 6.5%, divide by 1.065 to get the $100 before-tax price. Enter the rate and the after-tax price, and leave the before-tax box empty."
+        "text": "Divide the after-tax total by one plus the tax rate as a decimal. If a receipt shows $106.50 and the rate is 6.5%, divide by 1.065 to get the $100 before-tax price. Leave the before-tax box empty."
       }
     },
     {
@@ -58,7 +58,7 @@
       "name": "How can I find out what rate was charged?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Enter the before-tax price and the after-tax price, and leave the rate empty. The calculator divides the after-tax price by the before-tax price, subtracts one, and shows the result as a percentage."
+        "text": "Enter the before-tax price and the after-tax price and leave the rate empty. The calculator divides the after-tax price by the before-tax price, subtracts one and shows the result as a percentage."
       }
     },
     {
@@ -66,7 +66,7 @@
       "name": "Why is the combined sales tax higher than the state rate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Many counties and cities add their own sales tax on top of the state rate. The combined rate you pay depends on where the sale happens, so check the rate for your exact location."
+        "text": "Many counties and cities add their own tax on top of the state rate. The combined rate depends on where the sale happens, so check the rate for your exact location."
       }
     },
     {
@@ -74,7 +74,15 @@
       "name": "Is this the same as VAT?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The arithmetic is the same, but VAT and GST are charged at each stage of production and are usually included in the displayed price, while U.S. sales tax is added at the register. You can still use this calculator for VAT by entering the VAT rate as the tax rate."
+        "text": "The arithmetic is the same, but VAT and GST are charged at each stage of production and are usually included in the displayed price, while US sales tax is added at the register. You can enter a VAT rate in this calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I deduct sales tax on my federal return?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can deduct either state and local income taxes or state and local sales taxes if you itemize, but not both. The IRS has a Sales Tax Deduction Calculator for working out the amount."
       }
     }
   ]
@@ -209,47 +217,65 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What sales tax is</h2>
-      <p>Sales tax is a consumption tax collected by the seller at the time of purchase and passed on to the government. In the United States there is no federal sales tax. States set their own, and counties and cities often add more, so the rate depends on where you buy. Five states have no statewide sales tax: Alaska, Delaware, Montana, New Hampshire and Oregon, though Alaska allows local taxes. Most other countries use a value-added tax or goods and services tax instead, which works differently but is calculated with the same percentage arithmetic.</p>
-
-      <h2>The three calculations</h2>
-      <p>The three numbers are linked by one formula: the after-tax price equals the before-tax price multiplied by one plus the rate. Knowing any two lets you solve for the third. Use the before-tax price and the rate to find what you will pay at the register. Use the after-tax total and the rate to take the tax back out, for example to find the pre-tax price on a receipt. Use the two prices to discover what rate was charged. Entering all three fills the answer from the first two, so clear one box to solve for it.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Sales tax is added to the price at checkout. A $100.00 item at a 6.5% rate costs $106.50, of which $6.50 is tax. To go backwards, divide the receipt total by 1.065.</div>
+      <h2>What sales tax is</h2>
+      <p>Sales tax is a consumption tax collected by the seller at the time of purchase and passed to the government. The United States has no federal sales tax. States set their own rates, and counties and cities often add more, so the rate depends on where you buy. Alaska, Delaware, Montana, New Hampshire and Oregon have no statewide sales tax, though Alaska allows local taxes. Most other countries use a value-added tax (VAT) or goods and services tax (GST), which is charged differently but calculated with the same percentage arithmetic.</p>
+      <h2>The one formula behind all three answers</h2>
+      <p><strong>After-tax price = before-tax price &times; (1 + rate &divide; 100).</strong> Fill in any two of the before-tax price, the rate and the after-tax price, and the calculator solves for the third:</p>
+      <ul><li><strong>Add tax:</strong> multiply the before-tax price by 1 plus the rate.</li><li><strong>Remove tax:</strong> divide the after-tax total by 1 plus the rate.</li><li><strong>Find the rate:</strong> divide the after-tax price by the before-tax price, subtract 1 and show it as a percentage.</li></ul>
+      <h2>Worked example with the default numbers</h2>
+      <p>A $100.00 item with a 6.5% sales tax rate. Multiply by 1.065 to get <strong>$106.50</strong>, so the sales tax is <strong>$6.50</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Where the $106.50 on the receipt goes (default numbers)</title><desc id="cf3-d">On a $100 item at 6.5% the tax is $6.50, which is 6.10% of the total you pay at the register.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the $106.50 on the receipt goes (default numbers)</text><rect class="bar" x="14.0" y="42" width="462.0" height="30" fill="#2563eb"/><text x="245.0" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">94%</text><rect class="bar" x="476.0" y="42" width="30.0" height="30" fill="#f59e0b"/><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Before-tax price: <tspan font-weight="700">$100.00</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#f59e0b"/><text x="282" y="98" font-size="12.5" fill="#374151">Sales tax: <tspan font-weight="700">$6.50</tspan></text></svg><figcaption>The tax is added on top of the shelf price, so the total is higher than the number on the tag.</figcaption></figure>
+      <p><strong>Going backwards:</strong> a receipt total of $106.50 with a 6.5% rate. Divide by 1.065 and the before-tax price is <strong>$100.00</strong>.</p>
+      <p><strong>Finding the rate:</strong> a $100.00 item that cost $108.25 at the register. Divide 108.25 by 100, subtract 1, and the rate is <strong>8.25%</strong>.</p>
+      <div class="calc-table"><table><thead><tr><th>Tax rate</th><th>Total for a $100 item</th><th>Tax on a $100 item</th></tr></thead><tbody><tr><td>4%</td><td>$104.00</td><td>$4.00</td></tr><tr><td>5%</td><td>$105.00</td><td>$5.00</td></tr><tr><td>6.5%</td><td>$106.50</td><td>$6.50</td></tr><tr><td>7.25%</td><td>$107.25</td><td>$7.25</td></tr><tr><td>8.875%</td><td>$108.88</td><td>$8.88</td></tr><tr><td>10%</td><td>$110.00</td><td>$10.00</td></tr></tbody></table></div>
+      <h2>A common mistake when removing tax</h2>
+      <p>Do not take the tax rate off the total. If a receipt says $106.50 and the rate is 6.5%, 6.5% of $106.50 is $6.92, which is wrong. The tax was charged on the before-tax price, so you divide by 1.065, and the real tax is $6.50.</p>
+      <h2>Why the rate depends on where you are</h2>
+      <p>The table on this page lists the general state rate and the highest combined rate once local taxes are added. Tap a state&rsquo;s rate to put it into the calculator. The difference between states is large, and the combined rate can be much higher than the state rate.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Sales tax on a $200 purchase at general state rates (from the table on this page)</title><desc id="cf1-d">The same $200 item carries $14.50 of tax in California and nothing in Oregon, before any local tax.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Sales tax on a $200 purchase at general state rates (from the table on this page)</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">Oregon</text><rect class="bar" x="100" y="44" width="2.0" height="22" rx="4" fill="#10b981"/><text x="110.0" y="60" font-size="13" font-weight="700" fill="#111827">$0.00</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">Colorado</text><rect class="bar" x="100" y="78" width="131.2" height="22" rx="4" fill="#2563eb"/><text x="239.2" y="94" font-size="13" font-weight="700" fill="#111827">$5.80</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">New York</text><rect class="bar" x="100" y="112" width="181.0" height="22" rx="4" fill="#2563eb"/><text x="289.0" y="128" font-size="13" font-weight="700" fill="#111827">$8.00</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">Texas</text><rect class="bar" x="100" y="146" width="282.8" height="22" rx="4" fill="#2563eb"/><text x="390.8" y="162" font-size="13" font-weight="700" fill="#111827">$12.50</text><text x="92" y="196" text-anchor="end" font-size="13" fill="#6b7280">Indiana</text><rect class="bar" x="100" y="180" width="316.7" height="22" rx="4" fill="#2563eb"/><text x="424.7" y="196" font-size="13" font-weight="700" fill="#111827">$14.00</text><text x="92" y="230" text-anchor="end" font-size="13" fill="#6b7280">California</text><rect class="bar" x="100" y="214" width="328.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">$14.50</text></svg><figcaption>State rates alone span from 0% to 7.25% in this sample.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Tax on a $25,000 purchase: general state rate vs highest combined rate</title><desc id="cf2-d">Local taxes can add real money on a large purchase: in New York the highest combined rate adds $1,219 to the $1,000 state tax.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Tax on a $25,000 purchase: general state rate vs highest combined rate</text><text x="182" y="60" text-anchor="end" font-size="13" fill="#6b7280">California state</text><rect class="bar" x="190" y="44" width="164.3" height="22" rx="4" fill="#2563eb"/><text x="362.3" y="60" font-size="13" font-weight="700" fill="#111827">$1,812</text><text x="182" y="94" text-anchor="end" font-size="13" fill="#6b7280">California highest combined</text><rect class="bar" x="190" y="78" width="238.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">$2,625</text><text x="182" y="128" text-anchor="end" font-size="13" fill="#6b7280">Texas state</text><rect class="bar" x="190" y="112" width="141.7" height="22" rx="4" fill="#2563eb"/><text x="339.7" y="128" font-size="13" font-weight="700" fill="#111827">$1,562</text><text x="182" y="162" text-anchor="end" font-size="13" fill="#6b7280">Texas highest combined</text><rect class="bar" x="190" y="146" width="187.0" height="22" rx="4" fill="#f59e0b"/><text x="385.0" y="162" font-size="13" font-weight="700" fill="#111827">$2,062</text><text x="182" y="196" text-anchor="end" font-size="13" fill="#6b7280">New York state</text><rect class="bar" x="190" y="180" width="90.7" height="22" rx="4" fill="#2563eb"/><text x="288.7" y="196" font-size="13" font-weight="700" fill="#111827">$1,000</text><text x="182" y="230" text-anchor="end" font-size="13" fill="#6b7280">New York highest combined</text><rect class="bar" x="190" y="214" width="201.2" height="22" rx="4" fill="#f59e0b"/><text x="399.2" y="230" font-size="13" font-weight="700" fill="#111827">$2,219</text></svg><figcaption>On large purchases, local taxes matter as much as the state rate.</figcaption></figure>
+      <h2>Discounts, coupons and several items</h2>
+      <ul><li><strong>Several items:</strong> add the prices first, then apply the tax rate to the total, unless some items are exempt.</li><li><strong>Discounts:</strong> in most places tax applies to the price after a store discount. A $80 item at 25% off is $60.00, and with 6.5% tax you pay <strong>$63.90</strong>. Rules for manufacturer coupons differ by state.</li><li><strong>Restaurants:</strong> tax is normally charged on the bill before the tip.</li><li><strong>Exemptions:</strong> many places tax food, clothing or medicine at a lower rate or not at all, so check your receipt.</li></ul>
       <h2>Deducting sales tax on your income tax</h2>
-      <p>In the United States you can deduct either state and local income taxes or state and local sales taxes on your federal return, but not both, and only if you itemize deductions. Most people deduct income taxes because the amount is usually larger. Someone who made large purchases in a year, such as a car, may come out ahead by deducting sales tax instead. This calculator can help you work out the tax on a single purchase, but it does not prepare a tax deduction.</p>
-      <div class="callout">The rates in the table are general figures and change over time. Local rates, exemptions for items like groceries or medicine, and special taxes on some goods vary by place, so use your receipt or local tax office for the exact rate.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: interpreting the result</h2>
-      <p>A $50 item with a 6% sales tax rate has $3 in tax and a $53 checkout total. Some locations combine state and local taxes, so confirm the applicable rate.</p>
-      <h2>Related calculators</h2>
-      <p>For tax-inclusive pricing, use the <a href="vat-calculator.html">VAT Calculator</a>. For a discounted price before tax, try the <a href="discount-calculator.html">Discount Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="vat-calculator.html">VAT Calculator</a>, <a href="discount-calculator.html">Discount Calculator</a>, <a href="margin-calculator.html">Margin Calculator</a>, <a href="tip-calculator.html">Tip Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p>In the United States you can deduct either state and local income taxes or state and local sales taxes on your federal return, not both, and only if you itemize. Most people deduct income taxes because the amount is usually larger, but someone with a big purchase such as a car may come out ahead with sales tax. This calculator works out the tax on one purchase; it does not prepare a deduction. The IRS has its own Sales Tax Deduction Calculator for that.</p>
+      <h2>Sales tax and VAT</h2>
+      <p>The arithmetic is the same, but VAT and GST are charged at each stage of production and are usually included in the displayed price, while US sales tax is added at the register. You can use this calculator for VAT by entering the VAT rate. For tax-inclusive prices, the VAT Calculator is set up for that.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Using the state rate when a city or county adds its own tax.</li><li>Subtracting the rate from the total instead of dividing.</li><li>Leaving all three boxes filled. The after-tax price is then worked out again from the first two.</li><li>Entering 0.065 instead of 6.5. The rate box takes a percentage.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the after-tax price. Below it you see the before-tax price, the rate and the tax amount. Press the state rates in the table to compare what the same item would cost in different places. Use your receipt or your local tax authority for the exact rate, because rates change.</p>
+      <div class="callout">The rates in the table are general figures and change over time. Local rates, exemptions and special taxes vary, so confirm the rate for your exact location.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="vat-calculator.html">VAT Calculator</a> &ndash; tax-inclusive and tax-exclusive prices</li><li><a href="discount-calculator.html">Discount Calculator</a> &ndash; the price after a discount</li><li><a href="tip-calculator.html">Tip Calculator</a> &ndash; tip and split a bill</li><li><a href="margin-calculator.html">Margin Calculator</a> &ndash; price, cost and profit</li><li><a href="income-tax-calculator.html">Income Tax Calculator</a> &ndash; federal and state income tax</li><li><a href="take-home-pay-calculator.html">Take-Home Pay Calculator</a> &ndash; pay after taxes</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do I add sales tax to a price?</h3>
-        <p>Multiply the before-tax price by one plus the tax rate as a decimal. For a 6.5% rate that means multiplying by 1.065, so a $100 item costs $106.50. The calculator does this when you enter the before-tax price and the rate.</p>
+        <p>Multiply the before-tax price by one plus the tax rate as a decimal. For a 6.5% rate that means multiplying by 1.065, so a $100 item costs $106.50.</p>
       </div>
       <div class="faq-item">
         <h3>How do I take sales tax out of a total?</h3>
-        <p>Divide the after-tax total by one plus the tax rate as a decimal. If a receipt shows $106.50 and the rate is 6.5%, divide by 1.065 to get the $100 before-tax price. Enter the rate and the after-tax price, and leave the before-tax box empty.</p>
+        <p>Divide the after-tax total by one plus the tax rate as a decimal. If a receipt shows $106.50 and the rate is 6.5%, divide by 1.065 to get the $100 before-tax price. Leave the before-tax box empty.</p>
       </div>
       <div class="faq-item">
         <h3>How can I find out what rate was charged?</h3>
-        <p>Enter the before-tax price and the after-tax price, and leave the rate empty. The calculator divides the after-tax price by the before-tax price, subtracts one, and shows the result as a percentage.</p>
+        <p>Enter the before-tax price and the after-tax price and leave the rate empty. The calculator divides the after-tax price by the before-tax price, subtracts one and shows the result as a percentage.</p>
       </div>
       <div class="faq-item">
         <h3>Why is the combined sales tax higher than the state rate?</h3>
-        <p>Many counties and cities add their own sales tax on top of the state rate. The combined rate you pay depends on where the sale happens, so check the rate for your exact location.</p>
+        <p>Many counties and cities add their own tax on top of the state rate. The combined rate depends on where the sale happens, so check the rate for your exact location.</p>
       </div>
       <div class="faq-item">
         <h3>Is this the same as VAT?</h3>
-        <p>The arithmetic is the same, but VAT and GST are charged at each stage of production and are usually included in the displayed price, while U.S. sales tax is added at the register. You can still use this calculator for VAT by entering the VAT rate as the tax rate.</p>
+        <p>The arithmetic is the same, but VAT and GST are charged at each stage of production and are usually included in the displayed price, while US sales tax is added at the register. You can enter a VAT rate in this calculator.</p>
       </div>
+      <div class="faq-item">
+        <h3>Can I deduct sales tax on my federal return?</h3>
+        <p>You can deduct either state and local income taxes or state and local sales taxes if you itemize, but not both. The IRS has a Sales Tax Deduction Calculator for working out the amount.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.irs.gov/credits-deductions/individuals/sales-tax-deduction-calculator" rel="noopener" target="_blank">IRS: Sales Tax Deduction Calculator</a>; <a href="https://www.irs.gov/taxtopics/tc503" rel="noopener" target="_blank">IRS: Topic no. 503, Deductible taxes</a></p>
     </div>
 
   </div>
