@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resistor Calculator: Color Bands &amp; Resistance | CalcBundle</title>
-<meta name="description" content="Decode resistor color bands and compare nominal resistance and tolerance.">
+<title>Resistor Calculator: Colour Codes, Series &amp; Parallel</title>
+<meta name="description" content="Read 4-band and 5-band resistor colour codes, with tolerance range, and find the total resistance of resistors connected in series or in parallel.">
 <link rel="canonical" href="https://calcbundle.net/calculators/resistor-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Resistor Calculator: Color Bands &amp; Resistance | CalcBundle">
-<meta property="og:description" content="Decode resistor color bands and compare nominal resistance and tolerance.">
+<meta property="og:title" content="Resistor Calculator: Colour Codes, Series &amp; Parallel">
+<meta property="og:description" content="Read 4-band and 5-band resistor colour codes, with tolerance range, and find the total resistance of resistors connected in series or in parallel.">
 <meta property="og:url" content="https://calcbundle.net/calculators/resistor-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Resistor Calculator: Color Bands &amp; Resistance | CalcBundle">
-<meta name="twitter:description" content="Decode resistor color bands and compare nominal resistance and tolerance.">
+<meta name="twitter:title" content="Resistor Calculator: Colour Codes, Series &amp; Parallel">
+<meta name="twitter:description" content="Read 4-band and 5-band resistor colour codes, with tolerance range, and find the total resistance of resistors connected in series or in parallel.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Which end do I read the bands from?",
+      "name": "How do I read resistor colour bands?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Start from the side where the bands are closer together, or where the tolerance band (often gold or silver) is clearly separated at the opposite end — that separated band is always read last."
+        "text": "Hold the resistor with the gold or silver tolerance band on the right and read from the left. The first digits give a number, the next band is the multiplier and the last is the tolerance. Brown, black, red, gold is 10 times 100, or 1,000 ohms at plus or minus 5 percent."
       }
     },
     {
       "@type": "Question",
-      "name": "What if there's no tolerance band?",
+      "name": "Which end do I read the bands from?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A resistor with only 3 significant/multiplier bands and no separate tolerance band is assumed to have a ±20% tolerance, per the standard convention — not covered by this calculator's band-count options."
+        "text": "Start from the side where the bands are closer together. The tolerance band is usually separated from the rest and sits at the far end. It is always read last."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between 4-band and 5-band resistors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 5-band resistor has a third significant digit before the multiplier, so it can show values with more precision. A 4-band resistor has two digits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the total resistance in parallel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add the reciprocals of each resistance, then take the reciprocal of the sum. For 100, 220 and 330 ohms, that gives 56.897 ohms. The result is always lower than the smallest resistor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the total resistance in series?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add the resistances together. For 100, 220 and 330 ohms the total is 650 ohms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if a resistor has no tolerance band?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A resistor with no separate tolerance band is usually taken as plus or minus 20 percent. The calculator's band options do not cover that case."
       }
     }
   ]
@@ -164,35 +196,68 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Reading the color bands</h2>
-      <p>On a 4-band resistor, the first two bands are significant digits, the third is a multiplier (a power of ten to multiply by), and the fourth is tolerance. A 5-band resistor adds a third significant digit for extra precision before the multiplier and tolerance bands.</p>
-
-      <h2>Parallel vs. series</h2>
-      <p>Resistors in series simply add up: R<sub>total</sub> = R1 + R2 + &hellip;. Resistors in parallel combine differently, since current splits between them: 1/R<sub>total</sub> = 1/R1 + 1/R2 + &hellip; &mdash; the total is always less than the smallest individual resistor.</p>
-      <div class="callout">This tool covers 4-band and 6-band-minus-temperature-coefficient resistors (4 and 5 bands). Specialty resistors with a temperature coefficient band aren't included.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: verify the calculation</h2><p>Brown-black-red-gold represents 10 × 100 = 1,000 ohms with a ±5% tolerance, or a nominal 1 kΩ resistor.</p><h2>Related calculators</h2><p>For further calculations, see <a href="ohms-law-calculator.html">Ohm's Law Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>A four-band resistor with brown, black, red and gold bands reads 1, 0, then a multiplier of ×100, which makes 1,000 ohms, or 1 kΩ, with a tolerance of ±5%. The real value is somewhere between 950 Ω and 1,050 Ω. Resistors in parallel, such as 100, 220 and 330 ohms, give a total of 56.897 Ω, while the same three in series add up to 650 Ω.</p>
-
-      <h2>Tips for reading resistors</h2>
-      <p>Hold the resistor with the tolerance band, usually gold or silver, on the right and read from the left. Five-band resistors have a third digit for more precision. Parallel resistors always give a total lower than the smallest one, and series resistors always add. Measure with a multimeter when in doubt, because bands can fade, and check the power rating, which is not shown in the colors.</p>
-
-      <p><strong>You might also need:</strong> <a href="voltage-drop-calculator.html">Voltage Drop Calculator</a>, <a href="electricity-calculator.html">Electricity Calculator</a>, <a href="ohms-law-calculator.html">Ohm's Law Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Brown, black, red, gold reads 10 &times; 100 = 1 k&Omega; with &plusmn;5%, so 950 to 1,050 &Omega;. Resistors of 100, 220 and 330 &Omega; give 56.897 &Omega; in parallel and 650 &Omega; in series.</div>
+      <h2>What the calculator does</h2>
+      <p>The page has three tools. The <strong>colour code tool</strong> turns a resistor&rsquo;s coloured bands into its resistance, tolerance and allowed range, for 4-band and 5-band resistors. The <strong>parallel tool</strong> and the <strong>series tool</strong> take a comma-separated list of resistances in ohms and give the total. All three apply standard formulas, so the answers are exact for the values you type.</p>
+      <h2>Reading the colour bands</h2>
+      <p>Hold the resistor with the tolerance band, usually gold or silver, on the right and read from the left. On a <strong>4-band</strong> resistor the first two bands are digits, the third is a multiplier and the fourth is the tolerance. A <strong>5-band</strong> resistor adds a third digit before the multiplier, which gives more precision. The value is the digits read as a number, times the multiplier.</p>
+      <div class="calc-table"><table><thead><tr><th>Colour</th><th>Digit</th><th>Multiplier</th><th>Tolerance</th></tr></thead><tbody><tr><td>Black</td><td>0</td><td>&times;1</td><td>&ndash;</td></tr><tr><td>Brown</td><td>1</td><td>&times;10</td><td>&plusmn;1%</td></tr><tr><td>Red</td><td>2</td><td>&times;100</td><td>&plusmn;2%</td></tr><tr><td>Orange</td><td>3</td><td>&times;1,000</td><td>&ndash;</td></tr><tr><td>Yellow</td><td>4</td><td>&times;10,000</td><td>&ndash;</td></tr><tr><td>Green</td><td>5</td><td>&times;100,000</td><td>&plusmn;0.5%</td></tr><tr><td>Blue</td><td>6</td><td>&times;1,000,000</td><td>&plusmn;0.25%</td></tr><tr><td>Violet</td><td>7</td><td>&times;10,000,000</td><td>&plusmn;0.1%</td></tr><tr><td>Grey</td><td>8</td><td>&times;100,000,000</td><td>&plusmn;0.05%</td></tr><tr><td>White</td><td>9</td><td>&times;1,000,000,000</td><td>&ndash;</td></tr><tr><td>Gold</td><td>&ndash;</td><td>&times;0.1</td><td>&plusmn;5%</td></tr><tr><td>Silver</td><td>&ndash;</td><td>&times;0.01</td><td>&plusmn;10%</td></tr></tbody></table></div>
+      <p>Gold and silver are used as multipliers only for fractions of an ohm (&times;0.1 and &times;0.01) and as tolerance bands (&plusmn;5% and &plusmn;10%). Digit bands never use gold or silver.</p>
+      <h2>Worked example with the default bands</h2>
+      <p>The colour tool opens on brown, black, red and gold. Brown is 1 and black is 0, so the digits make 10. Red is the multiplier &times;100, so the value is 10 &times; 100 = <strong>1 k&Omega;</strong>. Gold means &plusmn;5%, so the real resistance can be anywhere from <strong>950 &Omega;</strong> to <strong>1.05 k&Omega;</strong>: 5% of 1,000 is 50 ohms either side. Switching to 5 bands with brown, black, black, red and brown reads 100 &times; 100 = 10 k&Omega; at &plusmn;1%.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Worst-case spread of a 1 k&amp;Omega; resistor by tolerance band (in ohms)</title><desc id="cf3-d">The default gold band (&amp;plusmn;5%) lets a 1 k&amp;Omega; resistor measure anywhere from 950 &amp;Omega; to 1.05 k&amp;Omega;.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Worst-case spread of a 1 k&amp;Omega; resistor by tolerance band (in ohms)</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">&amp;plusmn;0.1%</text><rect class="bar" x="90" y="44" width="3.4" height="22" rx="4" fill="#9ca3af"/><text x="101.4" y="60" font-size="13" font-weight="700" fill="#111827">&amp;plusmn;1 &amp;Omega;</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">&amp;plusmn;0.5%</text><rect class="bar" x="90" y="78" width="16.9" height="22" rx="4" fill="#9ca3af"/><text x="114.9" y="94" font-size="13" font-weight="700" fill="#111827">&amp;plusmn;5 &amp;Omega;</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">&amp;plusmn;1%</text><rect class="bar" x="90" y="112" width="33.8" height="22" rx="4" fill="#9ca3af"/><text x="131.8" y="128" font-size="13" font-weight="700" fill="#111827">&amp;plusmn;10 &amp;Omega;</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">&amp;plusmn;2%</text><rect class="bar" x="90" y="146" width="67.6" height="22" rx="4" fill="#9ca3af"/><text x="165.6" y="162" font-size="13" font-weight="700" fill="#111827">&amp;plusmn;20 &amp;Omega;</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">&amp;plusmn;5%</text><rect class="bar" x="90" y="180" width="169.0" height="22" rx="4" fill="#10b981"/><text x="267.0" y="196" font-size="13" font-weight="700" fill="#111827">&amp;plusmn;50 &amp;Omega;</text><text x="82" y="230" text-anchor="end" font-size="13" fill="#6b7280">&amp;plusmn;10%</text><rect class="bar" x="90" y="214" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">&amp;plusmn;100 &amp;Omega;</text></svg><figcaption>A tighter tolerance band means a smaller possible error.</figcaption></figure>
+      <h2>More 4-band examples</h2>
+      <div class="calc-table"><table><thead><tr><th>Bands (digit, digit, multiplier, tolerance)</th><th>Resistance</th><th>Tolerance</th><th>Allowed range</th></tr></thead><tbody><tr><td>Yellow, Violet, Red, Gold</td><td>4.7 k&Omega;</td><td>&plusmn;5%</td><td>4.465 k&Omega; &ndash; 4.935 k&Omega;</td></tr><tr><td>Orange, Orange, Brown, Gold</td><td>330 &Omega;</td><td>&plusmn;5%</td><td>313.5 &Omega; &ndash; 346.5 &Omega;</td></tr><tr><td>Brown, Black, Orange, Gold</td><td>10 k&Omega;</td><td>&plusmn;5%</td><td>9.5 k&Omega; &ndash; 10.5 k&Omega;</td></tr><tr><td>Green, Blue, Orange, Silver</td><td>56 k&Omega;</td><td>&plusmn;10%</td><td>50.4 k&Omega; &ndash; 61.6 k&Omega;</td></tr><tr><td>Red, Red, Yellow, Brown</td><td>220 k&Omega;</td><td>&plusmn;1%</td><td>217.8 k&Omega; &ndash; 222.2 k&Omega;</td></tr><tr><td>Brown, Black, Green, Red</td><td>1 M&Omega;</td><td>&plusmn;2%</td><td>980 k&Omega; &ndash; 1.02 M&Omega;</td></tr></tbody></table></div>
+      <h2>5-band examples</h2>
+      <div class="calc-table"><table><thead><tr><th>Bands (digit, digit, digit, multiplier, tolerance)</th><th>Resistance</th><th>Tolerance</th></tr></thead><tbody><tr><td>Brown, Black, Black, Red, Brown</td><td>10 k&Omega;</td><td>&plusmn;1%</td></tr><tr><td>Red, Red, Black, Orange, Brown</td><td>220 k&Omega;</td><td>&plusmn;1%</td></tr><tr><td>Yellow, Violet, Black, Brown, Gold</td><td>4.7 k&Omega;</td><td>&plusmn;5%</td></tr></tbody></table></div>
+      <p>For the calculator&rsquo;s 5-band mode the third band is read as a digit, so brown, black, black is 100, not 10. Make sure the band count matches the resistor before reading the result.</p>
+      <h2>Resistors in series</h2>
+      <p>In series the same current flows through each resistor, and the resistances simply add: <strong>R total = R1 + R2 + &hellip;</strong>. The series tool&rsquo;s default values of 100, 220 and 330 &Omega; give <strong>650 &Omega;</strong>. The total is always larger than the largest single resistor.</p>
+      <h2>Resistors in parallel</h2>
+      <p>In parallel the current splits between paths, so the reciprocals add: <strong>1 / R total = 1 / R1 + 1 / R2 + &hellip;</strong>. For 100, 220 and 330 &Omega; that is 0.01 + 0.004545 + 0.003030 = 0.017576, and the total is 1 &divide; 0.017576 = <strong>56.897 &Omega;</strong>. The total is always less than the smallest resistor, here 100 &Omega;.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">The same three resistors (100, 220 and 330 &amp;Omega;) connected two ways</title><desc id="cf1-d">Parallel gives 56.897 &amp;Omega;, lower than the smallest resistor, while series simply adds to 650 &amp;Omega;.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The same three resistors (100, 220 and 330 &amp;Omega;) connected two ways</text><text x="132" y="60" text-anchor="end" font-size="13" fill="#6b7280">Smallest resistor</text><rect class="bar" x="140" y="44" width="44.3" height="22" rx="4" fill="#9ca3af"/><text x="192.3" y="60" font-size="13" font-weight="700" fill="#111827">100 &amp;Omega;</text><text x="132" y="94" text-anchor="end" font-size="13" fill="#6b7280">Parallel total</text><rect class="bar" x="140" y="78" width="25.2" height="22" rx="4" fill="#10b981"/><text x="173.2" y="94" font-size="13" font-weight="700" fill="#111827">56.897 &amp;Omega;</text><text x="132" y="128" text-anchor="end" font-size="13" fill="#6b7280">Series total</text><rect class="bar" x="140" y="112" width="288.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">650 &amp;Omega;</text></svg><figcaption>Parallel lowers the resistance, series raises it.</figcaption></figure>
+      <p>For just two resistors there is a shortcut: <strong>R1 &times; R2 &divide; (R1 + R2)</strong>. For 100 and 220 &Omega; that is 22,000 &divide; 320 = 68.75 &Omega;. When all the resistors are equal, divide one value by the count.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Equal 1 k&amp;Omega; resistors in parallel: the total is 1,000 divided by the count</title><desc id="cf2-d">Each extra equal resistor adds another path for current, so the total keeps falling: 500 &amp;Omega; for two, 333.333 &amp;Omega; for three.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Equal 1 k&amp;Omega; resistors in parallel: the total is 1,000 divided by the count</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 in parallel</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">1 k&amp;Omega;</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">2 in parallel</text><rect class="bar" x="110" y="78" width="159.0" height="22" rx="4" fill="#9ca3af"/><text x="277.0" y="94" font-size="13" font-weight="700" fill="#111827">500 &amp;Omega;</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">3 in parallel</text><rect class="bar" x="110" y="112" width="106.0" height="22" rx="4" fill="#9ca3af"/><text x="224.0" y="128" font-size="13" font-weight="700" fill="#111827">333.333 &amp;Omega;</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">4 in parallel</text><rect class="bar" x="110" y="146" width="79.5" height="22" rx="4" fill="#9ca3af"/><text x="197.5" y="162" font-size="13" font-weight="700" fill="#111827">250 &amp;Omega;</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">5 in parallel</text><rect class="bar" x="110" y="180" width="63.6" height="22" rx="4" fill="#9ca3af"/><text x="181.6" y="196" font-size="13" font-weight="700" fill="#111827">200 &amp;Omega;</text><text x="102" y="230" text-anchor="end" font-size="13" fill="#6b7280">6 in parallel</text><rect class="bar" x="110" y="214" width="53.0" height="22" rx="4" fill="#9ca3af"/><text x="171.0" y="230" font-size="13" font-weight="700" fill="#111827">166.667 &amp;Omega;</text></svg><figcaption>Equal resistors in parallel divide the value.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Resistors (&Omega;)</th><th>Parallel total</th><th>Series total</th><th>Smallest</th></tr></thead><tbody><tr><td>100, 100</td><td>50 &Omega;</td><td>200 &Omega;</td><td>100</td></tr><tr><td>100, 220</td><td>68.75 &Omega;</td><td>320 &Omega;</td><td>100</td></tr><tr><td>1,000, 1,000, 1,000</td><td>333.333 &Omega;</td><td>3 k&Omega;</td><td>1,000</td></tr><tr><td>10,000, 10</td><td>9.99 &Omega;</td><td>10.01 k&Omega;</td><td>10</td></tr><tr><td>330, 470, 680</td><td>150.863 &Omega;</td><td>1.48 k&Omega;</td><td>330</td></tr><tr><td>100, 220, 330</td><td>56.897 &Omega;</td><td>650 &Omega;</td><td>100</td></tr></tbody></table></div>
+      <h2>Standard values</h2>
+      <p>Resistors are made in preferred values rather than every number. The common E12 series has twelve steps per decade (10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68, 82), and the E24 and E96 series add more steps for tighter tolerances. That is why you rarely find a 100 &Omega; and 220 &Omega; pair that combine to exactly the value you want. Combining two or three resistors in series or parallel is the usual way to get close to a needed value.</p>
+      <h2>What the colours do not show</h2>
+      <ul><li><strong>Power rating.</strong> The size of the resistor sets how much heat it can handle, commonly &frac14; W for small ones. A 1 k&Omega; resistor across 5 V dissipates 5&sup2; &divide; 1,000 = 25 mW, comfortably within &frac14; W (250 mW).</li><li><strong>Temperature coefficient.</strong> Some 6-band resistors add a band for it. This calculator covers 4 and 5 bands only.</li><li><strong>Current condition.</strong> Bands fade and resistors drift with heat, so confirm with a multimeter when in doubt.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Reading the bands from the wrong end. The tolerance band is separated from the others and is read last.</li><li>Choosing 4 bands for a 5-band resistor, which shifts every digit.</li><li>Adding resistors in parallel instead of using reciprocals.</li><li>Entering kilo-ohms and ohms in the same list. The tools expect ohms only, so 4.7 k&Omega; is 4700.</li><li>Assuming the printed value is exact. Within the tolerance band, any value is possible.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The colour tool shows the nominal resistance with its tolerance, then the allowed range underneath. The parallel and series tools show only the total, formatted in &Omega;, k&Omega; or M&Omega;. Values of 1,000 or more appear in kilo-ohms and values of a million or more in mega-ohms. Both tools need at least two positive values.</p>
+      <div class="callout">Check a resistor with a multimeter before using it in a circuit that matters. Faded bands can be misread, and the colours say nothing about power rating.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="ohms-law-calculator.html">Ohm's Law Calculator</a> &ndash; voltage, current and resistance</li><li><a href="voltage-drop-calculator.html">Voltage Drop Calculator</a> &ndash; loss along a wire</li><li><a href="electricity-calculator.html">Electricity Calculator</a> &ndash; power and energy cost</li><li><a href="scientific-notation-calculator.html">Scientific Notation Calculator</a> &ndash; write values such as 4.7e3</li><li><a href="scientific-calculator.html">Scientific Calculator</a> &ndash; general maths</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Which end do I read the bands from?</h3>
-        <p>Start from the side where the bands are closer together, or where the tolerance band (often gold or silver) is clearly separated at the opposite end &mdash; that separated band is always read last.</p>
+        <h3>How do I read resistor colour bands?</h3>
+        <p>Hold the resistor with the gold or silver tolerance band on the right and read from the left. The first digits give a number, the next band is the multiplier and the last is the tolerance. Brown, black, red, gold is 10 times 100, or 1,000 ohms at plus or minus 5 percent.</p>
       </div>
       <div class="faq-item">
-        <h3>What if there's no tolerance band?</h3>
-        <p>A resistor with only 3 significant/multiplier bands and no separate tolerance band is assumed to have a &plusmn;20% tolerance, per the standard convention &mdash; not covered by this calculator's band-count options.</p>
+        <h3>Which end do I read the bands from?</h3>
+        <p>Start from the side where the bands are closer together. The tolerance band is usually separated from the rest and sits at the far end. It is always read last.</p>
       </div>
+      <div class="faq-item">
+        <h3>What is the difference between 4-band and 5-band resistors?</h3>
+        <p>A 5-band resistor has a third significant digit before the multiplier, so it can show values with more precision. A 4-band resistor has two digits.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I find the total resistance in parallel?</h3>
+        <p>Add the reciprocals of each resistance, then take the reciprocal of the sum. For 100, 220 and 330 ohms, that gives 56.897 ohms. The result is always lower than the smallest resistor.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I find the total resistance in series?</h3>
+        <p>Add the resistances together. For 100, 220 and 330 ohms the total is 650 ohms.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if a resistor has no tolerance band?</h3>
+        <p>A resistor with no separate tolerance band is usually taken as plus or minus 20 percent. The calculator's band options do not cover that case.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Electronic_color_code" rel="noopener" target="_blank">Wikipedia: Electronic color code</a>; <a href="https://en.wikipedia.org/wiki/Series_and_parallel_circuits" rel="noopener" target="_blank">Wikipedia: Series and parallel circuits</a>; <a href="https://en.wikipedia.org/wiki/E_series_of_preferred_numbers" rel="noopener" target="_blank">Wikipedia: E series of preferred numbers</a></p>
     </div>
 
   </div>
