@@ -41,15 +41,47 @@
       "name": "Why does \"continuously\" compounding exist as an option?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It's the mathematical limit of compounding infinitely often — used in some theoretical finance and a handful of real financial products. It produces the highest possible effective rate for a given nominal rate."
+        "text": "It is the mathematical limit of compounding infinitely often, used in some theoretical finance and a few real products. It produces the highest possible effective rate for a given nominal rate."
       }
     },
     {
       "@type": "Question",
-      "name": "Which should I use to compare two accounts — APR or APY?",
+      "name": "Which should I use to compare two accounts, APR or APY?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "APY, whenever it's available, since it already accounts for compounding and reflects what you'd actually earn or pay over a year. Comparing raw APRs with different compounding frequencies can be misleading."
+        "text": "APY whenever it is available, because it already accounts for compounding and reflects what you would actually earn or pay over a year. Comparing raw APRs with different compounding frequencies can be misleading."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is APY always higher than APR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "APY is equal to or higher than the APR for the same rate. They are equal only when interest compounds once a year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator show how my balance grows?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It only converts a rate between compounding frequencies. For growth over time with deposits, use the Investment Calculator or the Interest Calculator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does compounding more often matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Less than the rate or the time. At 6%, moving from annual to monthly compounding adds about 0.17 percentage points, and going to continuous adds only a little more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does compounding frequency matter for loans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A higher effective rate means more interest. A card at 20% compounded monthly costs about 21.94% a year if the balance is carried."
       }
     }
   ]
@@ -136,38 +168,68 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Why the same rate can look different</h2>
-      <p>A 6% rate compounded monthly doesn't grow money at exactly 6% a year — it grows slightly faster, because each month's interest starts earning its own interest right away instead of waiting for the year to end. Converting between compounding frequencies answers a simple but important question: what annual rate would produce the exact same growth, regardless of how often it compounds along the way?</p>
-
-      <h2>APR vs. APY</h2>
-      <p>APR (annual percentage rate) is the simple, nominal rate — what you'd get by just multiplying the periodic rate by the number of periods in a year, ignoring compounding. APY (annual percentage yield) is the real, effective rate after accounting for compounding. APY is always equal to or higher than APR for the same underlying rate, and the gap widens as compounding gets more frequent.</p>
-      <div class="callout">This calculator only converts between compounding frequencies — it doesn't project account growth over time. For that, use the Investment Calculator or Interest Calculator instead.</div>
-
-      <!--seo-extra-->
-      <h2>A worked example</h2>
-      <p>A savings account that quotes 6% a year, compounded monthly, pays a little more than 6% in practice, because each month's interest earns interest. Convert it to annual compounding and the equivalent rate is 6.16778%. That figure is the effective annual rate, also called the APY. The monthly rate is 0.5%, and (1 + 0.005)¹² − 1 = 0.0616778.</p>
-
-      <h2>Tips for comparing rates</h2>
-      <p>Always compare accounts on the same basis. A nominal rate, or APR, ignores compounding, while the APY includes it, so a lower APR with more frequent compounding can beat a higher one. Loans work the other way: a higher effective rate costs you more. To see how a balance grows over time with deposits, use the Interest Calculator.</p>
-
-      <p><strong>You might also need:</strong> <a href="simple-interest-calculator.html">Simple Interest Calculator</a>, <a href="future-value-calculator.html">Future Value Calculator</a>, <a href="interest-calculator.html">Interest Calculator</a>, <a href="present-value-calculator.html">Present Value Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <!--next-->
-      <p><strong>What next?</strong> Compound growth is a geometric sequence. The <a href="number-sequence-calculator.html">Number Sequence Calculator</a> shows the value after each period and the running total, and the <a href="big-number-calculator.html">Big Number Calculator</a> keeps every digit if the numbers get very large.</p>
-      <!--/next-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a>.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> The same interest rate grows money at different speeds depending on how often it compounds. 6% compounded monthly is equivalent to 6.16778% compounded annually, which is the effective annual rate, or APY.</div>
+      <h2>Why the same rate can look different</h2>
+      <p>A 6% rate compounded monthly does not grow money at exactly 6% a year. It grows slightly faster, because each month&rsquo;s interest starts earning its own interest straight away instead of waiting for the year to end. This converter answers one question: what rate, at a different compounding frequency, produces exactly the same growth? It keeps the <strong>effective annual rate</strong> the same and restates it for the frequency you choose.</p>
+      <h2>The two formulas</h2>
+      <ul><li><strong>Effective annual rate</strong> = (1 + r &divide; n)<sup>n</sup> &minus; 1, where r is the nominal rate and n the number of compounding periods a year. For continuous compounding it is e<sup>r</sup> &minus; 1.</li><li><strong>Equivalent nominal rate</strong> for m periods a year = ((1 + effective)<sup>1/m</sup> &minus; 1) &times; m. For continuous compounding it is ln(1 + effective).</li></ul>
+      <h2>Worked example with the default numbers</h2>
+      <p>The default is 6% compounded monthly, converted to annual compounding. The monthly rate is 6% &divide; 12 = 0.5%, and (1.005)<sup>12</sup> &minus; 1 = 0.0616778, so the effective annual rate is <strong>6.16778%</strong>. Expressed with annual compounding, that is the output rate. This figure is also called the APY.</p>
+      <p>The same growth expressed at every other frequency:</p>
+      <div class="calc-table"><table><thead><tr><th>Output compounding</th><th>Equivalent rate</th></tr></thead><tbody><tr><td>Annually (APY)</td><td>6.16778%</td></tr><tr><td>Semiannually</td><td>6.07550%</td></tr><tr><td>Quarterly</td><td>6.03005%</td></tr><tr><td>Monthly (APR)</td><td>6.00000%</td></tr><tr><td>Semimonthly</td><td>5.99252%</td></tr><tr><td>Biweekly</td><td>5.99194%</td></tr><tr><td>Weekly</td><td>5.98850%</td></tr><tr><td>Daily</td><td>5.98554%</td></tr><tr><td>Continuously</td><td>5.98505%</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Effective annual rate (APY) of a 6% nominal rate by compounding</title><desc id="cf1-d">Compounding monthly lifts 6% to 6.1678%; compounding continuously, the most possible, gives 6.1837%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Effective annual rate (APY) of a 6% nominal rate by compounding</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">Annually</text><rect class="bar" x="110" y="44" width="308.6" height="22" rx="4" fill="#9ca3af"/><text x="426.6" y="60" font-size="13" font-weight="700" fill="#111827">6.0000%</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Semiannually</text><rect class="bar" x="110" y="78" width="313.2" height="22" rx="4" fill="#9ca3af"/><text x="431.2" y="94" font-size="13" font-weight="700" fill="#111827">6.0900%</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">Quarterly</text><rect class="bar" x="110" y="112" width="315.6" height="22" rx="4" fill="#9ca3af"/><text x="433.6" y="128" font-size="13" font-weight="700" fill="#111827">6.1364%</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">Monthly</text><rect class="bar" x="110" y="146" width="317.2" height="22" rx="4" fill="#2563eb"/><text x="435.2" y="162" font-size="13" font-weight="700" fill="#111827">6.1678%</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">Daily</text><rect class="bar" x="110" y="180" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">6.1831%</text><text x="102" y="230" text-anchor="end" font-size="13" fill="#6b7280">Continuously</text><rect class="bar" x="110" y="214" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">6.1837%</text></svg><figcaption>More frequent compounding raises the effective rate, but with diminishing returns.</figcaption></figure>
+      <h2>APR versus APY</h2>
+      <p><strong>APR</strong> (annual percentage rate) is the nominal rate: the periodic rate multiplied by the number of periods in a year, ignoring compounding. <strong>APY</strong> (annual percentage yield) is the effective rate after compounding. APY is always equal to or higher than the APR for the same underlying rate, and the gap widens as compounding gets more frequent and as the rate rises.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Extra yield from monthly compounding (APY minus the nominal rate)</title><desc id="cf2-d">The gap grows quickly with the rate: 0.04 points at 3% but 1.94 points at 20%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Extra yield from monthly compounding (APY minus the nominal rate)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">3% nominal</text><rect class="bar" x="110" y="44" width="6.8" height="22" rx="4" fill="#10b981"/><text x="124.8" y="60" font-size="13" font-weight="700" fill="#111827">+0.042 pts</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">6% nominal</text><rect class="bar" x="110" y="78" width="27.5" height="22" rx="4" fill="#10b981"/><text x="145.5" y="94" font-size="13" font-weight="700" fill="#111827">+0.168 pts</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">10% nominal</text><rect class="bar" x="110" y="112" width="77.3" height="22" rx="4" fill="#10b981"/><text x="195.3" y="128" font-size="13" font-weight="700" fill="#111827">+0.471 pts</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">20% nominal</text><rect class="bar" x="110" y="146" width="318.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">+1.939 pts</text></svg><figcaption>At low savings rates the difference is tiny; at credit-card-style rates it is large.</figcaption></figure>
+      <h2>Effective rate by nominal rate and frequency</h2>
+      <div class="calc-table"><table><thead><tr><th>Nominal rate</th><th>Annually</th><th>Semiannually</th><th>Quarterly</th><th>Monthly</th><th>Daily</th><th>Continuously</th></tr></thead><tbody><tr><td>3%</td><td>3.000%</td><td>3.022%</td><td>3.034%</td><td>3.042%</td><td>3.045%</td><td>3.045%</td></tr><tr><td>6%</td><td>6.000%</td><td>6.090%</td><td>6.136%</td><td>6.168%</td><td>6.183%</td><td>6.184%</td></tr><tr><td>10%</td><td>10.000%</td><td>10.250%</td><td>10.381%</td><td>10.471%</td><td>10.516%</td><td>10.517%</td></tr><tr><td>20%</td><td>20.000%</td><td>21.000%</td><td>21.551%</td><td>21.939%</td><td>22.134%</td><td>22.140%</td></tr></tbody></table></div>
+      <h2>What the difference is worth</h2>
+      <p>On $10,000 at a 6% nominal rate for 10 years with no deposits, annual compounding grows to $17,908, monthly to $18,194 and continuous compounding to $18,221. The frequency matters far less than the rate or the time, which is why comparing rates correctly matters more than chasing the most frequent compounding.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">$10,000 after 10 years at a 6% nominal rate by compounding (no deposits)</title><desc id="cf3-d">Annual compounding ends at $17,908 and continuous at $18,221, a difference of $313 over ten years.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">$10,000 after 10 years at a 6% nominal rate by compounding (no deposits)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">Annually</text><rect class="bar" x="110" y="44" width="312.5" height="22" rx="4" fill="#9ca3af"/><text x="430.5" y="60" font-size="13" font-weight="700" fill="#111827">$17,908</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Semiannually</text><rect class="bar" x="110" y="78" width="315.2" height="22" rx="4" fill="#9ca3af"/><text x="433.2" y="94" font-size="13" font-weight="700" fill="#111827">$18,061</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">Quarterly</text><rect class="bar" x="110" y="112" width="316.6" height="22" rx="4" fill="#9ca3af"/><text x="434.6" y="128" font-size="13" font-weight="700" fill="#111827">$18,140</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">Monthly</text><rect class="bar" x="110" y="146" width="317.5" height="22" rx="4" fill="#2563eb"/><text x="435.5" y="162" font-size="13" font-weight="700" fill="#111827">$18,194</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">Daily</text><rect class="bar" x="110" y="180" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">$18,220</text><text x="102" y="230" text-anchor="end" font-size="13" fill="#6b7280">Continuously</text><rect class="bar" x="110" y="214" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">$18,221</text></svg><figcaption>Ten years of compounding at 6%: the frequency changes the result by only a few percent.</figcaption></figure>
+      <h2>Comparing offers fairly</h2>
+      <p>Three savings accounts: Bank A pays 5.95% compounded daily, Bank B pays 6% compounded quarterly and Bank C pays 6.05% compounded annually. Their effective rates are 6.1301%, 6.1364% and 6.0500%. Bank B earns the most, even though its headline rate is not the highest. Always compare on the same basis, and prefer the APY when it is quoted.</p>
+      <h2>Loans work the other way</h2>
+      <p>For a loan, a higher effective rate costs you more. A credit card quoting 20% compounded monthly has an effective annual rate of 21.94%, which is what you really pay if the balance is carried for a year. The APR Calculator and Loan Calculator show how fees and compounding change the real cost.</p>
+      <h2>Why continuous compounding exists</h2>
+      <p>Continuous compounding is the mathematical limit of compounding infinitely often. It gives the highest possible effective rate for a given nominal rate and appears in some theoretical finance and a few real products. For 6% it is e<sup>0.06</sup> &minus; 1 = 6.1837%.</p>
+      <h2>What this tool does not do</h2>
+      <p>This calculator converts rates only. It does not project a balance over time or include deposits. For growth with regular deposits use the Investment Calculator or the Interest Calculator.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Comparing an APR on one account with an APY on another.</li><li>Assuming that more frequent compounding is worth much more than a higher rate.</li><li>Entering the rate as a decimal such as 0.06 instead of 6.</li><li>Using the converter to project growth. It only converts the rate.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the equivalent rate at your output frequency. Below it you see the input rate, the effective annual rate and the output rate with its compounding. If you are comparing two accounts, set the output to Annually and compare the results directly.</p>
+      <div class="callout">This calculator converts rates and does not predict returns. Actual rates change and can differ from those quoted. It is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="interest-calculator.html">Interest Calculator</a> &ndash; growth with deposits, tax and inflation</li><li><a href="investment-calculator.html">Investment Calculator</a> &ndash; goals and growth over time</li><li><a href="simple-interest-calculator.html">Simple Interest Calculator</a> &ndash; interest without compounding</li><li><a href="future-value-calculator.html">Future Value Calculator</a> &ndash; what money will be worth</li><li><a href="present-value-calculator.html">Present Value Calculator</a> &ndash; what future money is worth today</li><li><a href="apr-calculator.html">APR Calculator</a> &ndash; the true cost of a loan</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Why does "continuously" compounding exist as an option?</h3>
-        <p>It's the mathematical limit of compounding infinitely often — used in some theoretical finance and a handful of real financial products. It produces the highest possible effective rate for a given nominal rate.</p>
+        <p>It is the mathematical limit of compounding infinitely often, used in some theoretical finance and a few real products. It produces the highest possible effective rate for a given nominal rate.</p>
       </div>
       <div class="faq-item">
-        <h3>Which should I use to compare two accounts — APR or APY?</h3>
-        <p>APY, whenever it's available, since it already accounts for compounding and reflects what you'd actually earn or pay over a year. Comparing raw APRs with different compounding frequencies can be misleading.</p>
+        <h3>Which should I use to compare two accounts, APR or APY?</h3>
+        <p>APY whenever it is available, because it already accounts for compounding and reflects what you would actually earn or pay over a year. Comparing raw APRs with different compounding frequencies can be misleading.</p>
       </div>
+      <div class="faq-item">
+        <h3>Is APY always higher than APR?</h3>
+        <p>APY is equal to or higher than the APR for the same rate. They are equal only when interest compounds once a year.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does this calculator show how my balance grows?</h3>
+        <p>No. It only converts a rate between compounding frequencies. For growth over time with deposits, use the Investment Calculator or the Interest Calculator.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How much does compounding more often matter?</h3>
+        <p>Less than the rate or the time. At 6%, moving from annual to monthly compounding adds about 0.17 percentage points, and going to continuous adds only a little more.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does compounding frequency matter for loans?</h3>
+        <p>Yes. A higher effective rate means more interest. A card at 20% compounded monthly costs about 21.94% a year if the balance is carried.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" rel="noopener" target="_blank">Investor.gov: Compound Interest Calculator</a></p>
     </div>
 
   </div>
