@@ -39,34 +39,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Why is the \"estimated maintenance\" cost included if it doesn't count toward my loan approval?",
+      "name": "What is the 28/36 rule?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Lenders don't factor ongoing maintenance into their DTI math, but it's still a real cost of owning a home — repairs, upkeep, appliance replacement. We include a rough 1.5%-of-price estimate so the \"total monthly cost\" figure reflects what you'd actually pay, not just what a lender would approve."
+        "text": "It is a planning guideline: spend no more than 28% of gross monthly income on housing and no more than 36% on all debt together. Actual lender limits depend on the loan program and your finances."
       }
     },
     {
       "@type": "Question",
-      "name": "Does a bigger down payment let me afford a more expensive house?",
+      "name": "Why do FHA and VA give a different result?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A larger down payment lowers the amount you need to borrow for the same home price. It may also affect loan terms or mortgage-insurance requirements, although a better interest rate is not guaranteed. Remember to keep enough cash for closing costs and reserves."
+        "text": "The calculator uses different ratio presets: 31% and 43% for FHA, and 41% total for VA. These are simplified assumptions. Real approvals use more factors, including compensating strengths and, for VA, residual income."
       }
     },
     {
       "@type": "Question",
-      "name": "Why does raising my monthly debt lower my affordable house price?",
+      "name": "Why does the calculator ask for taxes, insurance and HOA?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Because the selected back-end DTI assumption covers housing costs plus other recurring debts. Higher existing monthly payments leave less room in the estimated housing budget. Actual lender requirements can differ."
+        "text": "They are part of your monthly cost, so they reduce the loan payment you can afford. Higher taxes or fees mean a lower home price at the same budget."
       }
     },
     {
       "@type": "Question",
-      "name": "Is the VA loan estimate exact?",
+      "name": "Does the result mean I will be approved?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It uses a simplified 41% DTI assumption, but VA underwriting also considers residual income and other eligibility factors. The estimate does not fully model fees or individual lender requirements. Confirm details with a VA-approved lender."
+        "text": "No. It is a budgeting scenario. A lender looks at your credit, income, reserves and other factors before approving a loan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do other debts change the result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They count toward the back-end ratio. Small debts may not matter at first, but once the back-end limit is the tighter one, each extra dollar of debt reduces your housing budget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I buy the most expensive home I can afford?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Leave room in your budget for savings, repairs and changes in income. A lender’s maximum is not a recommended spending target."
       }
     }
   ]
@@ -287,51 +303,66 @@
       </form>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How lenders decide what you can borrow</h2>
-      <p>Affordability isn't really about the size of the house — it's about the size of the monthly payment relative to your income. Lenders formalize this with a debt-to-income (DTI) ratio: the share of your gross monthly income that goes toward debt. A <strong>front-end ratio</strong> covers housing costs alone (loan payment, property tax, HOA, insurance); a <strong>back-end ratio</strong> adds in every other recurring debt — car loans, student loans, credit cards. The familiar 28/36 rule is a planning guideline, not a universal lending limit. Actual qualifying ratios depend on the loan program, lender, borrower profile, and underwriting.</p>
-
-      <h2>Why the loan type changes the math</h2>
-      <p>This calculator provides conventional 28/36, FHA 31/43, and VA 41% debt-to-income presets for comparison. They are simplified assumptions, not universal approval cutoffs. FHA and VA underwriting can use additional factors, compensating strengths, and program-specific requirements. In particular, VA qualification also considers residual income. Confirm eligibility and current requirements with a lender instead of treating the result as a preapproval.</p>
-      <div class="callout">This calculator works backward from an estimated monthly housing limit to an approximate home price. The result is a budgeting scenario—not a lender offer or a guarantee that you can qualify for that amount.</div>
-
-      <h2>Why two different starting points</h2>
-      <p>Not everyone thinks in DTI ratios. Some people simply know what they're comfortable spending each month and want to see what that translates to in house price — which is exactly what the fixed-budget version of this calculator does, skipping the income and debt inputs entirely.</p>
-
-      <h2>Example: estimate a housing budget from your income</h2>
-      <p>Suppose your gross household income is $90,000 a year and you pay $500 per month toward other debts. That is $7,500 in gross monthly income. Using the conventional 28/36 <em>planning preset</em>, 28% of income allows $2,100 for housing, while 36% minus $500 in other debt allows $2,200. The stricter amount is $2,100 a month for the calculator’s housing-cost estimate. This is not a recommended spending target or a mortgage approval.</p>
-      <p>The estimated home price still depends on your down payment, interest rate, loan term, property taxes, homeowners insurance, and any HOA charges. If you are shopping for a specific property, compare its potential monthly payment with the <a href="mortgage-calculator.html">Mortgage Calculator</a>. To see whether the payment leaves enough room for other living costs, compare the result with your personal budget too.</p>
-
-      <h2>What this estimate does not include</h2>
-      <p>A loan-qualification estimate is different from a comfortable household budget. This tool separately estimates home maintenance and closing costs using simplified percentages, but actual expenses vary. Mortgage insurance, changing taxes and insurance premiums, repairs, utilities, and lender fees may affect the real total. Use the <a href="down-payment-calculator.html">Down Payment Calculator</a> to explore upfront cash needs and the <a href="rent-vs-buy-calculator.html">Rent vs. Buy Calculator</a> when comparing long-term housing choices.</p>
-      <p>For the next step, estimate payments with the <a href="mortgage-calculator.html">Mortgage Calculator</a>, then review the principal and interest breakdown with the <a href="amortization-calculator.html">Amortization Calculator</a>. If you already own a home, the <a href="refinance-calculator.html">Refinance Calculator</a> addresses a different question: whether changing an existing loan could make sense.</p>
-
-      <!--seo-extra-->
-<h2>Worked example: a useful baseline</h2><p>If a household earns $6,000 monthly and allocates 25% of gross income to a housing payment, that target is $1,500 monthly before determining the corresponding home price. Lending criteria differ.</p>
-<h2>Related calculators</h2><p>Explore mortgage costs in the <a href="mortgage-calculator.html">Mortgage Calculator</a> and cash needed upfront in the <a href="down-payment-calculator.html">Down Payment Calculator</a>.</p>
-
-      <p><strong>You might also need:</strong> <a href="down-payment-calculator.html">Down Payment Calculator</a>, <a href="refinance-calculator.html">Refinance Calculator</a>, <a href="mortgage-payoff-calculator.html">Mortgage Payoff Calculator</a>, <a href="fha-loan-calculator.html">FHA Loan Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-much-house-can-you-afford.html">How Much House Can You Afford?</a>.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A common guide is that housing should take no more than 28% of gross income and total debt no more than 36%. On $120,000 of income with no other debts, that is a $2,800 monthly housing budget, which supports a home of about $416,468 at 6.5% with 20% down.</div>
+      <h2>How lenders decide what you can borrow</h2>
+      <p>Affordability depends on your monthly payment compared with your income, not on the size of the house. Lenders measure this with the <strong>debt-to-income (DTI) ratio</strong>: the share of gross monthly income that goes to debt payments, which is monthly debt divided by gross monthly income. Two ratios are used:</p>
+      <ul><li><strong>Front-end ratio:</strong> housing costs only (loan payment, property tax, insurance, HOA).</li><li><strong>Back-end ratio:</strong> housing costs plus every other recurring debt, such as car loans, student loans and credit cards.</li></ul>
+      <p>The well-known <strong>28/36 rule</strong> says housing should be no more than 28% of gross income and total debt no more than 36%. It is a planning guideline, not a universal lending limit.</p>
+      <h2>Presets for different loan types</h2>
+      <div class="calc-table"><table><thead><tr><th>Loan type</th><th>Ratios used by the calculator</th><th>Notes</th></tr></thead><tbody><tr><td>Conventional</td><td>28% front-end, 36% back-end</td><td>Common planning guideline</td></tr><tr><td>FHA</td><td>31% front-end, 43% back-end</td><td>Lenders may allow more with compensating factors</td></tr><tr><td>VA</td><td>41% total</td><td>VA also looks at residual income</td></tr></tbody></table></div>
+      <p>These are simplified assumptions for comparison, not approval cut-offs. Underwriting uses credit scores, reserves and other factors, so check current requirements with a lender.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>A household earning <strong>$120,000</strong> a year with no other debts, a 30-year loan at 6.5%, 20% down, property tax of 1.5% and insurance of 0.5% of the price a year (the calculator&rsquo;s starting values), using the conventional 28/36 rule. Monthly income is $10,000, so the front-end limit is $2,800 and the back-end limit is $3,600. The tighter one, <strong>$2,800 a month</strong>, becomes the housing budget.</p>
+      <p>The calculator then solves for the price where principal and interest, tax and insurance together equal that budget: <strong>price &asymp; $416,468</strong>. That means a $83,294 down payment, a $333,174 loan, principal and interest of $2,105.89, tax of $520.58 and insurance of $173.53 a month.</p>
+      <h2>Example: income and other debts</h2>
+      <p>For $90,000 of income and $500 a month of other debts, monthly income is $7,500. 28% allows $2,100 for housing and 36% minus the debts allows $2,200. The lower number, <strong>$2,100</strong>, is the housing budget, which supports a home of about <strong>$312,351</strong> with the same assumptions.</p>
+      <h2>How debts change what you can afford</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Home price you can afford by monthly debt ($120,000 income, 28/36 rule)</title><desc id="cf1-d">Small debts do not matter until the 36% back-end limit becomes the tighter one. Here that happens above $800 a month, and then every $500 of debt cuts the price by about $74,369.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Home price you can afford by monthly debt ($120,000 income, 28/36 rule)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">$0 debt</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$416,468</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">$500 debt</text><rect class="bar" x="110" y="78" width="318.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">$416,468</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">$1,000 debt</text><rect class="bar" x="110" y="112" width="295.3" height="22" rx="4" fill="#f59e0b"/><text x="413.3" y="128" font-size="13" font-weight="700" fill="#111827">$386,720</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">$1,500 debt</text><rect class="bar" x="110" y="146" width="238.5" height="22" rx="4" fill="#f59e0b"/><text x="356.5" y="162" font-size="13" font-weight="700" fill="#111827">$312,351</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">$2,000 debt</text><rect class="bar" x="110" y="180" width="181.7" height="22" rx="4" fill="#f59e0b"/><text x="299.7" y="196" font-size="13" font-weight="700" fill="#111827">$237,982</text></svg><figcaption>Debts first reduce the budget when they push the back-end ratio above the front-end limit.</figcaption></figure>
+      <h2>How the loan program changes the answer</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Home price by loan program ($120,000 income, $500 monthly debt)</title><desc id="cf2-d">The same buyer gets a different budget under each program&amp;rsquo;s ratios: $2,800 a month for conventional, $3,100 for FHA and $3,600 for VA.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Home price by loan program ($120,000 income, $500 monthly debt)</text><text x="132" y="60" text-anchor="end" font-size="13" fill="#6b7280">Conventional 28/36</text><rect class="bar" x="140" y="44" width="224.0" height="22" rx="4" fill="#2563eb"/><text x="372.0" y="60" font-size="13" font-weight="700" fill="#111827">$416,468</text><text x="132" y="94" text-anchor="end" font-size="13" fill="#6b7280">FHA 31/43</text><rect class="bar" x="140" y="78" width="248.0" height="22" rx="4" fill="#10b981"/><text x="396.0" y="94" font-size="13" font-weight="700" fill="#111827">$461,089</text><text x="132" y="128" text-anchor="end" font-size="13" fill="#6b7280">VA 41%</text><rect class="bar" x="140" y="112" width="288.0" height="22" rx="4" fill="#a855f7"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">$535,458</text></svg><figcaption>Higher allowed ratios raise the price you can reach, but they also leave less room for the rest of your budget.</figcaption></figure>
+      <h2>The effect of the interest rate</h2>
+      <p>For the same $2,800 housing budget, a higher rate cuts the price you can reach and raises the payment on the loan:</p>
+      <div class="calc-table"><table><thead><tr><th>Interest rate</th><th>Price you can afford</th><th>Principal and interest</th></tr></thead><tbody><tr><td>5.5%</td><td>$450,960</td><td>$2,048</td></tr><tr><td>6.5%</td><td>$416,468</td><td>$2,106</td></tr><tr><td>7.5%</td><td>$385,655</td><td>$2,157</td></tr><tr><td>8.5%</td><td>$358,149</td><td>$2,203</td></tr></tbody></table></div>
+      <h2>Starting from a monthly budget instead</h2>
+      <p>The second tool skips income and debts. If you know what you are comfortable spending, enter it and the calculator works out the price. With $3,500 a month, 6.5% over 30 years, 20% down, tax, insurance and 1.5% a year for maintenance included, the price is about <strong>$438,970</strong>, with a loan of $351,176 and a down payment of $87,794. Closing costs are assumed at 3% of the price (about $13,169), so the cash needed at closing is $100,963.</p>
+      <h2>Affording a house is more than qualifying</h2>
+      <ul><li>A lender may approve more than you are comfortable paying. Leave room for savings, travel and surprises.</li><li>Budget for maintenance (often about 1% to 2% of the home value a year), utilities and furnishing.</li><li>Keep an emergency fund after the down payment and closing costs.</li><li>Think about job security and expected changes in income or family size.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Treating the result as a pre-approval or a lender offer.</li><li>Leaving out other debts such as student loans or credit cards.</li><li>Forgetting property tax, insurance and HOA fees, which can change the price by tens of thousands of dollars.</li><li>Using an interest rate from an advertisement instead of a real quote.</li><li>Stretching to the maximum allowed by FHA or VA ratios without a cushion.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The headline price is a budgeting scenario, not a promise. Change the rate, down payment and taxes to see how fragile it is, then compare the monthly cost with your actual spending. When you have a price in mind, use the Mortgage Calculator to see the full payment, and the Down Payment Calculator to plan the cash you need.</p>
+      <div class="callout">This calculator gives estimates only. It is not a mortgage offer, and eligibility depends on a lender&rsquo;s review.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="mortgage-calculator.html">Mortgage Calculator</a> &ndash; the full monthly payment for a price</li><li><a href="down-payment-calculator.html">Down Payment Calculator</a> &ndash; cash needed to buy</li><li><a href="debt-ratio-calculator.html">Debt-to-Income Ratio Calculator</a> &ndash; work out your own DTI</li><li><a href="rent-vs-buy-calculator.html">Rent vs Buy Calculator</a> &ndash; compare renting with buying</li><li><a href="amortization-calculator.html">Amortization Calculator</a> &ndash; interest and principal month by month</li><li><a href="income-tax-calculator.html">Income Tax Calculator</a> &ndash; estimate tax on your income</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-much-house-can-you-afford.html">How Much House Can You Afford?</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Why is the "estimated maintenance" cost included if it doesn't count toward my loan approval?</h3>
-        <p>Lenders don't factor ongoing maintenance into their DTI math, but it's still a real cost of owning a home — repairs, upkeep, appliance replacement. We include a rough 1.5%-of-price estimate so the "total monthly cost" figure reflects what you'd actually pay, not just what a lender would approve.</p>
+        <h3>What is the 28/36 rule?</h3>
+        <p>It is a planning guideline: spend no more than 28% of gross monthly income on housing and no more than 36% on all debt together. Actual lender limits depend on the loan program and your finances.</p>
       </div>
       <div class="faq-item">
-        <h3>Does a bigger down payment let me afford a more expensive house?</h3>
-        <p>A larger down payment lowers the amount you need to borrow for the same home price. It may also affect loan terms or mortgage-insurance requirements, although a better interest rate is not guaranteed. Remember to keep enough cash for closing costs and reserves.</p>
+        <h3>Why do FHA and VA give a different result?</h3>
+        <p>The calculator uses different ratio presets: 31% and 43% for FHA, and 41% total for VA. These are simplified assumptions. Real approvals use more factors, including compensating strengths and, for VA, residual income.</p>
       </div>
       <div class="faq-item">
-        <h3>Why does raising my monthly debt lower my affordable house price?</h3>
-        <p>Because the selected back-end DTI assumption covers housing costs <em>plus</em> other recurring debts. Higher existing monthly payments leave less room in the estimated housing budget. Actual lender requirements can differ.</p>
+        <h3>Why does the calculator ask for taxes, insurance and HOA?</h3>
+        <p>They are part of your monthly cost, so they reduce the loan payment you can afford. Higher taxes or fees mean a lower home price at the same budget.</p>
       </div>
       <div class="faq-item">
-        <h3>Is the VA loan estimate exact?</h3>
-        <p>It uses a simplified 41% DTI assumption, but VA underwriting also considers residual income and other eligibility factors. The estimate does not fully model fees or individual lender requirements. Confirm details with a VA-approved lender.</p>
+        <h3>Does the result mean I will be approved?</h3>
+        <p>No. It is a budgeting scenario. A lender looks at your credit, income, reserves and other factors before approving a loan.</p>
       </div>
+      <div class="faq-item">
+        <h3>How do other debts change the result?</h3>
+        <p>They count toward the back-end ratio. Small debts may not matter at first, but once the back-end limit is the tighter one, each extra dollar of debt reduces your housing budget.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I buy the most expensive home I can afford?</h3>
+        <p>Not necessarily. Leave room in your budget for savings, repairs and changes in income. A lender&rsquo;s maximum is not a recommended spending target.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-to-income-ratio-why-is-the-43-debt-to-income-ratio-important-en-1791/" rel="noopener" target="_blank">CFPB: What is a debt-to-income ratio?</a></p>
     </div>
 
   </div>
