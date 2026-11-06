@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Standard Deviation Calculator: Sample and Population | CalcBundle</title>
-<meta name="description" content="Calculate spread with sample or population standard deviation and variance for a list of values.">
+<title>Standard Deviation Calculator: Sample &amp; Population</title>
+<meta name="description" content="Calculate sample or population standard deviation, variance and standard error for a list of numbers, with margin of error by confidence level.">
 <link rel="canonical" href="https://calcbundle.net/calculators/standard-deviation-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Standard Deviation Calculator: Sample and Population | CalcBundle">
-<meta property="og:description" content="Calculate spread with sample or population standard deviation and variance for a list of values.">
+<meta property="og:title" content="Standard Deviation Calculator: Sample &amp; Population">
+<meta property="og:description" content="Calculate sample or population standard deviation, variance and standard error for a list of numbers, with margin of error by confidence level.">
 <meta property="og:url" content="https://calcbundle.net/calculators/standard-deviation-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Standard Deviation Calculator: Sample and Population | CalcBundle">
-<meta name="twitter:description" content="Calculate spread with sample or population standard deviation and variance for a list of values.">
+<meta name="twitter:title" content="Standard Deviation Calculator: Sample &amp; Population">
+<meta name="twitter:description" content="Calculate sample or population standard deviation, variance and standard error for a list of numbers, with margin of error by confidence level.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Why does sample standard deviation divide by N-1 instead of N?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This is Bessel's correction. Using a sample's own mean to compute variance slightly underestimates the true population variance, since the sample mean is, by construction, the value that minimizes the sum of squared deviations for that exact sample. Dividing by N-1 instead of N corrects for that bias."
+        "text": "This is Bessel's correction. A sample's own mean is the value that minimizes the sum of squared differences for that sample, so dividing by N slightly underestimates the true spread. Dividing by N-1 corrects the bias."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "What if I only have one data point?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sample standard deviation is undefined for a single value, since there's no way to divide by N-1=0. Population standard deviation of a single value is always 0, since that one value is exactly equal to the mean."
+        "text": "Sample standard deviation is undefined for a single value because it would divide by zero. The population standard deviation of a single value is 0, since the value equals the mean."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between variance and standard deviation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Variance is the average squared difference from the mean. Standard deviation is its square root, which puts the spread back in the units of your data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the standard error of the mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the standard deviation divided by the square root of N and describes how much the sample mean would vary if you repeated the sampling. It shrinks as the sample grows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as a high standard deviation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is relative. Compare it with the mean: a standard deviation of 5 is large for numbers near 10 but small for numbers near 10,000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can standard deviation be negative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is a square root of an average of squares, so it is zero or positive. It is zero only when every value is the same."
       }
     }
   ]
@@ -118,38 +150,67 @@
       <div id="sd-margin-wrap" style="padding:20px;"></div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Population vs. sample</h2>
-      <p>Use "Population" when your data represents every member of the group you care about. Use "Sample" when your data is a subset drawn from a larger population you're trying to estimate &mdash; the sample formula divides by N-1 instead of N, which corrects for the fact that a sample tends to slightly underestimate the true population variance.</p>
-
-      <h2>What the margin of error table shows</h2>
-      <p>The standard error of the mean (SEM) describes how much the sample mean would likely vary if you repeated the sampling process. Multiplying SEM by a z-score gives a margin of error at a chosen confidence level &mdash; for example, "95% confidence" means that if you repeated this sampling many times, about 95% of the resulting intervals would contain the true population mean.</p>
-      <div class="callout">A low standard deviation means data points cluster tightly around the mean; a high one means they're spread out widely. Two data sets can have the identical mean and look completely different once you account for their spread.</div>
-
-      <!--seo-extra-->
-<h2>Quick numerical check</h2><p>For the values 2, 4 and 6, the mean is 4. Population variance is 8/3 ≈ 2.667; sample variance is 8/2 = 4. Select the appropriate definition.</p><p>Related: <a href="statistics-calculator.html">Statistics Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>For the numbers 10, 12, 23, 23, 16, 23, 21 and 16, the mean is 144 ÷ 8 = 18. The squared differences add up to 192, so the variance of the population is 192 ÷ 8 = 24 and the standard deviation is √24 = 4.899. If the numbers are a sample, divide by 7 instead, giving a variance of 27.43 and a standard deviation of 5.237. The standard error of the mean is 1.7321.</p>
-
-      <h2>Tips for choosing population or sample</h2>
-      <p>Use the population figure when you have every value in the group, such as all the test scores in one class. Use the sample figure when your data is a subset used to estimate a larger group, since dividing by n − 1 corrects for the bias in small samples. About 68% of values in a normal data set lie within one standard deviation of the mean, and 95% lie within two.</p>
-
-      <p><strong>You might also need:</strong> <a href="probability-calculator.html">Probability Calculator</a>, <a href="sample-size-calculator.html">Sample Size Calculator</a>, <a href="mean-median-mode-range-calculator.html">Mean, Median, Mode, Range Calculator</a>, <a href="random-number-generator.html">Random Number Generator</a>.</p>
-
-      <!--/seo-extra-->
-      <!--next-->
-      <p><strong>What next?</strong> Once you have the standard deviation, you can ask how unusual a single value is with the <a href="z-score-calculator.html">Z-score Calculator</a>, or turn the mean and standard deviation of a sample into a range for the true average with the <a href="confidence-interval-calculator.html">Confidence Interval Calculator</a>. If you also want the median, mode and geometric mean from the same list, the <a href="statistics-calculator.html">Statistics Calculator</a> shows everything at once.</p>
-      <!--/next-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Standard deviation shows how far values typically sit from their mean. For 10, 12, 23, 23, 16, 23, 21 and 16 the mean is 18, the population standard deviation is 4.899 and the sample standard deviation is 5.237.</div>
+      <h2>What standard deviation tells you</h2>
+      <p>Standard deviation measures how spread out numbers are around their mean. A small value means the numbers sit close to the average; a large value means they are scattered. It is in the same units as the data, which makes it easier to read than variance, which is in squared units.</p>
+      <h2>The formulas</h2>
+      <ul><li><strong>Mean:</strong> add the values and divide by how many there are (N).</li><li><strong>Variance:</strong> add up the squared differences from the mean, then divide by N (population) or N &minus; 1 (sample).</li><li><strong>Standard deviation:</strong> the square root of the variance.</li><li><strong>Standard error of the mean:</strong> the standard deviation divided by the square root of N.</li></ul>
+      <h2>Worked example with the default numbers</h2>
+      <p>The values are 10, 12, 23, 23, 16, 23, 21 and 16. Their sum is 144, so the mean is 144 &divide; 8 = <strong>18</strong>. Subtract the mean from each value and square it:</p>
+      <div class="calc-table"><table><thead><tr><th>Value</th><th>Value &minus; mean</th><th>Squared</th></tr></thead><tbody><tr><td>10</td><td>-8</td><td>64</td></tr><tr><td>12</td><td>-6</td><td>36</td></tr><tr><td>23</td><td>5</td><td>25</td></tr><tr><td>23</td><td>5</td><td>25</td></tr><tr><td>16</td><td>-2</td><td>4</td></tr><tr><td>23</td><td>5</td><td>25</td></tr><tr><td>21</td><td>3</td><td>9</td></tr><tr><td>16</td><td>-2</td><td>4</td></tr><tr><td><strong>Total</strong></td><td><strong>0</strong></td><td><strong>192</strong></td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 318" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Squared difference from the mean for each default value (mean = 18)</title><desc id="cf2-d">The squared differences add up to 192. Values far from the mean, like 10 (64), contribute the most.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Squared difference from the mean for each default value (mean = 18)</text><text x="52" y="60" text-anchor="end" font-size="13" fill="#6b7280">10</text><rect class="bar" x="60" y="44" width="368.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">64</text><text x="52" y="94" text-anchor="end" font-size="13" fill="#6b7280">12</text><rect class="bar" x="60" y="78" width="207.0" height="22" rx="4" fill="#f59e0b"/><text x="275.0" y="94" font-size="13" font-weight="700" fill="#111827">36</text><text x="52" y="128" text-anchor="end" font-size="13" fill="#6b7280">23</text><rect class="bar" x="60" y="112" width="143.8" height="22" rx="4" fill="#f59e0b"/><text x="211.8" y="128" font-size="13" font-weight="700" fill="#111827">25</text><text x="52" y="162" text-anchor="end" font-size="13" fill="#6b7280">23</text><rect class="bar" x="60" y="146" width="143.8" height="22" rx="4" fill="#f59e0b"/><text x="211.8" y="162" font-size="13" font-weight="700" fill="#111827">25</text><text x="52" y="196" text-anchor="end" font-size="13" fill="#6b7280">16</text><rect class="bar" x="60" y="180" width="23.0" height="22" rx="4" fill="#2563eb"/><text x="91.0" y="196" font-size="13" font-weight="700" fill="#111827">4</text><text x="52" y="230" text-anchor="end" font-size="13" fill="#6b7280">23</text><rect class="bar" x="60" y="214" width="143.8" height="22" rx="4" fill="#f59e0b"/><text x="211.8" y="230" font-size="13" font-weight="700" fill="#111827">25</text><text x="52" y="264" text-anchor="end" font-size="13" fill="#6b7280">21</text><rect class="bar" x="60" y="248" width="51.8" height="22" rx="4" fill="#2563eb"/><text x="119.8" y="264" font-size="13" font-weight="700" fill="#111827">9</text><text x="52" y="298" text-anchor="end" font-size="13" fill="#6b7280">16</text><rect class="bar" x="60" y="282" width="23.0" height="22" rx="4" fill="#2563eb"/><text x="91.0" y="298" font-size="13" font-weight="700" fill="#111827">4</text></svg><figcaption>Squaring makes every difference positive and gives more weight to values far from the mean.</figcaption></figure>
+      <p>The squared differences add up to 192. For a <strong>population</strong>, the variance is 192 &divide; 8 = 24 and the standard deviation is &radic;24 = <strong>4.899</strong>. For a <strong>sample</strong>, divide by 7 instead: the variance is 27.4286 and the standard deviation is <strong>5.2372</strong>. The standard error of the mean is 1.7321 for the population setting (4.899 &divide; &radic;8) and 1.8516 for the sample setting.</p>
+      <h2>Population or sample?</h2>
+      <p>Use <strong>population</strong> when your data covers every member of the group, such as all the test scores in one class. Use <strong>sample</strong> when the data is only part of a larger group you want to learn about, such as 50 customers out of thousands. Dividing by N &minus; 1 corrects for the fact that a sample&rsquo;s own mean sits closer to its values than the true mean does, so the spread would otherwise be underestimated. For the values 2, 4 and 6 the mean is 4, the population variance is 8/3 = 2.6667 and the sample variance is 8/2 = 4. The gap between the two shrinks as N grows.</p>
+      <h2>Same average, different spread</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Same mean of 50, very different spread: population standard deviation</title><desc id="cf3-d">Both lists average 50, but A has a standard deviation of 1.414 and B has 21.213, about 15 times larger.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Same mean of 50, very different spread: population standard deviation</text><text x="162" y="60" text-anchor="end" font-size="13" fill="#6b7280">Data set A (48 to 52)</text><rect class="bar" x="170" y="44" width="17.2" height="22" rx="4" fill="#10b981"/><text x="195.2" y="60" font-size="13" font-weight="700" fill="#111827">1.414</text><text x="162" y="94" text-anchor="end" font-size="13" fill="#6b7280">Data set B (20 to 80)</text><rect class="bar" x="170" y="78" width="258.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">21.213</text></svg><figcaption>The average alone cannot tell these two lists apart; the standard deviation can.</figcaption></figure>
+      <p>Two exam classes can both average 70, but if one class scored between 68 and 72 and the other between 30 and 100, they need different teaching. Always report spread next to the mean.</p>
+      <h2>The 68-95-99.7 rule</h2>
+      <p>For data that follows a bell-shaped (normal) distribution, about 68% of values lie within one standard deviation of the mean, 95% within two and 99.7% within three. The rule is a guide, not a law: skewed data or data with outliers does not follow it.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 134" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">The 68-95-99.7 rule for a roughly bell-shaped data set (default mean and standard deviation)</title><desc id="cf4-d">If the data are close to normal, about 68% of values fall within 13.1 and 22.9 and about 95% within 8.2 and 27.8.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">The 68-95-99.7 rule for a roughly bell-shaped data set (default mean and standard deviation)</text><rect class="bar" x="14.0" y="62" width="82.0" height="26" fill="#cbd5e1"/><text x="55.0" y="106" text-anchor="middle" font-size="11.5" fill="#374151">2.1%</text><rect class="bar" x="96.0" y="62" width="82.0" height="26" fill="#93c5fd"/><text x="137.0" y="106" text-anchor="middle" font-size="11.5" fill="#374151">13.6%</text><rect class="bar" x="178.0" y="62" width="164.0" height="26" fill="#2563eb"/><text x="260.0" y="106" text-anchor="middle" font-size="11.5" fill="#374151">68.3%</text><rect class="bar" x="342.0" y="62" width="82.0" height="26" fill="#93c5fd"/><text x="383.0" y="106" text-anchor="middle" font-size="11.5" fill="#374151">13.6%</text><rect class="bar" x="424.0" y="62" width="82.0" height="26" fill="#cbd5e1"/><text x="465.0" y="106" text-anchor="middle" font-size="11.5" fill="#374151">2.1%</text><path d="M260.0 58 l-7 -12 h14 z" fill="#111827"/><text x="260.0" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">Mean 18</text></svg><figcaption>With the default mean and standard deviation, one standard deviation covers roughly 13.1 to 22.9.</figcaption></figure>
+      <h2>The margin of error table</h2>
+      <p>The calculator also turns the standard error into a range for the true mean at several confidence levels, using the z-scores 1, 1.645, 1.96, 2.576 and 3.291. For the default numbers in the population setting:</p>
+      <div class="calc-table"><table><thead><tr><th>Confidence</th><th>Mean &plusmn; margin</th><th>As a share of the mean</th></tr></thead><tbody><tr><td>68.3%</td><td>18 &plusmn; 1.7321</td><td>&plusmn;9.62%</td></tr><tr><td>90%</td><td>18 &plusmn; 2.8492</td><td>&plusmn;15.83%</td></tr><tr><td>95%</td><td>18 &plusmn; 3.3948</td><td>&plusmn;18.86%</td></tr><tr><td>99%</td><td>18 &plusmn; 4.4618</td><td>&plusmn;24.79%</td></tr><tr><td>99.9%</td><td>18 &plusmn; 5.7002</td><td>&plusmn;31.67%</td></tr></tbody></table></div>
+      <p>A 95% confidence level means that if you repeated the sampling many times, about 95% of the intervals built this way would contain the true mean. These ranges use the normal z-scores, which suit larger samples; with very few values a t-based interval is wider.</p>
+      <h2>Why sample size matters</h2>
+      <p>The standard error shrinks as the sample grows, so larger samples give tighter ranges for the mean:</p>
+      <div class="calc-table"><table><thead><tr><th>Sample size (n)</th><th>Standard error</th></tr></thead><tbody><tr><td>4</td><td>2.4495</td></tr><tr><td>8</td><td>1.7321</td></tr><tr><td>16</td><td>1.2247</td></tr><tr><td>32</td><td>0.866</td></tr><tr><td>64</td><td>0.6124</td></tr><tr><td>128</td><td>0.433</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Standard error of the mean for a standard deviation of 4.899</title><desc id="cf1-d">Quadrupling the sample size halves the standard error. At n = 8 it is 1.732 and at n = 32 it is 0.866.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Standard error of the mean for a standard deviation of 4.899</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">n = 4</text><rect class="bar" x="80" y="44" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">2.449</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">n = 8</text><rect class="bar" x="80" y="78" width="246.1" height="22" rx="4" fill="#2563eb"/><text x="334.1" y="94" font-size="13" font-weight="700" fill="#111827">1.732</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">n = 16</text><rect class="bar" x="80" y="112" width="174.0" height="22" rx="4" fill="#9ca3af"/><text x="262.0" y="128" font-size="13" font-weight="700" fill="#111827">1.225</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">n = 32</text><rect class="bar" x="80" y="146" width="123.0" height="22" rx="4" fill="#9ca3af"/><text x="211.0" y="162" font-size="13" font-weight="700" fill="#111827">0.866</text><text x="72" y="196" text-anchor="end" font-size="13" fill="#6b7280">n = 64</text><rect class="bar" x="80" y="180" width="87.0" height="22" rx="4" fill="#9ca3af"/><text x="175.0" y="196" font-size="13" font-weight="700" fill="#111827">0.612</text><text x="72" y="230" text-anchor="end" font-size="13" fill="#6b7280">n = 128</text><rect class="bar" x="80" y="214" width="61.5" height="22" rx="4" fill="#9ca3af"/><text x="149.5" y="230" font-size="13" font-weight="700" fill="#111827">0.433</text></svg><figcaption>The standard deviation of the data stays the same; only the uncertainty about the mean falls.</figcaption></figure>
+      <h2>Common mistakes</h2>
+      <ul><li>Using the sample formula when you really have the whole population, or the other way around.</li><li>Reading a large standard deviation as an error. It may be a real feature of the data.</li><li>Applying the 68-95-99.7 rule to skewed data.</li><li>Entering values with a comma inside a number such as 1,200. Separate numbers with commas or spaces and write 1200.</li><li>Calculating a sample standard deviation from a single value, which is not defined.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Compare the standard deviation with the mean. Here 4.9 against a mean of 18 means a typical value is within about 4.9 of the average. A value more than two standard deviations from the mean is unusual and worth checking. To see how unusual a single value is, use the Z-score Calculator, and for a range around the mean use the Confidence Interval Calculator.</p>
+      <div class="callout">This tool describes the numbers you enter. It does not test whether data are normal or whether differences are statistically significant.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="z-score-calculator.html">Z-score Calculator</a> &ndash; how unusual a single value is</li><li><a href="confidence-interval-calculator.html">Confidence Interval Calculator</a> &ndash; a range for the true mean</li><li><a href="statistics-calculator.html">Statistics Calculator</a> &ndash; median, mode and more from one list</li><li><a href="mean-median-mode-range-calculator.html">Mean, Median, Mode, Range Calculator</a> &ndash; the central values of a list</li><li><a href="sample-size-calculator.html">Sample Size Calculator</a> &ndash; how many responses you need</li><li><a href="probability-calculator.html">Probability Calculator</a> &ndash; chances and distributions</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Why does sample standard deviation divide by N-1 instead of N?</h3>
-        <p>This is Bessel's correction. Using a sample's own mean to compute variance slightly underestimates the true population variance, since the sample mean is, by construction, the value that minimizes the sum of squared deviations for that exact sample. Dividing by N-1 instead of N corrects for that bias.</p>
+        <p>This is Bessel's correction. A sample's own mean is the value that minimizes the sum of squared differences for that sample, so dividing by N slightly underestimates the true spread. Dividing by N-1 corrects the bias.</p>
       </div>
       <div class="faq-item">
         <h3>What if I only have one data point?</h3>
-        <p>Sample standard deviation is undefined for a single value, since there's no way to divide by N-1=0. Population standard deviation of a single value is always 0, since that one value is exactly equal to the mean.</p>
+        <p>Sample standard deviation is undefined for a single value because it would divide by zero. The population standard deviation of a single value is 0, since the value equals the mean.</p>
       </div>
+      <div class="faq-item">
+        <h3>What is the difference between variance and standard deviation?</h3>
+        <p>Variance is the average squared difference from the mean. Standard deviation is its square root, which puts the spread back in the units of your data.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the standard error of the mean?</h3>
+        <p>It is the standard deviation divided by the square root of N and describes how much the sample mean would vary if you repeated the sampling. It shrinks as the sample grows.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What counts as a high standard deviation?</h3>
+        <p>It is relative. Compare it with the mean: a standard deviation of 5 is large for numbers near 10 but small for numbers near 10,000.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can standard deviation be negative?</h3>
+        <p>No. It is a square root of an average of squares, so it is zero or positive. It is zero only when every value is the same.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm" rel="noopener" target="_blank">NIST/SEMATECH e-Handbook: Measures of Scale</a></p>
     </div>
 
   </div>
