@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Area Calculator for 7 Shapes: Formula &amp; Units | CalcBundle</title>
-<meta name="description" content="Find area for rectangles, triangles, trapezoids, circles, sectors, ellipses and parallelograms with dimensions and shape-specific formulas.">
+<title>Area Calculator for 7 Shapes: Formulas &amp; Units</title>
+<meta name="description" content="Find the area of a rectangle, triangle, trapezoid, circle, sector, ellipse or parallelogram, with every formula, worked examples and unit conversions.">
 <link rel="canonical" href="https://calcbundle.net/calculators/area-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Area Calculator for 7 Shapes: Formula &amp; Units | CalcBundle">
-<meta property="og:description" content="Find area for rectangles, triangles, trapezoids, circles, sectors, ellipses and parallelograms with dimensions and shape-specific formulas.">
+<meta property="og:title" content="Area Calculator for 7 Shapes: Formulas &amp; Units">
+<meta property="og:description" content="Find the area of a rectangle, triangle, trapezoid, circle, sector, ellipse or parallelogram, with every formula, worked examples and unit conversions.">
 <meta property="og:url" content="https://calcbundle.net/calculators/area-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Area Calculator for 7 Shapes: Formula &amp; Units | CalcBundle">
-<meta name="twitter:description" content="Find area for rectangles, triangles, trapezoids, circles, sectors, ellipses and parallelograms with dimensions and shape-specific formulas.">
+<meta name="twitter:title" content="Area Calculator for 7 Shapes: Formulas &amp; Units">
+<meta name="twitter:description" content="Find the area of a rectangle, triangle, trapezoid, circle, sector, ellipse or parallelogram, with every formula, worked examples and unit conversions.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What's the difference between semi-major and semi-minor axes?",
+      "name": "How do I find the area of a rectangle?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "They're the longest and shortest radii of an ellipse, measured from its center. When they're equal, the ellipse is just a circle — that's why the circle formula (πr²) is a special case of the ellipse formula (πab)."
+        "text": "Multiply the length by the width. A 220 by 99 rectangle has an area of 21,780, which is half an acre if the lengths are in feet."
       }
     },
     {
       "@type": "Question",
-      "name": "Why does a sector need the angle in degrees or radians?",
+      "name": "How is the area of a triangle calculated here?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A sector's area is the fraction of the full circle it covers — that fraction is angle÷360 in degrees, or angle÷2π in radians. Make sure to pick the matching unit for whatever angle you enter."
+        "text": "The calculator uses Heron's formula, which needs only the three side lengths. It finds the semiperimeter and then takes the square root of s times (s minus a) times (s minus b) times (s minus c)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I enter the radius or the diameter for a circle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the radius, which is half the diameter. The area is pi times the radius squared."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the area change by a factor of four when I double the sides?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Area is measured in square units, so doubling both dimensions multiplies the area by two times two, which is four."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a sector and a circle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A sector is a slice of a circle. Its area is the circle's area times the fraction of the full 360 degrees that the slice covers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many square feet are in an acre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An acre is 43,560 square feet, which is about 4,047 square metres."
       }
     }
   ]
@@ -171,41 +203,79 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Seven shapes, seven formulas</h2>
-      <p>Rectangle and parallelogram both boil down to base &times; height. Triangle uses Heron's formula (no angle needed, just three side lengths). Trapezoid averages its two parallel bases, multiplied by height. Circle, sector, and ellipse all trace back to &pi; &mdash; a sector is just a circle's area scaled by what fraction of the full 360&deg; it spans, and an ellipse is a circle stretched along two different radii.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Area is the space inside a shape, in square units. The default 220 by 99 rectangle is 21,780 square feet, exactly half an acre. A circle of radius 15 has an area of 706.85835, and a triangle with sides of 3, 4 and 5 has an area of 6.</div>
+      <h2>What the calculator does</h2>
+      <p>Choose a shape, enter its measurements and the calculator gives the area. It covers seven shapes: rectangle, triangle, trapezoid, circle, sector, ellipse and parallelogram. The answer is in <strong>square units</strong>: if your lengths are in feet, the area is in square feet, and if they are in metres, it is in square metres. Use the same unit for every length in one calculation.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on a rectangle of <strong>220</strong> by <strong>99</strong>. Area = length &times; width = 220 &times; 99 = <strong>21,780</strong>. If the lengths are feet, that is 21,780 square feet, which is exactly half an acre because an acre is 43,560 square feet. It is also about 2,023.42821 square metres. If both measurements double, the area becomes four times as large, not twice, since both length and width are multiplied.</p>
+      <h2>The seven shapes and their formulas</h2>
+      <div class="calc-table"><table><thead><tr><th>Shape</th><th>Inputs</th><th>Formula</th><th>Default result</th></tr></thead><tbody><tr><td>Rectangle</td><td>length, width</td><td>length &times; width</td><td>21,780</td></tr><tr><td>Triangle</td><td>three sides</td><td>Heron: &radic;[s(s&minus;a)(s&minus;b)(s&minus;c)], s = half the perimeter</td><td>2,567.33231</td></tr><tr><td>Trapezoid</td><td>two parallel bases, height</td><td>(base 1 + base 2) &divide; 2 &times; height</td><td>173.376</td></tr><tr><td>Circle</td><td>radius</td><td>&pi; &times; r&sup2;</td><td>706.85835</td></tr><tr><td>Sector</td><td>radius, angle</td><td>(angle &divide; 360&deg;) &times; &pi; &times; r&sup2;</td><td>134.04129</td></tr><tr><td>Ellipse</td><td>two semi-axes</td><td>&pi; &times; a &times; b</td><td>1,130.97336</td></tr><tr><td>Parallelogram</td><td>base, height</td><td>base &times; height</td><td>360</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 284" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Area of each shape with the calculator&amp;rsquo;s default measurements (square units)</title><desc id="cf1-d">The large rectangle dwarfs the others because its sides are 220 and 99, while the other defaults are between 9 and 77 units.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Area of each shape with the calculator&amp;rsquo;s default measurements (square units)</text><text x="182" y="60" text-anchor="end" font-size="13" fill="#6b7280">Rectangle 220 &amp;times; 99</text><rect class="bar" x="190" y="44" width="238.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">21,780</text><text x="182" y="94" text-anchor="end" font-size="13" fill="#6b7280">Triangle, sides of 77</text><rect class="bar" x="190" y="78" width="28.1" height="22" rx="4" fill="#10b981"/><text x="226.1" y="94" font-size="13" font-weight="700" fill="#111827">2,567.33231</text><text x="182" y="128" text-anchor="end" font-size="13" fill="#6b7280">Trapezoid 29.528, 9, 9</text><rect class="bar" x="190" y="112" width="2.0" height="22" rx="4" fill="#f59e0b"/><text x="200.0" y="128" font-size="13" font-weight="700" fill="#111827">173.376</text><text x="182" y="162" text-anchor="end" font-size="13" fill="#6b7280">Circle, radius 15</text><rect class="bar" x="190" y="146" width="7.7" height="22" rx="4" fill="#a78bfa"/><text x="205.7" y="162" font-size="13" font-weight="700" fill="#111827">706.85835</text><text x="182" y="196" text-anchor="end" font-size="13" fill="#6b7280">Sector, radius 16, 60&amp;deg;</text><rect class="bar" x="190" y="180" width="2.0" height="22" rx="4" fill="#ef4444"/><text x="200.0" y="196" font-size="13" font-weight="700" fill="#111827">134.04129</text><text x="182" y="230" text-anchor="end" font-size="13" fill="#6b7280">Ellipse 18 &amp;times; 20</text><rect class="bar" x="190" y="214" width="12.4" height="22" rx="4" fill="#14b8a6"/><text x="210.4" y="230" font-size="13" font-weight="700" fill="#111827">1,130.97336</text><text x="182" y="264" text-anchor="end" font-size="13" fill="#6b7280">Parallelogram 20 &amp;times; 18</text><rect class="bar" x="190" y="248" width="3.9" height="22" rx="4" fill="#6b7280"/><text x="201.9" y="264" font-size="13" font-weight="700" fill="#111827">360</text></svg><figcaption>The default result for every shape.</figcaption></figure>
+      <h2>Rectangle</h2>
+      <p>Multiply length by width. A 12 by 10 room has 120 square feet, and a 6 by 4 closet has 24. Rectangles are the shape for floors, walls, lots and sheets of material. For a room, the Square Footage Calculator handles several rectangles and a wall or floor material estimate.</p>
+      <h2>Triangle</h2>
+      <p>The triangle tool uses <strong>Heron&rsquo;s formula</strong>, so you only need the three side lengths and no angle. The defaults, 77, 77 and 77, form an equilateral triangle. The semiperimeter is s = 115.5, so the area is &radic;[115.5 &times; 38.5 &times; 38.5 &times; 38.5] = <strong>2,567.33231</strong>. You can check it with half base times height: the height is 77 &times; &radic;3 &divide; 2 = 66.68396, and &frac12; &times; 77 &times; 66.68396 gives the same area. For a 3-4-5 triangle the area is 6. If the three sides cannot form a triangle, because two of them add up to no more than the third, the calculator says so.</p>
+      <h2>Trapezoid</h2>
+      <p>Average the two parallel bases and multiply by the height. With bases 29.528 and 9 and a height of 9, the average base is 19.264 and the area is 19.264 &times; 9 = <strong>173.376</strong>. The height is the straight distance between the parallel sides, not the length of the slanted side.</p>
+      <h2>Circle</h2>
+      <p>Area is &pi; times the radius squared. With a radius of 15, the area is &pi; &times; 225 = <strong>706.85835</strong>. Enter the radius, not the diameter; half the diameter is the radius. Because the radius is squared, a circle twice as wide has four times the area.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Area of a circle as the radius doubles (square units)</title><desc id="cf2-d">Area grows with the square of the radius: doubling the radius from 5 to 10 multiplies the area by 4, from 78.53982 to 314.15927.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Area of a circle as the radius doubles (square units)</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">radius 5</text><rect class="bar" x="90" y="44" width="21.1" height="22" rx="4" fill="#9ca3af"/><text x="119.1" y="60" font-size="13" font-weight="700" fill="#111827">78.53982</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">radius 10</text><rect class="bar" x="90" y="78" width="84.5" height="22" rx="4" fill="#9ca3af"/><text x="182.5" y="94" font-size="13" font-weight="700" fill="#111827">314.15927</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">radius 15</text><rect class="bar" x="90" y="112" width="190.1" height="22" rx="4" fill="#2563eb"/><text x="288.1" y="128" font-size="13" font-weight="700" fill="#111827">706.85835</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">radius 20</text><rect class="bar" x="90" y="146" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">1,256.63706</text></svg><figcaption>Area grows with the square of the radius.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Radius</th><th>Area</th></tr></thead><tbody><tr><td>5</td><td>78.53982</td></tr><tr><td>10</td><td>314.15927</td></tr><tr><td>15</td><td>706.85835</td></tr><tr><td>20</td><td>1,256.63706</td></tr></tbody></table></div>
+      <h2>Sector</h2>
+      <p>A sector is a slice of a circle, so its area is the circle&rsquo;s area times the fraction of the circle it covers. With a radius of 16 and an angle of 60&deg;, the fraction is 60 &divide; 360 = 1/6 and the area is 1/6 &times; &pi; &times; 256 = <strong>134.04129</strong>. You can enter the angle in radians instead: 1.0472 radians is the same 60&deg;, and 1 radian on a radius of 16 gives 128.</p>
+      <h2>Ellipse</h2>
+      <p>An ellipse is a circle stretched along two radii. The area is &pi; &times; a &times; b. The defaults are a = 18 and b = 20, which give <strong>1,130.97336</strong>. The calculator does not need the first axis to be the larger one, since the formula treats both the same. If a and b are equal, the shape is a circle: a = b = 19 gives 1,134.11495.</p>
+      <h2>Parallelogram</h2>
+      <p>Multiply the base by the perpendicular height. With a base of 20 and a height of 18, the area is <strong>360</strong>, the same as a 20 by 18 rectangle. The slanted side does not matter, only the base and the height measured at right angles to it.</p>
       <h2>Breaking down complex shapes</h2>
-      <p>Most irregular shapes can be estimated by splitting them into a combination of these simple shapes, calculating each piece's area separately, and adding them together &mdash; the same way an L-shaped room can be measured as two rectangles.</p>
-      <div class="callout">For a triangle where you know an angle instead of all three sides, or need sides, angles, and area together, use the more complete <a href="triangle-calculator.html">Triangle Calculator</a> instead.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understand the result</h2>
-      <p>A rectangle measuring 8 feet by 5 feet has area 8 × 5 = 40 square feet. If each measurement doubles, the area becomes 160 square feet, four times as much.</p>
-      <h2>Related calculators</h2>
-      <p>If the shape is a circle, the <a href="circle-calculator.html">Circle Calculator</a> also calculates radius, diameter and circumference. For flooring and rooms, use the <a href="square-footage-calculator.html">Square Footage Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>A rectangular lot measures 220 feet by 99 feet. Choose Rectangle, enter the length and width, and the area is 220 × 99 = 21,780 square feet. That happens to be exactly half an acre, because an acre is 43,560 square feet. For a circle, enter the radius instead: a radius of 5 gives an area of about 78.54 square units, and a triangle with sides of 3, 4 and 5 has an area of 6.</p>
-
-      <h2>Tips for accurate areas</h2>
-      <p>Use the same unit for every length, and remember that the answer is in square units: feet become square feet, and meters become square meters. To measure an irregular space, break it into rectangles, triangles and circles, find each area and add them. Subtract any cut-outs, such as a pond inside a lawn. Round up when you are buying materials like flooring, paint or turf, since offcuts and waste are unavoidable.</p>
-
-      <p><strong>You might also need:</strong> <a href="circle-calculator.html">Circle Calculator</a>, <a href="triangle-calculator.html">Triangle Calculator</a>, <a href="square-footage-calculator.html">Square Footage Calculator</a>, <a href="pythagorean-theorem-calculator.html">Pythagorean Theorem Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <!--next-->
-      <p><strong>What next?</strong> For the outside of a 3D shape such as a cylinder, cone or sphere, use the <a href="surface-area-calculator.html">Surface Area Calculator</a>, and for the space inside it, the <a href="volume-calculator.html">Volume Calculator</a>.</p>
-      <!--/next-->
+      <p>Most irregular shapes can be split into the simple ones above. Calculate each piece, then add them. An L-shaped room made of a 12 by 10 rectangle and a 6 by 4 rectangle has 120 + 24 = <strong>144 square feet</strong>. To find a ring, such as a circular path around a pond, subtract the inner circle from the outer: with radii 15 and 10 the ring is &pi; &times; (225 &minus; 100) = <strong>392.69908</strong>. For a shape with angles or sides to find, use the Triangle Calculator.</p>
+      <h2>Units and conversions</h2>
+      <p>The calculator does not convert units, so convert the lengths first or convert the answer afterwards. Area units are squared, so the factors are squared too: 1 foot is 0.3048 metres, so 1 square foot is 0.3048&sup2; = 0.09290304 square metres.</p>
+      <div class="calc-table"><table><thead><tr><th>Unit</th><th>Equals</th></tr></thead><tbody><tr><td>1 square foot</td><td>144 square inches = 0.09290304 square metres</td></tr><tr><td>1 square yard</td><td>9 square feet</td></tr><tr><td>1 acre</td><td>43,560 square feet = 4,046.86 square metres</td></tr><tr><td>1 square metre</td><td>10.7639 square feet</td></tr><tr><td>1 hectare</td><td>10,000 square metres = 2.4711 acres</td></tr></tbody></table></div>
+      <h2>Getting a sense of scale</h2>
+      <p>The default rectangle, 21,780 square feet, is half an acre. It helps to compare it with places you know.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">How big is 21,780 square feet? A comparison of sports surfaces</title><desc id="cf3-d">The half-acre default lot of 21,780 square feet is about 7.8 tennis courts, or roughly 38% of an American football field with end zones.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">How big is 21,780 square feet? A comparison of sports surfaces</text><text x="242" y="60" text-anchor="end" font-size="13" fill="#6b7280">Tennis court (doubles)</text><rect class="bar" x="250" y="44" width="8.7" height="22" rx="4" fill="#9ca3af"/><text x="266.7" y="60" font-size="13" font-weight="700" fill="#111827">2,808 sq ft</text><text x="242" y="94" text-anchor="end" font-size="13" fill="#6b7280">NBA basketball court</text><rect class="bar" x="250" y="78" width="14.5" height="22" rx="4" fill="#9ca3af"/><text x="272.5" y="94" font-size="13" font-weight="700" fill="#111827">4,700 sq ft</text><text x="242" y="128" text-anchor="end" font-size="13" fill="#6b7280">Half-acre lot (the default rectangle)</text><rect class="bar" x="250" y="112" width="67.3" height="22" rx="4" fill="#2563eb"/><text x="325.3" y="128" font-size="13" font-weight="700" fill="#111827">21,780 sq ft</text><text x="242" y="162" text-anchor="end" font-size="13" fill="#6b7280">American football field with end zones</text><rect class="bar" x="250" y="146" width="178.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">57,600 sq ft</text></svg><figcaption>Some familiar surfaces in square feet.</figcaption></figure>
+      <h2>Everyday problems</h2>
+      <ul><li><strong>Painting a wall.</strong> A wall 12 feet wide and 8 feet high is 96 square feet. Take off a door of 3 by 7 (21) and a window of 3 by 4 (12) and you need to paint <strong>63 square feet</strong>.</li><li><strong>Flooring.</strong> A 12 by 10 room is 120 square feet. Many installers suggest adding about 5% to 10% for cuts and waste, so a 10% allowance means buying 132 square feet.</li><li><strong>Round tablecloth.</strong> A table with a radius of 24 inches has a top of &pi; &times; 576 = 1,809.55737 square inches, or 12.57 square feet.</li><li><strong>Two pizzas.</strong> A 12-inch pizza (radius 6) has 113.09734 square inches and a 16-inch pizza (radius 8) has 201.06193, which is 78% more pizza for a diameter only one third larger.</li></ul>
+      <h2>Why the formulas work</h2>
+      <p>The rectangle formula counts unit squares: 220 columns of 99 squares. A parallelogram has the same area as a rectangle with the same base and height, because the slanted end can be cut off and moved to the other side. A triangle is half of a parallelogram, and a trapezoid is two triangles that share its height, which is where the average of the two bases comes from. A circle can be cut into thin sectors and rearranged into a rough parallelogram of base &pi;r and height r, giving &pi;r&sup2;. An ellipse is a circle stretched by a factor a in one direction and b in the other, so its area is that of a unit circle times a times b.</p>
+      <h2>Area versus perimeter</h2>
+      <p>Area measures the space inside a shape, in square units. Perimeter measures the distance around it, in plain units. They answer different questions: area tells you how much paint or flooring you need, perimeter tells you how much fencing or edging. For the default 220 by 99 rectangle the perimeter is 2 &times; (220 + 99) = 638, while the circumference of the radius-15 circle is 2 &times; &pi; &times; 15 = 94.24778. Two shapes can have the same area and very different perimeters, so check which one the job needs.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing units, such as feet for the length and inches for the width.</li><li>Reporting the area in feet instead of square feet.</li><li>Using the diameter in the circle box instead of the radius.</li><li>Using the slanted side as the height of a trapezoid or parallelogram.</li><li>Entering an angle in degrees when the box is set to radians, or the other way round.</li><li>Expecting double the sides to give double the area. It gives four times the area.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The number shown is the area in square units, with up to five decimal places. Write the unit yourself: square feet, square metres, and so on. For a quote, add an allowance for waste and cuts, since material is bought in whole pieces.</p>
+      <div class="callout">The results are exact for the numbers you enter. Measure carefully, and check the shape matches the real object before you buy materials.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="triangle-calculator.html">Triangle Calculator</a> &ndash; sides, angles and area</li><li><a href="circle-calculator.html">Circle Calculator</a> &ndash; radius, diameter and circumference</li><li><a href="square-footage-calculator.html">Square Footage Calculator</a> &ndash; rooms and materials</li><li><a href="pythagorean-theorem-calculator.html">Pythagorean Theorem Calculator</a> &ndash; the missing side of a right triangle</li><li><a href="surface-area-calculator.html">Surface Area Calculator</a> &ndash; the surface of solids</li><li><a href="volume-calculator.html">Volume Calculator</a> &ndash; the volume of solids</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>What's the difference between semi-major and semi-minor axes?</h3>
-        <p>They're the longest and shortest radii of an ellipse, measured from its center. When they're equal, the ellipse is just a circle &mdash; that's why the circle formula (&pi;r&sup2;) is a special case of the ellipse formula (&pi;ab).</p>
+        <h3>How do I find the area of a rectangle?</h3>
+        <p>Multiply the length by the width. A 220 by 99 rectangle has an area of 21,780, which is half an acre if the lengths are in feet.</p>
       </div>
       <div class="faq-item">
-        <h3>Why does a sector need the angle in degrees or radians?</h3>
-        <p>A sector's area is the fraction of the full circle it covers &mdash; that fraction is angle&divide;360 in degrees, or angle&divide;2&pi; in radians. Make sure to pick the matching unit for whatever angle you enter.</p>
+        <h3>How is the area of a triangle calculated here?</h3>
+        <p>The calculator uses Heron's formula, which needs only the three side lengths. It finds the semiperimeter and then takes the square root of s times (s minus a) times (s minus b) times (s minus c).</p>
       </div>
+      <div class="faq-item">
+        <h3>Do I enter the radius or the diameter for a circle?</h3>
+        <p>Enter the radius, which is half the diameter. The area is pi times the radius squared.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does the area change by a factor of four when I double the sides?</h3>
+        <p>Area is measured in square units, so doubling both dimensions multiplies the area by two times two, which is four.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the difference between a sector and a circle?</h3>
+        <p>A sector is a slice of a circle. Its area is the circle's area times the fraction of the full 360 degrees that the slice covers.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How many square feet are in an acre?</h3>
+        <p>An acre is 43,560 square feet, which is about 4,047 square metres.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Area" rel="noopener" target="_blank">Wikipedia: Area</a>; <a href="https://en.wikipedia.org/wiki/Heron%27s_formula" rel="noopener" target="_blank">Wikipedia: Heron's formula</a>; <a href="https://en.wikipedia.org/wiki/Acre" rel="noopener" target="_blank">Wikipedia: Acre</a>; <a href="https://en.wikipedia.org/wiki/Ellipse" rel="noopener" target="_blank">Wikipedia: Ellipse</a></p>
     </div>
 
   </div>
