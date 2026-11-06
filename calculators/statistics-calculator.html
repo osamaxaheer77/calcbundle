@@ -50,7 +50,7 @@
       "name": "What is the difference between population and sample standard deviation?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Population standard deviation divides by n and is used when your data is the whole group. Sample standard deviation divides by n − 1 and is used when your data is a sample from a larger group. The sample value is slightly larger."
+        "text": "Population standard deviation divides by n and is used when your data is the whole group. Sample standard deviation divides by n minus 1 and is used when your data is a sample from a larger group. The sample value is slightly larger."
       }
     },
     {
@@ -66,7 +66,7 @@
       "name": "Why does the geometric mean say undefined?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The geometric mean is the nth root of the product of your numbers. If the product is negative, which happens when you have an odd number of negative values, there is no sensible answer. If any value is zero, the geometric mean is zero."
+        "text": "The geometric mean is the nth root of the product of your numbers. If the product is negative, which happens with an odd number of negative values, there is no sensible answer. If any value is zero, the geometric mean is zero."
       }
     },
     {
@@ -75,6 +75,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "There is no fixed limit, so you can paste hundreds of values. Separate them with commas, spaces or new lines."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the median better than the mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When a few very large or very small values pull the mean away from the typical value, such as incomes or house prices. The median is not affected by extreme values."
       }
     }
   ]
@@ -132,26 +140,36 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What you get from one list of numbers</h2>
-      <p>Paste in anything you have measured: test scores, daily sales, delivery times, prices. The calculator gives you the usual summary in one pass. <strong>Mean</strong>, <strong>median</strong> and <strong>mode</strong> say where the middle of the data is. <strong>Largest, smallest and range</strong> say how far it stretches. <strong>Standard deviation and variance</strong> say how tightly the values cluster around the mean. The sorted list at the bottom makes it easy to spot a typo or an outlier you did not expect.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A statistics calculator summarizes a list of numbers. For 10, 12, 23, 23, 16, 23, 21 and 16 the mean is 18, the median is 18.5, the mode is 23, the range is 13, and the sample standard deviation is 5.2372.</div>
+      <h2>What you get from one list of numbers</h2>
+      <p>Paste in anything you have measured: test scores, daily sales, delivery times, prices. The calculator gives the usual summary in one pass. <strong>Mean, median and mode</strong> say where the middle of the data is. <strong>Largest, smallest and range</strong> say how far it stretches. <strong>Standard deviation and variance</strong> say how tightly the values cluster around the mean. The sorted list at the bottom makes it easy to spot a typo or an outlier you did not expect.</p>
       <h2>A worked example you can check by hand</h2>
-      <p>The starting numbers are 10, 12, 23, 23, 16, 23, 21, 16. There are 8 of them and they add up to 144, so the mean is 144 &divide; 8 = 18. Sorted, they read 10, 12, 16, 16, 21, 23, 23, 23. With an even count, the median is the average of the two middle values: (16 + 21) &divide; 2 = 18.5. The value 23 appears three times, so it is the mode. The range is 23 &minus; 10 = 13. If you hit the same results on paper, you know the tool is doing what you expect.</p>
-
+      <p>The starting numbers are 10, 12, 23, 23, 16, 23, 21, 16. There are 8 of them and they add up to 144, so the mean is 144 &divide; 8 = <strong>18</strong>. Sorted, they read 10, 12, 16, 16, 21, 23, 23, 23. With an even count, the median is the average of the two middle values: (16 + 21) &divide; 2 = <strong>18.5</strong>. The value 23 appears three times, so it is the <strong>mode</strong>. The range is 23 &minus; 10 = <strong>13</strong>. The geometric mean is the eighth root of the product of the numbers, <strong>17.252538362425</strong>. If you reach the same results on paper, you know the tool is doing what you expect.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 318" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">The sorted default data with its mean (18) and median (18.5)</title><desc id="cf1-d">Eight values from 10 to 23. The mean is 18, the median is 18.5 and the mode is 23, which appears three times.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The sorted default data with its mean (18) and median (18.5)</text><text x="42" y="60" text-anchor="end" font-size="13" fill="#6b7280">10</text><rect class="bar" x="50" y="44" width="164.3" height="22" rx="4" fill="#2563eb"/><text x="222.3" y="60" font-size="13" font-weight="700" fill="#111827">10</text><text x="42" y="94" text-anchor="end" font-size="13" fill="#6b7280">12</text><rect class="bar" x="50" y="78" width="197.2" height="22" rx="4" fill="#2563eb"/><text x="255.2" y="94" font-size="13" font-weight="700" fill="#111827">12</text><text x="42" y="128" text-anchor="end" font-size="13" fill="#6b7280">16</text><rect class="bar" x="50" y="112" width="263.0" height="22" rx="4" fill="#2563eb"/><text x="321.0" y="128" font-size="13" font-weight="700" fill="#111827">16</text><text x="42" y="162" text-anchor="end" font-size="13" fill="#6b7280">16</text><rect class="bar" x="50" y="146" width="263.0" height="22" rx="4" fill="#2563eb"/><text x="321.0" y="162" font-size="13" font-weight="700" fill="#111827">16</text><text x="42" y="196" text-anchor="end" font-size="13" fill="#6b7280">21</text><rect class="bar" x="50" y="180" width="345.1" height="22" rx="4" fill="#2563eb"/><text x="403.1" y="196" font-size="13" font-weight="700" fill="#111827">21</text><text x="42" y="230" text-anchor="end" font-size="13" fill="#6b7280">23</text><rect class="bar" x="50" y="214" width="378.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="230" font-size="13" font-weight="700" fill="#111827">23</text><text x="42" y="264" text-anchor="end" font-size="13" fill="#6b7280">23</text><rect class="bar" x="50" y="248" width="378.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="264" font-size="13" font-weight="700" fill="#111827">23</text><text x="42" y="298" text-anchor="end" font-size="13" fill="#6b7280">23</text><rect class="bar" x="50" y="282" width="378.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="298" font-size="13" font-weight="700" fill="#111827">23</text></svg><figcaption>Sorting the data makes the median and mode easy to see.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Statistic</th><th>Result for the default data</th></tr></thead><tbody><tr><td>Count</td><td>8</td></tr><tr><td>Sum</td><td>144</td></tr><tr><td>Mean</td><td>18</td></tr><tr><td>Median</td><td>18.5</td></tr><tr><td>Mode</td><td>23 (3 times)</td></tr><tr><td>Largest / smallest</td><td>23 / 10</td></tr><tr><td>Range</td><td>13</td></tr><tr><td>Geometric mean</td><td>17.252538362425</td></tr><tr><td>Population standard deviation (&sigma;)</td><td>4.8989794855664</td></tr><tr><td>Population variance (&sigma;&sup2;)</td><td>24</td></tr><tr><td>Sample standard deviation (s)</td><td>5.2372293656638</td></tr><tr><td>Sample variance (s&sup2;)</td><td>27.428571428571</td></tr></tbody></table></div>
       <h2>Two standard deviations: which one do you want?</h2>
-      <p>You will see a population figure and a sample figure side by side, and they differ because of one small step. If your list <em>is</em> the whole group, for example every student in one class, use the population standard deviation. If your list is only a <em>sample</em> taken to learn about a bigger group, such as 30 customers out of thousands, use the sample standard deviation, which divides by n &minus; 1 instead of n. When in doubt about real survey or lab data, it is almost always the sample version. The <a href="standard-deviation-calculator.html">Standard Deviation Calculator</a> goes further, with a margin-of-error table for the mean.</p>
-
+      <p>You will see a population figure and a sample figure side by side, and they differ by one small step. If your list is the whole group, such as every student in one class, use the population standard deviation (&sigma; = 4.899 here), which divides by n. If your list is only a sample taken to learn about a bigger group, such as 30 customers out of thousands, use the sample standard deviation (s = 5.2372), which divides by n &minus; 1. When in doubt about real survey or lab data, it is almost always the sample version. The Standard Deviation Calculator goes further, with a margin-of-error table for the mean.</p>
       <h2>Mean, median or mode: which one tells the truth?</h2>
-      <p>They can disagree, and when they do, the gap is a clue. If a few very large values pull the mean far above the median, the data is skewed, which is common for incomes, house prices and waiting times. In that case the median is usually the fairer picture of a typical value. The mode is the right answer when you care about the most common category or size, such as the shoe size to stock most of. If you only need those three plus the range, with a clear explanation of each, the <a href="mean-median-mode-range-calculator.html">Mean, Median, Mode Calculator</a> is a lighter tool.</p>
-
+      <p>They can disagree, and when they do the gap is a clue. If a few very large values pull the mean far above the median, the data is skewed, which is common for incomes, house prices and waiting times. In that case the median is usually the fairer picture of a typical value. The mode is the right answer when you care about the most common category or size, such as the shoe size to stock most of.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Skewed data: five salaries, one very large (mean vs median)</title><desc id="cf2-d">One $250,000 salary pulls the mean to $85,000 while the median stays at $45,000, which is the better picture of a typical salary.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Skewed data: five salaries, one very large (mean vs median)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">Median</text><rect class="bar" x="80" y="44" width="184.2" height="22" rx="4" fill="#10b981"/><text x="272.2" y="60" font-size="13" font-weight="700" fill="#111827">$45,000</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">Mean</text><rect class="bar" x="80" y="78" width="348.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">$85,000</text></svg><figcaption>When data is skewed, the mean can mislead.</figcaption></figure>
       <h2>When the geometric mean is the right average</h2>
-      <p>The geometric mean multiplies the values and takes the nth root, instead of adding and dividing. Use it for numbers that grow by percentages. Say an investment gains 10% one year and 20% the next. The growth factors are 1.10 and 1.20, and their geometric mean is the square root of 1.32, which is about 1.1489, so the true average gain is roughly 14.9% a year, not the 15% a simple average suggests. The geometric mean is only meaningful for positive values, so it cannot describe a set that contains a negative growth factor. For real investment accounts with deposits and withdrawals, the <a href="average-return-calculator.html">Average Return Calculator</a> handles the timing for you.</p>
-
+      <p>The geometric mean multiplies the values and takes the nth root, instead of adding and dividing. Use it for numbers that grow by percentages. An investment that gains 10% one year and 20% the next has growth factors 1.10 and 1.20; their geometric mean is the square root of 1.32, which is <strong>1.1489</strong>, so the true average gain is about 14.9% a year, not the 15% a simple average suggests. The geometric mean needs positive values: if the product is negative the calculator says it is undefined, and if any value is zero it is zero. For real investment accounts with deposits and withdrawals, the Average Return Calculator handles the timing.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Average yearly growth factor for +50% then -40%</title><desc id="cf3-d">The simple average suggests +5% a year, but $100 became $150 and then $90. The geometric mean, 0.9487, shows the true average change of -5.1% a year.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Average yearly growth factor for +50% then -40%</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">Simple average</text><rect class="bar" x="110" y="44" width="318.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">1.0500</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Geometric mean</text><rect class="bar" x="110" y="78" width="287.3" height="22" rx="4" fill="#10b981"/><text x="405.3" y="94" font-size="13" font-weight="700" fill="#111827">0.9487</text></svg><figcaption>Averages of growth must use the geometric mean.</figcaption></figure>
+      <h2>Small samples and outliers</h2>
+      <p>Statistics from a handful of values can mislead. With fewer than about 10 numbers, treat the standard deviation and the mode as rough guides, and check the sorted list for a single odd value that is doing most of the damage. If a result looks surprising, remove the suspect value and see how much the mean and standard deviation change.</p>
+      <h2>Entering your data</h2>
+      <ul><li>Separate numbers with commas, spaces, semicolons or new lines.</li><li>There is no fixed limit, so you can paste hundreds of values.</li><li>Letters and symbols are rejected with a message.</li><li>A single number has a sample standard deviation of &ldquo;needs at least 2 values&rdquo;.</li></ul>
       <h2>What to do with these numbers next</h2>
-      <p>If you want to know how unusual one value is compared with the rest, turn it into a <a href="z-score-calculator.html">z-score</a>. If you need a range that likely contains the true average of the whole group, feed the mean, standard deviation and count into the <a href="confidence-interval-calculator.html">Confidence Interval Calculator</a>. If you are planning a survey and wonder how many people to ask, try the <a href="sample-size-calculator.html">Sample Size Calculator</a>. And if you are working out the odds of something happening rather than describing data you already have, use the <a href="probability-calculator.html">Probability Calculator</a>.</p>
-      <div class="callout">Statistics from a handful of values can mislead. With fewer than about 10 numbers, treat the standard deviation and the mode as rough guides, and check the sorted list for a single odd value that is doing most of the damage.</div>
-
+      <p>To see how unusual one value is compared with the rest, turn it into a z-score with the Z-score Calculator. To get a range that likely contains the true average of the whole group, feed the mean, sample standard deviation and count into the Confidence Interval Calculator. If you are planning a survey, the Sample Size Calculator tells you how many people to ask, and the Probability Calculator handles the odds of something happening.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Using the population standard deviation for a sample.</li><li>Reporting the mean of skewed data without the median.</li><li>Averaging growth rates with the ordinary mean.</li><li>Forgetting that a mode may not exist, or may have several values.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the mean. Below it are the count, sum, median, mode, largest, smallest, range, geometric mean and the four spread figures, then the sorted data. Compare the mean with the median first: if they are close, the data is fairly balanced.</p>
+      <div class="callout">These statistics describe the numbers you enter. They do not test whether differences are statistically significant.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="standard-deviation-calculator.html">Standard Deviation Calculator</a> &ndash; margin of error for the mean</li><li><a href="mean-median-mode-range-calculator.html">Mean, Median, Mode, Range Calculator</a> &ndash; a lighter tool with explanations</li><li><a href="z-score-calculator.html">Z-score Calculator</a> &ndash; how unusual a value is</li><li><a href="confidence-interval-calculator.html">Confidence Interval Calculator</a> &ndash; a range for the true mean</li><li><a href="sample-size-calculator.html">Sample Size Calculator</a> &ndash; how many responses you need</li><li><a href="probability-calculator.html">Probability Calculator</a> &ndash; odds and distributions</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do I find the mean, median and mode of a list of numbers?</h3>
@@ -159,7 +177,7 @@
       </div>
       <div class="faq-item">
         <h3>What is the difference between population and sample standard deviation?</h3>
-        <p>Population standard deviation divides by n and is used when your data is the whole group. Sample standard deviation divides by n − 1 and is used when your data is a sample from a larger group. The sample value is slightly larger.</p>
+        <p>Population standard deviation divides by n and is used when your data is the whole group. Sample standard deviation divides by n minus 1 and is used when your data is a sample from a larger group. The sample value is slightly larger.</p>
       </div>
       <div class="faq-item">
         <h3>What if there are two modes?</h3>
@@ -167,12 +185,17 @@
       </div>
       <div class="faq-item">
         <h3>Why does the geometric mean say undefined?</h3>
-        <p>The geometric mean is the nth root of the product of your numbers. If the product is negative, which happens when you have an odd number of negative values, there is no sensible answer. If any value is zero, the geometric mean is zero.</p>
+        <p>The geometric mean is the nth root of the product of your numbers. If the product is negative, which happens with an odd number of negative values, there is no sensible answer. If any value is zero, the geometric mean is zero.</p>
       </div>
       <div class="faq-item">
         <h3>How many numbers can I enter?</h3>
         <p>There is no fixed limit, so you can paste hundreds of values. Separate them with commas, spaces or new lines.</p>
       </div>
+      <div class="faq-item">
+        <h3>When is the median better than the mean?</h3>
+        <p>When a few very large or very small values pull the mean away from the typical value, such as incomes or house prices. The median is not affected by extreme values.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda351.htm" rel="noopener" target="_blank">NIST/SEMATECH e-Handbook: Measures of Location</a>; <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm" rel="noopener" target="_blank">NIST/SEMATECH e-Handbook: Measures of Scale</a></p>
     </div>
 
   </div>
