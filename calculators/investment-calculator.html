@@ -42,23 +42,47 @@
       "name": "What return rate should I assume?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This calculator doesn't predict future returns — it just does the math for whatever rate you plug in. Many long-term investors use a long-run historical average for the asset class in question as a starting estimate, while remembering that past returns never guarantee future ones."
+        "text": "The calculator does not predict future returns. Many long-term investors start with a long-run historical average for the asset class and test a lower rate as well, remembering that past returns do not guarantee future ones."
       }
     },
     {
       "@type": "Question",
-      "name": "Why does \"Return Rate\" solve for an annually-compounded rate?",
+      "name": "Why does the Return Rate mode give an annual rate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It's reported as the effective annual rate regardless of how often you compound or contribute, so you can compare it apples-to-apples against other investments quoted the same way."
+        "text": "It is reported as the effective annual rate regardless of how often interest compounds, so that different results can be compared on the same basis."
       }
     },
     {
       "@type": "Question",
-      "name": "Does this account for taxes or fees?",
+      "name": "What is the difference between contributing at the beginning and the end?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No — it models gross growth only. Taxes on gains and any account or fund fees would reduce the real end balance below what's shown here."
+        "text": "A contribution made at the beginning of each period earns one extra period of growth. Over many deposits that gives a noticeably larger balance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I solve for how long it will take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Choose the Investment Length option, enter the target, starting amount, contribution and rate, and the calculator tells you how many years it takes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does compounding frequency matter much?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A little. More frequent compounding helps slightly, but the rate, the time and the size of your contributions matter much more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the result guaranteed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It is a projection from the rate you enter. Actual investment returns vary and can be negative."
       }
     }
   ]
@@ -171,34 +195,59 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Why the same four numbers keep showing up</h2>
-      <p>Every investment plan is a relationship between a starting amount, regular contributions, a return rate, and time. Change any one of them and the end balance shifts — sometimes dramatically. This calculator flips the usual question around: instead of always asking "how much will I have?", it can just as easily answer "how much do I need to contribute?" or "what return do I actually need?" to hit a specific target.</p>
-
-      <h2>Why compounding frequency matters less than people think</h2>
-      <p>The difference between monthly and daily compounding at the same stated rate is real but small — a few dollars on a typical account, not a few thousand. What actually moves the end balance is the rate itself, how long the money compounds, and how much gets added along the way. Don't let a compounding-frequency choice distract from the much bigger levers: starting earlier, contributing more, or seeking a genuinely higher (and appropriately risk-adjusted) return.</p>
-      <div class="callout">Contributing at the beginning of each period instead of the end means every contribution earns one extra period's worth of growth — a small-sounding difference that adds up meaningfully over a long investment horizon.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: reaching a target without assumed growth</h2><p>Suppose you start with $1,000, plan to contribute $100 each month for 12 months, and assume a 0% return. The ending balance is <strong>$2,200</strong> ($1,000 plus $1,200 of contributions). To explore what contribution you would need for a larger target, change the <strong>Solve For</strong> selection rather than relying on a guessed return. Real investment returns may fluctuate and are not guaranteed.</p>
-      
-      <p>If you already know your monthly and annual deposits and want to model changing savings contributions and a tax assumption, try the <a href="savings-calculator.html">Savings Calculator</a>. If you need to evaluate an investment you have already made, the <a href="roi-calculator.html">ROI Calculator</a> compares invested and returned amounts, while the <a href="average-return-calculator.html">Average Return Calculator</a> explores returns over multiple periods. For the basics of compounding, read <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a>.</p>
-      <!--/seo-extra-->
-      <p><strong>Read the guides:</strong> <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a>, <a href="../guides/how-inflation-erodes-your-money.html">How Inflation Erodes Your Money</a>.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> An investment plan connects a starting amount, regular contributions, a return rate and time. $20,000 plus $1,000 a month at 6% for 10 years grows to $198,290, and the calculator can solve backwards for the contribution, rate, starting amount or time needed to reach a goal.</div>
+      <h2>The four numbers behind every investment plan</h2>
+      <p>Every plan is a relationship between four things: a <strong>starting amount</strong>, <strong>regular contributions</strong>, a <strong>return rate</strong> and <strong>time</strong>, which together give an <strong>end amount</strong>. Change any one and the end balance shifts, sometimes dramatically. This calculator can solve for any one of the five if you give it the other four, so it answers &ldquo;how much will I have?&rdquo; as well as &ldquo;how much do I need to contribute?&rdquo; and &ldquo;what return do I need?&rdquo;.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>Start with $20,000, add $1,000 at the end of each month for 10 years and earn 6% a year (compounded annually). The end balance is <strong>$198,290</strong>. You contributed $120,000 on top of the starting amount, so about <strong>$58,290</strong> is interest. If the contributions are made at the beginning of each month instead, the balance is $199,081, about $791 more, because each deposit earns one extra month.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where the default ending balance comes from</title><desc id="cf1-d">After 10 years the balance is $198,290: $20,000 started it, $120,000 came from contributions and $58,290 from interest.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the default ending balance comes from</text><rect class="bar" x="14.0" y="42" width="49.6" height="30" fill="#2563eb"/><text x="38.8" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">10%</text><rect class="bar" x="63.6" y="42" width="297.7" height="30" fill="#f59e0b"/><text x="212.5" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">61%</text><rect class="bar" x="361.4" y="42" width="144.6" height="30" fill="#10b981"/><text x="433.7" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">29%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Starting amount: <tspan font-weight="700">$20,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#f59e0b"/><text x="282" y="98" font-size="12.5" fill="#374151">Contributions ($1,000 a month): <tspan font-weight="700">$120,000</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#10b981"/><text x="32" y="120" font-size="12.5" fill="#374151">Interest: <tspan font-weight="700">$58,290</tspan></text></svg><figcaption>Contributions provide most of the balance over short periods; interest takes a bigger share the longer you invest.</figcaption></figure>
+      <h2>Working backwards from a goal</h2>
+      <p>The five modes answer different planning questions. Suppose the goal is <strong>$1,000,000</strong> and the other values are the defaults (start $20,000, 6%, $1,000 a month, 10 years). Each question changes just one number:</p>
+      <div class="calc-table"><table><thead><tr><th>Question</th><th>Solve for</th><th>Answer</th></tr></thead><tbody><tr><td>What contribution do I need to reach $1,000,000 in 10 years?</td><td>Contribution</td><td><strong>$5,934 a month</strong></td></tr><tr><td>What starting amount do I need if I save $1,000 a month for 10 years?</td><td>Starting amount</td><td><strong>$467,670</strong></td></tr><tr><td>What return do I need to get there in 10 years with $1,000 a month?</td><td>Return rate</td><td><strong>32.59% a year</strong></td></tr><tr><td>How long will it take at $1,000 a month and 6%?</td><td>Length</td><td><strong>28.8 years</strong></td></tr></tbody></table></div>
+      <p>The return-rate answer is shown as an effective annual rate. The table shows how big the gap between a hope and a plan can be: reaching $1,000,000 in 10 years with these inputs would need an unrealistic return, while giving it 29 years makes it reachable.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Years to reach $1,000,000 from $20,000 at 6%, by monthly contribution</title><desc id="cf2-d">Doubling the contribution from $1,000 to $2,000 a month cuts the time from about 29 years to about 20 years.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Years to reach $1,000,000 from $20,000 at 6%, by monthly contribution</text><text x="112" y="60" text-anchor="end" font-size="13" fill="#6b7280">$500 a month</text><rect class="bar" x="120" y="44" width="308.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">37.7 years</text><text x="112" y="94" text-anchor="end" font-size="13" fill="#6b7280">$1,000 a month</text><rect class="bar" x="120" y="78" width="235.2" height="22" rx="4" fill="#10b981"/><text x="363.2" y="94" font-size="13" font-weight="700" fill="#111827">28.8 years</text><text x="112" y="128" text-anchor="end" font-size="13" fill="#6b7280">$1,500 a month</text><rect class="bar" x="120" y="112" width="194.0" height="22" rx="4" fill="#9ca3af"/><text x="322.0" y="128" font-size="13" font-weight="700" fill="#111827">23.7 years</text><text x="112" y="162" text-anchor="end" font-size="13" fill="#6b7280">$2,000 a month</text><rect class="bar" x="120" y="146" width="166.4" height="22" rx="4" fill="#9ca3af"/><text x="294.4" y="162" font-size="13" font-weight="700" fill="#111827">20.4 years</text><text x="112" y="196" text-anchor="end" font-size="13" fill="#6b7280">$3,000 a month</text><rect class="bar" x="120" y="180" width="130.8" height="22" rx="4" fill="#9ca3af"/><text x="258.8" y="196" font-size="13" font-weight="700" fill="#111827">16.0 years</text></svg><figcaption>Time and contributions trade off: saving more shortens the road, and a longer road means smaller payments.</figcaption></figure>
+      <h2>Why the starting amount and the timing both matter</h2>
+      <p>A larger starting amount works for you the whole time. In the default example, the $20,000 grows to about $35,817 by itself over 10 years at 6%, which is 18% of the ending balance. Regular contributions add to that, and because each contribution has less time to grow than the one before it, early deposits are worth the most. That is why starting sooner with a small amount often beats starting later with a larger one.</p>
+      <h2>What matters more than compounding frequency</h2>
+      <p>Monthly versus daily compounding at the same stated rate makes a small difference. The bigger levers are the rate itself, how long the money compounds and how much you add. Contributing at the beginning of each period gives every deposit one extra period of growth, which adds up over long horizons.</p>
+      <h2>Choosing a return rate</h2>
+      <p>The calculator does not predict returns. It does the arithmetic for the rate you enter. Many long-term investors start from a long-run historical average for the type of investment and then test a lower rate as well, because returns vary from year to year and are never guaranteed. Test several rates to see how sensitive your goal is.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Assuming a high return will definitely happen. Check the result at a lower rate.</li><li>Ignoring inflation and tax, which lower the real value of the end balance.</li><li>Entering the annual contribution when you meant a monthly one (check the Month/Year switch).</li><li>Treating the solved return rate as a promise. It tells you what the goal requires, not what you will get.</li><li>Starting late and expecting contributions alone to catch up.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Look at how much of the end balance is your own money and how much is growth. If a goal needs an unrealistic return or contribution, change the time or the target instead. For a view that includes taxes and inflation, use the Interest Calculator or the Savings Calculator.</p>
+      <div class="callout">This calculator gives estimates based on the assumptions you enter. Investment returns are not guaranteed, and this is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="savings-calculator.html">Savings Calculator</a> &ndash; savings with deposits, tax and inflation</li><li><a href="interest-calculator.html">Interest Calculator</a> &ndash; compound growth with monthly or yearly deposits</li><li><a href="compound-interest-calculator.html">Compounding Frequency Converter</a> &ndash; compare rates and compounding</li><li><a href="roi-calculator.html">ROI Calculator</a> &ndash; return on an investment you made</li><li><a href="average-return-calculator.html">Average Return Calculator</a> &ndash; average yearly return over several periods</li><li><a href="retirement-calculator.html">Retirement Calculator</a> &ndash; plan for retirement income</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-compound-interest-works.html">How Compound Interest Works</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What return rate should I assume?</h3>
-        <p>This calculator doesn't predict future returns — it just does the math for whatever rate you plug in. Many long-term investors use a long-run historical average for the asset class in question as a starting estimate, while remembering that past returns never guarantee future ones.</p>
+        <p>The calculator does not predict future returns. Many long-term investors start with a long-run historical average for the asset class and test a lower rate as well, remembering that past returns do not guarantee future ones.</p>
       </div>
       <div class="faq-item">
-        <h3>Why does "Return Rate" solve for an annually-compounded rate?</h3>
-        <p>It's reported as the effective annual rate regardless of how often you compound or contribute, so you can compare it apples-to-apples against other investments quoted the same way.</p>
+        <h3>Why does the Return Rate mode give an annual rate?</h3>
+        <p>It is reported as the effective annual rate regardless of how often interest compounds, so that different results can be compared on the same basis.</p>
       </div>
       <div class="faq-item">
-        <h3>Does this account for taxes or fees?</h3>
-        <p>No — it models gross growth only. Taxes on gains and any account or fund fees would reduce the real end balance below what's shown here.</p>
+        <h3>What is the difference between contributing at the beginning and the end?</h3>
+        <p>A contribution made at the beginning of each period earns one extra period of growth. Over many deposits that gives a noticeably larger balance.</p>
       </div>
+      <div class="faq-item">
+        <h3>Can I solve for how long it will take?</h3>
+        <p>Yes. Choose the Investment Length option, enter the target, starting amount, contribution and rate, and the calculator tells you how many years it takes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does compounding frequency matter much?</h3>
+        <p>A little. More frequent compounding helps slightly, but the rate, the time and the size of your contributions matter much more.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the result guaranteed?</h3>
+        <p>No. It is a projection from the rate you enter. Actual investment returns vary and can be negative.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" rel="noopener" target="_blank">Investor.gov: Compound Interest Calculator</a></p>
     </div>
 
   </div>
