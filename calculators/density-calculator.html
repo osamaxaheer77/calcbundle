@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Density Calculator: Solve Mass, Volume or Density | CalcBundle</title>
-<meta name="description" content="Calculate density, mass or volume using the relationship density = mass ÷ volume, with unit-aware inputs.">
+<title>Density Calculator: Solve for Mass, Volume or Density</title>
+<meta name="description" content="Find density, mass or volume from the other two using density = mass divided by volume, with 11 density units, 9 volume units and 7 mass units.">
 <link rel="canonical" href="https://calcbundle.net/calculators/density-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Density Calculator: Solve Mass, Volume or Density | CalcBundle">
-<meta property="og:description" content="Calculate density, mass or volume using the relationship density = mass ÷ volume, with unit-aware inputs.">
+<meta property="og:title" content="Density Calculator: Solve for Mass, Volume or Density">
+<meta property="og:description" content="Find density, mass or volume from the other two using density = mass divided by volume, with 11 density units, 9 volume units and 7 mass units.">
 <meta property="og:url" content="https://calcbundle.net/calculators/density-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Density Calculator: Solve Mass, Volume or Density | CalcBundle">
-<meta name="twitter:description" content="Calculate density, mass or volume using the relationship density = mass ÷ volume, with unit-aware inputs.">
+<meta name="twitter:title" content="Density Calculator: Solve for Mass, Volume or Density">
+<meta name="twitter:description" content="Find density, mass or volume from the other two using density = mass divided by volume, with 11 density units, 9 volume units and 7 mass units.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,15 +41,47 @@
       "name": "What's the density of water, for reference?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "About 1,000 kg/m³ (1 g/cm³, or 62.4 lb/ft³) at 4°C, which is why those numbers show up so often as a sanity check."
+        "text": "About 1,000 kg/m3, which is 1 g/cm3 or 62.4 lb/ft3, at 4 degrees Celsius, where water is densest. At 20 degrees Celsius it is about 998 kg/m3."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I use this for gases as well as liquids and solids?",
+      "name": "How do I calculate density?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — the equation is the same for any material, though gas densities vary much more with temperature and pressure than liquids or solids."
+        "text": "Divide the mass by the volume. A sample of 600 grams that occupies 200 cubic centimetres has a density of 3 grams per cubic centimetre."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find mass from density?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the density by the volume. A steel plate of 0.0025 cubic metres at 7,850 kg/m3 has a mass of 19.625 kg."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I tell if something will float?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It floats in a liquid if its density is less than the liquid's. Fresh water is about 1,000 kg/m3, so anything lighter than that floats in it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do the units matter so much?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The same density has different numbers in different units. Water is 1 in g/cm3, 1,000 in kg/m3 and about 62.4 in lb/ft3."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does density change with temperature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Most materials expand when heated and become less dense, and gases change a great deal with temperature and pressure."
       }
     }
   ]
@@ -163,41 +195,70 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">The density equation</h2>
-      <p>Density (&rho;) is mass per unit volume: &rho; = m / V. Rearranged, volume = m / &rho;, and mass = &rho; &times; V. Pick which quantity you want to solve for, enter the other two, and this calculator handles the unit conversions internally.</p>
-
-      <h2>Why units matter so much here</h2>
-      <p>Density values look very different depending on the units used &mdash; water is "1" in g/cm&sup3; but "1000" in kg/m&sup3; and about "62.4" in lb/ft&sup3;. All three describe the same density; only the units differ. Always double check the unit next to your result, not just the number.</p>
-      <div class="callout">Density can change with temperature and pressure, especially for gases &mdash; the value you enter should reflect the conditions relevant to your calculation.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understand the result</h2>
-      <p>If a sample has mass 600 g and occupies 200 cm³, its density is 600 ÷ 200 = 3 g/cm³. The formula can also be rearranged to find mass or volume.</p>
-      <h2>Related calculators</h2>
-      <p>For changing measurement systems, use the <a href="conversion-calculator.html">Unit Conversion Calculator</a>. For liquid and solid geometry, see the <a href="volume-calculator.html">Volume Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>A block with a mass of 50 pounds and a volume of 2 cubic feet has a density of about 400.46 kg/m³. The page converts the units for you: 50 pounds is 22.68 kilograms and 2 cubic feet is 0.0566 cubic meters, and 22.68 ÷ 0.0566 gives 400.46. For comparison, water is 1,000 kg/m³, so this material would float.</p>
-
-      <h2>Tips for density</h2>
-      <p>Choose what you want to solve for and enter the other two values with their units. Density can change with temperature and pressure, especially for gases and liquids, so use the value measured under the conditions you care about. If an object floats in water, its density is less than 1,000 kg/m³, or 62.4 lb/ft³. Use the Mass Calculator when you know the density and volume and want the weight.</p>
-
-      <p><strong>You might also need:</strong> <a href="mass-calculator.html">Mass Calculator</a>, <a href="weight-calculator.html">Weight Calculator</a>, <a href="conversion-calculator.html">Conversion Calculator</a>, <a href="molarity-calculator.html">Molarity Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <!--next-->
-      <p><strong>What next?</strong> To get the volume of a regular object before finding its mass, use the <a href="volume-calculator.html">Volume Calculator</a>, which handles spheres, cylinders, cones, tanks and more in any unit.</p>
-      <!--/next-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Density is mass divided by volume. A 50 lb block of 2 cubic feet is 400.46 kg/m&sup3;, well below the 1,000 kg/m&sup3; of water, so it floats. 600 g in 200 cm&sup3; is 3 g/cm&sup3;.</div>
+      <h2>The density equation</h2>
+      <p>Density is mass per unit of volume: <strong>&rho; = m &divide; V</strong>. Rearranged, volume is m &divide; &rho; and mass is &rho; &times; V. Pick which of the three you want, enter the other two with their units, and the calculator does the conversions for you. The answer is shown in the unit you choose, and also in kilograms per cubic metre, litres or kilograms where that helps.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens on a block with a mass of <strong>50 lb</strong> and a volume of <strong>2 ft&sup3;</strong>, solving for density in kg/m&sup3;. First convert the units: 50 lb &times; 0.45359237 = 22.679619 kg, and 2 ft&sup3; &times; 0.028316846592 = 0.056634 m&sup3;. Then density = 22.679619 &divide; 0.056634 = <strong>400.461584 kg/m&sup3;</strong>. For comparison, water is 1,000 kg/m&sup3;, so the block is about 40% as dense as water and would float.</p>
+      <p>Another example from the other direction: a block of 600 g that takes up 200 cm&sup3; has a density of 600 &divide; 200 = 3 g/cm&sup3;.</p>
+      <h2>The same density in different units</h2>
+      <p>A density number means little without its unit. Fresh water, at about 1,000 kg/m&sup3;, can be written all of these ways:</p>
+      <div class="calc-table"><table><thead><tr><th>Unit</th><th>Water</th></tr></thead><tbody><tr><td>kg/m&sup3;</td><td>1,000</td></tr><tr><td>g/cm&sup3; and kg/L</td><td>1</td></tr><tr><td>lb/ft&sup3;</td><td>62.427961</td></tr><tr><td>lb/in&sup3;</td><td>0.036127</td></tr><tr><td>lb/gal (US)</td><td>8.345404</td></tr><tr><td>lb/gal (UK)</td><td>10.022413</td></tr></tbody></table></div>
+      <p>Always check the unit next to your result rather than the number alone.</p>
+      <h2>Densities of common materials</h2>
+      <p>These are typical values at room temperature, rounded. Real samples vary with composition, alloy and temperature, so use your own data when accuracy matters.</p>
+      <div class="calc-table"><table><thead><tr><th>Material</th><th>Density (kg/m&sup3;)</th><th>Specific gravity (water = 1)</th></tr></thead><tbody><tr><td>Air (20&deg;C)</td><td>1.2</td><td>0.001</td></tr><tr><td>Gasoline (approx.)</td><td>740</td><td>0.74</td></tr><tr><td>Olive oil</td><td>915</td><td>0.915</td></tr><tr><td>Ice</td><td>917</td><td>0.917</td></tr><tr><td>Fresh water</td><td>1,000</td><td>1</td></tr><tr><td>Seawater (approx.)</td><td>1,025</td><td>1.025</td></tr><tr><td>Concrete (approx.)</td><td>2,400</td><td>2.4</td></tr><tr><td>Aluminium</td><td>2,700</td><td>2.7</td></tr><tr><td>Steel</td><td>7,850</td><td>7.85</td></tr><tr><td>Copper</td><td>8,960</td><td>8.96</td></tr><tr><td>Lead</td><td>11,340</td><td>11.34</td></tr><tr><td>Mercury</td><td>13,534</td><td>13.534</td></tr><tr><td>Gold</td><td>19,320</td><td>19.32</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 420" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Densities of common materials (kg/m&amp;sup3;)</title><desc id="cf1-d">Gold is almost 19 times as dense as water, while the default block, at 400.5 kg/m&amp;sup3;, is well under half.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Densities of common materials (kg/m&amp;sup3;)</text><text x="152" y="60" text-anchor="end" font-size="13" fill="#6b7280">Olive oil</text><rect class="bar" x="160" y="44" width="12.7" height="22" rx="4" fill="#9ca3af"/><text x="180.7" y="60" font-size="13" font-weight="700" fill="#111827">915</text><text x="152" y="94" text-anchor="end" font-size="13" fill="#6b7280">Ice</text><rect class="bar" x="160" y="78" width="12.7" height="22" rx="4" fill="#9ca3af"/><text x="180.7" y="94" font-size="13" font-weight="700" fill="#111827">917</text><text x="152" y="128" text-anchor="end" font-size="13" fill="#6b7280">Fresh water</text><rect class="bar" x="160" y="112" width="13.9" height="22" rx="4" fill="#2563eb"/><text x="181.9" y="128" font-size="13" font-weight="700" fill="#111827">1,000</text><text x="152" y="162" text-anchor="end" font-size="13" fill="#6b7280">Seawater (approx.)</text><rect class="bar" x="160" y="146" width="14.2" height="22" rx="4" fill="#9ca3af"/><text x="182.2" y="162" font-size="13" font-weight="700" fill="#111827">1,025</text><text x="152" y="196" text-anchor="end" font-size="13" fill="#6b7280">Concrete (approx.)</text><rect class="bar" x="160" y="180" width="33.3" height="22" rx="4" fill="#9ca3af"/><text x="201.3" y="196" font-size="13" font-weight="700" fill="#111827">2,400</text><text x="152" y="230" text-anchor="end" font-size="13" fill="#6b7280">Aluminium</text><rect class="bar" x="160" y="214" width="37.5" height="22" rx="4" fill="#9ca3af"/><text x="205.5" y="230" font-size="13" font-weight="700" fill="#111827">2,700</text><text x="152" y="264" text-anchor="end" font-size="13" fill="#6b7280">Steel</text><rect class="bar" x="160" y="248" width="108.9" height="22" rx="4" fill="#9ca3af"/><text x="276.9" y="264" font-size="13" font-weight="700" fill="#111827">7,850</text><text x="152" y="298" text-anchor="end" font-size="13" fill="#6b7280">Copper</text><rect class="bar" x="160" y="282" width="124.3" height="22" rx="4" fill="#9ca3af"/><text x="292.3" y="298" font-size="13" font-weight="700" fill="#111827">8,960</text><text x="152" y="332" text-anchor="end" font-size="13" fill="#6b7280">Lead</text><rect class="bar" x="160" y="316" width="157.3" height="22" rx="4" fill="#9ca3af"/><text x="325.3" y="332" font-size="13" font-weight="700" fill="#111827">11,340</text><text x="152" y="366" text-anchor="end" font-size="13" fill="#6b7280">Mercury</text><rect class="bar" x="160" y="350" width="187.7" height="22" rx="4" fill="#9ca3af"/><text x="355.7" y="366" font-size="13" font-weight="700" fill="#111827">13,534</text><text x="152" y="400" text-anchor="end" font-size="13" fill="#6b7280">Gold</text><rect class="bar" x="160" y="384" width="268.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="400" font-size="13" font-weight="700" fill="#111827">19,320</text></svg><figcaption>Metals are several times denser than water.</figcaption></figure>
+      <h2>Solving for mass</h2>
+      <p>Choose Mass, then enter the density and the volume. A steel plate of 0.5 m by 0.5 m and 10 mm thick has a volume of 0.0025 m&sup3;. At 7,850 kg/m&sup3; its mass is 7,850 &times; 0.0025 = <strong>19.625 kg</strong>. The result can be shown in kilograms, grams, milligrams, metric tons, pounds, ounces or carats.</p>
+      <h2>Solving for volume</h2>
+      <p>Choose Volume, then enter the density and the mass. How much room does 1 kg of gold take? Volume = 1 &divide; 19,320 = 0.0000517598 m&sup3;, or <strong>51.76 cm&sup3;</strong>, about the size of a small cube 3.7 cm on a side. The table shows 1 kg of other metals.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Volume of 1 kg of each metal (cm&amp;sup3;)</title><desc id="cf2-d">The denser the material, the less room a kilogram takes: 370.4 cm&amp;sup3; of aluminium against 51.8 cm&amp;sup3; of gold.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Volume of 1 kg of each metal (cm&amp;sup3;)</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">Aluminium</text><rect class="bar" x="100" y="44" width="328.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">370.4 cm&amp;sup3;</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">Steel</text><rect class="bar" x="100" y="78" width="112.8" height="22" rx="4" fill="#9ca3af"/><text x="220.8" y="94" font-size="13" font-weight="700" fill="#111827">127.4 cm&amp;sup3;</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">Lead</text><rect class="bar" x="100" y="112" width="78.1" height="22" rx="4" fill="#9ca3af"/><text x="186.1" y="128" font-size="13" font-weight="700" fill="#111827">88.2 cm&amp;sup3;</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">Gold</text><rect class="bar" x="100" y="146" width="45.8" height="22" rx="4" fill="#10b981"/><text x="153.8" y="162" font-size="13" font-weight="700" fill="#111827">51.8 cm&amp;sup3;</text></svg><figcaption>A kilogram of dense metal is surprisingly small.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Metal</th><th>Volume of 1 kg (cm&sup3;)</th></tr></thead><tbody><tr><td>Aluminium</td><td>370.4</td></tr><tr><td>Steel</td><td>127.4</td></tr><tr><td>Lead</td><td>88.2</td></tr><tr><td>Gold</td><td>51.8</td></tr></tbody></table></div>
+      <h2>Will it float?</h2>
+      <p>An object floats in a liquid if its density is less than the liquid&rsquo;s. Fresh water is about 1,000 kg/m&sup3; and seawater about 1,025, which is why it is easier to float at sea. A floating object sinks until it displaces its own weight of liquid, so the share below the surface is its density divided by the liquid&rsquo;s. The default block (400.5 kg/m&sup3;) sits <strong>40%</strong> below the water line.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 148" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Share of an object that sits below the water line when it floats (percent)</title><desc id="cf3-d">A floating object sinks until it displaces its own weight of water, so the share below the surface equals its density divided by the water&amp;rsquo;s: 40% for the default block.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Share of an object that sits below the water line when it floats (percent)</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">Default block</text><rect class="bar" x="110" y="44" width="138.9" height="22" rx="4" fill="#2563eb"/><text x="256.9" y="60" font-size="13" font-weight="700" fill="#111827">40%</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Ice</text><rect class="bar" x="110" y="78" width="318.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">92%</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">Oak (typical)</text><rect class="bar" x="110" y="112" width="242.7" height="22" rx="4" fill="#9ca3af"/><text x="360.7" y="128" font-size="13" font-weight="700" fill="#111827">70%</text></svg><figcaption>Density sets how deep a floating object sits.</figcaption></figure>
+      <h2>Everyday uses</h2>
+      <ul><li><strong>Water by the gallon.</strong> A US gallon of water weighs about 8.35 lb, so a 20-gallon aquarium holds about <strong>167 lb</strong> of water, before the tank, sand and decorations, and a 55-gallon drum holds about 459 lb.</li><li><strong>Water by the cubic foot.</strong> A cubic foot of water weighs 62.43 lb, or 28.32 kg, and a cubic yard (27 cubic feet) weighs about 1,686 lb. That is why a swimming pool or a concrete slab needs a strong base.</li><li><strong>Cooking and shopping.</strong> A litre of water has a mass of 1 kg, but a litre of olive oil has a mass of 0.915 kg, which is why oil floats on water.</li><li><strong>Shipping and materials.</strong> A supplier may quote a material by weight while you measure by volume. Density is the bridge, so enter the volume you measured and read off the mass.</li></ul>
+      <h2>Density and specific gravity</h2>
+      <p>Specific gravity is a material&rsquo;s density divided by the density of water, so it has no unit. A specific gravity of 7.85 for steel means it is 7.85 times as dense as water, and anything with a specific gravity below 1 floats in fresh water. The table above lists it beside each density, and you can get it from this calculator by solving for density in g/cm&sup3;, since water is 1 g/cm&sup3;.</p>
+      <h2>Temperature and pressure</h2>
+      <p>Density changes with temperature and pressure, most of all for gases. Water is densest at about 4&deg;C, at roughly 999.97 kg/m&sup3;. It falls to about 998.2 kg/m&sup3; at 20&deg;C and about 958.4 kg/m&sup3; at 100&deg;C. Ice is lighter than liquid water, which is why it floats. Enter the value that matches the conditions you care about.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing units, such as grams with cubic metres, without letting the unit boxes convert.</li><li>Forgetting that US and UK gallons are different sizes. The calculator offers both.</li><li>Using a density at the wrong temperature.</li><li>Confusing mass with weight. Density uses mass; weight depends on gravity.</li><li>Entering 0 or a negative number. The calculator needs values greater than 0.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the missing quantity in the unit you chose. A second line gives the same value in a base unit: kg/m&sup3; for density, m&sup3; for volume and kg for mass. With the Solve For menu, the box for the answer is switched off, so fill in the other two.</p>
+      <div class="callout">The calculator treats the density as constant. Real materials change with temperature, pressure and composition, so use measured values for engineering or safety work.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="conversion-calculator.html">Conversion Calculator</a> &ndash; convert between units</li><li><a href="volume-calculator.html">Volume Calculator</a> &ndash; the volume of solids</li><li><a href="mass-calculator.html">Mass Calculator</a> &ndash; mass from density and volume</li><li><a href="weight-calculator.html">Weight Calculator</a> &ndash; weight from mass</li><li><a href="molarity-calculator.html">Molarity Calculator</a> &ndash; concentration of a solution</li><li><a href="molecular-weight-calculator.html">Molecular Weight Calculator</a> &ndash; the mass of a compound</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What's the density of water, for reference?</h3>
-        <p>About 1,000 kg/m&sup3; (1 g/cm&sup3;, or 62.4 lb/ft&sup3;) at 4&deg;C, which is why those numbers show up so often as a sanity check.</p>
+        <p>About 1,000 kg/m3, which is 1 g/cm3 or 62.4 lb/ft3, at 4 degrees Celsius, where water is densest. At 20 degrees Celsius it is about 998 kg/m3.</p>
       </div>
       <div class="faq-item">
-        <h3>Can I use this for gases as well as liquids and solids?</h3>
-        <p>Yes &mdash; the equation is the same for any material, though gas densities vary much more with temperature and pressure than liquids or solids.</p>
+        <h3>How do I calculate density?</h3>
+        <p>Divide the mass by the volume. A sample of 600 grams that occupies 200 cubic centimetres has a density of 3 grams per cubic centimetre.</p>
       </div>
+      <div class="faq-item">
+        <h3>How do I find mass from density?</h3>
+        <p>Multiply the density by the volume. A steel plate of 0.0025 cubic metres at 7,850 kg/m3 has a mass of 19.625 kg.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I tell if something will float?</h3>
+        <p>It floats in a liquid if its density is less than the liquid's. Fresh water is about 1,000 kg/m3, so anything lighter than that floats in it.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do the units matter so much?</h3>
+        <p>The same density has different numbers in different units. Water is 1 in g/cm3, 1,000 in kg/m3 and about 62.4 in lb/ft3.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does density change with temperature?</h3>
+        <p>Yes. Most materials expand when heated and become less dense, and gases change a great deal with temperature and pressure.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Density" rel="noopener" target="_blank">Wikipedia: Density</a>; <a href="https://en.wikipedia.org/wiki/Archimedes%27_principle" rel="noopener" target="_blank">Wikipedia: Archimedes' principle</a>; <a href="https://en.wikipedia.org/wiki/Properties_of_water" rel="noopener" target="_blank">Wikipedia: Properties of water</a></p>
     </div>
 
   </div>

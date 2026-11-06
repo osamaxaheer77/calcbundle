@@ -42,8 +42,8 @@
     const resultEl = el('density-result');
 
     if (solveFor === 'density') {
-      if (isNaN(volumeVal) || isNaN(massVal)) {
-        resultEl.innerHTML = '<p class="tool-result is-error">Enter both volume and mass.</p>';
+      if (!(volumeVal > 0) || !(massVal > 0)) {
+        resultEl.innerHTML = '<p class="tool-result is-error">Enter both volume and mass, each greater than 0.</p>';
         return;
       }
       const kgm3 = (massVal * MASS_TO_KG[massUnit]) / (volumeVal * VOLUME_TO_M3[volumeUnit]);
@@ -56,8 +56,8 @@
         ${densityUnit !== 'kgm3' ? `<div class="stat-row"><span>Or</span><strong>${fmt(kgm3)} kg/m&sup3;</strong></div>` : ''}
       `;
     } else if (solveFor === 'volume') {
-      if (isNaN(densityVal) || isNaN(massVal)) {
-        resultEl.innerHTML = '<p class="tool-result is-error">Enter both density and mass.</p>';
+      if (!(densityVal > 0) || !(massVal > 0)) {
+        resultEl.innerHTML = '<p class="tool-result is-error">Enter both density and mass, each greater than 0.</p>';
         return;
       }
       const m3 = (massVal * MASS_TO_KG[massUnit]) / (densityVal * DENSITY_TO_KGM3[densityUnit]);
@@ -70,8 +70,8 @@
         ${volumeUnit !== 'm3' ? `<div class="stat-row"><span>Or</span><strong>${fmt(m3)} m&sup3;</strong></div>` : ''}
       `;
     } else {
-      if (isNaN(densityVal) || isNaN(volumeVal)) {
-        resultEl.innerHTML = '<p class="tool-result is-error">Enter both density and volume.</p>';
+      if (!(densityVal > 0) || !(volumeVal > 0)) {
+        resultEl.innerHTML = '<p class="tool-result is-error">Enter both density and volume, each greater than 0.</p>';
         return;
       }
       const kg = densityVal * DENSITY_TO_KGM3[densityUnit] * volumeVal * VOLUME_TO_M3[volumeUnit];
