@@ -41,7 +41,7 @@
       "name": "Why does switching categories reset the units?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Each category has its own set of compatible units — length and weight, for example, can't be converted into each other, so the \"From\" and \"To\" lists update to match the category you pick."
+        "text": "Each category has its own compatible units. Length and weight, for example, cannot be converted into each other, so the From and To lists update to match the category you pick."
       }
     },
     {
@@ -49,7 +49,39 @@
       "name": "Can I convert between metric and imperial units?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — that's one of the most common uses of this calculator. Pick any \"From\" unit and any \"To\" unit within the same category, metric or imperial."
+        "text": "Yes. Pick any From unit and any To unit within the same category, metric or US customary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate are the conversions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The factors are the exact international definitions, such as 1 mile = 1,609.344 metres and 1 pound = 0.45359237 kilograms. The result is displayed to six decimal places."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert Celsius to Fahrenheit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply by 9/5 and add 32. For example 20 degrees Celsius is 20 x 9/5 + 32 = 68 degrees Fahrenheit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the gallon in this calculator US or imperial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the US gallon (3.785 litres). The imperial gallon used in the UK is about 4.546 litres."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do very large or small results use scientific notation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Numbers of a billion or more, or smaller than one millionth, are shown in scientific notation to keep the result readable."
       }
     }
   ]
@@ -126,41 +158,65 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How conversions work</h2>
-      <p>Every unit within a category is defined relative to a common base unit (meters for length, liters for volume, kilograms for weight, and so on). Converting from one unit to another is a two-step process: convert the input into the base unit, then convert the base unit into the target unit. Temperature is the exception, since Celsius, Fahrenheit, and Kelvin scales don't share a zero point.</p>
-
-      <h2>Precision</h2>
-      <p>Conversion factors used here (like 1 mile = 1,609.344 meters, or 1 pound = 0.45359237 kilograms) are the internationally defined exact values, not rounded approximations.</p>
-      <div class="callout">US volume units (gallon, quart, pint, cup, fluid ounce) use the US customary definitions, which differ slightly from the UK imperial system.</div>
-
-      <!--seo-extra-->
-      <h2>Worked example: understand the result</h2>
-      <p>Two meters equal 200 centimeters because one meter is 100 centimeters. For temperature, 0°C equals 32°F; simply multiplying by a fixed factor would be incorrect.</p>
-      <h2>Related calculators</h2>
-      <p>For circle measurements, try the <a href="circle-calculator.html">Circle Calculator</a>. If you need material volume, see the <a href="concrete-calculator.html">Concrete Calculator</a>.</p>
-
-      <h2>A worked example</h2>
-      <p>To convert 5 miles to feet, pick the Length category, enter 5, and choose Mile to Foot. The answer is 26,400 feet, since a mile is 5,280 feet. The same method works for area, volume, weight and temperature. For temperature the formulas are different: °F = °C × 9/5 + 32, so 20°C is 68°F.</p>
-
-      <h2>Tips for conversions</h2>
-      <p>Convert within one category only, because miles and kilograms measure different things. Watch for look-alike units: a US gallon is smaller than an imperial gallon, and a short ton is not a metric ton. Round the answer to the precision you need and no further. When converting several steps, such as miles to meters to kilometers, do it in one go to avoid stacking rounding errors.</p>
-
-      <h2>Common uses</h2>
-      <p>Typical jobs include recipe quantities, travel distances, home projects, school homework, and reading product labels from another country.</p>
-
-      <p><strong>You might also need:</strong> <a href="density-calculator.html">Density Calculator</a>, <a href="mass-calculator.html">Mass Calculator</a>, <a href="speed-calculator.html">Speed Calculator</a>, <a href="weight-calculator.html">Weight Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A unit conversion multiplies a value by the size of the starting unit and divides by the size of the target unit. 5 miles is 26,400 feet, 8.0467 kilometres or 8,800 yards. Temperature needs a formula: 20&deg;C is 68&deg;F.</div>
+      <h2>How unit conversion works</h2>
+      <p>Every unit in a category is defined relative to one base unit: metres for length, square metres for area, litres for volume and kilograms for weight. To convert, the calculator multiplies the value by the size of the &ldquo;From&rdquo; unit in the base unit and divides by the size of the &ldquo;To&rdquo; unit: <strong>result = value &times; (from factor &divide; to factor)</strong>. Temperature is the one exception, because the scales do not share a zero point.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>The page opens with 5 miles in the Length category, converted to feet. One mile is 1,609.344 metres and one foot is 0.3048 metres, so 5 &times; 1,609.344 &divide; 0.3048 = <strong>26,400 feet</strong>. The same 5 miles is 8.0467 kilometres, 8,800 yards or 316,800 inches.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">How 1 mile compares with other length units (metres)</title><desc id="cf2-d">A mile is about 61% longer than a kilometre: 1.6093 km.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">How 1 mile compares with other length units (metres)</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 mile</text><rect class="bar" x="100" y="44" width="328.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">1,609.344 m</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">1 kilometre</text><rect class="bar" x="100" y="78" width="203.8" height="22" rx="4" fill="#9ca3af"/><text x="311.8" y="94" font-size="13" font-weight="700" fill="#111827">1,000 m</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">1,000 yards</text><rect class="bar" x="100" y="112" width="186.4" height="22" rx="4" fill="#9ca3af"/><text x="294.4" y="128" font-size="13" font-weight="700" fill="#111827">914.4 m</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">1,000 feet</text><rect class="bar" x="100" y="146" width="62.1" height="22" rx="4" fill="#9ca3af"/><text x="170.1" y="162" font-size="13" font-weight="700" fill="#111827">304.8 m</text></svg><figcaption>Small differences between units add up: a mile is much longer than a kilometre.</figcaption></figure>
+      <h2>Exact definitions the calculator uses</h2>
+      <p>The factors are the internationally defined values, not rounded approximations. Since the 1959 international agreement, the inch is exactly 2.54 centimetres and the pound exactly 0.45359237 kilograms, and the other US customary units follow from these. NIST publishes the same factors.</p>
+      <div class="calc-table"><table><thead><tr><th>Unit</th><th>Exact value</th></tr></thead><tbody><tr><td>1 inch</td><td>2.54 centimetres</td></tr><tr><td>1 foot</td><td>0.3048 metres</td></tr><tr><td>1 yard</td><td>0.9144 metres</td></tr><tr><td>1 mile</td><td>1,609.344 metres</td></tr><tr><td>1 acre</td><td>4,046.8564224 square metres (43,560 square feet)</td></tr><tr><td>1 US gallon</td><td>3.785411784 litres (128 US fluid ounces)</td></tr><tr><td>1 pound</td><td>0.45359237 kilograms</td></tr><tr><td>1 stone</td><td>14 pounds</td></tr><tr><td>1 US (short) ton</td><td>2,000 pounds</td></tr></tbody></table></div>
+      <h2>Length, area, volume and weight</h2>
+      <p>Pick the category first, then the units. Each category has its own list because miles cannot be converted to kilograms. Some everyday conversions:</p>
+      <div class="calc-table"><table><thead><tr><th>From</th><th>To</th><th>Result</th></tr></thead><tbody><tr><td>1 inch</td><td>centimetres</td><td>2.54</td></tr><tr><td>1 foot</td><td>centimetres</td><td>30.48</td></tr><tr><td>1 mile</td><td>kilometres</td><td>1.6093</td></tr><tr><td>1 hectare</td><td>acres</td><td>2.4711</td></tr><tr><td>1 square mile</td><td>acres</td><td>640</td></tr><tr><td>1 US gallon</td><td>litres</td><td>3.7854</td></tr><tr><td>1 US cup</td><td>millilitres</td><td>236.5882</td></tr><tr><td>1 kilogram</td><td>pounds</td><td>2.2046</td></tr><tr><td>1 pound</td><td>ounces</td><td>16</td></tr><tr><td>1 metric ton</td><td>pounds</td><td>2,204.6226</td></tr></tbody></table></div>
+      <h2>Temperature needs a formula</h2>
+      <p>Celsius, Fahrenheit and Kelvin start at different points, so multiplying by a fixed factor is wrong. The calculator converts through Celsius: &deg;F = &deg;C &times; 9/5 + 32, &deg;C = (&deg;F &minus; 32) &times; 5/9 and K = &deg;C + 273.15. For example, 20&deg;C is <strong>68&deg;F</strong>, normal body temperature of 98.6&deg;F is 37&deg;C, and 0 K is &minus;273.15&deg;C. The two scales read the same at &minus;40.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Fahrenheit for each Celsius temperature (the line is straight, but does not start at 0)</title><desc id="cf1-d">Water freezes at 0&amp;deg;C = 32&amp;deg;F and boils at 100&amp;deg;C = 212&amp;deg;F. The two scales cross at -40.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Fahrenheit for each Celsius temperature (the line is straight, but does not start at 0)</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">0</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">57</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">114</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">172</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">229</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">-40</text><text x="122.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">-20</text><text x="186.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="250.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">20</text><text x="314.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">40</text><text x="378.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">60</text><text x="442.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">80</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">100</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Degrees Celsius</text><polyline class="draw" style="--len:470" points="58.0,198.0 90.0,188.1 122.0,178.2 154.0,168.3 186.0,158.4 218.0,148.5 250.0,138.6 282.0,128.7 314.0,118.8 346.0,108.9 378.0,99.0 410.0,89.1 442.0,79.1 474.0,69.2 506.0,59.3" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Fahrenheit</text></svg><figcaption>Doubling the Celsius number does not double the Fahrenheit number.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Celsius</th><th>Fahrenheit</th><th>Kelvin</th></tr></thead><tbody><tr><td>-40&deg;C</td><td>-40&deg;F</td><td>233.15 K</td></tr><tr><td>-20&deg;C</td><td>-4&deg;F</td><td>253.15 K</td></tr><tr><td>0&deg;C</td><td>32&deg;F</td><td>273.15 K</td></tr><tr><td>20&deg;C</td><td>68&deg;F</td><td>293.15 K</td></tr><tr><td>37&deg;C</td><td>98.6&deg;F</td><td>310.15 K</td></tr><tr><td>100&deg;C</td><td>212&deg;F</td><td>373.15 K</td></tr></tbody></table></div>
+      <h2>Look-alike units</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">A US gallon and a UK (imperial) gallon in litres</title><desc id="cf3-d">The imperial gallon is about 20% bigger. The calculator uses the US gallon.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">A US gallon and a UK (imperial) gallon in litres</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">US gallon</text><rect class="bar" x="110" y="44" width="264.8" height="22" rx="4" fill="#2563eb"/><text x="382.8" y="60" font-size="13" font-weight="700" fill="#111827">3.785 L</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">Imperial gallon</text><rect class="bar" x="110" y="78" width="318.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="94" font-size="13" font-weight="700" fill="#111827">4.546 L</text></svg><figcaption>The same name can mean different amounts in different countries.</figcaption></figure>
+      <ul><li><strong>US and imperial volume:</strong> a US gallon is 3.785 litres and an imperial gallon is 4.546 litres. This calculator uses US units.</li><li><strong>Short and metric tons:</strong> a US (short) ton is 2,000 pounds, a metric ton is 1,000 kilograms (about 2,204.6 pounds).</li><li><strong>Fluid and weight ounces:</strong> fluid ounces measure volume and ounces measure weight. They are not interchangeable.</li><li><strong>Statute and nautical miles:</strong> this tool uses the statute mile (1,609.344 m).</li></ul>
+      <h2>Quick mental checks</h2>
+      <p>A rough estimate helps you spot a typing mistake before you trust the result:</p>
+      <ul><li><strong>Miles to kilometres:</strong> multiply by 1.6. Five miles is about 8 km, close to the exact 8.0467.</li><li><strong>Kilograms to pounds:</strong> multiply by 2.2. A 60 kg person is about 132 lb (exactly 132.2774 lb).</li><li><strong>Litres to US gallons:</strong> divide by 3.8. Ten litres is about 2.6 gallons (exactly 2.6417).</li><li><strong>Celsius to Fahrenheit:</strong> double it and add 30 for a rough figure. 20&deg;C gives about 70&deg;F, against the exact 68&deg;F.</li></ul>
+      <h2>Rounding and display</h2>
+      <p>The result is shown with up to six decimal places. Very large numbers (a billion or more) and very small ones (below one millionth) appear in scientific notation. Round the final answer to the precision you need, and convert in one step instead of chaining conversions, so rounding errors do not stack.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Mixing categories, such as trying to turn miles into pounds.</li><li>Using a US recipe cup or gallon with imperial measurements.</li><li>Multiplying a temperature by a factor instead of using the formula.</li><li>Rounding in the middle of a multi-step conversion.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The big number is the converted value in the unit you chose, and the line below it repeats your input. If the answer looks wrong, check that the category and both units are right, and whether the unit is US or imperial. For circle measurements use the Circle Calculator; for material volumes see the Concrete Calculator.</p>
+      <div class="callout">Conversions use exact international definitions. For legal, trade or engineering work, follow the standard that applies to you.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="density-calculator.html">Density Calculator</a> &ndash; mass, volume and density</li><li><a href="weight-calculator.html">Weight Calculator</a> &ndash; weight and mass</li><li><a href="speed-calculator.html">Speed Calculator</a> &ndash; speed, distance and time</li><li><a href="volume-calculator.html">Volume Calculator</a> &ndash; volume of common shapes</li><li><a href="area-calculator.html">Area Calculator</a> &ndash; area of common shapes</li><li><a href="circle-calculator.html">Circle Calculator</a> &ndash; radius, diameter and area</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Why does switching categories reset the units?</h3>
-        <p>Each category has its own set of compatible units &mdash; length and weight, for example, can't be converted into each other, so the "From" and "To" lists update to match the category you pick.</p>
+        <p>Each category has its own compatible units. Length and weight, for example, cannot be converted into each other, so the From and To lists update to match the category you pick.</p>
       </div>
       <div class="faq-item">
         <h3>Can I convert between metric and imperial units?</h3>
-        <p>Yes &mdash; that's one of the most common uses of this calculator. Pick any "From" unit and any "To" unit within the same category, metric or imperial.</p>
+        <p>Yes. Pick any From unit and any To unit within the same category, metric or US customary.</p>
       </div>
+      <div class="faq-item">
+        <h3>How accurate are the conversions?</h3>
+        <p>The factors are the exact international definitions, such as 1 mile = 1,609.344 metres and 1 pound = 0.45359237 kilograms. The result is displayed to six decimal places.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I convert Celsius to Fahrenheit?</h3>
+        <p>Multiply by 9/5 and add 32. For example 20 degrees Celsius is 20 x 9/5 + 32 = 68 degrees Fahrenheit.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is the gallon in this calculator US or imperial?</h3>
+        <p>It is the US gallon (3.785 litres). The imperial gallon used in the UK is about 4.546 litres.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why do very large or small results use scientific notation?</h3>
+        <p>Numbers of a billion or more, or smaller than one millionth, are shown in scientific notation to keep the result readable.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.nist.gov/pml/special-publication-811" rel="noopener" target="_blank">NIST: Special Publication 811, Guide for the Use of the SI</a></p>
     </div>
 
   </div>
