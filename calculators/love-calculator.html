@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Love Calculator - CalcBundle</title>
-<meta name="description" content="A just-for-fun love compatibility score based on two names. For entertainment only!">
+<title>Love Calculator: A Just-for-Fun Names Score</title>
+<meta name="description" content="Enter two names for a just-for-fun love compatibility score. See how the percentage is made, what each message means and why it is for entertainment only.">
 <link rel="canonical" href="https://calcbundle.net/calculators/love-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Love Calculator - CalcBundle">
-<meta property="og:description" content="A just-for-fun love compatibility score based on two names. For entertainment only!">
+<meta property="og:title" content="Love Calculator: A Just-for-Fun Names Score">
+<meta property="og:description" content="Enter two names for a just-for-fun love compatibility score. See how the percentage is made, what each message means and why it is for entertainment only.">
 <meta property="og:url" content="https://calcbundle.net/calculators/love-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Love Calculator - CalcBundle">
-<meta name="twitter:description" content="A just-for-fun love compatibility score based on two names. For entertainment only!">
+<meta name="twitter:title" content="Love Calculator: A Just-for-Fun Names Score">
+<meta name="twitter:description" content="Enter two names for a just-for-fun love compatibility score. See how the percentage is made, what each message means and why it is for entertainment only.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -38,18 +38,50 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Does the order I enter the names matter?",
+      "name": "Is the love calculator accurate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No — \"Alex & Jordan\" and \"Jordan & Alex\" always produce the same score."
+        "text": "No. It is for entertainment only. The score comes from a simple formula applied to the letters of the two names, with no science behind it."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I get a different score for the same two names?",
+      "name": "Why does the same pair of names always give the same score?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No — the result is deterministic, so re-calculating with identical names (and capitalization/spacing ignored) always gives the same percentage."
+        "text": "The formula has no randomness. It combines the two names the same way every time, so identical input gives an identical result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the order of the names matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The two names are sorted alphabetically before the formula is applied, so swapping them gives the same score."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does capitalisation matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Names are converted to lowercase and trimmed before the score is worked out."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does one extra letter change the score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every character is part of the formula, so any change to a name produces a different number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a high score mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nothing about a real relationship. Real compatibility comes from shared values, communication, respect and time spent together."
       }
     }
   ]
@@ -112,36 +144,59 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Just for fun</h2>
-      <p>This calculator turns the two names you enter into a percentage using a deterministic formula &mdash; the same pair of names always gives the same score, and swapping the order doesn't change the result. It isn't based on any real measure of compatibility; treat it the same way you would a fortune cookie.</p>
-
-      <h2>How the score is generated</h2>
-      <p>Both names are combined and run through a simple hashing function that turns text into a number between 0 and 100. There's no astrology, numerology, or actual relationship science involved &mdash; it's purely a novelty calculation.</p>
-      <div class="callout">For real relationship insight, a conversation with the actual person will always beat a random number generator.</div>
-
-      <!--seo-extra-->
-      <h2>How to use it</h2>
-      <p>Type two names and the page returns a compatibility score with a short message. The same pair of names always gives the same answer, and swapping the order makes no difference, so there is no point in trying again for a better number. A score of 80%, for example, comes with the message that the chemistry is there, while a score under 50 gets a friendlier note that it could go either way.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A novelty percentage from two names, with no science behind it. Alex and Jordan score 80%. The same pair always gets the same score, and the order of the names does not matter.</div>
+      <h2>Just for fun</h2>
+      <p>This calculator turns two names into a percentage. It is a novelty: the score comes from a simple formula, not from astrology, numerology or any real measure of compatibility. Treat it the way you would a fortune cookie, and use it as a party game or a conversation starter.</p>
+      <h2>Worked example with the default names</h2>
+      <p>The page opens on <strong>Alex</strong> and <strong>Jordan</strong>. The score is <strong>80%</strong>, with the message &ldquo;A strong match &mdash; the chemistry is there.&rdquo; The calculator lowercases both names, trims the spaces at the ends, puts them in alphabetical order and joins them with a bar, giving &ldquo;alex|jordan&rdquo;.</p>
+      <h2>How the score is made</h2>
+      <ul><li>Each name is lowercased and trimmed, so &ldquo;ALEX&rdquo; and &ldquo; alex &rdquo; are the same.</li><li>The two names are sorted alphabetically and joined as <em>first|second</em>. Sorting is why the order you type them in makes no difference.</li><li>The letters are run through a simple hashing formula: start at 0, and for each character multiply the running total by 31 and add the character&rsquo;s code, keeping only the last 32 bits.</li><li>The final number is divided by 101 and the remainder, from 0 to 100, is the score.</li></ul>
+      <p>For &ldquo;alex|jordan&rdquo; the running total ends at 82,326,594, and 82,326,594 mod 101 = <strong>80</strong>.</p>
+      <h2>What the scores mean</h2>
+      <div class="calc-table"><table><thead><tr><th>Score</th><th>Message</th></tr></thead><tbody><tr><td>90 to 100</td><td>It&rsquo;s practically written in the stars.</td></tr><tr><td>75 to 89</td><td>A strong match &mdash; the chemistry is there.</td></tr><tr><td>50 to 74</td><td>A solid connection, with room to grow.</td></tr><tr><td>25 to 49</td><td>Could go either way &mdash; friendship first, maybe?</td></tr><tr><td>0 to 24</td><td>The stars aren&rsquo;t exactly aligned on this one.</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">How many of the 101 possible scores fall in each message band</title><desc id="cf1-d">The top message is the rarest: 11 of 101 scores (about 11%) are 90 or higher, while each of the three lower bands holds 25 of 101.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">How many of the 101 possible scores fall in each message band</text><text x="102" y="60" text-anchor="end" font-size="13" fill="#6b7280">90 to 100</text><rect class="bar" x="110" y="44" width="139.9" height="22" rx="4" fill="#2563eb"/><text x="257.9" y="60" font-size="13" font-weight="700" fill="#111827">11 scores</text><text x="102" y="94" text-anchor="end" font-size="13" fill="#6b7280">75 to 89</text><rect class="bar" x="110" y="78" width="190.8" height="22" rx="4" fill="#2563eb"/><text x="308.8" y="94" font-size="13" font-weight="700" fill="#111827">15 scores</text><text x="102" y="128" text-anchor="end" font-size="13" fill="#6b7280">50 to 74</text><rect class="bar" x="110" y="112" width="318.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="128" font-size="13" font-weight="700" fill="#111827">25 scores</text><text x="102" y="162" text-anchor="end" font-size="13" fill="#6b7280">25 to 49</text><rect class="bar" x="110" y="146" width="318.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">25 scores</text><text x="102" y="196" text-anchor="end" font-size="13" fill="#6b7280">0 to 24</text><rect class="bar" x="110" y="180" width="318.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">25 scores</text></svg><figcaption>The highest message is the least common one.</figcaption></figure>
+      <h2>Example pairs</h2>
+      <div class="calc-table"><table><thead><tr><th>Names</th><th>Score</th><th>Message</th></tr></thead><tbody><tr><td>Romeo &amp; Juliet</td><td>2%</td><td>The stars aren&rsquo;t exactly aligned on this one.</td></tr><tr><td>Tom &amp; Jerry</td><td>52%</td><td>A solid connection, with room to grow.</td></tr><tr><td>Sam &amp; Alex</td><td>71%</td><td>A solid connection, with room to grow.</td></tr><tr><td>Ana &amp; Ben</td><td>92%</td><td>It&rsquo;s practically written in the stars.</td></tr><tr><td>Maya &amp; Leo</td><td>23%</td><td>The stars aren&rsquo;t exactly aligned on this one.</td></tr><tr><td>Zoe &amp; Max</td><td>67%</td><td>A solid connection, with room to grow.</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 250" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Scores for six example pairs of names</title><desc id="cf2-d">Scores jump around with no pattern: names that look alike or that are famous couples have no advantage.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Scores for six example pairs of names</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">Romeo &amp; Juliet</text><rect class="bar" x="130" y="44" width="6.5" height="22" rx="4" fill="#9ca3af"/><text x="144.5" y="60" font-size="13" font-weight="700" fill="#111827">2%</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">Tom &amp; Jerry</text><rect class="bar" x="130" y="78" width="168.4" height="22" rx="4" fill="#2563eb"/><text x="306.4" y="94" font-size="13" font-weight="700" fill="#111827">52%</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">Sam &amp; Alex</text><rect class="bar" x="130" y="112" width="230.0" height="22" rx="4" fill="#2563eb"/><text x="368.0" y="128" font-size="13" font-weight="700" fill="#111827">71%</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">Ana &amp; Ben</text><rect class="bar" x="130" y="146" width="298.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">92%</text><text x="122" y="196" text-anchor="end" font-size="13" fill="#6b7280">Maya &amp; Leo</text><rect class="bar" x="130" y="180" width="74.5" height="22" rx="4" fill="#9ca3af"/><text x="212.5" y="196" font-size="13" font-weight="700" fill="#111827">23%</text><text x="122" y="230" text-anchor="end" font-size="13" fill="#6b7280">Zoe &amp; Max</text><rect class="bar" x="130" y="214" width="217.0" height="22" rx="4" fill="#2563eb"/><text x="355.0" y="230" font-size="13" font-weight="700" fill="#111827">67%</text></svg><figcaption>There is no pattern behind the numbers.</figcaption></figure>
+      <h2>Why trying again does not help</h2>
+      <p>The same pair of names always gives the same score, and swapping the order changes nothing, so there is no point in retyping for a better number. Changing a single letter does change the score, because every character feeds the formula: Alex and Jordan give 80%, Alexa and Jordan give 67%, and Alex and Jordann give 65%. That shows how arbitrary the result is.</p>
       <h2>Please keep it light</h2>
-      <p>This calculator is for entertainment only. The score comes from running the letters of the names through a simple hashing formula, with no science or psychology behind it, and it says nothing real about any relationship. Real compatibility comes from shared values, communication, respect and time spent together. Share it with friends, use it as a party game, and do not make any decisions based on the number.</p>
-
-      <h2>Common uses</h2>
-      <p>People try it with friends, with classmates, with celebrity names and with pets, and it works as an easy icebreaker at parties.</p>
-
-      <p><strong>You might also need:</strong> <a href="random-number-generator.html">Random Number Generator</a>, <a href="password-generator.html">Password Generator</a>, <a href="dice-roller.html">Dice Roller</a>.</p>
-
-      <!--/seo-extra-->
+      <p>The score says nothing real about any relationship. Real compatibility comes from shared values, communication, respect and time spent together. Share the page with friends, but do not base any decision on the number. A conversation with the actual person is worth more than any formula.</p>
+      <h2>Common questions about the score</h2>
+      <ul><li><strong>Does it use birthdays or zodiac signs?</strong> No, only the two names you type.</li><li><strong>Does a nickname change the result?</strong> Yes. Any change in the letters changes the score.</li><li><strong>Does it work with any language?</strong> It works with any letters, though the value depends on the character codes.</li><li><strong>Is my data stored?</strong> The page works in your browser with the names you type, and it does not need an account.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large percentage is the score, shown under the two names you entered. The line below it is the message for that band. The result updates when you press the button.</p>
+      <div class="callout">This calculator is for entertainment only. It has no science or psychology behind it.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="dice-roller.html">Dice Roller</a> &ndash; roll one or more dice</li><li><a href="random-number-generator.html">Random Number Generator</a> &ndash; pick random numbers</li><li><a href="age-calculator.html">Age Calculator</a> &ndash; age in years, months and days</li><li><a href="day-of-the-week-calculator.html">Day of the Week Calculator</a> &ndash; the weekday of any date</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
-        <h3>Does the order I enter the names matter?</h3>
-        <p>No &mdash; "Alex &amp; Jordan" and "Jordan &amp; Alex" always produce the same score.</p>
+        <h3>Is the love calculator accurate?</h3>
+        <p>No. It is for entertainment only. The score comes from a simple formula applied to the letters of the two names, with no science behind it.</p>
       </div>
       <div class="faq-item">
-        <h3>Can I get a different score for the same two names?</h3>
-        <p>No &mdash; the result is deterministic, so re-calculating with identical names (and capitalization/spacing ignored) always gives the same percentage.</p>
+        <h3>Why does the same pair of names always give the same score?</h3>
+        <p>The formula has no randomness. It combines the two names the same way every time, so identical input gives an identical result.</p>
       </div>
+      <div class="faq-item">
+        <h3>Does the order of the names matter?</h3>
+        <p>No. The two names are sorted alphabetically before the formula is applied, so swapping them gives the same score.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does capitalisation matter?</h3>
+        <p>No. Names are converted to lowercase and trimmed before the score is worked out.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Why does one extra letter change the score?</h3>
+        <p>Every character is part of the formula, so any change to a name produces a different number.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does a high score mean?</h3>
+        <p>Nothing about a real relationship. Real compatibility comes from shared values, communication, respect and time spent together.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Hash_function" rel="noopener" target="_blank">Wikipedia: Hash function</a>; <a href="https://en.wikipedia.org/wiki/Modulo_operation" rel="noopener" target="_blank">Wikipedia: Modulo operation</a></p>
     </div>
 
   </div>

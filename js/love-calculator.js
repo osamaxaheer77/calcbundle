@@ -22,6 +22,7 @@
     return "The stars aren't exactly aligned on this one.";
   }
 
+  const esc = (t) => t.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   function calculate() {
     const name1 = el('love-name1').value.trim();
     const name2 = el('love-name2').value.trim();
@@ -36,7 +37,7 @@
 
     resultEl.innerHTML = `
       <div class="summary-payment-box">
-        <div class="label">${name1} &amp; ${name2}</div>
+        <div class="label">${esc(name1)} &amp; ${esc(name2)}</div>
         <div class="value">${score}%</div>
       </div>
       <div class="stat-row"><span></span><strong>${messageFor(score)}</strong></div>
