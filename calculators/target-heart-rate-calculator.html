@@ -13,19 +13,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Target Heart Rate Calculator: Exercise Zones | CalcBundle</title>
-<meta name="description" content="Estimate workout heart-rate zones using age, estimated or measured maximum heart rate and resting pulse.">
+<meta name="description" content="Find your exercise heart rate zones from age or a tested maximum and your resting pulse, using the Karvonen method, percent of max or effort scales.">
 <link rel="canonical" href="https://calcbundle.net/calculators/target-heart-rate-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
 <meta property="og:title" content="Target Heart Rate Calculator: Exercise Zones | CalcBundle">
-<meta property="og:description" content="Estimate workout heart-rate zones using age, estimated or measured maximum heart rate and resting pulse.">
+<meta property="og:description" content="Find your exercise heart rate zones from age or a tested maximum and your resting pulse, using the Karvonen method, percent of max or effort scales.">
 <meta property="og:url" content="https://calcbundle.net/calculators/target-heart-rate-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-fitness.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Target Heart Rate Calculator: Exercise Zones | CalcBundle">
-<meta name="twitter:description" content="Estimate workout heart-rate zones using age, estimated or measured maximum heart rate and resting pulse.">
+<meta name="twitter:description" content="Find your exercise heart rate zones from age or a tested maximum and your resting pulse, using the Karvonen method, percent of max or effort scales.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-fitness.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,39 +42,47 @@
       "name": "How do I calculate my target heart rate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Estimate your maximum heart rate, such as 220 minus your age. Then take the percentages of the maximum that fit your goal, for example 50% to 85% for aerobic exercise. With a resting heart rate, use the Karvonen method for a more personal result."
+        "text": "Estimate your maximum heart rate, such as 220 minus your age. Then take percentages of the maximum, or use the Karvonen method, which uses your heart rate reserve (maximum minus resting) and adds your resting rate back."
       }
     },
     {
       "@type": "Question",
-      "name": "What is the Karvonen formula?",
+      "name": "Which maximum heart rate formula is the best?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Target heart rate equals the heart rate reserve times the intensity, plus the resting heart rate. The reserve is the maximum heart rate minus the resting heart rate."
+        "text": "None is exact. Haskell and Fox is the simplest. Tanaka and Nes were fitted to larger groups and can suit some ages better, especially older adults. A supervised test is the only way to know your true maximum."
       }
     },
     {
       "@type": "Question",
-      "name": "What is a good resting heart rate?",
+      "name": "Why does the Karvonen method give different numbers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most adults have a resting heart rate between 60 and 100 beats per minute. Fitter people often have lower rates, and a measurement taken after waking is the most reliable."
+        "text": "It includes your resting heart rate, so fitter people with a lower resting rate get a different zone from people with a higher one, even at the same age and maximum."
       }
     },
     {
       "@type": "Question",
-      "name": "Which maximum heart rate formula is best?",
+      "name": "How do I measure my resting heart rate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "None is exact. Haskell and Fox is the simplest, and Tanaka and Nes were fitted to larger studies. A tested maximum is more reliable than any formula."
+        "text": "Count your pulse for a full minute lying down shortly after waking, before getting up or having caffeine. Take it on a few days and use the average."
       }
     },
     {
       "@type": "Question",
-      "name": "What is the difference between the Borg scale and CR10?",
+      "name": "What intensity is best for fat loss?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Both rate how hard exercise feels. The Borg scale runs from 6 to 20 and was designed to line up with heart rate, while the CR10 scale runs from 0 to 10 and is easier to use."
+        "text": "Light to moderate zones are often used for steady cardio, but total energy burned and consistency matter more than the exact zone. Harder sessions burn more per minute."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do medicines change my target?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some do. Beta blockers and certain other drugs lower heart rate, so zones from a formula may not apply. Ask a doctor for advice."
       }
     }
   ]
@@ -164,43 +172,65 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">Heart rate terms</h2>
-      <p>Maximum heart rate is the highest number of beats per minute your heart can reach during hard exercise. Resting heart rate is your pulse when you are calm, ideally measured on waking. Heart rate reserve is the gap between the two. The best way to find your maximum is a supervised stress test, so most people estimate it from age. The common Haskell and Fox rule is 220 minus your age, while the Tanaka and Nes formulas were fitted to larger groups and can suit some ages better.</p>
-
-      <h2>The Karvonen method</h2>
-      <p>Zones based on a percentage of the maximum alone ignore how fit you are. The Karvonen method adds your resting heart rate: it takes a percentage of your heart rate reserve and adds the resting rate back. For a maximum of 190 and a resting rate of 70, the reserve is 120, so 70% of the reserve is 84 and the target is 154 beats per minute. Moderate aerobic exercise is usually placed at 50% to 85% of the reserve, and training zones are given in steps of 10%.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Your maximum heart rate is often estimated as 220 minus your age. A 30-year-old with a resting rate of 70 has a maximum of 190 and a heart rate reserve of 120, so the Karvonen target for 70% intensity is 154 bpm, and general aerobic exercise falls between 130 and 172 bpm.</div>
+      <h2>Heart rate terms</h2>
+      <ul><li><strong>Maximum heart rate (MHR):</strong> the highest rate your heart reaches during all-out exercise.</li><li><strong>Resting heart rate (RHR):</strong> your pulse when calm, best measured on waking.</li><li><strong>Heart rate reserve (HRR):</strong> maximum minus resting. It is the &ldquo;range&rdquo; you can use for exercise.</li></ul>
+      <p>The best way to find your true maximum is a supervised stress test. Most people estimate it from age instead.</p>
+      <h2>Three formulas for maximum heart rate</h2>
+      <ul><li><strong>Haskell and Fox:</strong> 220 &minus; age. Simple and widely used, but it was never meant to be exact.</li><li><strong>Tanaka:</strong> 208 &minus; 0.7 &times; age. Fitted to a larger group of adults, and often better at older ages.</li><li><strong>Nes:</strong> 211 &minus; 0.64 &times; age. Another large-sample formula that gives results close to Tanaka.</li></ul>
+      <div class="calc-table"><table><thead><tr><th>Age</th><th>Haskell and Fox</th><th>Tanaka</th><th>Nes</th></tr></thead><tbody><tr><td>20</td><td>200</td><td>194</td><td>198</td></tr><tr><td>30</td><td>190</td><td>187</td><td>192</td></tr><tr><td>40</td><td>180</td><td>180</td><td>185</td></tr><tr><td>50</td><td>170</td><td>173</td><td>179</td></tr><tr><td>60</td><td>160</td><td>166</td><td>173</td></tr><tr><td>70</td><td>150</td><td>159</td><td>166</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Estimated maximum heart rate by age</title><desc id="cf2-d">The formulas are within about 6 beats of each other up to age 40 and drift apart at older ages: at 70 they give 150 (Haskell and Fox), 159 (Tanaka) and 166 (Nes).</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Estimated maximum heart rate by age</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">0</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">51</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">102</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">154</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">205</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">20</text><text x="147.6" y="194" text-anchor="middle" font-size="11" fill="#6b7280">30</text><text x="237.2" y="194" text-anchor="middle" font-size="11" fill="#6b7280">40</text><text x="326.8" y="194" text-anchor="middle" font-size="11" fill="#6b7280">50</text><text x="416.4" y="194" text-anchor="middle" font-size="11" fill="#6b7280">60</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">70</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Age</text><polyline class="draw" style="--len:451" points="58.0,53.1 67.0,53.7 75.9,54.3 84.9,54.9 93.8,55.5 102.8,56.1 111.8,56.8 120.7,57.4 129.7,58.0 138.6,58.6 147.6,59.2 156.6,59.8 165.5,60.4 174.5,61.1 183.4,61.7 192.4,62.3 201.4,62.9 210.3,63.5 219.3,64.1 228.2,64.8 237.2,65.4 246.2,66.0 255.1,66.6 264.1,67.2 273.0,67.8 282.0,68.4 291.0,69.1 299.9,69.7 308.9,70.3 317.8,70.9 326.8,71.5 335.8,72.1 344.7,72.7 353.7,73.4 362.6,74.0 371.6,74.6 380.6,75.2 389.5,75.8 398.5,76.4 407.4,77.0 416.4,77.7 425.4,78.3 434.3,78.9 443.3,79.5 452.2,80.1 461.2,80.7 470.2,81.3 479.1,82.0 488.1,82.6 497.0,83.2 506.0,83.8" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Haskell &amp; Fox</text><polyline class="draw" style="--len:450" points="58.0,56.8 67.0,57.2 75.9,57.6 84.9,58.1 93.8,58.5 102.8,58.9 111.8,59.3 120.7,59.8 129.7,60.2 138.6,60.6 147.6,61.1 156.6,61.5 165.5,61.9 174.5,62.4 183.4,62.8 192.4,63.2 201.4,63.6 210.3,64.1 219.3,64.5 228.2,64.9 237.2,65.4 246.2,65.8 255.1,66.2 264.1,66.7 273.0,67.1 282.0,67.5 291.0,67.9 299.9,68.4 308.9,68.8 317.8,69.2 326.8,69.7 335.8,70.1 344.7,70.5 353.7,71.0 362.6,71.4 371.6,71.8 380.6,72.2 389.5,72.7 398.5,73.1 407.4,73.5 416.4,74.0 425.4,74.4 434.3,74.8 443.3,75.3 452.2,75.7 461.2,76.1 470.2,76.6 479.1,77.0 488.1,77.4 497.0,77.8 506.0,78.3" fill="none" stroke="#10b981" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="228" y="34" width="12" height="4" rx="2" fill="#10b981"/><text x="246" y="40" font-size="11.5" fill="#374151">Tanaka</text><polyline class="draw" style="--len:450" points="58.0,54.2 67.0,54.6 75.9,55.0 84.9,55.4 93.8,55.8 102.8,56.1 111.8,56.5 120.7,56.9 129.7,57.3 138.6,57.7 147.6,58.1 156.6,58.5 165.5,58.9 174.5,59.3 183.4,59.7 192.4,60.1 201.4,60.5 210.3,60.9 219.3,61.3 228.2,61.7 237.2,62.0 246.2,62.4 255.1,62.8 264.1,63.2 273.0,63.6 282.0,64.0 291.0,64.4 299.9,64.8 308.9,65.2 317.8,65.6 326.8,66.0 335.8,66.4 344.7,66.8 353.7,67.2 362.6,67.6 371.6,67.9 380.6,68.3 389.5,68.7 398.5,69.1 407.4,69.5 416.4,69.9 425.4,70.3 434.3,70.7 443.3,71.1 452.2,71.5 461.2,71.9 470.2,72.3 479.1,72.7 488.1,73.1 497.0,73.5 506.0,73.8" fill="none" stroke="#f34469" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="398" y="34" width="12" height="4" rx="2" fill="#f34469"/><text x="416" y="40" font-size="11.5" fill="#374151">Nes</text></svg><figcaption>The formulas are averages. Your own maximum can differ by 10 or more beats per minute.</figcaption></figure>
+      <h2>Two ways to set zones</h2>
+      <p><strong>Percent of maximum</strong> multiplies the maximum by a percentage. <strong>The Karvonen method</strong> is more personal because it uses your resting rate: target = (maximum &minus; resting) &times; intensity + resting. Two people with the same age but different fitness get different targets.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>A 30-year-old using Haskell and Fox has a maximum of 220 &minus; 30 = <strong>190</strong> bpm. With a resting rate of 70, the reserve is 190 &minus; 70 = <strong>120</strong> bpm. For 70% intensity, the Karvonen target is 120 &times; 0.70 + 70 = <strong>154 bpm</strong>. The calculator&rsquo;s zones are:</p>
+      <div class="calc-table"><table><thead><tr><th>Zone</th><th>Reserve</th><th>Karvonen target (bpm)</th><th>% of max only (bpm)</th><th>Use</th></tr></thead><tbody><tr><td>Very light</td><td>50&ndash;60%</td><td>130&ndash;142</td><td>95&ndash;114</td><td>maintenance, warm-up</td></tr><tr><td>Light</td><td>60&ndash;70%</td><td>142&ndash;154</td><td>114&ndash;133</td><td>weight control, fat burning</td></tr><tr><td>Moderate</td><td>70&ndash;80%</td><td>154&ndash;166</td><td>133&ndash;152</td><td>aerobic, endurance training</td></tr><tr><td>Hard</td><td>80&ndash;90%</td><td>166&ndash;178</td><td>152&ndash;171</td><td>anaerobic, hard training</td></tr><tr><td>VO2 max</td><td>90&ndash;100%</td><td>178&ndash;190</td><td>171&ndash;190</td><td>maximum effort</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 134" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Heart rate zones for age 30 and a resting rate of 70</title><desc id="cf1-d">Zones run from 130 bpm (50% of heart rate reserve) to the maximum of 190. Moderate exercise sits between 154 and 166 bpm.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Heart rate zones for age 30 and a resting rate of 70</text><rect class="bar" x="14.0" y="62" width="98.4" height="26" fill="#60a5fa"/><text x="63.2" y="106" text-anchor="middle" font-size="11.5" fill="#374151">Very light</text><rect class="bar" x="112.4" y="62" width="98.4" height="26" fill="#10b981"/><text x="161.6" y="106" text-anchor="middle" font-size="11.5" fill="#374151">Light</text><rect class="bar" x="210.8" y="62" width="98.4" height="26" fill="#fbbf24"/><text x="260.0" y="106" text-anchor="middle" font-size="11.5" fill="#374151">Moderate</text><rect class="bar" x="309.2" y="62" width="98.4" height="26" fill="#f97316"/><text x="358.4" y="106" text-anchor="middle" font-size="11.5" fill="#374151">Hard</text><rect class="bar" x="407.6" y="62" width="98.4" height="26" fill="#ef4444"/><text x="456.8" y="106" text-anchor="middle" font-size="11.5" fill="#374151">VO2 max</text><path d="M210.8 58 l-7 -12 h14 z" fill="#111827"/><text x="210.8" y="40" text-anchor="middle" font-size="12" font-weight="700" fill="#111827">154 bpm = 70% of reserve</text></svg><figcaption>The wider the gap between resting and maximum heart rate, the more room there is between zones.</figcaption></figure>
+      <p>The result headline for general aerobic exercise (50% to 85% of reserve) is 130 to 172 bpm.</p>
+      <h2>Example: age 50 with a lower resting heart rate</h2>
+      <p>At 50, Haskell and Fox gives 170 bpm. A resting rate of 60 gives a reserve of 110, so the Karvonen target for 60% to 70% is 126 to 137 bpm. A fitter person with a lower resting rate gets a wider reserve and slightly higher targets than someone with a resting rate of 80, who would see 134 to 143 bpm for the same zone.</p>
       <h2>Perceived exertion scales</h2>
-      <p>You can also judge effort by how hard exercise feels. The Borg scale runs from 6, no effort, to 20, maximum effort, and the modified Borg CR10 scale from 0 to 10. When you enter a resting heart rate, the calculator matches each rating to a heart rate between your resting and maximum rates. Without a resting heart rate it falls back to simple zones as a share of your maximum heart rate.</p>
-      <div class="callout">Heart rate formulas give averages, and your own maximum can differ by 10 or more beats. Some medicines also change heart rate. If you have a heart condition or are new to exercise, ask a doctor before training at high intensity.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: reading the estimate</h2><p>At an illustrative maximum heart rate of 180 bpm, 70% of the maximum is 126 bpm. The actual target can differ by method and individual health factors.</p><h2>Related calculators</h2><p>For resting calorie estimates, see the <a href="bmr-calculator.html">BMR Calculator</a>. For workout energy estimates, use the <a href="calories-burned-calculator.html">Calories Burned Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="calories-burned-calculator.html">Calories Burned Calculator</a>, <a href="pace-calculator.html">Pace Calculator</a>, <a href="one-rep-max-calculator.html">One Rep Max Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p>You can also judge intensity by feel. The <strong>Borg scale</strong> runs from 6 (no effort) to 20 (maximal) and the <strong>CR10 scale</strong> from 0 to 10. When you enter a resting heart rate, the calculator matches each rating to a heart rate between your resting and maximum. Simple checks that work without a monitor:</p>
+      <ul><li><strong>Talk test:</strong> at moderate intensity you can talk but not sing. At vigorous intensity you can only say a few words.</li><li>On a 0 to 10 effort scale, moderate activity is about a 5 or 6 and vigorous activity a 7 or 8.</li></ul>
+      <h2>How much exercise to aim for</h2>
+      <p>Adult guidelines recommend at least 150 minutes a week of moderate aerobic activity, or 75 minutes of vigorous activity, or a mix. Use the zones to tell whether a workout is moderate or vigorous, and mix easy and hard sessions rather than training at the top of your range every day.</p>
+      <h2>Safety</h2>
+      <ul><li>Heart rate formulas give averages. Some medicines, including beta blockers, change heart rate, and so do heat, caffeine, stress and illness.</li><li>If you have a heart condition, symptoms such as chest pain or dizziness, or you are new to exercise, talk to a doctor before training at high intensity.</li><li>Stop and get help if you feel faint, have chest pain or severe breathlessness.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Treating 220 &minus; age as exact. It can be off by 10 to 20 beats.</li><li>Measuring the resting rate after coffee, a walk or a stressful morning. Measure it lying down on waking.</li><li>Using zones from a wrist device without checking that it tracks your pulse accurately.</li><li>Training in the hardest zone every day.</li></ul>
+      <h2>How to read your result</h2>
+      <p>Pick the zone that matches your goal and the effort you can sustain, and check it against how the exercise feels. If the numbers and your effort disagree, trust a tested maximum or the talk test over a formula.</p>
+      <div class="callout">This calculator gives estimates and is not medical advice. Ask a doctor before starting or changing an exercise programme, especially with a heart condition or medication.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="calories-burned-calculator.html">Calories Burned Calculator</a> &ndash; energy used in exercise</li><li><a href="bmr-calculator.html">BMR Calculator</a> &ndash; calories burned at rest</li><li><a href="pace-calculator.html">Pace Calculator</a> &ndash; running pace and finish times</li><li><a href="one-rep-max-calculator.html">One Rep Max Calculator</a> &ndash; estimate your strength max</li><li><a href="calorie-calculator.html">Calorie Calculator</a> &ndash; daily calorie needs</li><li><a href="tdee-calculator.html">TDEE Calculator</a> &ndash; total daily energy expenditure</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do I calculate my target heart rate?</h3>
-        <p>Estimate your maximum heart rate, such as 220 minus your age. Then take the percentages of the maximum that fit your goal, for example 50% to 85% for aerobic exercise. With a resting heart rate, use the Karvonen method for a more personal result.</p>
+        <p>Estimate your maximum heart rate, such as 220 minus your age. Then take percentages of the maximum, or use the Karvonen method, which uses your heart rate reserve (maximum minus resting) and adds your resting rate back.</p>
       </div>
       <div class="faq-item">
-        <h3>What is the Karvonen formula?</h3>
-        <p>Target heart rate equals the heart rate reserve times the intensity, plus the resting heart rate. The reserve is the maximum heart rate minus the resting heart rate.</p>
+        <h3>Which maximum heart rate formula is the best?</h3>
+        <p>None is exact. Haskell and Fox is the simplest. Tanaka and Nes were fitted to larger groups and can suit some ages better, especially older adults. A supervised test is the only way to know your true maximum.</p>
       </div>
       <div class="faq-item">
-        <h3>What is a good resting heart rate?</h3>
-        <p>Most adults have a resting heart rate between 60 and 100 beats per minute. Fitter people often have lower rates, and a measurement taken after waking is the most reliable.</p>
+        <h3>Why does the Karvonen method give different numbers?</h3>
+        <p>It includes your resting heart rate, so fitter people with a lower resting rate get a different zone from people with a higher one, even at the same age and maximum.</p>
       </div>
       <div class="faq-item">
-        <h3>Which maximum heart rate formula is best?</h3>
-        <p>None is exact. Haskell and Fox is the simplest, and Tanaka and Nes were fitted to larger studies. A tested maximum is more reliable than any formula.</p>
+        <h3>How do I measure my resting heart rate?</h3>
+        <p>Count your pulse for a full minute lying down shortly after waking, before getting up or having caffeine. Take it on a few days and use the average.</p>
       </div>
       <div class="faq-item">
-        <h3>What is the difference between the Borg scale and CR10?</h3>
-        <p>Both rate how hard exercise feels. The Borg scale runs from 6 to 20 and was designed to line up with heart rate, while the CR10 scale runs from 0 to 10 and is easier to use.</p>
+        <h3>What intensity is best for fat loss?</h3>
+        <p>Light to moderate zones are often used for steady cardio, but total energy burned and consistency matter more than the exact zone. Harder sessions burn more per minute.</p>
       </div>
+      <div class="faq-item">
+        <h3>Do medicines change my target?</h3>
+        <p>Some do. Beta blockers and certain other drugs lower heart rate, so zones from a formula may not apply. Ask a doctor for advice.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.cdc.gov/physical-activity-basics/measuring/index.html" rel="noopener" target="_blank">CDC: How to Measure Physical Activity Intensity</a></p>
     </div>
 
   </div>
