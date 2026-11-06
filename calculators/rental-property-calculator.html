@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rental Property Calculator: Cash Flow & Investment Return | CalcBundle</title>
-<meta name="description" content="Estimate rental property cash flow and returns with rent, operating expenses and financing assumptions.">
+<title>Rental Property Calculator: Cash Flow &amp; IRR</title>
+<meta name="description" content="Estimate rental property cash flow, cap rate, cash-on-cash return and IRR from rent, expenses and financing, year by year over your holding period.">
 <link rel="canonical" href="https://calcbundle.net/calculators/rental-property-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Rental Property Calculator: Cash Flow & Investment Return | CalcBundle">
-<meta property="og:description" content="Estimate rental property cash flow and returns with rent, operating expenses and financing assumptions.">
+<meta property="og:title" content="Rental Property Calculator: Cash Flow &amp; IRR">
+<meta property="og:description" content="Estimate rental property cash flow, cap rate, cash-on-cash return and IRR from rent, expenses and financing, year by year over your holding period.">
 <meta property="og:url" content="https://calcbundle.net/calculators/rental-property-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Rental Property Calculator: Cash Flow & Investment Return | CalcBundle">
-<meta name="twitter:description" content="Estimate rental property cash flow and returns with rent, operating expenses and financing assumptions.">
+<meta name="twitter:title" content="Rental Property Calculator: Cash Flow &amp; IRR">
+<meta name="twitter:description" content="Estimate rental property cash flow, cap rate, cash-on-cash return and IRR from rent, expenses and financing, year by year over your holding period.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -42,7 +42,7 @@
       "name": "What's a \"good\" cap rate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It varies heavily by market and property type — a stable, low-risk market often has lower cap rates, while a higher-risk or less liquid market demands a higher one to compensate. There's no universal target; what matters is comparing it against similar properties in the same area."
+        "text": "It varies heavily by market and property type. A stable, low-risk market often has lower cap rates, while a higher-risk or less liquid market demands a higher one. What matters is comparing against similar properties in the same area."
       }
     },
     {
@@ -50,7 +50,7 @@
       "name": "Why does cash-on-cash return look so much higher than the cap rate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Leverage. Financing most of the purchase with a loan means your cash investment is only a fraction of the property's price, so the same dollar of cash flow represents a much larger percentage return on that smaller amount of cash."
+        "text": "Leverage. Financing most of the purchase means your cash investment is a fraction of the price, so the same cash flow is a much larger percentage of that smaller amount of cash."
       }
     },
     {
@@ -58,7 +58,7 @@
       "name": "Does the management fee apply even if I self-manage?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Only if you choose to model one — leaving it at 0% assumes you're handling tenant management, maintenance coordination, and administration yourself rather than paying a property manager."
+        "text": "Only if you choose to model one. Leaving it at 0% assumes you handle tenants, maintenance and administration yourself."
       }
     },
     {
@@ -66,7 +66,23 @@
       "name": "What happens if I hold longer than the mortgage term?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Once the loan is paid off, the mortgage payment drops out of the cash flow calculation entirely — cash flow jumps because you're only covering operating expenses on a property you now own outright."
+        "text": "Once the loan is paid off, the mortgage payment drops out of the cash flow, so cash flow jumps because you only cover operating expenses on a property you own outright."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the IRR low or negative for a short holding period?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Selling costs and a large remaining loan balance can outweigh the equity and cash collected in the first years, so the return improves the longer you hold."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the calculator include taxes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It does not include income tax on rent, depreciation or tax on the gain at sale. See IRS Publication 527 and a tax professional."
       }
     }
   ]
@@ -234,40 +250,66 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">The three numbers that actually matter</h2>
-      <p>A rental property's performance boils down to three related but distinct measures. <strong>Cap rate</strong> asks how the property performs on its own, ignoring financing entirely — net operating income divided by purchase price. <strong>Cash-on-cash return</strong> asks how your actual cash is performing, dividing the cash that lands in your pocket by the cash you put in. <strong>IRR</strong> ties it all together — the annualized return across the entire holding period, including the lump sum you'd receive from eventually selling.</p>
-
-      <h2>Why NOI excludes the mortgage</h2>
-      <p>Net operating income deliberately leaves financing out of the picture. Two investors could buy the identical property — one with cash, one with a large loan — and NOI would be the same for both, because NOI measures how the property itself performs, not how any particular buyer chose to pay for it. That's what makes it useful for comparing different properties on equal footing, regardless of financing.</p>
-      <div class="callout">Cash flow, on the other hand, is what's left after the mortgage payment — which is why a property with a great cap rate can still have thin or negative cash flow if it's financed aggressively.</div>
-
-      <h2>Why the early years often show a negative or low return</h2>
-      <p>Selling a property costs money — typically several percent of the sale price in agent commissions and closing costs — and a mortgage balance shrinks slowly in its early years. Sell too soon after buying, and those selling costs plus the still-large loan balance can outweigh both the equity built and the cash collected so far, producing a negative early return that gradually improves the longer the property is held.</p>
-
-      <!--seo-extra-->
-<h2>Worked example: understanding the numbers</h2><p>A property earning $2,000 per month in rent with $700 in monthly operating costs produces $1,300 before financing, other taxes and capital expenses.</p><h2>Related calculators</h2><p>Compare property investment assumptions with the <a href="real-estate-calculator.html">Real Estate Calculator</a>. Estimate financing using the <a href="mortgage-calculator.html">Mortgage Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="rent-calculator.html">Rent Calculator</a>, <a href="debt-ratio-calculator.html">Debt-to-Income (DTI) Ratio Calculator</a>, <a href="heloc-calculator.html">HELOC Calculator</a>, <a href="mortgage-calculator.html">Mortgage Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/rent-vs-buy-how-to-compare.html">Rent vs Buy: How to Compare the True Costs</a>.</p>
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A rental's return comes from cash flow and from selling. The default $200,000 property with 20% down and $2,000 rent has a 8.05% cap rate, a year-1 cash flow of $4,589, and a 18.42% IRR over 20 years.</div>
+      <h2>The three numbers that actually matter</h2>
+      <ul><li><strong>Cap rate</strong> = net operating income &divide; purchase price. It shows how the property performs on its own, ignoring financing.</li><li><strong>Cash-on-cash return</strong> = cash flow &divide; cash you put in. It shows how your actual cash performs.</li><li><strong>IRR</strong> is the yearly return across the whole holding period, including the money you get when you sell.</li></ul>
+      <h2>Worked example with the default numbers</h2>
+      <p>A $200,000 property bought with 20% down ($40,000), a 6% 30-year mortgage, $6,000 of closing costs, rent of $2,000 a month rising 3% a year, 5% vacancy, property tax $3,000, insurance $1,200, maintenance $2,000 and other costs $500 (each rising 3% a year), held for 20 years and sold with 3% yearly appreciation and 8% selling costs. Your cash in is <strong>$46,000</strong>.</p>
+      <p><strong>Year 1.</strong> Rent $24,000 less 5% vacancy ($1,200) is $22,800. Operating expenses are $6,700, so net operating income (NOI) is <strong>$16,100</strong> and the <strong>cap rate is 8.05%</strong>. The mortgage payment is $959.28 a month ($11,511 a year), so cash flow is <strong>$4,589</strong>, a first-year cash-on-cash return of <strong>9.98%</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where year 1 rent goes on the default property (gross rent $24,000)</title><desc id="cf1-d">Of $24,000 of rent, $4,589 is left as cash flow after vacancy, expenses and the mortgage.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where year 1 rent goes on the default property (gross rent $24,000)</text><rect class="bar" x="14.0" y="42" width="24.6" height="30" fill="#9ca3af"/><rect class="bar" x="38.6" y="42" width="137.3" height="30" fill="#f59e0b"/><text x="107.3" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">28%</text><rect class="bar" x="175.9" y="42" width="236.0" height="30" fill="#2563eb"/><text x="293.9" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">48%</text><rect class="bar" x="411.9" y="42" width="94.1" height="30" fill="#10b981"/><text x="459.0" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">19%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#9ca3af"/><text x="32" y="98" font-size="12.5" fill="#374151">Vacancy: <tspan font-weight="700">$1,200</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#f59e0b"/><text x="282" y="98" font-size="12.5" fill="#374151">Operating expenses: <tspan font-weight="700">$6,700</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="120" font-size="12.5" fill="#374151">Mortgage payments: <tspan font-weight="700">$11,511</tspan></text><rect x="264" y="110" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="120" font-size="12.5" fill="#374151">Cash flow: <tspan font-weight="700">$4,589</tspan></text></svg><figcaption>Vacancy, costs and the mortgage take most of the rent.</figcaption></figure>
+      <p><strong>Over 20 years.</strong> Total rental income is $612,645, mortgage payments $230,227, operating expenses $180,032 and total NOI $432,613. When sold after 20 years you receive $245,919 after selling costs and the remaining loan. Total profit is <strong>$402,304</strong> and the <strong>IRR is 18.42% a year</strong>.</p>
+      <div class="calc-table"><table><thead><tr><th>Year</th><th>Income</th><th>Mortgage</th><th>Expenses</th><th>Cash flow</th><th>Equity</th><th>Cash if sold</th></tr></thead><tbody><tr><td>1</td><td>$22,800</td><td>$11,511</td><td>$6,700</td><td>$4,589</td><td>$47,965</td><td>$31,485</td></tr><tr><td>2</td><td>$23,484</td><td>$11,511</td><td>$6,901</td><td>$5,072</td><td>$56,231</td><td>$39,256</td></tr><tr><td>5</td><td>$25,662</td><td>$11,511</td><td>$7,541</td><td>$6,609</td><td>$82,968</td><td>$64,419</td></tr><tr><td>10</td><td>$29,749</td><td>$11,511</td><td>$8,742</td><td>$9,495</td><td>$134,886</td><td>$113,383</td></tr><tr><td>15</td><td>$34,487</td><td>$11,511</td><td>$10,134</td><td>$12,841</td><td>$197,915</td><td>$172,988</td></tr><tr><td>20</td><td>$39,980</td><td>$11,511</td><td>$11,748</td><td>$16,720</td><td>$274,817</td><td>$245,919</td></tr></tbody></table></div>
+      <h2>Why NOI leaves out the mortgage</h2>
+      <p>Net operating income deliberately ignores financing. Two investors could buy the identical property, one with cash and one with a big loan, and NOI would be the same for both. That makes it a fair way to compare properties. Cash flow is what is left after the mortgage, which is why a property with a great cap rate can still have thin or negative cash flow if it is financed aggressively.</p>
+      <h2>Why early years can show a poor return</h2>
+      <p>Selling costs several percent of the price and the mortgage balance shrinks slowly at first. Sell soon after buying and those costs plus the large balance can outweigh the equity and cash collected, giving a low or negative return that improves the longer you hold.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">IRR by years held before selling (default property)</title><desc id="cf2-d">Selling after 1 year gives -21.6% because of selling costs; holding 20 years gives 18.4% a year.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">IRR by years held before selling (default property)</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">1 year</text><rect class="bar" x="90" y="44" width="2.0" height="22" rx="4" fill="#dc2626"/><text x="100.0" y="60" font-size="13" font-weight="700" fill="#111827">-21.6%</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">3 years</text><rect class="bar" x="90" y="78" width="206.8" height="22" rx="4" fill="#10b981"/><text x="304.8" y="94" font-size="13" font-weight="700" fill="#111827">11.8%</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">5 years</text><rect class="bar" x="90" y="112" width="305.4" height="22" rx="4" fill="#10b981"/><text x="403.4" y="128" font-size="13" font-weight="700" fill="#111827">17.4%</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">10 years</text><rect class="bar" x="90" y="146" width="338.0" height="22" rx="4" fill="#10b981"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">19.3%</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">20 years</text><rect class="bar" x="90" y="180" width="322.4" height="22" rx="4" fill="#10b981"/><text x="420.4" y="196" font-size="13" font-weight="700" fill="#111827">18.4%</text></svg><figcaption>Time heals selling costs.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Years held</th><th>IRR</th></tr></thead><tbody><tr><td>1</td><td>-21.58%</td></tr><tr><td>3</td><td>11.81%</td></tr><tr><td>5</td><td>17.45%</td></tr><tr><td>10</td><td>19.31%</td></tr><tr><td>20</td><td>18.42%</td></tr></tbody></table></div>
+      <h2>Leverage: cash versus a mortgage</h2>
+      <p>With a loan, your cash investment is only a fraction of the price, so the same cash flow is a much larger percentage of your money. The cost is risk: the mortgage must be paid even if the rent stops.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">IRR over 20 years by how the purchase is financed</title><desc id="cf3-d">Using a mortgage raises the return on your own cash, from 10.6% with no loan to 18.4% with 20% down, and adds risk.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">IRR over 20 years by how the purchase is financed</text><text x="132" y="60" text-anchor="end" font-size="13" fill="#6b7280">No loan (cash)</text><rect class="bar" x="140" y="44" width="130.6" height="22" rx="4" fill="#9ca3af"/><text x="278.6" y="60" font-size="13" font-weight="700" fill="#111827">10.6%</text><text x="132" y="94" text-anchor="end" font-size="13" fill="#6b7280">50% down</text><rect class="bar" x="140" y="78" width="165.0" height="22" rx="4" fill="#9ca3af"/><text x="313.0" y="94" font-size="13" font-weight="700" fill="#111827">13.3%</text><text x="132" y="128" text-anchor="end" font-size="13" fill="#6b7280">20% down (default)</text><rect class="bar" x="140" y="112" width="227.8" height="22" rx="4" fill="#2563eb"/><text x="375.8" y="128" font-size="13" font-weight="700" fill="#111827">18.4%</text><text x="132" y="162" text-anchor="end" font-size="13" fill="#6b7280">10% down</text><rect class="bar" x="140" y="146" width="288.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">23.3%</text></svg><figcaption>Leverage raises the return on your cash and the risk.</figcaption></figure>
+      <h2>Vacancy, management and interest rates</h2>
+      <p>Vacancy matters: at 0% vacancy year 1 cash flow is $5,789 and at 12% it is $2,909. A property manager charging 8% of rent would cut year 1 cash flow to $2,765. Higher mortgage rates also reduce cash flow:</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">Year 1 cash flow by mortgage rate</title><desc id="cf4-d">Each point on the mortgage rate changes year 1 cash flow by about $1,230.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Year 1 cash flow by mortgage rate</text><text x="52" y="60" text-anchor="end" font-size="13" fill="#6b7280">4%</text><rect class="bar" x="60" y="44" width="368.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$6,934</text><text x="52" y="94" text-anchor="end" font-size="13" fill="#6b7280">5%</text><rect class="bar" x="60" y="78" width="307.5" height="22" rx="4" fill="#9ca3af"/><text x="375.5" y="94" font-size="13" font-weight="700" fill="#111827">$5,793</text><text x="52" y="128" text-anchor="end" font-size="13" fill="#6b7280">6%</text><rect class="bar" x="60" y="112" width="243.5" height="22" rx="4" fill="#2563eb"/><text x="311.5" y="128" font-size="13" font-weight="700" fill="#111827">$4,589</text><text x="52" y="162" text-anchor="end" font-size="13" fill="#6b7280">7%</text><rect class="bar" x="60" y="146" width="176.5" height="22" rx="4" fill="#9ca3af"/><text x="244.5" y="162" font-size="13" font-weight="700" fill="#111827">$3,326</text><text x="52" y="196" text-anchor="end" font-size="13" fill="#6b7280">8%</text><rect class="bar" x="60" y="180" width="106.8" height="22" rx="4" fill="#9ca3af"/><text x="174.8" y="196" font-size="13" font-weight="700" fill="#111827">$2,012</text></svg><figcaption>A one-point rate change is worth a few hundred dollars a year here.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Vacancy rate</th><th>Year 1 cash flow</th><th>Cap rate</th></tr></thead><tbody><tr><td>0%</td><td>$5,789</td><td>8.65%</td></tr><tr><td>5%</td><td>$4,589</td><td>8.05%</td></tr><tr><td>8%</td><td>$3,869</td><td>7.69%</td></tr><tr><td>12%</td><td>$2,909</td><td>7.21%</td></tr></tbody></table></div>
+      <h2>What the calculator leaves out</h2>
+      <ul><li>Income tax on rent and on the gain when you sell, and depreciation. The IRS explains rental income and expenses in Publication 527.</li><li>Capital expenses such as a new roof, which maintenance estimates may not cover.</li><li>Changes in the interest rate on an adjustable loan.</li><li>The time and effort of being a landlord.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Using an optimistic rent and zero vacancy.</li><li>Leaving out maintenance, insurance and property tax increases.</li><li>Ignoring selling costs when judging a short hold.</li><li>Comparing cap rates across very different markets.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the IRR over your holding period. Below it are total profit, cash-on-cash return, the year-1 cap rate, totals for income, mortgage and expenses, a first-year income table and a year-by-year breakdown. Change one assumption at a time and watch which one moves the IRR most.</p>
+      <div class="callout">This calculator gives illustrations based on your assumptions. It is not tax, legal or investment advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="real-estate-calculator.html">Real Estate Calculator</a> &ndash; all the property tools</li><li><a href="mortgage-calculator.html">Mortgage Calculator</a> &ndash; the loan payment</li><li><a href="irr-calculator.html">IRR Calculator</a> &ndash; the return of any cash flows</li><li><a href="rent-vs-buy-calculator.html">Rent vs. Buy Calculator</a> &ndash; compare renting and buying</li><li><a href="refinance-calculator.html">Refinance Calculator</a> &ndash; replace your loan</li><li><a href="average-return-calculator.html">Average Return Calculator</a> &ndash; returns across periods</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/rent-vs-buy-how-to-compare.html">Rent vs Buy: How to Compare the True Costs</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What's a "good" cap rate?</h3>
-        <p>It varies heavily by market and property type — a stable, low-risk market often has lower cap rates, while a higher-risk or less liquid market demands a higher one to compensate. There's no universal target; what matters is comparing it against similar properties in the same area.</p>
+        <p>It varies heavily by market and property type. A stable, low-risk market often has lower cap rates, while a higher-risk or less liquid market demands a higher one. What matters is comparing against similar properties in the same area.</p>
       </div>
       <div class="faq-item">
         <h3>Why does cash-on-cash return look so much higher than the cap rate?</h3>
-        <p>Leverage. Financing most of the purchase with a loan means your cash investment is only a fraction of the property's price, so the same dollar of cash flow represents a much larger percentage return on that smaller amount of cash.</p>
+        <p>Leverage. Financing most of the purchase means your cash investment is a fraction of the price, so the same cash flow is a much larger percentage of that smaller amount of cash.</p>
       </div>
       <div class="faq-item">
         <h3>Does the management fee apply even if I self-manage?</h3>
-        <p>Only if you choose to model one — leaving it at 0% assumes you're handling tenant management, maintenance coordination, and administration yourself rather than paying a property manager.</p>
+        <p>Only if you choose to model one. Leaving it at 0% assumes you handle tenants, maintenance and administration yourself.</p>
       </div>
       <div class="faq-item">
         <h3>What happens if I hold longer than the mortgage term?</h3>
-        <p>Once the loan is paid off, the mortgage payment drops out of the cash flow calculation entirely — cash flow jumps because you're only covering operating expenses on a property you now own outright.</p>
+        <p>Once the loan is paid off, the mortgage payment drops out of the cash flow, so cash flow jumps because you only cover operating expenses on a property you own outright.</p>
       </div>
+      <div class="faq-item">
+        <h3>Why is the IRR low or negative for a short holding period?</h3>
+        <p>Selling costs and a large remaining loan balance can outweigh the equity and cash collected in the first years, so the return improves the longer you hold.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does the calculator include taxes?</h3>
+        <p>No. It does not include income tax on rent, depreciation or tax on the gain at sale. See IRS Publication 527 and a tax professional.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.irs.gov/publications/p527" rel="noopener" target="_blank">IRS: Publication 527, Residential Rental Property</a>; <a href="https://www.irs.gov/taxtopics/tc414" rel="noopener" target="_blank">IRS: Topic no. 414, Rental income and expenses</a></p>
     </div>
 
   </div>
