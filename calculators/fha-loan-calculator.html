@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FHA Loan Calculator: Mortgage Insurance & Payments | CalcBundle</title>
-<meta name="description" content="Estimate FHA mortgage payments with down payment, loan rate and mortgage insurance assumptions.">
+<title>FHA Loan Calculator: Mortgage Insurance &amp; Payments</title>
+<meta name="description" content="Estimate FHA mortgage payments with your down payment, rate, upfront and annual mortgage insurance, taxes and insurance, plus a payoff schedule.">
 <link rel="canonical" href="https://calcbundle.net/calculators/fha-loan-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="FHA Loan Calculator: Mortgage Insurance & Payments | CalcBundle">
-<meta property="og:description" content="Estimate FHA mortgage payments with down payment, loan rate and mortgage insurance assumptions.">
+<meta property="og:title" content="FHA Loan Calculator: Mortgage Insurance &amp; Payments">
+<meta property="og:description" content="Estimate FHA mortgage payments with your down payment, rate, upfront and annual mortgage insurance, taxes and insurance, plus a payoff schedule.">
 <meta property="og:url" content="https://calcbundle.net/calculators/fha-loan-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FHA Loan Calculator: Mortgage Insurance & Payments | CalcBundle">
-<meta name="twitter:description" content="Estimate FHA mortgage payments with down payment, loan rate and mortgage insurance assumptions.">
+<meta name="twitter:title" content="FHA Loan Calculator: Mortgage Insurance &amp; Payments">
+<meta name="twitter:description" content="Estimate FHA mortgage payments with your down payment, rate, upfront and annual mortgage insurance, taxes and insurance, plus a payoff schedule.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Can I ever remove annual MIP from an FHA loan?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Only by refinancing out of the FHA loan entirely (often into a conventional loan once you have enough equity), unless your loan qualifies for the 11-year cutoff based on your original down payment."
+        "text": "Only by refinancing out of the FHA loan, often into a conventional loan once you have enough equity, unless your loan qualifies for the 11-year cutoff based on your original down payment."
       }
     },
     {
@@ -49,7 +49,7 @@
       "name": "Why is my loan amount higher than the house price minus my down payment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Because the upfront MIP is financed into the loan rather than paid in cash — it's added on top of the base amount you're borrowing, so you end up paying interest on the insurance premium itself over the life of the loan."
+        "text": "Because the upfront MIP is financed into the loan. It is added on top of the base amount you borrow, so you pay interest on the premium itself over the life of the loan."
       }
     },
     {
@@ -57,7 +57,31 @@
       "name": "Is an FHA loan cheaper than a conventional loan with PMI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It depends on your down payment and credit score. FHA MIP is often costlier over the long run than conventional PMI for borrowers with good credit, but FHA loans can be easier to qualify for and sometimes offer better rates to lower-credit borrowers — comparing the two side by side for your specific numbers is worth the extra step."
+        "text": "It depends on your down payment and credit score. FHA MIP is often costlier over the long run than conventional PMI for borrowers with good credit, but FHA loans can be easier to qualify for. Compare both for your numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the upfront MIP based on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is a percentage of the base loan amount, which is the home price minus the down payment, not a percentage of the home price."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the calculator work out annual MIP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It multiplies the base loan amount by the annual MIP rate and divides by 12, a flat monthly amount for as long as you choose. Real FHA loans base the premium on the average outstanding balance, so the actual cost is slightly lower."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum down payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FHA loans allow as little as 3.5% down for borrowers who meet the credit score requirement. Lower credit scores generally need a larger down payment."
       }
     }
   ]
@@ -231,37 +255,61 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">What makes an FHA loan different</h2>
-      <p>An FHA loan isn't issued by the government — it's insured by it. The Federal Housing Administration guarantees the lender against loss, which lets lenders approve borrowers with smaller down payments and lower credit scores than a conventional loan would typically allow. That guarantee isn't free: FHA borrowers pay for it directly, through two separate mortgage insurance premiums (MIP) that don't exist on a conventional loan once you've cleared the equity threshold.</p>
-
-      <h2>Two MIP charges, two different jobs</h2>
-      <p>The <strong>upfront MIP</strong> is a one-time charge — typically 1.75% of the house price — added straight into the loan balance rather than paid in cash at closing, which is why the loan amount ends up larger than the house price minus the down payment. The <strong>annual MIP</strong> is an ongoing monthly charge, calculated once on the base loan amount and then billed as a flat amount for as long as it applies. Unlike private mortgage insurance on a conventional loan, annual MIP doesn't necessarily disappear once you cross 20% equity — depending on your down payment and loan term, it can run for the full life of the loan.</p>
-      <div class="callout">On loans with less than 10% down, current FHA rules require annual MIP for the full loan term. Larger down payments can qualify for an 11-year cutoff instead — this calculator lets you model either assumption, or a custom duration.</div>
-
-      <h2>Why FHA loans appeal to first-time buyers</h2>
-      <p>The combination of a low minimum down payment (as little as 3.5%) and more flexible credit requirements makes FHA loans a common path to homeownership for buyers who haven't yet built up a large down payment or a long credit history. The tradeoff is the MIP cost layered on top of the interest rate — which is worth weighing against a conventional loan with PMI to see which actually costs less for your specific down payment and credit profile.</p>
-
-      <!--seo-extra-->
-<h2>Worked example: what the numbers mean</h2><p>A $200,000 home price less a $10,000 down payment leaves $190,000 financed before any fees or financed insurance. FHA mortgage insurance and interest can raise the payment.</p><h2>Related calculators</h2><p>Compare regular mortgage assumptions with the <a href="mortgage-calculator.html">Mortgage Calculator</a> and upfront cash needs with the <a href="down-payment-calculator.html">Down Payment Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="va-mortgage-calculator.html">VA Mortgage Calculator</a>, <a href="rent-vs-buy-calculator.html">Rent vs. Buy Calculator</a>, <a href="refinance-calculator.html">Refinance Calculator</a>, <a href="amortization-calculator.html">Amortization Calculator</a>.</p>
-
-      <!--/seo-extra-->
-      <p><strong>Read the guide:</strong> <a href="../guides/how-a-mortgage-payment-is-calculated.html">How a Mortgage Payment Is Calculated</a>.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> An FHA loan is insured by the government and charges an upfront and an annual mortgage insurance premium. On a $500,000 home with 3.5% down at 6.5% for 30 years, the loan with upfront MIP is $490,944, principal and interest is $3,103.10 a month, and the total with tax, insurance and MIP is $4,032.58.</div>
+      <h2>What makes an FHA loan different</h2>
+      <p>An FHA loan is not issued by the government; it is <strong>insured</strong> by the Federal Housing Administration. The insurance protects the lender if the borrower defaults, which lets lenders approve smaller down payments and lower credit scores than many conventional loans. Borrowers pay for that protection through two mortgage insurance premiums (MIP). A down payment as low as 3.5% is generally available with a qualifying credit score, and larger down payments are required for lower scores.</p>
+      <h2>The two mortgage insurance charges</h2>
+      <ul><li><strong>Upfront MIP:</strong> a one-time premium, 1.75% of the <em>base loan amount</em> (the home price minus your down payment). It is normally added to the loan rather than paid in cash, which is why the loan is larger than the price minus the down payment, and you pay interest on it.</li><li><strong>Annual MIP:</strong> a yearly premium paid in monthly instalments. The calculator charges it as a flat amount, the annual percentage times the base loan amount divided by 12, for as long as you choose.</li></ul>
+      <p>In real FHA loans the annual premium is figured on the average outstanding balance, so it falls a little each year. The calculator&rsquo;s flat amount is a simple, slightly conservative estimate. Always check your lender&rsquo;s Loan Estimate for the exact figures.</p>
+      <h2>Worked example with the default numbers</h2>
+      <p>A $500,000 home with 3.5% down ($17,500) leaves a base loan of $482,500. The upfront MIP is 1.75% of that, <strong>$8,443.75</strong>, so the loan with upfront MIP is <strong>$490,943.75</strong>. At 6.5% over 30 years the principal-and-interest payment is <strong>$3,103.10</strong>. Annual MIP at 0.55% adds $221.15 a month, property tax at 1.2% of the price adds $500.00 and home insurance of $2,500 a year adds $208.33. The total is <strong>$4,032.58 a month</strong>. Total interest over the life of the loan is $626,172.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where the $4,033 monthly payment goes (default FHA loan)</title><desc id="cf1-d">Principal and interest is $3,103.10 of the $4,032.58 total. Mortgage insurance adds $221.15 a month (5% of the payment).</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the $4,033 monthly payment goes (default FHA loan)</text><rect class="bar" x="14.0" y="42" width="378.6" height="30" fill="#2563eb"/><text x="203.3" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">77%</text><rect class="bar" x="392.6" y="42" width="61.0" height="30" fill="#f34469"/><text x="423.1" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">12%</text><rect class="bar" x="453.6" y="42" width="27.0" height="30" fill="#d97706"/><rect class="bar" x="480.6" y="42" width="25.4" height="30" fill="#06b6d4"/><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Principal and interest: <tspan font-weight="700">$3,103.10</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#f34469"/><text x="282" y="98" font-size="12.5" fill="#374151">Property tax: <tspan font-weight="700">$500.00</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#d97706"/><text x="32" y="120" font-size="12.5" fill="#374151">Annual MIP: <tspan font-weight="700">$221.15</tspan></text><rect x="264" y="110" width="12" height="12" rx="2" fill="#06b6d4"/><text x="282" y="120" font-size="12.5" fill="#374151">Home insurance: <tspan font-weight="700">$208.33</tspan></text></svg><figcaption>Taxes, insurance and MIP together add a large amount on top of the mortgage payment.</figcaption></figure>
+      <h2>How long annual MIP lasts</h2>
+      <p>Under current FHA rules, annual MIP on a loan with more than 10% down generally ends after 11 years, and on a loan with less than 10% down it lasts for the full loan term. The calculator lets you model the full term, 11 years, 5 years, no annual MIP, or &ldquo;until 78% LTV&rdquo;, which mirrors older FHA cancellation rules and is useful for comparing. On the default loan the annual MIP adds up to $79,612 over 30 years, $29,191 over 11 years and $13,269 over 5 years.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Total annual MIP paid by how long it lasts (default loan)</title><desc id="cf2-d">Annual MIP for the whole 30 years totals $79,612; if it stopped after 11 years it would total $29,191.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Total annual MIP paid by how long it lasts (default loan)</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">Full 30-year term</text><rect class="bar" x="130" y="44" width="298.0" height="22" rx="4" fill="#d97706"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$79,612</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">11 years</text><rect class="bar" x="130" y="78" width="109.3" height="22" rx="4" fill="#d97706"/><text x="247.3" y="94" font-size="13" font-weight="700" fill="#111827">$29,191</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">5 years</text><rect class="bar" x="130" y="112" width="49.7" height="22" rx="4" fill="#d97706"/><text x="187.7" y="128" font-size="13" font-weight="700" fill="#111827">$13,269</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">No annual MIP</text><rect class="bar" x="130" y="146" width="2.0" height="22" rx="4" fill="#10b981"/><text x="140.0" y="162" font-size="13" font-weight="700" fill="#111827">$0</text></svg><figcaption>Whether MIP can be removed is the biggest factor in the long-run cost of an FHA loan.</figcaption></figure>
+      <h2>How the down payment changes the payment</h2>
+      <div class="calc-table"><table><thead><tr><th>Down payment</th><th>Base loan</th><th>Monthly principal and interest</th><th>Annual MIP per month</th><th>Total monthly payment</th></tr></thead><tbody><tr><td>3.5% ($17,500)</td><td>$482,500</td><td>$3,103.10</td><td>$221.15</td><td>$4,032.58</td></tr><tr><td>5% ($25,000)</td><td>$475,000</td><td>$3,054.86</td><td>$217.71</td><td>$3,980.91</td></tr><tr><td>10% ($50,000)</td><td>$450,000</td><td>$2,894.08</td><td>$206.25 (11 years)</td><td>$3,808.66</td></tr><tr><td>20% ($100,000)</td><td>$400,000</td><td>$2,572.52</td><td>$183.33 (11 years)</td><td>$3,464.18</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Monthly payment including taxes and insurance by down payment ($500,000 home)</title><desc id="cf3-d">Putting 10% down instead of 3.5% lowers the monthly total from $4,033 to $3,809 (with annual MIP shortened to 11 years for the larger down payment).</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Monthly payment including taxes and insurance by down payment ($500,000 home)</text><text x="92" y="60" text-anchor="end" font-size="13" fill="#6b7280">3.5% down</text><rect class="bar" x="100" y="44" width="328.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$4,033</text><text x="92" y="94" text-anchor="end" font-size="13" fill="#6b7280">5% down</text><rect class="bar" x="100" y="78" width="323.8" height="22" rx="4" fill="#9ca3af"/><text x="431.8" y="94" font-size="13" font-weight="700" fill="#111827">$3,981</text><text x="92" y="128" text-anchor="end" font-size="13" fill="#6b7280">10% down</text><rect class="bar" x="100" y="112" width="309.8" height="22" rx="4" fill="#9ca3af"/><text x="417.8" y="128" font-size="13" font-weight="700" fill="#111827">$3,809</text><text x="92" y="162" text-anchor="end" font-size="13" fill="#6b7280">20% down</text><rect class="bar" x="100" y="146" width="281.8" height="22" rx="4" fill="#9ca3af"/><text x="389.8" y="162" font-size="13" font-weight="700" fill="#111827">$3,464</text></svg><figcaption>A larger down payment lowers the loan, the insurance and the payment.</figcaption></figure>
+      <h2>FHA or conventional?</h2>
+      <p>Whether an FHA loan is cheaper than a conventional loan with private mortgage insurance (PMI) depends on your down payment and credit score. PMI can usually be cancelled once your equity reaches 20%, while FHA annual MIP often lasts much longer. For borrowers with good credit and a down payment of at least 5%, a conventional loan is often cheaper over the long run; FHA tends to help borrowers with lower credit scores or smaller savings. Compare both with the Mortgage Calculator and look at the whole cost, not only the first payment.</p>
+      <h2>Taxes, insurance and other costs</h2>
+      <p>Besides principal, interest and MIP, the calculator includes property tax (a percentage of the price or a dollar amount), home insurance, HOA fees and any other yearly cost. The payment table can be shown by year or by month, and the payoff date is based on the start date you choose.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Forgetting that the upfront MIP is added to the loan and accrues interest.</li><li>Assuming annual MIP can be dropped at 20% equity like PMI. Usually it cannot.</li><li>Comparing monthly payments without including MIP, taxes and insurance.</li><li>Using the default 0.55% and 1.75% without checking the current rates for your loan.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the monthly principal-and-interest payment. The breakdown below adds taxes, insurance, MIP and other costs to give the real out-of-pocket amount. The donut shows what share of everything you pay goes to principal, interest and each cost. Use the schedule to see how quickly the balance falls.</p>
+      <div class="callout">This calculator gives estimates. FHA premiums, loan limits and credit rules change, so use your lender&rsquo;s Loan Estimate and HUD&rsquo;s current guidance for exact figures. It is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="mortgage-calculator.html">Mortgage Calculator</a> &ndash; conventional loan with PMI</li><li><a href="va-mortgage-calculator.html">VA Mortgage Calculator</a> &ndash; loans for veterans</li><li><a href="down-payment-calculator.html">Down Payment Calculator</a> &ndash; cash needed to buy</li><li><a href="house-affordability-calculator.html">House Affordability Calculator</a> &ndash; how much you can borrow</li><li><a href="refinance-calculator.html">Refinance Calculator</a> &ndash; replace your loan</li><li><a href="apr-calculator.html">APR Calculator</a> &ndash; true cost with fees</li></ul>
+      <p><strong>Read the guide:</strong> <a href="../guides/how-a-mortgage-payment-is-calculated.html">How a Mortgage Payment Is Calculated</a></p>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Can I ever remove annual MIP from an FHA loan?</h3>
-        <p>Only by refinancing out of the FHA loan entirely (often into a conventional loan once you have enough equity), unless your loan qualifies for the 11-year cutoff based on your original down payment.</p>
+        <p>Only by refinancing out of the FHA loan, often into a conventional loan once you have enough equity, unless your loan qualifies for the 11-year cutoff based on your original down payment.</p>
       </div>
       <div class="faq-item">
         <h3>Why is my loan amount higher than the house price minus my down payment?</h3>
-        <p>Because the upfront MIP is financed into the loan rather than paid in cash — it's added on top of the base amount you're borrowing, so you end up paying interest on the insurance premium itself over the life of the loan.</p>
+        <p>Because the upfront MIP is financed into the loan. It is added on top of the base amount you borrow, so you pay interest on the premium itself over the life of the loan.</p>
       </div>
       <div class="faq-item">
         <h3>Is an FHA loan cheaper than a conventional loan with PMI?</h3>
-        <p>It depends on your down payment and credit score. FHA MIP is often costlier over the long run than conventional PMI for borrowers with good credit, but FHA loans can be easier to qualify for and sometimes offer better rates to lower-credit borrowers — comparing the two side by side for your specific numbers is worth the extra step.</p>
+        <p>It depends on your down payment and credit score. FHA MIP is often costlier over the long run than conventional PMI for borrowers with good credit, but FHA loans can be easier to qualify for. Compare both for your numbers.</p>
       </div>
+      <div class="faq-item">
+        <h3>What is the upfront MIP based on?</h3>
+        <p>It is a percentage of the base loan amount, which is the home price minus the down payment, not a percentage of the home price.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How does the calculator work out annual MIP?</h3>
+        <p>It multiplies the base loan amount by the annual MIP rate and divides by 12, a flat monthly amount for as long as you choose. Real FHA loans base the premium on the average outstanding balance, so the actual cost is slightly lower.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the minimum down payment?</h3>
+        <p>FHA loans allow as little as 3.5% down for borrowers who meet the credit score requirement. Lower credit scores generally need a larger down payment.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.hud.gov/sites/dfiles/OCHCO/documents/2023-05hsgml.pdf" rel="noopener" target="_blank">HUD: Mortgagee Letter 2023-05 (FHA mortgage insurance premiums)</a></p>
     </div>
 
   </div>

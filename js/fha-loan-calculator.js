@@ -172,7 +172,7 @@ const FHAMath = {
     }
 
     const baseLoan = housePrice - downAmt;
-    const upfrontMipAmt = housePrice * upfrontMipPct / 100;
+    const upfrontMipAmt = baseLoan * upfrontMipPct / 100;
     const loanAmount = baseLoan + upfrontMipAmt;
     const termMonths = Math.round(termYears * 12);
     const basePIFactor = FHAMath.monthlyPIFactor(rate, termMonths);
