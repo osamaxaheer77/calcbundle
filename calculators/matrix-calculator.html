@@ -12,19 +12,19 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matrix Calculator: Inverse, Determinant &amp; More - CalcBundle</title>
+<title>Matrix Calculator: Inverse, Determinant &amp; More</title>
 <meta name="description" content="Add, subtract and multiply matrices, and find the determinant, inverse, transpose, rank, trace, RREF or power of a matrix up to 10 by 10, with exact fractions.">
 <link rel="canonical" href="https://calcbundle.net/calculators/matrix-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Matrix Calculator: Inverse, Determinant &amp; More - CalcBundle">
+<meta property="og:title" content="Matrix Calculator: Inverse, Determinant &amp; More">
 <meta property="og:description" content="Add, subtract and multiply matrices, and find the determinant, inverse, transpose, rank, trace, RREF or power of a matrix up to 10 by 10, with exact fractions.">
 <meta property="og:url" content="https://calcbundle.net/calculators/matrix-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-math.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Matrix Calculator: Inverse, Determinant &amp; More - CalcBundle">
+<meta name="twitter:title" content="Matrix Calculator: Inverse, Determinant &amp; More">
 <meta name="twitter:description" content="Add, subtract and multiply matrices, and find the determinant, inverse, transpose, rank, trace, RREF or power of a matrix up to 10 by 10, with exact fractions.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-math.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
@@ -55,10 +55,10 @@
     },
     {
       "@type": "Question",
-      "name": "What is the determinant of a 2×2 matrix?",
+      "name": "What is the determinant of a 2x2 matrix?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "For [a b; c d] it is ad − bc."
+        "text": "For [a b; c d] it is ad minus bc. For [1 2; 3 4] that is 1 times 4 minus 2 times 3, which is minus 2."
       }
     },
     {
@@ -66,7 +66,7 @@
       "name": "What does the rank of a matrix mean?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is the number of linearly independent rows (or columns), which is also the number of pivots in the reduced row echelon form."
+        "text": "It is the number of linearly independent rows or columns, which is also the number of pivots in the reduced row echelon form."
       }
     },
     {
@@ -75,6 +75,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes. Type entries as whole numbers, decimals or fractions like 3/4. The calculator works exactly and can show the answers as fractions or as decimals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is AB different from BA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Matrix multiplication is not commutative. Each entry of AB comes from rows of A and columns of B, which gives a different result from rows of B and columns of A."
       }
     }
   ]
@@ -173,26 +181,43 @@
       <div class="mortgage-results-card" id="mx-result" style="margin-top:16px;"></div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How to use the calculator</h2>
-      <p>Set the number of rows and columns for each matrix (up to 10 &times; 10), type the numbers into the boxes, then press an operation. The buttons under each matrix work on that matrix alone: transpose, determinant, inverse, rank, trace and reduced row echelon form (RREF), plus raising it to a power or multiplying every entry by a number. The buttons in the middle combine the two matrices. Entries can be whole numbers, decimals or fractions such as 1/3, and the answers are worked out exactly, so you never see a rounding error where a clean fraction exists.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> Multiply, add or invert matrices up to 10 by 10 with exact fractions. For A = [1 2; 3 4] and B = [5 6; 7 8], AB = [19 22; 43 50] and BA = [23 34; 31 46]. The determinant of A is &minus;2.</div>
+      <h2>How to use the calculator</h2>
+      <p>Set the number of rows and columns for each matrix (up to 10 &times; 10), type the numbers into the boxes, then press an operation. The buttons under each matrix work on that matrix alone: transpose, determinant, inverse, rank, trace and reduced row echelon form (RREF), plus raising it to a power or multiplying every entry by a number. The buttons in the middle combine the two matrices. Entries can be whole numbers, decimals or fractions such as 1/3, and the answers are worked out exactly, so you never see a rounding error where a clean fraction exists. A switch shows the answers as fractions or as decimals.</p>
+      <h2>Worked example with the default matrices</h2>
+      <p>The page opens with <strong>A = [1 2; 3 4]</strong> and <strong>B = [5 6; 7 8]</strong> and shows the product A &times; B. The top-left entry is 1&times;5 + 2&times;7 = 19, the top-right is 1&times;6 + 2&times;8 = 22, and so on, giving <strong>AB = [19 22; 43 50]</strong>. Order matters: <strong>BA = [23 34; 31 46]</strong>, a different matrix, so always check which one you need.</p>
       <h2>Adding, subtracting and multiplying</h2>
-      <p>You can only add or subtract matrices of the same size, and you do it entry by entry. Multiplication is different: A &times; B needs the number of <em>columns</em> of A to equal the number of <em>rows</em> of B, and each entry of the answer is a row of A multiplied term by term with a column of B and added up. With A = [1 2; 3 4] and B = [5 6; 7 8], the top-left entry of AB is 1&times;5 + 2&times;7 = 19, and the whole product is [19 22; 43 50]. Order matters: B &times; A gives [23 34; 31 46], a different matrix, so always check which one you need.</p>
-
+      <p>You can only add or subtract matrices of the same size, and you do it entry by entry. For the defaults, A + B = [6 8; 10 12] and A &minus; B = [-4 -4; -4 -4]. Multiplication is different: A &times; B needs the number of columns of A to equal the number of rows of B, and each entry of the answer is a row of A multiplied term by term with a column of B and added up. If the sizes do not fit, the calculator tells you the sizes and what is needed.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Multiplications needed to multiply two n by n matrices (n cubed)</title><desc id="cf1-d">Each entry of the product needs n multiplications and there are n&amp;sup2; entries, so the work grows with n cubed. The largest size the tool takes, 10 by 10, needs 1,000.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Multiplications needed to multiply two n by n matrices (n cubed)</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">2 &amp;times; 2</text><rect class="bar" x="90" y="44" width="2.7" height="22" rx="4" fill="#2563eb"/><text x="100.7" y="60" font-size="13" font-weight="700" fill="#111827">8</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">3 &amp;times; 3</text><rect class="bar" x="90" y="78" width="9.1" height="22" rx="4" fill="#9ca3af"/><text x="107.1" y="94" font-size="13" font-weight="700" fill="#111827">27</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">5 &amp;times; 5</text><rect class="bar" x="90" y="112" width="42.2" height="22" rx="4" fill="#9ca3af"/><text x="140.2" y="128" font-size="13" font-weight="700" fill="#111827">125</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">10 &amp;times; 10</text><rect class="bar" x="90" y="146" width="338.0" height="22" rx="4" fill="#dc2626"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">1,000</text></svg><figcaption>Multiplication gets expensive quickly.</figcaption></figure>
+      <h2>Transpose, scalar multiple and power</h2>
+      <p>The transpose swaps rows and columns: A<sup>T</sup> = [1 3; 2 4]. Multiplying by a number multiplies every entry, so 2A = [2 4; 6 8]. Raising a square matrix to a power multiplies it by itself, so A&sup2; = [7 10; 15 22], and a negative power uses the inverse.</p>
       <h2>Determinant and inverse</h2>
-      <p>The determinant is a single number that tells you a lot about a square matrix. For a 2 &times; 2 matrix [a b; c d] it is ad &minus; bc, so [1 2; 3 4] has a determinant of (1)(4) &minus; (2)(3) = &minus;2. A matrix has an inverse only when its determinant is not zero. For A = [4 7; 2 6] the determinant is 10, and the inverse is [3/5 &minus;7/10; &minus;1/5 2/5]. Multiply the two together and you get the identity matrix. If the determinant is zero, the matrix is called singular and there is no inverse, and the calculator tells you so. For 2 &times; 2 and 3 &times; 3 matrices it also writes out the working.</p>
-
+      <p>The determinant is a single number that tells you a lot about a square matrix. For a 2 &times; 2 matrix [a b; c d] it is ad &minus; bc, so for A it is (1)(4) &minus; (2)(3) = <strong>&minus;2</strong>. A matrix has an inverse only when its determinant is not zero. For C = [4 7; 2 6] the determinant is <strong>10</strong>, and the inverse is <strong>[3/5 -7/10; -1/5 2/5]</strong>. Multiplying the two gives the identity matrix. If the determinant is zero the matrix is <strong>singular</strong> and there is no inverse, and the calculator says so. For A the inverse is [-2 1; 3/2 -1/2].</p>
+      <h2>A 3 by 3 example</h2>
+      <p>For 2 &times; 2 and 3 &times; 3 matrices the calculator also writes out the working. Take M = [2 0 1; 1 3 2; 1 1 4]. The determinant is a(ei &minus; fh) &minus; b(di &minus; fg) + c(dh &minus; eg) = 2(12 &minus; 2) &minus; 0 + 1(1 &minus; 3) = 20 &minus; 2 = <strong>18</strong>. It is not zero, so M has an inverse, and M &times; M<sup>&minus;1</sup> is the 3 &times; 3 identity. For matrices larger than 3 &times; 3 the determinant is found by row reduction.</p>
       <h2>Solving a system of equations with the inverse</h2>
-      <p>A pair of equations such as 4x + 7y = 15 and 2x + 6y = 10 can be written as A &middot; v = b with A = [4 7; 2 6] and b = [15; 10]. Multiply both sides by the inverse and v = A<sup>&minus;1</sup>b. Using the inverse above gives x = (3/5)(15) &minus; (7/10)(10) = 2 and y = (&minus;1/5)(15) + (2/5)(10) = 1. You can check it: 4(2) + 7(1) = 15 and 2(2) + 6(1) = 10. Put b in as a second matrix B with one column and multiply A<sup>&minus;1</sup> by it. For a single equation with one unknown squared, the <a href="quadratic-formula-calculator.html">Quadratic Formula Calculator</a> is faster.</p>
-
-      <h2>Powers, rank and the other buttons</h2>
-      <p>Raising a square matrix to a power multiplies it by itself, and a negative power uses the inverse. A famous example is [1 1; 1 0]. Its tenth power is [89 55; 55 34], and those numbers are Fibonacci numbers, which you can explore in the <a href="number-sequence-calculator.html">Number Sequence Calculator</a>. The rank counts how many rows are truly independent: [1 2; 2 4] has rank 1, because the second row is just twice the first, and its determinant is 0. The trace is the sum of the diagonal entries, and RREF is the form you reach by row reduction, which shows the pivots and tells you whether a system has one solution, none or many.</p>
-
-      <h2>Where matrices turn up, and where to go next</h2>
-      <p>Matrices describe rotations and scaling in computer graphics, the transitions in probability models, networks of connections, and the data tables behind statistics. The determinant of a 2 &times; 2 matrix is also the signed area of the parallelogram its two rows describe, so half its absolute value is the area of a triangle, which you can cross-check with the <a href="triangle-calculator.html">Triangle Calculator</a>. If your answers are fractions you would like to simplify or convert, use the <a href="fraction-calculator.html">Fraction Calculator</a>, and if the entries get very large the <a href="big-number-calculator.html">Big Number Calculator</a> keeps all the digits.</p>
-      <div class="callout">Quick check on any inverse: multiply the matrix by its inverse. If you do not get the identity matrix (ones on the diagonal, zeros elsewhere), there is a typo in one of the entries.</div>
-
+      <p>A pair of equations such as 4x + 7y = 15 and 2x + 6y = 10 can be written as A&middot;v = b with A = [4 7; 2 6] and b = [15; 10]. Multiply both sides by the inverse and v = A<sup>&minus;1</sup>b. Using the inverse of C above gives x = (3/5)(15) &minus; (7/10)(10) = <strong>2</strong> and y = (&minus;1/5)(15) + (2/5)(10) = <strong>1</strong>. You can check it: 4(2) + 7(1) = 15 and 2(2) + 6(1) = 10. Put b in as a second matrix B with one column and multiply A<sup>&minus;1</sup> by it.</p>
+      <h2>Reduced row echelon form</h2>
+      <p>RREF is what you reach by row reduction. Put the same system in as an augmented matrix [4 7 15; 2 6 10] and press RREF to get <strong>[1 0 2; 0 1 1]</strong>. Reading the last column gives x = 2 and y = 1. RREF also shows whether a system has one solution, none or many.</p>
+      <h2>Rank and trace</h2>
+      <p>The rank counts how many rows are truly independent. [1 2; 2 4] has rank <strong>1</strong>, because the second row is just twice the first, and its determinant is 0. The trace is the sum of the diagonal entries, so tr(A) = 1 + 4 = <strong>5</strong>.</p>
+      <h2>A famous power</h2>
+      <p>Raise [1 1; 1 0] to the 10th power and you get <strong>[89 55; 55 34]</strong>. Those entries are Fibonacci numbers, which you can explore in the Number Sequence Calculator.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 222" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Top-right entry of [1 1; 1 0] raised to the power n (Fibonacci numbers)</title><desc id="cf2-d">Raising [1 1; 1 0] to the 10th power gives [89 55; 55 34], and the entries are Fibonacci numbers, which grow by about 1.6 times each step.</desc><text x="14" y="24" font-size="14" font-weight="700" fill="#111827">Top-right entry of [1 1; 1 0] raised to the power n (Fibonacci numbers)</text><line x1="58" y1="176.0" x2="506" y2="176.0" stroke="#e5e7eb"/><text x="52" y="180.0" text-anchor="end" font-size="11" fill="#6b7280">0</text><line x1="58" y1="144.5" x2="506" y2="144.5" stroke="#e5e7eb"/><text x="52" y="148.5" text-anchor="end" font-size="11" fill="#6b7280">15</text><line x1="58" y1="113.0" x2="506" y2="113.0" stroke="#e5e7eb"/><text x="52" y="117.0" text-anchor="end" font-size="11" fill="#6b7280">30</text><line x1="58" y1="81.5" x2="506" y2="81.5" stroke="#e5e7eb"/><text x="52" y="85.5" text-anchor="end" font-size="11" fill="#6b7280">45</text><line x1="58" y1="50.0" x2="506" y2="50.0" stroke="#e5e7eb"/><text x="52" y="54.0" text-anchor="end" font-size="11" fill="#6b7280">59</text><text x="58.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">1</text><text x="207.3" y="194" text-anchor="middle" font-size="11" fill="#6b7280">4</text><text x="356.7" y="194" text-anchor="middle" font-size="11" fill="#6b7280">7</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">10</text><text x="506.0" y="194" text-anchor="middle" font-size="11" fill="#6b7280">10</text><text x="282" y="210" text-anchor="middle" font-size="11" fill="#6b7280">Power n</text><polyline class="draw" style="--len:478" points="58.0,173.9 107.8,173.9 157.6,171.8 207.3,169.6 257.1,165.4 306.9,159.0 356.7,148.4 406.4,131.5 456.2,103.9 506.0,59.3" fill="none" stroke="#2563eb" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="58" y="34" width="12" height="4" rx="2" fill="#2563eb"/><text x="76" y="40" font-size="11.5" fill="#374151">Entry</text></svg><figcaption>Matrix powers can generate the Fibonacci numbers.</figcaption></figure>
+      <h2>Rules you can check with the calculator</h2>
+      <ul><li><strong>Determinant of a product.</strong> det(AB) = det(A) &times; det(B). For the defaults, 19&times;50 &minus; 22&times;43 = 4, and (&minus;2)(&minus;2) = 4.</li><li><strong>Transpose of a product.</strong> (AB)<sup>T</sup> = B<sup>T</sup>A<sup>T</sup>, so both sides give [19 43; 22 50]. Note the order reverses.</li><li><strong>Inverse of a product.</strong> (AB)<sup>&minus;1</sup> = B<sup>&minus;1</sup>A<sup>&minus;1</sup>, so both sides give [25/2 -11/2; -43/4 19/4].</li><li><strong>The identity matrix.</strong> I has ones on the diagonal and zeros elsewhere, and A &times; I = I &times; A = A. The Clear, All 0, All 1 and Random buttons set up a matrix quickly.</li></ul>
+      <p>Try each rule on your own matrices. If both sides agree, you can trust that the entries were typed correctly, and if they do not, look for a typo.</p>
+      <h2>Where matrices turn up</h2>
+      <ul><li><strong>Graphics.</strong> Rotations, scaling and projections in computer graphics are matrices.</li><li><strong>Probability.</strong> The transitions in a Markov model are a matrix, and its powers show long-run behaviour.</li><li><strong>Networks.</strong> A table of connections between nodes is a matrix.</li><li><strong>Statistics.</strong> Data tables and regressions are solved with matrices.</li><li><strong>Geometry.</strong> The determinant of [3 0; 1 2] is 6, the signed area of the parallelogram its rows describe, so half of it is the area of a triangle.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Assuming AB = BA. Matrix multiplication is not commutative.</li><li>Trying to invert a non-square matrix, or one with a zero determinant.</li><li>Adding matrices of different sizes.</li><li>Mixing up rows and columns when you set the size.</li><li>Typing a space in a fraction like 1 / 3. Use 1/3.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The result appears under the buttons with a title that says what was done, for example &ldquo;A + B&rdquo; or &ldquo;Determinant of A&rdquo;. Fractions are exact by default. Switch to decimals for values rounded to six places. A quick check on any inverse: multiply the matrix by its inverse. If you do not get the identity matrix, there is a typo in one of the entries.</p>
+      <div class="callout">Answers are exact when entries are whole numbers, decimals or fractions. Matrices larger than 10 by 10 are not supported.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="fraction-calculator.html">Fraction Calculator</a> &ndash; simplify and convert fractions</li><li><a href="number-sequence-calculator.html">Number Sequence Calculator</a> &ndash; Fibonacci and other sequences</li><li><a href="quadratic-formula-calculator.html">Quadratic Formula Calculator</a> &ndash; solve a quadratic equation</li><li><a href="big-number-calculator.html">Big Number Calculator</a> &ndash; every digit of huge numbers</li><li><a href="triangle-calculator.html">Triangle Calculator</a> &ndash; sides, angles and area</li><li><a href="scientific-calculator.html">Scientific Calculator</a> &ndash; general maths</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do you multiply two matrices?</h3>
@@ -203,17 +228,22 @@
         <p>Only when it is square and its determinant is not zero. A matrix with a zero determinant is called singular.</p>
       </div>
       <div class="faq-item">
-        <h3>What is the determinant of a 2×2 matrix?</h3>
-        <p>For [a b; c d] it is ad − bc.</p>
+        <h3>What is the determinant of a 2x2 matrix?</h3>
+        <p>For [a b; c d] it is ad minus bc. For [1 2; 3 4] that is 1 times 4 minus 2 times 3, which is minus 2.</p>
       </div>
       <div class="faq-item">
         <h3>What does the rank of a matrix mean?</h3>
-        <p>It is the number of linearly independent rows (or columns), which is also the number of pivots in the reduced row echelon form.</p>
+        <p>It is the number of linearly independent rows or columns, which is also the number of pivots in the reduced row echelon form.</p>
       </div>
       <div class="faq-item">
         <h3>Can I use fractions and decimals?</h3>
         <p>Yes. Type entries as whole numbers, decimals or fractions like 3/4. The calculator works exactly and can show the answers as fractions or as decimals.</p>
       </div>
+      <div class="faq-item">
+        <h3>Why is AB different from BA?</h3>
+        <p>Matrix multiplication is not commutative. Each entry of AB comes from rows of A and columns of B, which gives a different result from rows of B and columns of A.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://en.wikipedia.org/wiki/Matrix_(mathematics)" rel="noopener" target="_blank">Wikipedia: Matrix (mathematics)</a>; <a href="https://en.wikipedia.org/wiki/Determinant" rel="noopener" target="_blank">Wikipedia: Determinant</a>; <a href="https://en.wikipedia.org/wiki/Invertible_matrix" rel="noopener" target="_blank">Wikipedia: Invertible matrix</a>; <a href="https://en.wikipedia.org/wiki/Row_echelon_form" rel="noopener" target="_blank">Wikipedia: Row echelon form</a></p>
     </div>
 
   </div>
