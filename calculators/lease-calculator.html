@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lease Calculator: Monthly Payment & Implied Rate | CalcBundle</title>
-<meta name="description" content="Calculate estimated lease payments or the implied financing rate from asset value and terms.">
+<title>Lease Calculator: Monthly Payment &amp; Implied Rate</title>
+<meta name="description" content="Find the monthly payment of a lease, or the interest rate hidden in a quoted payment, from the asset value, residual value and term, with total interest.">
 <link rel="canonical" href="https://calcbundle.net/calculators/lease-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Lease Calculator: Monthly Payment & Implied Rate | CalcBundle">
-<meta property="og:description" content="Calculate estimated lease payments or the implied financing rate from asset value and terms.">
+<meta property="og:title" content="Lease Calculator: Monthly Payment &amp; Implied Rate">
+<meta property="og:description" content="Find the monthly payment of a lease, or the interest rate hidden in a quoted payment, from the asset value, residual value and term, with total interest.">
 <meta property="og:url" content="https://calcbundle.net/calculators/lease-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Lease Calculator: Monthly Payment & Implied Rate | CalcBundle">
-<meta name="twitter:description" content="Calculate estimated lease payments or the implied financing rate from asset value and terms.">
+<meta name="twitter:title" content="Lease Calculator: Monthly Payment &amp; Implied Rate">
+<meta name="twitter:description" content="Find the monthly payment of a lease, or the interest rate hidden in a quoted payment, from the asset value, residual value and term, with total interest.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -58,7 +58,7 @@
       "name": "How is the interest rate found from a payment?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The calculator searches for the monthly rate at which the present value of all the payments, plus the present value of the residual value, equals the asset value. That rate, multiplied by twelve, is the yearly rate shown."
+        "text": "The calculator searches for the monthly rate at which the present value of all the payments, plus the present value of the residual value, equals the asset value. That rate times twelve is the yearly rate shown."
       }
     },
     {
@@ -74,7 +74,15 @@
       "name": "Why does it say the residual value must be lower?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If the residual value is equal to or greater than the asset value, the asset is not losing value, so there is nothing to pay off through the lease payments and the calculation does not make sense."
+        "text": "If the residual value is equal to or greater than the asset value, the asset is not losing value, so there is nothing to pay off through the payments and the calculation does not make sense."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are fees and taxes included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Fees, taxes, deposits and usage charges vary by lease and are not included."
       }
     }
   ]
@@ -167,22 +175,35 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How a lease payment works</h2>
-      <p>In a lease you pay for the part of an asset you use rather than the whole thing. The asset value is what it is worth at the start, and the residual value is what it is expected to be worth when the lease ends. Your payments have to cover the drop in value between the two, plus the interest on the money tied up in the asset. That is why a higher residual value gives a lower monthly payment, even though you give the asset back at the end.</p>
-
-      <h2>Finding the rate in a quoted payment</h2>
-      <p>Dealers and lessors often quote a monthly payment without saying what interest rate it contains. Use the second option to work it out. Enter the asset value, the residual value, the term and the payment, and the calculator finds the interest rate that makes the payments and the residual value exactly worth the asset value today. Comparing that rate with loan rates shows whether a lease is a good deal.</p>
-
-      <h2>What to remember</h2>
-      <p>The calculation treats the lease like a loan that ends with a balloon payment equal to the residual value. It does not include fees, taxes, mileage charges or the cost of buying the asset at the end. Auto leases often add a money factor, a down payment and other charges, so use the Auto Lease Calculator for a car lease.</p>
-      <div class="callout">These figures are estimates. Real leases may include fees, taxes, deposits and usage limits that change the payment.</div>
-
-      <!--seo-extra-->
-<h2>Worked example: a simple check</h2><p>If an asset's value decreases by $12,000 across a 36-month lease, the depreciation portion averages about $333.33 monthly, before finance charges, fees and taxes.</p><h2>Related calculators</h2><p>For vehicle-specific lease assumptions, see the <a href="auto-lease-calculator.html">Auto Lease Calculator</a>. Compare the loan alternative using the <a href="loan-calculator.html">Loan Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="finance-calculator.html">Finance Calculator</a>, <a href="loan-calculator.html">Loan Calculator</a>, <a href="auto-lease-calculator.html">Auto Lease Calculator</a>, <a href="auto-loan-calculator.html">Auto Loan Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A lease payment covers the asset's loss in value plus interest. A $20,000 asset with an $8,000 residual over 3 years at 6% costs $405.06 a month. A $400 quote on the same lease hides a rate of 5.58%.</div>
+      <h2>How a lease payment works</h2>
+      <p>In a lease you pay for the part of an asset you use, not the whole thing. The <em>asset value</em> is what it is worth at the start and the <em>residual value</em> is what it is expected to be worth at the end. Your payments have to cover the drop in value between the two, plus interest on the money tied up in the asset. That is why a higher residual value gives a lower payment, even though you hand the asset back.</p>
+      <h2>The formula</h2>
+      <p>The calculator treats the lease like a loan that ends with a balloon equal to the residual value. For a monthly rate i over n months, <strong>payment = (asset value &minus; residual &divide; (1 + i)<sup>n</sup>) &times; i &divide; (1 &minus; (1 + i)<sup>&minus;n</sup>)</strong>. At a 0% rate this is just (asset value &minus; residual) &divide; n.</p>
+      <h2>Tool 1: payment from an interest rate</h2>
+      <p>With the defaults of a $20,000 asset, an $8,000 residual, 3 years and 6% interest, the monthly payment is <strong>$405.06</strong>. Over 36 payments you pay $14,582, and total interest is <strong>$2,582</strong> (payments plus residual minus asset value). At 0% the payment would be $333.33, which is the depreciation alone: $12,000 &divide; 36. The same idea, with a $12,000 drop over 36 months, is $333.33 a month before interest.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">What a $20,000 asset costs over a 36-month lease at 6%</title><desc id="cf1-d">You pay $14,582 in lease payments: $12,000 covers the $12,000 drop in value and $2,582 is interest on the money tied up.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">What a $20,000 asset costs over a 36-month lease at 6%</text><rect class="bar" x="14.0" y="42" width="404.9" height="30" fill="#2563eb"/><text x="216.4" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">82%</text><rect class="bar" x="418.9" y="42" width="87.1" height="30" fill="#10b981"/><text x="462.4" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">18%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Depreciation ($20,000 - $8,000): <tspan font-weight="700">$12,000</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Interest: <tspan font-weight="700">$2,582</tspan></text></svg><figcaption>Depreciation is most of what you pay; interest is the rest.</figcaption></figure>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Monthly payment by residual value ($20,000 asset, 36 months, 6%)</title><desc id="cf2-d">A residual of $16,000 instead of $4,000 cuts the monthly payment by $305.06.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Monthly payment by residual value ($20,000 asset, 36 months, 6%)</text><text x="72" y="60" text-anchor="end" font-size="13" fill="#6b7280">$4,000</text><rect class="bar" x="80" y="44" width="348.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$506.75</text><text x="72" y="94" text-anchor="end" font-size="13" fill="#6b7280">$8,000</text><rect class="bar" x="80" y="78" width="278.2" height="22" rx="4" fill="#2563eb"/><text x="366.2" y="94" font-size="13" font-weight="700" fill="#111827">$405.06</text><text x="72" y="128" text-anchor="end" font-size="13" fill="#6b7280">$12,000</text><rect class="bar" x="80" y="112" width="208.3" height="22" rx="4" fill="#9ca3af"/><text x="296.3" y="128" font-size="13" font-weight="700" fill="#111827">$303.38</text><text x="72" y="162" text-anchor="end" font-size="13" fill="#6b7280">$16,000</text><rect class="bar" x="80" y="146" width="138.5" height="22" rx="4" fill="#9ca3af"/><text x="226.5" y="162" font-size="13" font-weight="700" fill="#111827">$201.69</text></svg><figcaption>The residual value is the biggest lever on the payment.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Residual value</th><th>Monthly payment</th></tr></thead><tbody><tr><td>$4,000</td><td>$506.75</td></tr><tr><td>$8,000</td><td>$405.06</td></tr><tr><td>$12,000</td><td>$303.38</td></tr><tr><td>$16,000</td><td>$201.69</td></tr></tbody></table></div>
+      <h2>Tool 2: the rate hidden in a quoted payment</h2>
+      <p>Dealers and lessors often quote a payment without the rate. Enter the asset value, residual value, term and payment, and the calculator finds the rate at which the payments and the residual are worth exactly the asset value today. For a $20,000 asset, an $8,000 residual and a $400 payment over 36 months, the hidden rate is <strong>5.581% a year</strong>. You pay $14,400 in total and the interest is $2,400. Compare it with loan rates to see whether the lease is a good deal.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">Interest rate hidden in different monthly payments ($20,000 asset, $8,000 residual, 36 months)</title><desc id="cf4-d">A payment of $400 hides a rate of 5.58%; $450 hides 9.68%.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Interest rate hidden in different monthly payments ($20,000 asset, $8,000 residual, 36 months)</text><text x="82" y="60" text-anchor="end" font-size="13" fill="#6b7280">$350.00</text><rect class="bar" x="90" y="44" width="49.1" height="22" rx="4" fill="#9ca3af"/><text x="147.1" y="60" font-size="13" font-weight="700" fill="#111827">1.41%</text><text x="82" y="94" text-anchor="end" font-size="13" fill="#6b7280">$375.00</text><rect class="bar" x="90" y="78" width="122.3" height="22" rx="4" fill="#9ca3af"/><text x="220.3" y="94" font-size="13" font-weight="700" fill="#111827">3.50%</text><text x="82" y="128" text-anchor="end" font-size="13" fill="#6b7280">$400.00</text><rect class="bar" x="90" y="112" width="194.8" height="22" rx="4" fill="#2563eb"/><text x="292.8" y="128" font-size="13" font-weight="700" fill="#111827">5.58%</text><text x="82" y="162" text-anchor="end" font-size="13" fill="#6b7280">$425.00</text><rect class="bar" x="90" y="146" width="266.7" height="22" rx="4" fill="#9ca3af"/><text x="364.7" y="162" font-size="13" font-weight="700" fill="#111827">7.64%</text><text x="82" y="196" text-anchor="end" font-size="13" fill="#6b7280">$450.00</text><rect class="bar" x="90" y="180" width="338.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">9.68%</text></svg><figcaption>A small change in the payment hides a big change in the rate.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Monthly payment</th><th>Total payments</th><th>Hidden rate</th></tr></thead><tbody><tr><td>$350.00</td><td>$12,600</td><td>1.41%</td></tr><tr><td>$375.00</td><td>$13,500</td><td>3.50%</td></tr><tr><td>$400.00</td><td>$14,400</td><td>5.58%</td></tr><tr><td>$425.00</td><td>$15,300</td><td>7.64%</td></tr><tr><td>$450.00</td><td>$16,200</td><td>9.68%</td></tr></tbody></table></div>
+      <h2>How rate and term change the payment</h2>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Monthly payment by interest rate ($20,000 asset, $8,000 residual, 36 months)</title><desc id="cf3-d">Moving from 0% to 12% adds $145.24 a month, 44% more than the depreciation alone.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Monthly payment by interest rate ($20,000 asset, $8,000 residual, 36 months)</text><text x="62" y="60" text-anchor="end" font-size="13" fill="#6b7280">0%</text><rect class="bar" x="70" y="44" width="249.4" height="22" rx="4" fill="#9ca3af"/><text x="327.4" y="60" font-size="13" font-weight="700" fill="#111827">$333.33</text><text x="62" y="94" text-anchor="end" font-size="13" fill="#6b7280">3%</text><rect class="bar" x="70" y="78" width="276.0" height="22" rx="4" fill="#9ca3af"/><text x="354.0" y="94" font-size="13" font-weight="700" fill="#111827">$368.97</text><text x="62" y="128" text-anchor="end" font-size="13" fill="#6b7280">6%</text><rect class="bar" x="70" y="112" width="303.0" height="22" rx="4" fill="#2563eb"/><text x="381.0" y="128" font-size="13" font-weight="700" fill="#111827">$405.06</text><text x="62" y="162" text-anchor="end" font-size="13" fill="#6b7280">9%</text><rect class="bar" x="70" y="146" width="330.3" height="22" rx="4" fill="#9ca3af"/><text x="408.3" y="162" font-size="13" font-weight="700" fill="#111827">$441.60</text><text x="62" y="196" text-anchor="end" font-size="13" fill="#6b7280">12%</text><rect class="bar" x="70" y="180" width="358.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">$478.57</text></svg><figcaption>Depreciation is the bulk of the payment; the rate adds a smaller, steadily growing part.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Lease term</th><th>Monthly payment (6%)</th></tr></thead><tbody><tr><td>24 months</td><td>$571.85</td></tr><tr><td>36 months</td><td>$405.06</td></tr><tr><td>48 months</td><td>$321.82</td></tr><tr><td>60 months</td><td>$271.99</td></tr></tbody></table></div>
+      <p>Lease terms are usually short because the asset loses value quickly and the residual becomes harder to predict. The longer the term, the smaller the payment, but the more total interest you pay and the longer you are committed to the contract.</p>
+      <h2>What this calculator leaves out</h2>
+      <ul><li>Fees, taxes, deposits and mileage or wear charges, which can change the real payment.</li><li>The cost of buying the asset at the end of the lease.</li><li>The money factor and capitalized cost reduction used on car leases. For a car lease, use the Auto Lease Calculator.</li><li>Payments at the start of each period. The calculator assumes payments at the end.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Entering a residual that is equal to or higher than the asset value. The residual must be lower.</li><li>Comparing lease payments without comparing residual values and terms.</li><li>Treating the hidden rate as the full cost when fees are extra.</li><li>Forgetting that you own nothing at the end of a lease unless you buy it.</li></ul>
+      <h2>How to read your result</h2>
+      <p>In Tool 1 the large number is the monthly payment, with the total payments, residual value and total interest below. In Tool 2 it is the rate in the quoted payment. Use the table of payments and rates to see how sensitive the answer is, and compare the rate with a loan before deciding to lease.</p>
+      <div class="callout">This calculator gives estimates. Real leases include fees, taxes and limits that change the payment. It is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="auto-lease-calculator.html">Auto Lease Calculator</a> &ndash; money factor, tax and buying comparison</li><li><a href="loan-calculator.html">Loan Calculator</a> &ndash; payment, balance, rate and term</li><li><a href="payment-calculator.html">Payment Calculator</a> &ndash; payoff time from a payment</li><li><a href="finance-calculator.html">Finance Calculator</a> &ndash; general finance maths</li><li><a href="auto-loan-calculator.html">Auto Loan Calculator</a> &ndash; buy with a car loan</li><li><a href="interest-rate-calculator.html">Interest Rate Calculator</a> &ndash; find the rate in a loan payment</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>What is a residual value?</h3>
@@ -194,7 +215,7 @@
       </div>
       <div class="faq-item">
         <h3>How is the interest rate found from a payment?</h3>
-        <p>The calculator searches for the monthly rate at which the present value of all the payments, plus the present value of the residual value, equals the asset value. That rate, multiplied by twelve, is the yearly rate shown.</p>
+        <p>The calculator searches for the monthly rate at which the present value of all the payments, plus the present value of the residual value, equals the asset value. That rate times twelve is the yearly rate shown.</p>
       </div>
       <div class="faq-item">
         <h3>Can I use it for a car lease?</h3>
@@ -202,8 +223,13 @@
       </div>
       <div class="faq-item">
         <h3>Why does it say the residual value must be lower?</h3>
-        <p>If the residual value is equal to or greater than the asset value, the asset is not losing value, so there is nothing to pay off through the lease payments and the calculation does not make sense.</p>
+        <p>If the residual value is equal to or greater than the asset value, the asset is not losing value, so there is nothing to pay off through the payments and the calculation does not make sense.</p>
       </div>
+      <div class="faq-item">
+        <h3>Are fees and taxes included?</h3>
+        <p>No. Fees, taxes, deposits and usage charges vary by lease and are not included.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.federalreserve.gov/pubs/leasing/resource/consider/ongoing_info6.htm" rel="noopener" target="_blank">Federal Reserve: More information about the rent charge</a>; <a href="https://www.consumerfinance.gov/ask-cfpb/what-should-i-know-about-leasing-versus-buying-a-car-en-815/" rel="noopener" target="_blank">CFPB: Leasing versus buying a car</a></p>
     </div>
 
   </div>
