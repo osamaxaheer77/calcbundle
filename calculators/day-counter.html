@@ -12,19 +12,19 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Day Counter - CalcBundle</title>
+<title>Day Counter: Days Between Dates &amp; Business Days</title>
 <meta name="description" content="Count the days between two dates, including weekends, holidays and business days, or find the date a number of days or business days before or after a date.">
 <link rel="canonical" href="https://calcbundle.net/calculators/day-counter.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Day Counter - CalcBundle">
+<meta property="og:title" content="Day Counter: Days Between Dates &amp; Business Days">
 <meta property="og:description" content="Count the days between two dates, including weekends, holidays and business days, or find the date a number of days or business days before or after a date.">
 <meta property="og:url" content="https://calcbundle.net/calculators/day-counter.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-other.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Day Counter - CalcBundle">
+<meta name="twitter:title" content="Day Counter: Days Between Dates &amp; Business Days">
 <meta name="twitter:description" content="Count the days between two dates, including weekends, holidays and business days, or find the date a number of days or business days before or after a date.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-other.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
@@ -42,7 +42,7 @@
       "name": "How do I count the days between two dates?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Subtract the earlier date from the later one. This calculator does it for you and can add 1 to include the end day."
+        "text": "Subtract the earlier date from the later one. This calculator does it for you and can add 1 to include the end day. January 1 to March 1, 2026 is 59 days."
       }
     },
     {
@@ -50,7 +50,7 @@
       "name": "How are business days counted?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "They are the weekdays, Monday to Friday, in the period, minus any holidays that fall on those weekdays."
+        "text": "They are the weekdays, Monday to Friday, in the period, minus any holidays that fall on those weekdays. A holiday on a weekend does not lower the count."
       }
     },
     {
@@ -75,6 +75,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Counting from one date up to another gives the number of days passed. Tick the include box if you want both the first and last day counted, as for a hotel stay or a project length."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the tool move holidays that fall on a weekend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A holiday on a Saturday or Sunday stays on that date and does not change the business-day count. Add your own date if you need the observed day."
       }
     }
   ]
@@ -205,29 +213,46 @@
       </div>
     </div>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">How the days are counted</h2>
-      <p>The calculator counts the whole days from the start date up to, but not including, the end date, so from Monday to the next Monday is 7 days. Tick the box to include the end day, which adds 1. If the start is after the end, the two dates are swapped. Along with the total it counts how many of those days fall on a Saturday or Sunday, how many are holidays, and how many are business days.</p>
-
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> January 1 to March 1, 2026 is 59 days: 17 weekend days, 3 holidays and 39 business days. Five business days after a Monday is the next Monday, and 15 business days after November 16, 2026 is Tue, Dec 8, 2026.</div>
+      <h2>Two tools in one page</h2>
+      <p>The page has two calculators. The first, <strong>days between two dates</strong>, counts the days from a start date to an end date and splits them into weekend days, holidays and business days. The second, <strong>date offset</strong>, moves a date forward or back by a number of calendar days or business days. Both use the same holiday list, which you can change in the settings box.</p>
+      <p>The date boxes open with today&rsquo;s date, plus 30 days for the end date and 15 days for the offset, so the numbers below use fixed 2026 dates instead. You can enter the same dates to reproduce them.</p>
+      <h2>How the days are counted</h2>
+      <p>The count runs from the start date <strong>up to, but not including,</strong> the end date, so Monday to the next Monday is 7 days. Tick &ldquo;Include the end day&rdquo; to add 1, which suits a hotel stay or a project length where both the first and last day count. If the start is after the end, the two dates are swapped. A leap-year February is counted correctly, and the tool accepts dates from year 1 to 9999.</p>
+      <h2>Worked example: January 1 to March 1, 2026</h2>
+      <p>January has 31 days and February 2026 has 28, so January 1 to March 1 is <strong>59 days</strong>. Of those, <strong>17</strong> fall on a Saturday or Sunday and 42 are weekdays. Three default holidays land in the range: New Year&rsquo;s Day (Thursday, January 1), Martin Luther King Jr. Day (Monday, January 19) and Presidents&rsquo; Day (Monday, February 16). All three are weekdays, so the business-day count is 42 &minus; 3 = <strong>39</strong>.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">The 59 days from January 1 to March 1, 2026, split by type</title><desc id="cf1-d">Of the 59 days, 17 fall on a weekend and 3 are weekday holidays, which leaves 39 business days.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">The 59 days from January 1 to March 1, 2026, split by type</text><rect class="bar" x="14.0" y="42" width="141.8" height="30" fill="#9ca3af"/><text x="84.9" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">29%</text><rect class="bar" x="155.8" y="42" width="25.0" height="30" fill="#f59e0b"/><rect class="bar" x="180.8" y="42" width="325.2" height="30" fill="#2563eb"/><text x="343.4" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">66%</text><rect x="14" y="88" width="12" height="12" rx="2" fill="#9ca3af"/><text x="32" y="98" font-size="12.5" fill="#374151">Weekend days: <tspan font-weight="700">17</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#f59e0b"/><text x="282" y="98" font-size="12.5" fill="#374151">Holidays on weekdays: <tspan font-weight="700">3</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="120" font-size="12.5" fill="#374151">Business days: <tspan font-weight="700">39</tspan></text></svg><figcaption>Where the 59 days go.</figcaption></figure>
+      <h2>Worked example: counting both end days</h2>
+      <p>A project runs from Monday, June 1 to Friday, July 31, 2026, with the end day included. The count becomes <strong>61 days</strong> (June has 30 and July has 31). Two holidays fall in the range: Juneteenth on Friday, June 19 and Independence Day on Saturday, July 4. The tool lists both under Holidays (2), but July 4 is already a weekend, so only Juneteenth lowers the business days: 45 weekdays minus 1 gives <strong>44 business days</strong>, with 16 weekend days.</p>
       <h2>Business days and holidays</h2>
-      <p>A business day is a weekday, Monday to Friday, that is not a holiday. You can choose which holidays to leave out. The list starts with the common United States federal holidays and also has options for Black Friday, Christmas Eve and New Year’s Eve. You can add up to six holidays of your own. A holiday that falls on a weekend is shown in the list but does not reduce the business days, since the weekend is already off.</p>
-
-      <h2>Finding a date</h2>
-      <p>The second calculator takes a date and moves it forward or back by a number of days. With the business days box ticked, it skips weekends and the holidays you chose, so 5 business days after a Monday is the next Monday. The start day is not counted. This works the way a spreadsheet does with its working-day functions. Check the result against your own contract if a deadline depends on it, as some agreements count days differently.</p>
-      <div class="callout">The calculator treats Saturday and Sunday as the weekend and uses the holiday dates for the year they fall in. Many holidays shift to a nearby weekday when they land on a weekend, which this tool does not do, so add your own dates if you need an observed day.</div>
-
-      <!--seo-extra-->
-      <p><strong>You might also need:</strong> <a href="day-of-the-week-calculator.html">Day of the Week Calculator</a>, <a href="time-card-calculator.html">Time Card Calculator</a>, <a href="time-duration-calculator.html">Time Duration Calculator</a>, <a href="time-zone-calculator.html">Time Zone Calculator</a>.</p>
-
-      <!--/seo-extra-->
+      <p>A business day is a weekday, Monday to Friday, that is not a chosen holiday. The list starts with these eleven U.S. federal holidays ticked: New Year&rsquo;s Day, Martin Luther King Jr. Day, Presidents&rsquo; Day, Memorial Day, Juneteenth, Independence Day, Labor Day, Columbus Day, Veterans Day, Thanksgiving and Christmas Day. Black Friday, Christmas Eve and New Year&rsquo;s Eve are available but unticked, and you can add up to six holidays of your own with a month and day. Here is how the defaults fall in 2026:</p>
+      <div class="calc-table"><table><thead><tr><th>Holiday</th><th>2026 date</th></tr></thead><tbody><tr><td>New Year&rsquo;s Day</td><td>Thu, Jan 1, 2026</td></tr><tr><td>Martin Luther King Jr. Day</td><td>Mon, Jan 19, 2026</td></tr><tr><td>Presidents&rsquo; Day</td><td>Mon, Feb 16, 2026</td></tr><tr><td>Memorial Day</td><td>Mon, May 25, 2026</td></tr><tr><td>Juneteenth</td><td>Fri, Jun 19, 2026</td></tr><tr><td>Independence Day</td><td>Sat, Jul 4, 2026</td></tr><tr><td>Labor Day</td><td>Mon, Sep 7, 2026</td></tr><tr><td>Columbus Day</td><td>Mon, Oct 12, 2026</td></tr><tr><td>Veterans Day</td><td>Wed, Nov 11, 2026</td></tr><tr><td>Thanksgiving</td><td>Thu, Nov 26, 2026</td></tr><tr><td>Christmas Day</td><td>Fri, Dec 25, 2026</td></tr></tbody></table></div>
+      <p>The tool places each holiday on its calendar date, or on its usual weekday rule such as the third Monday of January. It does not move a holiday that falls on a weekend to the nearest weekday, as the federal government does, so July 4, 2026 stays on Saturday. Add your own date if your business observes a different day.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 454" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Business days in each month of 2026 with the default U.S. holidays</title><desc id="cf3-d">The year has 251 business days with the default holidays. Months with a holiday on a weekday lose one.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Business days in each month of 2026 with the default U.S. holidays</text><text x="52" y="60" text-anchor="end" font-size="13" fill="#6b7280">Jan</text><rect class="bar" x="60" y="44" width="320.0" height="22" rx="4" fill="#9ca3af"/><text x="388.0" y="60" font-size="13" font-weight="700" fill="#111827">20</text><text x="52" y="94" text-anchor="end" font-size="13" fill="#6b7280">Feb</text><rect class="bar" x="60" y="78" width="304.0" height="22" rx="4" fill="#9ca3af"/><text x="372.0" y="94" font-size="13" font-weight="700" fill="#111827">19</text><text x="52" y="128" text-anchor="end" font-size="13" fill="#6b7280">Mar</text><rect class="bar" x="60" y="112" width="352.0" height="22" rx="4" fill="#2563eb"/><text x="420.0" y="128" font-size="13" font-weight="700" fill="#111827">22</text><text x="52" y="162" text-anchor="end" font-size="13" fill="#6b7280">Apr</text><rect class="bar" x="60" y="146" width="352.0" height="22" rx="4" fill="#2563eb"/><text x="420.0" y="162" font-size="13" font-weight="700" fill="#111827">22</text><text x="52" y="196" text-anchor="end" font-size="13" fill="#6b7280">May</text><rect class="bar" x="60" y="180" width="320.0" height="22" rx="4" fill="#9ca3af"/><text x="388.0" y="196" font-size="13" font-weight="700" fill="#111827">20</text><text x="52" y="230" text-anchor="end" font-size="13" fill="#6b7280">Jun</text><rect class="bar" x="60" y="214" width="336.0" height="22" rx="4" fill="#9ca3af"/><text x="404.0" y="230" font-size="13" font-weight="700" fill="#111827">21</text><text x="52" y="264" text-anchor="end" font-size="13" fill="#6b7280">Jul</text><rect class="bar" x="60" y="248" width="368.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="264" font-size="13" font-weight="700" fill="#111827">23</text><text x="52" y="298" text-anchor="end" font-size="13" fill="#6b7280">Aug</text><rect class="bar" x="60" y="282" width="336.0" height="22" rx="4" fill="#9ca3af"/><text x="404.0" y="298" font-size="13" font-weight="700" fill="#111827">21</text><text x="52" y="332" text-anchor="end" font-size="13" fill="#6b7280">Sep</text><rect class="bar" x="60" y="316" width="336.0" height="22" rx="4" fill="#9ca3af"/><text x="404.0" y="332" font-size="13" font-weight="700" fill="#111827">21</text><text x="52" y="366" text-anchor="end" font-size="13" fill="#6b7280">Oct</text><rect class="bar" x="60" y="350" width="336.0" height="22" rx="4" fill="#9ca3af"/><text x="404.0" y="366" font-size="13" font-weight="700" fill="#111827">21</text><text x="52" y="400" text-anchor="end" font-size="13" fill="#6b7280">Nov</text><rect class="bar" x="60" y="384" width="304.0" height="22" rx="4" fill="#9ca3af"/><text x="372.0" y="400" font-size="13" font-weight="700" fill="#111827">19</text><text x="52" y="434" text-anchor="end" font-size="13" fill="#6b7280">Dec</text><rect class="bar" x="60" y="418" width="352.0" height="22" rx="4" fill="#2563eb"/><text x="420.0" y="434" font-size="13" font-weight="700" fill="#111827">22</text></svg><figcaption>Business days vary from 19 to 23 a month.</figcaption></figure>
+      <h2>Finding a date: days after or before</h2>
+      <p>Choose a start date, a direction and a number of days from 1 to 100,000. With the business-days box off the tool just adds or subtracts calendar days: 30 days after Monday, December 1, 2026 is <strong>Thu, Dec 31, 2026</strong>. With the box on, it steps over weekends and the chosen holidays, and the start day is not counted. So 5 business days after Monday, March 2, 2026 is <strong>Mon, Mar 9, 2026</strong>, the next Monday.</p>
+      <p>For a longer span, <strong>15 business days after Monday, November 16, 2026</strong> lands on <strong>Tue, Dec 8, 2026</strong>. That is 22 calendar days later, one more than the 21 it would take with no holidays, because Thanksgiving on Thursday, November 26 is skipped. This follows the same logic as the working-day functions in spreadsheet programs.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 216" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Calendar days needed for N business days after Monday, November 16, 2026 (default holidays)</title><desc id="cf2-d">Without holidays, N business days after a Monday is about 1.4 times N in calendar days. Thanksgiving on November 26 and Christmas Day on December 25 add a day each when they fall in the span.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Calendar days needed for N business days after Monday, November 16, 2026 (default holidays)</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">5 business days</text><rect class="bar" x="130" y="44" width="47.4" height="22" rx="4" fill="#2563eb"/><text x="185.4" y="60" font-size="13" font-weight="700" fill="#111827">7 days</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">10 business days</text><rect class="bar" x="130" y="78" width="101.6" height="22" rx="4" fill="#2563eb"/><text x="239.6" y="94" font-size="13" font-weight="700" fill="#111827">15 days</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">15 business days</text><rect class="bar" x="130" y="112" width="149.0" height="22" rx="4" fill="#2563eb"/><text x="287.0" y="128" font-size="13" font-weight="700" fill="#111827">22 days</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">20 business days</text><rect class="bar" x="130" y="146" width="196.4" height="22" rx="4" fill="#2563eb"/><text x="334.4" y="162" font-size="13" font-weight="700" fill="#111827">29 days</text><text x="122" y="196" text-anchor="end" font-size="13" fill="#6b7280">30 business days</text><rect class="bar" x="130" y="180" width="298.0" height="22" rx="4" fill="#2563eb"/><text x="436.0" y="196" font-size="13" font-weight="700" fill="#111827">44 days</text></svg><figcaption>More business days stretch over more calendar days.</figcaption></figure>
+      <div class="calc-table"><table><thead><tr><th>Business days after Mon, Nov 16, 2026</th><th>Date reached</th><th>Calendar days</th><th>Without holidays</th></tr></thead><tbody><tr><td>5</td><td>Mon, Nov 23, 2026</td><td>7</td><td>7</td></tr><tr><td>10</td><td>Tue, Dec 1, 2026</td><td>15</td><td>14</td></tr><tr><td>15</td><td>Tue, Dec 8, 2026</td><td>22</td><td>21</td></tr><tr><td>20</td><td>Tue, Dec 15, 2026</td><td>29</td><td>28</td></tr><tr><td>30</td><td>Wed, Dec 30, 2026</td><td>44</td><td>42</td></tr></tbody></table></div>
+      <h2>What the result shows</h2>
+      <ul><li><strong>Days between:</strong> the total, with the start and end days named, plus weekend days.</li><li><strong>Holidays and business days:</strong> shown when holidays are turned on, with each holiday listed with its weekday. With holidays off, the tool shows weekdays instead.</li><li><strong>Calendars:</strong> one small calendar for each month in the range, up to 12 months, shading weekends and holidays and outlining the dates you chose.</li><li><strong>Date offset:</strong> the date reached, the start date, the days in between and, for business days, the weekends and holidays skipped.</li></ul>
+      <h2>Common mistakes</h2>
+      <ul><li>Forgetting that the end day is not counted unless the box is ticked.</li><li>Assuming a holiday on a weekend reduces the business days. It does not, because the weekend is already off.</li><li>Expecting observed holidays. A Saturday holiday is not moved to Friday here.</li><li>Using calendar days where a contract says business days, or the reverse. Check how your agreement counts days.</li><li>Leaving a holiday ticked that your organisation does not observe.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the days between the two dates, or the date reached when you offset. Business days appear below it. If a deadline depends on the answer, compare it with the exact wording in your contract, since some agreements count the start day, skip other holidays or end at a set time.</p>
+      <div class="callout">The calculator treats Saturday and Sunday as the weekend and uses the holiday dates for the year they fall in. It is a planning aid, not legal advice about deadlines.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="date-calculator.html">Date Calculator</a> &ndash; add or subtract time from a date</li><li><a href="day-of-the-week-calculator.html">Day of the Week Calculator</a> &ndash; the weekday of any date</li><li><a href="time-duration-calculator.html">Time Duration Calculator</a> &ndash; the time between two moments</li><li><a href="time-card-calculator.html">Time Card Calculator</a> &ndash; hours worked in a week</li><li><a href="age-calculator.html">Age Calculator</a> &ndash; age in years, months and days</li><li><a href="time-zone-calculator.html">Time Zone Calculator</a> &ndash; convert a time between zones</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>How do I count the days between two dates?</h3>
-        <p>Subtract the earlier date from the later one. This calculator does it for you and can add 1 to include the end day.</p>
+        <p>Subtract the earlier date from the later one. This calculator does it for you and can add 1 to include the end day. January 1 to March 1, 2026 is 59 days.</p>
       </div>
       <div class="faq-item">
         <h3>How are business days counted?</h3>
-        <p>They are the weekdays, Monday to Friday, in the period, minus any holidays that fall on those weekdays.</p>
+        <p>They are the weekdays, Monday to Friday, in the period, minus any holidays that fall on those weekdays. A holiday on a weekend does not lower the count.</p>
       </div>
       <div class="faq-item">
         <h3>Which holidays are included?</h3>
@@ -241,6 +266,11 @@
         <h3>Why does the count not include the end day?</h3>
         <p>Counting from one date up to another gives the number of days passed. Tick the include box if you want both the first and last day counted, as for a hotel stay or a project length.</p>
       </div>
+      <div class="faq-item">
+        <h3>Does the tool move holidays that fall on a weekend?</h3>
+        <p>No. A holiday on a Saturday or Sunday stays on that date and does not change the business-day count. Add your own date if you need the observed day.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/" rel="noopener" target="_blank">U.S. Office of Personnel Management: Federal holidays</a>; <a href="https://en.wikipedia.org/wiki/Federal_holidays_in_the_United_States" rel="noopener" target="_blank">Wikipedia: Federal holidays in the United States</a>; <a href="https://en.wikipedia.org/wiki/Business_day" rel="noopener" target="_blank">Wikipedia: Business day</a></p>
     </div>
 
   </div>
