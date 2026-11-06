@@ -12,20 +12,20 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1719729476233281" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Auto Lease Calculator: Monthly Lease Cost Estimate | CalcBundle</title>
-<meta name="description" content="Estimate a vehicle lease payment from price, residual value, lease term and money factor assumptions.">
+<title>Auto Lease Calculator: Monthly Lease Payment &amp; Cost</title>
+<meta name="description" content="Estimate a monthly car lease payment from price, residual value, term and money factor, then compare the total cost of leasing with buying the same car.">
 <link rel="canonical" href="https://calcbundle.net/calculators/auto-lease-calculator.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CalcBundle">
-<meta property="og:title" content="Auto Lease Calculator: Monthly Lease Cost Estimate | CalcBundle">
-<meta property="og:description" content="Estimate a vehicle lease payment from price, residual value, lease term and money factor assumptions.">
+<meta property="og:title" content="Auto Lease Calculator: Monthly Lease Payment &amp; Cost">
+<meta property="og:description" content="Estimate a monthly car lease payment from price, residual value, term and money factor, then compare the total cost of leasing with buying the same car.">
 <meta property="og:url" content="https://calcbundle.net/calculators/auto-lease-calculator.html">
 <meta property="og:image" content="https://calcbundle.net/images/og-financial.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Auto Lease Calculator: Monthly Lease Cost Estimate | CalcBundle">
-<meta name="twitter:description" content="Estimate a vehicle lease payment from price, residual value, lease term and money factor assumptions.">
+<meta name="twitter:title" content="Auto Lease Calculator: Monthly Lease Payment &amp; Cost">
+<meta name="twitter:description" content="Estimate a monthly car lease payment from price, residual value, term and money factor, then compare the total cost of leasing with buying the same car.">
 <meta name="twitter:image" content="https://calcbundle.net/images/og-financial.png">
 <link rel="icon" type="image/png" href="../images/favicon.png">
 <link rel="stylesheet" href="../css/style.css">
@@ -41,7 +41,7 @@
       "name": "Why do leases charge tax differently than purchases?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Many states tax each lease payment as it's made (including the down payment, treated as an upfront payment) rather than taxing the full vehicle price upfront the way a purchase is taxed — this calculator models both mechanisms separately."
+        "text": "Many states tax each lease payment as it is made, and the down payment as an upfront payment, rather than taxing the full vehicle price upfront as a purchase is taxed. This calculator models both mechanisms separately."
       }
     },
     {
@@ -49,7 +49,7 @@
       "name": "Is a lower money factor always a better deal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "All else equal, yes — but the residual value and the negotiated price matter just as much. A great money factor on an inflated price, or a low residual that overstates depreciation, can still add up to an expensive lease."
+        "text": "All else equal, yes. But the residual value and the negotiated price matter just as much. A great money factor on an inflated price, or a low residual that overstates depreciation, can still make an expensive lease."
       }
     },
     {
@@ -57,7 +57,31 @@
       "name": "What happens if I want to keep the car after the lease?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most leases include a purchase option letting you buy the car for its residual value (plus tax) at lease-end — which is exactly the assumption behind this calculator's \"Total Cost to Own After Lease Ends\" figure."
+        "text": "Most leases include a purchase option letting you buy the car for its residual value plus tax at the end. That is the assumption behind this calculator's total cost to own after the lease."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert a money factor to an APR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the money factor by 2,400. For example, 0.00208 x 2,400 = 4.99%. To go the other way, divide the APR by 2,400."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the capitalized cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the price the lease is based on: the vehicle price less your down payment and trade-in (the capitalized cost reduction), plus any fees you roll in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are fees included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Acquisition, disposition, security deposit, registration and mileage charges vary by lease and are not included."
       }
     }
   ]
@@ -154,35 +178,65 @@
       </div>
     </form>
 
-    <div class="fraction-guide" style="margin-top:32px;">
-      <h2 style="margin-top:0;">A lease payment is really two payments in one</h2>
-      <p>Every lease payment bundles two separate charges. The <strong>depreciation</strong> portion covers the value the car is expected to lose over the lease — the gap between its price today and its residual value when you hand it back. The <strong>interest</strong> portion (called "rent charge" in leasing terms) is the lessor's fee for letting you use their asset, calculated using the money factor instead of a normal interest rate.</p>
-
-      <h2>What a money factor actually is</h2>
-      <p>A money factor is just an interest rate wearing a different costume — multiply it by 2,400 and you get the roughly equivalent APR. Dealers sometimes quote money factors specifically because a number like 0.00208 sounds smaller and less alarming than "4.99% APR," even though they represent the same cost.</p>
-      <div class="callout">Residual value has an outsized effect on a lease payment: a higher residual means less depreciation to pay for during the lease, which is why cars that hold their value well (and get assigned high residuals) tend to lease more cheaply relative to their price than cars that depreciate fast.</div>
-
-      <h2>Why the "same conditions" comparison isn't the whole story</h2>
-      <p>This calculator's purchase comparison assumes identical price, rate, term, and tax treatment for both paths — useful for isolating the leasing-vs-financing math itself. In the real world, leases often carry extra fees (acquisition, disposition, mileage penalties) that purchases don't, and the comparison also ignores that buying leaves you owning an asset outright at the end, while leasing leaves you with nothing unless you exercise a purchase option.</p>
-
-      <!--seo-extra-->
-<figure style="margin:18px 0;max-width:640px"><svg viewBox="0 0 620 132" role="img" aria-label="Illustrative lease depreciation: vehicle 30 thousand dollars minus residual 18 thousand equals 12 thousand over the lease" style="width:100%;height:auto"><rect x="2" y="3" width="616" height="125" rx="14" fill="#eff6ff"/><g font-family="Arial,sans-serif" fill="#172554" font-size="17" text-anchor="middle"><text x="105" y="43">$30,000</text><text x="250" y="43">−</text><text x="365" y="43">$18,000</text><text x="470" y="43">=</text><text x="550" y="43">$12,000</text></g><g font-family="Arial,sans-serif" fill="#475569" font-size="12" text-anchor="middle"><text x="105" y="67">Initial value</text><text x="365" y="67">Residual</text><text x="550" y="67">Difference</text></g><text x="310" y="105" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#0f766e">36 months: about $333.33/mo in depreciation alone</text></svg><figcaption style="color:#64748b;font-size:13px">Lease charges, fees and taxes are separate from depreciation.</figcaption></figure><h2>Worked example: what the numbers mean</h2><p>A vehicle with a $30,000 capitalized cost and $18,000 residual value depreciates $12,000 over its lease term. Over 36 months that is about $333.33 monthly in depreciation alone, before financing charges and tax.</p><h2>Related calculators</h2><p>For buying with financing rather than leasing, use the <a href="auto-loan-calculator.html">Auto Loan Calculator</a>. For rebate-versus-rate offers, see the <a href="cash-back-or-low-interest-calculator.html">Cash Back vs Low Interest Calculator</a>.</p>
-      <p><strong>You might also need:</strong> <a href="lease-calculator.html">Lease Calculator</a>, <a href="finance-calculator.html">Finance Calculator</a>, <a href="business-loan-calculator.html">Business Loan Calculator</a>, <a href="loan-calculator.html">Loan Calculator</a>.</p>
-
-      <!--/seo-extra-->
+    <div class="fraction-guide calc-article" style="margin-top:32px;">
+      <p class="calc-byline">By <strong>Osama</strong> &middot; Last reviewed November 6, 2026</p>
+      <div class="calc-brief"><strong>Quick answer.</strong> A lease payment is depreciation plus a rent charge plus tax. A $50,000 car with a $10,000 down payment, a $24,000 residual, a 0.00208 money factor, 36 months and 7% tax costs $617.99 a month.</div>
+      <h2>A lease payment is two payments in one</h2>
+      <p>Every lease payment bundles two charges. The <strong>depreciation</strong> covers the value the car is expected to lose over the lease: the gap between the capitalized cost (the price less your down payment and trade-in) and the residual value when you hand it back. The <strong>rent charge</strong>, which works like interest, is the lessor&rsquo;s fee for letting you use their asset, and is worked out with the <em>money factor</em> instead of an interest rate. Sales tax is then added to the payment.</p>
+      <h2>The formulas</h2>
+      <ul><li><strong>Capitalized cost</strong> = price &minus; down payment &minus; trade-in.</li><li><strong>Monthly depreciation</strong> = (capitalized cost &minus; residual value) &divide; months.</li><li><strong>Monthly rent charge</strong> = (capitalized cost + residual value) &times; money factor.</li><li><strong>Monthly payment</strong> = (depreciation + rent charge) &times; (1 + sales tax rate).</li></ul>
+      <h2>Worked example with the default numbers</h2>
+      <p>A $50,000 car, 36 months, a money factor of 0.00208, a $10,000 down payment, no trade-in, 7% sales tax and a $24,000 residual value. The capitalized cost is $40,000. Depreciation is ($40,000 &minus; $24,000) &divide; 36 = <strong>$444.44</strong> a month. The rent charge is ($40,000 + $24,000) &times; 0.00208 = <strong>$133.12</strong>. Together they are $577.56, tax adds $40.43, and the monthly lease payment is <strong>$617.99</strong>. Over 36 months you pay $22,247.78 in payments plus $700 of tax on the down payment, and the money factor is equivalent to a 4.99% interest rate.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 136" role="img" aria-labelledby="cf1-t cf1-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf1-t">Where the $617.99 monthly lease payment goes (default lease)</title><desc id="cf1-d">Depreciation is 72% of the payment. The rent charge is the lessor&#x27;s fee for the money tied up in the car.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Where the $617.99 monthly lease payment goes (default lease)</text><rect class="bar" x="14.0" y="42" width="353.8" height="30" fill="#2563eb"/><text x="190.9" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">72%</text><rect class="bar" x="367.8" y="42" width="106.0" height="30" fill="#10b981"/><text x="420.8" y="62" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">22%</text><rect class="bar" x="473.8" y="42" width="32.2" height="30" fill="#f59e0b"/><rect x="14" y="88" width="12" height="12" rx="2" fill="#2563eb"/><text x="32" y="98" font-size="12.5" fill="#374151">Depreciation: <tspan font-weight="700">$444.44</tspan></text><rect x="264" y="88" width="12" height="12" rx="2" fill="#10b981"/><text x="282" y="98" font-size="12.5" fill="#374151">Rent charge (interest): <tspan font-weight="700">$133.12</tspan></text><rect x="14" y="110" width="12" height="12" rx="2" fill="#f59e0b"/><text x="32" y="120" font-size="12.5" fill="#374151">Sales tax: <tspan font-weight="700">$40.43</tspan></text></svg><figcaption>Most of a lease payment is the car losing value, not interest.</figcaption></figure>
+      <p>A simpler check: a car with a $30,000 capitalized cost and an $18,000 residual loses $12,000 over 36 months, which is $333.33 a month in depreciation before any rent charge or tax.</p>
+      <h2>What a money factor is</h2>
+      <p>A money factor is just an interest rate in disguise. Multiply it by 2,400 to get roughly the equivalent APR; divide an APR by 2,400 to get the money factor. Dealers often quote the money factor because a number like 0.00208 sounds smaller than 4.99% APR, though they are the same cost. You can enter the rate either way: the calculator has a switch for money factor or interest rate.</p>
+      <div class="calc-table"><table><thead><tr><th>Money factor</th><th>Equivalent APR</th></tr></thead><tbody><tr><td>0.00125</td><td>3.00%</td></tr><tr><td>0.00208</td><td>4.99%</td></tr><tr><td>0.00250</td><td>6.00%</td></tr><tr><td>0.00300</td><td>7.20%</td></tr><tr><td>0.00400</td><td>9.60%</td></tr></tbody></table></div>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf3-t cf3-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf3-t">Monthly payment by money factor ($50,000 car, $24,000 residual)</title><desc id="cf3-d">Moving the money factor from 0.00100 to 0.00400 adds $205.44 a month, so it is worth negotiating.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Monthly payment by money factor ($50,000 car, $24,000 residual)</text><text x="162" y="60" text-anchor="end" font-size="13" fill="#6b7280">0.00100 (2.4% APR)</text><rect class="bar" x="170" y="44" width="187.3" height="22" rx="4" fill="#9ca3af"/><text x="365.3" y="60" font-size="13" font-weight="700" fill="#111827">$544.04</text><text x="162" y="94" text-anchor="end" font-size="13" fill="#6b7280">0.00208 (5.0% APR)</text><rect class="bar" x="170" y="78" width="212.7" height="22" rx="4" fill="#2563eb"/><text x="390.7" y="94" font-size="13" font-weight="700" fill="#111827">$617.99</text><text x="162" y="128" text-anchor="end" font-size="13" fill="#6b7280">0.00300 (7.2% APR)</text><rect class="bar" x="170" y="112" width="234.4" height="22" rx="4" fill="#9ca3af"/><text x="412.4" y="128" font-size="13" font-weight="700" fill="#111827">$681.00</text><text x="162" y="162" text-anchor="end" font-size="13" fill="#6b7280">0.00400 (9.6% APR)</text><rect class="bar" x="170" y="146" width="258.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="162" font-size="13" font-weight="700" fill="#111827">$749.48</text></svg><figcaption>A small difference in the money factor is a real difference in the payment.</figcaption></figure>
+      <h2>Residual value has an outsized effect</h2>
+      <p>A higher residual means less depreciation to pay for, so cars that hold their value are cheaper to lease relative to their price. The residual is set by the lessor, usually as a percentage of the price.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 182" role="img" aria-labelledby="cf2-t cf2-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf2-t">Monthly payment by residual value ($50,000 car, 36 months)</title><desc id="cf2-d">A residual of $32,000 instead of $20,000 cuts the monthly payment by $329.96, because there is less depreciation to pay for.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Monthly payment by residual value ($50,000 car, 36 months)</text><text x="122" y="60" text-anchor="end" font-size="13" fill="#6b7280">$20,000 (40%)</text><rect class="bar" x="130" y="44" width="298.0" height="22" rx="4" fill="#9ca3af"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$727.98</text><text x="122" y="94" text-anchor="end" font-size="13" fill="#6b7280">$24,000 (48%)</text><rect class="bar" x="130" y="78" width="253.0" height="22" rx="4" fill="#2563eb"/><text x="391.0" y="94" font-size="13" font-weight="700" fill="#111827">$617.99</text><text x="122" y="128" text-anchor="end" font-size="13" fill="#6b7280">$28,000 (56%)</text><rect class="bar" x="130" y="112" width="208.0" height="22" rx="4" fill="#9ca3af"/><text x="346.0" y="128" font-size="13" font-weight="700" fill="#111827">$508.01</text><text x="122" y="162" text-anchor="end" font-size="13" fill="#6b7280">$32,000 (64%)</text><rect class="bar" x="130" y="146" width="162.9" height="22" rx="4" fill="#9ca3af"/><text x="300.9" y="162" font-size="13" font-weight="700" fill="#111827">$398.02</text></svg><figcaption>The residual is the biggest lever on the payment, but you usually cannot negotiate it.</figcaption></figure>
+      <h2>Term and down payment</h2>
+      <div class="calc-table"><table><thead><tr><th>Lease term</th><th>Monthly payment (default car)</th></tr></thead><tbody><tr><td>24 months</td><td>$855.77</td></tr><tr><td>36 months</td><td>$617.99</td></tr><tr><td>48 months</td><td>$499.11</td></tr></tbody></table></div>
+      <div class="calc-table"><table><thead><tr><th>Down payment</th><th>Monthly payment</th></tr></thead><tbody><tr><td>$0</td><td>$937.47</td></tr><tr><td>$5,000</td><td>$777.73</td></tr><tr><td>$10,000</td><td>$617.99</td></tr><tr><td>$15,000</td><td>$458.25</td></tr></tbody></table></div>
+      <p>Putting more down lowers the monthly payment, but the money is gone if the car is totalled or stolen early in the lease, and the down payment is taxed up front in this calculator. Many leasing experts suggest putting little or nothing down on a lease.</p>
+      <h2>Leasing versus buying</h2>
+      <p>The calculator also shows the same car bought with a loan at the equivalent rate, with the same price, down payment, term and tax. The loan payment is <strong>$1,198.69</strong> a month and total interest is $3,152.92. The total cost to own after a lease, which assumes you buy the car at the end for its residual value plus tax, is $58,628, against $56,653 to buy with a loan.</p>
+      <figure class="calc-figure"><svg viewBox="0 0 520 114" role="img" aria-labelledby="cf4-t cf4-d" xmlns="http://www.w3.org/2000/svg" font-family="Inter, system-ui, sans-serif"><title id="cf4-t">Total cost to own the car after a 36-month lease vs buying it (default inputs)</title><desc id="cf4-d">In this comparison buying costs $1,975 less over the same period, but a lease gives you a lower monthly payment ($617.99 against $1,198.69) and the choice to walk away.</desc><text x="14" y="26" font-size="14" font-weight="700" fill="#111827">Total cost to own the car after a 36-month lease vs buying it (default inputs)</text><text x="192" y="60" text-anchor="end" font-size="13" fill="#6b7280">Lease, then buy at the residual</text><rect class="bar" x="200" y="44" width="228.0" height="22" rx="4" fill="#f59e0b"/><text x="436.0" y="60" font-size="13" font-weight="700" fill="#111827">$58,628</text><text x="192" y="94" text-anchor="end" font-size="13" fill="#6b7280">Buy with a loan at the same rate</text><rect class="bar" x="200" y="78" width="220.3" height="22" rx="4" fill="#2563eb"/><text x="428.3" y="94" font-size="13" font-weight="700" fill="#111827">$56,653</text></svg><figcaption>Leasing lowers the monthly payment; buying often costs less in total and leaves you owning the car.</figcaption></figure>
+      <p>The comparison leaves out fees and limits. Leases often add acquisition, security deposit and disposition fees, and mileage and wear charges, that a purchase does not. Buying leaves you owning an asset at the end; leasing leaves you with nothing unless you use the purchase option.</p>
+      <h2>Common mistakes</h2>
+      <ul><li>Comparing lease payments without checking the capitalized cost, residual and money factor.</li><li>Forgetting taxes, fees and mileage limits.</li><li>Putting a large down payment on a lease.</li><li>Assuming a lower payment means a cheaper deal. It may only mean a longer or riskier one.</li></ul>
+      <h2>How to read your result</h2>
+      <p>The large number is the monthly payment including tax. Below it are the parts: depreciation, rent charge and tax, plus the totals and the buying comparison. Ask the dealer for the capitalized cost, residual value and money factor in writing, enter them here and check that the payment matches their quote.</p>
+      <div class="callout">This calculator gives estimates. Fees such as acquisition, disposition and registration, and mileage charges, are not included. It is not financial advice.</div>
+      <h2>What to do next</h2>
+      <ul><li><a href="auto-loan-calculator.html">Auto Loan Calculator</a> &ndash; buy with a car loan</li><li><a href="lease-calculator.html">Lease Calculator</a> &ndash; general lease payments</li><li><a href="cash-back-or-low-interest-calculator.html">Cash Back or Low Interest Calculator</a> &ndash; rebate versus low rate</li><li><a href="fuel-cost-calculator.html">Fuel Cost Calculator</a> &ndash; running costs</li><li><a href="loan-calculator.html">Loan Calculator</a> &ndash; payment, balance, rate and term</li><li><a href="finance-calculator.html">Finance Calculator</a> &ndash; general finance maths</li></ul>
       <h2>Common questions</h2>
       <div class="faq-item">
         <h3>Why do leases charge tax differently than purchases?</h3>
-        <p>Many states tax each lease payment as it's made (including the down payment, treated as an upfront payment) rather than taxing the full vehicle price upfront the way a purchase is taxed — this calculator models both mechanisms separately.</p>
+        <p>Many states tax each lease payment as it is made, and the down payment as an upfront payment, rather than taxing the full vehicle price upfront as a purchase is taxed. This calculator models both mechanisms separately.</p>
       </div>
       <div class="faq-item">
         <h3>Is a lower money factor always a better deal?</h3>
-        <p>All else equal, yes — but the residual value and the negotiated price matter just as much. A great money factor on an inflated price, or a low residual that overstates depreciation, can still add up to an expensive lease.</p>
+        <p>All else equal, yes. But the residual value and the negotiated price matter just as much. A great money factor on an inflated price, or a low residual that overstates depreciation, can still make an expensive lease.</p>
       </div>
       <div class="faq-item">
         <h3>What happens if I want to keep the car after the lease?</h3>
-        <p>Most leases include a purchase option letting you buy the car for its residual value (plus tax) at lease-end — which is exactly the assumption behind this calculator's "Total Cost to Own After Lease Ends" figure.</p>
+        <p>Most leases include a purchase option letting you buy the car for its residual value plus tax at the end. That is the assumption behind this calculator's total cost to own after the lease.</p>
       </div>
+      <div class="faq-item">
+        <h3>How do I convert a money factor to an APR?</h3>
+        <p>Multiply the money factor by 2,400. For example, 0.00208 x 2,400 = 4.99%. To go the other way, divide the APR by 2,400.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the capitalized cost?</h3>
+        <p>It is the price the lease is based on: the vehicle price less your down payment and trade-in (the capitalized cost reduction), plus any fees you roll in.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Are fees included?</h3>
+        <p>No. Acquisition, disposition, security deposit, registration and mileage charges vary by lease and are not included.</p>
+      </div>
+      <p class="calc-sources"><strong>Sources:</strong> <a href="https://www.federalreserve.gov/pubs/leasing/resource/consider/ongoing_info6.htm" rel="noopener" target="_blank">Federal Reserve: More information about the rent charge</a>; <a href="https://www.consumerfinance.gov/ask-cfpb/what-should-i-know-about-leasing-versus-buying-a-car-en-815/" rel="noopener" target="_blank">CFPB: Leasing versus buying a car</a></p>
     </div>
 
   </div>
